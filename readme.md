@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://StasGostev.github.io/fs_apr19_stas/)
-- [UPDATE TEST REPORT LINK](https://StasGostev.github.io/fs_apr19_stas/report/html_report/)
+- [UPDATE DEMO LINK](https://StasGostev.github.io/layout_moyo-header/)
+- [UPDATE TEST REPORT LINK](https://StasGostev.github.io/layout_moyo-header/report/html_report/)
