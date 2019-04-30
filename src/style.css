@@ -1,0 +1,95 @@
+body {
+  background-color: #e5e5e5;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+.main-navigation {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header-logo {
+  display: block;
+  padding: 10px;
+  margin-left: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.titleList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 778px;
+  padding: 0;
+  margin: 0 40px 0 30px;
+  box-sizing: padding-box;
+
+  /* border: 1px solid grey; */
+}
+
+.titleItem {
+  list-style: none;
+  padding: 0 10px;
+}
+
+.titleItem a {
+  display: block;
+  position: relative;
+  color: black;
+  text-decoration: none;
+  padding: 23px 0;
+}
+
+.titleItem a:after {
+  content: "";
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #00acdc;
+  border-radius: 8px;
+  width: 100%;
+  height: 4px;
+}
+
+ul li .is-active {
+  color: #00acdc;
+}
+
+ul li .is-active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #00acdc;
+  border-radius: 8px;
+  width: 100%;
+  height: 4px;
+}
+
+ul li ul li .is-active:hover:after {
+  display: block;
+}
+
+.titleItem a:hover {
+  color: #00acdc;
+}
+
+.titleItem a:hover:after {
+  display: block;
+}
