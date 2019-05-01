@@ -27,9 +27,9 @@ Cursors` in figma. [Learn how](https://mate-academy.github.io/layout_task-guidel
 * follow styles from the mock
 * link with blue color and line below is an active link. It should have
  `class="is-active"` and relevant styles
-* link with only blue color is an example of `:hover` styles. Every link in the 
-row should have blue color on :hover. 
-* add attribute `data-qa="hover"` to the 4th link for testing (`Ноутбуки и 
+* link with only blue color is an example of `:hover` styles. Every link in the
+row should have blue color on :hover.
+* add attribute `data-qa="hover"` to the 4th link for testing (`Ноутбуки и
 компьютеры`)
 
 Screenshot of the header:
@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
-- [UPDATE TEST REPORT LINK](https://<your_account>.github.io/<repo_name>/report/html_report/)
+- [UPDATE DEMO LINK](https://gulldan1996.github.io/layout_moyo-header)
+- [UPDATE TEST REPORT LINK](https://gulldan1996.github.io/layout_moyo-header/report/html_report/)
