@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://OlhaMazurenko.github.io/layout_moyo-header/)
-- [UPDATE TEST REPORT LINK](https://OlhaMazurenko.github.io/layout_moyo-header/report/html_report/)
+- [Demo link](https://OlhaMazurenko.github.io/layout_moyo-header/) - this will be a link to your index.html
+- [Test report](https://OlhaMazurenko.github.io/layout_moyo-header/report/html_report/)
