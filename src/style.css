@@ -39,27 +39,28 @@ body {
 }
 
 .nav-element {
+  position: relative;
   display: flex;
   align-items: center;
   margin-right: 20px;
 }
 
-.nav-element a {
+.nav-element > a {
+  display: flex;
   color: #000;
 }
 
-.nav-element a[data-qa],
-.nav-element a.is-active {
+nav a:hover {
   color: #00acdc;
 }
 
-.is-active::after {
+a:active::after {
   content: "";
   display: block;
   position: absolute;
   top: 56px;
   background-color: #00acdc;
   border-radius: 8px;
-  width: 37px;
+  width: 100%;
   height: 4px;
 }
