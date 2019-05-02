@@ -1,25 +1,39 @@
-body {
-  display: flex;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-  box-sizing: border-box;
+* {
   margin: 0;
   padding: 0;
 }
 
 header {
   display: flex;
-  width: 1200px;
   height: 60px;
+  margin: 0 auto;
+  padding: 0 50px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
   justify-content: space-between;
-  align-items: stretch;
-  padding: 0;
+}
+
+.logo {
+  margin: 10px 0;
+}
+
+.list {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  margin: 22px 10px;
+}
+
+nav li:last-child {
+  margin-right: 0;
 }
 
 a {
@@ -27,35 +41,21 @@ a {
   color: #000;
 }
 
-.logo {
-  margin: 10px 0 7px 50px;
-}
-
-.list {
-  display: flex;
-  justify-content: space-between;
-  margin: 22px 50px 0 0;
-  list-style-type: none;
-}
-
-.underline {
-  content: "";
-  margin-top: 20px;
-  margin-bottom: 0;
-  height: 4px;
-  width: 100%;
-  background-color: #00acdc;
-  border-radius: 8px;
-}
-
 a:hover {
   color: #00acdc;
 }
 
 .is-active {
+  display: flex;
+  flex-direction: column;
   color: #00acdc;
 }
 
-li {
-  margin-left: 20px;
+.is-active::after {
+  content: "";
+  margin-top: 20px;
+  padding: 2px;
+  width: 100%;
+  background: #00acdc;
+  border-radius: 8px;
 }
