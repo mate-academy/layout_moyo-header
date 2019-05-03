@@ -8,22 +8,19 @@
     width: 1200px;
     height: 60px;
     display: flex;
-    padding: 0 10px;
+    justify-content: space-between;
+    padding: 0 50px;
     box-sizing: border-box;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     align-items: center;
   }
 
   header img {
-    position: absolute;
     width: 40px;
     height: 40px;
-    left: 50px;
-    top: 10px;
   }
 
   nav {
-    position: absolute;
     left: 397px;
     right: 50px;
     font-style: normal;
@@ -40,6 +37,10 @@
     color: #000;
   }
 
+  a.is-active {
+    position: relative;
+  }
+
   a:hover {
     color: #00acdc;
   }
@@ -48,7 +49,7 @@
     margin-right: 20px;
   }
 
-  .is-active:first-child::after {
+  .is-active::after {
     content: "";
     width: 37px;
     height: 4px;
