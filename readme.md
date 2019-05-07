@@ -42,6 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://ronyshchenko.github.io/layout_moyo-header
-/)
+- [UPDATE DEMO LINK](https://ronyshchenko.github.io/layout_moyo-header/)
 - [UPDATE TEST REPORT LINK](https://ronyshchenko.github.io/layout_moyo-header/report/html_report/)
