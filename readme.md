@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [DEMO LINK](https://radianika.github.io/layout_moyo-header/)
+- [DEMO LINK](https://radianika.github.io/layout_moyo-header/index.html)
 - [UPDATE TEST REPORT LINK](https://radianika.github.io/layout_moyo-header/report/html_report/)
