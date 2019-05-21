@@ -16,7 +16,7 @@ navList.addEventListener('click', (event) => {
 });
 
 function removePrev() {
-  [...document.querySelectorAll('.link')].forEach((item) => {
+  [...document.querySelectorAll('nav a')].forEach((item) => {
     item.classList.remove('is-active');
   });
 };
