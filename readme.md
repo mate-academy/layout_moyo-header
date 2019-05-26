@@ -44,4 +44,4 @@ Screenshot of the header:
 **Result**
 
 - [DEMO LINK](https://jka4.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://jka4.github.io/<repo_name>/report/layout_moyo-header/)
+- [TEST REPORT LINK](https://jka4.github.io/layout_moyo-header/report/html_report/)
