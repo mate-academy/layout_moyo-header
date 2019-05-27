@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+a:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 56px;
+  width: 37px;
+  height: 4px;
+  background-color: #00acdc;
+  margin-bottom: 0;
+}
