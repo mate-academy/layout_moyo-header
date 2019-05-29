@@ -1,15 +1,19 @@
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: #fff;
   font-family: "Roboto", sans-serif;
 }
 
 .header {
   display: flex;
+  margin: 0 auto 50px;
   padding: 10px 50px;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -17,6 +21,10 @@ body {
 
 .header-nav {
   margin-left: auto;
+  font-weight: 500;
+  font-size: 12px;
+  align-items: center;
+  text-transform: uppercase;
 }
 
 .header-logo-img {
@@ -25,29 +33,23 @@ body {
   vertical-align: middle;
 }
 
-.nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  list-style-type: none;
-}
-
 .item-link,
 .is-active {
-  padding: 10px;
+  padding: 24px 0 22.5px;
+  margin-right: 20px;
   position: relative;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  font-style: normal;
-  text-transform: uppercase;
+  /*line-height: 14px;*/
+  /*font-style: normal;*/
   color: #000;
+}
 
+.item-link:last-child {
+  margin-right: 0;
 }
 
 .item-link:hover,
-.is-active:hover {
+.is-active {
   color: #00acdc;
 }
 
@@ -56,9 +58,8 @@ body {
   position: absolute;
   border-radius: 8px;
   background-color: #00acdc;
-  width: 37px;
-  bottom: -11px;
-  left: 10px;
-  right: 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
   height: 4px;
 }
