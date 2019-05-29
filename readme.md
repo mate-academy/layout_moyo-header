@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [DEMO LINK](https://earthhuman41.github.io/layot_moyo-header/)
-- [REPORT LINK](https://earthhuman41.github.io/layot_moyo-header/report/html_report/)
+- [DEMO LINK](https://earthhuman41.github.io/layout_moyo-header/)
+- [REPORT LINK](https://earthhuman41.github.io/layout_moyo-header/report/html_report/)
