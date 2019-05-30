@@ -5,7 +5,8 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
+  height: 60px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   font-family: "Roboto", sans-serif;
@@ -14,29 +15,28 @@
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
-  padding: 10px 50px;
+  padding: 0 50px;
 }
 
-.pic {
-  width: 40px;
-  height: 40px;
+.logo {
+  padding: 10px 0;
 }
 
 .nav {
-  list-style: none;
+  display: flex;
+  align-items: stretch;
+  width: 750px;
+  justify-content: space-between;
 }
 
 .nav-item {
-  display: inline-block;
-  margin: 0 0 0 17px;
-}
-
-.nav-link {
+  display: block;
   color: #000;
   text-decoration: none;
+  line-height: 60px;
 }
 
-.nav-link:hover {
+.nav-item:hover {
   color: #00acdc;
 }
 
@@ -48,7 +48,7 @@
 .is-active::after {
   display: block;
   position: absolute;
-  top: 33px;
+  top: 56px;
   content: "";
   height: 4px;
   width: 100%;
