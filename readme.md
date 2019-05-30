@@ -43,4 +43,4 @@ Screenshot of the header:
 **Result**
 
 - [DEMO LINK](https://neitiris.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://neitiris.github.io/layout_moyo-header/html_report/)
+- [TEST REPORT LINK](https://neitiris.github.io/layout_moyo-header/report/html_report/)
