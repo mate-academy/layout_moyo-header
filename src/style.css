@@ -6,23 +6,37 @@ body {
 
 .header {
   display: flex;
-  height: 60px;
 }
 
-.header__nav__list {
+.header__logo {
+  margin: 10px 102px 10px 51px;
+}
+
+.header__nav {
+  align-items: center;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   list-style: none;
   text-transform: uppercase;
   margin: 0;
-  padding: 0;
+  padding: 22px 0;
+}
+
+.is-active {
+  margin-left: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  position: relative;
 }
 
 .link,
-.is-active,
 .hovered {
   margin-left: 20px;
-  top: 19px;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -39,7 +53,6 @@ body {
 
 .is-active {
   text-decoration: none;
-  top: 19px;
   color: #00acdc;
 }
 
@@ -55,14 +68,14 @@ body {
   border-radius: 8px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .header__logo {
-    margin: 10px 115px 10px 50px;
+    margin: 10px 309px 10px 51px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1024px) {
   .header__logo {
-    margin: 10px 290px 10px 50px;
+    margin: 10px 132px 10px 50px;
   }
 }
