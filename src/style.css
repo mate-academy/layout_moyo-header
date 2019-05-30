@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0 10px 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+.nav {
+  margin-top: 20px;
+  margin-right: 50px;
+  width: 750px;
+  height: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  padding: 26px 0;
+  color: black;
+}
+
+.is-active,
+.menu:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  position: relative;
+}
+
+.menu.is-active::after {
+  position: absolute;
+  content: "";
+  width: 37px;
+  height: 4px;
+  left: 0;
+  bottom: 3px;
+  border-radius: 8px;
+  background: #00acdc;
+}
