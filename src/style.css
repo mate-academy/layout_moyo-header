@@ -31,17 +31,21 @@ header nav {
   width: 758px;
 }
 
-header nav a {
-  text-decoration: none;
-  color: #000;
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav ul li {
   margin-right: 20px;
 }
 
-header nav a:last-child {
+header nav ul li:last-child {
   margin-right: 0;
 }
 
-header nav a:after {
+header nav ul li:after {
   cursor: pointer;
   content: "";
   display: block;
@@ -52,12 +56,17 @@ header nav a:after {
   top: 19px;
 }
 
-header nav a:first-child,
-header nav a:hover {
+header nav ul li:first-child a,
+header nav ul li a:hover {
   color: #00acdc;
 }
 
-header nav a:first-child:after,
-header nav a:hover:after {
+header nav ul li:first-child:after,
+header nav ul li:hover:after {
   background: #00acdc;
+}
+
+header nav ul li a {
+  color: #000;
+  text-decoration: none;
 }
