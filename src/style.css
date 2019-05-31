@@ -10,7 +10,6 @@
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -25,18 +24,28 @@
 .nav {
   display: flex;
   align-items: stretch;
-  width: 750px;
+}
+
+.link-list {
+  display: flex;
+  list-style-type: none;
+  align-items: stretch;
   justify-content: space-between;
 }
 
 .nav-item {
-  display: block;
+  margin: 0 0 0 20px;
+}
+
+.nav-link {
   color: #000;
   text-decoration: none;
   line-height: 60px;
+  height: 100%;
+  display: block;
 }
 
-.nav-item:hover {
+.nav-link:hover {
   color: #00acdc;
 }
 
@@ -48,11 +57,11 @@
 .is-active::after {
   display: block;
   position: absolute;
-  top: 56px;
+  top: calc(100% - 4px);
   content: "";
   height: 4px;
   width: 100%;
   box-sizing: border-box;
   border: 2px solid #00acdc;
-  border-radius: 8px;
+  border-radius: 2px;
 }
