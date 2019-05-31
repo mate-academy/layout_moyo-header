@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
-- [UPDATE TEST REPORT LINK](https://<your_account>.github.io/<repo_name>/report/html_report/)
+- [DEMO LINK](https://earthhuman41.github.io/layout_moyo-header/)
+- [REPORT LINK](https://earthhuman41.github.io/layout_moyo-header/report/html_report/)
