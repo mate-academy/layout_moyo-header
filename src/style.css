@@ -2,12 +2,6 @@ body {
   background-color: #f0f0f0;
   margin: 0;
   padding: 0;
-
-  color: #000;
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 14.1px;
 }
 
 .header {
@@ -18,45 +12,54 @@ body {
   padding: 0 50px;
 }
 
-.header_logo {
+.header__logo {
   height: 40px;
   width: 40px;
 }
 
-.header_navigation-list {
+.header__navigation {
+  color: #000;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.header__navigation-list {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.header_navigation-item:not(:first-child) {
+.header__navigation-item:not(:first-child) {
   margin-left: 20px;
 }
 
-.header_navigation-item a {
+.header__navigation-item a {
   position: relative;
-  display: inline-block;
-  line-height: 60px;
+  display: block;
   height: 60px;
-  vertical-align: middle;
+
+  line-height: 60px;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.header_navigation-item a:hover,
-.header_navigation-item--active a {
+.header__navigation-item a:hover,
+.header__navigation-item--active a {
   color: #00acdc;
 }
 
-.header_navigation-item--active a::after {
+.header__navigation-item--active a::after {
   position: absolute;
-  top: 56px;
+  bottom: 0;
   content: "";
+
   display: block;
   width: 100%;
   height: 4px;
   background-color: #00acdc;
-  border-radius: 10px;
+  border-radius: 4px;
 }
