@@ -1,0 +1,56 @@
+@import 'base';
+
+%flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+$primary-color: #00acdc;
+
+///////////////////////////////////////////////
+#no-margin {
+  margin-right: 0;
+}
+
+.menu {
+  @extend %flex;
+  align-items: center;
+  //box-sizing: border-box;
+  padding: 0 50px;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  .menu__el {
+    @extend %flex;
+
+    .menu__el__link {
+      height: 60px;
+      line-height: 60px;
+      margin-right: 20px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .is-active {
+      color: $primary-color;
+    }
+
+    .is-active::after {
+      content: "";
+      display: block;
+      position: relative;
+      bottom: 4px;
+      height: 4px;
+      border-radius: 8px;
+      background-color: $primary-color;
+    }
+
+    .menu__el__link:hover {
+      color: $primary-color;
+    }
+
+  }
+}
