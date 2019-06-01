@@ -7,14 +7,10 @@ body {
   font-family: Roboto;
 }
 
-header {
-  height: 60px;
-  background: #fff;
-}
-
 .rectangle {
   height: 100%;
-  margin: 0 50px;
+  padding: 0 50px;
+  background: #fff;
 }
 
 .flex {
@@ -23,7 +19,6 @@ header {
 }
 
 #logo {
-  display: block;
   margin-top: 10px;
   background-image: url(https://github.com/Alexandr123454/layout_moyo-header/blob/master/src/images/logo.png?raw=true);
   width: 40px;
@@ -40,27 +35,22 @@ header {
   line-height: 14px;
 }
 
-.link {
-  list-style: none;
-  height: 60px;
-  margin-right: 18px;
-  text-transform: uppercase;
-}
-
-.link > a:hover {
+.called:hover {
   color: #00acdc;
-}
-
-.is-active {
-  color: #00acdc;
-  padding-bottom: 0;
 }
 
 .called:last-child {
   margin-right: 0;
 }
 
-.called.is-active:after {
+.menu--nav {
+  list-style: none;
+  height: 60px;
+  margin-right: 18px;
+  text-transform: uppercase;
+}
+
+.is-active:after {
   display: block;
   content: "";
   width: 100%;
@@ -68,4 +58,9 @@ header {
   background-color: #00acdc;
   border-radius: 8px;
   margin-top: 19px;
+}
+
+.is-active {
+  color: #00acdc;
+  padding-bottom: 0;
 }
