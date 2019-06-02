@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [ DEMO LINK](https://lena34679.github.io/layout_moyo-header/)
-- [ TEST REPORT LINK](https://lena34679.github.io/layout_moyo-header/report/html_report/)
+- [ LINK](https://lena34679.github.io/layout_moyo-header/)
+- [ REPORT LINK](https://lena34679.github.io/layout_moyo-header/report/html_report/)
