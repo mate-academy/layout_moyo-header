@@ -8,60 +8,46 @@ body {
   display: flex;
   justify-content: space-between;
   background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  align-items: center;
   padding: 0 50px;
   font-size: 12px;
   font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  align-items: center;
 }
-
-img {
-  width: 40px;
+.head .nav-img {
   height: 40px;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  height: 60px;
+  width: 40px;
 }
 
 .nav-list {
   display: flex;
+  margin: 0;
+}
+.nav-list .nav-item {
+  text-transform: uppercase;
   list-style: none;
+  margin-left: 20px;
 }
-
-.nav-item {
-  display: flex;
-}
-
-.nav-item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.nav-link {
+.nav-list .nav-item .nav-link {
+  position: relative;
+  display: block;
   color: #000;
   text-decoration: none;
-  text-transform: uppercase;
   line-height: 60px;
 }
-
-.nav-link:hover {
+.nav-list .nav-item .nav-link.is-active,
+.nav-list .nav-item .nav-link:hover {
   color: #00acdc;
 }
-
-.is-active {
-  position: relative;
-  color: #00acdc;
-}
-
-.nav-link.is-active::after {
-  content: "";
+.nav-list .nav-item .is-active::after {
   position: absolute;
-  background: #00acdc;
   bottom: 0;
-  left: 0;
-  height: 4px;
+  content: "";
+  display: block;
   width: 100%;
+  height: 4px;
+  background-color: #00acdc;
   border-radius: 1px;
 }
+
+/*# sourceMappingURL=style.css.map */
