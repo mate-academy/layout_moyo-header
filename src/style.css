@@ -29,11 +29,15 @@ header {
   display: flex;
 }
 
-.mr20 {
+.navItem {
   margin-right: 20px;
 }
 
-.navItem {
+.navItem:last-child {
+  margin-right: 0;
+}
+
+.navItem a {
   display: block;
   padding-top: 22.5px;
   font-weight: 500;
@@ -48,11 +52,11 @@ header {
   box-sizing: border-box;
 }
 
-.navItem:hover {
+.navItem a:hover {
   color: #00acdc;
 }
 
-.is-active {
+.navItem .is-active {
   color: #00acdc;
 }
 
@@ -60,7 +64,7 @@ header {
   content: " ";
   position: absolute;
   display: block;
-  width: 100%;
+  width: 90%;
   border-radius: 8px;
   border: 2px solid #00acdc;
   bottom: 0;
