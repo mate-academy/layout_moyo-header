@@ -3,10 +3,11 @@ body {
   padding: 0;
 }
 
-header {
+.MOYO-header {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   height: 60px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -20,31 +21,33 @@ header {
   padding: 10px 50px;
 }
 
-ul {
+.MOYO-header__product {
   display: flex;
-  margin-top: 19px;
+  margin: 0;
   margin-right: 30px;
   box-sizing: border-box;
 }
 
-li {
+.MOYO-header__product-name {
+  display: flex;
+  align-items: center;
   list-style: none;
   padding-right: 20px;
 }
 
-a {
-  padding-top: 23px;
-  padding-bottom: 23px;
-  text-align: center;
+.button {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 12px;
+  height: 60px;
   text-transform: uppercase;
   color: black;
 }
 
-nav a:hover {
+.button:hover {
   color: #00acdc;
 }
 
@@ -62,10 +65,4 @@ nav a:hover {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-}
-
-@media (max-width : 1200px) {
-  header {
-    width: 100%;
-  }
 }
