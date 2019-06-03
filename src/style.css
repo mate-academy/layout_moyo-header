@@ -36,7 +36,6 @@ header {
   height: 100%;
   display: flex;
   list-style-type: none;
-  position: relative;
 }
 
 .menu__item:not(:last-child) {
@@ -46,13 +45,17 @@ header {
 .menu__link {
   text-decoration: none;
   color: #000;
-  position: relative;
   white-space: nowrap;
   line-height: 60px;
 }
 
-.menu__link.is-active {
+.menu__link:hover {
   color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
 }
 
 .is-active::after {
@@ -64,8 +67,4 @@ header {
   border-radius: 2px;
   position: absolute;
   bottom: 0;
-}
-
-.menu__link:hover {
-  color: #00acdc;
 }
