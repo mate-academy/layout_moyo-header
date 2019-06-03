@@ -44,6 +44,3 @@ Screenshot of the header:
 
 - [DEMO LINK](https://ravenvol.github.io/layout_moyo-header/)
 - [TEST REPORT LINK](https://ravenvol.github.io/layout_moyo-header/report/html_report/)
-
-!!! NEED HELP COMMENT !!!
-Два теста не проходят, хотя визуально - все в порядке. Значение тестов понять не могу. поэтому и ошибку сам не определю.
