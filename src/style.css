@@ -3,9 +3,10 @@ body {
   padding: 0;
 }
 
-.MOYO-header {
+.header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
   height: 60px;
@@ -18,21 +19,21 @@ body {
 .logo {
   width: 40px;
   height: 40px;
-  padding: 10px 50px;
+  padding: 0 50px;
 }
 
-.MOYO-header__product {
+.header__section-list {
   display: flex;
   margin: 0;
-  margin-right: 30px;
+  padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
-.MOYO-header__product-name {
+.header__section-list-name {
   display: flex;
   align-items: center;
-  list-style: none;
-  padding-right: 20px;
+  margin-right: 20px;
 }
 
 .button {
@@ -44,7 +45,11 @@ body {
   line-height: 12px;
   height: 60px;
   text-transform: uppercase;
-  color: black;
+  color: #000;
+}
+
+.header__section-list li:last-child {
+  margin-right: 50px;
 }
 
 .button:hover {
@@ -60,9 +65,9 @@ body {
   content: "";
   position: absolute;
   background: #00acdc;
-  top: 56px;
+  bottom: 0;
   left: 0;
   height: 4px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 2px;
 }
