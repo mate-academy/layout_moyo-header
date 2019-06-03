@@ -1,0 +1,52 @@
+:root {
+  --main-act-color: #00acdc;
+}
+
+body {
+  margin: 0;
+}
+
+.menu__nav,
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+#margin__zero {
+  margin-right: 0;
+}
+
+.menu {
+  align-items: center;
+  padding: 0 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.menu__nav__link {
+  height: 60px;
+  line-height: 60px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.is-active {
+  color: var(--main-act-color);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: relative;
+  bottom: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--main-act-color);
+}
+
+.menu__nav__link:hover {
+  color: var(--main-bg-color);
+}
