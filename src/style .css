@@ -5,12 +5,18 @@ body {
 
 header {
   padding: 0 50px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
 }
 
+.full_height {
+  height: 100%;
+}
+
 .logo_container {
-  padding-top: 10px;
+  align-self: center;
+  padding-top: 1px;
 }
 
 .nav {
@@ -19,7 +25,7 @@ header {
 
 .nav_ul {
   margin: 0;
-  display: contents;
+  display: flex;
   align-items: center;
 }
 
@@ -36,9 +42,8 @@ header {
   line-height: 14px;
   text-transform: uppercase;
   margin-left: 20px;
-  padding-top: 23px;
+  align-items: center;
   display: flex;
-  flex-direction: column;
 }
 
 .nav_link:hover {
@@ -47,13 +52,15 @@ header {
 
 .is-active {
   color: #00acdc;
+  position: relative;
 }
 
 .is-active::after {
-  margin-top: 19px;
+  position: absolute;
   border-radius: 2px;
   height: 4px;
   width: 100%;
   content: "";
   background: #00acdc;
+  bottom: 0;
 }
