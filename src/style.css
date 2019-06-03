@@ -21,40 +21,35 @@ header {
   padding: 0;
 
   display: flex;
-  flex-direction: row;
-}
-
-.header__menu-item {
-  margin-right: 20px;
-}
-
-.header__menu li:last-child a {
-  margin-right: 0;
 }
 
 .header__menu-item {
   display: block;
   position: relative;
+  margin-right: 20px;
+
   height: 60px;
   line-height: 60px;
+
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.header__menu a:hover {
+li:last-child .header__menu-item {
+  margin-right: 0;
+}
+
+.header__menu-item:hover,
+.header__menu-item.is-active {
   color: #00acdc;
 }
 
-a.is-active {
-  color: #00acdc;
-}
-
-.is-active:after {
+.header__menu-item.is-active:after {
   content: " ";
   display: block;
   position: absolute;
-  top: 56px;
+  bottom: 0;
   width: 100%;
   height: 4px;
   background-color: #00acdc;
