@@ -26,20 +26,22 @@ body {
 .nav-list .nav-item {
   text-transform: uppercase;
   list-style: none;
-  margin-left: 20px;
 }
-.nav-list .nav-item .nav-link {
+.nav-list .nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+.nav-list .nav-link {
   position: relative;
   display: block;
   color: #000;
   text-decoration: none;
   line-height: 60px;
 }
-.nav-list .nav-item .nav-link.is-active,
-.nav-list .nav-item .nav-link:hover {
+.nav-list .is-active,
+.nav-list .nav-link:hover {
   color: #00acdc;
 }
-.nav-list .nav-item .is-active::after {
+.nav-list .is-active::after {
   position: absolute;
   bottom: 0;
   content: "";
@@ -47,7 +49,7 @@ body {
   width: 100%;
   height: 4px;
   background-color: #00acdc;
-  border-radius: 1px;
+  border-radius: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */
