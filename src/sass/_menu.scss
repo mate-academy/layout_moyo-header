@@ -1,0 +1,41 @@
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: 500;
+
+  &__link {
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__link:hover {
+    color: #00acdc;
+  }
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active:after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 2px;
+}
