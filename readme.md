@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://taisiiapn.github.io/layout_moyo-header/)
-- [UPDATE TEST REPORT LINK](https://taisiiapn.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://taisiiapn.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://taisiiapn.github.io/layout_moyo-header/report/html_report/)
