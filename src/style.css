@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 10px 50px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.item {
+  display: inline-block;
+  margin: 0 0 0 17px;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  display: block;
+  position: absolute;
+  top: 33px;
+  content: "";
+  height: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #00acdc;
+  border-radius: 8px;
+}
