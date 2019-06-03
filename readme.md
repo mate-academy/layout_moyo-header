@@ -35,12 +35,12 @@ row should have blue color on :hover.
 Screenshot of the header:
 ![screenshot](./references/header-example.png)
 
----
+----
 **Read the guideline before start**
 
 [Guideline](https://mate-academy.github.io/layout_task-guideline/)
 
 **Result**
 
-- [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
-- [UPDATE TEST REPORT LINK](https://<your_account>.github.io/<repo_name>/report/html_report/)
+- [UPDATE DEMO LINK](https://ronyshchenko.github.io/layout_moyo-header/)
+- [UPDATE TEST REPORT LINK](https://ronyshchenko.github.io/layout_moyo-header/report/html_report/)
