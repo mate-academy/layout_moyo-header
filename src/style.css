@@ -1,0 +1,67 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-class {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  padding: 0 50px;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav-item-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-item a {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+  position: relative;
+  text-transform: uppercase;
+  line-height: 14px;
+  color: #000;
+  text-decoration: none;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.nav-item a:hover {
+  color: #00acdc;
+}
+
+.nav-item .is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 90%;
+  border-radius: 2px;
+  border: 2px solid #00acdc;
+  bottom: 0;
+}
