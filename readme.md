@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
-- [UPDATE TEST REPORT LINK](https://<your_account>.github.io/<repo_name>/report/html_report/)
+- [UPDATE DEMO LINK](https://kseniiamazan.github.io/layout_moyo-header/)
+- [UPDATE TEST REPORT LINK](https://kseniiamazan.github.io/layout_moyo-header/report/html_report/)
