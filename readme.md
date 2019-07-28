@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [DEMO LINK](https://yevhen-sahach.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://yevhen-sahach.github.io/layout_moyo-header/report/html_report/)
+* [DEMO LINK](https://yevhen-sahach.github.io/layout_moyo-header/)
+* [TEST REPORT LINK](https://yevhen-sahach.github.io/layout_moyo-header/report/html_report/)
