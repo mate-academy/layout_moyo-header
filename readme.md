@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
-- [UPDATE TEST REPORT LINK](https://<your_account>.github.io/<repo_name>/report/html_report/)
+- [UPDATE DEMO LINK](https://pastushenkovik.github.io/layout_snake/)
+- [UPDATE TEST REPORT LINK](https://pastushenkovik.github.io/layout_snake/report/html_report/)
