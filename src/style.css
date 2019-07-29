@@ -1,0 +1,53 @@
+.header {
+  padding: 0 50px;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  height: 40px;
+}
+
+.menu > .menu-item {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.menu-link {
+  display: block;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  line-height: 60px;
+}
+
+.menu-item:last-of-type {
+  margin-right: 0;
+}
+
+.menu-link.is-active {
+  color: #00acdc;
+}
+
+.is-active {
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  border-top: 5px solid #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+}
+
+.menu-link:hover {
+  color: #00acdc;
+}
