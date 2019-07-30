@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://pastushenkovik.github.io/layout_snake/)
-- [UPDATE TEST REPORT LINK](https://pastushenkovik.github.io/layout_snake/report/html_report/)
+- [UPDATE DEMO LINK](https://pastushenkovik.github.io/layout_moyo-header/)
+- [UPDATE TEST REPORT LINK](https://pastushenkovik.github.io/layout_moyo-header/report/html_report/)
