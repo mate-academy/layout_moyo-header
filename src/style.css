@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Roboto;
+  font-family: Roboto, Arial;
 }
 
 .header {
@@ -14,27 +14,23 @@ body {
   height: 40px;
 }
 
-.menu {
+.nav-list {
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-.menu_item {
+.nav-item:not(:first-child) {
   margin-left: 20px;
 }
 
-.menu_item:first-child {
-  margin-left: 0;
-}
-
-.menu_item {
+.nav-item {
   list-style: none;
   display: flex;
   align-items: center;
 }
 
-.menu_link_item {
+.nav-link {
   line-height: 60px;
   color: #000;
   position: relative;
@@ -43,7 +39,7 @@ body {
   text-decoration: none;
 }
 
-.menu_link_item:hover,
+.nav-link:hover,
 .is-active {
   color: #00acdc;
 }
