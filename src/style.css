@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header-logo {
+  height: 40px;
+}
+
+.navigation {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-element {
+  position: relative;
+  margin-right: 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  line-height: 60px;
+  color: black;
+}
+
+.is-active,
+.nav-element:hover {
+  color: #00acdc;
+}
+
+li:last-of-type .nav-element {
+  margin-right: 0;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+}
