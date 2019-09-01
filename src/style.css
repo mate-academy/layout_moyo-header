@@ -1,26 +1,32 @@
 .menu {
-  display: flex;
-  align-items: center;
-  padding: 0 50px;
-  justify-content: space-between;
+  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.nav-bar {
+.nav-bar-list {
   display: flex;
-  list-style: none;
+  justify-content: space-between;
+}
+
+.logo {
+  position: absolute;
+  left: 50px;
+  top: 10px;
 }
 
 .nav-bar-item {
   position: relative;
   font-family: "Roboto", sans-serif;
+  text-decoration: none;
   font-weight: 500px;
   font-size: 12px;
-  line-height: 60px;
-  text-decoration: none;
   text-transform: uppercase;
-  margin-left: 20px;
+  line-height: 60px;
   color: #000;
+  margin-left: 20px;
 }
 
 .is-active,
@@ -30,21 +36,17 @@
 
 .is-active::after {
   content: "";
-  position: absolute;
   height: 4px;
-  border-radius: 8px;
+  width: 37px;
   background-color: #00acdc;
+  border-radius: 8px;
+  position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
 }
 
 body {
   margin: 0;
-}
-
-.logo {
-  margin-top: 5px;
 }
 
 .is-active {
