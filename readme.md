@@ -4,10 +4,10 @@
 Create HTML page with header. Understand `flexbox` usage. Create
 HTML layout from the mockup.
 
-Use this [mockup](https://www.figma.com/file/KAV1NnDp7hgQtPnaD6XdOcnG/Moyo-Header?node-id=0%3A1) 
+Use this [mockup](https://www.figma.com/file/KAV1NnDp7hgQtPnaD6XdOcnG/Moyo-Header?node-id=0%3A1)
 for development.
 
-If you don't want to see other users cursors you can disable `Multiplayer 
+If you don't want to see other users cursors you can disable `Multiplayer
 Cursors` in figma. [Learn how](https://mate-academy.github.io/layout_task-guideline/figma.html#multiplayer-cursors)
 
 ## Common mistakes
@@ -27,9 +27,9 @@ Cursors` in figma. [Learn how](https://mate-academy.github.io/layout_task-guidel
 * follow styles from the mock
 * link with blue color and line below is an active link. It should have
  `class="is-active"` and relevant styles
-* link with only blue color is an example of `:hover` styles. Every link in the 
-row should have blue color on :hover. 
-* add attribute `data-qa="hover"` to the 4th link for testing (`Ноутбуки и 
+* link with only blue color is an example of `:hover` styles. Every link in the
+row should have blue color on :hover.
+* add attribute `data-qa="hover"` to the 4th link for testing (`Ноутбуки и
 компьютеры`)
 
 Screenshot of the header:
@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
-- [UPDATE TEST REPORT LINK](https://<your_account>.github.io/<repo_name>/report/html_report/)
+- [ DEMO LINK](https://koretskyi.github.io/layout_moyo-header/)
+- [ TEST REPORT LINK](https://koretskyi.github.io/layout_moyo-header//report/html_report/)
