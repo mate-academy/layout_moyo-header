@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+}
+
+.menu {
+  position: absolute;
+  width: 100%;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.top-nav {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  justify-content: flex-end;
+  display: flex;
+  height: 60px;
+  margin-right: 50px;
+}
+
+.item {
+  margin-top: 23px;
+  margin-bottom: auto;
+  vertical-align: middle;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+.icon {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+}
+
+.is-active,
+.item:hover {
+  display: inline-block;
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active {
+  margin-top: 23px;
+  padding-bottom: 23px;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+}
