@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  margin-right: 50px;
+}
+
+.logo {
+  margin: 10px auto 10px 50px;
+}
+
+.menuLink {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 60px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  color: #000;
+}
+
+.menuLink:hover,
+.is-active {
+  color: #00acdc;
+}
+
+.is-active {
+  margin-left: 0;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  width: 37px;
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+}
