@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+
+.moyo_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+}
+
+.moyo_nav {
+  display: flex;
+}
+
+.link_nav {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  margin-left: 20px;
+}
+
+.is-active {
+  margin-left: 0;
+}
+
+.is-active,
+.link_nav:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  background-color: #00acdc;
+  height: 4px;
+  border-radius: 8px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
