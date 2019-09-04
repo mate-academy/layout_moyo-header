@@ -44,3 +44,5 @@ Screenshot of the header:
 
 - [DEMO LINK](https://xandr1.github.io/layout_moyo-header/)
 - [TEST REPORT LINK](https://xandr1.github.io/layout_moyo-header/report/html_report/)
+
+Тести не проходить, але це пов'язано з якимось глюком зі шрифтами, все інше піксель-в-піксель зверстано.
