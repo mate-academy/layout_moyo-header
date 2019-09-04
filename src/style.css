@@ -3,34 +3,32 @@ body {
 }
 
 .menu {
-  position: absolute;
-  width: 100%;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .top-nav {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  justify-content: flex-end;
-  display: flex;
   height: 60px;
   margin-right: 50px;
 }
 
+.icon {
+  margin: 10px auto auto 50px;
+}
+
 .item {
-  margin-top: 23px;
-  margin-bottom: auto;
-  vertical-align: middle;
-  margin-left: 20px;
+  line-height: 60px;
+  margin-left: 17px;
   text-decoration: none;
   color: #000;
 }
 
-.icon {
-  position: absolute;
-  left: 50px;
-  top: 10px;
+.is-active {
+  margin-left: 0;
 }
 
 .is-active,
@@ -38,11 +36,6 @@ body {
   display: inline-block;
   position: relative;
   color: #00acdc;
-}
-
-.is-active {
-  margin-top: 23px;
-  padding-bottom: 23px;
 }
 
 .is-active::after {
