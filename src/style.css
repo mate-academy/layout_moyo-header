@@ -7,7 +7,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
-  margin: 0;
 }
 
 a {
@@ -18,26 +17,27 @@ a {
   box-sizing: border-box;
   height: 60px;
   position: relative;
-  margin: 0;
   display: flex;
   justify-content: flex-end;
 }
 
 .nav_list {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 0;
+}
+
+ul {
   list-style-type: none;
 }
 
-.nav_list:last-child {
+.nav {
   margin-right: 50px;
 }
 
+.nav_item:first-of-type {
+  margin-left: 0;
+}
+
 .nav_item {
-  line-height: 60px;
   margin-left: 20px;
 }
 
@@ -71,9 +71,10 @@ a {
 }
 
 .nav_item a {
+  line-height: 60px;
   color: black;
-  position: relative;
   display: block;
+  position: relative;
 }
 
 .header::after {
