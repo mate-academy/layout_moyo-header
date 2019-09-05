@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [DEMO LINK](https://veronika-donets.github.io/<repo_name>/)
-- [TEST REPORT LINK](https://<your_account>.github.io/<repo_name>/report/html_report/)
+- [DEMO LINK](https://veronika-donets.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://veronika-donets.github.io/layout_moyo-header/report/html_report/)
