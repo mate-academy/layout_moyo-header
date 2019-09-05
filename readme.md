@@ -43,4 +43,4 @@ Screenshot of the header:
 **Result**
 
 - [UPDATE DEMO LINK](https://kisilov-vadim.github.io/layout_moyo-header/)
-- [UPDATE TEST REPORT LINK](https://kisilov-vadim.github.io/layout_moyo-header/html_report/)
+- [UPDATE TEST REPORT LINK](https://kisilov-vadim.github.io/layout_moyo-header/report/html_report/)
