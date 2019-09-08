@@ -1,0 +1,56 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+  align-items: center;
+  height: 60px;
+}
+
+.menu {
+  display: flex;
+}
+
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.item {
+  margin-left: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #000;
+  line-height: 60px;
+  position: relative;
+  text-decoration: none;
+}
+
+.item:hover,
+.is-active {
+  color: #00acdc;
+}
+
+.is-active {
+  margin-left: 0;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
