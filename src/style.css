@@ -2,23 +2,25 @@
 
 body {
   margin: 0;
+  box-sizing: border-box;
 }
 
 header {
   display: flex;
   align-items: center;
+  background: #fff;
+  padding: 0 50px;
   height: 60px;
-  padding: 0.5px;
   justify-content: space-between;
-
 }
 
 .logo {
-  margin-left: 50px;
+  display: block;
+  height: 40px;
+  width: 40px;
 }
 
 .nav-class {
-  margin-right: 50px;
   display: flex;
 }
 
@@ -31,6 +33,7 @@ header {
   font-size: 12px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
 .link:hover,
@@ -44,10 +47,10 @@ header {
 
 .link:first-child {
   margin-left: 0;
+  position: relative;
 }
 
 .is-active::after {
-  width: 100%;
   height: 4px;
   position: absolute;
   display: block;
@@ -56,4 +59,5 @@ header {
   content: "";
   bottom: 0;
   left: 0;
+  right: 0;
 }
