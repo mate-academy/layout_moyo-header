@@ -42,5 +42,5 @@ Screenshot of the header:
 
 **Result**
 
-- [DEMO LINK](https://github.com/mate-academy/layout_moyo-header/pull/179)
-- [TEST REPORT LINK](https://github.com/mate-academy/layout_moyo-header/pull/179/html_report/)
+- [DEMO LINK](https://havrylenkov.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://havrylenkov.github.io/layout_moyo-header/html_report/)
