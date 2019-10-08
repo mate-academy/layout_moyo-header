@@ -1,0 +1,21 @@
+.is-active {
+  color: var(--main-act-color);
+  position: relative;
+
+  &:hover {
+    color: var(--main-act-color);
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 33px;
+    content: "";
+    height: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid var(--main-act-color);
+    border-radius: 8px;
+  }
+}
+
