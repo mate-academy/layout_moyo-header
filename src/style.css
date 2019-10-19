@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  background: silver;
+}
+
+.header {
+  background: #fff;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50px;
+  top: 10px;
+}
+
+.nav {
+  width: 1200px;
+  height: 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.links {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  color: black;
+  padding-left: 20px;
+  line-height: 14px;
+}
+
+.is-active:hover {
+  color: #00acdc;
+}
+
+.is-active:hover::after {
+  border-radius: 8px;
+  content: "";
+  height: 4px;
+  background: #00acdc;
+  position: absolute;
+  top: 56px;
+}
+
+.apple {
+  margin-left: 397px;
+  padding-left: 0;
+}
+
+.apple:hover::after {
+  width: 37px;
+  left: 397px;
+}
+
+.samsung:hover::after {
+  width: 58px;
+  left: 454px;
+}
+
+.phone:hover::after {
+  width: 152px;
+  left: 532px;
+}
+
+.computers:hover::after {
+  width: 163px;
+  left: 704px;
+}
+
+.gadgets:hover::after {
+  width: 59px;
+  left: 882px;
+}
+
+.tablets:hover::after {
+  width: 70px;
+  left: 960px;
+}
+
+.photo:hover::after {
+  width: 33px;
+  left: 1050px;
+}
+
+.video:hover::after {
+  width: 41px;
+  left: 1102px;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .nav {
+    width: 1024px;
+  }
+  .apple {
+    margin-left: 221px;
+    padding-left: 0;
+  }
+
+  .apple:hover::after {
+    left: 221px;
+  }
+
+  .samsung:hover::after {
+    left: 278px;
+  }
+
+  .phone:hover::after {
+    left: 356px;
+  }
+
+  .computers:hover::after {
+    left: 528px;
+  }
+
+  .gadgets:hover::after {
+    left: 707px;
+  }
+
+  .tablets:hover::after {
+    left: 784px;
+  }
+
+  .photo:hover::after {
+    left: 874px;
+  }
+
+  .video:hover::after {
+    left: 925px;
+  }
+}
