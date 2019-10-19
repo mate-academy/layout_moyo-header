@@ -22,6 +22,8 @@ body {
 
 .menu__items {
   display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .item:first-child {
@@ -72,5 +74,21 @@ body {
 @media screen and (min-width: 1200px) {
   .item:first-child {
     margin-left: 262px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header,
+  .menu__items {
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+  }
+  .item {
+    margin-top: 40px;
+  }
+  .item:first-child {
+    padding-left: 20px;
+    margin-left: 0;
   }
 }
