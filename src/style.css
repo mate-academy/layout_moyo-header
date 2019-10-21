@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap&subset=cyrillic,cyrillic-ext");
+
+body {
+  margin: 0;
+}
+
+.moyo-container {
+  display: flex;
+  height: 60px;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+}
+
+.moyo-nav {
+  display: flex;
+  align-items: center;
+}
+
+.moyo-nav-element {
+  color: black;
+  text-decoration: none;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.moyo-nav-element:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  border-radius: 2px;
+  left: 0;
+  right: 0;
+  top: 33px;
+  background-color: #00acdc;
+}
