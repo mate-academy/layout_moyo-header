@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.nav__logo {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.container.nav {
+  margin-right: 50px;
+}
+
+.nav__link {
+  display: block;
+  line-height: 60px;
+  text-decoration: none;
+  margin-left: 20px;
+  color: black;
+}
+
+.nav__link.is-active {
+  color: #00acdc;
+  margin-left: 0;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 2px;
+  margin-top: -4px;
+}
