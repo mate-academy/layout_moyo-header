@@ -1,23 +1,18 @@
 body {
   margin: 0;
-  background: silver;
 }
 
 .header {
   background: #fff;
-  /* position: relative; */
 }
 
 .logo {
-  position: absolute;
   width: 40px;
   height: 40px;
-  left: 50px;
-  top: 10px;
+  margin: 10px 397px 0 50px;
 }
 
 .nav {
-  width: 1200px;
   height: 60px;
   display: flex;
   flex-flow: row nowrap;
@@ -36,12 +31,12 @@ body {
   position: relative;
 }
 
-.is-active:hover {
+.links:hover {
   color: #00acdc;
 }
 
-.is-active:hover::after {
-  border-radius: 8px;
+.is-active::after {
+  border-radius: 2px;
   content: "";
   height: 4px;
   background: #00acdc;
@@ -49,20 +44,5 @@ body {
   top: 36px;
   left: 0;
   right: 0;
-}
-
-.apple {
-  margin-left: 397px;
-  padding-left: 0;
-}
-
-@media screen and (max-width: 1024px) {
-
-  .nav {
-    width: 1024px;
-  }
-  .apple {
-    margin-left: 221px;
-    padding-left: 0;
-  }
+  bottom: 0;
 }
