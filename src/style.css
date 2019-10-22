@@ -17,15 +17,21 @@ body {
   margin: 10px 0;
 }
 
-.nav {
+.list {
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.nav__link {
-  vertical-align: top;
+.list__num {
+  margin-right: 20px;
   padding-top: 22.5px;
   padding-bottom: 22.5px;
-  margin-right: 20px;
+  list-style: none;
+}
+
+.list__num__link {
+  vertical-align: top;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
@@ -35,23 +41,25 @@ body {
   line-height: 14px;
 }
 
-.nav__link:last-child {
+.list__num:last-child {
   margin-right: 0;
 }
 
-.nav__link:hover {
+.list__num__link:hover {
   color: #00acdc;
 }
 
 .is-active {
   color: #00acdc;
+  position: relative;
 }
 
 .is-active::after {
   content: "";
+  width: 100%;
   display: block;
-  position: relative;
-  top: 19px;
+  position: absolute;
+  top: 32px;
   background-color: #00acdc;
   border-bottom: 4px solid #00acdc;
 }
