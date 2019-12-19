@@ -21,6 +21,8 @@ body {
 
 .nav-menu {
   height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-item {
@@ -30,9 +32,10 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   text-decoration: none;
+  line-height: 60px;
 }
 
-.nav-menu > *:not(:last-of-type) {
+.nav-item:not(:last-of-type) {
   margin-right: 20px;
 }
 
@@ -40,16 +43,16 @@ body {
   color: #00acdc;
 }
 
-.is-active {
+.first-item {
   position: relative;
   color: #00acdc;
 }
 
-.is-active::after {
+.first-item::after {
   position: absolute;
   content: "";
   left: 0;
-  top: 32px;
+  bottom: 0;
   height: 4px;
   width: 100%;
   border-radius: 8px;
