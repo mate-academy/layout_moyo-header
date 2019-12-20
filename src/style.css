@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
 }
 
 ul,
@@ -22,40 +24,38 @@ li {
 
 .logo {
   padding: 10px 0;
-  height: 40px;
   width: 40px;
+  height: 40px;
   display: block;
-  overflow: hidden;
 }
 
-.nav__list {
+.nav-bar__list {
   display: flex;
 }
 
-.nav__item:not(:first-child) {
+.nav-bar__item:not(:first-child) {
   margin-left: 20px;
 }
 
-.nav__link {
+.nav-bar__link {
+  display: block;
   color: #000;
   font-weight: 500;
-  font-size: 12px;
   text-transform: uppercase;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
   position: relative;
   transition: 0.2s ease-in-out;
-  display: block;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
   line-height: 60px;
-  height: 60px;
 }
 
-.nav__link.is-active,
-.nav__link:hover {
+.nav-bar__link.is-active,
+.nav-bar__link:hover {
   color: #00acdc;
 }
 
-.nav__link::after {
+.nav-bar__link::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -68,6 +68,6 @@ li {
   transition: all 0.3s ease-in-out;
 }
 
-.nav__link.is-active::after {
+.nav-bar__link.is-active::after {
   width: 100%;
 }

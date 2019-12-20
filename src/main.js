@@ -1,6 +1,6 @@
 'use strict';
 
-const navBar = document.querySelector('.nav__list');
+const navBar = document.querySelector('.nav-bar__list');
 
 const handlerClick = function(e) {
   e.preventDefault();
@@ -9,7 +9,7 @@ const handlerClick = function(e) {
     return;
   }
 
-  const arrayOfClasses = Array.from(this.querySelectorAll('.nav__link'));
+  const arrayOfClasses = Array.from(this.querySelectorAll('.nav-bar__link'));
 
   arrayOfClasses.map(el => el.classList.remove('is-active'));
   e.target.classList.add('is-active');
