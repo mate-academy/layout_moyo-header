@@ -4,13 +4,8 @@ body {
 
 .header {
   position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 1200px;
-  height: 60px;
-
   display: flex;
+  flex-basis: 100%;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -26,40 +21,38 @@ body {
   height: 40px;
 }
 
+.logo-link {
+  text-decoration: none;
+}
+
 .navigation {
-  display: flex;
-  height: 100%;
   margin-right: 50px;
 }
 
 .links {
   display: flex;
-  height: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-.link {
-  display: flex;
-  align-items: center;
 }
 
 .link:not(:last-of-type) {
   margin-right: 20px;
 }
 
-.link-word {
-  height: 100%;
-  line-height: 60px;
+.link-sign {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   color: #000;
   font-weight: 500;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
-.link-word:hover {
+.link-sign:hover {
   color: #00acdc;
 }
 
@@ -70,16 +63,10 @@ body {
 .is-active::after {
   content: "";
   position: absolute;
+  bottom: 0;
   height: 4px;
   width: 37px;
   display: block;
-  bottom: 0;
   background-color: #00acdc;
   border-radius: 8px;
-}
-
-@media screen and (max-width: 1024px) {
-  .header {
-    width: 1024px;
-  }
 }
