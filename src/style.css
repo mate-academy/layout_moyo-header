@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  background: #fff;
+  box-sizing: border-box;
 }
 
 .menu {
@@ -10,15 +10,17 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   height: 60px;
   padding: 0 50px;
+  background: #fff;
 }
 
-.menu-list {
+.nav-list {
   display: flex;
+  list-style: none;
 }
 
-.menu-item {
-  color: black;
-  font-family: "Roboto", sans-serif;
+.nav-item {
+  color: #000;
+  font-family: Roboto, sans-serif;
   font-size: 12px;
   text-decoration: none;
   text-transform: uppercase;
@@ -31,10 +33,9 @@
   height: 40px;
   left: 50px;
   top: 10px;
-  background: url(images/logo.png);
 }
 
-.menu-item:hover {
+.nav-item:hover {
   color: #00acdc;
 }
 
@@ -90,7 +91,7 @@
     right: 0;
   }
 
-  .menu-list {
+  .nav-list {
     position: fixed;
     width: 100%;
     right: -100%;
@@ -100,7 +101,7 @@
     flex-direction: column;
   }
 
-  .menu-item {
+  .nav-item {
     padding: 10px 0;
   }
 }
