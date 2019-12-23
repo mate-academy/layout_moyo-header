@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.header {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header .logo {
+  display: flex;
+  margin-left: 0;
+  height: 40px;
+  align-self: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  margin-left: 20px;
+  display: inline-block;
+  line-height: 60px;
+}
+
+a:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+  padding-left: 0;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 56px;
+  width: 37px;
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+}
