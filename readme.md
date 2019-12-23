@@ -3,7 +3,7 @@
     - [DEMO LINK](https://LeonidShv.github.io/layout_moyo-header/)
     - [TEST REPORT LINK](https://LeonidShv.github.io/layout_moyo-header/report/html_report/)
 2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
-___
+____
 
 ## The task
 Create HTML page with the header using `flexbox` basing on [this mockup](https://www.figma.com/file/KAV1NnDp7hgQtPnaD6XdOcnG/Moyo-Header?node-id=0%3A1).
