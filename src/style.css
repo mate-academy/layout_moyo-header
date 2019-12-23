@@ -1,17 +1,20 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   margin: 0;
 }
 
-header {
+.nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-}
-
-nav {
-  display: flex;
 }
 
 .logo {
@@ -20,22 +23,26 @@ nav {
 }
 
 .nav-link {
+  display: flex;
+  padding: 23px 0;
+  align-items: center;
   font-size: 12px;
   text-decoration: none;
   text-transform: uppercase;
-  color: black;
-  padding: 23px 0;
-  margin-left: 20px;
+  color: #000;
 }
 
-.nav-link:hover {
-  color: #00acdc;
-}
-
-.is-active {
+.nav-list {
   position: relative;
+}
+
+.nav-link:hover,
+.is-active {
   color: #00acdc;
-  margin: 0;
+}
+
+.nav-list:not(:first-of-type) {
+  margin-left: 20px;
 }
 
 .is-active::after {
