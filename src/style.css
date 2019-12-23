@@ -1,89 +1,80 @@
 body {
   margin: 0;
-  background: ##e5e5e5;
 }
 
 ul {
-  list-style: none;
   margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: black;
+  list-style: none;
 }
 
 .header-block {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.logo {
+  line-height: 0;
 }
 
 .nav-list {
   display: flex;
-
   justify-content: flex-end;
-  padding-right: 40px;
-  background: #fff;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .nav-item {
-  line-height: 60px;
+  padding: 0 10px;
   font-family: "Roboto", "sans-serif";
   font-size: 12px;
+  line-height: 60px;
   text-transform: uppercase;
-  max-height: 60px;
+}
+
+.nav-item:first-child {
+  padding-left: 0;
+}
+
+.nav-item:last-child {
+  padding-right: 0;
 }
 
 .nav-link {
-  padding: 0 10px;
   display: block;
+  position: relative;
+  text-decoration: none;
+  color: black;
 }
 
-/*Код ниже отвечает за focus and hover, тесты не проходило, потому я решил
-добавить этот функционал только на 1 и 4 пункты меню соответсвенно,
-но опять таки не помогло*/
-
-/*
 .nav-link:hover {
   color: #00acdc;
-}*/
-
-/*.nav-link:focus::after {
-  content: "";
-  display: block;
-  padding-top: 4px;
-  bottom: 4px;
-  background: #00acdc;
-  border-radius: 8px;
-  position: relative;
-}*/
-
-/*.nav-link:focus {
-  color: #00acdc;
-}*/
-
-.logo {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 50px;
-  line-height: 0;
 }
-/*пытался играть с тестами и прописывал ховер и "фокус" только для
-тех пунктов меню которые будут проверяться*/
-.is-active:after {
+
+.nav-link:active::after {
   content: "";
-  display: block;
-  padding-top: 4px;
-  bottom: 4px;
-  background: #00acdc;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
   border-radius: 8px;
-  position: relative;
+  background: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background: #00acdc;
 }
 
 .is-active {
-  color: #00acdc;
-}
-
-.hover:hover {
   color: #00acdc;
 }
