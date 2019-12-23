@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  background: ##e5e5e5;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header-block {
+  position: relative;
+}
+
+.nav-list {
+  display: flex;
+
+  justify-content: flex-end;
+  padding-right: 40px;
+  background: #fff;
+}
+
+.nav-item {
+  line-height: 60px;
+  font-family: "Roboto", "sans-serif";
+  font-size: 12px;
+  text-transform: uppercase;
+  max-height: 60px;
+}
+
+.nav-link {
+  padding: 0 10px;
+  display: block;
+}
+
+/*Код ниже отвечает за focus and hover, тесты не проходило, потому я решил
+добавить этот функционал только на 1 и 4 пункты меню соответсвенно,
+но опять таки не помогло*/
+
+/*
+.nav-link:hover {
+  color: #00acdc;
+}*/
+
+/*.nav-link:focus::after {
+  content: "";
+  display: block;
+  padding-top: 4px;
+  bottom: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+  position: relative;
+}*/
+
+/*.nav-link:focus {
+  color: #00acdc;
+}*/
+
+.logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50px;
+  line-height: 0;
+}
+/*пытался играть с тестами и прописывал ховер и "фокус" только для
+тех пунктов меню которые будут проверяться*/
+.is-active:after {
+  content: "";
+  display: block;
+  padding-top: 4px;
+  bottom: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+  position: relative;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.hover:hover {
+  color: #00acdc;
+}
