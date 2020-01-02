@@ -17,17 +17,23 @@ body {
   background-color: #fff;
 }
 
-.link-logo {
+.header__link-logo {
   width: 40px;
   height: 40px;
 }
 
-.menu {
+.header__menu {
   display: flex;
   height: 100%;
 }
 
-.link {
+.menu__list {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu__link {
   display: flex;
   text-decoration: none;
   position: relative;
@@ -42,16 +48,16 @@ body {
   align-items: center;
 }
 
-.is-active,
-.link:hover {
+.menu__link_is-active,
+.menu__link:hover {
   color: #00acdc;
 }
 
-.link:not(:last-of-type) {
+.menu__item:not(:last-of-type) {
   margin-right: 20px;
 }
 
-.is-active::after {
+.menu__link_is-active::after {
   content: "";
   height: 4px;
   width: 100%;
