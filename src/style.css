@@ -15,11 +15,18 @@ body {
   line-height: 0;
 }
 
-.header__nav {
+.nav__list {
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.nav__item {
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
   display: block;
   font-family: "Roboto";
   font-size: 12px;
@@ -31,11 +38,7 @@ body {
   color: #000;
 }
 
-.nav__item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.nav__item:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
