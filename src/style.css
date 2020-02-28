@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 60px;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  min-width: 1024px;
+}
+
+.header__logo {
+  width: 40px;
+  height: 40px;
+  padding: 10px 0;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nuv__item-link {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 60px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.nuv__item-link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  margin-left: 0;
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
