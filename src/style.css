@@ -1,3 +1,7 @@
+:root {
+  --links-blue: #00acdc;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -34,12 +38,16 @@ body {
 }
 
 .nav-link:hover {
-  color: #00acdc;
+  color: var(--links-blue);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--links-blue);
+}
+
+.is-active .nav-link {
+  color: var(--links-blue);
 }
 
 .header-logo {
@@ -53,10 +61,10 @@ body {
   content: "";
   width: 100%;
   left: 0;
-  top: calc(100% + 15px);
+  top: calc(100% + 20px);
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--links-blue);
 }
 
 .link-item {
