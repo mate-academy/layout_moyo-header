@@ -1,7 +1,6 @@
-body,
-li,
-ul {
+body {
   margin: 0;
+  box-sizing: border-box;
 }
 
 .navbar__list {
@@ -13,7 +12,6 @@ ul {
 
 .navbar {
   margin-left: 15%;
-  margin-right: 50px;
 }
 
 .container {
@@ -21,6 +19,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  padding: 0 50px;
 }
 
 .navbar__link {
@@ -29,23 +28,18 @@ ul {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
+  font-size: 12px;
+  line-height: 60px;
+  padding: 23px 0;
+  position: relative;
 }
 
 .navbar__item:not(:last-child) {
   margin: 0 20px 0 0;
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  margin-left: 50px;
-}
-
+.is-active,
 .navbar__link:hover {
-  color: #00acdc;
-}
-
-.is-active {
   color: #00acdc;
 }
 
