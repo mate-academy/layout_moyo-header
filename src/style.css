@@ -1,0 +1,56 @@
+:root {
+  --custom-color: #00acdc;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  height: 60px;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.menu {
+  display: flex;
+}
+
+.nav__link:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  
+}
+
+.nav__link:hover {
+  color: var(--custom-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--custom-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  background-color: var(--custom-color);
+  border-radius: 8px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+}
