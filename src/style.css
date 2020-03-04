@@ -13,7 +13,7 @@ body {
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 10px 50px;
+  padding: 0 50px;
   align-items: center;
 }
 
@@ -22,34 +22,35 @@ body {
   margin: 0;
 }
 
-.nav__list__item {
+.nav__item {
   list-style: none;
 }
 
-.nav__list__item .link {
+.nav__link {
+  display: inline-block;
   text-decoration: none;
   color: #000;
   margin-right: 20px;
+  line-height: 60px;
 }
 
-.nav__list__item .hovered:hover {
+.hovered:hover {
   color: #00acdc;
 }
 
-.nav__list__item .is-active {
+.is-active {
   position: relative;
-  text-decoration: none;
   top: 0;
   color: #00acdc;
 }
 
-.nav__list__item .is-active::after {
+.is-active::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 4px;
   background-color: #00acdc;
-  top: 34px;
+  bottom: 0;
   left: 0;
   right: 0;
   border-radius: 8px;
