@@ -5,8 +5,7 @@ body {
   font-family: Roboto;
 }
 
-header {
-
+.header {
   justify-content: space-between;
   height: 60px;
   background: #fff;
@@ -17,39 +16,56 @@ header {
   padding: 0 50px;
 }
 
-header,
-nav {
+.header {
   display: flex;
 }
 
-nav {
-  align-items: center;
+.nav {
+  display: flex;
 }
 
-header > img {
+.nav {
+  align-items: center;
+  font-size: 0;
+}
+
+.logo {
   margin-top: 10px;
   width: 40px;
   height: 40px;
 }
 
-a {
+.menu {
+  margin: 0;
+  padding: 0;
+}
+
+.menu_items {
+  display: inline-block;
   position: relative;
   margin-right: 20px;
+}
+
+.option {
   font-family: Roboto;
   font-size: 12px;
   line-height: 15px;
   color: #000;
   text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  display: inline-block;
   padding-top: 22.5px;
   padding-bottom: 22.5px;
-  font-weight: 500;
 }
 
-a:last-of-type {
+.menu :last-child {
   margin-right: 0;
 }
 
-a:hover {
+.option:hover,
+.is-active {
   color: #00acdc;
 }
 
@@ -59,13 +75,8 @@ a:hover {
   height: 4px;
   background-color: #00acdc;
   position: absolute;
-  z-index: 1;
   background-size: contain;
   bottom: 0;
   right: 0;
   border-radius: 8px;
-}
-
-.is-active {
-  color: #00acdc;
 }
