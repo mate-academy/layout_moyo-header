@@ -3,15 +3,10 @@
   src: url(./fonts/Roboto/Roboto-Medium.ttf);
 }
 
-body {
-  margin: 0;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-
 }
 
 li {
@@ -26,7 +21,6 @@ li a {
   text-align: center;
   text-decoration: none;
   color: black;
-  
 }
 
 nav {
@@ -48,7 +42,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  
+
 }
 
 .logo {
@@ -67,11 +61,18 @@ nav {
 }
 
 .is-active {
+  position: relative;
   color: #00acdc;
-  border: 4px;
-  border-color: #00acdc;
-  border-bottom: 4px solid #00acdc;
-  padding-bottom: 18.5px;
-  padding-top: 22.5px;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  color: #00acdc;
+  background-color: #00acdc;
   border-radius: 8px;
 }
