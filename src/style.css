@@ -6,6 +6,14 @@ body {
   margin: 0;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -15,42 +23,20 @@ a {
   position: relative;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 50px;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-header img {
-  display: flex;
-  height: 40px;
-}
-
-ul {
-  display: flex;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-}
-
-li + li {
+a + a {
   margin-left: 20px;
 }
 
-li > div a:hover {
+a:hover {
   color: #00acdc;
 }
 
-li > div a:focus,
+a:focus,
 .is-active {
   color: #00acdc;
 }
 
-li > div a:focus::after,
+a:focus::after,
 .is-active::after {
   position: absolute;
   content: "";
