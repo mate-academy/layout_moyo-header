@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic");
+/* @font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Medium.ttf) |Doesn't work;
+} */
+
+body {
+  margin: 0;
+}
+
+a {
+  /* font-family: "Roboto"; !! Doesn't work with this font*/
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+
+.main__header {
+  height: 60px;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.main__nav__list {
+  display: flex;
+}
+
+.item {
+  height: 60px;
+  margin-right: 20px;
+}
+
+.item__link {
+  display: block;
+  line-height: 60px;
+  height: 60px;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.item:last-child {
+  margin-right: 0;
+}
+
+.item__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  background-color: #00acdc;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  right: 0;
+  bottom: 0;
+}
