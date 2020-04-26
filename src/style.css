@@ -2,61 +2,71 @@
 
 body {
   font-family: "Roboto";
-  font-size: 12px;
+  font-size: 0;
   margin: 0;
 }
 
 a {
   text-decoration: none;
   color: black;
+  padding: 23px 0;
+  font-size: 12px;
+  line-height: 60px;
+  position: relative;
 }
 
 header {
   display: flex;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  height: 60px;
 }
 
-header > a > img {
+header img {
+  display: flex;
+  height: 40px;
   padding: 10px 126.7px 10px 50px;
 }
 
 @media screen and (min-width: 1200px) {
-  header > a > img {
+  header img {
     padding: 10px 302.7px 10px 50px;
   }
 }
 
 nav {
   display: flex;
+  align-items: center;
 }
 
-nav > div > a {
-  display: inline-block;
-  padding-top: 23.4px;
-  padding-bottom: 22.61px;
-}
-
-nav > div + div {
+li + li {
   margin-left: 20px;
 }
 
-nav > div a:hover {
+li > div a:hover {
   color: #00acdc;
 }
 
-nav > div a:focus,
+ul {
+  display: flex;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+li > div a:focus,
 .is-active {
   color: #00acdc;
 }
 
-nav > div a:focus::after,
+li > div a:focus::after,
 .is-active::after {
-  display: inline-block;
+  position: absolute;
   content: "";
   height: 4px;
   width: 100%;
   background-color: #00acdc;
   border-radius: 8px;
-  margin-top: 19px;
+  bottom: 0;
+  left: 0;
 }
