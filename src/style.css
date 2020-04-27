@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
 
 body {
-  font-family: "Roboto";
-  font-size: 0;
   margin: 0;
 }
 
-header {
+.header-container {
+  font-family: "Roboto";
+  font-size: 0;
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
@@ -14,7 +14,7 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-a {
+.nav-item {
   text-decoration: none;
   color: black;
   padding: 23px 0;
@@ -23,20 +23,25 @@ a {
   position: relative;
 }
 
-a + a {
+.nav-container {
+  display: flex;
+  padding: 0;
+}
+
+.nav-item-cell + .nav-item-cell {
   margin-left: 20px;
 }
 
-a:hover {
+.nav-item:hover {
   color: #00acdc;
 }
 
-a:focus,
+.nav-item:focus,
 .is-active {
   color: #00acdc;
 }
 
-a:focus::after,
+.nav-item:focus::after,
 .is-active::after {
   position: absolute;
   content: "";
