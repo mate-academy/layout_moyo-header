@@ -25,23 +25,22 @@ nav {
   margin: 10px 0;
 }
 
-/*Without this, fail tests:*/
-.ul_nav {
+.navigationBox {
   margin: 0;
   padding: 0;
 }
 
-.li_nav {
+.navigationList {
   display: inline-block;
   position: relative;
-  margin-right: 20px;/*If "Left" -- test fails*/
+  margin-right: 20px;
 }
 
-.li_nav:last-child {
-  margin-right: 0;  /*Crutch, becase not "margin-left"*/
+.navigationList:last-child {
+  margin-right: 0;
 }
 
-.head_links {
+.navigation_links {
   text-decoration: none;
   position: relative;
   color: black;
@@ -49,14 +48,13 @@ nav {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 500;
-  /*Without this, tests is not working: */
   line-height: 15px;
   padding-top: 22.5px;
   padding-bottom: 22.5px;
 }
 
 .is-active,
-.head_links:hover {
+.navigation_links:hover {
   color: #00acdc;
 }
 
