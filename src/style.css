@@ -6,26 +6,29 @@ body {
 
 .header-container {
   font-family: "Roboto";
-  font-size: 0;
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.nav-item {
-  text-decoration: none;
-  color: black;
-  padding: 23px 0;
-  font-size: 12px;
-  line-height: 60px;
-  position: relative;
+  height: 60px;
 }
 
 .nav-container {
   display: flex;
   padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-item {
+  text-decoration: none;
+  /* display: block; */
+  color: black;
+  padding: 23px 0;
+  font-size: 12px;
+  line-height: 60px;
+  position: relative;
 }
 
 .nav-item-cell + .nav-item-cell {
@@ -44,6 +47,7 @@ body {
 .nav-item:focus::after,
 .is-active::after {
   position: absolute;
+  display: block;
   content: "";
   height: 4px;
   width: 100%;
