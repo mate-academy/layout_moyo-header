@@ -1,4 +1,4 @@
-V2473# Moyo header
+# Moyo header
 1. Replace `<your_account>` with your Github username in the links
     - [DEMO LINK](https://V2473.github.io/layout_moyo-header/)
     - [TEST REPORT LINK](https://V2473.github.io/layout_moyo-header/report/html_report/)
