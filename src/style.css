@@ -1,27 +1,26 @@
-* {
+body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   padding: 0 40px 0 50px;
 }
 
-img {
-  margin-top: 10px;
-}
-
-nav {
-  padding-top: 10px;
+.navigation {
   height: 40px;
+  /* Ден, спробував вирiвняти флексами i не вказувати тут висоту,
+  але тодi не проходить pixel perfect тест. Тож залишаю так */
+  padding-top: 10px;
   display: flex;
   align-items: center;
 }
 
-a {
-  font-family: "Roboto", sans-serif;
+.navlink {
   padding: 23px 0;
   font-weight: 500;
   font-size: 12px;
@@ -30,7 +29,7 @@ a {
   margin: 0 10px;
 }
 
-a:hover {
+.navlink:hover {
   color: #00acdc;
 }
 
