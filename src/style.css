@@ -1,0 +1,81 @@
+@font-face {
+  font-family: Roboto;
+  src: url("Roboto-Medium.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.header {
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+}
+
+.moyo-logo {
+  height: 40px;
+  width: 40px;
+}
+
+.header-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.item-wrapper {
+  list-style: none;
+}
+
+.list-item {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+  line-height: 14px;
+  text-transform: uppercase;
+  height: 60px;
+}
+
+.list-item:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 4px;
+  bottom: 0;
+  background-color: #00acdc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.is-active {
+  color: #00acdc;
+  margin-left: 0;
+}
+
+.list-item:hover::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: #00acdc;
+  bottom: 0;
+  border-radius: 8px;
+  width: 100%;
+}
