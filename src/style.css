@@ -17,6 +17,7 @@ body {
 }
 
 .nav-block {
+  
   display: flex;
   align-items: center;
 }
@@ -28,13 +29,21 @@ body {
   display: flex;
 }
 
+.menu-element {
+  margin-right: 20px;
+}
+
+.menu-element:last-child {
+  margin-right: 0;
+}
+
 .menu-item {
+  position: relative;
   display: flex;
   height: 60px;
   align-items: center;
   text-transform: uppercase;
   text-decoration: none;
-  margin-right: 20px;
   color: black;
   font-size: 12px;
   line-height: 14px;
@@ -42,25 +51,17 @@ body {
   font-weight: 500;
 }
 
-.video {
-  margin-right: 0;
-}
-
-.menu-item:hover {
+.menu-item:hover,
+.is-active {
   color: #00acdc;
 }
 
-.apple {
-  position: relative;
-  color: #00acdc;
-}
-
-.apple::after {
+.is-active::after {
   content: "";
   position: absolute;
-  top: 56px;
+  bottom: 0;
   background: #00acdc;
   border-radius: 8px;
   height: 4px;
-  width: 37px;
+  width: 100%;
 }
