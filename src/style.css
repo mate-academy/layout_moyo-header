@@ -30,10 +30,9 @@ body {
 }
 
 .link {
-  height: 60px;
   font-size: 12px;
   text-transform: uppercase;
-  line-height: 14px;
+  line-height: 60px;
   align-items: center;
   text-decoration: none;
   color: black;
@@ -45,17 +44,16 @@ body {
 
 .link.is-active {
   color: #00acdc;
-  display: block;
+  position: relative;
   line-height: 60px;
 }
 
 .link.is-active::after {
   content: "";
-  display: block;
   height: 4px;
   background-color: #00acdc;
-  position: relative;
-  bottom: 4px;
+  position: absolute;
+  top: 56px;
   border-radius: 8px;
   width: 100%;
 }
