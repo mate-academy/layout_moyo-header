@@ -21,7 +21,6 @@ body {
 
 .menu {
   display: flex;
-  width: 803px;
   justify-content: flex-end;
   text-transform: uppercase;
   font-weight: 500;
@@ -44,14 +43,15 @@ body {
 }
 
 .is-active {
+  position: relative;
   color: #00acdc;
 }
 
 .is-active:after {
   content: "";
-  display: block;
-  position: relative;
-  bottom: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 36px;
   height: 4px;
   background: #00acdc;
