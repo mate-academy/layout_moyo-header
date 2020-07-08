@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.nav__link,
+.nav__link :visited {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+  line-height: 60px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav__link:hover,
+.is-active {
+  color: #00acdc;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  list-style: none;
+  line-height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav__list :last-child > .nav__link {
+  margin-right: 0;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
