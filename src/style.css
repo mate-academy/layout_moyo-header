@@ -1,0 +1,66 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto", Helvetica, sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+}
+
+body {
+  margin: 0;
+  font-size: 12px;
+}
+
+.nav__container {
+  display: flex;
+  padding: 0 50px;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+img.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav__link {
+  font-family: "Roboto", Helvetica , sans-serif ;
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nav__list *:hover {
+  color: #00acdc;
+}
+
+.nav__link.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: -22.5px;
+  left: 0;
+  background-color: #00acdc;
+  height: 4px;
+  border-radius: 8px;
+}
