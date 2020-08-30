@@ -1,0 +1,61 @@
+*,
+::after,
+:hover {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 60px;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  font-size: 0;
+  position: absolute;
+  right: 50px;
+}
+
+.link {
+  font-size: 12px;
+  line-height: 60px;
+  font-weight: 500px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.link:first-child {
+  margin-left: 0;
+}
+
+.link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  background-color: #00acdc;
+  height: 4px;
+  width: 37px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+}
