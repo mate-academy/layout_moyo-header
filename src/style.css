@@ -37,32 +37,22 @@ body {
   height: 60px;
   padding: 10px 50px;
   margin: 0;
-  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
- 
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* .navigation_block {
-  font-size: 12px;
-  font-weight: 500;
-  color: rgb(0, 0, 0);
-} */
-
 .navigation_list {
-  /* height: 60px; */
-
   display: flex;
-  /* justify-content: left; */
-  /* align-items: center; */
 }
 
 .list_item {
   list-style: none;
 
   position: relative;
+
   margin-left: 20px;
   height: 60px;
 }
@@ -73,6 +63,7 @@ body {
 
 .link {
   display: inline-block;
+
   text-decoration: none;
   color: black;
   padding: 23px 0;
@@ -88,12 +79,15 @@ body {
 }
 
 .is-active::after {
+  content: "";
+
   display: block;
+  position: absolute;
+  bottom: 0;
+
   height: 4px;
   width: 100%;
-  position: absolute;
-  content: "";
+
   border: 2px solid #00acdc;
   border-radius: 8px;
-  bottom: 0;
 }
