@@ -1,21 +1,19 @@
 html {
   font-family: Roboto, sans-serif;
   color: #000;
+
+  box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
-}
-
-body {
+  box-sizing: inherit;
   margin: 0;
 }
 
 li {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
@@ -37,14 +35,15 @@ li {
 
 .header-nav__list {
   display: flex;
+  padding-left: 0;
 }
 
 .header-nav__item {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.header-nav__item:first-child {
-  margin-left: 0;
+.header-nav__item:last-child {
+  margin-right: 0;
 }
 
 .header-nav__link {
