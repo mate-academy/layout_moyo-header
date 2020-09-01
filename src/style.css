@@ -1,43 +1,58 @@
 *,
-::after,
+:after,
 :hover {
   box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+body {
   margin: 0;
 }
 
 .header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
 }
 
 .logo {
-  position: absolute;
-  top: 10px;
-  left: 50px;
   width: 40px;
   height: 40px;
 }
 
-.nav {
-  font-size: 0;
-  position: absolute;
-  right: 50px;
+.list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  margin-left: 20px;
+  list-style: none;
+}
+
+.item:first-child {
+  margin-left: 0;
 }
 
 .link {
+  position: relative;
+  display: inline-block;
   font-size: 12px;
-  line-height: 60px;
-  font-weight: 500px;
+  line-height: 15px;
+  font-weight: 500;
   color: black;
   text-transform: uppercase;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  margin-left: 20px;
-  display: inline-block;
-}
-
-.link:first-child {
-  margin-left: 0;
+  padding: 23px 0;
+  font-style: normal;
 }
 
 .link:hover {
@@ -46,7 +61,6 @@
 
 .is-active {
   color: #00acdc;
-  position: relative;
 }
 
 .is-active::after {
@@ -54,8 +68,8 @@
   display: block;
   background-color: #00acdc;
   height: 4px;
-  width: 37px;
+  width: 100%;
   border-radius: 8px;
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
 }
