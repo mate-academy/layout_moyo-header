@@ -1,7 +1,9 @@
 *,
-:after,
+::after,
 :hover {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -9,28 +11,25 @@ html {
   font-weight: 500;
 }
 
-body {
-  margin: 0;
-}
-
 .header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  height: 60px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  height: 60px;
   padding: 0 50px;
 }
 
 .logo {
+  padding: 10px 0;
+}
+
+.logo__img {
   width: 40px;
   height: 40px;
 }
 
 .nav__list {
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 .nav__item {
@@ -43,22 +42,16 @@ body {
 }
 
 .nav__link {
-  position: relative;
-  display: inline-block;
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 500;
   color: black;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 60px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 23px 0;
-  font-style: normal;
+  display: inline-block;
 }
 
-.nav__link:hover {
-  color: #00acdc;
-}
-
+.nav__link:hover,
 .is-active {
   color: #00acdc;
 }
@@ -70,6 +63,6 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  position: absolute;
-  bottom: 1px;
+  position: relative;
+  bottom: 4px;
 }
