@@ -3,7 +3,6 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -26,6 +25,7 @@ html {
 
 .nav-list {
   display: flex;
+  text-transform: uppercase;
 }
 
 .list-item {
@@ -42,23 +42,23 @@ html {
 }
 
 .link:hover,
-.link:active {
-  color: #00acdc;
-}
-
+.link:active,
 .is-active {
   color: #00acdc;
 }
 
 .is-active::after {
-  content: "";
   display: block;
-  height: 4px;
-  background-color: #00acdc;
-  border-radius: 8px;
   position: absolute;
   bottom: 0;
+
+  height: 4px;
   width: 100%;
+
+  background-color: #00acdc;
+  border-radius: 8px;
+  content: "";
+
 }
 
 .list-item:first-child {
