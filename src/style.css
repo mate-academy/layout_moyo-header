@@ -38,14 +38,14 @@ body {
   margin: 0;
 }
 
-.par {
+.unit {
   list-style: none;
   position: relative;
   margin-left: 20px;
   height: 60px;
 }
 
-.par:first-of-type {
+.unit:first-of-type {
   margin-left: 0;
 }
 
@@ -56,21 +56,18 @@ body {
   padding: 23px 0;
 }
 
-.link:hover {
-  color: #00acdc;
-}
-
+.link:hover,
 .is-active {
   color: #00acdc;
 }
 
 .is-active::after {
-  content: "";
   display: block;
   position: absolute;
+  content: "";
+  bottom: 0;
+  width: 37px;
   height: 4px;
   border-radius: 8px;
   background-color: #00acdc;
-  bottom: 0;
-  width: 37px;
 }
