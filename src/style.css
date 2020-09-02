@@ -21,29 +21,29 @@ html {
   align-items: center;
 }
 
-.mainlist {
+.list {
   display: flex;
 }
 
-.mainitem {
+.item {
   margin-right: 20px;
   height: 60px;
   position: relative;
   list-style: none;
 }
 
-.mainitem:last-of-type {
+.item:last-of-type {
   margin-right: 0;
 }
 
-.mainlink {
+.link {
   text-decoration: none;
   color: black;
   display: inline-block;
   padding: 23px 0;
 }
 
-.mainlink:hover {
+.link:hover {
   color: #00acdc;
 }
 
@@ -53,11 +53,14 @@ html {
 
 .is-active::after {
   content: "";
+
   display: block;
-  height: 4px;
-  background-color: #00acdc;
-  border-radius: 8px;
   position: absolute;
   bottom: 0;
+ 
+  height: 4px;
   width: 37px;
+
+  border-radius: 8px;
+  background-color: #00acdc;
 }
