@@ -14,7 +14,7 @@ body {
   margin: 0;
 }
 
-.rectangle {
+.header {
   display: flex;
   justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -22,45 +22,39 @@ body {
   align-items: center;
 }
 
-.navigation {
+.nav {
   margin: 0 50px 0 0;
 }
 
-.mojo-icon {
-  position: relative;
+.logo {
+  /* position: relative; */
   width: 40px;
   height: 40px;
   margin-left: 50px;
   margin-top: 0;
 }
 
-.navigation-list {
+.nav__list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.navigation__item:not(:first-child) {
+.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
-.navigation_link {
+.nav__link {
   display: inline-block;
   position: relative;
   padding: 23px 0;
-  font-family: inherit;
   line-height: 14px;
   text-decoration: none;
   color: black;
   white-space: nowrap;
   text-transform: uppercase;
-  font-style: normal;
 }
-
-/* .navigation__item:last-child {
-  margin: 20;
-} */
 
 .is-active,
 .navigation_link:hover {
@@ -70,7 +64,7 @@ body {
 .is-active::after {
   content: "";
   position: absolute;
-  top: 56px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 4px;
