@@ -6,25 +6,32 @@ body {
   margin: 0;
 }
 
-header,
-nav {
+.header,
+.header__navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
 }
 
-img {
+.header > :nth-child(1) {
   height: 40px;
   width: 40px;
   margin: 10px 0 10px 50px;
 }
 
-nav {
+.header__navigation {
   margin-right: 50px;
 }
 
-a {
+.header__navigation > :nth-child(1),
+.header__navigation > :nth-child(2),
+.header__navigation > :nth-child(3),
+.header__navigation > :nth-child(4),
+.header__navigation > :nth-child(5),
+.header__navigation > :nth-child(6),
+.header__navigation > :nth-child(7),
+.header__navigation > :nth-child(8) {
   padding-top: 22.5px;
   padding-bottom: 22.5px;
   margin-left: 20px;
@@ -35,8 +42,15 @@ a {
   line-height: 14px;
 }
 
-.is-active,
-a:hover {
+.header__navigation > .is-active,
+.header__navigation > :nth-child(1):hover,
+.header__navigation > :nth-child(2):hover,
+.header__navigation > :nth-child(3):hover,
+.header__navigation > :nth-child(4):hover,
+.header__navigation > :nth-child(5):hover,
+.header__navigation > :nth-child(6):hover,
+.header__navigation > :nth-child(7):hover,
+.header__navigation > :nth-child(8):hover {
   color: #00acdc;
   padding-top: 23px;
   padding-bottom: 22px;
@@ -52,6 +66,6 @@ a:hover {
   border-radius: 8px;
 }
 
-nav a:first-child {
+.header__navigation a:first-child {
   margin-left: 0;
 }
