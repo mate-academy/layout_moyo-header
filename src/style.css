@@ -7,53 +7,68 @@ body {
 }
 
 .header,
-.header__navigation {
+.header__navigation,
+.header__list {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 60px;
 }
 
+.header {
+  padding: 10px 50px;
+}
+
 .header > :nth-child(1) {
   height: 40px;
   width: 40px;
-  margin: 10px 0 10px 50px;
 }
 
-.header__navigation {
-  margin-right: 50px;
+.header__list {
+  text-transform: uppercase;
+  padding-left: 0;
 }
 
-.header__navigation > :nth-child(1),
-.header__navigation > :nth-child(2),
-.header__navigation > :nth-child(3),
-.header__navigation > :nth-child(4),
-.header__navigation > :nth-child(5),
-.header__navigation > :nth-child(6),
-.header__navigation > :nth-child(7),
-.header__navigation > :nth-child(8) {
-  padding-top: 22.5px;
+.header__list * {
+  list-style: none;
+  padding-top: 20px;
   padding-bottom: 22.5px;
   margin-left: 20px;
+}
+
+.header--apple,
+.header--samsung,
+.header--phones,
+.header--pc,
+.header--gadgets,
+.header--tablets,
+.header--photo,
+.header--video {
   text-decoration: none;
   color: black;
   font-family: Roboto, sans-serif;
   font-size: 12px;
-  line-height: 14px;
+  text-transform: uppercase;
 }
 
-.header__navigation > .is-active,
-.header__navigation > :nth-child(1):hover,
-.header__navigation > :nth-child(2):hover,
-.header__navigation > :nth-child(3):hover,
-.header__navigation > :nth-child(4):hover,
-.header__navigation > :nth-child(5):hover,
-.header__navigation > :nth-child(6):hover,
-.header__navigation > :nth-child(7):hover,
-.header__navigation > :nth-child(8):hover {
+.is-active,
+.header--apple:hover,
+.header--samsung:hover,
+.header--phones:hover,
+.header--pc:hover,
+.header--gadgets:hover,
+.header--tablets:hover,
+.header--photo:hover,
+.header--video:hover {
   color: #00acdc;
   padding-top: 23px;
   padding-bottom: 22px;
+}
+
+.is-active {
+  display: block;
+  margin-top: 24px;
 }
 
 .is-active::after {
@@ -61,11 +76,10 @@ body {
   background-color: #00acdc;
   display: block;
   height: 4px;
-  position: relative;
-  top: 19px;
   border-radius: 8px;
+  margin-top: 19px;
 }
 
-.header__navigation a:first-child {
+.header__list :first-child {
   margin-left: 0;
 }
