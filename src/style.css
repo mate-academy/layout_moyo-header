@@ -30,32 +30,33 @@ a {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 50px;
+  min-height: 60px;
 }
 
 .logo {
   height: 40px;
-  margin-top: 10px;
 }
 
 .nav {
   text-transform: uppercase;
 }
 
-.nav-list {
+.nav__list {
   display: flex;
 }
 
-.nav-list-item:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav-list-item-link {
-  padding: 22.5px 0;
+.nav__link {
+  padding: 23px 0;
   transition: color 0.3s;
 }
 
-.nav-list-item-link:hover,
+.nav__link:hover,
 .is-active {
   color: #00acdc;
 }
@@ -67,7 +68,7 @@ a {
 .is-active::after {
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: 0;
   content: "";
   width: 36px;
   height: 4px;
@@ -83,16 +84,16 @@ a {
 }
 
 @media screen and (max-width: 700px) {
-  .nav-list {
+  .nav__list {
     flex-direction: column;
     align-items: center;
   }
 
-  .nav-list-item:not(:last-child) {
+  .nav__item:not(:last-child) {
     margin-right: 0;
   }
 
-  .nav-list-item-link {
+  .nav__link {
     padding: 10px 0;
   }
 
