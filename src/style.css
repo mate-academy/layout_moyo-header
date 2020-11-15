@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 60px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.item {
+  margin: 0 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: #00acdc;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.item:hover {
+  color: #00acdc;
+}
