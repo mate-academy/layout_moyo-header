@@ -9,66 +9,47 @@ html {
 
 body {
   margin: 0;
+  /*background-color: black;*/
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  position: relative;
+  right: 0;
+  left: 0;
+  height: 60px;
+  /*background-color: rgba(255, 255, 255, 1);*/
   background-color: black;
 }
 
-.nav {
-  position: relative;
-  background-color: rgba(255, 255, 255, 1);
-  height: 60px;
-}
-
 .logo {
-  display: flex;
-  position: absolute;
-  top: 50%;
+  /*display: flex;*/
+  /*position: absolute;*/
   left: 50px;
-  margin-top: -20px;
-  justify-content: flex-start;
-
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  object-position: top center;
+  top: calc(50% - 20px);
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: flex-start;
+  background-color: red;
 }
 
-.div_logo {
-  display: inline-flex;
+.nav__container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  /*display: flex;*/
+  /*align-content: center;*/
+  background-color: green;
 }
 
 .nav__list {
-  display: inline-flex;
   position: absolute;
+  display: flex;
   justify-content: flex-end;
-
-  padding: 0;
+  list-style-type: none;
   right: 50px;
   width: 100%;
-  list-style: none;
-}
-
-.nav__item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
-
-  padding: 10px;
-  color: black;
-  text-decoration: none;
-}
-
-.nav__item:hover {
-  color: rgba(0, 172, 220, 1);
-}
-
-.nav__item__blue {
-  color: rgba(0, 172, 220, 1);
-}
-
-.nav__item__blue::after {
-  background-color: yellow;
-  height: 4px;
-  width: 37px;
+  margin: 0;
+  padding: 0;
 }
