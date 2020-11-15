@@ -39,7 +39,6 @@ li {
 
 .nav__item {
   list-style: none;
-  height: 60px;
 }
 
 .nav__link {
@@ -60,20 +59,16 @@ li {
 
 .is-active {
   color: #00acdc;
+  position: relative;
 }
 
 .nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
-.nav__item:first-child {
-  position: relative;
-}
-
-.nav__item:first-child::after {
+.is-active::after {
   content: "";
   border-bottom: 4px solid #00acdc;
-  border-radius: 8px;
   position: absolute;
   left: 0;
   bottom: 0;
