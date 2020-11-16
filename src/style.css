@@ -9,18 +9,15 @@ body {
 }
 
 .container {
-  height: 60px;
   justify-content: space-between;
   display: flex;
   align-items: center;
-  width: 100%;
   background-color: #fff;
 
 }
 
 .nav {
   text-align: right;
-  height: 60px;
 }
 
 .img {
@@ -45,6 +42,10 @@ body {
   line-height: 20px;
 }
 
+.nav__item {
+  position: relative;
+}
+
 .is-active {
   color: #00acdc;
 }
@@ -54,9 +55,9 @@ body {
   content: "";
   position: absolute;
   height: 4px;
-  width: 36px;
-  top: 56px;
+  width: calc(100% - 20px);
   border-radius: 4px;
+  bottom: 0;
 }
 
 .nav__link:hover {
