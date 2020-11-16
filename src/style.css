@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
-:root {
-  --header-height: 60px;
-}
-
 html {
-  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
@@ -13,12 +8,11 @@ html {
 *::before,
 *::after {
   margin: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 .header {
   padding: 0 50px;
-  height: var(--header-height);
   display: flex;
   flex: 0 0 auto;
   justify-content: space-between;
@@ -35,18 +29,11 @@ html {
 .panel__list {
   list-style: none;
   display: flex;
-  flex: 0 0 auto;
-  justify-content: end;
-  align-items: center;
   padding-left: 0;
 }
 
-.panel__item {
+.panel__item:nth-child(n+2) {
   margin-left: 20px;
-}
-
-.panel__item:first-child {
-  margin-left: 0;
 }
 
 .panel__link {
@@ -57,7 +44,7 @@ html {
   color: black;
   font-size: 12px;
   font-weight: 500;
-  line-height: var(--header-height);
+  line-height: 60px;
   transition: color 0.3s;
 }
 
