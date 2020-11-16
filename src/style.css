@@ -11,7 +11,13 @@ body {
 
 header {
   height: 60px;
+  text-transform: uppercase;
   background-color: white;
+  position: relative;
+}
+
+.nav {
+  height: 100%;
 }
 
 .nav__list {
@@ -60,4 +66,14 @@ header {
 .logo-img {
   width: 40px;
   height: 40px;
+}
+
+.is-active::after {
+  content: "";
+  width: 37px;
+  height: 4px;
+  background-color: rgba(0, 172, 220, 1);
+  border-radius: 8px;
+  position: absolute;
+  top: calc(100% - 4px);
 }
