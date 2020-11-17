@@ -3,19 +3,20 @@
 }
 
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
 }
 
 .header {
   padding: 0 50px;
-  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  height: 60px;
   display: flex;
   justify-content: space-between;
 }
 
-.nav__logo {
+.logo {
+  display: flex;
+  align-items: center;
   object-fit: contain;
   object-position: center;
 }
@@ -24,30 +25,31 @@ body {
   display: flex;
   align-self: center;
   margin: 0;
+  padding: 0;
 }
 
 .nav__item {
   display: inline;
+  margin-left: 20px;
+}
+
+.nav__item:nth-child(1) {
+  margin: 0;
 }
 
 .nav__link {
   position: relative;
   display: inline-block;
-  text-decoration: none;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 60px;
   text-transform: uppercase;
   color: #000;
-  margin-left: 20px;
-  padding: 23px 0;
 }
 
 .nav__link:hover {
   color: #00acdc;
-  cursor: context-menu;
+  cursor: pointer;
 }
 
 .is-active {
