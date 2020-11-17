@@ -14,7 +14,6 @@ ul {
 .header {
   display: flex;
   justify-content: flex-end;
-  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -36,7 +35,7 @@ ul {
 }
 
 .ul_item {
-  display: inline-block;
+  display: inline-flex;
   text-transform: uppercase;
   margin: 0 0.5em;
 }
@@ -44,52 +43,29 @@ ul {
 .nav_list:first-child,
 .ul_item:last-child {
   margin-right: 0;
-  padding-right: 0;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
 }
 
 .nav:first-child,
 .nav_list:first-child,
 .ul_item:first-child {
   margin-left: 0;
-  padding-left: 0;
 }
 
-/* .is-active::after {
+.is-active::after {
   display: block;
   position: absolute;
   content: "";
   width: 37px;
   height: 4px;
-  left: 219px;
-  top: 56px;
   background: #00acdc;
-  border-radius: 2px;
-}
-
-.is-active {
-  color: #00acdc;
-} */
-
-/* в задании просили через ::after но у меня эта синяя полоска не отображается
-в тестах хотя  display: block; а не inline, пока что выкрутилась так
-подскажите, пожалуйста, что у меня не так*/
-
-.is-active {
-  padding-top: 22.5px;
-  padding-bottom: 20px;
-  color: #00acdc;
-  border-bottom: 4px solid #00acdc;
   border-radius: 2px;
 }
 
 .link:hover {
   color: #00acdc;
 }
-
-/* @media screen and (min-width: 1200px) {
-  .is-active::after {
-    left: 395px;
-    top: 56px;
-
-  }
-} */
