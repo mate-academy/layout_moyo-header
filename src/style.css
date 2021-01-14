@@ -10,6 +10,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  padding-right: 50px;
   height: 60px;
 }
 
@@ -21,20 +22,24 @@ body {
 
 .menu_list {
   display: flex;
-  padding-right: 40px;
+  justify-content: space-between;
   margin: 0;
+  padding: 0;
 }
 
 .menu_item {
   list-style-type: none;
 }
 
-.menu_item a {
+.menu_link {
   display: block;
-  padding: 23px 10px;
-  
+  margin-right: 20px;
+
+  line-height: 60px;
   font-size: 12px;
   font-weight: 500;
+
+  border-radius: 8px;
 
   text-transform: uppercase;
   text-decoration: none;
@@ -42,18 +47,26 @@ body {
   color: black;
 }
 
-.menu_item a:hover {
+.menu_link.is-active {
   color: #00acdc;
 }
 
-.is-active:hover::after {
+.link_video {
+  margin-right: 0;
+}
+
+.menu_link:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
   width: inherit;
   height: 4px;
 
   display: block;
   position: relative;
-  top: 23px;
+  top: -4.5px;
   content: "";
-  
+
   background-color: #00acdc;
 }
