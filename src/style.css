@@ -3,8 +3,8 @@
 }
 
 html {
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
+  font-family: "Roboto", sans-serif;
   color: #000;
 }
 
@@ -19,46 +19,54 @@ body {
 /*--------------------------------------*/
 
 .link__item {
+  display: flex;
+
   margin-left: 20px;
   padding: 0;
+
   list-style: none;
-  display: flex;
 }
 
 .link {
+  display: flex;
+
+  margin: 0;
   height: 60px;
   line-height: 60px;
-  margin: 0;
+  color: inherit;
+
   text-transform: uppercase;
   text-decoration: none;
   font-family: inherit;
   font-size: inherit;
-  display: flex;
+
   box-sizing: border-box;
   justify-content: space-between;
-  color: inherit;
 }
 
 .nav {
   height: 60px;
   margin: 0;
-  box-sizing: border-box;
 }
 
 .nav__ul {
+  display: flex;
+
   margin: 0;
   padding: 0;
-  display: flex;
+
   justify-content: flex-end;
   align-items: center;
 }
 
 .header {
-  padding: 0 50px;
-  box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+
+  padding: 0 50px;
+
   align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -74,13 +82,15 @@ body {
 }
 
 .is-active::after {
-  height: 4px;
-  width: 100%;
-  bottom: 0;
   position: absolute;
+  
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  
   content: "";
   background: #00acdc;
-  border-radius: 8px;
+  bottom: 0;
 }
 
 .link__item:first-of-type {
