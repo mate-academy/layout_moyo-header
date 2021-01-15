@@ -14,12 +14,13 @@ body {
 }
 
 .header {
+  display: flex;
   height: 60px;
   padding: 0 50px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  display: flex;
   justify-content: space-between;
   align-items: center;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -28,12 +29,13 @@ body {
 }
 
 .nav__list {
-  list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
   height: 60px;
   align-items: center;
+
+  list-style: none;
 }
 
 .nav__item {
@@ -45,9 +47,11 @@ body {
 }
 
 .nav__link {
-  text-decoration: none;
   padding: 23px 0;
+
   color: #000;
+
+  text-decoration: none;
 }
 
 .nav__link:hover {
@@ -56,17 +60,20 @@ body {
 
 .is-active {
   position: relative;
+  
   color: #00acdc;
 }
 
 .is-active::after {
   content: "";
   position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
   display: block;
   height: 4px;
-  border-radius: 8px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+
   background-color: #00acdc;
+  border-radius: 8px;
 }
