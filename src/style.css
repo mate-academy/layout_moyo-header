@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
@@ -9,10 +13,7 @@ body {
 }
 
 .logo {
-  height: 40px;
-  width: 40px;
-  margin: 10px 0 10px 50px;
-  display: flex;
+  display: block;
 }
 
 /*--------------------------------------*/
@@ -21,7 +22,6 @@ body {
   margin-left: 20px;
   padding: 0;
   list-style: none;
-  box-sizing: border-box;
   display: flex;
 }
 
@@ -41,7 +41,7 @@ body {
 
 .nav {
   height: 60px;
-  margin: 0 50px 0 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -54,14 +54,15 @@ body {
 }
 
 .header {
-  height: 60px;
-  margin-top: 0;
+  padding: 0 50px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
+
+/*--------------------------------------------------------------*/
 
 .is-active {
   position: relative;
@@ -74,8 +75,8 @@ body {
 
 .is-active::after {
   height: 4px;
-  width: 37px;
-  top: 56px;
+  width: 100%;
+  bottom: 0;
   position: absolute;
   content: "";
   background: #00acdc;
