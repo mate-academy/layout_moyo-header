@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", "Open Sans", sans-serif;
   font-weight: 500;
 }
 
-* {
+body {
   margin: 0;
   padding: 0;
 
-  box-sizing: border-box;
-}
-
-body {
   background-color: #e5e5e5;
 }
 
@@ -31,8 +31,18 @@ body {
   height: 40px;
 }
 
+.nav {
+  display: flex;
+  height: 100%;
+
+  align-items: center;
+}
+
 .nav__list {
   display: flex;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -52,7 +62,7 @@ body {
   margin-right: 0;
 }
 
-.nav__item a {
+.nav__link {
   padding: 22.5px 0;
 
   text-decoration: none;
@@ -60,11 +70,11 @@ body {
   color: #000;
 }
 
-a.is-active {
+.is-active {
   color: #00acdc;
 }
 
-.nav__item a:hover {
+.nav__item :hover {
   color: #00acdc;
 }
 
