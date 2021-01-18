@@ -1,5 +1,5 @@
 # Moyo header
-1. Replace `<your_account>` with your Github username in the links
+1. Replace `OlexandrBelyaev` with your Github username in the links
     - [DEMO LINK](https://OlexandrBelyaev.github.io/layout_moyo-header/)
     - [TEST REPORT LINK](https://OlexandrBelyaev.github.io/layout_moyo-header/report/html_report/)
 2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
