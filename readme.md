@@ -1,12 +1,12 @@
 # Moyo header
 1. Replace `<your_account>` with your Github username in the links
-    - [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-    - [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+    - [DEMO LINK](https://yashnyi.github.io/layout_moyo-header/)
+    - [TEST REPORT LINK](https://yashnyi.github.io/layout_moyo-header/report/html_report/)
 2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
 ___
 
 ## The task
-Create HTML page with the header using `flexbox` basing on [this mockup](https://www.figma.com/file/KAV1NnDp7hgQtPnaD6XdOcnG/Moyo-Header?node-id=0%3A1).
+Create HTML page with the header usin g `flexbox` basing on [this mockup](https://www.figma.com/file/KAV1NnDp7hgQtPnaD6XdOcnG/Moyo-Header?node-id=0%3A1).
 
 ### Common mistakes
 - Add `data-qa="hover"` and `class="is-active"` required for tests
@@ -23,7 +23,7 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 - change links styles on `:hover`
 - follow styles from the mock
 - the link with `blue` color and line below is an active link. It should have `class="is-active"` and relevant styles.
-- the link with only `blue` color is an example of `:hover` styles. Every link in the row should have `blue` color on `:hover`. 
+- the link with only `blue` color is an example of `:hover` styles. Every link in the row should have `blue` color on `:hover`.
 - add `data-qa="hover"` attribute to the 4th link for testing (`Ноутбуки и компьютеры`)
 ---
 
