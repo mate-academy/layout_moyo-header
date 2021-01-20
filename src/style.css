@@ -7,26 +7,36 @@ body {
 .container {
   display: flex;
   height: 60px;
+  padding: 0 50px;
 }
 
 .logo {
   margin-top: 10px;
-  margin-left: 50px;
 
   height: 40px;
   width: 40px;
   background-image: url(images/logo.png);
 }
 
-.menu {
+.nav {
   display: flex;
 }
 
-.menu-button {
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
   position: relative;
-  padding-top: 22.5px;
-  padding-bottom: 22.5px;
-  margin-right: 20px;
+}
+
+.nav-button {
+  display: flex;
+  padding: 22.5px 0;
+  margin-right: 16px;
 
   font-family: Roboto, Arial, sans-serif;
   font-size: 12px;
@@ -34,29 +44,30 @@ body {
   text-decoration: none;
 }
 
-.menu-button:hover,
+.nav-button-last {
+  margin-right: 0;
+}
+
+.nav-button:hover,
 .is-active {
   color: #00acdc;
 }
 
-.menu-button:active {
-  border-bottom: 4px solid #00acdc;
-  border-radius: 2px;
-}
-
-.is-active-bottom {
+.is-active::after {
+  content: "";
   position: absolute;
+  display: block;
   bottom: 0;
-  width: 37px;
-  height: 4px;
 
-  border-radius: 8px;
+  height: 4px;
+  width: 36px;
   background-color: #00acdc;
+  border-radius: 8px;
 }
 
 @media (min-width: 1024px) {
   .logo {
-    margin-right: 126.5px;
+    margin-right: 126px;
   }
 }
 
