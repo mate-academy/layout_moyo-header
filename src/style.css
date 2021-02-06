@@ -1,0 +1,60 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  background: url(./images/logo.png) no-repeat left;
+  background-position-x: 50px;
+  height: 60px;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  list-style: none;
+  margin: auto 20px auto 0;
+}
+
+.nav__item:last-child {
+  margin: auto 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: black;
+  padding: 23px 0;
+}
+
+.is-active {
+  display: flex;
+  flex-direction: column;
+  padding: 22.5px 0 0;
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  margin-top: 19px;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
