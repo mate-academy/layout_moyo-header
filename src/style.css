@@ -11,7 +11,7 @@ body {
   margin: 0;
 }
 
-header {
+.header {
   height: 60px;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -49,6 +49,7 @@ header {
   display: inline-block;
   position: relative;
   color: black;
+  text-transform: uppercase;
   text-decoration: none;
   line-height: 60px;
   font-size: 12px;
@@ -62,7 +63,6 @@ header {
   color: #00acdc;
 }
 
-.link::after,
 .is-active::after {
   position: absolute;
   left: 0;
@@ -72,13 +72,4 @@ header {
   height: 4px;
   background: #00acdc;
   border-radius: 8px;
-  visibility: hidden;
-}
-
-.is-active::after {
-  visibility: visible;
-}
-
-.link:hover::after {
-  visibility: visible;
 }
