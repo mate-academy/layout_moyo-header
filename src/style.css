@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  padding: 10px 50px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.nav__items {
+  position: relative;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.is-active,
+.nav__items:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  width: 37px;
+  bottom: -23px;
+  display: block;
+  content: "";
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+}
