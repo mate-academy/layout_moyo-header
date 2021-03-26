@@ -5,6 +5,8 @@ body {
 }
 
 .header {
+  max-width: 1200px;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   height: 60px;
@@ -12,21 +14,23 @@ body {
 }
 
 .icon {
-  padding: 10px 50px;
+  object-fit: none;
 }
 
 .nav {
   display: flex;
-  align-items: center;
-  padding-right: 50px;
 }
 
 .nav__items {
-  position: relative;
-  margin-left: 20px;
+  padding-top: 23px;
+  margin-right: 20px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
+}
+
+.nav__items:nth-last-child(1) {
+  margin: 0;
 }
 
 .is-active,
@@ -34,11 +38,11 @@ body {
   color: #00acdc;
 }
 
-.is-active::after {
-  position: absolute;
-  width: 37px;
-  bottom: -23px;
+.is-active::after,
+.nav__items:active:after {
   display: block;
+  max-width: 100%;
+  margin-top: 18.5px;
   content: "";
   height: 4px;
   border-radius: 8px;
