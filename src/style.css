@@ -1,13 +1,17 @@
 * {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: justify;
+  align-items: center;
   height: 60px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -16,7 +20,7 @@
 .logo {
   height: 40px;
   width: 40px;
-  margin: 10px 50px;
+  margin-left: 50px;
   background-image: url(images/logo.png);
 }
 
@@ -29,14 +33,14 @@
   list-style: none;
   justify-content: space-around;
   align-items: stretch;
-  height: 60px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__link {
-  padding: 20px 0;
+  display: inline-block;
   position: relative;
   margin-left: 20px;
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
   line-height: 60px;
   color: #000;
@@ -50,11 +54,11 @@
 
 .is-active {
   color: #00acdc;
+  margin-left: 0;
 }
 
 .is-active::after {
   content: "";
-  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
