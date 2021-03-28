@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -30,18 +35,21 @@ html {
   position: relative;
   left: 0;
   right: 0;
+  padding: 0 50px;
   height: var(--header-height);
   min-width: 1024px;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
-  font: normal 500 12px Roboto, Arial, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav {
   height: 100%;
-  margin-right: 40px;
+  /* margin-right: 50px; */
   display: flex;
   text-transform: uppercase;
 }
@@ -49,8 +57,8 @@ html {
 .nav__icon {
   height: 40px;
   width: 40px;
-  margin-left: 50px;
-  margin-top: 10px;
+  /* margin-left: 50px; */
+  margin: 10px 0;
   background-image: url(images/logo.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -60,18 +68,20 @@ html {
   list-style: none;
   display: flex;
   margin: 0;
+  padding: 0;
 }
 
 .nav__item {
-  margin: 0 10px;
   position: relative;
-  height: 100%;
   display: flex;
-  align-items: center;
+  line-height: var(--header-height);
+}
+
+.nav__item ~ .nav__item {
+  margin-left: 20px;
 }
 
 .nav__link {
-  line-height: 14px;
   text-decoration: none;
   color: #000;
 }
