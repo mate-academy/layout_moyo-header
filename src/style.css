@@ -50,16 +50,11 @@ body {
   color: #000;
 }
 
-.nav__item:hover {
-  color: #00acdc;
-}
-
-.nav__link:last-child,
-.nav__link:last-child .nav__item {
+.nav__link:last-child {
   margin-right: 0;
 }
 
-.nav__item:after {
+.nav__item.is-active:after {
   content: "";
   position: absolute;
   right: 0;
@@ -68,13 +63,9 @@ body {
   height: 4px;
   background-color: #00acdc;
   border-radius: 8px;
-  opacity: 0;
 }
 
-.nav__item.is-active {
+.nav__item.is-active,
+.nav__item:hover {
   color: #00acdc;
-}
-
-.nav__item.is-active:after {
-  opacity: 1;
 }
