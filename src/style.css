@@ -1,4 +1,8 @@
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
@@ -9,15 +13,11 @@ body {
   padding-left: 50px;
 }
 
-.img-wrapper {
+.logo {
+  flex-grow: 1;
+  margin: 20px;
   height: 40px;
   min-width: 40px;
-  background-image: url("images/logo.png");
-}
-
-.empty {
-  min-width: 20px;
-  flex-grow: 1;
 }
 
 .nav {
@@ -47,7 +47,7 @@ body {
 .is-active::after {
   content: " ";
   position: absolute;
-  top: 55.5px;
+  bottom: 0;
   left: 0;
   width: 37px;
   height: 4px;
