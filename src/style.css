@@ -24,15 +24,17 @@ body {
 }
 
 .nav__list {
+  --offset-left: 20px;
+
   display: flex;
   margin: 0;
-  margin-left: -20px;
+  margin-left: calc(-1 * var(--offset-left));
   padding: 0;
   list-style: none;
 }
 
 .nav__item {
-  margin-left: 20px;
+  margin-left: var(--offset-left);
 }
 
 .nav__link {
@@ -58,7 +60,7 @@ body {
   left: 0;
   height: 4px;
   background-color: var(--page-color);
-  border-radius: 8px;
+  border-radius: 2em;
   opacity: 0;
 }
 
