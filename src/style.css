@@ -7,6 +7,7 @@ body {
 }
 
 .header {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -21,25 +22,32 @@ body {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-right: 40px;
 }
 
 .nav__list {
   position: relative;
   display: flex;
-  align-items: center;
-  flex-basis: content;
-  flex-shrink: 0;
 
-  height: var(--header-height);
   margin: 0;
   padding: 0;
+  margin-right: 50px;
   list-style: none;
+}
+
+.nav__item {
+  margin-right: 20px;
+  flex-basis: auto;
+  flex-shrink: 0;
+}
+
+.nav__item:last-child {
+  margin: 0;
 }
 
 .nav__link {
   display: flex;
-  padding: 10px;
+  align-items: center;
+  height: var(--header-height);
 
   text-decoration: none;
   color: #000;
