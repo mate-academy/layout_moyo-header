@@ -13,8 +13,6 @@ body {
   flex-grow: 1;
   justify-content: space-between;
   padding: 0 50px;
-  min-width: 1024px;
-  max-width: 1200px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -22,10 +20,13 @@ body {
   display: flex;
 }
 
-.nav__list {
-  display: flex;
+ul {
   padding: 0;
   margin: 0;
+}
+
+.nav__list {
+  display: flex;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -60,17 +61,21 @@ body {
   color: var(--blue-color);
 }
 
-li:nth-child(1)::after {
-  position: fixed;
-  top: 56px;
+li:nth-child(1) > a::after {
+  position: absolute;
+  bottom: 0;
   content: "";
   height: 4px;
-  width: 36px;
+  width: 100%;
   background-color: var(--blue-color);
   border-radius: 8px;
 }
 
-.logo-container {
+li:nth-child(1) {
+  position: relative;
+}
+
+.home-link {
   display: flex;
   margin: 10px 0;
 }
