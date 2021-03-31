@@ -1,0 +1,74 @@
+/* #region rotobo font import */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+/* #endregion */
+body,
+nav,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  align-items: center;
+}
+
+.nav_list {
+  width: 100%;
+  display: flex;
+  list-style: none;
+}
+
+.nav_link {
+  margin-left: 20px;
+  height: 60px;
+}
+
+.nav_link:first-child {
+  margin-left: 0;
+}
+
+.nav_input {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.is-active {
+  position: relative;
+  color: rgba(0, 172, 220, 1);
+}
+
+.nav_input:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: rgba(0, 172, 220, 1);
+  border-radius: 8px;
+}
