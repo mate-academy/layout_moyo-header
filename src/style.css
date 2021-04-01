@@ -11,17 +11,11 @@ html {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   
   height: 60px;
-  margin-top: 20px;
-  margin-left: 20px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   position: relative;
-}
-
-.link__logo {
-  position: absolute;
-  left: 50px;
+  padding: 0 50px;
 }
 
 .nav {
@@ -33,7 +27,7 @@ html {
   display: flex;
   list-style: none;
   justify-content: flex-end;
-  margin: 0 50px 0 0;
+  margin: 0;
 }
 
 .nav__item {
@@ -53,8 +47,7 @@ html {
   text-transform: uppercase ;
 }
 
-.nav__link:hover::after,
-.apple::after {
+.is-active::after {
   content: "";
   display: block;
   width: 100%;
@@ -65,6 +58,7 @@ html {
   bottom: 0;
 }
 
+.nav__link:hover,
 .nav__link:active {
   color: rgba(0, 172, 220, 1);
 }
