@@ -2,65 +2,63 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: Roboto;
-  font-weight: 500;
-  src: url(./fonts/Roboto-Medium.ttf);
-}
-
 body {
   margin: 0;
-  --action-color: #00acdc;
 }
 
-.container {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1150px;
-  margin: 0 auto;
-  margin-left: 50px;
+
+  padding: 0 50px;
 }
 
-.header {
+.moyo-link {
+  height: 40px;
+  width: 40px;
+}
+
+.nav__list {
   display: flex;
-  font-family: "Roboto", sans-serif;
-  border-bottom: 1px solid #f3f3f3;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 0;
+  padding: 0;
 }
 
-.logo__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 50px;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  height: 60px;
-  margin-right: 30px;
-}
-
-.nav-link {
-  padding: 18.5px 0;
-  display: inline-block;
-  color: #000;
+.nav__item {
+  position: relative;
+  list-style: none;
   font-size: 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav__item:not(:last-child) {
   margin-right: 20px;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  
+  color: black;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.nav-link:hover {
-  color: var(--action-color);
+.is-active,
+.nav__item :hover {
+  color: #00acdc;
 }
 
-.nav-link:active,
-.is-active {
-  color: var(--action-color);
-  border-bottom: solid 4px var(--action-color);
-  margin-top: 4px;
+.is-active::after {
+  content: "";
+  width: 100%;
+  
+  display: block;
+  position: absolute;
+  bottom: 0;
+  
+  border-bottom: 4px solid #00acdc;
+  border-radius: 8px;
 }
