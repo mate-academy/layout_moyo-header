@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+}
+
+nav {
+  /* white-space: nowrap; */
+  display: flex;
+}
+
+.header {
+  display: flex;
+  position: relative;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Moyo_image {
+  height: 40px;
+  width: 40px;
+  margin-left: 50px;
+}
+
+.navbar {
+  margin-right: 50px;
+}
+
+.navbar_item {
+  font-family: Roboto, sans-serif;
+  /* font-family: 'Times New Roman', Times, serif; */
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: " ";
+  width: 100%;
+  position: absolute;
+  height: 4px;
+  left: 0;
+  bottom: -18.5px;
+  border-radius: 8px;
+  background-color: #00acdc;
+}
+
+.navbar_item:hover {
+  color: #00acdc;
+}
