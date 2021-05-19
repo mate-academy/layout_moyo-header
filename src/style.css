@@ -1,0 +1,75 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+/* everything seems ok now, but the tests don't work properly */
+
+body {
+  margin: 0;
+}
+
+header {
+  height: 60px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.moyo-logo {
+  height: 40px;
+  width: 40px;
+  margin: 10px 0;
+  margin-left: 50px;
+}
+
+.nav {
+  margin-right: 50px;
+}
+
+.nav__list {
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav__list__item {
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.nav__list__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 60px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  right: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+  position: absolute;
+  bottom: 0;
+}
