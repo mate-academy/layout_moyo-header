@@ -8,94 +8,62 @@ body {
   background: #e5e5e5;
 }
 
-.big {
-  display: flex;
-  justify-content: space-between;
-  width: 1200px;
-  text-align: center;
-  align-items: center;
-  background: #fff;
+@media (max-width: 1200px) {
+  .big {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    background: #fff;
+  }
+
+  .logo-img {
+    padding-left: 50px;
+  }
+
+  .links {
+    position: relative;
+  }
+
+  .nav__link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #000;
+    padding: 20px;
+  }
+
+  .links::before {
+    content: "";
+    position: absolute;
+    width: 37px;
+    height: 4px;
+    background: #00acdc;
+    border-radius: 8px;
+    top: 50px;
+    left: 20px;
+  }
+
+  .is-active {
+    color: #00acdc;
+  }
+
+  .nav__link:hover {
+    color: #00acdc;
+  }
 }
 
-.logo-img {
-  padding-left: 50px;
-}
 
-.links {
-  position: relative;
-}
+@media (max-width: 1090px) {
+  .nav__link {
+    padding: 15px;
+  }
 
-.nav__link {
-  display: inline-block;
-  text-decoration: none;
-  font-family: "Roboto";
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-  color: #000;
-  padding: 20px;
-}
-
-.links::before {
-  content: "";
-  position: absolute;
-  width: 37px;
-  height: 4px;
-  background: #00acdc;
-  border-radius: 8px;
-  top: 50px;
-  left: 20px;
-}
-
-.is-active {
-  color: #00acdc;
-}
-
-.nav__link:hover {
-  color: #00acdc;
-}
-
-.small {
-  display: flex;
-  justify-content: space-between;
-  width: 1024px;
-  height: 60px;
-  margin-top: 50px;
-  text-align: center;
-  align-items: center;
-  background: #fff;
-}
-
-.nav__link-2 {
-  display: inline-block;
-  text-decoration: none;
-  font-family: "Roboto";
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-  color: #000;
-  padding: 15px;
-}
-
-.links-2 {
-  position: relative;
-}
-
-.links-2::before {
-  content: "";
-  position: absolute;
-  width: 37px;
-  height: 4px;
-  background: #00acdc;
-  border-radius: 8px;
-  top: 48px;
-  left: 15px;
-}
-
-.is-active-2 {
-  color: #00acdc;
-}
-
-.nav__link-2:hover {
-  color: #00acdc;
+  .links::before {
+    top: 40px;
+    left: 16px;
+  }
 }
