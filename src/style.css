@@ -3,6 +3,12 @@
   margin: 0;
 }
 
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -24,18 +30,15 @@
   padding-left: 0;
 }
 
-.header-nav-ul li:not(:last-child) {
-  margin-right: 20px;
-}
-
 .nav-ul-li {
   list-style: none;
 }
 
+.header-nav-ul .nav-ul-li:not(:last-child) {
+  margin-right: 20px;
+}
+
 .link {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
@@ -48,12 +51,12 @@
 .link::after {
   content: "";
   position: absolute;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
   height: 4px;
-  border-radius: 8px;
   background-color: #00acdc;
+  border-radius: 8px;
   display: none;
 }
 
