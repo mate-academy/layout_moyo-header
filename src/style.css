@@ -17,7 +17,7 @@ body {
   display: flex;
   height: var(--header-height);
   width: 100%;
-  /* padding-right: 50px; */
+  padding: 0 50px;
   justify-content: space-between;
   left: 0;
   right: 0;
@@ -27,14 +27,12 @@ body {
 
 .nav {
   display: flex;
-  margin: auto 0;
 }
 
 .moyo-logo {
-  display: flex;
   width: 40px;
   height: 40px;
-  margin: auto 50px;
+  margin: auto 0;
 }
 
 .nav__link {
@@ -42,10 +40,13 @@ body {
   color: initial;
   height: var(--header-height);
   display: flex;
-  margin-right: 20px;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.nav__link:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link:hover {
@@ -53,12 +54,13 @@ body {
 }
 
 .is-active {
-  position: relative;
+  /* position: relative; */
   top: 12.5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   color: #00acdc;
+  height: var(--header-height);
 }
 
 .is-active::after {
