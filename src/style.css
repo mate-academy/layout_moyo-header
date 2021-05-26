@@ -6,68 +6,66 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
+  font-size: 500;
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   background: #e5e5e5;
   height: 300px;
 }
 
-.common {
+.logo {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin: 10px 50px;
+}
+
+.nav-bar {
   display: flex;
-  width: 1200px;
+  width: 100%;
   height: 60px;
   justify-content: flex-end;
+
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  background-image: url(./images/logo.png);
-  background-position: top 10px left 50px;
-  background-repeat: no-repeat;
   padding-right: 50px;
 }
 
-.nav-small {
-  width: 1024px;
-  height: 60px;
-  margin-top: 20px;
-}
-
-.box {
+.nav-link {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 12px;
   line-height: 14px;
   margin-left: 20px;
   text-transform: uppercase;
-}
-
-.link {
   color: rgba(0, 0, 0, 1);
   text-decoration: none;
   cursor: default;
-
 }
 
-.blue-print {
+.blue-links {
   color: rgba(0, 172, 220, 1);
 }
 
-.under-apple {
-  position: relative;
-  left: 57px;
-  align-self: flex-end;
-  width: 40px;
-  height: 4px;
-  background: rgba(0, 172, 220, 1);
-  border-radius: 8px;
+.is-active {
+  border-bottom: 4px solid rgba(0, 172, 220, 1);
+  padding-top: 4px;
 }
 
-.common:hover {
+.nav-bar:hover {
   box-shadow: inset 0 0 0 2px rgba(0, 172, 220, 1);
 }
 
-a:hover {
-  border-bottom: 2px solid rgba(0, 172, 220, 1);
+.nav-link:hover:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  padding: 3px;
+  border-bottom: 3px solid rgba(0, 172, 220, 1);
 }
