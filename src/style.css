@@ -4,7 +4,8 @@
 
 html {
   font-family: Roboto, sans-serif;
-  margin: 0;
+  font-size: 16px;
+  margin: initial;
 }
 
 body {
@@ -13,39 +14,55 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: sticky;
+  min-height: 60px;
   left: 0;
   right: 0;
+  box-shadow: 0 2px 4px 0 #0000000d;
+
 }
 
 .nav {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-content: space-between;
+  margin: auto 50px;
+
 }
 
 .moyo-logo {
+  flex-shrink: 0;
+  display: flex;
   width: 40px;
   height: 40px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   justify-self: center;
-
 }
 
 .nav__list {
   display: flex;
-  width: 100%;
+  
   flex-direction: row;
   list-style: none;
   
 }
 
-.nav__item {
+.nav__link {
   display: flex;
+  align-items: flex-end;
   margin-right: 20px;
 }
 
-.nav__item:hover {
+.nav__link:hover {
   cursor: pointer;
   color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.main {
+  margin: 50px;
+  height: 1200px;
 }
