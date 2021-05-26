@@ -6,6 +6,12 @@ body {
   margin: 0;
 }
 
+html {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
 ul,
 li {
   margin: 0;
@@ -42,9 +48,6 @@ li {
   padding: 20px 0;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 12px;
-  line-height: 20px;
-  font-family: "Roboto", sans-serif;
   color: black;
 }
 
@@ -56,22 +59,18 @@ li {
   color: #00acdc;
 }
 
-.nav__link::after {
+.is-active:after {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  display: none;
+  display: block;
   height: 4px;
   background-color: #00acdc;
   border-radius: 8px;
   content: "";
 }
 
-.navbar a.is-active {
+.is-active {
   color: #00acdc;
-}
-
-.nav__link.is-active::after {
-  display: block;
 }
