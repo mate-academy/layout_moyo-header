@@ -28,17 +28,17 @@ html {
   height: 40px;
 }
 
-.header-nav-ul {
+.header-navigation-ul {
   display: flex;
   padding-left: 0;
   margin: 0;
 }
 
-.nav-ul-li {
+.navigation-ul-li {
   list-style: none;
 }
 
-.header-nav-ul .nav-ul-li:not(:last-child) {
+.navigation-ul-li:not(:last-child) {
   margin-right: 20px;
 }
 
@@ -52,18 +52,6 @@ html {
   position: relative;
 }
 
-.link::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 4px;
-  background-color: #00acdc;
-  border-radius: 8px;
-  display: none;
-}
-
 .link:hover {
   color: #00acdc;
 }
@@ -73,5 +61,13 @@ html {
 }
 
 .is-active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
   display: block;
 }
