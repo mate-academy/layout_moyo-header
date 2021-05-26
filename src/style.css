@@ -4,7 +4,7 @@
 
 html {
   font-family: Roboto, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   margin: initial;
 }
 
@@ -13,8 +13,12 @@ body {
 }
 
 .header {
+  --header-height: 60px;
   display: flex;
-  min-height: 60px;
+  height: var(--header-height);
+  width: 100%;
+  /* padding-right: 50px; */
+  justify-content: space-between;
   left: 0;
   right: 0;
   box-shadow: 0 2px 4px 0 #0000000d;
@@ -23,41 +27,45 @@ body {
 
 .nav {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-content: space-between;
-  margin: auto 50px;
-
+  margin: auto 0;
 }
 
 .moyo-logo {
-  flex-shrink: 0;
   display: flex;
   width: 40px;
   height: 40px;
-  /* margin-left: 50px; */
-  justify-self: center;
-}
-
-.nav__list {
-  display: flex;
-  
-  flex-direction: row;
-  list-style: none;
-  
+  margin: auto 50px;
 }
 
 .nav__link {
+  text-decoration: none;
+  color: initial;
+  height: var(--header-height);
   display: flex;
-  align-items: flex-end;
   margin-right: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .nav__link:hover {
-  cursor: pointer;
   color: #00acdc;
 }
 
 .is-active {
+  position: relative;
+  top: 12.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   color: #00acdc;
+}
+
+.is-active::after {
+  display: flex;
+  content: "";
+  background-color: #00acdc;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
 }
