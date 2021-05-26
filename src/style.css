@@ -17,6 +17,7 @@ html {
   padding: 0 50px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -28,6 +29,8 @@ html {
   display: flex;
   padding-left: 0;
   list-style: none;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .nav-item:not(:last-child) {
@@ -55,12 +58,11 @@ html {
 
 .is-active::after {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  display: block;
+  width: 37px;
   height: 4px;
-  width: 100%;
-  content: "";
+  top: 56px;
   background: #00acdc;
   border-radius: 8px;
+  content: "";
+  display: block;
 }
