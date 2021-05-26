@@ -11,31 +11,30 @@ html {
 
 .header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   height: 60px;
-  left: 0;
-  right: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding: 0 50px;
+  flex-wrap: wrap;
 }
 
 .logo {
   height: 40px;
+  width: 40px;
   align-self: center;
+  margin-right: 0;
 }
 
 .nav__list {
-  padding: 0;
   display: flex;
-  margin-left: -20px;
   list-style: none;
+  padding-left: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.nav__item {
-  display: inline;
-  justify-content: flex-start;
-  margin-left: 20px;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -47,6 +46,8 @@ html {
   line-height: 60px;
   color: #000;
   position: relative;
+  left: 0;
+  right: 0;
   text-transform: uppercase;
 }
 
