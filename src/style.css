@@ -19,6 +19,7 @@ html {
 
 .nav {
   display: flex;
+  justify-content: space-between;
 }
 
 .list {
@@ -60,17 +61,22 @@ html {
 }
 
 .is-active {
+  position: relative;
   color: rgba(0, 172, 220, 1);
   margin-left: 0;
 }
 
-.last {
+.section__first {
+  margin-left: 0;
+}
+
+.section__last {
   margin-right: 0;
 }
 
 .is-active::after {
   position: absolute;
-  bottom: -22.5px;
+  bottom: 0;
   right: 0;
   left: 0;
   content: "";
@@ -82,21 +88,6 @@ html {
   padding-right: 1px;
   margin-left: -1px;
 }
-/*
-
-.nav__option {
-  font-size: 12px;
-  margin-left: 10px;
-  margin-right: 10px;
-
-  position: relative;
-
-  text-decoration: none;
-  color: black;
-  text-transform: uppercase;
-}
-
-*/
 
 .logo {
   height: 40px;
