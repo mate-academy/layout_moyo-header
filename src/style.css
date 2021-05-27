@@ -1,12 +1,11 @@
 * {
-  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 html {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
@@ -15,30 +14,38 @@ html {
 
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  min-width: 1024px;
-  max-width: 1200px;
   height: 60px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  background-image: url(/images/logo.png);
-  background-repeat: no-repeat;
-  background-position: 50px 10px;
+}
+
+.logo {
+  margin-left: 50px;
 }
 
 .nav {
-  margin: 0 10.3px;
-  height: 60px;
-  line-height: 60px;
-}
-
-.nav:last-of-type {
   margin-right: 50px;
 }
 
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 60px;
+}
+
+.item {
+  margin-right: 20px;
+}
+
+.item:last-of-type {
+  margin-right: 0;
+}
+
 .link {
+  padding: 23px 0;
   color: #000;
   text-decoration: none;
 }
@@ -50,20 +57,16 @@ html {
 
 .is-active {
   color: #00acdc;
-  text-decoration: none;
+  position: relative;
 }
 
 .is-active::after {
-  content: " ";
+  content: "";
   display: block;
-  position: relative;
-  bottom: 4px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   height: 4px;
   background-color: #00acdc;
   border-radius: 8px;
-}
-
-a[data-qa="hover"] {
-  color: #00acdc;
-  text-decoration: none;
 }
