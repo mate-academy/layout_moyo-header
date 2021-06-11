@@ -1,0 +1,102 @@
+body {
+  box-sizing: border-box;
+}
+
+.head {
+  padding: 0 50px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    margin-right: 131px;
+    flex-shrink: 2;
+  }
+  .nav_point {
+    margin-top: 23px;
+    margin-bottom: 22px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    margin-right: 307px;
+  }
+  .nav_point {
+    margin-top: 22.5px;
+    margin-bottom: 22.5px;
+  }
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  display: flex;
+  flex-shrink: 1;
+}
+
+.nav {
+  padding: 0;
+  justify-content: flex-end;
+  display: flex;
+
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+.link {
+  position: relative;
+}
+
+.link,
+.link:hover,
+.link:visited,
+.link:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav_point {
+  margin: 10px 0 10px 20px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  align-self: flex-end;
+  height: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.is-active:hover .link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 30px;
+  height: 2px;
+  background-color: #00acdc;
+  width: 100%;
+}
+
+.nav_point:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
