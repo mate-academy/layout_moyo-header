@@ -1,9 +1,9 @@
-- check your work using basic recommendations [here](https://github.com/mate-academy/layout_search-bar-airbnb/blob/master/checklist.md)
-- check alt attributes, they must be present ([find out more](https://osric.com/chris/accidental-developer/2012/01/when-should-alt-text-be-blank/) [and this](https://9clouds.com/blog/the-importance-of-alt-attributes-aka-alt-text/))
-- logo should be a link to the main page of the website
-- use alternative font-family in case the main one doesn't work [like this](https://www.w3schools.com/cssref/pr_font_font-family.asp)
-- check the demo page with different screen sizes (including those bigger than 1700px)
-- do not use overcomplicated media conditions (try to follow desktop-driven or mobile-driven development)
-- uppercase letters for navlist are made with styles, not hardcoded into html (you have usual text with first uppercase letter in html)
-- links should be with cursor pointer
-- are you sure you've polished your code? :)
+- Проверьте свою работу, используя основные рекомендации [здесь] (https://github.com/mate-academy/layout_search-bar-airbnb/blob/master/checklist.md)
+- Проверьте атрибуты ALT, они должны быть присутствующими ([Узнайте больше] (https://osric.com/chris/accidental-developer/2012/01/when-should-Alt-text-be-blank/) [и это] (https://9clouds.com/blog/the-implate-of-alt-attributes-aka-alt-text/))
+- Логотип должен быть ссылкой на главную страницу сайта
+- Используйте альтернативный шрифт-семейство в случае, если главное не работает [подобно этому] (https://www.w3schools.com/cssref/pr_font_font-family.asp))
+- Проверьте демонстрационную страницу с различными размерами экрана (в том числе более 1700 пикселей)
+- Не используйте чрезмерные условия средств массовой информации (попробуйте следить за рабочим столом или мобильным управлением)
+- Прописные буквы для Navlist сделаны с стилями, не жесткими в HTML (у вас есть обычный текст с первой заглавной буквой в HTML)
+- Ссылки должны быть с указателем курсора
+- Вы уверены, что вы полировали свой код?:)
