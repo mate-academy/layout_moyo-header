@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 50px;
+  box-shadow: 0 1px 8px rgba(61, 78, 97, 0.1);
+  align-items: center;
+}
+
+.moyo-logo {
+  line-height: 0;
+}
+
+.menu-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  margin-right: 20px;
+  list-style-type: none;
+}
+
+.menu-item:last-child {
+  margin-right: 0;
+}
+
+.menu-link {
+  font-family: "Roboto";
+  display: block;
+  text-decoration: none;
+  color: #000;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 23px 0;
+}
+
+.menu-link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  background-color: #00acdc;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+}
