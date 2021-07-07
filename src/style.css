@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -16,14 +17,22 @@ html {
   padding: 0 50px;
 }
 
-.nav__link {
-  position: relative;
-  margin-left: 20px;
-  line-height: 60px;
+.nav__list {
+  display: flex;  /*It's crucial to the first four tests*/
   list-style: none;
 }
 
-.link {
+.nav__item {
+  position: relative;
+  line-height: 60px;
+  margin-left: 20px;
+}
+
+.nav__list > :first-child {
+  margin-left: 0;
+}
+
+.nav__link {
   color: #000;
   text-transform: uppercase;
   text-decoration: none;
@@ -40,11 +49,7 @@ html {
   background-color: #00acdc;
 }
 
-.nav__list {
-  display: flex;
-}
-
 .is-active,
-.link:hover {
+.nav__link:hover {
   color: #00acdc;
 }
