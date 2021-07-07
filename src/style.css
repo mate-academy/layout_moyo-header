@@ -1,67 +1,76 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 * {
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
 }
 
 .header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 50px;
 }
 
-.nav {
-  display: flex;
-  list-style: none;
-  padding: 0;
-}
-
-.img {
+.nav_image {
   height: 40px;
   align-self: center;
 }
 
-.vidstup {
-  margin-right: 20px;
+.nav {
+  display: flex;
+  line-height: 60px;
 }
 
-.style {
-  position: relative;
-  text-decoration: none;
-  color: black;
-  background-color: #fff;
-  font-family: "Roboto", sans-serif;
+.nav_title {
+  margin-left: 20px;
+}
+
+.nav_title:first-child {
+  margin-left: 0;
+}
+
+.nav_link {
+  font-weight: 500;
   font-size: 12px;
   line-height: 60px;
-  display: inline-block;
+  text-decoration: none;
   text-transform: uppercase;
+  color: #000;
+  display: block;
+  position: relative;
 }
 
-.style::after {
+.nav_link::after {
   content: "";
   position: absolute;
+  background-color: #00acdc;
+  height: 4px;
+  border-radius: 8px;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  height: 4px;
-  width: 100%;
-  align-self: center;
-  border-radius: 8px;
-  background-color: #00acdc;
   opacity: 0;
 }
 
-.style:hover {
+.nav_link:hover {
   color: #00acdc;
 }
 
-.is-active {
+.nav_link.is-active {
   color: #00acdc;
 }
 
-.style.is-active::after {
+.nav_link.is-active::after {
   opacity: 1;
 }
