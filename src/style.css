@@ -1,6 +1,7 @@
 * {
-  margin: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -16,17 +17,30 @@ html {
   padding: 0 50px;
 }
 
-.nav__link {
-  position: relative;
-  margin-left: 20px;
-  line-height: 60px;
+.nav__list {
+  display: flex; /* Yeap, I nead this*/
   list-style: none;
 }
 
-.link {
+.nav__list > :first-child {
+  margin-left: 0;
+}
+
+.nav__item {
+  position: relative;
+  margin-left: 20px;
+  line-height: 60px;
+}
+
+.nav__link {
   color: #000;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.is-active,
+.nav__link:hover {
+  color: #00acdc;
 }
 
 .is-active:after {
@@ -38,13 +52,4 @@ html {
   height: 4px;
   border-radius: 8px;
   background-color: #00acdc;
-}
-
-.nav__list {
-  display: flex;
-}
-
-.is-active,
-.link:hover {
-  color: #00acdc;
 }
