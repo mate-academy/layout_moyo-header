@@ -6,22 +6,21 @@ body {
 .header {
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  
+  display: flex;
+  padding: 0 50px;
 }
 
 .logo {
-  position: absolute;
   width: 40px;
   height: 40px;
-  top: 10px;
-  left: 50px;
+  align-self: center;
 }
 
 .nav {
   height: 60px;
   display: flex;
   justify-content: flex-end;
-  padding: 0 50px;
+  width: 100%;
 }
 
 .nav_link {
@@ -36,6 +35,8 @@ body {
   height: 100%;
   text-align: center;
   line-height: 60px;
+  flex-shrink: 0;
+  display: flex;
 }
 
 .nav_link:hover,
@@ -43,17 +44,16 @@ body {
   color: #00acdc;
 }
 
-/* .nav_link:first-child {
-  margin-left: 0;
-} */
+.is-active {
+  position: relative;
+}
 
 .is-active::after {
-  content: " ";
-  display: block;
+  content: "";
   position: absolute;
-  width: 37px;
+  bottom: 0;
   height: 4px;
-  top: 56px;
+  width: 100%;
   background: #00acdc;
-  border-radius: 8px;
+  border-radius: 2px;
 }
