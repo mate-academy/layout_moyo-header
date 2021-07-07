@@ -9,29 +9,22 @@ body {
 }
 
 .links {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   margin: 0 50px;
 }
 
 .logo {
-  position: absolute;
-  top: 10px;
+  padding-top: 10px;
 }
 
-.navigation {
-  height: 60px;
-  min-width: 781px;
-  width: Calc(100vw - 140px);
-  margin-left: 40px;
-
+.list {
   display: flex;
-  justify-content: flex-end;
   align-items: stretch;
 
-  font-family: Roboto, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  font-style: normal;
+  height: 60px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav_link {
@@ -42,17 +35,31 @@ body {
   text-align: center;
 }
 
+.nav_link:first-child {
+  margin-left: 0;
+}
+
+.nav_link_a {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  color: #000;
+}
+
 .nav_link:last-child {
   margin-right: 0;
 }
 
-.nav_link:hover {
+.nav_link_a:hover {
   color: #00acdc;
   cursor: pointer;
 }
 
 .is-active {
   position: relative;
+  line-height: 60px;
   color: #00acdc;
 }
 
