@@ -1,0 +1,57 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+body {
+  /* display: flex; */
+  margin: 0;
+  /* align-items: stretch; */
+  /*підозрюю не доцільно використовувати display: flex; на всьому body для встановлення ширини хедера? */
+}
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  position: sticky;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-width: 860px; /* кращого рішення не знайшов */
+  padding: 10px 30px;
+  background: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nav__link {
+  display: inline-block;
+  padding: 0 20px;
+  cursor: default;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.nav__link::after {
+  display: block;
+  content: '';
+  border-bottom: solid;
+  border-color: #00acdc;
+}
+
+.logo {
+  display: inline-block;
+}
