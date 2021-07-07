@@ -21,7 +21,6 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 - the link with only `blue` color is an example of `:hover` styles. Every link in the row should have `blue` color on `:hover`. 
 - add `data-qa="hover"` attribute to the 4th link for testing (`Ноутбуки и компьютеры`)
 
-
 ### Common mistakes
 - Check is you added `data-qa="hover"` and `class="is-active"` required for tests
 - Do not use `tabs`. Use `2 spaces` for indentation.
