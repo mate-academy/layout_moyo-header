@@ -2,7 +2,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
   margin: 0;
   padding: 0 50px;
   background-color: #fff;
@@ -18,26 +17,30 @@ header {
 
 .item {
   position: relative;
+  padding: 22.5px 0;
 }
 
 .item:not(:last-child) {
   margin-right: 20px;
 }
 
-a {
+.link {
   font-family: Roboto, sans-serif;
+
   position: relative;
   display: inline-block;
+
   text-decoration: none;
   color: black;
   --active: #00acdc;
   font-size: 12px;
+  
   padding: 0;
 }
 
-a:hover,
-a.is-active,
-a:active {
+.link:hover,
+.link.is-active,
+.link:active {
   color: var(--active);
 }
 
@@ -45,7 +48,7 @@ body {
   margin: 0;
 }
 
-a:active::after {
+.link:active::after {
   content: "";
 
   position: absolute;
@@ -64,7 +67,7 @@ a:active::after {
   content: "";
 
   position: absolute;
-  top: 28px;
+  top: 32px;
 
   display: block;
   width: 100%;
