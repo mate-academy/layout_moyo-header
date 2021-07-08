@@ -34,21 +34,18 @@ body {
 
 .nav__link {
   display: inline-block;
-  padding: 0 10px;
+  border: 1px transparent blue;
+  margin: 0 9px;
   color: #000;
   text-decoration: none;
 }
 
-.nav__link:hover,
-.nav__link:focus {
-  color: #1fc8db;
-}
-
 .is-active {
   position: relative;
+  color: #00acdc;
 }
 
-.is-active:focus:after {
+.is-active:link:after {
   position: absolute;
   display: inline-block;
   height: 4px;
@@ -59,4 +56,8 @@ body {
   border-radius: 8px;
   content: "";
   background-color: #00acdc;
+}
+
+.nav__link:hover {
+  color: #00acdc;
 }
