@@ -1,10 +1,13 @@
-body {
-  margin: 0;
+html {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
+}
+
+body {
+  margin: 0;
 }
 
 .nav {
@@ -20,23 +23,23 @@ body {
 }
 
 .container {
-  display: block;
   height: 60px;
 }
 
 .list-class {
   display: flex;
+  align-items: center;
+  align-content: center;
   height: 100%;
   margin: 0;
 }
 
 .list-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  display: block;
   position: relative;
+  height: 100%;
   margin: 0 10px;
+  list-style-type: none;
 }
 
 .list-item:last-child {
@@ -44,8 +47,12 @@ body {
 }
 
 .link {
+  display: flex;
+  align-content: center;
+  align-items: center;
   margin-right: 20px;
   color: #000;
+  height: 100%;
   text-decoration: none;
 }
 
@@ -54,10 +61,11 @@ body {
 }
 
 .is-active,
-.link:hover {
+.list-item:hover .link {
   color: #00acdc;
 }
 
+.list-item:hover::after,
 .is-active::after {
   position: absolute;
   content: "";
@@ -67,4 +75,9 @@ body {
   height: 4px;
   background: #00acdc;
   border-radius: 8px;
+  color: #00acdc;
 }
+
+/*  Додав ефект, як при is-active
+для ссилок при наведені, якщо це зайве для завдання,
+то можу забрати */
