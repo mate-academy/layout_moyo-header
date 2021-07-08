@@ -1,0 +1,85 @@
+:root {
+  --text-color: #000;
+  --main-font-family: "Roboto", sans-serif;
+  --main-font-size: 12px;
+  --main-active-text-color: #00acdc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-color: #e5e5e5;
+  padding: 0.1px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  margin: 0 0 0 50px;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation__menu {
+  margin: 0 30px 0 0;
+}
+
+.navigation__menu_box {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row;
+}
+
+.navigation__menu_item {
+  display: flex;
+  margin: 0 20px 0 0;
+  align-items: center;
+}
+
+.navigation__menu_text {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: var(--main-font-family);
+  font-size: var(--main-font-size);
+  line-height: 14px;
+  text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+}
+
+.navigation__menu_text:hover {
+  color: var(--main-active-text-color);
+}
+
+.navigation__menu_text_is-active {
+  color: var(--main-active-text-color);
+}
+
+.navigation__menu_text_is-active::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: var(--main-active-text-color);
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+}
