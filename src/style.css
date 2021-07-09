@@ -1,93 +1,10 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
   margin: 0;
 }
 
 .header {
   position: relative;
-  left: auto;
-  right: auto;
-
-  margin-top: 25px;
+  width: 100%;
 }
 
 .logo {
@@ -121,7 +38,7 @@ video {
 
 }
 
-li {
+.item {
   padding: 22.5px 10px;
   list-style: none;
 
@@ -135,8 +52,18 @@ li {
   color: #000;
 }
 
-.is-active :hover {
+.item :hover {
   color: #00acdc;
+}
+
+.item__style :active::after {
+  color: #00acdc;
+
+  background-color: #00acdc;
+  content: "";
+  display: block;
+  height: 4px;
+  border-radius: 8px;
 }
 
 .item-1 :active::after {
@@ -151,80 +78,38 @@ li {
 }
 
 .item-2 :active::after {
-  color: #00acdc;
-
-  background-color: #00acdc;
-  content: "";
-  display: block;
   width: 58px;
   height: 4px;
-  border-radius: 8px;
 }
 
 .item-3 :active::after {
-  color: #00acdc;
-
-  background-color: #00acdc;
-  content: "";
-  display: block;
   width: 156px;
   height: 4px;
-  border-radius: 8px;
 }
 
 .item-4 :active::after {
-  color: #00acdc;
-
-  background-color: #00acdc;
-  content: "";
-  display: block;
   width: 163px;
   height: 4px;
-  border-radius: 8px;
 }
 
 .item-5 :active::after {
-  color: #00acdc;
-
-  background-color: #00acdc;
-  content: "";
-  display: block;
   width: 59px;
   height: 4px;
-  border-radius: 8px;
 }
 
 .item-6 :active::after {
-  color: #00acdc;
-
-  background-color: #00acdc;
-  content: "";
-  display: block;
   width: 70px;
   height: 4px;
-  border-radius: 8px;
 }
 
 .item-7 :active::after {
-  color: #00acdc;
-
-  background-color: #00acdc;
-  content: "";
-  display: block;
   width: 33px;
   height: 4px;
-  border-radius: 8px;
 }
 
 .item-8 :active::after {
-  color: #00acdc;
-
-  background-color: #00acdc;
-  content: "";
-  display: block;
   width: 41px;
   height: 4px;
-  border-radius: 8px;
 }
 
 a {
