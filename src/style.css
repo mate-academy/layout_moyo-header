@@ -5,16 +5,21 @@ body {
 
 .header-nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 10px 50px 0;
+}
+
+.nav {
+  flex-basis: 753px;
 }
 
 .nav__list {
   display: flex;
   list-style: none;
   justify-content: space-between;
-  width: 753px;
   padding: 0;
+  margin: 0;
 }
 
 .nav__link {
@@ -23,6 +28,8 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 12px;
+  padding: 18px 0;
+  position: relative;
 }
 
 .nav__link:hover,
@@ -34,9 +41,11 @@ body {
 .is-active::after,
 .nav__link:active::after {
   content: "";
+  position: absolute;
+  bottom: 0;
   height: 4px;
+  width: 100%;
   background-color: #00acdc;
   border-radius: 8px;
   display: block;
-  margin-top: 18px;
 }
