@@ -1,8 +1,3 @@
-/* @font-face {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-} */
-
 body {
   margin: 0;
 }
@@ -26,7 +21,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 60px;
   text-transform: uppercase;
   padding: 0 10px;
   color: #000;
@@ -37,8 +32,17 @@ body {
   color: #00acdc;
 }
 
-.nav__link:active {
+.is-active {
   color: #00acdc;
-  border-bottom: 4px solid #00acdc;
-  padding-bottom: 10px;
+}
+
+.is-active::after {
+  position: absolute;
+  width: 36px;
+  height: 4px;
+  top: 56px;
+  right: 771px;
+  content: "";
+  background-color: #00acdc;
+  border-radius: 8px;
 }
