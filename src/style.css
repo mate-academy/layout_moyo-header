@@ -34,7 +34,7 @@ body {
   color: black;
   font-size: 12px;
   text-transform: uppercase;
-  padding: 5px;
+  margin: 10px;
 }
 
 .is-active {
@@ -47,12 +47,14 @@ a:hover {
 
 .is-active::after,
 .nav_link:active::after {
+  display: flex;
   content: "";
   position: absolute;
   height: 4px;
   width: 100%;
   background-color: #00acdc;
   border-radius: 8px;
-  display: flex;
   margin-top: 18.5px;
+  margin-left: 10px;
+  align-items: flex-end;
 }
