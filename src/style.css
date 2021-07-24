@@ -1,0 +1,59 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.pages {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  margin: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.page {
+  position: relative;
+  margin: 22px 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.page:first-child {
+  flex-grow: 1;
+  size: 40px;
+  margin-left: 50px;
+  align-self: center;
+}
+
+.page:last-child {
+  margin-right: 40px;
+}
+
+.page:link,
+.page:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.page:hover {
+  color: #00acdc;
+}
+
+.page:active {
+  color: #00acdc;
+}
+
+.page:active:not(:first-child)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  border-radius: 8px;
+  width: 100%;
+  border-bottom: 4px solid #00acdc;
+}
