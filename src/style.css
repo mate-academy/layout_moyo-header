@@ -3,57 +3,79 @@ body {
   font-style: normal;
 }
 
-.pages {
+.header {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
   height: 60px;
-  margin: 10px 20px;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 0;
+  padding: 0;
 }
 
-.page {
-  position: relative;
-  margin: 22px 10px;
+.logo {
+  size: 40px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.nav {
+  display: flex;
+  width: 803px;
+  margin-right: 50px;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_item {
+  height: 15px;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
+  padding: 23px 10px;
   text-transform: uppercase;
 }
 
-.page:first-child {
-  flex-grow: 1;
-  size: 40px;
-  margin-left: 50px;
-  align-self: center;
+.nav_item:first-child {
+  margin-left: 0;
 }
 
-.page:last-child {
-  margin-right: 40px;
+.nav_item:last-child {
+  margin-right: 0;
 }
 
-.page:link,
-.page:visited {
+.link {
+  text-decoration: none;
+  color: black;
+  align-items: center;
+}
+
+.link:link,
+.link:visited {
   color: black;
   text-decoration: none;
 }
 
-.page:hover {
+.link:hover {
   color: #00acdc;
 }
 
-.page:active {
+.link:active {
   color: #00acdc;
 }
 
-.page:active:not(:first-child)::after {
+.link:active::after {
   content: "";
   display: inline-block;
-  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #00acdc;
   bottom: -18px;
   left: 0;
   border-radius: 8px;
-  width: 100%;
-  border-bottom: 4px solid #00acdc;
 }
