@@ -8,6 +8,7 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
+  text-transform: uppercase;
 }
 
 .logo-image {
@@ -24,7 +25,6 @@ body {
 .category {
   margin-top: 23px;
   margin-right: 20px;
-  line-height: 14px;
   text-decoration: none;
   color: black;
 }
@@ -34,17 +34,20 @@ body {
 }
 
 .is-active::after {
+  position: absolute;
   display: block;
   content: "";
   border: 2px solid #00acdc;
   border-radius: 8px;
-  margin-top: 18px;
+  bottom: 0;
+  width: 100%;
 }
 
 .is-active {
   color: #00acdc;
+  position: relative;
 }
 
-a:hover {
+.category:hover {
   color: #00acdc;
 }
