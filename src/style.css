@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
 }
 
 html {
@@ -7,16 +8,21 @@ html {
   font-weight: 500;
 }
 
-.nav {
+.header {
   display: flex;
   height: 60px;
-  background-image: url(images/logo.png);
   background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: 50px 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-right: 50px;
+}
+
+.logo {
+  margin: 10px 0 10px 50px;
+}
+
+.nav {
+  display: flex;
 }
 
 .link {
@@ -26,6 +32,10 @@ html {
   text-decoration: none;
   text-transform: uppercase;
   color: black;
+}
+
+.link:first-child {
+  margin-left: 0;
 }
 
 .link:hover {
