@@ -11,10 +11,10 @@ body {
 .header {
   position: relative;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  padding: 0 50px;
   max-width: 100%;
   min-width: 1024px;
   float: none;
@@ -23,20 +23,9 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.logo {
-  position: absolute;
-  left: 50px;
-  top: 10px;
-}
-
-.navigation {
-  margin-right: 50px;
-}
-
 .link {
   display: inline-block;
   font-family: Roboto, sans-serif;
-  font-style: normal;
   font-weight: 500;
   height: var(--box-height);
   line-height: var(--box-height);
@@ -47,7 +36,9 @@ body {
 }
 
 .is-active {
+  position: sticky;
   color: #00acdc;
+  margin-left: 0;
 }
 
 .link:hover {
@@ -58,7 +49,7 @@ body {
   position: absolute;
   display: block;
   content: "";
-  width: 37px;
+  width: 100%;
   height: 4px;
   bottom: 0;
   background: #00acdc;
