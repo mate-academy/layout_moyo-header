@@ -9,13 +9,15 @@ body {
 
 .header {
   display: flex;
+  justify-content: space-between;
   height: 60px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
 }
 
 .icon {
-  margin: 10px 0 10px 50px;
+  margin: 10px 0;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -24,8 +26,7 @@ body {
 /* #region nav standard */
 .nav {
   display: flex;
-  width: 100%;
-  justify-content: flex-end;
+  width: auto;
   align-items: center;
 }
 
@@ -33,15 +34,17 @@ body {
   display: inline-flex;
   list-style: none;
   padding: 0;
-  margin: 0 40px 0 0;
+  margin: 0;
   height: 100%;
   align-items: center;
 }
 
+.nav__list :nth-child(n + 2) {
+  margin-left: 20px;
+}
+
 .nav__item {
   display: inline-flex;
-  margin: 0 10px;
-  align-items: flex-end;
 }
 
 .nav__link {
@@ -54,6 +57,7 @@ body {
   line-height: 14px;
   text-transform: uppercase;
   padding: 23px 0;
+  margin: 0;
 }
 
 .nav__link:hover {
@@ -72,4 +76,5 @@ body {
   border-radius: 8px;
   background-color: #00acdc;
 }
+
 /* #endregion */
