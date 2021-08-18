@@ -1,5 +1,14 @@
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+body {
   margin: 0;
 }
 
@@ -11,28 +20,22 @@
   padding: 0 50px;
 }
 
-.nav .list {
+.nav__list {
   display: flex;
   list-style-type: none;
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
 }
 
-.list > li:not(:last-child) {
-  margin: 0 10px;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
-.list > li:last-child {
-  margin-left: 10px;
-}
-
-.link {
+.nav__link {
   text-decoration: none;
   color: black;
   padding: 23px 0;
 }
 
-.link:hover,
+.nav__link:hover,
 .is-active {
   color: #00acdc;
 }
