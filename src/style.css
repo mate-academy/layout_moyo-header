@@ -1,5 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+
+  padding: 0%;
+  margin: 0%;
+}
+
 html {
-  font-family: Roboto, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   font-size: 16px;
 }
 
@@ -7,37 +17,82 @@ body {
   margin: 0;
 }
 
-.nav {
-  text-align: center;
-}
-
-.nav__list {
-  display: flex;
+.header {
+  /* display: flex;
   margin: auto;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  list-style: none;
-  height: 60px;
-}
-
-.nav__item {
-  justify-content: right;
-}
-
-.nav__link {
-  display: inline-block;
-  color: #000;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px;
-  padding: 5px 10px;
-}
-
-.nav__link:hover {
-  border-bottom: 2px solid #00ACDC;
+  flex-wrap: wrap;
+  height: 60px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  margin-right: 300px;
+  padding-top: 3px;
+  padding-left: 50px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-right: 40px;
+}
+
+.nav__list {
+  /* list-style: none;
+  display: inline-block; */
+  /* border: 2px solid red; */
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  display: inline-block;
+}
+
+.nav__link {
+  /* display: inline-block;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 22.5px 0; */
+  /* border: 2px solid blue; */
+  display: inline-block;
+  font-size: 12px;
+  line-height: 60px;
+  height: 60px;
+  text-decoration: none;
+  position: relative;
+  text-transform: uppercase;
+  margin: 0 10px;
+  color: #000;
+
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #00acdc;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: #00acdc;
 }
