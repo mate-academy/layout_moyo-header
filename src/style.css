@@ -10,37 +10,37 @@ body {
 
 header {
   flex-wrap: wrap;
+  padding: 0 50px;
+  /*   width: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #fff;
+  line-height: 60px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .container {
   flex-grow: 0;
   font-family: inherit;
-  margin-right: 50px;
+  align-items: center;
   display: flex;
   height: 60px;
 }
 
 .category {
-  padding: 22.5px 0;
   color: black;
   text-decoration: none;
-  margin: 0 0 0 20px;
+  margin-left: 20px;
   font-size: 12px;
-  line-height: 14px;
+  line-height: inherit;
+  text-transform: uppercase;
 }
 
-header::before {
+img {
   position: relative;
-  left: 50px;
   width: 40px;
   height: 40px;
-  content: "";
-  background-image: url("images/logo.png");
 }
 
 .category:hover {
@@ -48,17 +48,18 @@ header::before {
 }
 
 .is-active {
+  align-self: stretch;
   color: #00acdc;
-  margin: 0;
+  margin-left: 0;
 }
 
 .is-active::after {
   content: "";
-  width: 36px;
-  position: absolute;
-  height: 3.5px;
+  width: 100%;
+  position: relative;
+  height: 4px;
   background-color: #00acdc;
-  top: 56px;
+  bottom: 4px;
   display: block;
   border-radius: 8px;
 }
