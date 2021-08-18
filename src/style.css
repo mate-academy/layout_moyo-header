@@ -4,14 +4,12 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  background: #e5e5e5;
 }
 
 body {
   width: 1200px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  margin-top: 20px;
 }
 
 .header {
@@ -19,15 +17,6 @@ body {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(black, 0.05);
-}
-
-.header,
-.nav,
-.nav_list,
-.nav_list_item,
-.nav_links,
-.logo {
-  background: #fff;
 }
 
 .logo {
@@ -57,6 +46,7 @@ body {
 
 .nav_links {
   padding-top: 22.5px;
+  position: relative;
   font-size: 12px;
   text-decoration: none;
   text-transform: uppercase;
@@ -72,24 +62,18 @@ body {
 }
 
 .is-active::after {
-  display: block;
-  position: absolute;
-  margin-top: 18.5px;
   content: "";
-  width: 37px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 4px;
-  left: 392px;
-  top: 57px;
+  border-radius: 2px;
   background: #00acdc;
-  border-radius: 8px;
 }
 
 @media (max-width: 1199px) {
   body {
     width: 1024px;
-  }
-
-  .is-active::after {
-    left: 216px;
   }
 }
