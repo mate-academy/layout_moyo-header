@@ -1,5 +1,17 @@
 * {
+  box-sizing: border-box;
+}
+
+body,
+ul,
+li,
+a {
   margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 html {
@@ -12,41 +24,43 @@ html {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
 }
 
 .logo {
   height: 40px;
   width: 40px;
-  margin: 10px 50px;
 }
 
-.nav {
-  display: flex;
+.nav__list {
   height: 60px;
-  margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav__element {
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__link {
   padding: 23px 0;
-  margin: 0 10px;
+  position: relative;
   text-transform: uppercase;
   color: #000;
   text-decoration: none;
 }
 
-.nav__element:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
-.nav__element:first-child {
-  margin-left: 0;
-}
-
-.nav__element:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
-.nav__element:focus {
+.nav__link:focus {
   color: #00acdc;
 }
 
@@ -61,7 +75,7 @@ html {
   position: absolute;
   bottom: 0;
   height: 4px;
-  width: 37px;
+  width: 100%;
   border-radius: 2px;
   background-color: #00acdc;
 }
