@@ -38,8 +38,8 @@ body {
   align-items: center;
 }
 
-.nav__list :nth-child(n + 2) {
-  margin-left: 20px;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -56,12 +56,19 @@ body {
   margin: 0;
 }
 
+.is-active,
 .nav__link:hover {
   color: #00acdc;
 }
 
-.is-active:active {
-  --underline-height: 4px;
+.is-active:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
 }
 
 .underline {
