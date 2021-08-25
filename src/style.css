@@ -9,9 +9,9 @@ body {
 }
 
 header {
-  flex-wrap: wrap;
+  box-sizing: border-box;
   padding: 0 50px;
-  /*   width: 100%; */
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,18 +48,21 @@ img {
 }
 
 .is-active {
+  position: relative;
+  display: inline-block;
   align-self: stretch;
   color: #00acdc;
   margin-left: 0;
 }
 
 .is-active::after {
+  display: inline-block;
   content: "";
   width: 100%;
-  position: relative;
+  position: absolute;
   height: 4px;
   background-color: #00acdc;
-  bottom: 4px;
-  display: block;
+  bottom: 0;
+  left: 0;
   border-radius: 8px;
 }
