@@ -1,86 +1,77 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+h1 {
+  display: none;
 }
 
-.header {
-  position: relative;
-  display: flex;
-  height: 60px;
+body {
+  margin: 0 ;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+.header-container {
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  font-size: 12px;
-  line-height: 14px;
+  width: 100%;
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
   margin-left: 50px;
-  align-self: center;
 }
 
-.nav-menu {
-  display: flex;
-  margin-right: 50px;
+.navigation-block {
+  margin: 0 50px auto;
+  justify-content: flex-end;
 }
 
-.nav {
-  list-style: none;
+.nav-list {
   display: flex;
+  margin: 0;
   padding: 0;
-  margin-left: -20px;
-  align-items: center;
+  list-style: none;
+  height: 60px;
 }
 
-.nav__item {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  margin-right: 20px;
-  line-height: 60px;
+.nav-item {
+  margin: auto;
+  padding-left: 20px;
 }
 
-.nav__link {
-  height: 100%;
-  align-items: center;
+.nav-item:first-child {
+  padding-left: 0;
+}
+
+.nav-link {
+  display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
-  white-space: nowrap;
-  display: flex;
-  flex-grow: 1;
+  height: 60px;
+  line-height: 60px;
 }
 
 .is-active {
   position: relative;
   color: #00acdc;
-  height: 100%;
-}
-
-.nav__link:hover {
-  color: #00acdc;
 }
 
 .is-active::after {
-  display: block;
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
   width: 100%;
-  height: 4px;
-  text-decoration: none;
-  background-color: #00acdc;
-  border-radius: 8px;
+  bottom: 0;
+  left: 0;
+  border-bottom: 4px solid #00acdc;
+  border-radius: 2px;
   content: "";
-  opacity: 1;
 }
 
-h1 {
-  display: none;
+.nav-link:hover {
+  color: #00acdc;
 }
