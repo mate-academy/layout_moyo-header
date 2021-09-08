@@ -11,7 +11,6 @@ body {
 }
 
 .header {
-  --main-color: #00acdc;
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
@@ -39,8 +38,12 @@ body {
   margin: 0;
 }
 
-.nav_item + .nav_item {
-  margin: 0 0 0 20px;
+.nav_item {
+  margin-left: 20px;
+}
+
+.nav_item:first-child {
+  margin-left: 0;
 }
 
 .nav_link {
@@ -55,7 +58,7 @@ body {
 }
 
 .is-active {
-  color: var(--main-color);
+  color: #00acdc;
 }
 
 .is-active::after {
@@ -64,12 +67,12 @@ body {
   height: 4px;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--main-color);
+  left: 0;
+  right: 0;
+  background: #00acdc;
   border-radius: 2px;
 }
 
 .nav_link:hover {
-  color: var(--main-color);
+  color: #00acdc;
 }
