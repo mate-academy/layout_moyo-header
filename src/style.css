@@ -1,1 +1,79 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.header {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 60px;
+}
+
+.logo {
+  padding-top: 10px;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+.nav__li {
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+
+.nav__li:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__a {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+.nav__a:hover,
+.nav__a:focus,
+.nav__a:focus::after,
+.is-active {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-bottom: 4px solid rgba(0, 172, 220, 1);
+  border-radius: 2px;
+  width: 100%;
+  bottom: 0;
+}
+
+.nav__a:focus::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-bottom: 4px solid rgba(0, 172, 220, 1);
+  border-radius: 2px;
+  width: 100%;
+  bottom: 0;
+}
