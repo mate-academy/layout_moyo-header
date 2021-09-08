@@ -42,13 +42,14 @@ body {
 }
 
 .nav__list {
+  border: 1px solid;
   display: flex;
   float: right;
   margin: 0;
   padding: 0;
   padding-right: var(--nav-padding-right);
   height: 100%;
-  max-width: calc(var(--nav-container-width));
+  max-width: calc(var(--nav-container-width) - var(--nav-padding-right));
   list-style: none;
 }
 
@@ -58,6 +59,7 @@ body {
 }
 
 .nav__item > a {
+  border: 1px dotted;
   display: inline-block;
   box-sizing: border-box;
   padding: 23px 0;
