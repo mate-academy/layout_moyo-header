@@ -2,7 +2,7 @@
 
 :root {
   --header-height: 60px;
-  --image-container-width: 200px;
+  --image-container-width: 210px;
   --nav-container-width: calc(100vw - var(--image-container-width));
   --nav-padding-right: 40px;
   --active-link-color: #00acdc;
@@ -39,27 +39,29 @@ body {
 
 .nav {
   width: var(--nav-container-width);
+  margin-right: 50px;
 }
 
 .nav__list {
-  border: 1px solid;
   display: flex;
   float: right;
   margin: 0;
   padding: 0;
-  padding-right: var(--nav-padding-right);
   height: 100%;
   max-width: calc(var(--nav-container-width) - var(--nav-padding-right));
   list-style: none;
 }
 
 .nav__item {
-  margin: 0 10px;
   position: relative;
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__item > a {
-  border: 1px dotted;
   display: inline-block;
   box-sizing: border-box;
   padding: 23px 0;
