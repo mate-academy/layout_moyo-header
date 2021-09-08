@@ -1,3 +1,7 @@
+:root {
+  --main-color: #00acdc;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,7 +15,6 @@ body {
 }
 
 .header {
-  --main-color: #00acdc;
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
@@ -34,7 +37,6 @@ body {
 
 .nav__list {
   display: flex;
-  /* gap: 0 20px; */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -45,16 +47,15 @@ body {
 }
 
 .nav__link {
-  /* --pw-link: 10px; */
   position: relative;
   text-decoration: none;
   color: #000;
-  /* padding: 23px var(--pw-link); */
   padding: 23px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: all 0.2s;
 }
 
 .is-active {
@@ -64,12 +65,11 @@ body {
 .is-active::after {
   content: "";
   width: 100%;
-  /* width: calc(100% - var(--pw-link) * 2); */
   height: 4px;
   position: absolute;
+  left: 0;
+  right: 0;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   background: var(--main-color);
   border-radius: 2px;
 }
