@@ -2,9 +2,6 @@
 
 :root {
   --header-height: 60px;
-  --image-container-width: 210px;
-  --nav-container-width: calc(100vw - var(--image-container-width));
-  --nav-padding-right: 40px;
   --active-link-color: #00acdc;
 }
 
@@ -31,14 +28,15 @@ body {
 }
 
 .image_container {
-  width: var(--image-container-width);
+  flex-grow: 1;
+  min-width: 215px;
   background-image: url("../src/images/logo.png");
   background-position: 50px 10px;
   background-repeat: no-repeat;
 }
 
 .nav {
-  width: var(--nav-container-width);
+  flex-grow: 0;
   margin-right: 50px;
 }
 
@@ -48,7 +46,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  max-width: calc(var(--nav-container-width) - var(--nav-padding-right));
   list-style: none;
 }
 
