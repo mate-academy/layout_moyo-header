@@ -11,11 +11,20 @@ body {
 
 .header {
   display: flex;
-  padding-right: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  justify-content: flex-start;
+  background-image: url(./images/logo.png);
 }
 
 .nav {
-  width: 100%;
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
@@ -32,14 +41,9 @@ body {
   margin: 0 10px;
 }
 
-.logo {
-  z-index: 1;
-  margin: 10px 50px;
-}
-
 .is-active {
+  line-height: 60px;
   position: relative;
-  --is-active-width: 37px;
   color: #00acdc;
 }
 
@@ -48,12 +52,21 @@ body {
   bottom: 0;
   display: block;
   content: "";
-  width: var(--is-active-width);
   height: 4px;
+  left: 0;
+  right: 0;
   background-color: #00acdc;
   border-radius: 2px;
 }
 
 .nav__link:hover {
   color: #00acdc;
+}
+
+.nav .nav__link:last-child {
+  margin-right: 0;
+}
+
+.nav .nav__link:first-child {
+  margin-right: 0;
 }
