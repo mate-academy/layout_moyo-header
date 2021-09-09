@@ -6,19 +6,18 @@ body {
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  line-height: 14.06px;
-  text-transform: uppercase;
-  color: #000;
+  line-height: 14px;
 }
 
 .header {
+  display: flex;
   padding-right: 40px;
 }
 
 .nav {
-  position: relative;
+  width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   flex-direction: row;
   align-items: center;
   height: 60px;
@@ -35,12 +34,12 @@ body {
 
 .logo {
   z-index: 1;
-  position: absolute;
-  left: 50px;
-  top: 10px;
+  margin: 10px 50px;
 }
 
 .is-active {
+  position: relative;
+  --is-active-width: 37px;
   color: #00acdc;
 }
 
@@ -49,8 +48,8 @@ body {
   bottom: 0;
   display: block;
   content: "";
+  width: var(--is-active-width);
   height: 4px;
-  width: 37px;
   background-color: #00acdc;
   border-radius: 2px;
 }
