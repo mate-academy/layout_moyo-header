@@ -1,10 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 :root {
-  --header-height: 60px;
   --active-link-color: #00acdc;
-  --header-paddings: 50px;
-  --image-container-width: 165px;
 }
 
 html {
@@ -21,10 +18,10 @@ body {
 
 .header {
   display: flex;
+  position: relative;
   justify-content: space-between;
 
-  height: var(--header-height);
-  padding: 0 var(--header-paddings);
+  padding: 10px 50px;
 
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -32,7 +29,11 @@ body {
 
 .img_container {
   margin: auto 0;
-  min-width: var(--image-container-width);
+  min-width: 165px;
+}
+
+.img_container__link {
+  display: flex;
 }
 
 .nav__list {
@@ -40,20 +41,14 @@ body {
 
   gap: 20px;
   margin: 0;
-  padding: 0;
   height: 100%;
 
   list-style: none;
 }
 
-.nav__item {
-  position: relative;
-}
-
 .nav__link {
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 23px 0;
+  display: flex;
+  align-items: center;
   height: 100%;
   white-space: nowrap;
   color: black;
@@ -64,16 +59,15 @@ body {
 
 .nav__link:hover,
 .is-active {
-  color: var(--active-link-color);
+  color: #00acdc;
 }
 
 .is-active::after {
-  display: block;
   position: absolute;
-  content: "";
-  width: 100%;
+  content: attr(data-after);
+  overflow: hidden;
   height: 2px;
-  background: var(--active-link-color);
+  background: #00acdc;
   bottom: 0;
   border: 1px solid #00acdc;
   border-radius: 5px;
