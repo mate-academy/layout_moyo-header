@@ -33,6 +33,11 @@ body {
   display: flex;
 }
 
+.nav {
+  height: 1px;
+  min-height: 40px;
+}
+
 .nav__list {
   display: flex;
 
@@ -46,6 +51,8 @@ body {
 .nav__link {
   display: flex;
   align-items: center;
+  justify-content: center;
+
   height: 100%;
   white-space: nowrap;
   color: black;
@@ -60,12 +67,14 @@ body {
 }
 
 .is-active::after {
-  position: absolute;
   content: attr(data-after);
+  position: absolute;
   overflow: hidden;
+
   height: 2px;
+
   background: #00acdc;
   bottom: 0;
-  border: 1px solid #00acdc;
+  border: 1px solid;
   border-radius: 5px;
 }
