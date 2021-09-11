@@ -3,6 +3,8 @@
 :root {
   --header-height: 60px;
   --active-link-color: #00acdc;
+  --header-paddings: 50px;
+  --image-container-width: 165px;
 }
 
 html {
@@ -22,32 +24,30 @@ body {
   justify-content: space-between;
 
   height: var(--header-height);
-  padding: 0 50px;
+  padding: 0 var(--header-paddings);
 
   background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .image_container {
   margin: auto 0;
-  min-width: 165px;
+  width: var(--image-container-width);
 }
 
 .nav__list {
   display: flex;
-  float: right;
+
+  gap: 20px;
   margin: 0;
   padding: 0;
   height: 100%;
+
   list-style: none;
 }
 
 .nav__item {
   position: relative;
-  margin-right: 20px;
-}
-
-.nav__item:last-child {
-  margin-right: 0;
 }
 
 .nav__link {
@@ -62,10 +62,7 @@ body {
   cursor: pointer;
 }
 
-.nav__link:hover {
-  color: var(--active-link-color);
-}
-
+.nav__link:hover,
 .is-active {
   color: var(--active-link-color);
 }
