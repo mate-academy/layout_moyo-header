@@ -1,1 +1,64 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+.body {
+  margin: 0;
+}
+
+.boss {
+
+  height: 60px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  left: 0;
+  top: 0;
+  padding: 0 50px;
+  margin: 0;
+}
+
+.first {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  display: inline-block;
+}
+
+.line {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  margin: auto;
+}
+
+.cemm {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 60px;
+  text-decoration: none;
+  margin: auto 10px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.cemm:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  position: absolute;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  bottom: 0;
+  content: "";
+  background-color: #00acdc;
+  border-radius: 2px;
+}
