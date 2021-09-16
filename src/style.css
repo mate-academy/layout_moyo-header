@@ -1,1 +1,83 @@
 /* Styles go here */
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  display: block;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  padding: 0 50px;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.moyo_img {
+  height: 40px;
+  width: 40px;
+
+  display: block;
+}
+
+.nav {
+  display: block;
+}
+
+.nav_list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.nav_item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav_link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  white-space: nowrap;
+
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.nav_link:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+
+  border-radius: 2px;
+  background-color: #00acdc;
+}
