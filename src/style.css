@@ -1,1 +1,55 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+body {
+  margin: 0;
+}
+
+:root {
+  --link-blue: #00acdc;
+}
+
+.site-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin: 0 50px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: black;
+
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 14px;
+
+  padding: 22px 20px;
+}
+
+.nav__link:hover {
+  color: var(--link-blue);
+}
+
+.is-active {
+  color: var(--link-blue);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  margin-top: 18px;
+
+  width: 37px;
+  height: 4px;
+
+  background: var(--link-blue);
+  border-radius: 8px;
+}
