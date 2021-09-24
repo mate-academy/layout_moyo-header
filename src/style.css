@@ -1,4 +1,3 @@
-/* Styles go here */
 * {
   margin: 0;
   padding: 0;
@@ -12,46 +11,53 @@
 .container {
   max-width: 1200px;
   min-width: 1024px;
+  min-height: 60px;
 }
 
 .header {
   display: flex;
-  /* border: 1px solid black; */
-  /* flex-basis: 60px; */
   justify-content: space-between;
-  /* flex-shrink: 0; */
-  /* align-content: space-between; */
 }
 
 .logo {
-  margin: 10px 50px;
+  margin: auto 50px;
   height: 40px;
-  /* flex-shrink: 0; */
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
-  /* flex-shrink: 1; */
-  border: 1px solid black;
+  align-items: center;
   list-style: none;
+  margin-right: 50px;
 }
 
 .nav__link {
   text-decoration: none;
   color: black;
-  padding: 20px 0;
-  margin: 0 20px 0 0;
+  text-align: center;
+  padding: 19px 0;
+  margin-right: 20px;
+}
+
+.nav__link:last-child {
+  margin: 0;
 }
 
 .nav__link:hover {
   text-decoration: none;
   color: #00acdc;
   border-bottom: 4px solid #00acdc;
+  border-top: 4px solid white;
+}
+
+.comp:hover {
+  border-bottom: 4px solid white;
 }
 
 .is-active {
   text-decoration: none;
   color: #00acdc;
   border-bottom: 4px solid #00acdc;
+  border-top: 4px solid white;
 }
