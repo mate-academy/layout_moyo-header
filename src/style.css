@@ -3,18 +3,14 @@ body {
   padding: 0;
 }
 
-li {
-  display: inline;
-}
-
-.img {
-  position: absolute;
-  margin: 10px 50px;
+.logo-link {
+  display: block;
+  margin: auto 20px;
 }
 
 .header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -46,15 +42,12 @@ li {
   color: black;
 }
 
-.li:first-child,
-ul:first-child,
-nav:first-child {
+.li:first-child {
   margin-left: 0;
   padding-left: 0;
 }
 
-.li:last-child,
-ul:last-child {
+.li:last-child {
   margin-right: 0;
   padding-right: 0;
 }
@@ -64,9 +57,15 @@ ul:last-child {
 }
 
 .is-active {
-  padding-top: 22.5px;
-  padding-bottom: 20px;
   color: #00acdc;
-  border-bottom: 4px solid #00acdc;
+}
+
+.is-active:after {
+  display: block;
+  position: relative;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
   border-radius: 2px;
 }
