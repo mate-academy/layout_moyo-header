@@ -9,14 +9,13 @@ html {
 body {
   font-family: Roboto, sans-serif;
   font-style: normal;
-  width: 1200px;
   background: #e5e5e5;
 }
 
 .header {
-  position: relative;
   display: flex;
-  width: var(--header-width);
+  justify-content: space-between;
+  width: 1024px;
   height: 60px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   margin-left: 0;
@@ -32,22 +31,25 @@ body {
 }
 
 .nav {
-  position: absolute;
   display: flex;
   font-size: 12px;
   font-style: normal;
   text-transform: uppercase;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   width: 803px;
   height: 60px;
-  right: 50px;
+  padding-right: 50px;
 }
 
 .nav-link {
   position: relative;
+  display: flex;
+  height: 60px;
   color: black;
   text-decoration: none;
+  align-items: center;
   font-size: 12px;
   font-weight: 500;
 }
@@ -56,11 +58,11 @@ body {
   color: #00acdc;
 }
 
-.is-active:active {
+.is-active {
   color: #00acdc;
 }
 
-.is-active:active::after {
+.is-active::after {
   content: "";
   position: absolute;
   height: 4px;
@@ -68,6 +70,6 @@ body {
   margin: 0 auto;
   left: 0;
   right: 0;
-  bottom: -22.5px;
+  bottom: 0;
   width: 100%;
 }
