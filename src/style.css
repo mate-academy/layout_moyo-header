@@ -20,41 +20,47 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
+  display: inline-flex;
   width: 40px;
   height: 40px;
 }
 
-.logo_link {
+.logo__link {
   width: 40px;
   height: 40px;
 }
 
-.nav_menu {
+.nav {
+  height: 60px;
+}
+
+.nav__menu {
   display: flex;
   align-items: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav_menu_item {
-  margin-left: 20px;
-}
-
-.nav_link {
+.nav__link {
   font-family: inherit;
   text-decoration: none;
   text-transform: uppercase;
-  line-height: 56px;
+  line-height: 60px;
   color: #000;
   display: inline-block;
   position: relative;
 }
 
-.nav_link:hover {
+.nav__item:not(:last-child) {
+  padding-right: 20px;
+}
+
+.nav__link:hover {
   color: #00acdc;
 }
 
