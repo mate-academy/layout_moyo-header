@@ -2,24 +2,20 @@ body {
   margin: 0;
 }
 
-.container {
-  position: relative;
+.header {
   min-width: 1024px;
   max-width: 1200px;
   display: flex;
+  justify-content: space-between;
 }
 
 .nav {
-  position: absolute;
-  right: 0;
-  height: 100%;
   font-family: "Roboto", sans-serif;
-  display: flex;
 }
 
-.ul {
+.nav__list {
   display: flex;
-  margin: auto;
+  margin: 0;
 }
 
 .logo {
@@ -31,15 +27,15 @@ body {
   width: 40px;
 }
 
-.nav__list {
+.nav__link {
   text-decoration: none;
   color: #000;
   font-size: 12px;
   text-transform: uppercase;
-  margin: 0 10px;
   display: flex;
+  height: 60px;
+  justify-content: center;
   align-items: center;
-  padding: 22.5px 0;
 }
 
 .nav__list:hover {
@@ -47,21 +43,28 @@ body {
 }
 
 .is-active {
+  position: relative;
   color: #00acdc;
-}
-
-.is-active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 36.61px;
-  height: 4px;
-  background: #00acdc;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
 }
 
-.lastbox {
+.is-active::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  
+}
+
+.nav__item {
+  list-style-type: none;
+  margin: 0 10px;
+}
+
+.nav__item:last-child {
   margin-right: 50px;
 }
