@@ -1,1 +1,68 @@
 /* Styles go here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+  align-items: center;
+}
+
+.menu-link__logo {
+  padding: 10px 0;
+}
+
+/* revome margin-bottom 3px that appears when img is inside a*/
+.menu-link__logo > img {
+  display: block;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu-li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.menu-link {
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 23px 0;
+  line-height: 14px;
+  display: inline-block;
+}
+
+.menu-link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
