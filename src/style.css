@@ -1,1 +1,61 @@
-/* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+}
+
+.img__logo {
+  margin-top: 5px;
+}
+
+.nav__item {
+  list-style: none;
+  display: inline-block;
+  font-size: 12px;
+  font-family: "Roboto" , sans-serif;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.nav__list {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  padding: 23px 0;
+}
+
+.nav__list:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  left: 0;
+  bottom: 0;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
