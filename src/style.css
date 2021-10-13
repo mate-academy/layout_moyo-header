@@ -14,50 +14,52 @@ body {
   align-items: center;
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
 }
 
 .logo-link {
   display: flex;
 }
 
-.nav {
+.nav-list {
   display: flex;
-  font-size: 12px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: var(--header-height);
   color: #000;
-  position: relative;
-  align-self: center;
-  margin: 0 10px;
-}
-
-.nav-link:last-child {
-  margin-right: 0;
-}
-
-.nav-link:first-child {
-  margin-left: 0;
+  font-size: 12px;
+  height: var(--header-height);
+  margin-right: 20px;
 }
 
 .nav-link:hover {
   color: #00acdc;
 }
 
+.nav-list-item:last-of-type .nav-link {
+  margin-right: 0;
+}
+
 .is-active {
+  position: relative;
   color: #00acdc;
 }
 
 .is-active::after {
   content: "";
   display: block;
-  background-color: #00acdc;
-  border-radius: 2px;
-  transform: translateY(-100%);
+  width: 100%;
   height: 4px;
   position: absolute;
-  width: 100%;
+  bottom: 0;
+  background-color: #00acdc;
+  border-radius: 2px;
 }
