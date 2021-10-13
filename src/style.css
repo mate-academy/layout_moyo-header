@@ -28,18 +28,14 @@ body {
 .nav__list {
   display: flex;
   align-items: center;
-  list-style-type: none;
+  list-style: none;
 }
 
-.list__item {
+.list__item:not(:first-child) {
   margin-left: 20px;
 }
 
-.list__item:first-child {
-  margin-left: 0;
-}
-
-.list__link:link {
+.list__link {
   display: block;
   position: relative;
   line-height: 60px;
@@ -66,7 +62,7 @@ body {
   color: var(--interact-link-color);
 }
 
-.is-active:link::after {
+.is-active::after {
   content: "";
   display: block;
   position: absolute;
