@@ -1,15 +1,10 @@
 * {
   box-sizing: border-box;
-}
-
-ul {
   margin: 0;
   padding: 0;
-  list-style-type: none;
 }
 
 body {
-  margin: 0 auto;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
 }
@@ -22,44 +17,32 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.moyo__logo {
+.logo {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 .nav {
   display: flex;
-}
-
-.nav__ul {
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
+  list-style-type: none;
 }
 
-.nav__element {
+.nav__element:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav__element:last-child {
-  margin-right: 0;
-}
-
 .nav__link {
-  position: relative;
   display: block;
+  position: relative;
+  padding: 23px 0;
   color: #000;
   font-weight: 500;
-  padding: 23px 0;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.nav__link:hover {
-  color: #00acdc;
-}
-
+.nav__link:hover,
 .is-active {
   color: #00acdc;
 }
