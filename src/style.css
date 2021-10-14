@@ -3,11 +3,12 @@ html {
   font-size: 12px;
 }
 
-body {
+* {
   margin: 0;
+  padding: 0;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
@@ -34,25 +35,20 @@ header {
   margin-left: 20px;
 }
 
-.nav__url:link {
-  color: black;
+.nav__url {
+  color: #000;
   text-transform: uppercase;
   text-decoration: none;
   display: block;
   padding: 23px 0;
 }
 
-.nav__url:visited {
-  color: black;
-}
-
-.nav__url:hover {
+.is-active {
+  position: relative;
   color: #00acdc;
 }
 
-/* relative to blue line */
-.is-active:link {
-  position: relative;
+.nav__url:hover {
   color: #00acdc;
 }
 
