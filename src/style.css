@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,12 +11,39 @@ body {
 .header {
   height: 60px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+}
+
+.header div > a {
+  display: flex;
 }
 
 .nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.nav ul > li > a {
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+.nav ul > li > a:hover {
+  color: #00acdc;
+}
+
+.nav {
+  flex-grow: 1;
+}
+
+.header div {
+  width: 25%;
+}
+
+.header_logo {
+  align-self: center;
+  margin-left: 50px;
 }
