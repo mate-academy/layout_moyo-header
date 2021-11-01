@@ -1,49 +1,69 @@
-@font-face {
-  font-family: "Roboto", sans-serif;
-  src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.header {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
 }
 
 body {
   margin: 0;
-  padding: 0;
 }
 
-.header {
-  height: 60px;
-  display: flex;
-  align-items: center;
+.header div {
+  flex-grow: 2;
 }
 
 .header div > a {
   display: flex;
 }
 
-.nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-}
-
 .nav ul > li > a {
   text-decoration: none;
   font-size: 12px;
   font-family: "Roboto", sans-serif;
+  font-weight: 500;
   color: black;
+  display: inline-block;
+  padding: 22.5px 0;
+  text-transform: uppercase;
 }
 
 .nav ul > li > a:hover {
   color: #00acdc;
 }
 
-.nav {
-  flex-grow: 1;
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
 }
 
-.header div {
-  width: 25%;
+.nav {
+  flex-grow: 2;
 }
 
 .header_logo {
   align-self: center;
-  margin-left: 50px;
+}
+
+.is-active {
+  color: #00acdc !important;
+}
+
+.link_active {
+  position: relative;
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  border: 2px solid #00acdc;
+  border-radius: 8px;
+  width: 35px;
+  left: 0;
+  top: 55px;
 }
