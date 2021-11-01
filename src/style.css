@@ -18,28 +18,29 @@ img {
   margin-left: 40px;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
 }
 
-nav,
-ul,
-li {
+.menu,
+.nav__list,
+.nav__item {
   display: flex;
 }
 
-nav {
+.menu {
   margin-right: 50px;
 }
 
-ul {
+.nav__list {
   flex-shrink: 0;
   padding-inline-start: 0;
   margin: 0 -10px;
 }
 
-a {
+.nav__link,
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,10 +50,7 @@ a {
   margin: 0 10px;
 }
 
-a:hover {
-  color: #00acdc;
-}
-
+.nav__link:hover,
 .is-active {
   color: #00acdc;
 }
@@ -60,7 +58,7 @@ a:hover {
 .is-active::after {
   position: absolute;
   width: 36.6px;
-  top: 56px;
+  padding-bottom: 56px;
   content: "";
   border-bottom: 4px solid #00acdc;
   border-radius: 4px;
