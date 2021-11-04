@@ -1,1 +1,82 @@
-/* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navig {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  align-items: center;
+  padding-top: 3px;
+  margin: 0 50px;
+}
+
+.listNav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+.nav_list {
+  padding-inline-start: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0 0 0 auto;
+}
+
+.nav_list:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav_link {
+  display: block;
+  align-items: center;
+  padding: 23px 0;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav_link:link {
+  text-decoration: none;
+}
+
+.nav_link:visited {
+  color: rgba(0, 172, 220, 1);
+
+}
+
+.nav_link:hover {
+  text-decoration: underline rgba(0, 172, 220, 1) 3px;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  border-radius: 8px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background-color: rgba(0, 172, 220, 1);
+}
+
+.nav {
+  margin-right: 50px;
+  margin-left: 40px;
+}
