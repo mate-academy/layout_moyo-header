@@ -11,7 +11,7 @@ html {
 .header {
   display: flex;
   align-items: center;
-  box-shadow: 0 2px 4px #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   justify-content: space-between;
   padding: 0 50px;
 }
@@ -26,23 +26,26 @@ html {
   list-style-type: none;
 }
 
-.box {
+.nav__item {
   margin-right: 20px;
   font-family: Roboto, Helvetica, sans-serif;
+  text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
 }
 
-.element {
-  line-height: 60px;
-  display: inline-block;
+.nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
 }
 
-.box:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
-.element:not(.is-active) {
+.nav__link:not(.is-active) {
   color: #000;
   text-decoration: none;
 }
@@ -53,7 +56,7 @@ html {
   text-decoration: none;
 }
 
-.element:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
