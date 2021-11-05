@@ -15,6 +15,7 @@ header {
 
 .logo {
   margin-top: 10px;
+  margin-left: 10px;
 }
 
 .nav {
@@ -29,19 +30,17 @@ header {
   flex-shrink: 0;
 }
 
-a {
+.link {
   position: relative;
   display: flex;
   text-decoration: none;
-  flex-shrink: 0;
-  flex-grow: 1;
   margin: 10px;
   color: black;
   line-height: 60px;
   margin-top: 0;
 }
 
-a:after {
+.link:after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -51,14 +50,11 @@ a:after {
   background-color: #00acdc;
 }
 
-a:active:after {
+.link:active:after {
   width: 100%;
 }
 
-a:hover {
-  color: #00acdc;
-}
-
+.link:hover,
 .is-active {
   color: #00acdc;
 }
