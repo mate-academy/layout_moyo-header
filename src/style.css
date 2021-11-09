@@ -1,1 +1,78 @@
-/* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  background-color: #e5e5e5;
+  font-size: 12px;
+}
+
+.menu {
+  display: flex;
+  background-color: #fff;
+  padding: 0 50px;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  position: relative;
+  margin: 10px 0;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav__item {
+  display: inline-block;
+  height: 100%;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.nav__link[data-qa="hover"]:hover {
+  color: #00acdc;
+}
+
+.is-active:active {
+  color: #00acdc;
+}
+
+.is-active:active::after {
+  content: " ";
+  display: inline-block;
+  background-color: #00acdc;
+  color: #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+}
