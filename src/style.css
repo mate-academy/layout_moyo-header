@@ -1,51 +1,63 @@
-* {
-  margin: 0;
-}
-
 body {
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 12px;
+  margin: 0;
+  padding: 0;
   max-width: 1200px;
   min-width: 1024px;
 }
 
 .header {
-  margin: 10px 50px;
-  text-align: center;
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: space-between;
   align-items: center;
-  height: 46px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .logo {
-  position: fixed;
-  left: 50px;
+  margin: 10px 0 10px 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav_list {
+  display: flex;
+  margin: 0 0 0 auto;
+}
+
+.nav_list:last-child {
+  margin-right: 30px;
+}
+
+.nav_list:first-child {
+  margin-right: 51px;
+}
+
+.link {
+  margin-right: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
 }
 
 .is-active {
-  padding: 12px;
-  display: inline-block;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  height: 15px;
-}
-
-.is-active:active {
-  color: #00ACDC;
-}
-
-.is-active:active::after {
   position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
   display: block;
-  top: 15px;
   content: "";
-  border: 2px solid #00ACDC;
-  border-radius: 40px;
+  width: 37px;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  margin-top: 18px;
+  left: 0;
+  align-items: center;
 }
 
 .is-active:hover {
-  color: #00ACDC;
+  color: #00acdc;
 }
