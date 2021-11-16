@@ -4,20 +4,32 @@
 
 @font-face {
   font-family: Roboto;
+  src: url(/fonts/Roboto-Thin.ttf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(/fonts/Roboto-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Roboto;
   src: url(/fonts/Roboto-Regular.ttf);
-  font-weight: normal;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: Roboto;
   src: url(/fonts/Roboto-Medium.ttf);
-  font-weight: medium;
+  font-weight: 500;
 }
 
 @font-face {
   font-family: Roboto;
   src: url(/fonts/Roboto-Bold.ttf);
-  font-weight: bold;
+  font-weight: 700;
 }
 
 html {
@@ -50,32 +62,30 @@ html {
 
 .nav__item {
   display: inline-block;
-  margin: auto 10px;
+  margin: auto 9px;
 }
 
 .nav__link {
   display: inline-block;
   position: relative;
-  font-style: normal;
-  font-weight: medium;
+  font-weight: 400;
   text-transform: uppercase;
   color: rgb(27, 17, 17);
   text-decoration: none;
-  padding: 23px 0;
+  padding: 24px 0;
 }
 
-.nav__link:visited {
-  color: black;
+.is-active {
+  color: #00acdc;
 }
 
 .nav__link:hover {
   color: #00acdc;
 }
 
-.is-active {
-  color: red;
-  /* background-color: blue; */
-}
+/* .nav__link:visited {
+  color: black;
+} */
 
 .is-active::after {
   content: "";
