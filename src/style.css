@@ -1,1 +1,80 @@
-/* Styles go here */
+@import url(http://fonts.googleapis.com/css?family=Roboto:500);
+
+html {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header__logo {
+  height: 40px;
+  width: 40px;
+  align-self: center;
+}
+
+.header__navigation {
+  height: 100%;
+}
+
+.header__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.header__list:last-child {
+  margin: 0;
+}
+
+.header__list-item {
+  margin-left: 20px;
+  list-style: none;
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 100%;
+  color: #000;
+  font-style: normal;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.header__link:hover {
+  color: #00acdc;
+}
+
+.is-active:after {
+  content: "";
+  height: 4px;
+  background-color: #00acdc;
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
