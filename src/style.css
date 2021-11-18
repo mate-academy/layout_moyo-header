@@ -3,8 +3,6 @@
   left: 50px;
   top: 10px;
   z-index: 1;
-  display: block;
-  height: 0;
 }
 
 .logo {
@@ -20,15 +18,15 @@
 }
 
 .nav {
-  right: 40px;
+  left: 100px;
   top: 6px;
   position: relative;
+  padding-bottom: 14px;
 }
 
 .nav__link {
   text-decoration: none;
   font-size: 12px;
-  padding: inherit;
   font-family: Roboto, sans-serif;
   color: black;
   text-transform: uppercase;
@@ -41,15 +39,13 @@
 
 .is-active::after {
   content: "";
-  display: inline-block;
-  width: 35px;
-  height: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
   border-radius: 8px;
-  border: 2px solid rgba(0, 172, 220, 1);
+  background-color: rgba(0, 172, 220, 1);
   position: relative;
-  margin-right: -43px;
-  top: 7px;
-  right: 2px;
+  top: 22px;
 }
 
 .nav__item {
@@ -57,11 +53,7 @@
   padding: 14px 0;
 }
 
-.body,
-.nav__list {
-  margin: 0;
-}
-
 .header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
 }
