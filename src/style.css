@@ -1,7 +1,7 @@
-/* Styles go here */
 .logo_link {
   left: 50px;
   top: 10px;
+  z-index: 1;
 }
 
 .logo {
@@ -35,8 +35,19 @@
   color: rgba(0, 172, 220, 1);
 }
 
-.activeLink,
+.is-active::after {
+  content: "";
+  display: inline-block;
+  width: 37px;
+  height: 0;
+  border-radius: 8px;
+  border: 2px solid rgba(0, 172, 220, 1);
+  top: 25px;
+  right: 42px;
+}
+
 .logo_link,
+.is-active::after,
 .nav {
   position: relative;
 }
@@ -48,12 +59,4 @@
 
 .body {
   margin: 0;
-}
-
-.activeLink {
-  background-color: rgba(0, 172, 220, 1);
-  height: 4px;
-  border-radius: 8px;
-  top: 16px;
-  display: block;
 }
