@@ -1,1 +1,81 @@
-/* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  align-items: center;
+  padding-top: 3px;
+  margin: 0 50px;
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+.nav__item {
+  padding-inline-start: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0 0 0 auto;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  padding: 23px 0;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav__link:link {
+  text-decoration: none;
+}
+
+.nav__link:visited {
+  color: rgba(0, 172, 220, 1);
+
+}
+
+.nav__link:hover {
+  text-decoration: underline rgba(0, 172, 220, 1) 3px;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  border-radius: 8px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background-color: rgba(0, 172, 220, 1);
+}
+
+.nav {
+  margin-right: 50px;
+}
