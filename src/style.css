@@ -10,20 +10,22 @@ body {
 
 .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
   height: 40px;
   width: 40px;
-  padding: 10px 50px;
 }
 
 .nav__list {
   display: flex;
   list-style: none;
   margin: 0;
-  margin-right: 50px;
+  padding: 0;
 }
 
 .nav__item {
@@ -32,11 +34,15 @@ body {
   position: relative;
 }
 
+/* I'm using display: flex in nav__item so I can use align-items:stretch
+in nav__link so area at the top and button also would be clickable */
+
 .nav__link {
+  align-items: stretch;
   text-decoration: none;
   text-transform: uppercase;
-  line-height: 60px;
   color: #000;
+  line-height: 60px;
 }
 
 .is-active {
@@ -47,6 +53,7 @@ body {
   position: absolute;
   content: "";
   border: 2px solid #00acdc;
+  background-color: #00acdc;
   border-radius: 8px;
   bottom: 0;
   left: 0;
