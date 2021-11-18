@@ -1,7 +1,10 @@
 .logo_link {
+  position: relative;
   left: 50px;
   top: 10px;
   z-index: 1;
+  display: block;
+  height: 0;
 }
 
 .logo {
@@ -18,7 +21,7 @@
 
 .nav {
   right: 40px;
-  top: -10px;
+  top: 6px;
   position: relative;
 }
 
@@ -39,12 +42,13 @@
 .is-active::after {
   content: "";
   display: inline-block;
-  width: 37px;
+  width: 35px;
   height: 0;
   border-radius: 8px;
   border: 2px solid rgba(0, 172, 220, 1);
   position: relative;
-  margin-right: -45px;
+  margin-right: -43px;
+  top: 7px;
   right: 2px;
 }
 
@@ -53,15 +57,11 @@
   padding: 14px 0;
 }
 
-.body {
+.body,
+.nav__list {
   margin: 0;
 }
 
 .header {
-  width: 100%;
-}
-
-.logo_link,
-.header {
-  position: absolute;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
