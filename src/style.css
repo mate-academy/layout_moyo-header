@@ -8,13 +8,13 @@ body {
 
 .header {
   display: flex;
+  align-items: center;
   justify-content: space-around;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  margin-top: -20px;
+  /* display: block; */
 }
 
 .nav__list {
@@ -31,8 +31,7 @@ body {
   display: flex;
   text-transform: uppercase;
   flex-direction: column;
-  padding-top: 16px;
-  padding-bottom: 20px;
+  padding: 25px 0;
   font-size: 12px;
   text-decoration: none;
   color: #000;
@@ -43,10 +42,11 @@ body {
   color: #00acdc;
 }
 
-.nav__link:active::after,
 .is-active::after {
-  margin-top: 20px;
+  position: absolute;
+  margin-top: 30px;
   height: 4px;
+  width: 36px;
   content: "";
   background-color: #00acdc;
   border-radius: 8px;
