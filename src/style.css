@@ -1,13 +1,10 @@
-* {
-  margin: initial;
-}
-
 html {
   font-family: Roboto, Helvetica, sans-serif;
 }
 
 body {
   background: #e5e5e5;
+  margin: 0;
 }
 
 .menu {
@@ -17,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0;
 }
 
 .nav__list {
@@ -45,24 +43,12 @@ body {
   color: #000;
 }
 
+.is-active,
 .nav__link:hover {
   color: #00acdc;
 }
 
-.is-active {
-  color: #00acdc;
-}
-
-.home {
-  padding: 10px 0;
-}
-
-.logo {
-  display: block;
-}
-
 .is-active::after {
-  display: block;
   content: "";
   background-color: #00acdc;
   position: absolute;
@@ -70,4 +56,5 @@ body {
   bottom: 0;
   left: 0;
   height: 4px;
+  border-radius: 8px;
 }
