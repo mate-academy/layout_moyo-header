@@ -1,7 +1,3 @@
-* {
-  margin: 0;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -20,8 +16,16 @@
 .nav__list {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
   justify-content: center;
+}
+
+.nav__item {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
@@ -29,15 +33,10 @@
   display: inline-block;
   text-decoration: none;
   color: #000;
-  margin-right: 20px;
   text-transform: uppercase;
   padding: 23px 0;
   font-family: Roboto, sans-serif;
   font-size: 12px;
-}
-
-.last__link {
-  margin-right: 0;
 }
 
 .isActive::after {
