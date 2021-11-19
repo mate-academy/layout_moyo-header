@@ -7,46 +7,60 @@ body {
 
 .header {
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
-  color: #000;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav {
   height: 60px;
   display: flex;
-  justify-content: flex-end;
 }
 
-.item {
+.nav_item {
   display: inline-block;
   position: relative;
   height: 34px;
-  margin: 22.5px 10px;
+  margin: 0 10px;
 }
 
 .item_last {
-  margin-right: 50px;
+  padding-right: 40px;
 }
 
 .logo {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 50px;
-  top: 10px;
+  padding: 10px 0 10px 50px;
+  left: 0;
 }
 
-.item:hover {
+.nav_link {
+  display: block;
+  padding: 22.5px 0;
+  text-decoration: none;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  color: #000;
+}
+
+.nav_link:hover {
   color: #00acdc;
 }
 
 .is-active {
   color: #00acdc;
   text-decoration: none;
-  border-bottom: 4px solid #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 56px;
+  background-color: #00acdc;
+  border-radius: 8px;
 }
