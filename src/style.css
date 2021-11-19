@@ -1,1 +1,70 @@
-/* Styles go here */
+* {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  margin-top: 10px;
+}
+
+.nav {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.nav_list {
+  list-style: none;
+  display: flex;
+  align-self: stretch;
+  flex-shrink: 0;
+  margin-right: -10px;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  margin: 10px;
+  margin-bottom: 0;
+  color: black;
+  line-height: 60px;
+  margin-top: 0;
+}
+
+.link:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #00acdc;
+}
+
+.link:active:after {
+  width: 100%;
+}
+
+.link:hover,
+.is-active {
+  color: #00acdc;
+}
+
+.is-active {
+  margin-left: 0;
+}
+
+.is-active:after {
+  width: 100%;
+}
