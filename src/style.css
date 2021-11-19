@@ -1,60 +1,45 @@
-.body {
-  margin: 0;
+html {
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }
 
 .header {
-  padding-left: 50px;
+  box-sizing: border-box;
   padding-right: 50px;
+  padding-left: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 4px #e5e5e5;
-  box-sizing: border-box;
 }
 
 .logo {
   height: 40px;
-  padding: 10px 0
-  ;
-}
-
-.nav {
-  /* display: flex; */
 }
 
 .nav__list {
   font-size: 12px;
   display: flex;
-  /*
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
-  align-items: baseline;
-   */
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__item {
   list-style: none;
   margin-left: 20px;
   text-transform: uppercase;
-  /* display: flex; */
+  display: flex;
 }
 
 .nav__link {
   color: #000;
   text-decoration: none;
-  display: block;
-  background: rgba(50, 50, 50, 0.2);
-  /*
-  display: flex;
-  align-items: center; */
-}
-
-.nav__link:visited {
-  color: #000;
+  line-height: 56px;
 }
 
 .nav__link:hover {
@@ -62,28 +47,16 @@
 }
 
 .is-active {
-  /* height: 60px; */
   color: #00acdc;
   text-decoration: none;
-  display: block;
-  background: rgba(0, 0, 250, 0.2);
-  /*
-  position: relative; */
 }
 
 .is-active::after {
-  /* position: relative; */
-  /* bottom: -100%; */
+  position: relative;
+  top: 0;
   content: "";
   height: 4px;
   display: block;
   border-radius: 8px;
-  /* background: #00acdc; */
-  background: #ffacdc;
-  position: absolute;
-  top: 1px;
-  /* bottom: -100%; */
   background-color: #00acdc;
-  /* transform: translateX(-100%); */
-  /* width: 100%; */
 }
