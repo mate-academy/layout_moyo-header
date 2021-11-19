@@ -1,1 +1,70 @@
-/* Styles go here */
+/* #region Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.image {
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.ul {
+  display: flex;
+  justify-content: left;
+  padding: 0;
+}
+
+.li {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-right: 20px;
+}
+
+.li:last-child {
+  margin: 0;
+}
+
+.link {
+  display: block;
+  position: relative;
+  font-family: Roboto, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 22px 0;
+  color: black;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: #00acdc;
+  border-radius: 8px;
+}
+
+/* #endregion Header */
