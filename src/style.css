@@ -8,7 +8,6 @@ body {
 }
 
 .header {
-  height: 60px;
   top: 0;
   position: sticky;
   display: flex;
@@ -21,7 +20,6 @@ body {
 }
 
 .nav__list {
-  /*width: 67%;*/
   list-style: none;
   margin: 0;
   padding-right: 40px;
@@ -36,8 +34,7 @@ body {
 }
 
 .nav__link {
-  display: inline-block;
-
+  display: block;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -50,4 +47,16 @@ body {
 
 .nav__link:hover {
   color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  display: block;
+  content: "";
+  background: #00acdc;
+  border-radius: 8px;
+  height: 4px;
 }
