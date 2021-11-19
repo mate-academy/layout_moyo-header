@@ -7,34 +7,37 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
 }
 
 .logo {
   display: block;
   width: 40px;
   height: 40px;
-  padding-left: 50px;
 }
 
 .nav__list {
   display: flex;
   list-style: none;
+  padding-left: 0;
 }
 
 .nav__item {
   margin-right: 20px;
 }
 
+.nav__item:last-child {
+  margin-right: 0;
+}
+
 .nav__link {
-  height: 60px;
-  color: black;
+  line-height: 60px;
   text-decoration: none;
+  color: black;
   text-transform: uppercase;
   position: relative;
   display: flex;
-  align-items: center;
 }
 
 .nav__link:hover {
@@ -45,7 +48,7 @@ header {
   color: #00acdc;
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   content: "";
   position: absolute;
   bottom: 0;
