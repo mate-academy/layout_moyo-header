@@ -4,24 +4,21 @@ body {
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.logo {
-  float: left;
-  padding-top: 10px;
-}
-
 .nav__list {
-  display: flex;
-  justify-content: flex-end;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .list-item {
+  display: inline;
   position: relative;
   margin-left: 20px;
 }
@@ -40,10 +37,14 @@ body {
   color: #00acdc;
 }
 
-.nav__link:active::after {
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
   content: "";
   position: absolute;
-  top: 56px;
+  top: 36px;
   right: 0;
   height: 4px;
   width: 100%;
