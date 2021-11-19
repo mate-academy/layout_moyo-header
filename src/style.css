@@ -3,16 +3,15 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 .header {
-  background: #fff;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
-  text-align: center;
   display: flex;
   justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav {
@@ -20,10 +19,13 @@ body {
   display: flex;
 }
 
+.nav_list {
+  margin-block-start: 0%;
+}
+
 .nav_item {
   display: inline-block;
   position: relative;
-  height: 34px;
   margin: 0 10px;
 }
 
@@ -38,20 +40,16 @@ body {
 
 .nav_link {
   display: block;
-  padding: 22.5px 0;
+  padding: 23px 0;
   text-decoration: none;
   font-family: "Roboto", "Arial", sans-serif;
   font-style: normal;
   color: #000;
 }
 
-.nav_link:hover {
-  color: #00acdc;
-}
-
+.nav_link:hover,
 .is-active {
   color: #00acdc;
-  text-decoration: none;
 }
 
 .is-active::after {
@@ -60,7 +58,7 @@ body {
   width: 100%;
   position: absolute;
   left: 0;
-  top: 56px;
+  bottom: 0;
   background-color: #00acdc;
   border-radius: 8px;
 }
