@@ -1,32 +1,14 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  background-color: #e5e5e5;
+  margin: 0;
 }
 
 .header {
+  padding: 0 50px;
   display: flex;
-  /* list-style: none;
-  flex-direction: row; */
-  justify-content: space-around;
   align-items: center;
-  width: 1200px;
-  height: 60px;
+  justify-content: space-between;
   background: rgba(255, 255, 255, 1);
-}
-
-.header__header {
-  display: flex;
-  /* list-style: none;
-  flex-direction: row; */
-  justify-content: space-around;
-  align-items: center;
-  margin: 40px 0;
-  width: 1024px;
-  height: 60px;
-  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
 }
 
 .logo {
@@ -35,63 +17,60 @@ body {
   width: 40px;
 }
 
-.list {
-  margin: 0;
+.nav {
+  height: 60px;
   display: flex;
-  list-style: none;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 12px;
-  text-transform: uppercase;
+  justify-content: space-between;
 }
 
-.link {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  cursor: pointer;
-  color: black;
+.nav__list {
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
-  padding: 0 10px;
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
 }
 
 .nav__link:hover {
   color: #00acdc;
-  text-decoration: underline solid 2px #00acdc;
 }
 
-a {
-  padding: 20px 0;
-}
-
-.link__active {
+.nav__link.is-active {
   color: #00acdc;
-  text-decoration: none;
 }
 
-.is-active {
-  padding: 24px 0;
-  /* color: #00acdc;
-  text-transform: uppercase;
-  text-decoration: none; */
-  position: relative;
-}
-
-.is-active::after {
+.nav__link.is-active::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
+  right: 0;
   height: 4px;
-  width: 100%;
   background-color: #00acdc;
-  border-radius: 8px;
+  border-radius: 2px;
 }
