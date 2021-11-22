@@ -1,1 +1,40 @@
-/* Styles go here */
+.page-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+}
+
+.page-header__logo {
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 20px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #000;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 22px 0 23px;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: relative;
+  bottom: -19px;
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+}
