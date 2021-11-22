@@ -1,1 +1,79 @@
 /* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+img {
+  display: block;
+  vertical-align: top;
+  margin-left: 50px;
+  padding: 10px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.menu,
+.nav__list,
+.nav__item {
+  display: flex;
+}
+
+.menu {
+  margin: 0 50px;
+}
+
+.nav__list {
+  flex-shrink: 0;
+  padding-inline-start: 0;
+}
+
+.nav__item:not(:first-child),
+.nav__item:not(:last-child) {
+  margin: 0 10px;
+}
+
+.nav__item:first-child {
+  margin: 0 10px 0 0;
+}
+
+.nav__item:last-child {
+  margin: 0 0 0 10px;
+}
+
+.nav__link {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  color: #000;
+}
+
+.is-active::after {
+  position: absolute;
+  top: 56px;
+  width: 100%;
+  content: "";
+  border-bottom: 4px solid #00acdc;
+  border-radius: 4px;
+}
+
+.nav__link:hover,
+.is-active {
+  color: #00acdc;
+}
