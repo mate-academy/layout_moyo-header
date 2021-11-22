@@ -1,15 +1,15 @@
 html {
   font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 12px;
 }
 
 body {
+  box-sizing: border-box;
   margin: 0;
 }
 
 .header {
-  box-sizing: border-box;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +21,6 @@ body {
 }
 
 .nav__list {
-  font-size: 12px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -30,16 +29,18 @@ body {
 }
 
 .nav__item {
+  display: block;
   list-style: none;
   margin-left: 20px;
   text-transform: uppercase;
-  display: flex;
+  position: relative;
 }
 
 .nav__link {
   color: #000;
   text-decoration: none;
-  line-height: 56px;
+  display: inline-block;
+  line-height: 60px;
 }
 
 .nav__link:hover {
@@ -49,11 +50,13 @@ body {
 .is-active {
   color: #00acdc;
   text-decoration: none;
+  display: inline-block;
 }
 
 .is-active::after {
-  position: relative;
-  top: 0;
+  position: absolute;
+  width: 100%;
+  top: 100%;
   content: "";
   height: 4px;
   display: block;
