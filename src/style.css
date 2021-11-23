@@ -3,6 +3,10 @@
   src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 }
 
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -11,6 +15,13 @@
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding-left: 50px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .nav__list {
@@ -25,33 +36,26 @@
 
 .nav__links {
   line-height: 12px;
-  font-family: "Roboto", sans-serif;
   text-decoration: none;
-  font-style: normal;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   color: black;
-
+  position: relative;
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.is-active:hover {
+.nav__links:hover {
   color: #00acdc;
+  transition: 0.3s;
 }
 
 .is-active::after {
   content: "";
+  width: 100%;
   border-radius: 8px;
-  display: flex;
+  position: absolute;
   background-color: #00acdc;
   height: 4px;
-  position: relative;
-  top: 18px;
+  top: 34px;
+  left: 0;
 }
