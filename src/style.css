@@ -34,8 +34,10 @@ html {
 
 .nav__link {
   position: relative;
-  display: inline-block;
+  display: flex;
   padding: 23px 0;
+  flex-basis: 100%;
+  flex-grow: 2;
 
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
@@ -50,7 +52,7 @@ html {
   color: rgba(0, 172, 220, 1);
 }
 
-.nav__item > a.is-active::after {
+.is-active::after {
   content: "";
   position: absolute;
   left: 0;
