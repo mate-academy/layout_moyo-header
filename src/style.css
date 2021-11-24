@@ -5,7 +5,7 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.navbar {
+.header {
   display: flex;
   padding: 0 50px;
   height: 60px;
@@ -19,32 +19,33 @@ body {
   width: 40px;
 }
 
-li {
+.nav__item {
   list-style-type: none;
+  margin-right: 20px;
+  /* line-height: 14px; */
 }
 
-.menu {
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__list {
   display: flex;
   padding: 0;
   margin-top: 19px;
 }
 
-.item {
+.nav__link {
   align-items: center;
   text-decoration: none;
-  margin-right: 20px;
-  line-height: 14px;
-  color: black;
   padding: 23px 0;
+  color: #000;
   font-size: 12px;
+  line-height: 14px;
   text-transform: uppercase;
 }
 
-.video {
-  margin-right: 0;
-}
-
-.item:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
@@ -64,11 +65,11 @@ li {
   border-radius: 8px;
 }
 
-.item:active {
+.nav__link:active {
   position: relative;
 }
 
-.item::after {
+.nav__link::after {
   position: absolute;
   content: "";
   background-color: #00acdc;
