@@ -1,1 +1,94 @@
 /* Styles go here */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav__bar {
+  margin-right: 50px;
+}
+
+.nav__ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  box-sizing: border-box;
+}
+
+.nav__list:first-child {
+  margin-left: 0;
+}
+
+.nav__list:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  line-height: 60px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.logo {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  background-image: url(/images/logo.png);
+  height: 40px;
+  width: 40px;
+  top: 10px;
+  left: 50px;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
+
+.nav__link:active::after {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
