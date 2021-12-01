@@ -9,20 +9,22 @@ body {
   font-family: Roboto;
   font-weight: 500px;
   font-size: 12px;
+  box-shadow: 0px 2px 4px 0px #0000000D;
+  padding: 0px 50px;
 }
 
 .logo {
-  margin: 10px 50px;
+  margin: 10px 0px;
 }
 
 .nav__list {
-  margin-right: 50px;
   list-style: none;
   display: flex;
 }
 
 .nav__link {
-  padding: 10px;
+  position: relative;
+  margin-left: 20px;
   text-decoration: none;
   text-transform: uppercase;
   color: black;
@@ -35,16 +37,16 @@ body {
 
 .is-active {
   color: #00ACDC;
-  padding-left: 0px;
 }
 
 .is-active::after {
   content: '';
-  display: block;
   position: absolute;
-  top: 56px;
   height: 4px;
-  width: 37px;
   background-color: #00ACDC;
   border-radius: 2px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 34px;
 }
