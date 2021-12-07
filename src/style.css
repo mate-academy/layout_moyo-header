@@ -7,12 +7,12 @@ ul {
   padding: 0;
 }
 
-.container {
+.header_block {
   margin: auto;
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -26,7 +26,7 @@ ul {
   display: flex;
 }
 
-.menu_list li {
+.menu_list .menu_item {
   list-style: none;
   display: flex;
   justify-content: flex-end;
@@ -42,15 +42,14 @@ ul {
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
-  margin-left: 20px;
 }
 
 .menu_link:hover {
   color: #00acdc;
 }
 
-.menu_list li:first-child .menu_link {
-  margin: 0;
+.menu_list .menu_item:not(:first-child) .menu_link {
+  margin-left: 20px;
 }
 
 .is-active {
