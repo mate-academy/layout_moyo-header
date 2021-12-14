@@ -1,1 +1,69 @@
-/* Styles go here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0.01px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin: 10px 10px 10px 50px;
+}
+
+.ul {
+  display: flex;
+  margin: 0 50px;
+  height: 100%;
+  padding: 0;
+}
+
+.li {
+  display: flex;
+  height: 100%;
+  margin: 0 10px;
+  font-style: normal;
+  text-transform: uppercase;
+  align-items: center;
+  position: relative;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  padding: 20px 0;
+}
+
+.link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  text-decoration: none;
+  color: #00acdc;
+}
+
+.is-active::after {
+  display: block;
+  background-color: #00acdc;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+  content: "";
+}
