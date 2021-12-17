@@ -1,1 +1,70 @@
-/* Styles go here */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background-color: rgb(232,232,232);
+  box-sizing: border-box;
+}
+
+.header-moyo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  border: solid 1px transparent;
+  background-color: #fff;
+  padding: 0 50px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo-moyo {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  position: relative;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  height: 60px;
+  text-shadow: 0.1px 0.1px 0.1px black;
+}
+
+.link-item:not(:last-child) {
+  padding-right: 20px;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+  text-shadow: 0.1px 0.1px 0.1px #00acdc;
+}
+
+.is-active,
+.nav__link_laptops {
+  color: #00acdc;
+  text-shadow: 0.1px 0.1px 0.1px #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  color: #00acdc;
+  background-color: #00acdc;
+  border-radius: 8px;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+}
