@@ -1,1 +1,95 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #e5e5e5;
+  color: #000;
+}
+
+header {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  text-transform: uppercase;
+  padding-left: 0;
+}
+
+.nav__item {
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px;
+}
+
+.nav__item:first-child {
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.nav__item:last-child {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+.nav__link {
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.nav__link:visited {
+  color: #000;
+}
+
+.nav__link:visited:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  text-decoration: none;
+  height: 100%;
+  margin-top: 23px;
+  padding-top: 23px;
+}
+
+.is-active::after {
+  content: "";
+  background-color: #00acdc;
+  height: 4px;
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  color: #00acdc;
+  margin-top: 18.5px;
+}
+
+.icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url(images/logo.png);
+  left: 50px;
+  top: 10px;
+}
