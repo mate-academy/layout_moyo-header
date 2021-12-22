@@ -11,7 +11,8 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  height: 60px;
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -29,14 +30,18 @@ body {
 .nav__list {
   display: inherit;
   justify-content: space-between;
-  width: 757px;
   margin: 0;
-  padding: 23px 0;
+  padding: 0;
   list-style: none;
 }
 
 .nav__item {
   position: relative;
+  padding: 23px 0;
+}
+
+.nav__item:not(:first-child) {
+  padding-left: 20px;
 }
 
 .nav__link {
@@ -56,7 +61,7 @@ body {
 
 .is-active::after {
   position: absolute;
-  top: 33px;
+  bottom: 0;
   right: 0;
   content: " ";
   width: 100%;
