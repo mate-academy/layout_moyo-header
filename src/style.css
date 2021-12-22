@@ -3,7 +3,6 @@ html {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
 }
 
 body {
@@ -16,7 +15,7 @@ body {
   list-style: none;
 }
 
-.top__page {
+.header {
   background: rgb(255, 255, 255);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
@@ -26,6 +25,8 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
+
 }
 
 .nav {
@@ -35,32 +36,40 @@ body {
   min-height: 60px;
 }
 
-.top__menu {
+.nav__list {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
 
-.button {
+.nav__link {
   text-decoration: none;
   color: rgb(0, 0, 0);
   text-transform: uppercase;
+  margin: 5px 10px;
   padding-top: 22px;
   padding-bottom: 22px;
-  padding-left: 10px;
-  padding-right: 10px;
   transition: color 0.5s;
   font-family: inherit;
   font-weight: 500;
 }
 
-.button:hover {
+.nav__link:hover {
   color: rgb(0, 172, 220);
 }
 
 .is-active {
-  color: rgb(0, 172, 220);
-  border-bottom: 4px solid rgb(0, 172, 220);
-  padding-bottom: 18px;
+  position: relative;
+  color: rgb(0 172 220);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgb(0 172 220);
   border-radius: 2px;
 }
