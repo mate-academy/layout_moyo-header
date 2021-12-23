@@ -6,7 +6,6 @@ body {
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  color: black;
 }
 
 .header {
@@ -18,7 +17,12 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.logo {
+/* .logo {
+  width: 40px;
+  height: 40px;
+} */
+
+.logo__link {
   width: 40px;
   height: 40px;
 }
@@ -27,6 +31,8 @@ body {
   display: flex;
   align-items: center;
   margin: 0;
+  padding: 0;
+  justify-content: space-between;
 }
 
 .nav__link {
@@ -38,6 +44,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+  color: black;
   /* border: black 1px solid; */
 }
 
@@ -54,7 +61,11 @@ body {
   padding-left: 0;
 }
 
-.nav__link:active::after {
+.nav__link.nav__link.is-active {
+  color: #00acdc;
+}
+
+.nav__link.is-active::after {
   content: "";
   display: block;
   background-color: #00acdc;
