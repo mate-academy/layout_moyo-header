@@ -1,57 +1,49 @@
-html {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-}
-
-body {
-  margin: 0;
-}
-
-.list {
+* {
   margin: 0;
   padding: 0;
-  list-style: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
-  background: rgb(255, 255, 255);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 4px rgb(0 0 0 / 5%);
 }
 
-.container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
-
+.logo {
+  margin-left: 50px;
 }
 
 .nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 60px;
+  height: 100%;
+  margin-right: 50px;
 }
 
 .nav__list {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav__item {
+  display: inline-block;
+  padding-left: 20px;
 }
 
 .nav__link {
+  width: 100%;
   text-decoration: none;
-  color: rgb(0, 0, 0);
   text-transform: uppercase;
-  margin: 5px 10px;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  transition: color 0.5s;
-  font-family: inherit;
+  font-size: 12px;
+  line-height: 60px;
+  padding: 23px 0;
   font-weight: 500;
+  color: rgb(6 11 53);
 }
 
 .nav__link:hover {
