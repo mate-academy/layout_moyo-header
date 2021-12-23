@@ -8,13 +8,9 @@ body {
 }
 
 .header {
-  position: sticky;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  height: 60px;
-  left: 0;
-  top: 0;
-  background: #fff;
+  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -22,30 +18,29 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 1100px;
+  max-width: 1200px;
+  padding: 0 50px;
 }
 
 .logoImg {
   margin-top: 10px;
+  width: 40px;
+  height: 40px;
 }
 
-.nav {
+/* .nav {
   text-align: center;
   height: 100%;
-}
+} */
 
 .nav__list {
   display: flex;
-  padding: 0;
-  margin: 0;
-  height: 100%;
   list-style: none;
 }
 
 .nav__item {
-  display: inline-block;
-  padding-top: 20px;
-  height: 60px;
+  display: flex;
+  line-height: 60px;
 }
 
 .nav__item:not(:last-child) {
@@ -53,14 +48,11 @@ body {
 }
 
 .nav__link {
-  margin: 0;
-  padding: 0;
   text-decoration: none;
   font-family: "Roboto", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
   text-transform: uppercase;
   color: #000;
 
@@ -71,14 +63,14 @@ body {
 }
 
 .is-active::after {
-  display: inline-block;
+  display: block;
   content: "";
-  margin-top: 18px;
-  background: #00acdc;
+  position: relative;
+  bottom: 4px;
+  background-color: #00acdc;
   border-radius: 8px;
   height: 4px;
   width: 100%;
-
 }
 
 .nav__link:hover {
