@@ -11,10 +11,8 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0 50px;
   align-items: center;
-  max-width: 1200px;
   line-height: 60px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -47,12 +45,13 @@ body {
 }
 
 .nav__link {
+  display: inline-block;
   align-items: center;
-  line-height: 14px;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.3s;
+  line-height: 60px;
 }
 
 .nav__link:hover {
@@ -62,7 +61,7 @@ body {
 
 .is-active {
   color: #00acdc;
-
+  position: relative;
 }
 
 .is-active::after {
