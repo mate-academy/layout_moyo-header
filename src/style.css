@@ -21,18 +21,16 @@ header {
 .logo {
   height: 40px;
   width: 40px;
-  padding: 10px 0;
-  box-sizing: initial;
 }
 
 .navbar-list {
   display: flex;
   list-style-type: none;
-  margin: auto;
+  margin: 0;
   padding: 0;
 }
 
-.navbar-list li {
+.navbar-item {
   margin: 0 10px;
 }
 
@@ -44,7 +42,7 @@ header {
   margin-right: 0;
 }
 
-.navbar-list a {
+.navbar-link {
   display: inline-block;
   text-decoration: none;
   position: relative;
@@ -54,12 +52,12 @@ header {
   color: #000;
 }
 
-.navbar-list a:hover,
-.navbar-list a.is-active {
+.navbar-link:hover,
+.navbar-link.is-active {
   color: var(--main-color);
 }
 
-.navbar-list a.is-active::after {
+.navbar-link.is-active::after {
   content: "";
   position: absolute;
   bottom: 0;
