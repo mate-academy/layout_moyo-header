@@ -1,7 +1,10 @@
 /* Styles go here */
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
 }
 
 .nav__container {
@@ -15,9 +18,7 @@ body {
 
 .nav__bar {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-content: stretch;
 }
 
 .nav__item {
@@ -26,14 +27,14 @@ body {
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 5px;
 }
 
 .nav__list {
   display: flex;
-  flex-direction: row;
   list-style-type: none;
   height: 100%;
-  padding-right: 40px;
+  padding: 0 40px;
 }
 
 .nav__link {
@@ -46,6 +47,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+  position: relative;
 }
 
 .nav__link:hover {
@@ -54,16 +56,15 @@ body {
 
 .is-active {
   color: #00acdc;
+  display: flex;
 }
 
 .is-active::after {
   content: "";
-  border: 1px solid #00acdc;
   border-radius: 3px;
-  height: 2px;
-  width: 33.9px;
-  color: #00acdc;
+  width: 97%;
   background: #00acdc;
   position: absolute;
-  top: 56px;
+  padding-top: 3.5px;
+  bottom: 0;
 }
