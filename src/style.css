@@ -11,6 +11,7 @@ body {
 }
 
 header {
+  height: 60px;
   background: white;
   width: auto;
 }
@@ -18,45 +19,46 @@ header {
 .container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   flex-shrink: 1;
   width: 250;
   min-width: 100px;
 }
 
-.photo {
-  margin: 0 auto;
-}
-
 .navigation {
-  position: flex;
-  justify-content: right;
-  align-items: right;
-  margin: auto;
+  margin-right: 3%;
   flex-shrink: 0;
 }
 
 .nav_list {
   padding: 0;
   list-style: none;
+  right: 10%;
 }
 
 .nav-item {
-  display: inline-block;
-  margin-left: 20px;
-  padding-top: 23px;
   position: relative;
-  height: 45px;
-  
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  line-height: 20px;
+  margin: 0 10px;
 }
 
 .nav_link {
-  
+
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
   color: black;
   text-decoration: none;
   text-transform: uppercase;
@@ -72,10 +74,8 @@ header {
   display: block;
   height: 5px;
   background-color: blue;
-
   position: absolute;
-  top: 63px;
-  
+  top: 4.6em;
   width: 100%;
 
 }
