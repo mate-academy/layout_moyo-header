@@ -2,12 +2,11 @@
 
 body {
   background-color: #eee;
-  margin: 60px auto;
+  margin: 0;
 }
 
-header {
+.header {
   display: flex;
-  max-width: 1200px;
   font-family: Roboto, serif;
   font-size: 12px;
   font-weight: bold;
@@ -16,46 +15,48 @@ header {
 .img_container {
   display: flex;
   background-color: white;
+  box-sizing: border-box;
 }
 
-img {
+.moyo_icon {
   margin: auto 50px;
 }
 
-.brands_container {
+.nav__list {
   display: flex;
   flex-grow: 1;
   background-color: white;
   flex-direction: row-reverse;
   padding-right: 50px;
+  margin: 0;
 }
 
-.brand {
-  text-decoration: none;
+.nav__item {
   box-sizing: border-box;
   height: 60px;
   padding: 22px 0;
   margin-left: 20px;
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
   color: black;
 }
 
-.brand:hover {
-  color: rgb(41, 185, 241);
+.link:hover {
+  color: #00acdc;
 }
 
 .is-active {
-  text-decoration: none;
-  box-sizing: border-box;
-  height: 60px;
-  padding: 22px 0;
-  color: rgb(41, 185, 241);
+  color: #00acdc;
 }
 
 .is-active::after {
   display: block;
   content: "";
-  border: 2px solid rgb(41, 185, 241);
-  border-radius: 2px;
-  background-color: rgb(41, 185, 241);
+  height: 4px;
+  background: #00acdc;
   margin-top: 20px;
 }
