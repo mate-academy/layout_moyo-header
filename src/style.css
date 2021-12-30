@@ -10,14 +10,12 @@ body {
   font-weight: 500;
 }
 
-header {
+.container {
   height: 60px;
   background: white;
   width: auto;
-}
-
-.container {
   display: flex;
+  padding-right: 40px;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -26,11 +24,15 @@ header {
 
 .logo {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-self: center;
   flex-grow: 1;
   height: 40px;
   width: 40px;
+}
+
+.logo_image {
+  margin-left: 50px;
 }
 
 .navigation {
@@ -45,7 +47,6 @@ header {
 }
 
 .nav_item {
-
   position: relative;
   display: inline-block;
   text-align: center;
@@ -72,10 +73,11 @@ header {
 .is-active::before {
   content: " ";
   display: block;
-  height: 5px;
+  height: 4px;
   background-color: blue;
   position: absolute;
   top: 4.6em;
   width: 100%;
+  border-radius: 8px;
 
 }
