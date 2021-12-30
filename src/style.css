@@ -17,17 +17,11 @@ body {
   padding: 0 50px;
 }
 
-/* .header::after {
-  content: "";
-  margin-right: 25px;
-} */
-
 .logo {
   height: 40px;
   width: 40px;
   display: flex;
   align-self: center;
-  /*padding-left: 50px;*/
 }
 
 .nav-list {
@@ -38,10 +32,10 @@ body {
 }
 
 .nav-link {
-  padding: 22.5px auto;
+  justify-content: center;
+  align-items: center;
   display: flex;
   position: relative;
-  align-items: center;
   text-transform: uppercase;
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -52,18 +46,15 @@ body {
   margin-right: 20px;
 }
 
+.is-active,
 .nav-link:hover {
-  color: #00acdc;
-}
-
-.is-active {
   color: #00acdc;
 }
 
 .is-active::after {
   height: 4px;
   width: 37px;
-  top: 56px;
+  bottom: 0;
   border-radius: 8px;
   content: "";
   position: absolute;
