@@ -2,53 +2,55 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  font-style: normal;
 }
 
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
   align-items: center;
   background: #fff;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  display: flex;
   width: 40px;
   height: 40px;
 }
 
 .nav__list {
   display: flex;
-  width: 800px;
   list-style-type: none;
-  flex-direction: row;
   justify-content: space-between;
   padding: 0;
   margin: 0;
 }
 
-.nav__link {
+.nav__item {
   position: relative;
   cursor: pointer;
+  padding: 23px 1px;
+}
+
+.nav__item:nth-child(-n + 7) {
+  margin-right: 20px;
+}
+
+.nav__link {
   padding: 23px 1px;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
-  text-decoration: none;
 }
 
 .nav__link:visited {
   color: green;
-  text-decoration: none;
 }
 
 .nav__link:hover {
   color: #00acdc;
-  text-decoration: none;
 }
 
 .nav__link:active::after {
