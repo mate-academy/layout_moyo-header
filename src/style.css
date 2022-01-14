@@ -18,7 +18,6 @@ a {
 }
 
 .container {
-  /* width: 100%; */
   padding: 0 50px;
   display: flex;
   align-items: center;
@@ -26,16 +25,18 @@ a {
 }
 
 .menu {
-  height: 100%;
   display: flex;
 }
 
 .nav_item {
   height: 100%;
 }
+/*якщо видалити nav_item лінтер буде сваритись, що він потрібен, 
+оскільки далі цей елемент іде з псевдокласом :not(), 
+який є дуже зручним і надійним для мене*/
 
 .nav_item:not(:last-child) {
-  margin: 0 20px 0 0;
+  margin-right: 20px;
 }
 
 .nav_link {
@@ -43,7 +44,6 @@ a {
   display: block;
   text-transform: uppercase;
   white-space: nowrap;
-  align-items: center;
 }
 
 .nav_link:hover {
@@ -57,7 +57,10 @@ a {
 .nav_link.is-active::after {
   content: "";
   position: relative;
-  bottom: 4px;
+  bottom: 4px; /*bottom потрібен, 
+  тому що інакше блакитна лінія під Apple 
+  злізає вниз на 4 пікселі, 
+  а я незнаю як по іншому її перемістити вгору*/
   display: block;
   background-color: #00acdc;
   border-radius: 8px;
