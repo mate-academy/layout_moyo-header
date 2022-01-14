@@ -1,1 +1,68 @@
 /* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.container {
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+}
+
+.nav_item {
+  height: 100%;
+}
+/*якщо видалити nav_item лінтер буде сваритись, що він потрібен, 
+оскільки далі цей елемент іде з псевдокласом :not(), 
+який є дуже зручним і надійним для мене*/
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav_link {
+  line-height: 60px;
+  display: block;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav_link:hover {
+  color: #00acdc;
+}
+
+.nav_link.is-active {
+  color: #00acdc;
+}
+
+.nav_link.is-active::after {
+  content: "";
+  position: relative;
+  bottom: 4px; /*bottom потрібен, 
+  тому що інакше блакитна лінія під Apple 
+  злізає вниз на 4 пікселі, 
+  а я незнаю як по іншому її перемістити вгору*/
+  display: block;
+  background-color: #00acdc;
+  border-radius: 8px;
+  height: 4px;
+}
