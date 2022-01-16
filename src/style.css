@@ -1,7 +1,12 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+}
+
 body {
   margin: 0;
 }
-    
+
 header {
   display: flex;
   justify-content: space-between;
@@ -9,28 +14,28 @@ header {
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-    
+
 .logo {
   display: block;
   width: 40px;
   height: 40px;
 }
-    
+
 .nav_list {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-    
+
 .nav_item {
   margin-left: 20px;
 }
-    
+
 .nav_item:first-child {
   margin-left: 0;
 }
-    
+
 .nav_link {
   display: flex;
   align-items: center;
@@ -43,13 +48,16 @@ header {
   position: relative;
   font-size: 12px;
 }
-    
-.nav_link:hover,
-.is-active {
+
+.nav_link:hover {
   color: #00acdc;
 }
-        
-.is-active::after {
+
+.nav_link.is-active {
+  color: #00acdc;
+}
+
+.nav_link.is-active::after {
   position: absolute;
   content: "";
   background-color: #00acdc;
