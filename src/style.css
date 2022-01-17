@@ -1,17 +1,23 @@
 /* Styles go here */
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: "Roboto", sans-serif;
 }
 
-.nav {
-
+.header {
   display: flex;
   justify-content: space-between;
+  padding-right: 30px;
+}
+
+.nav {
+  display: flex;
   align-items: center;
+  margin-right: 20px;
 }
 
 .logo-site {
@@ -23,21 +29,27 @@ body {
 .nav__list {
   list-style: none;
   display: flex;
-  margin-right: 30px;
+
 }
 
 .nav__item {
-  margin-top: 6px;
   margin-right: 20px;
   font-style: normal;
-  line-height: 23px;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 0;
   font-weight: 500;
 }
 
+.nav__item:nth-last-child(1) {
+  margin-right: 0;
+}
+
 .nav__link {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
   position: relative;
   color: #000;
   text-decoration: none;
@@ -50,13 +62,12 @@ body {
 .is-active::after {
   content: "";
   position: absolute;
-  width: 36px;
+  width: 100%;
   right: 0;
-  bottom: -23px;
+  bottom: 0;
   height: 4px;
   border-radius: 5px;
   background-color: #00adcd;
-  margin-top: 10px;
 }
 
 .nav__link:hover {
