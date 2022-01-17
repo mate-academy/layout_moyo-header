@@ -1,1 +1,67 @@
-/* Styles go here */
+* {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.home__link {
+  width: 40px;
+  height: 40px;
+}
+
+.moyo__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.product__categories {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.category {
+  margin-right: 20px;
+  position: relative;
+}
+
+.category:last-child {
+  margin-right: 0;
+}
+
+.category__name {
+  display: inline-block;
+  padding: 23px 0;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.category__name:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  
+  border-radius: 8px;
+  background-color: #00acdc;
+}
