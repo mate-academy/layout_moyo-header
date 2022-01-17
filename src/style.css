@@ -4,55 +4,53 @@ body {
 }
 
 .header {
-  max-width: 1200px;
-  height: 60px;
   display: flex;
   justify-content: space-between;
-  background-color: #fff;
-  margin: 0 auto;
-}
-
-.container-logo {
-  display: flex;
   align-items: center;
-  padding-left: 50px;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
 }
 
 .link-logo {
-  padding: 0;
-  margin: 0;
-  font-size: 0;
+  display: block;
+  height: 40px;
+  width: 40px;
 }
 
 .logo-image {
-  padding: 0;
-  margin: 0;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  padding-right: 40px;
+  height: 100%;
+  width: 100%;
 }
 
 .nav-list {
   display: flex;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #000;
-  font-size: 12px;
-  font-family: Roboto, sans-serif;
-  border: 4px solid transparent;
-  text-transform: uppercase;
-  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .nav-item {
-  list-style-type: none;
-  padding: 18.5px 6px;
-  font-size: 0;
+  margin-left: 20px;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
 }
 
 .nav-link.is-active {
@@ -64,12 +62,12 @@ body {
 }
 
 .nav-item .is-active::after {
-  position: absolute;
   content: "";
-  top: 33px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   right: 0;
   height: 4px;
   border-radius: 2px;
   background-color: #00acdc;
-  width: 36px;
 }
