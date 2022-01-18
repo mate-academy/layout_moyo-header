@@ -1,1 +1,86 @@
-/* Styles go here */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  padding: 0 50px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.img__moyo {
+  display: flex;
+  align-self: center;
+  justify-self: left;
+  flex-grow: 1;
+  height: 40px;
+  width: 40px;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav__item {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  height: 60px;
+}
+
+.is-active {
+  color: rgba(0, 172, 220, 1);
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 172, 220, 1);
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.nav__link:hover {
+  color: rgba(0, 172, 220, 1);
+}
