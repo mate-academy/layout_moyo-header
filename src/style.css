@@ -1,36 +1,28 @@
-body {
-  margin: 0;
+html {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  box-sizing: border-box;
 }
 
-ul {
-  padding: 0;
+body {
   margin: 0;
-}
-
-.nav {
-  display: flex;
-  list-style: none;
+  box-sizing: border-box;
 }
 
 .header {
   display: flex;
   padding: 0 50px;
-  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 60px;
 }
 
-.img__moyo {
-  display: flex;
-  align-self: center;
-  justify-self: left;
-  flex-grow: 1;
+.nav {
+  position: relative;
+}
+
+.header__logo {
   height: 40px;
   width: 40px;
   padding-right: 50px;
@@ -41,12 +33,7 @@ ul {
   padding: 0;
   margin: 0;
   align-items: center;
-}
-
-.nav__item {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+  list-style: none;
 }
 
 .nav__item:not(:last-child) {
@@ -56,14 +43,14 @@ ul {
 .nav__link {
   display: flex;
   align-items: center;
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
+  position: relative;
   color: #000;
   font-size: 12px;
-  line-height: 14px;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 500;
-  height: 60px;
+  font-weight: inherit;
+  padding: 23px 0;
 }
 
 .is-active {
