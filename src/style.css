@@ -6,7 +6,6 @@ body {
 
 .header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
@@ -19,23 +18,23 @@ body {
   height: 40px;
 }
 
-.menu {
+.nav__list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.item {
+.nav__item {
   position: relative;
   margin: 0;
 }
 
-.item:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.item_lnk {
+.nav_link {
   font-family: inherit;
   line-height: 14px;
   text-transform: uppercase;
@@ -46,10 +45,13 @@ body {
   color: #000;
 }
 
-.item_lnk:hover,
-.item_lnk.is-active {
+.nav_link:hover {
+  transition: color 0.3s;
+}
+
+.nav_link:hover,
+.nav_link.is-active {
   color: #00acdc;
-  transition: 0.3s;
 }
 
 .is-active::after {
