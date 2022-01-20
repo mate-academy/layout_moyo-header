@@ -1,3 +1,4 @@
+
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
 
 * {
@@ -11,9 +12,10 @@ body {
 }
 
 .header {
+  max-width: 1200px;
   display: flex;
   margin: 0 auto;
-  max-width: 1200px;
+  padding: 0 50px;
   background-color: #ffff;
   justify-content: space-between;
   align-items: center;
@@ -21,13 +23,15 @@ body {
 }
 
 .logo {
-  margin-left: 50px;
+  display: block;
+  width: 40px;
+  height: 40px;
 }
 
 .nav__list {
-  display: flex;
-  margin: 0 50px;
+  margin: 0;
   padding: 23px 0;
+  display: flex;
 }
 
 .nav__item {
@@ -43,6 +47,10 @@ body {
   transition: 0.3s color;
 }
 
+.last {
+  margin-right: 0;
+}
+
 .nav__link:hover {
   color: #00acdc;
 }
@@ -56,9 +64,8 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
+  right: 0;
   content: "";
-  display: block;
-  width: 36.61px;
   height: 4px;
   border-radius: 8px;
   background-color: #00acdc ;
