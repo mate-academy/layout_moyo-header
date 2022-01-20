@@ -1,1 +1,81 @@
 /* Styles go here */
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Space+Mono&display=swap);
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logoLink {
+  display: block;
+  height: 40px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.nav__link {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 20px;
+  padding: 23px 0;
+  color: #000;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+  margin-left: 0;
+}
+
+.is-active::after {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #00acdc;
+}
