@@ -3,20 +3,19 @@
 }
 
 body {
-  width: 100%;
-  max-width: 1200px;
   min-width: 1024px;
 }
 
-header {
+.header {
   background-color: #fff;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav {
-  width: 753px;
   flex-shrink: 0;
   font-family: Roboto, sans-serif;
   font-size: 12px;
@@ -26,9 +25,14 @@ header {
 .nav__list {
   list-style: none;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding: 0;
+  position: relative;
+}
+
+.nav__item {
+  position: relative;
+  margin: 0 10px;
 }
 
 .link {
@@ -36,7 +40,7 @@ header {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 22.5px 0;
+  padding: 23px 0;
   height: 15px;
   line-height: 15px;
 }
@@ -48,10 +52,11 @@ header {
 .is-active::after {
   content: "";
   display: block;
-  position: relative;
-  top: 18.5px;
+  position: absolute;
+  bottom: 0;
   background-color: #00acdc;
-  width: 37px;
+  right: 0;
+  left: 0;
   height: 4px;
 }
 
@@ -61,8 +66,6 @@ header {
 
 .logo {
   flex-shrink: 0;
-  margin-top: 10px;
-  margin-left: 50px;
   height: 40px;
   width: 40px;
   background-image: url(images/logo.png);
