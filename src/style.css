@@ -6,13 +6,9 @@ body {
 
 .header {
   display: flex;
-  justify-content: flex-end;
-  position: relative;
+  justify-content: space-between;
+  padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.nav__bar {
-  margin-right: 50px;
 }
 
 .nav__ul {
@@ -27,12 +23,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 10px;
+  margin-right: 20px;
   box-sizing: border-box;
-}
-
-.nav__list:first-child {
-  margin-left: 0;
 }
 
 .nav__list:last-child {
@@ -56,13 +48,12 @@ body {
 
 .logo {
   display: inline-block;
-  position: absolute;
+  position: relative;
   content: "";
   background-image: url(/images/logo.png);
   height: 40px;
   width: 40px;
   top: 10px;
-  left: 50px;
 }
 
 .is-active {
@@ -70,18 +61,6 @@ body {
 }
 
 .is-active::after {
-  position: absolute;
-  content: "";
-  box-sizing: border-box;
-  height: 4px;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: #00acdc;
-  border-radius: 8px;
-}
-
-.nav__link:active::after {
   position: absolute;
   content: "";
   box-sizing: border-box;
