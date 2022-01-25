@@ -17,8 +17,10 @@ ul {
 
 .header-bar {
   display: flex;
-  justify-content: space-between;
   padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
 }
 
 .logo {
@@ -27,24 +29,24 @@ ul {
   background-position: center;
   width: 40px;
   height: 40px;
-  margin-top: 10px;
-}
-
-.nav-bar {
-  display: flex;
 }
 
 .nav__list {
   display: flex;
+  align-items: center;
   list-style-type: none;
-  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-item {
-  margin-left: 20px;
-  margin-top: 22.5px;
-  margin-bottom: 22.5px;
-  display: inline-block;
+.nav-link {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .is-active {
