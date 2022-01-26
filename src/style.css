@@ -1,1 +1,86 @@
-/* Styles go here */
+* {
+  margin: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #e5e5e5;
+  font-weight: 500px;
+}
+
+.header {
+  max-width: 1200px;
+  min-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-basis: 90px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.image {
+  display: flex;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 60px;
+}
+
+.nav__item {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: " ";
+  position: absolute;
+  background-color: #00acdc;
+  border-radius: 8px;
+  width: 36px;
+  height: 4px;
+  top: 56px;
+}
