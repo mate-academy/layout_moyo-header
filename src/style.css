@@ -52,6 +52,16 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
-  border-bottom: 4px solid #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
 }
