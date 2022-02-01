@@ -4,49 +4,54 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .logo {
   display: block;
   height: 40px;
   width: 40px;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
   padding: 0 50px;
-  box-shadow: 0 2px 4px 0 #0000000d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   height: 60px;
 }
+
 .nav__list {
   display: flex;
-  list-style: none; 
+  list-style: none;
   font-size: 12px;
 }
+
 .nav__link {
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
-  color: #000000;
+  font-family: "Roboto", sans-serif;
+  color: #000;
   line-height: 60px;
   text-transform: uppercase;
   font-weight: bold;
   position: relative;
   display: inline-block;
-  margin-left: 20px ;
-  
+  margin-left: 20px;
 }
+
 .nav__link:hover,
 .is-active {
-  color:#00ACDC;
+  color: #00acdc;
 }
+
 .is-active::after {
   left: 0;
   right: 0;
   bottom: 0;
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   height: 4px;
-  background: #00ACDC;
+  background: #00acdc;
   border-radius: 8px;
 }
