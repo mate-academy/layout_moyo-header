@@ -24,26 +24,27 @@
   flex-wrap: nowrap;
   flex-shrink: 0;
   display: flex;
-  justify-content: space-around;
 }
 
-.nav__list li {
+.nav__item {
   margin-right: 20px;
 }
 
-.is-active {
-  color: #00acdc;
-}
-
-nav a {
-  padding: 23px 0;
+.nav__link {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
   color: #000;
   font-size: 12px;
   font-weight: 500;
   font-family: Roboto, sans-serif;
-  display: inline-block;
-  position: relative;
   text-transform: uppercase;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
 }
 
 .is-active::after {
@@ -57,10 +58,10 @@ nav a {
   border-radius: 8px;
 }
 
-.nav__list li:last-child {
+.nav__item:last-of-type {
   margin-right: 0;
 }
 
-.nav__list a:hover {
+.nav__link:hover {
   color: #00acdc;
 }
