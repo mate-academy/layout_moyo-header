@@ -36,21 +36,6 @@ body {
   list-style-type: none;
 }
 
-.menu__link::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 8px;
-  position: absolute;
-  bottom: 0;
-}
-
-.is-active::after,
-.menu__link:active::after {
-  background-color: #00acdc;
-}
-
 .menu__item:not(:last-child) {
   margin-right: 20px;
 }
@@ -67,10 +52,25 @@ body {
   position: relative;
 }
 
+.menu__link:hover {
+  color: #00acdc;
+}
+
+.menu__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+}
+
 .is-active {
   color: #00acdc;
 }
 
-.menu__link:hover {
-  color: #00acdc;
+.is-active::after,
+.menu__link:active::after {
+  background-color: #00acdc;
 }
