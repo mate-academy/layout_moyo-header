@@ -1,1 +1,89 @@
-/* Styles go here */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+  font-family: Roboto, Helvetica, sans-serif;
+  --header-height: 60px;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header_section_left {
+  display: flex;
+}
+
+.logoImage {
+  margin: auto 0;
+  margin-left: 50px;
+  width: 40px;
+  height: 40px;
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
+
+.header_section_right {
+  display: flex;
+  margin-right: 50px;
+  width: 100%;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.nav__list > :not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__item {
+  margin: auto 0;
+}
+
+.nav__link {
+  padding: 22.5px 0;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  display: block;
+  color: rgba(0, 172, 220, 1);
+  padding-bottom: 2px;
+}
+
+.is-active::after {
+  margin-top: 18.5px;
+  position: inherit;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 0;
+  border-radius: 8px;
+  border: 2px solid rgba(0, 172, 220, 1);
+  content: " ";
+}
