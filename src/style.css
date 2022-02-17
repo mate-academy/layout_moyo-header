@@ -1,26 +1,20 @@
-/* stylelint-disable color-hex-length */
-/* stylelint-disable string-quotes */
-/* stylelint-disable color-hex-case */
-/* Styles go here */
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 .header {
-  /* display: inline; */
   display: flex;
   height: 60px;
   line-height: 60px;
-  background: #FFFFFF;
+  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
+  justify-content: space-between;
   font-family: Roboto, sans-serif;
 }
 
 .nav__logo {
-  /* display: */
   margin-left: 50px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -28,15 +22,16 @@
 
 .nav__bar {
   display: flex;
-  width: 100%;
-  justify-content: flex-end;
   padding-right: 50px;
 }
 
-.nav__link {
+.nav__item {
   position: relative;
-  margin-left: 20px;
-  padding: 22.5px 2px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.nav__link {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
@@ -46,17 +41,17 @@
 
 .nav__link:active::after {
   position: absolute;
-  top: 37px;
+  top: 56px;
+  left: 20px;
+  right: 0;
 
   display: block;
-  margin-left: 20px;
-  width: 100%;
   height: 4px;
-  content: '';
+  content: "";
   border-radius: 8px;
-  background: #00ACDC;
+  background: #00acdc;
 }
 
 .nav__link:hover {
-  color: #00ACDC;
+  color: #00acdc;
 }
