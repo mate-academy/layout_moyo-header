@@ -6,31 +6,34 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 40px 0 50px;
+  padding: 0 50px;
+}
+
+.nav {
+  display: flex;
 }
 
 .logo {
+  background-image: url(/images/logo.png);
+  margin: 10px 0;
   width: 40px;
   height: 40px;
-  margin: 0;
 }
 
 .menu {
   display: flex;
-  height: 100%;
+  gap: 20px;
   margin: 0;
   padding: 0;
 }
 
-.menuItem {
+.menu-item {
   list-style: none;
   text-transform: uppercase;
-  margin: 0 10px;
 }
 
-.navLink {
-  height: 60px;
+.nav-link {
+  height: 100%;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -41,21 +44,21 @@ body {
   font-size: 12px;
 }
 
-.navLink:hover {
+.nav-link:hover {
   color: #00acdc;
 }
 
 .is-active {
+  position: relative;
   color: #00acdc;
-
 }
 
 .is-active::after {
   content: "";
   position: absolute;
-  transform: translateY(28px);
   display: block;
-  width: 37px;
+  bottom: 0;
+  width: 100%;
   height: 4px;
   background: #00acdc;
   border-radius: 8px;
