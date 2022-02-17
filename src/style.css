@@ -1,1 +1,76 @@
-/* Styles go here */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHjx4wXg.woff2) format("woff2");
+}
+
+body {
+  margin: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  right: 50px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
+}
+
+.nav {
+  text-align: right;
+  right: 50px;
+  background: #fff;
+}
+
+.nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  right: 50px;
+}
+
+.nav__item {
+  display: inline-block;
+}
+
+.nav__link {
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+
+  display: inline-block;
+  margin: 0;
+  padding: 22.5px;
+  font-family: "Lato", sans-serif;
+
+  transition: color 0.3s;
+}
+
+.nav__link[data-qa="hover"] {
+  color: #00acdc;
+}
+
+.nav__link.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  right: 828px;
+  top: 56px;
+  height: 4px;
+  width: 37px;
+  border-radius: 2px;
+  background-color: #00acdc;
+}
