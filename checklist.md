@@ -17,7 +17,7 @@ selectors specificity unless completely necessary
 
 2. [CODE STYLE] - Don't use simple tag names or specific styles in class names.
 Exception - specific semantic tags, like `header`, `nav`, `footer` etc. Try to
-describe the content of the tag.
+describe the navent of the tag.
        <details>
          <summary>BAD example</summary>
            ![html-class-names-bad-example-1](https://mate-academy.github.io/fe-program/css/checklists/html-class-names/example-bad-1.png)
@@ -37,7 +37,7 @@ horizontal scroll. But do not break the line if it cannot be broken (ex., long l
 
 
 5. [CODE STYLE] - Remember about correct indentation between parent and child
-elements. Each level of nesting, including text, contained inside the element,
+elements. Each level of nesting, including text, navained inside the element,
 requires 2-space offset. Also blank line shouldn't be between parent and child elements.
        <details>
          <summary>BAD examples</summary>
