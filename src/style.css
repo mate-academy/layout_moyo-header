@@ -31,6 +31,7 @@ body {
 
 .nav_item {
   margin-right: 20px;
+ 
 }
 
 .nav_item:last-child {
@@ -38,7 +39,6 @@ body {
 }
 
 .nav_link {
-  display: block;
   text-decoration: none;
   width: 100%;
   text-align: center;
@@ -46,34 +46,23 @@ body {
   line-height: 60px;
   position: relative;
   color: black;
-}
-
-.is-active {
-  color: #00acdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .is-active::after {
   content: "";
-  display: block;
   height: 4px;
   background: #00acdc;
   border-radius: 8px;
-  position: relative;
+  position: absolute;
   width: 100%;
+  bottom: 0;
 }
 
 .nav_link:hover
 ,
-.nav_link:focus {
+.is-active {
   color: #00acdc;
-}
-
-.nav_link:focus::after {
-  content: "";
-  display: block;
-  height: 4px;
-  background: #00acdc;
-  border-radius: 8px;
-  position: relative;
-  width: 100%;
 }
