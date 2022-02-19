@@ -1,25 +1,70 @@
-.header {
-  position: sticky;
-  top: 0;
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Medium.ttf);
 }
 
-.nav {
-  text-align: center;
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: saturate(180%) blur(20px);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  display: block;
 }
 
 .nav__list {
-  list-style: none;
   display: flex;
-  padding: 0;
-  padding-left: 10px;
-  margin: 0;
+  list-style-type: none;
+}
+
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
-  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  color: #000;
   text-decoration: none;
-  display: inline-block;
-  margin: 0 15px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.is-active {
+  position: relative;
+}
+
+.is-active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #00acdc;
+}
+
+.is-active,
+.nav__link:hover {
+  color: #00acdc;
 }
