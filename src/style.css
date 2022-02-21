@@ -1,1 +1,70 @@
 /* Styles go here */
+
+@font-face {
+  font-family: Roboto;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.nav {
+  height: 100%;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  margin: 23px 9px;
+}
+
+.nav__link {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+  cursor: pointer;
+}
+
+.is-active {
+  color: #00acdc;
+  cursor: pointer;
+}
+
+.is-active::after {
+  display: block;
+  border-radius: 8px;
+  background-color: #00acdc;
+  height: 4px;
+  content: "";
+  width: 100%;
+  left: 0;
+  top: 33px;
+  position: absolute;
+}
+
+.logo {
+  display: flex;
+}
