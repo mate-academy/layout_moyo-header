@@ -37,7 +37,7 @@ body {
   color: #000;
 
   margin-left: 20px;
-  padding: 23px 0 19px;
+  padding: 23px 0;
 
   transition: color 0.3s;
 }
@@ -49,14 +49,16 @@ body {
 .nav__link:hover,
 .is-active {
   color: #00acdc;
+  position: relative;
 }
 
 .is-active::after {
   content: "";
-  display: block;
-  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   height: 4px;
-  background-color: #00acdc;
+  width: 100%;
   border-radius: 8px;
-  transform: translateY(19px);
+  background-color: #00acdc;
 }
