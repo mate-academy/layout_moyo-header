@@ -1,27 +1,14 @@
 'use strict';
 
-const headerL = document.getElementById('largeNav');
+const header = document.getElementById('nav');
 
-const btnsL = headerL.getElementsByClassName('a');
+const btns = header.getElementsByClassName('link');
 
-for (let i = 0; i < btnsL.length; i++) {
-  btnsL[i].addEventListener('click', function() {
-    const currentL = document.getElementsByClassName('is-activeL');
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener('click', function() {
+    const current = document.getElementsByClassName('is-active');
 
-    currentL[0].className = currentL[0].className.replace(' is-activeL', '');
-    this.className += ' is-activeL';
-  });
-}
-
-const headerS = document.getElementById('shortNav');
-
-const btnsS = headerS.getElementsByClassName('a');
-
-for (let i = 0; i < btnsS.length; i++) {
-  btnsS[i].addEventListener('click', function() {
-    const currentS = document.getElementsByClassName('is-activeS');
-
-    currentS[0].className = currentS[0].className.replace(' is-activeS', '');
-    this.className += ' is-activeS';
+    current[0].className = current[0].className.replace(' is-active', '');
+    this.className += ' is-active';
   });
 }
