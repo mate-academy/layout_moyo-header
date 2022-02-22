@@ -1,1 +1,66 @@
-/* Styles go here */
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  padding-top: 4px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.nav__product {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav__product:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+a.is-active {
+  position: relative;
+  color: #00acdc;
+
+}
+
+a.is-active::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+  background-color: rgb(0, 172, 220);
+}
