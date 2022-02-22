@@ -1,1 +1,93 @@
-/* Styles go here */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) format("woff2");
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+
+  background: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
+
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* styles for logo */
+
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.logo-image {
+  height: 100%;
+  width: 100%;
+}
+
+/* styles for nav */
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link.is-active {
+  color: #00acdc;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-family: "Roboto", sans-serif;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  transition: color 0.3s;
+
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* styles for is-active::after */
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
+}
+
+/* styles for hover */
+
+.nav__link:hover {
+  color: #00acdc;
+}
