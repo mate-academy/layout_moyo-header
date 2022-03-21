@@ -1,16 +1,19 @@
 /* Styles go here */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Roboto, Helvetica, sans-serif;
   font-size: 12px;
-  box-sizing: border-box;
 }
 
 .head {
   display: flex;
   background-color: #fff;
   justify-content: space-between;
-  box-shadow: 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav {
@@ -48,7 +51,11 @@ body {
   margin-left: 0;
 }
 
-.lastOne {
+.nav__link:hover {
+  color: #00acdc;
+}
+
+li:last-child a {
   margin-right: 0;
 }
 
@@ -62,8 +69,4 @@ body {
   right: 0;
   background-color: #00acdc;
   border-radius: 8px;
-}
-
-.nav__link:hover {
-  color: #00acdc;
 }
