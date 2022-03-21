@@ -12,6 +12,14 @@ body {
   margin: 10px auto 10px 50px;
 }
 
+.li_link_container {
+  height: 60px;
+}
+
+.links_list > .li_link_container {
+  display: inline;
+}
+
 .links_list {
   list-style: none;
   margin: 0;
@@ -21,21 +29,19 @@ body {
   align-items: center;
 }
 
-.links_list li {
-  display: inline;
-}
-
 .header_link {
   display: flex;
   align-items: center;
+  text-transform: uppercase;
   font-family: Roboto, sans-serif;
   color: black;
   text-decoration: none;
   font-size: 12px;
   height: 60px;
+  transition: color 1s;
 }
 
-li:not(:first-child) {
+.li_link_container:not(:first-child) {
   margin-left: 20px;
 }
 
@@ -66,8 +72,4 @@ li:not(:first-child) {
 
 .header_links_container {
   margin: 0 50px 0 auto;
-}
-
-.li_link_container {
-  height: 60px;
 }
