@@ -32,7 +32,6 @@ header {
 }
 
 .nav__link {
-  position: relative;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
@@ -47,4 +46,14 @@ header {
 .nav__link:active,
 .is-active {
   color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  width: 37px;
+  background-color: darkturquoise;
+  display: block;
+  top: 56px;
+  position: absolute;
 }
