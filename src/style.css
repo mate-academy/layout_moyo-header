@@ -1,5 +1,9 @@
 /* Styles go here */
-* {
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
   margin: 0;
   padding: 0;
 }
@@ -12,16 +16,19 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  height: 60px;
 }
 
 .nav__list {
   list-style-type: none;
   display: flex;
   margin-right: 50px;
+  padding: 0;
 }
 
 .list__item {
-  vertical-align: middle;
+  margin-left: 20px;
+  display: flex;
 }
 
 .link {
@@ -29,23 +36,12 @@
   align-items: center;
   text-decoration: none;
   color: rgb(0, 0, 0);
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  height: 60px;
-  margin-left: 20px;
+  font-family: inherit;
+  /* height: 60px; */
+  /* margin-left: 20px; */
   font-weight: 500;
   font-size: 12px;
-  line-height: 60px;
   text-transform: uppercase;
-}
-
-.link:hover {
-  color: rgb(0, 172, 220);
-}
-
-.moyo-icon {
-  display: block;
-  margin: 10px 0 10px 50px;
 }
 
 .is-active::after {
@@ -55,9 +51,15 @@
   height: 4px;
   background: #00acdc;
   border-radius: 8px;
+  color: #00acdc;
   top: 56px;
 }
 
-.selected {
-  color: #00acdc;
+.link:hover {
+  color: rgb(0, 172, 220);
+}
+
+.moyo-icon {
+  display: block;
+  margin: 10px 0 10px 50px;
 }
