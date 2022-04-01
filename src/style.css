@@ -1,6 +1,7 @@
 html {
-  font-family: Robotto, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 12px;
+  font-weight: 500;
 }
 
 body {
@@ -35,7 +36,7 @@ body {
 }
 
 .nav__item {
-  margin: 0 12px;
+  margin: 0 10px;
   padding: 22.5px 0;
 }
 
@@ -46,7 +47,8 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
-  font-weight: 500, medium;
+  /* font-weight: 500, medium; */
+  /* font-family: inherit; */
 }
 
 .nav__link:hover {
@@ -61,6 +63,18 @@ body {
 .is-active {
   color: #00acdc;
   position: relative;
-  border-bottom: 4px solid #00acdc;
-  border-radius: 2px ;
+  /* border-bottom: 4px solid #00acdc;
+  border-radius: 2px ; */
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  width: 38px;
+  left: 0;
+  height: 4px;
+  top: 56px;
+
+  background-color: #00acdc;
+  border-radius: 8px;
 }
