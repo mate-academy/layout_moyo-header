@@ -7,8 +7,7 @@ body {
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: relative;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding: 0 50px;
   justify-content: space-between;
   align-items: center;
 }
@@ -37,19 +36,21 @@ body {
   color: #000;
   line-height: 60px;
   display: flex;
+  position: relative;
 }
 
 .nav__link:hover,
-.is-active:hover {
+.is-active {
   color: #00acdc;
 }
 
 .nav__link:active::after,
-.is-active:active:after {
+.is-active::after {
   content: "";
-  border: 1px solid #00acdc;
+  position: absolute;
+  border: 2px solid #00acdc;
   border-radius: 8px;
   bottom: 0;
-  display: flex;
-  padding: 0 10px;
+  box-sizing: border-box;
+  width: 100%;
 }
