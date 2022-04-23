@@ -1,1 +1,79 @@
-/* Styles go here */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  width: 1200px;
+  height: 60px;
+  left: 0;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50px;
+  top: 10px;
+}
+
+.menu-links {
+  display: flex;
+  list-style: none;
+  margin-right: 25px;
+}
+
+.link,
+.is-active {
+  padding: 5px;
+  width: 58px;
+  height: 15px;
+  left: 454px;
+  top: 22.5px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #000;
+
+}
+
+a:link {
+  color: rgb(7, 19, 7);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00acdc;
+  background-color: transparent;
+  /* text-decoration: underline 4px; */
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.is-active::after {
+  content: "";
+  color: #00acdc;
+  border-radius: 8px;
+  background-color: #00acdc;
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  left: 482px;
+  top: 56px;
+}
