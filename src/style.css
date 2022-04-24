@@ -1,40 +1,67 @@
 * {
-  margin: 0;
+  box-sizing: border-box;
 }
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
 .container {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
-  width: 1200px;
+  padding: 0 50px;
   height: 60px;
-  border: 2px solid rebeccapurple;
-  background-image: url(/src/images/logo.png);
-  background-repeat: no-repeat;
-  background-position-x: 50px;
-  background-position-y: 10px;
+  line-height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.nav {
-  padding-right: 50px;
+.ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-li {
-  display: inline;
-  list-style-type: none;
-  padding: 0 5px;
+.nav_item {
+  display: flex;
+  margin-left: 20px;
+}
+
+.link {
+  font-family: Roboto, sans-serif;
   font-size: 12px;
-  line-height: 15px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
+  text-decoration: none;
   color: black;
 }
 
-li:hover {
-  padding-bottom: 18px;
-  color: blue;
-  border-bottom: 5px solid blue;
+.link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  border-radius: 8px;
 }
