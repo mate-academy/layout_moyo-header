@@ -3,7 +3,7 @@
 }
 
 .header {
-  padding: 10px 50px;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,6 +25,7 @@
 .nav__list {
   display: flex;
   justify-content: space-between;
+  padding: 0;
 }
 
 .nav__item {
@@ -37,7 +38,10 @@
 }
 
 .nav__link {
-  padding: 25px 0;
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
@@ -51,18 +55,13 @@
   color: #00acdc;
 }
 
-.is-active {
-  position: relative;
-}
-
 .is-active::after {
   content: "";
-  width: 37px;
   height: 4px;
   background: #00acdc;
-  border-radius: 8px;
+  border-radius: 2px;
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  right: 0;
 }
