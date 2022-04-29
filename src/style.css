@@ -18,6 +18,7 @@
 }
 
 .nav__link {
+  position: relative;
   display: inline-block;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -30,13 +31,35 @@
 }
 
 .nav__link:hover {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   color: rgb(0, 172, 220);
 }
 
-.header::after {
-  background: rgb(0, 172, 220);
+.is-active {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgb(0, 172, 220);
+  margin: 20px;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+}
+
+.is-active:hover {
+  font-weight: 500;
+  color: rgb(0, 172, 220);
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
   border-radius: 8px;
+  background-color: rgb(0, 172, 220);
 }
