@@ -29,6 +29,7 @@
   display: flex;
   flex-shrink: 0;
   list-style: none;
+  text-transform: uppercase;
 }
 
 .item {
@@ -58,10 +59,13 @@
   padding-bottom: 0;
 }
 
-.shape {
-  position: relative;
+.is-active::after {
+  position: absolute;
+  content: "";
+  margin-top: 33px;
   height: 4px;
-  background-color: #00acdc;
+  width: 37px;
+  background: #00acdc;
   border-radius: 8px;
-  top: 20.5px;
+
 }
