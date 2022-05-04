@@ -7,65 +7,69 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
+  height: 60px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
 }
 
 .logo {
-  display: flex;
-  padding: 10px 0;
-  margin-left: 50px;
-
+  display: block;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin: 10px auto 10px 50px;
 }
 
-.nav {
-  flex-shrink: 0;
-  margin-right: 50px;
+.photo {
+  width: 100%;
+  height: 100%;
 }
 
 .nav__list {
   display: flex;
-  flex-shrink: 0;
+  justify-content: flex-end;
   list-style: none;
-  text-transform: uppercase;
+  margin-right: 50px;
+  margin-left: 10px;
 }
 
-.item {
-  display: flex;
-  flex-direction: column;
+.list__item {
   margin-left: 20px;
 }
 
-.item:nth-child(1) {
+.list__link {
+  display: flex;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 60px;
+  width: 100%;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.list__item:first-child {
   margin-left: 0;
 }
 
-.link__item {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  cursor: pointer;
-  color: #000;
-}
-
-.link__item:hover {
-  color: #00acdc;
-}
-
+.list__link:hover,
 .is-active {
   color: #00acdc;
-  padding-bottom: 0;
 }
 
 .is-active::after {
-  position: absolute;
   content: "";
-  margin-top: 33px;
+  display: block;
+  position: absolute;
+  top: 0;
+  margin-top: 56px;
   height: 4px;
-  width: 37px;
-  background: #00acdc;
-  border-radius: 8px;
-
+  width: 36.6px;
+  border-radius: 2px;
+  background-color: #00acdc;
 }
