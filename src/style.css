@@ -1,11 +1,13 @@
-/* Styles go here */
-body {
-  margin: 0;
+html {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
+}
+
+body {
+  margin: 0;
 }
 
 .header {
@@ -25,15 +27,11 @@ body {
   list-style-type: none;
   margin: 0;
   padding-left: 0;
-}
-
-.nav__item {
-  margin-right: 20px;
   text-transform: uppercase;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -45,10 +43,7 @@ body {
   color: black;
 }
 
-.nav__link:hover {
-  color: #00acdc;
-}
-
+.nav__link:hover,
 .is-active {
   color: #00acdc;
 }
