@@ -1,23 +1,27 @@
 /* Styles go here */
+
+h1 {
+  display: none;
+}
+
 body {
   margin: 0;
 }
 
 header {
   font-family: "Roboto", sans-serif;
+  font-size: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  background-color: #e5e5e5;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-right: 30px;
+  padding: 0 50px;
+
 }
 
 .logo {
-  padding: 10px;
-  margin-left: 50px;
   height: 40px;
   width: 40px;
+  align-self: center;
 }
 
 .nav__list {
@@ -25,44 +29,46 @@ header {
   padding: 0;
   display: flex;
   list-style: none;
-  justify-content: right;
 }
 
 li {
-  display: flex;
   margin: 0 10px;
 }
 
 .links {
-  height: 15px;
-  font-size: 12px;
   position: relative;
-  display: block;
-  padding: 10px;
+  display: flex;
+  height: 60px;
   text-decoration: none;
   text-transform: uppercase;
   color: rgb(0, 0, 0);
+  align-items: center;
 }
 
 .links:hover {
   color: #00acdc;
 }
 
-.links:focus {
+.is-active {
+  margin-left: 0;
   color: #00acdc;
 }
 
-.is-active {
-  color: #00acdc;
+.start {
+  margin-left: 0;
+}
+
+.end {
+  margin-right: 0;
 }
 
 .is-active::after {
   position: absolute;
-  top: 43px;
+  bottom: 0;
   content: "";
   display: block;
   background-color: #00acdc;
   height: 4px;
-  width: 37px;
-  border-radius: 8px;
+  width: 100%;
+  border-radius: 2px;
 }
