@@ -9,6 +9,7 @@ body {
 .header {
   padding: 0 50px;
   display: flex;
+  justify-content: space-between;
 }
 
 .nav__list {
@@ -38,12 +39,6 @@ body {
   height: 40px;
 }
 
-.nav {
-  flex-grow: 1;
-  justify-content: flex-end;
-  display: flex;
-}
-
 .nav__link {
   padding: 23px 0;
   text-transform: uppercase;
@@ -54,7 +49,8 @@ body {
 }
 
 .is-active,
-.nav__link:hover {
+.nav__link:hover,
+.nav__item:first-child .nav__link {
   color: #00acdc;
   position: relative;
 }
