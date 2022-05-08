@@ -1,4 +1,9 @@
 /* Styles go here */
+:root {
+  --headerHeight: 60px;
+  --customColor: #00acdc;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
@@ -13,19 +18,13 @@ body {
 .header {
   position: sticky;
   top: 0;
-  --height: 60px;
-  width: 100%;
+  height: 100%;
+  padding: 0 50px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.blockHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  padding-right: 50px;
-  padding-left: 50px;
 }
 
 .logo {
@@ -34,11 +33,12 @@ body {
 }
 
 .logo:hover {
-  outline: 2px solid #00acdc;
+  outline: 2px solid var(--customColor);
 }
 
+/* #region nav */
+
 .nav {
-  position: relative;
   display: flex;
   justify-content: flex-end;
 }
@@ -51,12 +51,8 @@ body {
 }
 
 .nav__item {
-  line-height: var(--height);
-  height: var(--height);
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; */
+  height: var(--headerHeight);
+  line-height: var(--headerHeight);
   margin: 0 10px;
 }
 
@@ -78,7 +74,7 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--customColor);
 }
 
 .nav__link:focus:after {
@@ -87,13 +83,13 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 4px solid #00acdc;
+  border-bottom: 4px solid var(--customColor);
   border-radius: 2px;
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--customColor);
 }
 
 .is-active::after {
@@ -102,6 +98,8 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 4px solid #00acdc;
+  border-bottom: 4px solid var(--customColor);
   border-radius: 2px;
 }
+
+/* #endregion nav */
