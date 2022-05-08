@@ -1,7 +1,6 @@
 html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
-  text-transform: uppercase;
 }
 
 body,
@@ -15,6 +14,7 @@ header {
   justify-content: space-between;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-transform: uppercase;
 }
 
 .nav__link {
@@ -27,6 +27,7 @@ header {
 .logo,
 .nav__link {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -36,12 +37,8 @@ header {
   padding-left: 0;
 }
 
-.nav__item {
+.nav__item:not(:last-child) {
   margin-right: 20px;
-}
-
-.nav__item:last-child {
-  margin-right: 0;
 }
 
 .is-active,
