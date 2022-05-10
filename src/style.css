@@ -1,37 +1,33 @@
 /* Styles go here */
 
-.lessonName {
-  display: none;
-}
-
 .body {
   margin: 0;
 }
 
 .header {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
   height: 40px;
   width: 40px;
-  align-self: center;
 }
 
 .nav__list {
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
   list-style: none;
 }
 
 .head__List {
-  margin: 0 10px;
+  margin-left: 20px;
 }
 
 .links {
@@ -49,25 +45,24 @@
 }
 
 .is-active {
-  margin-left: 0;
   color: #00acdc;
 }
 
-.start {
+.head__List:first-child {
   margin-left: 0;
 }
 
-.end {
+.head__List:last-child {
   margin-right: 0;
 }
 
 .is-active::after {
   position: absolute;
   bottom: 0;
-  content: "";
   display: block;
-  background-color: #00acdc;
   height: 4px;
   width: 100%;
+  content: "";
+  background-color: #00acdc;
   border-radius: 2px;
 }
