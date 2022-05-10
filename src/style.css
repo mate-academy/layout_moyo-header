@@ -1,10 +1,5 @@
 body {
   margin: 0;
-  padding: 0;
-}
-
-.container-logo {
-  margin-left: 50px;
 }
 
 .logo {
@@ -17,18 +12,18 @@ body {
   align-items: center;
   justify-content: space-between;
   height: min-content;
+  padding-left: 50px;
+  padding-right: 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav {
-  font-family: "Roboto", "Avenir", sans-serif;
-  font-size: 12px;
-  margin-right: 50px;
   flex-shrink: 0;
 }
 
 .nav__list {
   margin: 0;
+  padding: 0;
   display: flex;
   list-style: none;
 }
@@ -38,9 +33,13 @@ body {
 }
 
 .nav__link {
+  font-family: "Roboto", "Avenir", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
   display: flex;
   flex-direction: column;
-  padding: 24px 0;
+  padding: 23px 0;
+  line-height: 14px;
   list-style: none;
   text-decoration: none;
   color: black;
@@ -48,17 +47,18 @@ body {
 }
 
 .is-active {
+  position: relative;
   color: #00acdc;
-  padding-bottom: 20px;
 }
 
 .is-active::after {
+  position: absolute;
   content: "";
   height: 4px;
+  width: 100%;
   border-radius: 2px;
   background: #00acdc;
-  position: relative;
-  top: 20px;
+  bottom: 0;
 }
 
 .nav__link:hover {
