@@ -11,6 +11,8 @@
   padding: 0 50px;
   font-family: Roboto, sans-serif;
   font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .logo {
@@ -30,15 +32,15 @@
   display: flex;
 }
 
+.nav__item {
+  padding-left: 20px;
+}
+
 .nav__link {
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  margin-left: 20px;
-}
-
-.nav__link:link {
   text-decoration: none;
   text-transform: uppercase;
   color: black;
@@ -51,11 +53,9 @@
 .is-active {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 100%;
-  justify-content: space-between;
-}
-
-.is-active:link {
+  position: relative;
   color: rgba(0, 172, 220, 1);
   text-decoration: none;
   text-transform: uppercase;
@@ -63,13 +63,10 @@
 
 .is-active::after {
   content: "";
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 4px;
   border-radius: 8px;
   background-color: rgba(0, 172, 220, 1);
-}
-
-.is-active::before {
-  content: "";
-  height: 4px;
 }
