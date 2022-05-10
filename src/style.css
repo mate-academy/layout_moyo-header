@@ -15,29 +15,23 @@ body {
   box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
 }
 
-header .logo {
+.logo {
   display: inline;
-  float: left;
   width: 40px;
   height: 40px;
   margin-top: 10px;
 }
 
-.nav,
 .link__box {
   display: flex;
   justify-content: flex-end;
   margin: 0;
-}
-
-.link__box {
-  padding-left: 0;
+  padding: 0;
   width: 100%;
 }
 
 .link__item {
-  display: inline-block;
-  align-items: center;
+  display: block;
 }
 
 .link__elem {
@@ -48,11 +42,13 @@ header .logo {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.link__item:not(:first-child) {
   margin-left: 20px;
 }
 
 .is-active {
-  margin-left: 0;
   color: #00acdc;
 }
 
