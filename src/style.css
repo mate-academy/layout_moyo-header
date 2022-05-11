@@ -1,3 +1,16 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
 body {
   margin: 0;
 }
@@ -8,13 +21,7 @@ body {
   flex-wrap: wrap;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14.6px;
   text-transform: uppercase;
-
 }
 
 .logo {
@@ -39,19 +46,18 @@ body {
 
 .nav__Item {
   color: #00acdc;
-  position: relative;
 }
 
 .nav__link {
   text-decoration: none;
-  display: block;
-  padding: 22.5px 0;
-  margin: 0 10px;
+  display: flex;
+  padding: 23px 0;
   color: black;
+  position: relative;
 }
 
-.last__link {
-  margin-right: 0;
+.nav__Item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link:hover {
@@ -60,16 +66,16 @@ body {
 
 .is-active {
   color: #00acdc;
-  margin-left: 0;
 }
 
 .is-active:after {
   position: absolute;
-  top: 56px;
+  bottom: 0;
+  right: 0;
+  left: 0;
   display: block;
   content: "";
   height: 4px;
-  width: 38px;
   background: #00acdc;
-  border-radius: 8px;
+  border-radius: 3px;
 }
