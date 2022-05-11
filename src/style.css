@@ -1,1 +1,65 @@
-/* Styles go here */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.moyoLogo {
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  display: flex;
+}
+
+.nav__item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #000;
+  line-height: 14px;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link:hover,
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 3px;
+}
