@@ -10,7 +10,8 @@ body {
   background-color: #fff;
   height: 60px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
 .logo {
@@ -18,9 +19,22 @@ body {
   height: 40px;
 }
 
+.nav {
+  height: 100%;
+  display: flex;
+}
+
 .nav__list {
   list-style: none;
   display: flex;
+  padding-inline-start: 0;
+  height: 100%;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link {
@@ -31,9 +45,8 @@ body {
   font-weight: 500;
   font-size: 12px;
   text-decoration: none;
-  padding: 20px 0;
+  padding: 23px 0;
   cursor: pointer;
-  margin: 0 10px;
 }
 
 .is-active {
