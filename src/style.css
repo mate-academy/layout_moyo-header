@@ -1,13 +1,12 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
 html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500px;
   text-transform: uppercase;
+}
+
+body {
+  margin: 0;
 }
 
 .header {
@@ -26,6 +25,7 @@ html {
 }
 
 .nav__list {
+  margin: 0;
   display: flex;
   list-style: none;
   padding: 0;
@@ -41,18 +41,15 @@ html {
 
 .nav__link {
   display: flex;
+  position: relative;
   text-decoration: none;
   color: black;
   padding: 23px 0;
 }
 
-.nav__link:hover {
-  color: #00acdc;
-}
-
+.nav__link:hover,
 .is-active {
   color: #00acdc;
-  position: relative;
 }
 
 .is-active::after {
