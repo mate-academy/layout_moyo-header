@@ -1,0 +1,67 @@
+@import "./utils/reset";
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  background: #fff;
+}
+
+.page-header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  &__logo {
+    display: flex;
+  }
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav__item {
+  height: 60px;
+  padding-left: 20px;
+  display: flex;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+}
+
+.nav__link {
+  align-items: center;
+  display: flex;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: #00acdc;
+  }
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+
+  &::after {
+    content: "";
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #00acdc;
+    border-radius: 8px;
+  }
+}
