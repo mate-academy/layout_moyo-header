@@ -22,9 +22,9 @@ h1 {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 10px 50px;
+  padding: 0 50px;
 }
-.menu {
+.branding {
   display: flex;
   align-items: center;
 }
@@ -32,23 +32,25 @@ h1 {
   display: flex;
 }
 .menu__link {
-  margin-left: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   color: #000;
+  box-sizing: border-box;
 }
-.is-active {
-  position: relative;
-  color: #00ACDC;
-}
-.is-active::before {
+.is-active:hover::before {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: -12px;
-  width: 100%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: calc(100% - 20px);
   height: 4px;
   border-radius: 8px;
   background-color: #00ACDC;
