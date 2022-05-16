@@ -1,18 +1,18 @@
 * {
   margin: 0;
-}
-
-.html {
   font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
 }
 
 .header {
   display: flex;
-  max-width: 1200px;
-  min-width: 1024px;
   align-items: center;
-  /* padding: 0 40px 0 50px; */
   justify-content: space-between;
+  height: 60px;
+  padding: 0 50px;
   background-color: #fff;
   box-shadow: 0 2px 4px 0 #0000000d;
 }
@@ -20,19 +20,11 @@
 .box-logo {
   width: 40px;
   height: 40px;
-  padding-left: 50px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
 }
 
 .navigation {
   display: flex;
-  padding-right: 40px;
-  font-family: Roboto, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  text-transform: uppercase;
+  justify-content: flex-end;
 }
 
 .nav-list {
@@ -41,15 +33,17 @@
 }
 
 .nav-item {
+  display: flex;
+  align-items: center;
   position: relative;
-  padding: 23px 0;
-  margin: 0 10px;
-  display: inline;
+  margin-left: 20px;
 }
 
 .nav-link {
+  display: flex;
   padding: 23px 0;
   color: black;
+  text-align: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -60,12 +54,12 @@
 }
 
 .is-active::after {
+  box-sizing: border-box;
   position: absolute;
   bottom: 0;
   left: 0;
   content: "";
   width: 100%;
-  background-color: #00acdc;
-  height: 4px;
+  border: 2px solid;
   border-radius: 8px;
 }
