@@ -5,11 +5,10 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   --header-height: 60px;
+  --color-navigation: #00acdc;
 }
 
 .header {
-  min-width: 1024px;
-  max-width: 1200px;
   font-size: 12px;
   margin: 0;
   display: flex;
@@ -52,11 +51,11 @@ body {
 }
 
 a:hover {
-  color: #00acdc;
+  color: var(--color-navigation);
 }
 
-.hover {
-  color: #00acdc;
+.hover-navigation {
+  color: var(--color-navigation);
 }
 
 .is-active {
@@ -64,7 +63,7 @@ a:hover {
 }
 
 .is-active::after {
-  color: #00acdc;
+  color: var(--color-navigation);
   position: absolute;
   content: "";
   height: 4px;
@@ -74,5 +73,5 @@ a:hover {
   left: 0;
   right: 0;
   width: 100%;
-  background: #00acdc;
+  background: var(--color-navigation);
 }
