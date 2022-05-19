@@ -14,7 +14,6 @@ body {
   display: flex;
   height: var(--header-height);
   align-items: center;
-  flex-direction: row;
   justify-content: space-between;
   text-align: center;
   padding: 0 50px;
@@ -27,13 +26,11 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   text-align: center;
+  margin: 0;
 }
 
 .logo {
   display: flex;
-  text-align: left;
-  justify-content: left;
-  padding: 10px;
 }
 
 .nav {
@@ -41,7 +38,7 @@ body {
 }
 
 .nav__item {
-  margin: auto 10px;
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -71,4 +68,8 @@ a:hover {
   right: 0;
   width: 100%;
   background: var(--color-navigation);
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
