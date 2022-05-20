@@ -1,1 +1,53 @@
-/* Styles go here */
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  padding: 10px 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.list-item {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.list-item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  padding: 20px 0;
+  line-height: 14px;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #00acdc;
+  border-radius: 8px;
+}
+
+.link:hover {
+  color: #00acdc;
+}
