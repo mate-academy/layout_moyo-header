@@ -1,1 +1,90 @@
-/* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1200px) {
+  .header-container {
+    width: 1200px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .header-container {
+    width: 1024px;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.img {
+  margin: 10px 0;
+  height: 40px;
+  width: 40px;
+}
+
+.nav__list-item {
+  list-style-type: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin-right: 20px;
+  
+}
+
+.nav__list-item a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.nav__list-item-active a {
+  color: #00acdc;
+  text-decoration: none;
+}
+
+.nav__list-item-active {
+  position: relative;
+}
+
+.nav__list-item:last-child {
+  margin-right: 0;
+}
+
+a:hover {
+  color: #00acdc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.is-active::after {
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  left: 0;
+  top: 56px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  content: "";
+}
