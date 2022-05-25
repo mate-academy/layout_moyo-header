@@ -1,4 +1,4 @@
-body {
+.display {
   margin: 0;
   padding: 0;
 }
@@ -8,13 +8,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.nav {
-  display: flex;
-  justify-content: end;
-  flex-grow: 1;
 }
 
 .logo {
@@ -22,14 +17,22 @@ body {
   height: 40px;
 }
 
+.nav {
+  display: flex;
+  justify-content: end;
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
 .nav_link {
-  margin: 0 10px;
-  padding: 0.5px 0;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   text-decoration: none;
   font-size: 12px;
-  line-height: 14px;
   text-transform: uppercase;
   color: #000;
 }
@@ -39,12 +42,12 @@ body {
 }
 
 .nav_link:active::after {
+  display: flex;
   content: "";
   background-color: #00acdc;
-  width: 37px;
+  min-width: 35px;
   height: 4px;
-  left: 0;
+  flex-grow: 1;
   position: relative;
-  display: block;
-  top: 18.5px;
+  top: 19px;
 }
