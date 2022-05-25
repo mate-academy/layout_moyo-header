@@ -1,1 +1,103 @@
-/* Styles go here */
+:root {
+  --headerHeight: 60px;
+  --customColor: #00acdc;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+  min-width: 1024px;
+}
+
+.header {
+  position: relative;
+  top: 0;
+  height: 100%;
+  padding: 0 50px;
+  /* margin: 0 auto; */
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__logo:hover {
+  outline: 2px solid var(--customColor);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__item {
+  height: var(--headerHeight);
+  line-height: var(--headerHeight);
+  margin: 0 10px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  color: var(--customColor);
+}
+
+.nav__link:focus:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 4px solid var(--customColor);
+  border-radius: 2px;
+}
+
+.is-active {
+  position: relative;
+  color: var(--customColor);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 4px solid var(--customColor);
+  border-radius: 2px;
+}
