@@ -8,7 +8,7 @@
   font-family: Roboto, Arial, sans-serif;
   justify-content: space-between;
   padding: 0 50px;
-
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav__list {
@@ -21,16 +21,12 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 20px;
-  margin: 0 8px;
+  margin-right: 16px;
   text-transform: uppercase;
 }
 
 .nav__item:last-child {
   margin-right: 0;
-}
-
-.nav__item:first-child {
-  margin-left: 0;
 }
 
 .nav__link {
@@ -46,13 +42,16 @@
 
 .is-active {
   color: #00acdc;
+  position: relative;
+  display: inline-block;
 }
 
 .is-active::after {
-  position: relative;
+  position: absolute;
   content: "";
   display: block;
   border-bottom: 4px solid #00acdc;
-  bottom: -16px;
+  bottom: 0;
   border-radius: 4px;
+  width: 100%;
 }
