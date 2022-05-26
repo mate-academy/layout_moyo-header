@@ -30,12 +30,16 @@ body {
 }
 
 .image {
-  display: flex;
   width: 40px;
   height: 40px;
 }
 
 .nav {
+  display: flex;
+}
+
+.nav_item {
+  position: relative;
   display: flex;
 }
 
@@ -61,7 +65,19 @@ body {
 }
 
 .nav_link:active::after {
-  position: relative;
+  position: absolute;
+  display: flex;
+  content: "";
+  overflow: hidden;
+  background-color: #00acdc;
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+}
+
+.active::after {
+  position: absolute;
   display: flex;
   content: "";
   overflow: hidden;
@@ -73,5 +89,5 @@ body {
 }
 
 .nav_item:not(:last-child) {
-  padding-right: 20px;
+  margin-right: 20px;
 }
