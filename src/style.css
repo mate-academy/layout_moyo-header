@@ -22,6 +22,7 @@ a {
   text-transform: uppercase;
   font-size: 12px;
   font-family: Roboto, sans-serif;
+  padding: 24px 0;
 }
 
 .header {
@@ -34,7 +35,10 @@ a {
 }
 
 .menu {
+  position: relative;
   display: flex;
+  justify-content: space-between;
+  top: -3px;
 }
 
 .is-active {
@@ -42,14 +46,15 @@ a {
   color: #00acdc;
 }
 
-.is-active::before {
+.is-active::after {
   content: "";
   position: absolute;
   background: #00acdc;
   width: 100%;
   border-radius: 8px;
   height: 4px;
-  top: 30.5px;
+  left: 0;
+  top: 56px;
 }
 
 .hover:hover {
