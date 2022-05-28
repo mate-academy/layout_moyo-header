@@ -1,1 +1,57 @@
-/* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Medium.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.list {
+  list-style: none;
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.menu {
+  display: flex;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::before {
+  content: "";
+  position: absolute;
+  background: #00acdc;
+  width: 100%;
+  border-radius: 8px;
+  height: 4px;
+  top: 30.5px;
+}
+
+.hover:hover {
+  color: #00acdc;
+}
