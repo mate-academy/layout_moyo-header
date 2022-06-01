@@ -8,7 +8,8 @@
   --color-active: #00acdc;
 }
 
-ul li {
+ul,
+li {
   list-style: none;
 }
 
@@ -26,44 +27,34 @@ a:hover {
 
 .header__container {
   display: flex;
-  margin: 0 auto;
   padding: 0 50px;
-  max-width: 1600px;
-  min-height: 60px;
-}
-
-.header__nav {
-  margin-left: auto;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {
-  margin-top: 10px;
-  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .nav__list {
-  margin: 22px;
   display: flex;
-  justify-content: space-between;
-  align-content: center;
-  width: 753px;
-}
-
-.nav__list-item {
-  margin: 0;
-  align-content: center;
-}
-
-.nav__list-item:not(:last-child) {
-  margin-right: 20px;
 }
 
 .nav__link {
-  position: relative;
-  padding: 22px 0;
-  font-size: 12px;
-  text-transform: uppercase;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  height: 60px;
   color: var(--color);
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
 }
 
 .nav__link:hover {
@@ -82,10 +73,11 @@ a:hover {
 .is-active::after {
   content: "";
   position: absolute;
-  background: var(--color-active);
   right: 0;
   left: 0;
-  bottom: -4px;
+  bottom: 0;
   width: 100%;
   height: 4px;
+  background: var(--color-active);
+  border-radius: 2px;
 }
