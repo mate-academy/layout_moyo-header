@@ -1,42 +1,17 @@
 /* Styles go here */
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
 a {
   text-decoration: none;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
 ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-ol,
 ul {
   list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 .header-nav {
@@ -60,7 +35,6 @@ img {
   justify-content: space-between;
   align-items: center;
   width: 753px;
-
 }
 
 .nav-item_linc {
@@ -80,7 +54,7 @@ img {
   color: rgb(0, 172, 220);
 }
 
-.nav-item_linc::after {
+.is-active::after {
   content: "";
   display: block;
   width: 100%;
@@ -89,15 +63,10 @@ img {
   background: rgb(0, 172, 220);
   position: absolute;
   bottom: -5px;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  box-sizing: border-box;
 }
 
-.nav-item_linc.is-active::after {
-  opacity: 1;
-}
-
-.nav-item_linc.is-active {
+.is-active {
   color: rgb(0, 172, 220);
 }
 
