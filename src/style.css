@@ -11,13 +11,10 @@ body {
   justify-content: space-between;
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  min-width: 1024px;
-  max-width: 1200px;
 }
 
-#logo {
+.moyo-logo {
   background-image: url(./images/logo.png);
-  text-indent: -9999px;
   width: 40px;
   height: 40px;
   align-self: center;
@@ -27,11 +24,15 @@ body {
   list-style: none;
   display: flex;
   margin: 0;
+  padding: 0;
 }
 
 .nav__item {
-  margin-left: 20px;
   padding: 22.5px 0;
+}
+
+.nav__item:not(:first-of-type) {
+  margin-left: 20px;
 }
 
 .nav__link {
@@ -44,11 +45,18 @@ body {
   color: #00acdc;
 }
 
-.is-active:active::after {
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
   content: "";
-  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background-color: #00acdc;
   border-radius: 8px;
   height: 4px;
-  width: inherit;
+  left: 0;
 }
