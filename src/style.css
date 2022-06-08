@@ -1,18 +1,18 @@
-/* Styles go here */
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #444;
+  margin: 0;
 }
 
 .header {
   background-color: #fff;
-  padding: 0 40px;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .list {
@@ -20,26 +20,61 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
-  justify-items: end;
-}
-
-.nav__list {
   align-items: center;
 }
 
-.nav__link {
+.__link {
   display: block;
+  margin: 0;
+  height: 40px;
+}
+
+.nav__list {
+  margin: 0 5px;
+  padding: 0 5px;
+}
+
+.nav__list:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.nav__link {
+  display: inline-block;
+  line-height: 60px;
   height: 60px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
-  font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  margin: 0 10px;
+  position: relative;
 }
 
-.logo {
-  align-self: flex-start;
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  position: relative;
+}
+
+.nav__link:active::after,
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  border-radius: 8px;
+  bottom: 0;
+}
+
+.line {
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
 }
