@@ -10,6 +10,10 @@
   padding: 0 50px;
 }
 
+.nav {
+  flex-shrink: 0;
+}
+
 .nav_list {
   padding: 0;
   display: flex;
@@ -21,7 +25,7 @@
 }
 
 .logo {
-  display: block;
+  flex-shrink: 1;
   height: 40px;
   width: 40px;
   padding-top: 10px;
@@ -29,12 +33,15 @@
 }
 
 .nav_link {
-  margin-right: 20px;
   text-decoration: none;
   color: #000;
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.nav_item {
+  margin-right: 20px;
 }
 
 .nav_link:hover {
@@ -48,10 +55,15 @@
 
 .is-active::after {
   content: "";
-  border: 2px solid #00acdc;
+  border: 1px solid #00acdc;
   border-radius: 8px;
   position: absolute;
-  top: 55px;
+  top: 56px;
   background-color: #00acdc;
-  width: 90%;
+  width: 95%;
+}
+
+.nav_item:last-child {
+  padding-right: 0;
+  margin-right: 0;
 }
