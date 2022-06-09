@@ -16,6 +16,8 @@ body {
   justify-content: space-between;
   align-items: center;
   background: #fff;
+  box-shadow: 0 2px 4px 
+    rgba(0, 0, 0, 0.05);
 }
 
 .navigation__list {
@@ -28,47 +30,41 @@ body {
 .navigation__link {
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
   text-transform: uppercase;
   text-align: center;
   display: flex;
   align-items: center;
   height: 60px;
+  position: relative;
   cursor: pointer;
   text-decoration: none;
   color: black;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
 }
 
 .navigation__item:not(:first-child) {
   margin-left: 20px;
 }
 
+.navigation__link.is-active,
 .navigation__link:hover {
-  text-decoration: 1px underline #00acdc;
-}
-
-.navigation__link:active {
-  color: #00acdc;
-}
-
-.is-active {
   position: relative;
   color: #00acdc;
 }
 
-.is-active::after {
+.navigation__link.is-active::after {
   content: "";
   position: absolute;
+  right: 0;
   bottom: 0;
   left: 0;
   height: 4px;
-  width: 100%;
   background-color: #00acdc;
   border-radius: 8px;
 }
 
 .navigation_logo {
   align-self: center;
-  justify-content: center;
   height: 40px;
 }
