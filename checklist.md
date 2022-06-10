@@ -75,4 +75,4 @@ zone on 100% of header height
 
 12. [TESTS] - Check the [mockup](https://www.figma.com/file/KAV1NnDp7hgQtPnaD6XdOcnG/Moyo-Header?node-id=0%3A1)
 again and see the distance between `О` in `ВИДЕО` to right screen side. Link has
-no margin on the right.
+no margin on the right. ???
