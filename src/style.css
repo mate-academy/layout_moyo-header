@@ -1,1 +1,70 @@
-/* Styles go here */
+body {
+  margin: 0;
+  background: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+
+.navigation-wrapper {
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 4px 
+    rgba(0, 0, 0, 0.05);
+}
+
+.navigation__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__link {
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+}
+
+.navigation__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.navigation__link.is-active,
+.navigation__link:hover {
+  position: relative;
+  color: #00acdc;
+}
+
+.navigation__link.is-active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
+
+.navigation_logo {
+  align-self: center;
+  height: 40px;
+}
