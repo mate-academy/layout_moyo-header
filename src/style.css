@@ -1,1 +1,66 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.list {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.navigation:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.box:link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 60px;
+  color: #000;
+  position: relative;
+}
+
+.box:visited {
+  color: #000;
+}
+
+.box.is-active,
+.box:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #00acdc;
+}
