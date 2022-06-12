@@ -1,98 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  text-transform: uppercase;
   margin: 0;
-  background-color: #e5e5e5;
 }
 
 .header {
   display: flex;
-  margin: auto;
-  width: 1200px;
-  height: 60px;
-  text-align: center;
-  /* border-radius: 4px; */
-
-}
-
-.nav {
-  border: 1px solid rgba(0, 172, 220, 1);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-grow: 1;
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.ul {
-  display: flex;
-  margin-top: 0;
-  margin-left: 300px;
-  margin-right: 50px;
-  height: 100%;
-  list-style: none;
-  flex-grow: 1;
-  flex-direction: row;
   justify-content: space-between;
-  /* background-color: rgb(243, 115, 72); */
+  align-items: center;
+  padding: 0 50px;
+  height: 60px;
+  background: #fff;
 }
 
-.nav_item {
+.header__nav {
   display: flex;
-  /* background-color: rgb(215, 230, 104); */
+  padding: 0 20px;
 }
 
-.nav__link { 
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.header__logo {
+  width: 40px;
+  height: 40px;
+  align-self: center;
+  justify-self: center;
+}
+
+.nav__item {
+  padding-right: 20px;
+}
+
+.nav__link {
   display: flex;
   align-items: center;
-  padding: 2px;
+  height: 60px;
   color: rgba(0, 0, 0, 1);
   text-decoration: none;
-  /* background-color: #666; */
   font-size: 12px;
+  font-weight: 500;
   font-family: Roboto, Helvetica, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
 }
 
-.logo {
-  position: absolute;
-  width: 40px;
-  left: 100px;
-  top: 10px;
-}
-
-.APPLE {
-  display: flex;
-  text-align: center;
+.apple {
   color: rgba(0, 172, 220, 1);
-  
 }
-
-/* .НОУТ_КОМП {
-  display: flex;
-  text-align: center;
-  color: rgba(0, 172, 220, 1);
-  margin: auto;
-} */
 
 .nav__link:hover {
-  color: rgba(0, 172, 220, 1);
+  color: #00acdc;
+  cursor: pointer;
 }
 
 .is-active:hover {
-  color: rgb(5, 104, 132);
-  /* border-bottom: 3px solid rgb(5, 104, 132); */
+  color: #00acdc;
 }
 
-.logo:hover {
-  color: rgb(5, 104, 132);
-  border: 1px solid rgb(5, 104, 132);
+.header__logo:hover {
+  color: rgba(0, 172, 220, 1);
+  border: 1px solid rgba(0, 172, 220, 1);
 }
 
-.APPLE::after {
+.apple::after {
   content: "";
   display: block;
-  top: 28px;
-  left: -40px;
-  width: 40px;
+  position: absolute;
+  top: 57px;
+  left: 254px;
+  width: 37px;
   height: 3px;
-  background-color: rgb(5, 104, 132);
-  position: relative;
+  border-radius: 5px;
+  background-color: rgba(0, 172, 220, 1);
 }
