@@ -24,10 +24,6 @@ body {
   padding-block: 10px;
 }
 
-.nav {
-  display: block;
-}
-
 .nav__list {
   display: flex;
   list-style-type: none;
@@ -39,8 +35,11 @@ body {
 }
 
 .nav__item {
+  display: flex;
   text-transform: uppercase;
   margin-right: 20px;
+  height: 100%;
+  align-items: center;
 }
 
 .nav__item:last-child {
@@ -48,8 +47,11 @@ body {
 }
 
 .nav__link {
+  display: flex;
   text-decoration: none;
   color: #000;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav__link:hover {
@@ -58,10 +60,8 @@ body {
 
 .nav__link_active {
   color: #00acdc;
-  display: inline-flex;
   position: relative;
-  height: 60px;
-  align-items: center;
+  height: 100%;
 }
 
 .nav__link_active::after {
@@ -71,6 +71,6 @@ body {
   height: 4px;
   content: "";
   position: absolute;
-  bottom: 0; /* if bottom 0 it doesn't work*/
+  bottom: 0;
   left: 0;
 }
