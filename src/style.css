@@ -1,1 +1,60 @@
 /* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  margin: none;
+}
+
+.header {
+  margin-top: 0.5%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.is-active {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.is-active:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.is-active:hover {
+  color: #0087ca;
+  cursor: pointer;
+}
+
+.is-active:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.is-active:visited {
+  color: #0087ca;
+}
