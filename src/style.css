@@ -1,1 +1,89 @@
-/* Styles go here */
+/* #region General styles */
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* #endregion General styles */
+
+/* #region Header stuff */
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.nav {
+  display: flex;
+  /* align-items: center; */
+  text-align: center;
+  /* margin-right: 50px; */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 50px; */
+}
+
+.logo__link {
+  height: 40px;
+}
+
+/* #endregion Header stuff */
+
+/* #region Link styles */
+
+.nav__link {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 23px 0;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.nav__link.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.nav__link.is-active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
+}
+
+/* #endregion Link styles */
