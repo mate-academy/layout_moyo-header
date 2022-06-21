@@ -38,22 +38,13 @@ body {
   cursor: pointer;
 }
 
-.is-active::after {
-  content: "";
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  height: 4px;
-  background-color: #0087ca;
-  opacity: 0;
-}
-
 .is-active:active:after {
   content: "";
-  display: inline-block;
-  position: relative;
+  display: block;
+  position: absolute;
+  top: 20px;
   width: 100%;
   height: 4px;
   background-color: #0087ca;
-  opacity: 1;
+  border-radius: 2px;
 }
