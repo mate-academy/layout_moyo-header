@@ -10,6 +10,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding: 0 50px;
 }
 
@@ -18,15 +19,22 @@ body {
 }
 
 .nav__list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  gap: 20px;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
 }
 
 .nav__link {
-  display: block;
+  display: inline-block;
   position: relative;
   padding: 20px 0;
   text-decoration: none;
