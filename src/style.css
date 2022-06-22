@@ -3,34 +3,20 @@ body {
   margin: 0;
 }
 
-@media (max-width: 1200px) {
-  .nav {
-    width: 100%;
-    margin-left: 397px;
-    margin-right: 50px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .nav {
-    width: 100%;
-    margin-left: 221px;
-    margin-right: 50px;
-  }
-}
-
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
 }
 
 .logo {
   width: 40px;
   height: 40px;
-  position: absolute;
-  top: 10px;
-  left: 50px;
+  margin: 10px 50px;
+}
+
+.nav {
+  margin-right: 50px;
 }
 
 .nav_list {
@@ -55,11 +41,15 @@ body {
   color: #000;
 }
 
-.nav_link:hover {
-  color: #00acdc;
+.nav_item {
+  margin-right: 20px;
 }
 
-[data-qa="hover"] {
+.nav_item:last-child {
+  margin-right: 0;
+}
+
+.nav_link:hover {
   color: #00acdc;
 }
 
