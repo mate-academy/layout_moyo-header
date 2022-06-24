@@ -1,1 +1,71 @@
-/* Styles go here */
+body {
+  margin: initial;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav_list,
+.nav_item {
+  padding: 0;
+  margin: 0;
+}
+/* родитель для лого и навигации*/
+.header {
+  display: flex;
+}
+/* ребёнок для header */
+.logo_link {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0 10px 50px;
+  flex-grow: 0;
+}
+/* ребёнок для header */
+.nav {
+  padding-right: 50px;
+  display: inline-block;
+  width: 100vw;
+  text-align: center;
+}
+
+/* родитель для списка навигации */
+.nav_list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  flex-grow: 2;
+}
+/* элемент флекс (элементы списка)*/
+.nav_item {
+  list-style: none;
+  display: flex;
+}
+/* непосредственно ссылки */
+.nav__link {
+  padding: 15px 5px;
+  margin: 0 5px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav__link:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active {
+  position: relative;
+}
+
+.is-active::after {
+  content: " " ;
+  position: absolute;
+  top: 40px;
+  right: 1px;
+  width: 100%;
+  height: 4px;
+  background: rgba(0, 172, 220, 1);
+  border-radius: 8px;
+}
