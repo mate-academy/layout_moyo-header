@@ -1,1 +1,83 @@
-/* Styles go here */
+.body {
+  margin: 0;
+  background-color: #e5e5e5;
+}
+
+.header {
+  min-width: 1024px;
+  max-width: 1200px;
+}
+
+.conteiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 50px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+}
+
+.child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.img {
+  display: flex;
+  justify-content: flex-start;
+  flex-shrink: 1;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 40%;
+}
+
+.a-image {
+  height: 40px;
+}
+
+.text {
+  padding-inline-start: 20px;
+}
+
+.is-normal {
+  padding: 22px 0;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+}
+
+.is-active {
+  color: rgba(0, 172, 220, 1);
+  text-decoration: none;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 21px;
+  height: 4px;
+  border-radius: 8px;
+  background: rgba(0, 172, 220, 1);
+}
+
+.is-normal:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-normal:hover::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 21px;
+  height: 4px;
+  border-radius: 8px;
+  background: rgba(0, 172, 220, 1);
+}
