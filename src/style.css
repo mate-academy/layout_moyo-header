@@ -1,3 +1,6 @@
+body {
+  margin: 0;
+}
 
 .title_part_of_sait {
   display: flex;
@@ -12,24 +15,45 @@
 
 .all-button {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .button {
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.link_button {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
+  color: black;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-  margin: 0 10px;
-  flex-grow: 1;
-
+  height: 60px;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
 }
 
-.button:hover {
-  text-decoration: underline #00acdc;
+.is-active::after {
+  content: "";
+  background: #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  height: 4px;
+  width: 37px;
+  background-repeat: no-repeat;
+  top: 56px;
+  padding: 0;
+}
+
+.link_button:hover {
+  color: #00acdc;
+  cursor: pointer;
+  height: 60px;
 }
 
 .logo {
@@ -38,27 +62,10 @@
   margin: 10px 0 10px 50px;
 }
 
-.logo:hover {
-  margin: 9px 0 9px 49px;
-  border: 1px solid #00acdc;
+.video .link_button {
+  margin-right: 50px;
 }
 
-.video {
-  margin-right: 40px;
-}
-
-.apple,
-.nout_comp {
+.apple {
   color: #00acdc;
-}
-
-.rectangle {
-  background: #00acdc;
-  border-radius: 8px;
-  position: absolute;
-  height: 4px;
-  width: 37px;
-  content: "";
-  background-repeat: no-repeat;
-  top: 64px;
 }
