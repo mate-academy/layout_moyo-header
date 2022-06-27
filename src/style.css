@@ -1,1 +1,92 @@
-/* Styles go here */
+@font-face {
+  font-family: Roboto;
+  font-weight: normal;
+  src: url(fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: bold;
+  src: url(fonts/Roboto-Bold.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0 50px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+}
+
+.logo {
+  display: flex;
+  height: 40px;
+  width: 40px;
+}
+
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item-margin {
+  margin-right: 0;
+}
+
+.nav__link {
+  position: relative;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-bottom: 23px;
+  padding-top: 23px;
+}
+
+.nav__link:hover {
+  font-weight: 500;
+  color: rgb(0, 172, 220);
+}
+
+.is-active {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgb(0, 172, 220);
+}
+
+.is-active:hover {
+  font-weight: 500;
+  color: rgb(0, 172, 220);
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: rgb(0, 172, 220);
+}
