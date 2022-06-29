@@ -1,16 +1,19 @@
 /* Styles go here */
-body {
+* {
   margin: 0;
+  padding: 0;
 }
 
 .header {
   display: flex;
   background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
-  padding: 10px 50px;
+  padding: 0 50px;
 }
 
 .logo {
@@ -18,26 +21,20 @@ body {
 }
 
 .logo--image {
-  margin: auto;
   width: 40px;
   height: 40px;
-}
-
-.nav {
-  width: 100%;
 }
 
 .nav--list {
   display: flex;
   padding: 0;
-  justify-content: flex-end;
-  width: 100%;
+  align-items: center;
   list-style: none;
   text-transform: uppercase;
 }
 
 .nav--item {
-  padding: 0;
+  display: flex;
   margin-right: 20px;
 }
 
@@ -47,9 +44,8 @@ body {
 
 .nav--link {
   color: #000;
-  padding: 26px 0;
+  padding: 23px 0;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .nav--link:hover {
@@ -57,14 +53,16 @@ body {
 }
 
 .is-active {
+  position: relative;
   color: #00acdc;
 }
 
 .is-active::after {
-  position: relative;
+  position: absolute;
+  width: 100%;
   display: block;
   content: "";
-  top: 22px;
+  top: 56px;
   background-color: #00acdc;
   border: 2px solid #00acdc;
   border-radius: 8px;
