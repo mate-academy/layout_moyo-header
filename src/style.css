@@ -1,7 +1,6 @@
 /* Styles go here */
 * {
   margin: 0;
-  padding: 0;
 }
 
 body {
@@ -9,20 +8,16 @@ body {
 }
 
 .header {
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  flex-wrap: wrap;
 }
 
-.list {
-  display: flex;
-}
-
-.nav {
+.nav__list {
   display: flex;
   list-style: none;
 }
@@ -35,9 +30,6 @@ body {
   font-style: normal;
   text-decoration: none;
   color: black;
-}
-
-.nav .nav__link {
   height: 60px;
   margin-left: 20px;
   display: flex;
@@ -52,15 +44,10 @@ body {
 .logo {
   width: 40px;
   height: 40px;
-  margin-left: 50px;
 }
 
 .is-active {
   color: #00acdc;
-}
-
-.nav__item:last-child {
-  margin-right: 50px;
 }
 
 .is-active::after {
@@ -72,4 +59,8 @@ body {
   bottom: 0;
   background-color: #00acdc;
   border-radius: 8px;
+}
+
+.nav__list:first-child {
+  margin-left: 0;
 }
