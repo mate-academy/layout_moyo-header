@@ -1,86 +1,85 @@
-:root {
-  --height-1200: 60px;
-  --width-1200: 1200px;
-  --height-1024: 60px;
-  --width-1024: 1024px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 * {
-  box-sizing: border-box;
-}
-
-nav {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  display: flex;
-  align-items: center;
-}
-
-nav ul {
   padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+header {
   width: 100%;
-  margin-right: 22.5px;
   display: flex;
   justify-content: space-between;
 }
 
-nav li {
-  display: inline-block;
-  height: 60px;
-  line-height: 60px;
-}
-
-nav a {
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  display: block;
-  color: black;
-  height: var(--height);
-  line-height: var(--height);
-  text-transform: uppercase;
-}
-
-nav a:visited {
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  color: black;
-}
-
-nav a:hover {
-  color: #00acdc;
-  border-bottom: 4px solid #00acdc;
-}
-
-.is-active:active {
-  color: #00acdc;
-}
-
-nav::after {
-  content: "";
-  background-image: url("images/logo.png");
+.main-logo {
   height: 40px;
   width: 40px;
+  margin: 10px 0 10px 50px;
+}
+
+.nav {
+  display: flex;
+  margin-right: 50px;
+}
+
+.nav_list {
+  padding: 0;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+ul li {
+  list-style-type: none;
+  display: flex;
+  align-items: stretch;
+  margin: 0 10px;
+}
+
+ul li:first-child {
+  margin-left: 0;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+.nav_link {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: black;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* .nav_link:visited {
+  color: black;
+} */
+
+.nav_link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
   position: absolute;
-  left: 50px;
-}
-
-/* Styles for different resolutions */
-@media screen and (min-width: 1025px) {
-  .nav {
-    padding-left: 396px;
-    width: var(--width-1200);
-    height: var(--height-1200);
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .nav {
-    padding-left: 220px;
-    width: var(--width-1024);
-    height: var(--height-1024);
-  }
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
 }
