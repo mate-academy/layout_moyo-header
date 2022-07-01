@@ -6,11 +6,11 @@ body {
   margin: 0;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .logo_link {
@@ -22,7 +22,6 @@ header {
 .nav_link {
   text-decoration: none;
   color: #000;
-  padding: 0 10px;
   position: relative;
   display: flex;
   align-items: center;
@@ -32,6 +31,10 @@ header {
 
 .nav_link:hover {
   color: #00acdc;
+}
+
+.list_item:not(:last-of-type) > .nav_link {
+  margin-right: 20px;
 }
 
 .nav_list {
@@ -48,10 +51,7 @@ header {
   line-height: 14px;
   margin: 0;
   height: 100%;
-}
-
-.nav_list:last-child {
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
 .is-active {
@@ -64,7 +64,6 @@ header {
   content: "";
   border-bottom: 4px solid #00acdc;
   border-radius: 8px;
-  left: 10px;
-  right: 10px;
-  top: 56px;
+  width: 100%;
+  bottom: 0;
 }
