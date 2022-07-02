@@ -4,14 +4,6 @@
 }
 
 .header {
-  min-width: 1024px;
-  max-width: 1200px;
-}
-
-.conteiner {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
   padding-right: 50px;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
@@ -22,10 +14,6 @@
 }
 
 .child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   flex-shrink: 0;
 }
 
@@ -33,38 +21,53 @@
   display: flex;
   justify-content: flex-start;
   flex-shrink: 1;
-  padding-left: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  align-items: center;
   width: 40%;
 }
 
 .a-image {
+  position: absolute;
   height: 40px;
+  left: 50px;
 }
 
-.text {
-  padding-inline-start: 20px;
+.ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   margin: 0;
 }
 
+.text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-inline-start: 20px;
+  margin: 0;
+  list-style-type: none;
+}
+
 .is-normal {
-  padding: 24px 0;
+  position: relative;
+  padding: 23px 0;
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
 }
 
 .is-active {
-  padding: 24px 0;
+  position: relative;
+  padding: 23px 0;
   color: rgba(0, 172, 220, 1);
   text-decoration: none;
 }
 
 .is-active::after {
   content: "";
+  position: absolute;
+  width: 100%;
   display: block;
-  position: relative;
-  top: 21px;
+  bottom: 0;
   height: 4px;
   border-radius: 8px;
   background: rgba(0, 172, 220, 1);
@@ -76,9 +79,10 @@
 
 .is-normal:hover::after {
   content: "";
+  position: absolute;
   display: block;
-  position: relative;
-  top: 21px;
+  width: 100%;
+  bottom: 0;
   height: 4px;
   border-radius: 8px;
   background: rgba(0, 172, 220, 1);
