@@ -10,13 +10,18 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
   margin: 10px 0 10px 50px;
 }
 
-.header_list {
+.nav_list {
   display: flex;
-  /* background: url(./images/logo.png) no-repeat 50px 10px; */
   height: 60px;
   justify-content: flex-end;
   align-items: center;
@@ -33,10 +38,10 @@
   margin: 0 10px;
   font-family: "Roboto" , sans-serif;
   font-size: 12px;
-  line-height: 14px;
   text-decoration: none;
   color: black;
   text-transform: uppercase;
+
 }
 
 .text_bar:hover {
@@ -44,17 +49,23 @@
 
 }
 
-.underline {
-  width: 47px;
+.is-active::after {
+  content: "";
+  width: 37px;
   height: 4px;
   border-radius: 8px;
-  position: absolute;
-  font-size: 25px;
-  margin-left: 5px;
+  display: block;
   background: #00acdc;
-  margin-top: 50px;
+  align-items: flex-end;
+  margin-top: 19px;
 }
 
 .is-active {
   color: #00acdc;
+}
+
+.active .text_bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
