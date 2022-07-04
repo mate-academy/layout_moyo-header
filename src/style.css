@@ -8,11 +8,11 @@ ul {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
-.header_logo {
-  margin: 10px 0 10px 50px;
-
+.header_logo img {
+  margin: 11px 0 10px 50px;
 }
 
 .header__container {
@@ -25,7 +25,7 @@ a {
 
 .nav__list {
   display: flex;
-  padding-right: 50px;
+  align-items: center;
 }
 
 .nav__item {
@@ -38,20 +38,25 @@ a {
 }
 
 .nav__item:last-child {
-  margin-right: 0;
+  margin-right: 50px;
 }
 
 .nav__list a:hover {
   color: #00acdc;
 }
 
-.is-active::after {
+a.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+a.is-active::after {
   content: "";
   display: block;
-  width: inherit;
+  width: 100%;
   height: 4px;
   background: #00acdc;
-  right: 0;
-  top: 18.5px;
-  position: relative;
+  position: absolute;
+  top: 33px;
+  border-radius: 8px;
 }
