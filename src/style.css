@@ -1,19 +1,34 @@
 .header {
   margin: 0;
-  padding: 0 50px;
+  /* padding: 0 50px; */
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-content: center;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+.header a {
+  flex-grow: 1;
+}
+
 .logo {
+  cursor: pointer;
   padding: 10px;
 }
 
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
 .navigation {
+  flex-grow: 2;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -21,8 +36,6 @@
 }
 
 .link {
-  padding: 20px 0;
-  margin-left: 10px;
   color: #000;
   text-decoration: underline transparent;
 }
@@ -47,7 +60,7 @@
   width: 100%;
   height: 4px;
   left: 0;
-  bottom: 0;
+  bottom: -18px;
   background-color: #00acdc;
   border-radius: 8px;
 }
