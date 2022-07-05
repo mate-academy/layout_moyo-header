@@ -1,5 +1,6 @@
 html {
   font-family: "Roboto", sans-serif;
+  font-style: normal;
   font-size: 12px;
 }
 
@@ -10,21 +11,24 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  padding-right: 50px;
+}
+
+.nav {
+  margin-right: 50px;
 }
 
 .header-logo {
-  margin-left: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0 10px 50px;
+  height: 40px;
+  width: 40px;
 }
   
 .header-nav {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   text-transform: uppercase;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -36,8 +40,9 @@ body {
 .nav-link {
   color: #000;
   display: flex;
-  height: 60px;
+  line-height: 60px;
   align-items: center;
+  text-decoration: none;
 }
   
 .is-active {
@@ -52,8 +57,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 4px;
-  padding: 0;
-  border-radius: 8px;
+  left: 0;
 }
   
 .nav-link:hover {
@@ -62,8 +66,4 @@ body {
   
 .nav-list:last-child {
   margin-right: 0;
-}
-  
-a:link {
-  text-decoration: none;
 }
