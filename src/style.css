@@ -1,8 +1,6 @@
 /* Styles go here */
 body {
-  font-family: Roboto, sans-serif;
   margin: 0;
-  font-size: 12px;
 }
 
 .header {
@@ -17,20 +15,23 @@ body {
 }
 
 .nav__list {
+  margin: 0;
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 23px 0 19px;
+  align-items: center;
+  padding: 19px 0 22px;
 }
 
 .nav__link {
-  font-style: normal;
+  position: relative;
   text-decoration: none;
-  color: #000;
-  font-weight: 500;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
   text-transform: uppercase;
+  font-weight: 500;
   line-height: 14px;
-  padding: 23px 0 22px;
+  color: #000;
+  padding: 22.5px 0;
   margin-left: 20px;
 }
 
@@ -43,13 +44,12 @@ body {
 }
 
 .is-active::after {
-  display: block;
+  content: "";
   background-color: #00acdc;
-  content: "-";
-  line-height: 4px;
   border-radius: 8px;
-  position: relative;
+  height: 4px;
   width: 37px;
-  top: 19px;
-  left: 20px;
+  position: absolute;
+  top: 56px;
+  left: 0;
 }
