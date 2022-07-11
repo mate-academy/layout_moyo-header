@@ -1,1 +1,82 @@
-/* Styles go here */
+@font-face {
+  font-family: Roboto;
+  src: url(./fonts/Roboto-Medium.ttf);
+}
+
+.body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+  background: #e5e5e5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  height: 40px;
+  margin-left: 50px;
+}
+
+.nav {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: block;
+  padding-top: 22.5px;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.nav__link,
+.nav__link:visited,
+.nav__link:hover,
+.nav__link:active {
+  text-decoration: none;
+}
+
+.nav__link::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  height: 4px;
+  bottom: 0;
+  margin-top: 18.5px;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  visibility: visible;
+  opacity: 1;
+}
