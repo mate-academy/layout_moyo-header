@@ -1,105 +1,76 @@
-/* Styles go here */
-@import url(https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Roboto:wght@300;400;500&display=swap);
-
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
-  max-width: 1200px;
-  /* margin: 0; */
+  display: block;
+}
+
+.nav_wraper {
   display: flex;
-  height: 60px;
-  /* justify-content: space-between; */
-  /* margin: auto; */
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {
-  display: flex;
-  margin-left: 50px;
-  align-items: center;
-  margin-right: 282.35px;
-}
-
-.header__link {
+  align-self: center;
+  justify-content: center;
   height: 40px;
 }
 
-.header__nav {
-  width: 100%;
-}
-
 .header__nav_list {
-  /* width: 100%; */
-  height: 100%;
   display: flex;
+}
+
+ul {
   list-style: none;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-right: 50px;
-  margin-bottom: 0;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
 }
 
-.header__nav_list > li {
-  height: 100%;
-  align-items: center;
-  display: flex;
-
-}
-
-.header__nav_list > li > a {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
-li > a:hover {
-  color: #00acdc;
-}
-
-li:hover {
-  border-bottom: 4px solid #00acdc;
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
 }
 
 .nav__list-_style {
-  text-decoration: none;
-  color: black;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #000;
+  height: 60px;
 }
 
 .is-active {
-  color: #00acdc;
-  /* position: relative; */
-  height: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 2px;
-}
-
-.line {
-  width: 37px;
-  height: 4px;
-  background: #00acdc;
-  border-radius: 8px;
   position: relative;
-  top: 19px;
+  color: #00acdc;
 }
 
-@media screen and (max-width: 1024px) {
-  .header__logo {
-    display: flex;
-    margin-left: 50px;
-    align-items: center;
-    margin-right: 131px;
-  }
+a {
+  text-decoration: none;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
+
+.nav__list-_style:hover {
+  color: #00acdc;
+}
+
+.nav_item:not(:first-child) {
+  margin-left: 20px;
 }
