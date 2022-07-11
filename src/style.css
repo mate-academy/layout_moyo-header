@@ -1,10 +1,7 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 body {
   margin: 0;
-  min-width: 1024px;
-  max-width: 1200px;
   font-family: Roboto, sans-serif;
 }
 
@@ -24,19 +21,21 @@ body {
 }
 
 .logo {
-  flex-basis: 40px;
+  display: flex;
 }
 
-.nav__item {
-  padding: 0 10px;
-  line-height: 60px;
-  text-transform: uppercase;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
+  position: relative;
   color: black;
   font-size: 12px;
+  padding: 23px 0;
   text-decoration: none;
+  line-height: 60px;
+  text-transform: uppercase;
 }
 
 .nav__link:hover,
@@ -44,9 +43,11 @@ body {
   color: #00acdc;
 }
 
-.nav__link:hover::after,
+.nav__link:hover:not([data-qa="hover"]):after,
 .is-active:after {
-  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   content: "";
   background-color: #00acdc;
   height: 4px;
