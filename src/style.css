@@ -1,1 +1,56 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logo {
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  position: relative;
+  color: black;
+  font-size: 12px;
+  padding: 23px 0;
+  text-decoration: none;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+.nav__link:hover,
+.is-active {
+  color: #00acdc;
+}
+
+.nav__link:hover:not([data-qa="hover"]):after,
+.is-active:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background-color: #00acdc;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+}
