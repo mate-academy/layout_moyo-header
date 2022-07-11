@@ -1,6 +1,8 @@
 /* Styles go here */
 body {
   margin: 0;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
 }
 
 .header {
@@ -11,28 +13,30 @@ body {
 }
 
 .header__logo {
+  width: 40px;
+  height: 40px;
   display: flex;
 }
 
 .nav__list {
-  margin: 0;
   list-style: none;
   display: flex;
-  align-items: center;
-  padding: 19px 0 22px;
+  margin: 0;
+}
+
+li {
+  padding: 23px 0;
 }
 
 .nav__link {
-  position: relative;
   text-decoration: none;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
+  color: #000;
+  margin-left: 20px;
   text-transform: uppercase;
   font-weight: 500;
-  line-height: 14px;
-  color: #000;
-  padding: 22.5px 0;
-  margin-left: 20px;
+  position: relative;
+  padding: 23px 0;
+  font-size: 12px;
 }
 
 .nav__link:hover {
@@ -44,12 +48,12 @@ body {
 }
 
 .is-active::after {
-  content: "";
-  background-color: #00acdc;
-  border-radius: 8px;
-  height: 4px;
-  width: 37px;
   position: absolute;
-  top: 56px;
+  content: "";
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+  width: 37px;
+  bottom: 0;
   left: 0;
 }
