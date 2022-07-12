@@ -1,12 +1,10 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   background-color: rgba(229, 229, 229, 1);
-  padding: 10px 0;
+  margin: 0;
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -35,7 +33,6 @@ body {
 
 .link-list {
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
   height: 100%;
   justify-content: space-between;
@@ -49,11 +46,11 @@ body {
 .link-row {
   height: 100%;
   margin-left: 20px;
-  position: relative;
 }
 
 .link {
   text-decoration: none;
+  position: relative;
   text-transform: uppercase;
   align-items: center;
   display: block;
@@ -65,11 +62,8 @@ body {
   transition: color 0.3s;
 }
 
-.link:hover {
-  color: #00acdc;
-}
-
-.is-active:active {
+.link:hover,
+.is-active {
   color: #00acdc;
 }
 
@@ -81,6 +75,6 @@ body {
   height: 4px;
   bottom: 0;
   left: 0;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: #00acdc;
 }
