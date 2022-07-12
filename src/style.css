@@ -1,1 +1,80 @@
-/* Styles go here */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(229, 229, 229, 1);
+  margin: 0;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 100%;
+}
+
+.navigation {
+  display: block;
+}
+
+.link-list {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  justify-content: space-between;
+
+}
+
+.link-list:first-child {
+  margin-left: 0;
+}
+
+.link-row {
+  height: 100%;
+  margin-left: 20px;
+}
+
+.link {
+  text-decoration: none;
+  position: relative;
+  text-transform: uppercase;
+  align-items: center;
+  display: block;
+  height: 100%;
+  color: black;
+  white-space: nowrap;
+  line-height: 60px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.link:hover,
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px;
+  background-color: #00acdc;
+}
