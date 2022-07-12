@@ -1,1 +1,67 @@
-/* Styles go here */
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.field {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.link {
+  margin-left: 20px;
+  line-height: 52px;
+  padding-top: 4px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+
+.link:first-child {
+  margin-left: 0;
+}
+
+[alt="icon"] {
+  position: relative;
+  top: 10px;
+}
+
+.link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.link .is-active {
+  padding-top: 6px;
+}
+
+.is-active ::after {
+  display: block;
+  content: "";
+  color: #00acdc;
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+  width: 100%;
+}
