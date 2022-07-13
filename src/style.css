@@ -1,1 +1,85 @@
-/* Styles go here */
+.body {
+  margin: 0;
+  background-color: #e5e5e5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+}
+
+.nav {
+  flex-shrink: 0;
+}
+
+.img {
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.nav__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-inline-start: 20px;
+  margin: 0;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.is-normal {
+  position: relative;
+  padding: 23px 0;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+}
+
+.is-active {
+  position: relative;
+  padding: 23px 0;
+  color: rgba(0, 172, 220, 1);
+  text-decoration: none;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  display: block;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+  background: rgba(0, 172, 220, 1);
+}
+
+.is-normal:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-normal:hover::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+  background: rgba(0, 172, 220, 1);
+}
