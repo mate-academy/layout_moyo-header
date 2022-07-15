@@ -1,13 +1,12 @@
 body {
   margin: 0;
-  background-color: brown;
 }
 
 header {
   margin: auto;
   display: flex;
   width: 100%;
-  min-width: 1024px;
+  flex-basis: 1024px;
   max-width: 1200px;
   background: #fff;
   justify-content: space-between;
@@ -34,10 +33,12 @@ nav {
 .nav__item {
   position: relative;
   margin: 10px;
+  flex-shrink: 0;
 }
 
 .nav__link {
   display: flex;
+  position: relative;
   padding: 22.5px 0;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
@@ -54,6 +55,7 @@ nav {
 
 .nav__link:hover,
 .is-active {
+  position: relative;
   color: rgb(0, 172, 220);
 }
 
