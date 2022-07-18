@@ -14,13 +14,13 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 
 ### Requirements:
 - pay attention the mock is adaptive. Develop the layout to fit on 1024px and 1200px the same as on the mock.
-- reset browser default margins
-- use images from [src/images](src/images)
-- Use semantic tags: `<header>`, `<nav>`, `ul`
-- change links styles on `:hover`
++ reset browser default margins
++ use images from [src/images](src/images)
++ Use semantic tags: `<header>`, `<nav>`, `ul`
++ change links styles on `:hover`
 - follow styles from the mock
-- the link with `blue` color and line below is an active link. It should have `class="is-active"` and relevant styles.
-- the link with only `blue` color is an example of `:hover` styles. Every link in the row should have `blue` color on `:hover`.
++ the link with `blue` color and line below is an active link. It should have `class="is-active"` and relevant styles.
++ the link with only `blue` color is an example of `:hover` styles. Every link in the row should have `blue` color on `:hover`.
 - add `data-qa="hover"` attribute to the 4th link for testing (`Ноутбуки и компьютеры`)
 ---
 --> [CHECKLIST](https://github.com/mate-academy/layout_moyo-header/blob/master/checklist.md)
