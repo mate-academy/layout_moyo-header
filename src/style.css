@@ -1,1 +1,84 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+
+  --base-color: #00acdc;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header__logo {
+  display: block;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav__menu-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__menu-link {
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #000;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.nav__menu-link:hover {
+  color: var(--base-color);
+}
+
+.nav__menu-link.is-active {
+  color: var(--base-color);
+}
+
+.nav__menu-link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--base-color);
+}
