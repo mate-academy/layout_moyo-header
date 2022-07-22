@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,19 +10,6 @@ body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 
   --base-color: #00acdc;
-}
-
-a {
-  text-decoration: none;
-  color: unset;
-}
-
-img {
-  display: block;
-}
-
-ul {
-  list-style: none;
 }
 
 .container {
@@ -44,9 +29,14 @@ ul {
   display: block;
 }
 
+.header__logo-img {
+  display: block;
+}
+
 .nav__menu {
   display: flex;
   align-items: center;
+  list-style: none;
 }
 
 .nav__menu-item:not(:last-child) {
@@ -62,6 +52,7 @@ ul {
   color: #000;
   transition: 0.3s ease;
   position: relative;
+  text-decoration: none;
 }
 
 .nav__menu-link:hover {
