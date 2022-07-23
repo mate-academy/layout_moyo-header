@@ -3,7 +3,7 @@ body {
   box-sizing: border-box;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   background: #fff;
@@ -13,7 +13,6 @@ header {
 
 .nav__list {
   display: flex;
-  flex-direction: row;
   text-transform: uppercase;
   height: 60px;
   margin: auto 50px auto 0;
@@ -45,10 +44,6 @@ header {
   line-height: 60px;
 }
 
-.video {
-  margin-right: 0;
-}
-
 .is-active {
   margin-left: 0;
   color: #00acdc;
@@ -65,10 +60,18 @@ header {
   border-radius: 8px;
 }
 
-.listItem {
+.nav__item {
   display: flex;
 }
 
-a:hover {
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  margin-right: 0;
+}
+
+.link:hover {
   color: #00acdc;
 }
