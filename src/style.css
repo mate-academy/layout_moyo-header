@@ -1,1 +1,64 @@
 /* Styles go here */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header_nav {
+  padding: 0;
+}
+
+.nav_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav_item:not(:last-child) {
+  padding-right: 20px;
+}
+
+.nav_link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 23px 0;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+}
+
+.nav_link:hover {
+  color: #00acdc;
+}
+
+.header_logo {
+  width: 40px;
+  height: 40px;
+}
