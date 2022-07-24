@@ -6,22 +6,16 @@ body {
 }
 
 .header {
-  --height: 60px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  position: absolute;
-  left: 50px;
   width: 40px;
   height: 40px;
-}
-
-.nav_link {
-  margin-right: 50px;
 }
 
 .nav_list {
@@ -31,28 +25,21 @@ body {
   margin: 0;
 }
 
-.nav_li {
-  margin-left: 20px;
-}
-
-.nav_li:first-child {
-  margin: 0;
+.nav_li:not(:first-child) {
+  padding-left: 20px;
 }
 
 .link {
   position: relative;
   display: flex;
   align-items: center;
-  height: var(--height);
+  padding: 23px 0;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
 }
 
-.link:hover {
-  color: #00acdc;
-}
-
+.link:hover,
 .is-active {
   color: #00acdc;
 }
