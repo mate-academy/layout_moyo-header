@@ -11,7 +11,7 @@
 }
 
 .nav {
-  flex-shrink: 0;
+  display: block;
 }
 
 .nav_list {
@@ -29,15 +29,17 @@
 }
 
 .nav_link {
+  position: relative;
   text-decoration: none;
   color: #000;
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: 60px;
   font-size: 12px;
   line-height: 14px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
+  align-items: center;
+  font-weight: 500;
 }
 
 .nav_item {
@@ -55,10 +57,9 @@
 
 .is-active::after {
   content: "";
-  border: 2px solid #00acdc;
-  border-radius: 8px;
+  border-radius: 2px;
   position: absolute;
-  bottom: 0
+  bottom: 0;
   background-color: #00acdc;
   width: 100%;
   height: 4px;
@@ -67,4 +68,8 @@
 .nav_item:last-child {
   padding-right: 0;
   margin-right: 0;
+}
+
+.nav_item:first-child {
+  padding-left: 0;
 }
