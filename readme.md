@@ -1,7 +1,7 @@
 # Moyo header
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://yevhenii-stanchenko.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://yevhenii-stanchenko.github.io/layout_moyo-header/report/html_report/)
 
 > Follow [these instructions](https://mate-academy.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
@@ -42,3 +42,34 @@ html (you should have usual text with first uppercase letter in html)
 - Logo should also be a link to the main page of the website (#home). But it
 should not be part of `nav`.
 
+
+
+### Требования:
+- обратите внимание, макет адаптивный. Разработайте макет, чтобы он подходил для 1024px и 1200px так же, как на макете.
+- сбросить поля браузера по умолчанию
+- использовать изображения из [src/images](src/images)
+- Используйте семантические теги: `<header>`, `<nav>`, `ul`
+- изменить стили ссылок на `:hover`
+- следовать стилям из макета
+- ссылка с синим цветом и чертой внизу является активной ссылкой. Он должен иметь `class="is-active"` и соответствующие стили.
+- ссылка только с синим цветом является примером стилей :hover. Каждая ссылка в строке должна иметь синий цвет при наведении курсора.
+- добавить атрибут `data-qa="hover"` к 4-й ссылке для тестирования (`Ноутбуки и компьютеры`)
+---
+--> [КОНТРОЛЬНЫЙ СПИСОК] (https://github.com/mate-academy/layout_moyo-header/blob/master/checklist.md)
+
+### Советы и подсказки
+- Проверьте еще раз, если вы добавили `data-qa="hover"` и `class="is-active"`
+требуется для тестов
+- Не используйте вкладки. Используйте `2 пробела` для отступа.
+- Не используйте повторяющиеся стили.
+- Не копируйте все стили из Figma. Подумайте, какие из них актуальны.
+Неравномерные размеры (например, `line-height: 14.6px`) определенно бесполезны.
+- Не используйте лишние элементы для синей линии. Выясните, как работать с `::after`
+и позиционирование
+- Проверьте стили шрифтов. Используйте [шрифты Google](https://fonts.google.com/)
+- Ссылки в `nav` должны иметь кликабельную область над и под текстом
+- Буквы верхнего регистра для `nav__list` сделаны со стилями, а не жестко закодированы в
+html (у вас должен быть обычный текст с первой заглавной буквой в html)
+- Не устанавливайте высоту для `header` явно. Пусть контент (ссылки) диктует это.
+- Логотип также должен быть ссылкой на главную страницу сайта (#home). Но это
+не должен быть частью `nav`.
