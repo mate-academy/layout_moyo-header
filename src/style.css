@@ -14,18 +14,21 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-img {
-  height: 40px;
-  width: 40px;
-}
-
 .logo {
   margin: 0;
   padding: 0;
   text-decoration: none;
   height: 40px;
   width: 40px;
+}
 
+.click_block {
+  display: flex;
+  position: relative;
+}
+
+.click_block:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav-link,
@@ -34,14 +37,16 @@ img {
   flex-direction: column;
   color: #000;
   text-decoration: none;
-  padding-top: 22.5px;
+  padding: 23px 0;
 }
 
 .is-active::after {
   content: "";
   height: 4px;
   border-radius: 8px;
-  margin-top: 19px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   background-color: #00acdc;
 }
 
@@ -53,17 +58,13 @@ img {
   color: #00acdc;
 }
 
-li:not(:last-child) {
-  margin-right: 20px;
-}
-
 .nav-list {
   display: flex;
+  position: relative;
   justify-content: space-between;
   list-style-type: none;
   text-decoration: none;
   text-transform: uppercase;
-
   margin: 0;
   padding: 0;
 }
