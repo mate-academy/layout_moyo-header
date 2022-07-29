@@ -1,1 +1,64 @@
-/* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0.1px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  margin: 10px 50px;
+  cursor: default;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  margin: 1px 50px;
+  padding: 0;
+  list-style-type: none;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.li {
+  margin: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.li:hover {
+  color: #00acdc;
+  text-decoration: underline;
+  cursor: default;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  margin-top: 20px;
+  content: "";
+  display: block;
+  background-color: #00acdc;
+  height: 4px;
+  width: 37px;
+  border-radius: 8px;
+}
