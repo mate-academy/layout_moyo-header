@@ -1,7 +1,8 @@
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
+  box-sizing: border-box;
 }
 
 .header {
@@ -23,11 +24,9 @@ body {
   padding: 0;
 }
 
-.nav__item {
-  padding-top: 23px;
-}
-
 .nav__link {
+  position: relative;
+  display: block;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
@@ -47,10 +46,13 @@ body {
 }
 
 .is-active::after {
-  display: block;
+  position: absolute;
+  top: 37px;
+  left: 0;
   content: "";
   background-color: #00acdc;
   height: 4px;
+  width: 100%;
   border-radius: 8px;
   margin-top: 19px;
 }
