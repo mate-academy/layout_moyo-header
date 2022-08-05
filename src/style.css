@@ -11,7 +11,6 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 60px;
   align-items: center;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -24,9 +23,11 @@ body {
 }
 
 .MOYOimg {
+  margin-top: 7px;
   margin-left: 20px;
   float: left;
   margin-bottom: 10px;
+  margin-right: 0;
 }
 
 .nav_list {
@@ -43,7 +44,13 @@ body {
   display: flex;
 }
 
-.is-active:focus::after {
+.is-active {
+  text-decoration: none;
+  color: #00acdc;
+  padding: 10px 0;
+}
+
+.is-active::after {
   position: relative;
   top: 10.5px;
   display: block;
@@ -54,21 +61,21 @@ body {
   border-radius: 8px;
 }
 
-.nav_links {
+.nav_link {
   text-decoration: none;
   color: black;
   padding: 10px 0;
 }
 
-.nav_links:hover {
+.nav_link:hover {
   color: #00acdc;
 }
 
-.nav_links:focus {
+.nav_link:focus {
   color: #00acdc;
 }
 
-.nav_links:focus::after {
+/* .nav_link:focus::after {
   position: relative;
   top: 10.5px;
   display: block;
@@ -77,4 +84,4 @@ body {
   height: 4px;
   background-color: #00acdc;
   border-radius: 8px;
-}
+} */
