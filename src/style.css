@@ -1,15 +1,10 @@
-@font-face {
-  font-family: "Roboto";
-  src: url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
-}
-
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-header {
+.header {
+  padding: 0 50px;
+  box-sizing: border-box;
   display: flex;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -18,32 +13,31 @@ header {
 }
 
 .nav__list {
+  list-style: none;
   display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .nav__item {
-  display: block;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  align-items: stretch;
-  justify-content: start;
-  text-transform: uppercase;
+  margin-right: 20px;
 }
 
-.nav {
-  margin-right: 50px;
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
+  position: relative;
   text-decoration: none;
   color: #000;
-  padding-left: 20px;
-}
-
-.nav__item:first-child {
-  padding-left: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 60px;
+  padding: 23px 0;
 }
 
 .image {
@@ -52,25 +46,26 @@ header {
 }
 
 .logo {
-  margin: 10px 0 10px 50px;
+  height: 40px;
+  width: 40px;
+  margin: 10px 0;
 }
 
-.is-active,
 .nav__link:hover {
   color: #00acdc;
 }
 
-a.is-active {
-  position: relative;
+.is-active {
+  color: #00acdc;
 }
 
-a.is-active::after {
+.is-active::after {
+  content: "";
   position: absolute;
-  width: 70%;
-  content: " ";
   height: 4px;
   background-color: #00acdc;
   border-radius: 8px;
-  left: 19px;
-  top: 40px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
