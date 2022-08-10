@@ -13,32 +13,28 @@ body {
   
 .container {
   display: flex;
-  min-width: 1024px;
-  max-width: 1200px;
+  padding: 0 50px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   justify-content: space-between;
   align-items: center;
 }
   
-.container > * {
-  margin: 0 50px;
-}
-  
 .nav_list {
   margin: 0;
   font-size: 0;
+  padding: 0;
 }
   
 .nav_item {
   display: inline-block;
   text-transform: uppercase;
-  margin: 0 10px;
+  margin-right: 20px;
   padding: 22.5px 0;
 }
   
 .nav_list > :last-child {
-  margin: auto 0 auto 10px;
+  margin: 0;
 }
   
 .nav_link {
@@ -55,11 +51,13 @@ body {
   color: #00acdc;
 }
   
+.is-active,
 .nav_link:active {
   color: #00acdc;
   position: relative;
 }
   
+.is-active::after,
 .nav_link:active::after {
   display: inline-block;
   background-color: #00acdc;
