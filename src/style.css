@@ -1,1 +1,75 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+:root {
+  --primary-font-color: #000;
+  --secondary-font-color: #00acdc;
+  --primary-bg-color: #fff;
+  --secondary-bg-color: #e9e9e9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  background-color: var(--secondary-bg-color);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 60px;
+  background-color: var(--primary-bg-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.brand__link {
+  height: 40px;
+  width: 40px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: flex;
+  font-style: normal;
+  color: var(--primary-font-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 60px;
+}
+
+.nav__link:hover {
+  color: var(--secondary-font-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--secondary-font-color);
+}
+
+.is-active::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: var(--secondary-font-color);
+  border-radius: 2px;
+  height: 4px;
+  width: 100%;
+}
