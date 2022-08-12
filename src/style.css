@@ -7,37 +7,37 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
+  align-items: center;
+  line-height: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  margin: 10px 0;
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+.nav {
+  margin-right: 50px;
 }
 
 .nav__list {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+  justify-content: space-between;
   padding: 0;
-  height: 100%;
+  
 }
 
 .nav__item {
   list-style: none;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-  margin: 20px;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -53,14 +53,13 @@
 
 .is-active::after {
   content: "";
-  display: block;
   position: absolute;
-  height: 4px;
-  background: #00acdc;
-  border-radius: 8px;
-  width: 100%;
-  top: 23px;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 8px;
+  height: 4px;
+  background-color: #00acdc;
 }
 
 a:hover {
