@@ -1,67 +1,90 @@
-@import "./utils/reset";
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  background: #fff;
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-light-blue: #00acdc;
 }
 
-.page-header {
+.page {
+  font-size: 62.5%;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+}
+
+.page__body {
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+.header {
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
 
-  &__logo {
-    display: flex;
-  }
+.header__logo {
+  display: flex;
+}
+
+.header__logo-img {
+  max-width: 100%;
+
+  object-fit: contain;
+  object-position: center;
 }
 
 .nav__list {
   margin: 0;
   padding: 0;
   display: flex;
+  list-style-type: none;
 }
 
-.nav__item {
-  height: 60px;
+.nav__item:not(:first-child) {
   padding-left: 20px;
-  display: flex;
-
-  &:first-child {
-    padding-left: 0;
-  }
-
 }
 
 .nav__link {
-  align-items: center;
+  height: 60px;
   display: flex;
-  color: #000;
-  cursor: pointer;
-  text-decoration: none;
-  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
 
-  &:hover {
-    color: #00acdc;
-  }
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 14px;
+  color: var(--color-black);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--color-light-blue);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color-light-blue);
   position: relative;
+}
 
-  &::after {
-    content: "";
-    height: 4px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #00acdc;
-    border-radius: 8px;
-  }
+.is-active::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: block;
+  height: 4px;
+
+  background-color: var(--color-light-blue);
+  border-radius: 8px;
 }
