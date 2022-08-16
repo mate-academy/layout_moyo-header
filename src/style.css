@@ -27,21 +27,13 @@ a {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  padding: 0 50px;
 }
 
 .logo_link {
   height: 40px;
   width: 40px;
-  margin: 10px 0 7px 50px;
-}
-
-.logo {
-  height: 40px;
-  width: 40px;
-}
-
-.nav {
-  margin-right: 50px;
+  margin: 10px 0;
 }
 
 .nav_bar {
@@ -49,12 +41,12 @@ a {
   align-items: center;
   margin: 0;
   padding: 0;
-  line-height: 60px;
 }
 
 .nav_list {
   list-style: none;
   margin-right: 20px;
+  line-height: 60px;
 }
 
 .nav_list:last-child {
@@ -64,9 +56,11 @@ a {
 .nav_link {
   padding: 23px 0;
   text-transform: uppercase;
+  transition: color 0.4;
 }
 
-.is-active {
+.is-active,
+.nav_link:hover {
   position: relative;
   color: #00acdc;
 }
@@ -74,15 +68,10 @@ a {
 .is-active::after {
   content: "";
   position: absolute;
+  display: block;
   background: #00acdc;
   width: 100%;
-  left: 0;
   bottom: 0;
   height: 4px;
   border-radius: 8px;
-}
-
-.nav_link:hover {
-  color: #00acdc;
-  transition: 0.3;
 }
