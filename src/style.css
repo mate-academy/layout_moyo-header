@@ -1,1 +1,69 @@
 /* Styles go here */
+@font-face {
+  font-family: Roboto;
+  src: url(./fonts/Roboto/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navList {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.linkAdress {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  padding: 22.5px 0;
+  margin-right: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.apple {
+  color: #00acdc;
+}
+
+.linkAdress:hover {
+  transition: 1s ;
+  color: #00acdc;
+}
+
+.navLink:last-of-type .linkAdress {
+  margin-right: 0;
+}
+
+.linkImage {
+  height: 40px;
+}
+
+.imageDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navLink:first-child:after {
+  display: block;
+  content: "";
+  background-color: #00acdc;
+  height: 2px;
+  width: 70%;
+}
