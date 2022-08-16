@@ -1,1 +1,67 @@
-/* Styles go here */
+body {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+.nav {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  margin-right: 40px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding-inline-start: 0;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.menu-option {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.menu-option-link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  padding: 23px 0;
+}
+
+.menu-option-link:hover {
+  color: #00acdc;
+
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
