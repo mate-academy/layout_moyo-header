@@ -1,19 +1,7 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
+@import url("./reset.css");
 
-a,
-li {
-  text-decoration: none;
-  outline: none;
-  color: black;
-  padding: 0;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
+html {
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -46,7 +34,6 @@ ul {
   display: flex;
   position: relative;
   align-items: center;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -55,6 +42,8 @@ ul {
 
 .nav__link {
   line-height: 60px;
+
+  transition: color 0.7s cubic-bezier(0.52, 0.17, 0, 1.31);
 }
 
 .nav__items:not(:last-child) {
