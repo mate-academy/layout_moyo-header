@@ -1,1 +1,70 @@
-/* Styles go here */
+@font-face {
+  font-family: Fira Sans;
+  src: url(fonts/FiraSans-Regular.ttf);
+}
+
+html {
+  font-family: Fira Sans, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
+  display: relative;
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 65px;
+}
+
+.nav__ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.nav__link {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 24px 0;
+
+  text-decoration: none;
+  color: rgb(20, 18, 18);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.is-active {
+  position: relative;
+  color: rgb(105, 210, 210);
+}
+
+.is-active::after {
+  content: "";
+
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  right: 0;
+
+  height: 4px;
+  background-color: rgb(105, 210, 210);
+  width: 100%;
+}
+
+.nav__link:hover {
+  color: rgb(105, 210, 210);
+  transition: 0.3s;
+}
