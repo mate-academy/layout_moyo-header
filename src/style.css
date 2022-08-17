@@ -10,29 +10,24 @@ body {
 .container {
   display: flex;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
 .logotype {
-  margin: 10px 0 10px 50px;
-}
-
-.nav {
-  margin-right: 50px;
+  margin-top: 10px;
 }
 
 .nav__list {
   display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.nav__item {
+  width: 100%;
   list-style: none;
-  margin-right: 20px;
+  min-height: 60px;
+  margin: 0;
+  padding-left: 0;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -41,14 +36,17 @@ body {
   display: flex;
   text-decoration: none;
   text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.is-active {
   color: #00acdc;
+  transition: 0.3s;
 }
 
 .is-active {
-  color: #00acdc;
   position: relative;
 }
 
