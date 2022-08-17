@@ -1,4 +1,3 @@
-/* Styles go here */
 * {
   box-sizing: border-box;
 }
@@ -21,6 +20,7 @@ body {
 }
 
 .nav {
+  display: flex;
   max-width: 1200px;
   height: 60px;
   left: 0;
@@ -31,7 +31,7 @@ body {
   justify-content: space-between;
 }
 
-.ul {
+.list {
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -45,26 +45,24 @@ body {
   text-decoration: none;
   color: #000;
   font-size: 12px;
-  margin-right: 20px;
   transition: color 0.4s;
   text-transform: uppercase;
 }
 
-.nav-item {
+.nav_item {
   position: relative;
   list-style-type: none;
   font-weight: 500;
   font-size: 12px;
+  margin-right: 20px;
 }
 
-.last_link {
+.nav_item:last-child {
   margin-right: 0;
+
 }
 
-.nav_link:hover {
-  color: #00acdc;
-}
-
+.nav_link:hover,
 .is-active {
   color: #00acdc;
 }
@@ -84,5 +82,8 @@ body {
 .img {
   width: 40px;
   height: 40px;
+}
+
+.wrapper {
   margin: 10px 0 10px 50px;
 }
