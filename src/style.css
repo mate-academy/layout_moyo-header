@@ -1,6 +1,9 @@
 * {
-  margin: 0;
   box-sizing: border-box;
+}
+
+.body {
+  margin: 0;
 }
 
 .header {
@@ -16,6 +19,7 @@
 
 .list {
   padding: 0;
+  margin: 0;
 
   display: flex;
   align-items: center;
@@ -29,7 +33,11 @@
 }
 
 .link {
+  height: 60px;
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  cursor: pointer;
   position: relative;
 
   color: #000;
@@ -46,10 +54,7 @@
   height: 40px;
 }
 
-.link:hover {
-  color: #00acdc;
-}
-
+.link:hover,
 .is-active {
   color: #00acdc;
 }
@@ -57,10 +62,12 @@
 .is-active::after {
   background-color: #00acdc;
   border-radius: 8px;
-  width: 37px;
+
   height: 4px;
   content: "";
+
   position: absolute;
-  bottom: -21px;
+  bottom: 0;
   left: 0;
+  right: 0;
 }
