@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
@@ -6,8 +10,6 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 .header {
@@ -18,26 +20,28 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.nav {
-  padding: 11px 0;
-}
-
 .nav__list {
   display: flex;
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
-.nav__list-item + .nav__list-item {
+.nav__list-item:not(:first-child) {
   margin-left: 20px;
 }
 
 .nav__list-link {
+  display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000;
   padding: 23px 0;
-  transition: all ease 0.3s;
+  color: #000;
+  transition: ease 0.3s;
+}
+
+.nav__list-link:hover {
+  color: #00acdc;
 }
 
 .is-active {
@@ -54,8 +58,4 @@ body {
   right: 0;
   left: 0;
   border-radius: 8px;
-}
-
-.nav__list-link:hover {
-  color: #00acdc;
 }
