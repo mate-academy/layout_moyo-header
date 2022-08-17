@@ -46,10 +46,8 @@ body {
 }
 
 .item-link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
+  line-height: 60px;
+  padding: 23px 0;
   text-decoration: none;
   color: black;
   cursor: pointer;
@@ -69,14 +67,18 @@ body {
   color: #00acdc;
 }
 
-.items-list .is-active {
+.is-active {
   color: #00acdc;
+  position: relative;
 }
 
-.items-list .is-active .underline {
-  background-color: #00acdc;
-}
-
-.upper {
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
   height: 4px;
+  bottom: 0;
+  background-color: #00acdc;
+  width: 100%;
+  border-radius: 8px;
 }
