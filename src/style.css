@@ -2,8 +2,12 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   font-family: "Roboto", sans-serif;
+}
+
+body,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -16,9 +20,7 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
 
-.container__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,8 +31,6 @@ body {
   display: flex;
   align-items: center;
   height: 60px;
-  margin: 0;
-  padding: 0;
 }
 
 .logo {
@@ -56,12 +56,11 @@ body {
 
   display: block;
   line-height: 60px;
+
+  transition: 0.3s;
 }
 
-.nav__link.is-active {
-  color: #00acdc;
-}
-
+.nav__link.is-active,
 .nav__link:hover {
   color: #00acdc;
 }
