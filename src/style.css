@@ -1,4 +1,12 @@
-/* Styles go here */
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 body {
   margin: 0;
 }
@@ -19,8 +27,9 @@ body {
   margin: 0;
 }
 
-.nav__list > :not(:first-child) {
+.nav__item {
   margin-left: 20px;
+  list-style: none;
 }
 
 .logo {
@@ -33,13 +42,7 @@ body {
   display: flex;
   align-items: center;
   height: 60px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
   line-height: 14px;
-  text-transform: uppercase;
-  white-space: nowrap;
 }
 
 .nav__link:hover {
@@ -47,11 +50,7 @@ body {
   cursor: pointer;
 }
 
-.nav__item {
-  list-style: none;
-}
-
-.nav__item .is-active::after {
+.is-active::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -59,8 +58,7 @@ body {
   right: 0;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
-  border-color: #00acdc;
+  background: #00acdc;
 }
 
 .is-active {
