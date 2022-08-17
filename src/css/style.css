@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
+html {
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
 .header {
   display: flex;
-  position: relative;
   padding: 0 50px;
   justify-content: space-between;
   align-items: center;
@@ -13,6 +16,7 @@
 }
 
 .navbar__item {
+  position: relative;
   margin-right: 20px;
 }
 
@@ -20,11 +24,10 @@
   margin-right: 0;
 }
 
-.navbar__item a {
+.navbar__link {
   display: flex;
   align-items: center;
   height: 60px;
-  font-family: Roboto, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -32,11 +35,11 @@
   color: #000;
 }
 
-.navbar__item a:hover {
+.navbar__link:hover {
   color: #00acdc;
 }
 
-.navbar__item .is-active {
+.is-active {
   color: #00acdc;
 }
 
@@ -46,7 +49,7 @@
   position: absolute;
   bottom: 0;
   height: 4px;
-  width: 37px;
+  width: 100%;
   border-radius: 8px;
   background-color: #00acdc;
 }
