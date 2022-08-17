@@ -1,1 +1,106 @@
-/* Styles go here */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 1);
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  min-width: 1024px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+.nav {
+  margin: 0 50px 0 0;
+}
+
+.nav__list {
+  display: flex;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  margin: 0 10px;
+}
+
+.nav__link {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: inherit;
+  transition: color 0.3s;
+
+  padding: 23px 0;
+
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.logo__link {
+  display: flex;
+
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__link:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active {
+  position: relative;
+
+  margin: 0;
+
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active::after {
+  position: absolute;
+  top: 56px;
+  bottom: 0;
+  left: 0;
+
+  content: "";
+
+  background: rgba(0, 172, 220, 1);
+  border-radius: 8px;
+
+  display: block;
+  height: 4px;
+  width: 100%;
+}
