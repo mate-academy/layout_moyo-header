@@ -1,1 +1,90 @@
-/* Styles go here */
+/* add fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+
+/* main bloks */
+.html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* logo container */
+.logo__container {
+  display: flex;
+}
+
+.logo__link {
+  display: flex;
+
+  padding: 10px 0 10px 50px;
+}
+
+.image {
+  height: 40px;
+  width: 40px;
+}
+
+/* navigation container */
+.nav {
+  padding-right: 40px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+
+  margin: 0;
+}
+
+.nav__item {
+  display: inline-block;
+
+  font-size: 12px;
+  margin: 0 10px;
+
+  list-style-type: none;
+}
+
+.nav__link {
+  display: block;
+  text-decoration: none;
+  color: black;
+
+  padding: 23px 0;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+/* effects */
+.nav__link:hover {
+  color: #00acdc;
+  transition: 0.3s;
+}
+
+.is-active::after {
+  display: block;
+  position: absolute;
+
+  content: "";
+  width: 37px;
+  top: 56px;
+  border-bottom: 4px solid #00acdc;
+  border-radius: 8px;
+  overflow: visible;
+}
