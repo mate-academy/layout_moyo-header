@@ -1,1 +1,82 @@
-/* Styles go here */
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 50px;
+}
+
+.logo__link {
+  display: flex;
+}
+
+.img_logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav__item {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav__item:last-of-type {
+  margin-right: 0;
+}
+
+.link {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: inherit;
+
+  position: relative;
+
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 100%;
+  padding: 23px 0;
+
+  transition: color 0.3s ease;
+}
+
+.link:hover,
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  background-color: #00acdc;
+  border: 2px solid #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  width: 100%;
+  display: block;
+  top: 56px;
+  bottom: 0;
+  color: #00acdc;
+  content: "";
+}
