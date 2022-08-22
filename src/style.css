@@ -1,1 +1,52 @@
-/* Styles go here */
+body {
+  margin: 0;
+}
+
+.logo {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.nav_list {
+  padding: 10px;
+}
+
+.items {
+  text-decoration: none;
+  color: black;
+}
+
+.videoItem {
+  padding-right: 50px;
+}
+
+.items:hover {
+  color: #00acdc;
+  cursor: pointer;
+}
+
+.is-active:active::after {
+  background-color: #00acdc;
+  content: "";
+  display: block;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+}
