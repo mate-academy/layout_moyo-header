@@ -1,1 +1,91 @@
-/* Styles go here */
+/* fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+
+/* main bloks */
+.html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 50px;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* logo container */
+.logo__container {
+  display: flex;
+}
+
+.logo__link {
+  display: flex;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.image {
+  height: 40px;
+  width: 40px;
+}
+
+/* navigation container */
+.nav__list {
+  display: flex;
+  flex-direction: row;
+
+  margin: 0;
+}
+
+.nav__item {
+  display: inline-block;
+
+  font-size: 12px;
+  margin-right: 20px;
+
+  list-style-type: none;
+}
+
+.nav__link {
+  display: flex;
+  text-decoration: none;
+  color: black;
+
+  padding: 23px 0;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+/* effects */
+.nav__link:hover {
+  color: #00acdc;
+  transition: 0.3s;
+}
+
+.is-active::after {
+  position: absolute;
+
+  content: "";
+  width: 100%;
+  height: 4px;
+
+  bottom: 0;
+  background-color: #00acdc;
+
+  border-radius: 8px;
+}
