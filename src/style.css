@@ -1,1 +1,71 @@
-/* Styles go here */
+/*  fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+/*  common   */
+body {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+/*  variables   */
+:root {
+  --text-color: #000;
+  --primary-color: #00acdc;
+  --transition: all 0.2s linear;
+}
+
+/*  header   */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  background-color: #fff;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: var(--transition);
+  position: relative;
+  text-transform: uppercase;
+  padding: 23px 0;
+}
+
+.nav__link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav__link:hover {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.nav__link.is-active {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.nav__link.is-active::before {
+  transition: var(--transition);
+  opacity: 1;
+  visibility: visible;
+}
