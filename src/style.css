@@ -1,11 +1,6 @@
-@font-face {
-  font-family: Fira Sans;
-  src: url(fonts/FiraSans-Regular.ttf);
-}
-
 html {
-  font-family: Fira Sans, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 12px;
 }
 
 body {
@@ -13,58 +8,62 @@ body {
 }
 
 .header {
-  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
-  display: relative;
-}
-
-.section {
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
 }
 
 .logo {
-  position: absolute;
-  top: 10px;
-  left: 65px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+.nav {
+  margin-right: 50px;
 }
 
 .nav__ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
   margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  background-color: white;
+}
+
+.nav__list:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
-  display: inline-block;
-  margin-right: 20px;
-  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  height: 60px;
 
-  text-decoration: none;
-  color: rgb(20, 18, 18);
-  font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: #00acdc;
 }
 
 .is-active {
+  color: #00acdc;
   position: relative;
-  color: rgb(105, 210, 210);
 }
 
 .is-active::after {
   content: "";
-
-  position: absolute;
-  display: inline-block;
+  
   bottom: 0;
-  right: 0;
-
+  left: 0;
   height: 4px;
-  background-color: rgb(105, 210, 210);
   width: 100%;
-}
-
-.nav__link:hover {
-  color: rgb(105, 210, 210);
-  transition: 0.3s;
+  position: absolute;
+  background-color: #00acdc;
+  border-radius: 8px;
 }
