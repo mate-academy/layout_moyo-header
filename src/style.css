@@ -8,7 +8,6 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 60px;
 }
 
 .icon {
@@ -30,7 +29,6 @@ body {
 }
 
 .menu {
-  position: relative;
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -39,9 +37,8 @@ body {
 }
 
 .list {
-  padding-top: 19px;
   margin-left: 20px;
-  padding-bottom: 19px;
+
 }
 
 .list:first-child {
@@ -49,6 +46,7 @@ body {
 }
 
 .link {
+  display: block;
   position: relative;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -57,29 +55,32 @@ body {
   line-height: 14px;
   color: #000;
   text-transform: uppercase;
+  padding-top: 23px;
+  padding-bottom: 23px;
 }
 
 .link:hover {
   color: #00acdc;
 }
 
-.link::after {
-  display: block;
+.link:hover::after {
+  width: 100%;
   content: "";
   position: absolute;
   left: 0;
-  top: 33px;
+  bottom: 0;
   background-color: #00acdc;
   border-radius: 8px;
   height: 4px;
-  width: 0;
 }
 
-.link:hover::after {
-  width: 100%;
+[data-qa="hover"]:hover::after {
+  display: none;
+  content: "";
 }
 
 .is-active {
+  position: relative;
   color: #00acdc;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -87,15 +88,17 @@ body {
   text-decoration: none;
   line-height: 14px;
   text-transform: uppercase;
+  padding-top: 23px;
+  padding-bottom: 23px;
 }
 
 .is-active::after {
   content: "";
   position: absolute;
-  top: 33px;
+  bottom: 0;
   left: 0;
   background-color: #00acdc;
   height: 4px;
-  width: 37px;
+  width: 100%;
   border-radius: 8px;
 }
