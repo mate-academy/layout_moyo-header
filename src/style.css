@@ -1,1 +1,73 @@
+/* stylelint-disable string-quotes */
+/* stylelint-disable color-hex-length */
+/* stylelint-disable color-hex-case */
+/* stylelint-disable length-zero-no-unit */
 /* Styles go here */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+.header__style {
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  height: 60px;
+  padding: 0 50px;
+}
+
+.nav__pic {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50px;
+  top: 10px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0;
+}
+
+.li__item {
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.last-li {
+  margin-right: 0px;
+}
+
+.link__decor {
+  text-decoration: none;
+  line-height: 60px;
+  display: inline-block;
+  color: #000000;
+}
+
+.link__decor:hover,
+.is-active {
+  color: #00ACDC;
+}
+
+.is-active {
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+}
