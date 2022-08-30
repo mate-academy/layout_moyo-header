@@ -1,1 +1,80 @@
-/* Styles go here */
+* {
+  margin: 0;
+}
+
+header,
+ul,
+li {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.header {
+  justify-content: space-between;
+  background: #ffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+}
+
+.nav__list {
+  justify-self: flex-end;
+  list-style: none;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+  box-shadow: none;
+}
+
+a.link {
+  position: relative;
+  padding: 23px 0;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+li:not(:last-child) {
+  margin-right: 20px;
+}
+
+a:hover {
+  color: #00acdc;
+}
+
+a.link:active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00acdc;
+  height: 4px;
+  border-radius: 8px;
+}
+
+a.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00acdc;
+  height: 4px;
+  border-radius: 8px;
+
+}
