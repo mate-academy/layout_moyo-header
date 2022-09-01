@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
-body {
+html {
   margin: 0;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
   font-size: 12px;
   line-height: 14px;
 }
@@ -20,7 +24,6 @@ body {
   height: 40px;
   width: 40px;
   margin: 10px 0;
-
 }
 
 .nav__list {
@@ -32,7 +35,7 @@ body {
   text-transform: uppercase;
 }
 
-.nav__items:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
@@ -59,18 +62,6 @@ body {
 }
 
 .is-active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 8px;
-  background-color: #00acdc;
-}
-
-.nav__link:active::after {
   content: "";
   position: absolute;
   bottom: 0;
