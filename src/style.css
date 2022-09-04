@@ -1,1 +1,56 @@
-/* Styles go here */
+:root {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.nav__list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav__item {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav__item:hover {
+  color: #00acdc;
+}
+
+.nav__item:hover::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background: #00acdc;
+  border-right: 8px;
+  position: absolute;
+  bottom: -18.5px;
+  left: 0;
+  right: 0;
+}
+
+.is-active {
+  color: #00acdc;
+}
