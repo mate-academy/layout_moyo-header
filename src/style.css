@@ -1,14 +1,9 @@
-* {
+body {
   margin: 0;
+  padding: 0;
 }
 
-.stl__moyo {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
+html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -17,54 +12,47 @@
 
 .header {
   padding: 0 50px;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   background: #ffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.nav__list {
-  justify-self: flex-end;
-  list-style: none;
-}
-
 .logo {
-  width: 40px;
+  display: flex;
   height: 40px;
-  margin: 10px 0;
+  width: 40px;
+  padding: 10px 0;
   box-shadow: none;
 }
 
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .link {
+  display: flex;
   position: relative;
-  padding: 23px 0;
   color: #000;
   text-transform: uppercase;
   text-decoration: none;
+  padding: 23px 0;
 }
 
 .nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.link:hover {
-  color: #00acdc;
-}
-
-.link:active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #00acdc;
-  height: 4px;
-  border-radius: 8px;
-}
-
+.link:hover,
 .is-active {
   color: #00acdc;
 }
 
+.link:active::after,
 .is-active::after {
   content: "";
   position: absolute;
