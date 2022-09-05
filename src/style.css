@@ -21,12 +21,15 @@ body {
   padding: 0;
 }
 
+.nav__list :not(:first-child) {
+  margin-left: 20px;
+}
+
 .nav__item {
   display: flex;
 }
 
-.nav__link,
-.is-active {
+.nav__link {
   position: relative;
   font-size: 12px;
   font-weight: 500;
@@ -36,7 +39,6 @@ body {
   padding-top: 23px;
   padding-bottom: 23px;
   cursor: pointer;
-  margin-left: 20px;
 }
 
 .is-active {
@@ -57,8 +59,8 @@ body {
   color: #00acdc;
 }
 
-.nav__link::after,
-.is-active::after {
+.nav__link:active::after,
+.is-active:link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -66,12 +68,5 @@ body {
   height: 4px;
   background: #00acdc;
   border-radius: 8px;
-}
-
-.nav__link:active::after {
-  width: 100%;
-}
-
-.is-active:link::after {
   width: 100%;
 }
