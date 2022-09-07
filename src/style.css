@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding: 0;
 }
 
 html {
@@ -8,6 +7,8 @@ html {
   font-size: 12px;
   font-weight: 500;
   text-align: center;
+  text-transform: uppercase;
+
 }
 
 .header {
@@ -15,40 +16,39 @@ html {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
   background: #ffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
   display: flex;
-  height: 40px;
-  width: 40px;
+  flex-wrap: wrap;
   padding: 10px 0;
-  box-shadow: none;
 }
 
-.nav__list {
-  display: flex;
+.nav .list {
   margin: 0;
   padding: 0;
+  display: flex;
   list-style: none;
+  line-height: 60px;
+  white-space: nowrap;
 }
 
-.link {
+.nav .link {
   display: flex;
   position: relative;
-  color: #000;
-  text-transform: uppercase;
   text-decoration: none;
-  padding: 23px 0;
+  color: #000;
 }
 
 .nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.link:hover,
-.is-active {
+.link.is-active,
+.link:hover {
   color: #00acdc;
 }
 
