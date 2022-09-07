@@ -1,6 +1,6 @@
-:root {
+html {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 12px;
 }
 
 body {
@@ -34,7 +34,7 @@ body {
   position: relative;
 }
 
-a {
+.nav__link {
   color: #000;
   text-decoration: none;
   padding: 10px 0;
@@ -49,7 +49,20 @@ a {
   height: 4px;
   width: 100%;
   background: #00acdc;
-  border-right: 8px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: -18.5px;
+  left: 0;
+  right: 0;
+}
+
+.nav__item:nth-child(1)::after {
+  color: #00acdc;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background: #00acdc;
+  border-radius: 8px;
   position: absolute;
   bottom: -18.5px;
   left: 0;
