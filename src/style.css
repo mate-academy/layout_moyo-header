@@ -6,9 +6,6 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
-  text-align: center;
-  text-transform: uppercase;
-
 }
 
 .header {
@@ -27,32 +24,33 @@ html {
   padding: 10px 0;
 }
 
-.nav .list {
+.list {
   margin: 0;
   padding: 0;
   display: flex;
   list-style: none;
   line-height: 60px;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
-.nav .link {
+.nav__link {
   display: flex;
   position: relative;
   text-decoration: none;
   color: #000;
 }
 
-.nav__item:not(:last-child) {
+.nav__list:not(:last-child) {
   margin-right: 20px;
 }
 
-.link.is-active,
-.link:hover {
+.is-active,
+.nav__link:hover {
   color: #00acdc;
 }
 
-.link:active::after,
+.nav__link:active::after,
 .is-active::after {
   content: "";
   position: absolute;
