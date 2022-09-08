@@ -4,42 +4,33 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 15px;
   text-transform: uppercase;
   color: #000;
 }
 
 .header {
-  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  padding: 0 50px;
 }
 
 .logo {
-  position: absolute;
   width: 40px;
   height: 40px;
-  left: 50px;
-  top: 10px;
-}
-
-.navi {
-  height: 60px;
-  display: flex;
-  align-items: center;
 }
 
 .list {
+  margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
-  justify-content: flex-end;
 }
 
 .list li {
   padding-right: 20px;
+  display: flex;
 }
 
 .list li:last-child {
@@ -50,24 +41,24 @@ body {
   text-decoration: none;
   color: inherit;
   padding: 23px 0;
-  margin: -23px 0;
-}
-
-.is-active {
-  color: #00acdc;
 }
 
 .link:hover {
   color: #00acdc;
 }
 
-.header::after {
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
   content: "";
   position: absolute;
-  width: 37px;
-  height: 4px;
-  right: 650px;
-  top: 56px;
+  width: 100%;
+  height: 5px;
+  left: 0;
+  bottom: 0;
   background: #00acdc;
   border-radius: 8px;
 }
