@@ -1,50 +1,50 @@
-* {
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
   margin: 0;
-  padding: 0;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
   padding: 0 50px;
-  background-color: #fff;
+  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  display: flex;
+  display: block;
+  height: 40px;
+  width: 40px;
 }
 
 .moyo__icon {
-  display: block;
-  width: 40px;
-  height: 40px;
+  height: 100%;
+  width: 100%;
 }
 
 .nav__list {
   display: flex;
+  margin: 0;
   padding: 0;
-  align-items: center;
   list-style: none;
-  text-transform: uppercase;
-}
-
-.nav__items {
-  display: flex;
-  margin-right: 20px;
-}
-
-.nav__items:last-of-type {
-  margin-right: 0;
 }
 
 .nav__link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  height: 60px;
+  margin-left: 20px;
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
   color: #000;
-  padding: 23px 0;
+  white-space: nowrap;
   text-decoration: none;
 }
 
@@ -53,18 +53,18 @@
 }
 
 .is-active {
-  position: relative;
   color: #00acdc;
+  margin-left: 0;
 }
 
 .is-active::after {
-  position: absolute;
-  width: 100%;
-  display: block;
   content: "";
-  top: 56px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
   background-color: #00acdc;
-  border: 2px solid #00acdc;
-  border-radius: 8px;
-  color: #00acdc;
+  border-radius: 2px;
 }
