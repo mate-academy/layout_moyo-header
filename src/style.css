@@ -1,11 +1,14 @@
 body {
   background-color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 header {
   width: 1200px;
   background-color: #fff;
-  background-image: url(/src/images/logo.png);
+  background-image: url(../src/images/logo.png);
   background-repeat: no-repeat;
   background-position: top 10px left 50px;
   height: 60px;
@@ -13,38 +16,42 @@ header {
   justify-content: flex-end;
 }
 
-nav {
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  margin: auto 50px;
+  margin-right: 50px;
 }
 
-li {
-  text-decoration: none;
-  list-style: none;
-  display: inline;
-}
-
-.link {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  text-decoration: none;
+a.link {
   color: black;
-  margin: auto 10px;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+  margin-left: 20px;
+  line-height: 60px;
+  text-decoration: none;
   position: relative;
-
 }
 
 .link:hover {
   color: #00acdc;
 }
 
+.link:focus {
+  color: #00acdc;
+}
+
+a.is-active {
+  color: #00acdc;
+}
+
 .is-active::after {
   position: absolute;
-  top: 28px;
+  top: 56px;
   left: 0;
-  height: 4px;
-  width: 33px;
+  height: 1px;
+  width: 34px;
   content: "";
   border: 2px solid #00acdc;
   border-radius: 8px;
