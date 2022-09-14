@@ -9,7 +9,6 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding: 0 50px;
@@ -23,13 +22,15 @@ body {
 .nav__list {
   list-style: none;
   display: flex;
-  align-items: center;
   margin: 0;
   padding: 0;
 }
 
+.nav__item {
+  display: flex;
+}
+
 .nav__link {
-  margin-left: 20px;
   font-size: 12px;
   font-weight: 500;
   color: #000;
@@ -38,6 +39,10 @@ body {
   text-decoration: none;
   cursor: pointer;
   padding: 23px 0;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link:hover {
