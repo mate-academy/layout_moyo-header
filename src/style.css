@@ -1,1 +1,61 @@
-/* Styles go here */
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-img {
+  display: inline-block;
+  margin: 10px 0 10px 50px;
+}
+
+.header-nav {
+  margin-right: 50px;
+}
+
+.nav-list {
+  display: flex;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.nav-item {
+  position: relative;
+  white-space: nowrap;
+  list-style: none;
+}
+
+.nav-item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav-link {
+  font-family: Roboto, sans-serif;
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 23px 0;
+}
+
+.nav-link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  background-color: #00acdc;
+  height: 4px;
+  width: 100%;
+  bottom: -22px;
+  left: 0;
+}
