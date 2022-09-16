@@ -1,5 +1,5 @@
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
 
@@ -10,8 +10,7 @@ body {
 
 .header {
   display: flex;
-  justify-content: flex-end;
-  min-width: 1024px;
+  justify-content: space-between;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -22,6 +21,7 @@ body {
 }
 
 .nav_item {
+  padding-top: 23px;
   margin-right: 20px;
 }
 
@@ -31,9 +31,8 @@ body {
 
 .nav_list {
   display: flex;
-  padding: 23px 0;
+  padding: 0;
   margin: 0;
-  padding-inline-start: 0;
   font-size: 12px;
   line-height: 14px;
   list-style-type: none;
@@ -55,7 +54,7 @@ body {
 }
 
 .logo_link {
-  position: absolute;
+  position: relative;
   display: block;
   height: 40px;
   width: 40px;
@@ -65,11 +64,10 @@ body {
 
 .is-active::after {
   display: block;
-  position: relative;
   content: "";
   border: 2px solid #00acdc;
   border-radius: 8px;
   background-color: #00acdc;
   width: 32px;
-  top: 19px;
+  margin-top: 19px;
 }
