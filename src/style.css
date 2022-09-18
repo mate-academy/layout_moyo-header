@@ -1,19 +1,22 @@
 body {
-  background-color: #e5e5e5;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
+  margin: 0;
 }
 
-header {
-  width: 1200px;
-  background-color: #fff;
-  background-image: url(../src/images/logo.png);
-  background-repeat: no-repeat;
-  background-position: top 10px left 50px;
-  height: 60px;
+.logo_image {
+  padding-top: 10px;
+  margin-left: 50px;
+}
+
+.header {
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+
+  padding-right: 50px;
 }
 
 .menu {
@@ -21,17 +24,16 @@ header {
   margin: 0;
   padding: 0;
   display: flex;
-  margin-right: 50px;
 }
 
-a.link {
+.link {
+  padding-top: 23px;
+  padding-bottom: 24px;
   color: black;
-  padding-top: 22.5px;
-  padding-bottom: 22.5px;
-  margin-left: 20px;
   line-height: 60px;
   text-decoration: none;
   position: relative;
+  margin-left: 20px;
 }
 
 .link:hover {
@@ -42,8 +44,10 @@ a.link {
   color: #00acdc;
 }
 
-a.is-active {
+.is-active {
+  box-sizing: border-box;
   color: #00acdc;
+  margin-left: 0;
 }
 
 .is-active::after {
