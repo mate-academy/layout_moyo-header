@@ -6,63 +6,60 @@ html {
   margin: 0;
 }
 
-header {
+.selectors {
   display: flex;
   font-family: "Roboto", sans-serif;
   justify-content: space-between;
-  padding: 0 49px 0 44px;
+  align-items: center;
+  padding: 0 50px;
 }
 
 .logo {
+  position: relative;
+  bottom: 1px;
   --size: 40px;
-
-  display: inline-block;
   background: url(./images/logo.png) no-repeat center;
   background-size: 100%;
   width: var(--size);
   height: var(--size);
-  margin: 10px 0 0 6px;
 }
 
-.nav {
+.navigationBar {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 637px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav__element {
-  padding: 0;
+.navigationBar__element {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+.navigationBar__element:first-child {
   margin: 0;
+}
+
+.navigationBar__element > * {
+  display: inline-block;
+  padding: 23px 0;
+  font-size: 12px;
   text-transform: uppercase;
 }
 
-.nov__text {
-  display: inline-block;
-  /* font-size: 76%; */
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  padding-top: 23px;
-  padding-bottom: 24px;
-}
-
 .is-active,
-.nov__text:hover {
+.navigationBar__element > *:hover {
   color: #00acdc;
 }
 
-.nav__element:active .underline,
-.nav__element:first-child .underline {
+.is-active::after,
+.navigationBar__element:active::after {
+  content: "";
   position: relative;
-  bottom: 5px;
+  bottom: 4px;
+  color: #00acdc;
+  height: 4px;
   background-color: #00acdc;
   border-radius: 8px;
-  height: 4px;
-  width: 100%;
-}
-
-.nav__element:active,
-.nav__element:first-child {
-  height: 15px;
 }
