@@ -1,9 +1,9 @@
 body {
   margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
   text-transform: uppercase;
   box-sizing: border-box;
 }
@@ -11,15 +11,12 @@ body {
 .header {
   max-width: 1200px;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   padding: 0 50px;
- 
 }
 
 .nav__logo {
-  transform: translateY(25%);
   height: 40px;
   width: 40px;
 }
@@ -27,23 +24,25 @@ body {
 .nav .nav__list {
   display: flex;
   justify-content: flex-end;
-  flex-wrap: wrap;
   list-style: none;
-  text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
-.nav__item {
+.nav .nav__list .nav__item {
   margin-right: 20px;
 }
 
-.nav__link {
-  font-size: 12px;
-  text-decoration: none;
-  color: #000;
+.nav .nav__list .nav__item:last-child {
+  margin-right: 0;
 }
 
-.nav__list:last-child {
-  margin-right: 0;
+.nav__link {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  color: #000;
 }
 
 .nav__link:hover {
@@ -56,12 +55,13 @@ body {
 }
 
 .is-active::after {
+  display: block;
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   height: 4px;
   width: 100%;
   background-color: #00acdc;
-  border-radius: 8px;
+  border-radius: 4px;
 }
