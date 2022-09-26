@@ -1,4 +1,8 @@
 /* Styles go here */
+html {
+  font-family: Roboto, Arial, sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -30,41 +34,39 @@ body {
   align-items: center;
 }
 
+.nav__item {
+  margin: 0 10px;
+}
+
+.nav__item:first-child {
+  margin: 0 10px 0 0;
+}
+
+.nav__item:last-child {
+  margin: 0 0 0 10px;
+}
+
 .nav-link {
-  font-family: Roboto, Arial, sans-serif;
   text-decoration: none;
   font-size: 12px;
   padding: 23px 0;
   color: #000;
   text-transform: uppercase;
-  margin: 0 10px;
   position: relative;
   display: block;
 }
 
-.nav-link--last {
-  margin: 0 0 0 10px;
-}
-
-.nav-link--first {
-  margin: 0 10px 0 0;
-}
-
-.nav-link:hover {
-  color: #00acdc;
-}
-
+.nav-link:hover,
 .is-active {
   color: #00acdc;
 }
 
 .is-active::after {
   content: "";
-  display: flex;
-  flex-direction: column;
   height: 4px;
   background-color: #00acdc;
   position: absolute;
+  left: 0;
   bottom: 0;
   width: 100%;
 }
