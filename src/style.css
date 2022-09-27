@@ -1,1 +1,108 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.header {
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  align-items: flex-end;
+
+}
+
+.logo__link {
+  display: block;
+  height: 40px;
+  width: 40px;
+  padding: 10px 0;
+  /* border: 1px solid black; */
+}
+
+/* .logo__img {
+} */
+
+.nav__box {
+  display: flex;
+  align-self: stretch;
+  /* background-color: burlywood; */
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  list-style: none;
+  /* background-color: #fff; */
+  align-self: stretch;
+}
+
+.navlist__item {
+  display: flex;
+  margin: 0 0 0 20px;
+  align-items: center;
+  justify-content: center;
+  /* background-color: blueviolet; */
+}
+
+.navlist__item:first-child {
+  margin: 0;
+}
+
+.navitem__link {
+  display: flex;
+  align-self: stretch;
+
+  align-items: center;
+  text-align: center;
+  /* background-color: chartreuse; */
+  position: relative;
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 14px;
+
+  transition: color 0.3s;
+}
+
+.navitem__link:hover {
+  color: #00acdc;
+}
+
+/* .navitem__link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+} */
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+}
