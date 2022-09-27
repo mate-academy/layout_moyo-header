@@ -1,1 +1,92 @@
 /* Styles go here */
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+
+}
+
+.navLogo {
+  height: 40px;
+  width: 40px;
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+.navBar {
+  display: flex;
+  margin-left: auto;
+  margin-right: 49px;
+  position: relative;
+
+}
+
+ul.navList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.navItem {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0 9px;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+li.navItem.first {
+  margin-left: 0;
+}
+
+li.navItem.last {
+  margin-right: 0;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: #000;
+  padding: 20px 0;
+  position: relative;
+}
+
+.navItem a:hover {
+  text-decoration: none;
+  color: #00acdc;
+  cursor: pointer;
+}
+
+.navItem a.is-active {
+  color: #00acdc;
+  text-align: center;
+  position: relative;
+  display: block;
+  top: 2px;
+}
+
+/* making rounded line below apple */
+.navItem a.is-active::after {
+
+  position: relative;
+  top: 19px;
+  display: block;
+  content: " ";
+  border-top: 2px solid #00acdc;
+  border-bottom: 2px solid #00acdc;
+  border-radius: 2px;
+}
