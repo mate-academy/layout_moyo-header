@@ -8,40 +8,41 @@ header {
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   justify-content: space-between;
+  padding: 0 50px;
 }
 
 .logo {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  left: 50px;
-  top: 10px;
-}
-
-li {
-  list-style-type: none;
-  margin: 22.5px 20px;
-  font-size: 12px;
-  line-height: 14px;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {
   display: flex;
-  flex-direction: row;
-  position: relative;
-  justify-content: flex-end;
+  list-style: none;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
 }
 
 .link {
   text-decoration: none;
   color: #000;
+  font-size: 12px;
+  align-items: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  margin-top: 23px;
+  height: 60px;
 }
 
 .link:hover {
-  border-bottom: 3px #00acdc solid;
-  display: inline-block;
-  line-height: 0.7;
+  color: #00acdc;
 }
 
 .is-active {
@@ -50,13 +51,14 @@ li {
 }
 
 .is-active::after {
-  position: relative;
+  position: absolute;
   content: "";
   background-color: #00acdc;
   width: 100%;
-  top: 22px;
-  left: 0;
+  top: 60px;
   height: 4px;
   border-radius: 8px;
   display: block;
+  bottom: 0;
+  left: 0;
 }
