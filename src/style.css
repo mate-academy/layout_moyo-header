@@ -19,15 +19,11 @@ body {
   padding: 10px 0;
 }
 
-.nav {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .nav__list {
   display: flex;
   list-style: none;
-  padding: 3px 0;
+  padding: 0;
+  margin: 0;
 }
 
 .nav__item {
@@ -48,18 +44,23 @@ body {
   text-decoration: none;
   padding: 23px 0;
   cursor: pointer;
+  display: inline-block;
 }
 
-.nav__link:hover,
+.nav__link:hover {
+  color: #00acdc;
+}
+
 .is-active {
   color: #00acdc;
+  position: relative;
 }
 
 .is-active:after {
   content: "";
   display: block;
   width: 100%;
-  top: 18px;
+  top: 18.5px;
   position: relative;
   height: 4px;
   background-color: #00acdc;
