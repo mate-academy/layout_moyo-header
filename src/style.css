@@ -5,11 +5,13 @@
 }
 
 header {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
 }
 
 .image {
@@ -20,8 +22,10 @@ header {
 }
 
 a {
+
   text-decoration: none;
   color: #000;
+
 }
 
 .nav {
@@ -44,26 +48,27 @@ a {
   
 }
 
-.nav__list li {
+.nav__item {
 
   position: relative;
   top: auto;
   color: #000;
   margin: 0 10px;
   list-style: none;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-size: 12px;
-  line-height: 14px;
-  font-weight: bold;
+  line-height: 60px;
   text-transform: uppercase;
 
 }
 
-.foursItem,
-.isActiveItem {
+.is-active {
 
   color: #00acdc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -73,8 +78,8 @@ a {
 
 }
 
-.nav__list a:hover::after,
-.isActiveItem::after {
+.nav__list a:not(.foursItem):hover::after,
+.is-active::after {
     
   content: "";
   display: block;
@@ -83,6 +88,18 @@ a {
   width: 100%;
   background-color: #00acdc;
   border-radius: 8px;
-  bottom: -22.5px;
+  bottom: 0;
+
 }
   
+.nav__item:last-child {
+
+  margin-right: 0;
+
+}
+
+.nav__item:first-child {
+
+  margin-left: 0;
+  
+}
