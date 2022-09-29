@@ -5,39 +5,43 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 60px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+.logo {
+  padding-top: 2px;
+}
+
 .nav__list {
-  margin: 0;
   display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .nav__link {
-  display: flex;
-  padding: 23px 0;
   font-family: Roboto, sans-serif;
+  display: block;
+  padding: 23px 0;
   font-size: 12px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
 }
 
-.logo {
-  height: 40px;
-  margin: 10px;
-  margin-left: 50px;
-}
-
 .nav__item {
   position: relative;
-  margin: 0 10px;
+  margin-right: 20px;
 }
 
 .nav__item:last-child {
-  margin-right: 50px;
+  margin-right: 0;
 }
 
 .is-active {
@@ -48,11 +52,12 @@ body {
   color: #00acdc;
 }
 
-.is-active::after {
+.is-active:after {
   content: " ";
   position: absolute;
   width: 37px;
   height: 4px;
+  left: 0;
   bottom: 0;
   background-color: #00acdc;
   border-radius: 8px;
