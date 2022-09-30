@@ -1,4 +1,8 @@
 /* Styles go here */
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -44,13 +48,12 @@ body {
 }
 
 .nav_link {
-  font-family: "Roboto", sans-serif;
   display: inline-block;
   color: #000;
   text-decoration: none;
   padding: 23px 0;
-  font-style: normal;
   font-size: 12px;
+  position: relative;
 }
 
 .is-active {
@@ -58,12 +61,11 @@ body {
 }
 
 .is-active::after {
-  display: inline-block;
+  display: block;
   content: "";
   position: absolute;
   width: 37px;
   height: 4px;
-  left: 513.5px;
   top: 56px;
   background: #00acdc;
   border-radius: 8px;
@@ -71,16 +73,4 @@ body {
 
 .nav_link:hover {
   color: #00acdc;
-}
-
-@media (width: 1024px) {
-  .is-active::after {
-    display: inline-block;
-    content: "";
-    position: absolute;
-    width: 37px;
-    height: 4px;
-    left: 337.5px;
-    top: 56px;
-  }
 }
