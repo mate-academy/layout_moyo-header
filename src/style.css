@@ -1,1 +1,118 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.header {
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  align-items: center;
+}
+
+.logo__link {
+  display: block;
+  height: 40px;
+  width: 40px;
+  padding: 10px 0;
+}
+
+.navitem__link {
+  display: flex;
+  align-self: stretch;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 14px;
+
+  transition: color 0.3s;
+}
+
+.navitem__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+/*
+/* #region ver1 */
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  list-style: none;
+  margin: 0;
+}
+
+.navlist__item {
+  margin-left: 20px;
+  height: 60px;
+}
+
+.navlist__item:first-child {
+  margin: 0;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+}
+
+/* #endregion */
+
+/*!Left below part of styles in code just to explain my solution*/
+
+/* #region version2*/
+
+/* nav {
+  display: flex;
+  align-self: stretch;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  list-style: none;
+  margin: 0;
+}
+
+.navlist__item {
+  margin-left: 20px;
+}
+
+.navlist__item:first-child {
+  margin: 0;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+} */
+
+/* #endregion*/
