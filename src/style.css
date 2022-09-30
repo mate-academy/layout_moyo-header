@@ -1,7 +1,11 @@
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
+}
+
+body {
+  margin: 0 auto;
 }
 
 header {
@@ -9,6 +13,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
 }
 
 .nav {
@@ -35,6 +44,14 @@ header {
   text-transform: uppercase;
 }
 
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
 .nav__link {
   display: flex;
   justify-content: center;
@@ -42,7 +59,7 @@ header {
   height: 60px;
 
   text-decoration: none;
-  color: #000000;
+  color: #000;
 }
 
 .is-active {
@@ -50,15 +67,15 @@ header {
 }
 
 .is-active::after {
-  content: '';
-  display: block;
+  content: "";
   position: absolute;
   bottom: 0;
 
   background-color: #00acdc;
   height: 4px;
   width: 100%;
-  border-radius: 8px; 
+  border-radius: 8px;
+
 }
 
 .nav__link:hover {
