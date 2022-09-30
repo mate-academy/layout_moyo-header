@@ -4,11 +4,6 @@ html {
   font-style: normal;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -19,45 +14,51 @@ header {
 .nav {
   text-align: center;
   background-color: #fff;
+  display: block;
 }
 
 .nav__list {
   list-style: none;
   display: flex;
+  padding: 0;
+  margin: 0;
 
   font-size: 12px;
   line-height: 14px;
-  color: #000000;
 }
 
 .nav__item {
-  display: inline-block;
-  padding: 10px 10px;
+  position: relative;
+  margin: 0 10px;
 
   font-size: 12px;
   text-transform: uppercase;
+}
+
+.nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+
+  text-decoration: none;
+  color: #000000;
+}
+
+.is-active {
+  color: #00acdc;
 }
 
 .is-active::after {
   content: '';
   display: block;
   position: absolute;
+  bottom: 0;
 
   background-color: #00acdc;
   height: 4px;
   width: 100%;
   border-radius: 8px; 
-}
-
-.nav__link {
-  text-decoration: none;
-  color: #000000;
-  height: 60px;
-}
-
-.is-active {
-  position: relative;
-  color: #00acdc;
 }
 
 .nav__link:hover {
