@@ -1,3 +1,6 @@
+body {
+  margin: 0;
+}
 
 .header {
   height: 60px;
@@ -6,6 +9,7 @@
 }
 
 .navigation__wraper {
+  font-family: "Roboto", sans-serif;
   display: flex;
   padding: 0 50px;
   justify-content: space-between;
@@ -15,12 +19,15 @@
 .navigation__logo {
   align-self: center;
   justify-content: center;
+  width: 40px;
   height: 40px;
+  left: 50px;
+  top: 10px;
 }
 
 .nav__list {
   display: flex;
-  gap: 20px;
+  /* gap: 20px; */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -29,8 +36,11 @@
 }
 
 .nav__item {
-  /* margin-left: 20px; */
-  padding: 0;
+  /* font-size: 14px; */
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link {
@@ -46,8 +56,9 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  /* margin-left: 20px; */
 }
 
 .nav__link:hover {
@@ -67,7 +78,6 @@
   content: "";
   display: block;
   position: absolute;
-  left: 0;
   bottom: 0;
   width: 100%;
   height: 4px;
