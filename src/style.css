@@ -1,1 +1,59 @@
-/* Styles go here */
+body {
+  margin: 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.nav__list {
+  text-transform: uppercase;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  padding-top: 23px;
+}
+
+.nav__item:not(:first-child) {
+  padding-left: 20px;
+}
+
+.home-link {
+  height: 40px;
+  align-self: center;
+}
+
+.nav__link {
+  color: black;
+  text-decoration: none;
+  padding: 23px 0;
+}
+
+.nav__link:visited {
+  color: black;
+}
+
+.nav__link:hover,
+.nav__item:first-child .nav__link {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active::after {
+  display: block;
+  content: "";
+  height: 4px;
+  background-color: rgba(0, 172, 220, 1);
+  border-radius: 4px;
+  margin-top: 19px;
+}
