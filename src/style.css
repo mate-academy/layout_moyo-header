@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+body {
+  max-width: 1200px;
+  min-width: 1024px;
+}
+
 header {
   display: flex;
   background: #fff;
@@ -20,6 +25,7 @@ header {
 .menu {
   display: flex;
   list-style: none;
+  padding: 0px;
 }
 
 .list {
@@ -27,6 +33,10 @@ header {
   justify-content: center;
   align-items: center;
   margin-right: 20px;
+}
+
+.list:last-child {
+  margin: 0;
 }
 
 .link {
@@ -37,8 +47,8 @@ header {
   font-weight: 500;
   text-transform: uppercase;
   display: flex;
-  margin-top: 23px;
-  height: 60px;
+  padding-top: 23px;
+  padding-bottom: 23px;
 }
 
 .link:hover {
@@ -55,7 +65,6 @@ header {
   content: "";
   background-color: #00acdc;
   width: 100%;
-  top: 60px;
   height: 4px;
   border-radius: 8px;
   display: block;
