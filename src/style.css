@@ -1,1 +1,78 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap");
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.list {
+  padding: 0;
+  display: flex;
+  margin: 0;
+  font-size: 12px;
+}
+
+.listItem {
+  list-style: none;
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+.listLink {
+  display: flex;
+  align-items: center;
+  color: black;
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  height: 60px;
+}
+
+.listLink:visited {
+  color: black;
+}
+
+.listLink:hover {
+  color: #00acdc;
+}
+
+.listLink:active {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  background-color: #00acdc;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+}
+
+.listItem:first-child {
+  padding-left: 0;
+}
