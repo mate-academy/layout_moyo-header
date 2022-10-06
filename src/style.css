@@ -1,63 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-
 body {
   margin: 0;
 }
 
-nav {
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  height: 60px;
-  justify-content: flex-end;
-  margin-right: 30px;
-}
-
-.button {
-  text-decoration: none;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: auto;
-  margin-bottom: auto;
-
-  height: 15px;
-  left: 566px;
-  top: 22.5px;
-
+html {
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
-  text-transform: uppercase;
-
-  color: #000;
 }
 
-.is-active {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-
-  color: #00acdc;
+.header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  position: absolute;
+  display: block;
   width: 40px;
   height: 40px;
-  left: 50px;
-  top: 10px;
 }
 
-.rectangle {
-  margin-top: 18.5px;
-  width: 37px;
-  height: 4px;
-
-  background: #00acdc;
-  border-radius: 8px;
+.logo__img {
+  height: 100%;
+  width: 100%;
 }
 
-:hover {
+.nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav__button {
+  margin-left: 20px;
+  list-style: none;
+}
+
+.nav__button:first-child {
+  margin: 0;
+}
+
+.nav__links {
+  display: inline-block;
+  position: relative;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.nav__links:hover {
   color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  border-radius: 8px;
 }
