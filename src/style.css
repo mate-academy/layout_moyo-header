@@ -1,1 +1,57 @@
-/* Styles go here */
+* {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  margin-top: 5px;
+  margin-left: 50px;
+}
+
+.nav {
+  display: flex;
+  margin-right: 40px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  display: flex;
+  padding: 0 10px;
+}
+
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 12px;
+  font-family: Roboto, Times, serif;
+  padding: 23px 0;
+}
+
+.nav__link:hover {
+  color: rgb(0, 172, 220);
+}
+
+.is-active {
+  color: rgb(0, 172, 220);
+  padding-bottom: 0;
+}
+
+.is-active::after {
+  display: block;
+  width: auto;
+  content: "";
+  height: 4px;
+  border-radius: 8px;
+  background-color: rgb(0, 172, 220);
+  margin-top: 19px;
+}
