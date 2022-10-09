@@ -5,25 +5,42 @@ html {
   background-color: #fff;
 }
 
+* {
+  margin: 0;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 5px 50px;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.link-logo {
+  line-height: 0;
 }
 
 .logo {
   width: 40px;
+  margin: 10px 0;
+}
+
+.nav {
+  display: flex;
 }
 
 .nav__list {
   list-style: none;
+  display: flex;
+  margin: 0;
 }
 
 .nav__item {
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-  display: inline;
+  flex-direction: row;
+  align-self: center;
 }
 
 .nav__link {
@@ -31,11 +48,11 @@ html {
   text-decoration: none;
   color: #000;
   position: relative;
-  padding: 20px 0;
+  padding: 22px 0;
 }
 
 .nav__item:not(:last-child) {
-  padding-right: 20px;
+  padding-right: 22.5px;
 }
 
 .nav__link:hover {
