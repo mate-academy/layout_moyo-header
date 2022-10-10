@@ -11,38 +11,50 @@
 }
 
 .logo {
+  height: 40px;
   margin-left: 50px;
+  margin-right: 20px;
+}
+
+.nav {
+  margin-right: 50px;
 }
 
 .nav__list {
   display: flex;
-  flex-direction: row-reverse;
   list-style: none;
-  margin-right: 50px;
+  /* margin-right: 50px; */
 }
 
 .nav__item {
-  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin: 0;
 }
 
 .nav__link {
-  position: relative;
+  display: block;
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
   color: black;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 60px;
-  padding-top: 22px;
-  padding-bottom: 23px;
+  padding: 23px 0;
 }
 
 .nav__link:hover {
   color: #00acdc;
 }
 
-.is-active:active::after {
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
   content: "";
   position: absolute;
   left: 0;
