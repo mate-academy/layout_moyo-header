@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-
 body {
   margin: 0;
 }
@@ -8,43 +6,34 @@ body {
   width: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+  
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgb(255, 255, 255);
-  min-width: 1024px;
-  max-width: 1200px;
+.inner__container {
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  bottom: 1px;
 }
 
-.nav_link {
+.logo {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  margin-right: 0;
+  margin-left: 50px;
+}
+
+.nav__link {
   display: flex;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
   margin-right: 50px;
-}
-
-.logo-link {
-  margin: 10px;
-  margin-right: 0;
-  margin-left: 50px;
-  height: 40px;
-}
-
-.nav_link :first-child {
-  margin: 0 10px 0 0;
-}
-
-.nav_link :last-child {
-  margin: 0 0 0 10px;
-}
-
-.nav_link > :nth-child(1n+2):not(:last-child) {
-  margin: 0 10px;
+  list-style: none;
 }
 
 .refer:link {
@@ -52,10 +41,6 @@ body {
   color: black;
   position: relative;
   padding: 22.5px 0;
-}
-
-.is-active:link {
-  color: #00acdc;
 }
 
 .refer:visited {
@@ -66,21 +51,27 @@ body {
   color: #00acdc;
 }
 
-.refer:active::after {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  content: "";
-  width: 100%;
-  height: 4px;
-  background: #00acdc;
-  border-radius: 8px;
+.nav__link :first-child .refer {
+  margin: 0 10px 0 0;
 }
 
-.nav_link :first-child::after {
+.nav__link :nth-child(1n+8) {
+  margin: 0 0 0 10px;
+}
+
+.nav__link :nth-child(1n+2):not(:last-child) {
+  margin: 0 10px;
+}
+
+.is-active:link {
+  color: #00acdc;
+}
+
+.refer:active::after,
+.nav__link :first-child .refer::after {
   display: block;
   position: absolute;
-  bottom: 0;
+  top: 56px;
   content: "";
   width: 100%;
   height: 4px;
