@@ -1,1 +1,76 @@
 /* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.logo {
+  padding: 10px 0;
+}
+
+.logo__link {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+}
+
+.nav__item {
+  padding-left: 20px;
+}
+
+.nav-item--is-active {
+  padding: 0;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.nav__link:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.nav-link--is-active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  color: rgba(0, 172, 220, 1);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-link--is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: rgba(0, 172, 220, 1);
+}
