@@ -12,7 +12,6 @@ body {
 }
 
 .header {
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,8 +43,9 @@ body {
 }
 
 .nav__link {
-  font-family: "Roboto", sans-serif;
-  padding: 22.5px 0;
+  display: flex;
+  font-family: inherit;
+  padding: 23px 0;
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
@@ -60,13 +60,14 @@ body {
 
 .is-active {
   color: #00acdc;
+  position: relative;
 }
 
 .is-active::after {
   content: "";
   display: block;
-  position: relative;
-  top: 18.5px;
+  position: absolute;
+  top: 55.5px;
   width: 100%;
   height: 4px;
   border-radius: 8px;
