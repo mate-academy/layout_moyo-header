@@ -1,1 +1,96 @@
-/* Styles go here */
+/* Проходить 4 тести. Ще 4 ні, вже не розумію, в чому причина. */
+
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-active-link: #00acdc;
+  --main-color: #000;
+  --text-size-nav: 12px;
+  --text-weight-nav: 500;
+}
+
+html {
+  
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.header_nav {
+  display: flex;
+  width: 100%;
+               
+}
+
+.nav_list {
+  list-style: none;
+  display: flex;
+  margin-top: 23px;
+  margin-bottom: 23px;
+  flex-grow: 1;
+}
+
+.nav-logo {
+  height: 40px;
+}
+
+.container_logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.nav_link {
+  position: relative;
+  color: var(--main-color);
+  text-decoration: none;
+  padding-top: 23px;
+  padding-bottom: 22px;
+  text-transform: uppercase;
+}
+
+.nav_link:hover,
+.is-active:hover {
+  color: var(--color-active-link);
+}
+
+.nav_link::after,
+.is-active::after {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 0;
+  top: 56px;
+  background-color: var(--color-active-link);
+  border-radius: 8px;
+}
+
+.nav_link:active:after,
+.is-active:active:after {
+  width: 100%;
+}
+
+li {
+  margin-right: 20px;
+  font-family: inherit;
+  font-size: var(--text-size-nav);
+  font-weight: var(--text-weight-nav);
+}
+
+.nav__container {
+  margin-left: 90px;
+}
+
+li:last-child {
+  margin-right: 0;
+}
