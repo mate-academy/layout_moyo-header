@@ -1,5 +1,5 @@
 # Moyo header
-Replace `<your_account>` with your Github username and copy the links to Pull Request description:
+Replace `<your_account>` with your Github username and copy the links to Pull Request description:  
 - [DEMO LINK](https://yaroslav-furhala.github.io/layout_moyo-header/)
 - [TEST REPORT LINK](https://yaroslav-furhala.github.io/layout_moyo-header/report/html_report/)
 
