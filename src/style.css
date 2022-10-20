@@ -15,7 +15,10 @@
   justify-content: space-between;
   align-items: center;
   line-height: 14px;
+  height: 60px;
   max-width: 1200px;
+  padding-left: 50px;
+  background-color: white;
 }
 
 .logo {
@@ -24,6 +27,21 @@
   height: 40px;
   width: 40px;
   margin: 10px 0;
+}
+
+.nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__list:not(:last-child) {
+  margin-right: 23px;
+}
+
+.nav__item {
+  display: inline-block;
+  list-style: none;
 }
 
 .nav__link {
@@ -38,20 +56,17 @@
   padding: 15px 0;
 }
 
+.is-active,
 .link:hover {
   color: blue;
 }
 
 .is-active::after {
   content: "";
+  position: absolute;
   display: block;
   border-bottom: 4px solid blue;
   border-radius: 8px;
   width: 37px;
-  position: absolute;
   top: 46;
-}
-
-.is-active {
-  color: blue;
 }
