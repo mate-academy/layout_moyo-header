@@ -1,9 +1,7 @@
-/* Проходить 4 тести. Ще 4 ні, вже не розумію, в чому причина. */
 
 html,
 body {
   margin: 0;
-  box-sizing: border-box;
 }
 
 :root {
@@ -26,40 +24,49 @@ header {
   padding-left: 50px;
 }
 
-.header_nav {
-  display: flex;
+.nav__menu {
+  box-sizing: border-box;
   width: 100%;
-               
-}
-
-.nav_list {
+  padding: 0;
   list-style: none;
   display: flex;
-  margin-top: 23px;
-  margin-bottom: 23px;
+  margin: 0;
   flex-grow: 1;
 }
 
-.nav-logo {
-  height: 40px;
+.container_logo {
+  box-sizing: border-box;
+  margin-top: auto;
+  margin-bottom: auto;
+  
 }
 
-.container_logo {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.nav_logo {
+  display: block;
 }
 
 .nav_link {
+  display: block;
   position: relative;
   color: var(--main-color);
   text-decoration: none;
-  padding-top: 23px;
-  padding-bottom: 22px;
+  padding: 23px 0;
   text-transform: uppercase;
+  font-family: inherit;
+  font-size: var(--text-size-nav);
+  font-weight: var(--text-weight-nav);
+}
+
+.is-active {
+  color: var(--color-active-link);
 }
 
 .nav_link:hover,
 .is-active:hover {
+  color: var(--color-active-link);
+}
+
+.nav_link:active {
   color: var(--color-active-link);
 }
 
@@ -75,22 +82,22 @@ header {
   border-radius: 8px;
 }
 
+.is-active::after {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 100%;
+  top: 56px;
+  background-color: var(--color-active-link);
+  border-radius: 8px;
+}
+
 .nav_link:active:after,
 .is-active:active:after {
   width: 100%;
 }
 
-li {
+li:not(:last-child) {
   margin-right: 20px;
-  font-family: inherit;
-  font-size: var(--text-size-nav);
-  font-weight: var(--text-weight-nav);
-}
-
-.nav__container {
-  margin-left: 90px;
-}
-
-li:last-child {
-  margin-right: 0;
 }
