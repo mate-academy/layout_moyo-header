@@ -20,14 +20,12 @@ ul {
 .header {
   display: flex;
   justify-content: space-between;
-  height: 60px;
   padding: 0 50px;
   flex-wrap: wrap;
 }
 
 .box-1 {
   align-content: flex-start;
-  height: 60px;
   flex-shrink: 1;
 }
 
@@ -43,7 +41,6 @@ ul {
 
 .link-box {
   display: flex;
-  height: 60px;
   margin: 0;
 }
 
@@ -67,15 +64,19 @@ ul {
   color: #00acdc;
 }
 
+.is-active {
+  position: relative;
+}
+
 .is-active::after {
   content: "";
   display: flex;
   background: #00acdc;
   width: 100%;
   height: 4px;
-  top: 56px;
+  bottom: 0;
   border-radius: 8px;
-  margin-top: 18.5px;
+  position: absolute;
 }
 
 /* .link:hover::after {
