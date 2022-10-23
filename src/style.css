@@ -1,1 +1,49 @@
-/* Styles go here */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  margin: -7px 0 0 50px;
+}
+
+.nav__container {
+  display: flex;
+  list-style-type: none;
+  padding: 11px 50px 23px 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  padding: 23px 0;
+  margin-left: 20px;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  background: #00acdc;
+  position: absolute;
+  border-radius: 8px;
+  height: 4px;
+  width: 37px;
+  bottom: 0;
+  left: 0;
+}
