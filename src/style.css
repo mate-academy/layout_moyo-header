@@ -1,1 +1,95 @@
 /* Styles go here */
+* {
+  text-decoration: none;
+  color: #000;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+}
+
+.container1200px {
+  width: 1200px;
+}
+
+.container1024px {
+  width: 1024px;
+}
+
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 50px;
+}
+
+.logo {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  margin: 10px 0;
+}
+
+.nav {
+  display: flex;
+  margin: 0 50px;
+  align-self: stretch;
+}
+
+.nav__list {
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  text-transform: uppercase;
+  display: flex;
+}
+
+.nav__link {
+  display: inline-block;
+  font-size: 12px;
+  padding: 23px 10px;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.nav__link:hover::after {
+  display: flex;
+  position: relative;
+  bottom: -100%;
+  content: "";
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active:after {
+  display: block;
+  position: relative;
+  bottom: -100%;
+  content: "";
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+}
