@@ -23,14 +23,36 @@
   cursor: pointer;
 }
 
+.nav-ul {
+  padding-left: 0;
+}
+
 .nav-list {
   display: inline-block;
-  line-height: 14px;
+  line-height: 4px;
   text-transform: uppercase;
 }
 
 .nav-list:not(:last-child) {
   margin-right: 17px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  height: 60px;
+}
+
+.nav-link:hover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+
 }
 
 .is-active::after {
@@ -41,17 +63,4 @@
   content: "";
   background: #00acdc;
   border-radius: 8px;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #000;
-}
-
-.nav-link:hover {
-  color: #00acdc;
-}
-
-.is-active {
-  color: #00acdc;
 }
