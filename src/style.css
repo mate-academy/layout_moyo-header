@@ -1,1 +1,90 @@
-/* Styles go here */
+
+html,
+body {
+  margin: 0;
+}
+
+:root {
+  --color-active-link: #00acdc;
+  --main-color: #000;
+  --text-size-nav: 12px;
+  --text-weight-nav: 500;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.nav__menu {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.container_logo {
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.nav_logo {
+  display: block;
+}
+
+.nav_link {
+  display: block;
+  position: relative;
+  color: var(--main-color);
+  text-decoration: none;
+  padding: 23px 0;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: var(--text-size-nav);
+  font-weight: var(--text-weight-nav);
+}
+
+.is-active,
+.nav_link:hover,
+.is-active:hover,
+.nav_link:active {
+  color: var(--color-active-link);
+}
+
+.nav_link::after,
+.is-active::after {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 0;
+  top: 56px;
+  background-color: var(--color-active-link);
+  border-radius: 8px;
+}
+
+.is-active::after,
+.nav_link:active:after,
+.is-active:active:after {
+  width: 100%;
+}
+
+li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.li {
+  flex-grow: 1;
+}
