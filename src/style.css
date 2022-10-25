@@ -1,1 +1,78 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+/* stylelint-disable string-quotes */
 /* Styles go here */
+* {
+  box-sizing: border-box;
+}
+
+body,
+header,
+nav,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.header,
+.nav__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+/* Браузер автоматично додавав до .nav__logo додаткові 4px,
+довелося встановити фіксовану висоту в 40px, щоб пройшло тест,
+ чи можна це виправити? */
+.nav__logo {
+  height: 40px;
+}
+
+.nav__list {
+  list-style-type: none;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #000;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
