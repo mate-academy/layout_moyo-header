@@ -1,1 +1,89 @@
-/* Styles go here */
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e5e5e5;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo_img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  margin: 10px 0;
+}
+
+.nav__menu {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__list {
+  margin-left: 20px;
+}
+
+.nav__list:first-child {
+  margin-left: 0;
+}
+
+.is-active-1 {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  height: 100%;
+  line-height: 60px;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active-1:hover {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active-1:active::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  color: #00acdc;
+  background-color: #00acdc;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  color: #00acdc;
+  background-color: #00acdc;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+}
