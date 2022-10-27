@@ -1,1 +1,53 @@
-/* Styles go here */
+html {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  --color: #00acdc;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+}
+
+.nav__link {
+  margin: 0;
+  display: flex;
+}
+
+.item {
+  position: relative;
+  list-style: none;
+  line-height: 60px;
+  margin-right: 20px;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase ;
+  color: #000;
+}
+
+.link:hover {
+  color: var(--color);
+}
+
+.item:nth-of-type(1)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background: var(--color);
+  border-radius: 8px;
+  width: 100%;
+}
