@@ -17,6 +17,7 @@ body {
 .header__logo {
   height: 40px;
   width: 40px;
+  padding: 10px 0;
 }
 
 .nav__list {
@@ -25,7 +26,6 @@ body {
   list-style: none;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
   gap: 20px;
 }
 
@@ -36,19 +36,32 @@ body {
   text-decoration: none;
   font-size: 12px;
   font-weight: 500;
-  line-height: 15px;
-  padding: 22.5px 0;
+  line-height: 60px;
+}
+
+.hover {
+  color: #00acdc;
 }
 
 .nav__link:hover {
   color: #00acdc;
 }
 
+.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -23px;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+}
+
 .nav__link:active::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -23px;
   height: 4px;
   width: 100%;
   background-color: #00acdc;
