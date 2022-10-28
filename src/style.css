@@ -29,7 +29,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  align-items: baseline;
+  align-items: center;
 }
 
 .nav_item {
@@ -43,35 +43,31 @@ body {
 
 .nav_link {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-decoration: none;
   padding: 23px 0;
-}
-
-.nav_link:visited {
   color: #000;
 }
 
 .nav_item :hover {
-  display: flex;
-  align-items: center;
   color: #00acdc;
 }
 
 .nav_link.is-active {
-  padding: 19px 0;
   color: #00acdc;
 }
 
+.nav_item .is-active {
+  position: relative;
+}
+
 .nav_link.is-active::after {
-  display: flex;
   content: "";
   background-color: #00acdc;
   padding: 2px 0;
   border-radius: 8px;
-  position: relative;
-  top: 19px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .logo {
