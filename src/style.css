@@ -1,6 +1,10 @@
+html {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
   margin: 0;
+  --main-color: #00acdc;
 }
 
 .header {
@@ -24,7 +28,7 @@ body {
 }
 
 .nav__element {
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -44,11 +48,11 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active::after {
@@ -59,6 +63,6 @@ body {
   left: 0;
   width: 37px;
   height: 4px;
-  background: #00acdc;
+  background: var(--main-color);
   border-radius: 8px;
 }
