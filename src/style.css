@@ -1,4 +1,9 @@
 /* Styles go here */
+:root {
+  --black-color: #000;
+  --link-highlight: #00acdc;
+}
+
 * {
   margin: 0;
   font-family: "Roboto", Helvetica, sans-serif;
@@ -29,7 +34,7 @@
   justify-content: center;
   text-align: center;
   text-decoration: none;
-  color: #000;
+  color: var(--black-color);
   margin-right: 20px;
 }
 
@@ -38,13 +43,13 @@
 }
 
 .nav-link:visited {
-  color: #000;
+  color: var(--black-color);
 }
 
 .nav-link:hover,
 .nav-link:active,
 .is-active:link {
-  color: #00acdc;
+  color: var(--link-highlight);
 }
 
 .nav-link:active::after,
@@ -54,7 +59,7 @@
   bottom: 0;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--link-highlight);
   border-radius: 8px;
 }
 
