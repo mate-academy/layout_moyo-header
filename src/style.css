@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
 
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -26,22 +30,23 @@ body {
   margin: 10px 0;
 }
 
-.nav__menu {
+.nav__list {
   list-style: none;
   display: flex;
   padding: 0;
   margin: 0;
 }
 
-.nav__list {
+.nav__item {
+  justify-content: space-between;
   margin-left: 20px;
 }
 
-.nav__list:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-.is-active-1 {
+.nav__link {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -51,26 +56,22 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
-}
-
-.is-active-1:hover {
   position: relative;
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue);
   position: relative;
 }
 
-.is-active-1:active::after {
+.nav__link:active::after {
   content: "";
   position: absolute;
   height: 4px;
   width: 100%;
-  color: #00acdc;
-  background-color: #00acdc;
+  color: var(--blue);
+  background-color: var(--blue);
   bottom: 0;
   left: 0;
   border-radius: 8px;
@@ -81,8 +82,8 @@ body {
   position: absolute;
   height: 4px;
   width: 100%;
-  color: #00acdc;
-  background-color: #00acdc;
+  color: var(--blue);
+  background-color: var(--blue);
   bottom: 0;
   left: 0;
   border-radius: 8px;
