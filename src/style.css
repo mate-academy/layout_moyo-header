@@ -1,1 +1,76 @@
 /* Styles go here */
+:root {
+  --black-color: #000;
+  --link-highlight: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.page-header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.nav-link:link {
+  position: relative;
+  display: flex;
+  padding: 23px 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--black-color);
+  margin-right: 20px;
+}
+
+.last:link {
+  margin-right: 0;
+}
+
+.nav-link:visited {
+  color: var(--black-color);
+}
+
+.nav-link:hover,
+.nav-link:active,
+.is-active:link {
+  color: var(--link-highlight);
+}
+
+.nav-link:active::after,
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--link-highlight);
+  border-radius: 8px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+}
