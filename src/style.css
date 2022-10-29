@@ -3,9 +3,10 @@
   --colorForlinksHover: #00acdc;
 }
 
+html,
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
 }
 
 .header {
@@ -35,10 +36,6 @@ body {
   cursor: pointer;
 }
 
-.value:target {
-  color: var(--colorForlinksHover);
-}
-
 .link {
   text-decoration: none;
   text-transform: uppercase;
@@ -49,12 +46,10 @@ body {
   display: inline-block;
 }
 
-.link:hover,
-.link:target {
+.link:hover {
   color: var(--colorForlinksHover);
 }
 
-.link:target::after,
 .is-active::after {
   content: "";
   position: relative;
