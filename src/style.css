@@ -7,7 +7,7 @@ body {
   text-transform: uppercase;
 }
 
-.container {
+.header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -15,16 +15,17 @@ body {
   padding: 0 50px;
 }
 
-.ul-container {
+.navigation__list {
   display: flex;
   margin: 0;
+  padding: 0;
 }
 
-.list-element {
+.navigation__item {
   display: block;
 }
 
-.link {
+.navigation__link {
   display: block;
   position: relative;
   padding: 23px 0;
@@ -48,14 +49,10 @@ body {
   border-radius: 8px;
 }
 
-.is-active a {
+.navigation__list .navigation__link:hover {
   color: #00acdc;
 }
 
-.ul-container a:hover {
-  color: #00acdc;
-}
-
-.list-element:last-child a {
+.navigation__item:last-child .navigation__link {
   margin-right: 0;
 }
