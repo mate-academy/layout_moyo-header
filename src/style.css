@@ -1,23 +1,23 @@
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
 @font-face {
   font-family: Roboto;
   src: url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
-  font-style: normal;
-  font-weight: 500;
 }
 
 html {
   font-family: Roboto, sans-serif;
-  font-style: normal;
+  --active-color: #00acdc;
+}
+
+.body {
+  margin: 0;
 }
 
 .header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 100%;
   padding-right: 50px;
@@ -37,7 +37,7 @@ html {
   margin: 0;
 }
 
-.list {
+.list-item {
   display: flex;
 }
 
@@ -54,7 +54,7 @@ html {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--active-color);
   margin-left: 0;
 }
 
@@ -62,7 +62,7 @@ html {
   color: #00acdc;
 }
 
-a.is-active::after {
+.is-active::after {
   color: #00acdc;
   content: attr(data-descr);
   display: flex;
