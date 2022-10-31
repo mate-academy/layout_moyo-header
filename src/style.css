@@ -1,81 +1,69 @@
-/* Styles go here */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+.html {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
 
 .body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 .header {
   display: flex;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-size: 12px;
-  font-weight: 500px;
+  flex-direction: row;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   justify-content: space-between;
   align-items: center;
-  line-height: 14px;
-  max-height: 60px;
-  width: 1200px;
-  padding-left: 50px;
+  font: inherit;
+  margin: 0;
+  padding: 0 50px;
   background-color: white;
-  text-decoration: none;
 }
 
 .logo {
-  position: relative;
-  left: 50px;
   height: 40px;
   width: 40px;
-  margin: 10px 0;
 }
 
 .nav__list {
-  list-style: none;
-  padding: 20px 40px;
+  display: flex;
+  padding: 0;
   margin: 0;
-  text-decoration: none;
-}
-
-.nav__list:not(:last-child) {
-  margin-right: 17px;
 }
 
 .nav__item {
-  display: inline-block;
   list-style: none;
-  padding: 15px;
-  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
-  display: inline-block;
+  padding: 23px 0;
+  display: block;
   text-decoration: none;
+  color: #000;
 }
 
-.link {
-  text-decoration: none;
-  color: black;
-  text-transform: uppercase;
-  cursor: pointer;
-  padding: 15px;
+.nav__link:hover {
+  color: #00acdc;
 }
 
-.is-active,
-.link:hover {
-  color: blue;
+.is-active {
+  color: #00acdc;
+  position: relative;
 }
 
 .is-active::after {
   content: "";
   position: absolute;
   display: block;
-  width: 37px;
-  height: 4px;
-  top: 56px;
-  left: 489px;
+  background-color: #00acdc;
   border-radius: 8px;
-  background-color: blue;
+  height: 4px;
+  width: 37px;
+  bottom: 0;
+  left: 0;
 }
