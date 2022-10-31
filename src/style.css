@@ -8,19 +8,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
 }
 
 .header__logo {
-  margin: -7px 0 0 50px;
+  margin-top: -9px;
+}
+
+.header__nav {
+  padding: 11px 0 23px;
 }
 
 .nav__container {
   display: flex;
   list-style-type: none;
-  padding: 11px 50px 23px 0;
+  padding: 0;
 }
 
-.nav__link {
+.nav__list {
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
@@ -29,12 +34,13 @@ body {
   position: relative;
 }
 
-.nav__link:hover {
+.nav__list:hover {
   color: #00acdc;
 }
 
 .is-active {
   color: #00acdc;
+  margin: 0;
 }
 
 .is-active::after {
@@ -43,7 +49,7 @@ body {
   position: absolute;
   border-radius: 8px;
   height: 4px;
-  width: 37px;
+  width: 100%;
   bottom: 0;
   left: 0;
 }
