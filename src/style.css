@@ -5,15 +5,17 @@
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  color: #000;
+  color: var(--black);
+  --black: #000;
+  --blue: #00acdc;
 }
 
 .header {
-  height: 60px;
+  /* height: 60px; */
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px 0 var(--black) (0, 0, 0, 0.05);
 }
 
 .logo {
@@ -34,7 +36,7 @@ html {
 
 .nav__item {
   font-size: 12px;
-  line-height: 15px;
+  line-height: 14px;
   text-transform: uppercase;
   flex-direction: row;
   align-self: center;
@@ -44,7 +46,7 @@ html {
 .nav__link {
   font-weight: 500;
   text-decoration: none;
-  color: #000;
+  color: var(--black);
   position: relative;
   padding: 23px 0;
 }
@@ -55,7 +57,7 @@ html {
 
 .nav__link:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active:after {
@@ -65,6 +67,6 @@ html {
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue);
   border-radius: 8px;
 }
