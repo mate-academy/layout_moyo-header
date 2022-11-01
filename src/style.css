@@ -9,12 +9,13 @@ body {
   background-color: #eee;
 }
 
-header {
+.header {
   display: flex;
+  padding: 0 50px;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  padding: 0 50px;
+
 }
 
 .logo {
@@ -25,19 +26,19 @@ header {
 
 .nav__list {
   display: flex;
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .nav__link {
   display: flex;
-  align-items: center;
-  text-decoration: none;
   height: 60px;
   margin-left: 20px;
-  color: #000;
   text-transform: uppercase;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
 }
 
 .nav__link:hover {
@@ -45,18 +46,19 @@ header {
 }
 
 .is-active {
-  color: #00acdc;
-  margin: 0;
   position: relative;
+  margin: 0;
+  color: #00acdc;
+
 }
 
 .is-active::after {
-  content: "";
   display: block;
   position: absolute;
   bottom: 0;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  content: "";
   border-radius: 8px;
+  background-color: #00acdc;
 }
