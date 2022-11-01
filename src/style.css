@@ -9,10 +9,6 @@ body {
   color: #000;
 }
 
-a {
-  color: #000;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -41,14 +37,16 @@ a {
   margin-right: 20px;
 }
 
-.nav-item a {
+.nav-link {
   display: block;
   height: 60px;
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
-.nav-item a:hover,
+.nav-link:hover,
 .is-active {
   color: #00acdc;
 }
@@ -63,6 +61,7 @@ a {
   background-color: #00acdc;
   border-radius: 8px;
   opacity: 0;
+  transition: all 0.3s ease;
 }
 
 .is-active::after {
@@ -74,6 +73,6 @@ a {
   opacity: 1;
 }
 
-.nav-item a:focus-within {
+.nav-link:focus-within {
   color: #00acdc;
 }
