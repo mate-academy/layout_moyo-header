@@ -1,23 +1,32 @@
+/* #region normalized */
+
 * {
   box-sizing: border-box;
 }
 
-body,
-html {
+ul,
+li {
   margin: 0;
   padding: 0;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* #endregion */
+
 html {
-  /* padding: 10px 50px; */
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
-
   color: #000;
+
+  --active-color: #00acdc;
 }
 
 .header {
@@ -27,49 +36,37 @@ html {
   padding: 0 50px;
 }
 
-.logo a {
-  display: flex;
-}
-
-.nav {
-  display: flex;
-}
-
 .nav_ul {
   display: flex;
-  padding: 0;
-}
-
-.nav_ul li {
   list-style: none;
-  padding: 10.5px 0;
-}
-
-.nav_ul li a {
-  padding: 23px 0;
 }
 
 .nav___link {
+  display: flex;
   position: relative;
   color: #000;
   margin-left: 20px;
   text-decoration: none;
+  padding: 23px 0;
+}
+
+.nav_ul li:first-child a {
+  margin-left: 0;
 }
 
 .nav___link:hover {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
-  margin-left: 0;
+  color: var(--active-color);
 }
 
 .is-active::after {
   position: absolute;
   content: "";
-  background-color: #00acdc;
+  background-color: var(--active-color);
   bottom: 0;
   left: 0;
   height: 4px;
