@@ -1,1 +1,91 @@
 /* Styles go here */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  color: #000;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-link {
+  display: block;
+  padding: 23px 0;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.nav-link--laptops {
+  white-space: nowrap;
+}
+
+.nav-link:hover,
+.is-active {
+  color: #00acdc;
+}
+
+.nav-item::after,
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  border-radius: 8px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.is-active::after {
+  left: 0;
+  opacity: 1;
+}
+
+.nav-item:focus-within::after {
+  opacity: 1;
+}
+
+.nav-link:focus-within {
+  color: #00acdc;
+}
