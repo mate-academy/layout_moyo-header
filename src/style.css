@@ -1,1 +1,67 @@
-/* Styles go here */
+html,
+body,
+header,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin: 10px 0 10px 50px;
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav_link {
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #000;
+  align-items: center;
+  text-align: right;
+  cursor: pointer;
+}
+
+.nav_link:last-child {
+  margin-right: 50px;
+}
+
+.is_active,
+.nav_link:hover {
+  color: #00acdc;
+}
+
+.is_active::after {
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  left: 333px;
+  top: 56px;
+  background: #00acdc;
+  border-radius: 8px;
+}
+
