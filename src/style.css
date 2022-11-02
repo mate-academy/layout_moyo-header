@@ -1,12 +1,24 @@
 /* Styles go here */
-body {
-  margin: 0;
+* {
   box-sizing: border-box;
+}
+
+html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 14px;
   color: #000;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -23,14 +35,11 @@ body {
 
 .nav-list {
   display: flex;
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
 .nav-item {
   position: relative;
-  line-height: 60px;
 }
 
 .nav-item:not(:last-child) {
@@ -39,11 +48,15 @@ body {
 
 .nav-link {
   display: block;
-  height: 60px;
+  padding: 23px 0;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s ease;
+}
+
+.nav-link--laptops {
+  white-space: nowrap;
 }
 
 .nav-link:hover,
