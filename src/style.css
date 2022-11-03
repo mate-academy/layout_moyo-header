@@ -10,6 +10,7 @@
 html {
   font-family: Roboto, sans-serif;
   --active-color: #00acdc;
+  --hover-color: #00acdc;
 }
 
 .body {
@@ -21,7 +22,6 @@ html {
   justify-content: space-between;
   width: 100%;
   padding-right: 50px;
-  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -33,7 +33,7 @@ html {
 
 .nav__list {
   display: flex;
-  padding-inline-start: 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -42,34 +42,35 @@ html {
 }
 
 .link {
+  position: relative;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   padding: 23px 0;
   margin-left: 20px;
   text-transform: uppercase;
-  color: #000;
-  text-decoration: none;
   cursor: pointer;
+}
+
+.link--first {
+  margin-left: 0;
 }
 
 .is-active {
   color: var(--active-color);
-  margin-left: 0;
 }
 
 .link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active::after {
-  color: #00acdc;
-  content: attr(data-descr);
+  content: "";
   display: flex;
   position: absolute;
   height: 4px;
-  top: 56px;
-  min-width: 37px;
+  bottom: 0;
+  width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--active-color);
 }
