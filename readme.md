@@ -1,7 +1,7 @@
 # Moyo header
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://Mykhailyk-Vadym.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://Mykhailyk-Vadym.github.io/layout_moyo-header/report/html_report/)
 
 > Follow [these instructions](https://mate-academy.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
@@ -10,7 +10,7 @@ Replace `<your_account>` with your Github username and copy the links to Pull Re
 ## The task
 Create HTML page with the header using `flexbox` basing on [this mockup](https://www.figma.com/file/1sog2rmfyCjnVxkeZ3ptnc/MOYO-%2F-Header?node-id=0%3A1).
 
-![screenshot](./references/header-example.png)
+![screenshot](./references/heade r-example.png)
 
 ### Requirements:
 - pay attention the mock is adaptive. Develop the layout to fit on 1024px and 1200px the same as on the mock.
