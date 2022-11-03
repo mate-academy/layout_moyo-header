@@ -1,1 +1,93 @@
-/* Styles go here */
+body {
+  margin: 0;
+  min-width: 1024px;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  margin: 10px 0 6px 50px;
+}
+
+.nav {
+  margin-right: 50px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 19px 0 22px;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  margin-right: 20px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  color: #000;
+  background-color: #fff;
+  border: none;
+  padding: 23px 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #00acdc;
+}
+
+.nav-link:active::after {
+  color: #00acdc;
+  background-color: #00acdc;
+  content: " ";
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  position: absolute;
+  top: 37px;
+  right: 0;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  background-color: #00acdc;
+  content: " ";
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  position: absolute;
+  top: 37px;
+  right: 0;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+}
