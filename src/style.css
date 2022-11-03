@@ -1,1 +1,76 @@
-/* Styles go here */
+/* #region normalized */
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* #endregion */
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #000;
+
+  --active-color: #00acdc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav_ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav___link {
+  display: flex;
+  position: relative;
+  color: #000;
+  margin-left: 20px;
+  text-decoration: none;
+  padding: 23px 0;
+}
+
+.nav_ul li:first-child a {
+  margin-left: 0;
+}
+
+.nav___link:hover {
+  color: var(--active-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--active-color);
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  background-color: var(--active-color);
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+}
