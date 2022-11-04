@@ -1,6 +1,14 @@
 /* Styles go here */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,700&family=Roboto:wght@500&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #00acdc;
+}
+
 html,
 body,
 a,
@@ -8,11 +16,13 @@ img,
 ul,
 li {
   margin: 0;
-  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
 }
 
@@ -53,7 +63,7 @@ body {
 }
 
 .link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .nav-links:last-child .link:last-child {
@@ -61,7 +71,7 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue);
   position: relative;
 }
 
@@ -69,9 +79,9 @@ body {
   content: "";
   position: absolute;
   height: 4px;
-  width: 36.9px;
-  background: #00acdc;
-  bottom: -0.6px;
+  right: 0;
   left: 0;
+  bottom: -0.6px;
+  background: var(--blue);
   border-radius: 8px;
 }
