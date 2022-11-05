@@ -1,1 +1,99 @@
 /* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logo--reference {
+  height: 40px;
+  display: flex;
+  margin: 10px 0 10px 50px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.nav--bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+  flex-grow: 2;
+}
+
+.list--item {
+  height: 15px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.nav--bar:last-child {
+  margin-right: 50px;
+}
+
+.list--item:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  height: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.is-active::after {
+  content: "";
+  width: 37px;
+  height: 4px;
+  display: block;
+  border-radius: 8px;
+  background-color: #00acdc;
+  position: relative;
+  top: 20px;
+}
+
+/* .list--item:hover::after {
+  content: "";
+  width: 37px;
+  height: 4px;
+  display: block;
+  border-radius: 8px;
+  background-color: #00acdc;
+  position: relative;
+  top: 20px;
+} */
