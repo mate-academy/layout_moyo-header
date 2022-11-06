@@ -3,12 +3,11 @@ body {
   background-color: #e5e5e5;
 }
 
-.nav {
-  margin-right: 50px;
-  margin-left: 50px;
-}
+/* .nav {
+  margin: 0 50px;
+} */
 
-header {
+.header {
   display: flex;
   background-color: #fff;
   justify-content: space-between;
@@ -16,8 +15,8 @@ header {
   flex-wrap: nowrap;
 }
 
-.image {
-  margin: 10px 0 10px 50px;
+img {
+  margin: 40px;
 }
 
 .text {
@@ -30,12 +29,9 @@ header {
   text-transform: uppercase;
 }
 
-.text:hover {
-  color: rgba(0, 172, 210, 1);
-}
-
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 .list {
@@ -48,7 +44,7 @@ a {
   content: "";
   display: inline-block;
   position: absolute;
-  top: 56px;
+  bottom: 0;
   left: 0;
   height: 4px;
   width: 100%;
@@ -56,10 +52,15 @@ a {
   background-color: rgba(0, 172, 220, 1);
 }
 
-.list__apple {
+.list__apple:first-child {
   padding-left: 0;
 }
 
 .is-active {
   color: rgba(0, 172, 210, 1);
+}
+
+.text:hover {
+  color: rgba(0, 172, 210, 1);
+  font-style: 12px;
 }
