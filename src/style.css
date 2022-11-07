@@ -1,17 +1,13 @@
 /* Styles go here */
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
   color: black;
-
 }
 
 .header {
@@ -20,60 +16,68 @@ a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   justify-content: space-between;
   align-items: center;
+
+}
+
+.nav {
+  height: 60px;
 }
 
 .logo {
   width: 40px;
   height: 40px;
+  /* margin: 10px 0 10px 50px; */
+}
+
+.nav__link {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-left: 20px;
+
 }
 
 .logo--reference {
   height: 40px;
   display: flex;
   margin: 10px 0 10px 50px;
-  flex-shrink: 0;
-  flex-grow: 0;
 }
 
-.nav--bar {
+.nav__list {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-shrink: 0;
-  flex-grow: 2;
+  margin: 0;
+  padding: 0;
 }
 
-.list--item {
-  height: 15px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-  padding-left: 20px;
+.nav__item {
   list-style: none;
+
 }
 
-.nav--bar:last-child {
+.nav__list:last-child {
   margin-right: 50px;
 }
 
-.list--item:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
 .is-active {
   color: #00acdc;
   font-family: "Roboto", sans-serif;
+  height: 60px;
+  display: flex;
+  align-items: center;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
   text-transform: uppercase;
-  height: 15px;
-  padding: 0;
-  list-style: none;
+  flex-direction: row-reverse;
 }
 
 .is-active::after {
@@ -84,7 +88,9 @@ a {
   border-radius: 8px;
   background-color: #00acdc;
   position: relative;
-  top: 20px;
+  top: 48%;
+  left: 50%;
+
 }
 
 /* .list--item:hover::after {
