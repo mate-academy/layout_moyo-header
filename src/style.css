@@ -1,1 +1,78 @@
-/* Styles go here */
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Medium.ttf);
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  --blue: #00acdc;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header_logo_img {
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.nav_list {
+  list-style: none;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  justify-content: right;
+}
+
+.nav_item:not(:last-child) {
+  display: block;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.nav_link {
+  display: block;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+  color: black;
+}
+
+.is-active {
+  color: var(--blue);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  color: var(--blue);
+  background-color: var(--blue);
+  height: 4px;
+  width: 37px;
+  border-radius: 8px;
+  bottom: 0;
+}
+
+.nav_link:hover {
+  color: var(--blue);
+}
