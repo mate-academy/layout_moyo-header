@@ -3,6 +3,11 @@ html {
   font-family: Roboto, sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,48 +18,59 @@ html {
 
 .header {
   display: flex;
-  padding: 0 50px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0, 0.05);
   flex-direction: row-reverse;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding-right: 50px;
+  text-transform: uppercase;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .nav__list {
   display: flex;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-  color: black;
+  align-items: stretch;
+  margin: 0;
 }
 
 .nav__item {
-  display: inline;
-  margin-left: 20px;
   list-style: none;
+  margin-right: 20px;
+  display: flex;
 }
 
-.nav__item:nth-child(1) {
-  margin-left: 0;
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
+  color: #000;
   position: relative;
   text-decoration: none;
-  display: flex;
-  height: 60px;
+  display: block;
   align-items: center;
-  color: black;
+  padding: 23px 0;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: pointer;
 }
 
-.nav__link:visited {
-  color: black;
+.moyo_1 {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
 }
 
+.is-active,
 .nav__link:hover {
   color: var(--blue);
 }
 
+.nav__link:active::after,
 .is-active::after {
   content: "";
   display: block;
@@ -65,16 +81,5 @@ html {
   border-radius: 8px;
   left: 0;
   bottom: 0;
-}
-
-.is-active {
   color: var(--blue);
-}
-
-.moyo_1 {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 50px;
-  top: 10px;
 }
