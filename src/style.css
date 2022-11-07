@@ -1,1 +1,71 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"); 
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* box-shadow: 0 2px 4px rgb(0 0 0 / 5%); */
+  /* align-items: center; */
+  /* padding: 0 50px; */
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  margin-right: 50px;
+}
+
+.nav__item {
+  margin-right: 20px;
+  list-style-type: none;
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 23px 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+
+}
+
+.header_logo-img {
+  margin: 10px 50px 7px;
+  height: 40px;
+  width: 40px;
+}
+
+.nav__link:active::after,
+.is-active::after {
+  content: "";
+  position: absolute;
+  background-color: #00acdc;
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
