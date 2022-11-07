@@ -33,7 +33,6 @@ body {
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
-  position: relative;
 }
 
 .nav__link {
@@ -41,6 +40,7 @@ body {
   color: black;
   padding-top: 22.5px;
   padding-bottom: 22.5px;
+  position: relative;
 }
 
 .nav__element:not(:last-child) {
@@ -50,16 +50,15 @@ body {
 .nav__link:hover,
 .is-active {
   color: var(--main-color);
-
 }
 
 .is-active::after {
   content: "";
   display: block;
   position: absolute;
-  top: 33px;
+  bottom: 0;
   left: 0;
-  width: 37px;
+  width: 100%;
   height: 4px;
   background: var(--main-color);
   border-radius: 8px;
