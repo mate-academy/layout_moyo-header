@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 :root {
-  width: 100vw;
-  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .logo__link {
@@ -14,7 +13,7 @@ body {
   margin: 0;
 }
 
-.nav__text {
+.navigation {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -26,6 +25,7 @@ body {
 .nav__box {
   display: flex;
   height: 60px;
+  padding: 0 50px;
   background-color: #fff;
   justify-content: space-between;
   align-items: center;
@@ -37,48 +37,43 @@ ul {
   padding: 0;
 }
 
-.container {
-  margin-right: 50px;
-}
-
 .nav__list {
   display: flex;
   justify-content: flex-end;
-  height: 60px;
   align-items: center;
   margin: 0;
 }
 
-.nav__links {
+.nav__link {
   position: relative;
   display: flex;
   align-items: center;
-  height: 60px;
+  padding-top: 23px;
+  padding-bottom: 22.5px;
 }
 
-.nav__items {
+.nav__item {
   display: flex;
   height: 100%;
 }
 
-.nav__items:not(:last-child) {
+.nav__item:not(:last-child) {
   padding-right: 20px;
 }
 
 .logo {
   height: 40px;
-  margin-left: 50px;
 }
 
 .logo-link {
   text-decoration: none;
 }
 
-.nav__links:link {
+.nav__link:link {
   color: #000;
 }
 
-.nav__links:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
@@ -87,7 +82,8 @@ ul {
   color: #00acdc;
   display: flex;
   align-items: center;
-  height: 60px;
+  padding-top: 23px;
+  padding-bottom: 22.5px;
 
 }
 
@@ -102,7 +98,7 @@ ul {
   background-color: #00acdc;
 }
 
-.nav__links:focus::after {
+.nav__link:focus::after {
   content: "";
   display: block;
   position: absolute;
