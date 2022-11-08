@@ -1,11 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-}
-
-body {
+html {
   font-family: Roboto, sans-serif;
 }
 
@@ -13,12 +6,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
+  padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo__icon {
+  height: 40px;
+  width: 40px;
 }
 
 .nav__list {
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav__item {
@@ -28,14 +29,16 @@ body {
 }
 
 .nav__link {
+  display: flex;
   align-items: center;
-  justify-content: center;
   text-transform: uppercase;
   font-size: 12px;
   font-style: normal;
   line-height: 14px;
   font-weight: 500;
   color: #000;
+  height: 60px;
+  text-decoration: none;
 }
 
 .nav__link:hover {
@@ -51,9 +54,9 @@ body {
   content: "";
   position: absolute;
   height: 4px;
-  width: 37px;
   background-color: #00acdc;
   border-radius: 8px;
   left: 0;
-  bottom: -25px;
+  right: 0;
+  bottom: 0;
 }
