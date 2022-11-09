@@ -1,8 +1,13 @@
-body {
-  margin: 0;
+html {
+  font-family: "Roboto", sans-serif;
 }
 
-header {
+body {
+  margin: 0;
+  --main-text-color: #00acdc;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +29,6 @@ header {
 .link {
   position: relative;
   display: block;
-  font-family: "Roboto", sans-serif;
   font-style: normal;
   color: #000;
   font-weight: 400;
@@ -41,18 +45,18 @@ header {
 }
 
 .link:hover {
-  color: #00acdc;
+  color: var(--main-text-color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--main-text-color);
 }
 
 .is-active::after {
   content: "";
   position: absolute;
-  background-color: #00acdc;
+  background-color: var(--main-text-color);
   border-radius: 8px;
   height: 4px;
   top: 56px;
