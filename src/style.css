@@ -1,19 +1,18 @@
+html {
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
 }
 
 .header {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
-  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -23,15 +22,19 @@ body {
 .nav__link {
   position: relative;
   display: flex;
-  align-items: center;
-  height: 60px;
+  padding: 23px 0;
   text-decoration: none;
   color: #000;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .nav__item:not(:last-child) {
   margin-right: 20px;
+}
+
+.logo {
+  display: flex;
 }
 
 .nav__list {
@@ -41,20 +44,26 @@ body {
   display: flex;
 }
 
+:root {
+  --color: #00acdc ;
+}
+
 .is-active::after {
   content: "";
   position: absolute;
   bottom: 0;
-  background-color: #00acdc;
+  background-color: var(--color);
   height: 4px;
   width: 100%;
+  align-items: center;
   border-radius: 8px;
+  right: 0;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color);
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color);
 }
