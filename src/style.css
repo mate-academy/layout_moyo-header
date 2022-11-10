@@ -1,1 +1,88 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  background-color: #e5e5e5;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 60px;
+  max-width: 100%;
+  background-color: #fff;
+}
+
+.containerLogo {
+  display: flex;
+  align-items: center;
+}
+
+.linkLogo {
+  position: absolute;
+  left: 50px;
+  height: 40px;
+  width: 40px;
+}
+
+.navBlock {
+  display: flex;
+  align-items: center;
+}
+
+.ulLink {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 50px;
+  display: flex;
+}
+
+.navList {
+  list-style-type: none;
+}
+
+.navList:not(:first-child) {
+  padding-left: 20px;
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  padding: 23px 0;
+  font-size: 12px;
+  /* display: flex; */
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+  /* font-style: normal; */
+  text-transform: uppercase;
+}
+
+.link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 4px);
+  left: 0;
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  background: #00acdc;
+}
