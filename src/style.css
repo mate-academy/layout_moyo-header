@@ -1,1 +1,70 @@
-/* Styles go here */
+@import url(./vars.css);
+
+html {
+  font-family: Roboto, Arial, sans-serif;
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.nav_list {
+  display: flex;
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.nav_item {
+  display: flex;
+  list-style-type: none;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+
+.nav_item:last-child {
+  margin-right: 0;
+}
+
+.nav_link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.nav_link:hover {
+  color: var(--color-blue);
+}
+
+.is-active,
+.nav_link:hover {
+  color: var(--color-blue);
+}
+
+.nav_link:active::after,
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 37px;
+  height: 4px;
+  background: var(--color-blue);
+  border-radius: 8px;
+}
