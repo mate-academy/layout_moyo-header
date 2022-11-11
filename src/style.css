@@ -1,1 +1,70 @@
-/* Styles go here */
+html {
+  font-family: "Roboto", Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  --main-text-color: #00acdc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.item__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  margin-right: 20px;
+  list-style-type: none;
+}
+
+.link {
+  position: relative;
+  display: block;
+  color: #000;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 23px 0;
+  height: 14px;
+}
+
+.item:last-child {
+  margin-right: 0;
+}
+
+.link:hover {
+  color: var(--main-text-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--main-text-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-text-color);
+  border-radius: 8px;
+  height: 4px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 14px;
+}
