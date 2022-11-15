@@ -1,1 +1,70 @@
-/* Styles go here */
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.moyo__icon {
+  height: 100%;
+  width: 100%;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  height: 60px;
+  margin-left: 20px;
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #000;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  margin-left: 0;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  border-radius: 2px;
+}
