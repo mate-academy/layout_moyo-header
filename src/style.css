@@ -1,25 +1,23 @@
 /* stylelint-disable string-quotes */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #e5e5e5;
   font-size: 12px;
+  padding: 0;
+  margin: 0;
+  background-color: #e5e5e5;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
   padding: 0 50px;
+  margin: 0;
   box-sizing: border-box;
   width: 100%;
+  background-color: #fff;
 }
 
 .logo {
@@ -30,6 +28,8 @@ body {
 .menu {
   display: flex;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .menu li {
@@ -40,16 +40,12 @@ body {
 .link {
   display: flex;
   align-items: center;
+  position: relative;
   height: 60px;
   width: 100%;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
-  position: relative;
-}
-
-.menu li:not(:last-child) {
-  padding-right: 20px;
 }
 
 .menu li a:hover {
@@ -66,7 +62,11 @@ body {
   height: 4px;
   border-radius: 8px;
   display: block;
-  background-color: #00acdc;
   position: absolute;
   bottom: 0;
+  background-color: #00acdc;
+}
+
+.menu li:not(:last-child) {
+  padding-right: 20px;
 }
