@@ -1,5 +1,6 @@
 body {
   margin: 0;
+
   font-family: Roboto, sans-serif;
   font-size: 12px;
 }
@@ -9,6 +10,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   border-color: #fff;
 }
@@ -20,6 +22,7 @@ body {
 .nav__list {
   display: flex;
   justify-content: space-between;
+
   margin: 0;
   padding: 0;
 }
@@ -34,11 +37,13 @@ body {
 }
 
 .nav__link {
-  line-height: 60px;
   display: flex;
+
+  line-height: 60px;
   text-decoration: none;
   text-transform: uppercase;
   color: black;
+
   transition: color 0.4s;
 }
 
@@ -58,11 +63,14 @@ body {
 }
 
 .is-active::after {
+  position: absolute;
+
   content: "";
   bottom: 0;
   width: 100%;
-  position: absolute;
-  height: 4px;
-  background-color: #00acdc;
   border-radius: 8px;
+  height: 4px;
+  
+  background-color: #00acdc;
+
 }
