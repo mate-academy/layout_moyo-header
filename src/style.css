@@ -1,6 +1,14 @@
+:root {
+  --hover-color: #00acdc;
+}
+
 html {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
+}
+
+body {
+  margin: 0;
 }
 
 .header {
@@ -10,48 +18,51 @@ html {
   width: 100%;
   padding: 0 50px;
   box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
+  display: block;
   width: 40px;
   height: 40px;
 }
 
 .nav {
-  height: 100%;
   display: flex;
   align-items: center;
 }
 
-.nav-ul {
+.nav-list {
   display: flex;
-  height: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav__list {
+.nav-link {
   display: flex;
   align-items: center;
-  height: 60px;
-  width: 100%;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
   position: relative;
+  padding: 23px 0;
 }
 
 .nav-item {
-  padding-right: 20px;
+  margin-right: 20px;
 }
 
-.nav__list:hover {
-  color: #00acdc;
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link:hover {
+  color: var(--hover-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active::after {
@@ -62,5 +73,5 @@ html {
   display: block;
   position: absolute;
   bottom: 0;
-  background-color: #00acdc;
+  background-color: var(--hover-color);
 }
