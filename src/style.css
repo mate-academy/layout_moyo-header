@@ -1,1 +1,64 @@
 /* Styles go here */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  max-width: 1200px;
+  background: #fff;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  padding: 10px 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-item:last-of-type {
+  margin-right: 0;
+}
+
+.nav-link {
+  color: #000;
+  text-decoration: none;
+  padding: 22.5px 0;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  width: calc(100% - 4px);
+  border: 2px solid #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  top: 55px;
+  left: 0;
+}
