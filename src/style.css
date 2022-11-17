@@ -1,1 +1,86 @@
+/* stylelint-disable property-no-unknown */
 /* Styles go here */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  min-width: 1024px;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  order: 1;
+  text-transform: uppercase;
+  margin-right: 50px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.listItem:not(:last-child) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+  height: 60px;
+}
+
+.listItem:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+  line-height: 60px;
+}
+
+a:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  position: relative;
+  line-height: 60px;
+  text-decoration: none;
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  content: "asdfa";
+  content-visibility: auto;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+  background: #00acdc;
+  opacity: 1;
+}
+
+.is-active:hover::after {
+  opacity: 1;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  padding-left: 50px;
+}
