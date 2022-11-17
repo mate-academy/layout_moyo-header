@@ -1,1 +1,79 @@
-/* Styles go here */
+html {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  --nav-item-height: 60px;
+  --nav-link-height: 15px;
+  --secondary-color: #00acdc;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.nav__item {
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--nav-item-height);
+  text-align: center;
+}
+
+.nav__item:last-child {
+  margin: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  padding: calc((var(--nav-item-height) - var(--nav-link-height)) / 2) 0;
+  font-weight: 500;
+  font-size: 12px;
+  height: var(--nav-link-height);
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  color: var(--secondary-color);
+}
+
+.is-active {
+  color: var(--secondary-color);
+  position: relative;
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+}
