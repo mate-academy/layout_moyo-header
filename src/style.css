@@ -1,7 +1,15 @@
-body {
+* {
   margin: 0;
-  background-color: #e5e5e5;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  line-height: 14px;
+  font-size: 12px;
+  color: #000;
 }
 
 .header {
@@ -11,14 +19,18 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   height: 60px;
+  padding: 0 50px;
+
 }
 
 .nav__list {
   padding: 0;
 }
 
-img {
-  margin: 40px;
+.image {
+  width: 40px;
+  height: 40px;
+    
 }
 
 .nav {
@@ -28,7 +40,6 @@ img {
 
 .nav__item {
   display: inline-block;
-  position: relative;
   padding-left: 20px;
 }
 
@@ -42,6 +53,7 @@ img {
   font-family: "Roboto", sans-serif;
   color: rgba(0, 0, 0, 1);
   text-transform: uppercase;
+  position: relative;
 }
 
 a {
@@ -60,7 +72,7 @@ a {
   background-color: rgba(0, 172, 220, 1);
 }
 
-.item__apple:first-child {
+.nav__item:first-child {
   padding-left: 0;
 }
 
@@ -70,4 +82,16 @@ a {
 
 .nav__link:hover {
   color: rgba(0, 172, 210, 1);
+}
+
+.is-active::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgba(0, 172, 220, 1);
 }
