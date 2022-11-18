@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  min-width: 1024px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -9,11 +8,12 @@ body {
   justify-content: space-between;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  padding-right: 50px;
+  padding: 0 50px;
+  align-items: center;
 }
 
 .logo {
-  margin: 10px 0 6px 50px;
+  display: flex;
 }
 
 .nav-list {
@@ -35,27 +35,21 @@ body {
 .nav-link {
   color: #000;
   background-color: #fff;
-  border: none;
   padding: 23px 0;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
-  cursor: pointer;
   text-decoration: none;
 }
 
-.is-active {
-  color: #00acdc;
-}
-
+.is-active,
 .nav-link:hover {
   color: #00acdc;
 }
 
 .nav-link:active::after,
 .is-active::after {
-  color: #00acdc;
   background-color: #00acdc;
   content: " ";
   height: 4px;
