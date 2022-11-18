@@ -1,11 +1,10 @@
 /* stylelint-disable property-no-unknown */
 /* Styles go here */
 body {
-  padding: 0;
   margin: 0;
 }
 
-.flexbox {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,10 +12,9 @@ body {
   min-width: 1024px;
 }
 
-.list {
+.nav {
   display: flex;
   justify-content: center;
-  order: 1;
   text-transform: uppercase;
   margin-right: 50px;
   font-family: "Roboto", sans-serif;
@@ -26,57 +24,52 @@ body {
   line-height: 14px;
 }
 
-.listItem:not(:last-child) {
+.list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.list__Item {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+.list__Item:not(:last-child) {
   padding-right: 20px;
-  height: 60px;
 }
 
-.listItem:last-child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.link {
+.nav__link {
   color: #000;
   text-decoration: none;
   line-height: 60px;
 }
 
-a:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
 .is-active {
+  display: inline-block;
   position: relative;
-  line-height: 60px;
-  text-decoration: none;
   color: #00acdc;
+
 }
 
 .is-active::after {
+  display: block;
   position: absolute;
-  content: "asdfa";
-  content-visibility: auto;
+  content: "";
   left: 0;
   bottom: 0;
   height: 4px;
+  width: 100%;
   border-radius: 8px;
   background: #00acdc;
-  opacity: 1;
-}
-
-.is-active:hover::after {
-  opacity: 1;
 }
 
 .logo {
