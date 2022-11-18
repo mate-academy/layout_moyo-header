@@ -1,89 +1,73 @@
-/* Styles go here */
-html {
+body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  box-sizing: border-box;
 }
 
 :root {
-  --color-is-active-link: #00acdc;
+  --color-active: #00acdc;
   --main-color: #000;
-  --text-size-nav: 12px;
-  --text-weight-nav: 500;
+  --text-size: 12px;
+  --text-weight: 500;
 }
 
-header {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+.header {
   display: flex;
   justify-content: space-between;
-  padding-right: 50px;
-  padding-left: 50px;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 0;
 }
 
-.header_nav {
+.header__image {
   display: flex;
-  width: 100%;
-}
-
-.nav_list {
-  list-style: none;
-  display: flex;
-  margin-top: 23px;
-  margin-bottom: 23px;
-  flex-grow: 1;
-}
-
-.nav-logo {
   height: 40px;
+  width: 40px;
+  margin: 10px 0;
+  margin-left: 50px;
 }
 
-.container_logo {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.nav {
+  margin-right: 50px;
 }
 
-.nav_link {
-  position: relative;
-  color: var(--main-color);
-  text-decoration: none;
-  padding-top: 23px;
-  padding-bottom: 22px;
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  padding: 0;
   text-transform: uppercase;
 }
 
-.nav_link:hover,
-.is-active:hover {
-  color: var(--color-active-link);
+.nav__link {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  text-decoration: none;
+  font-size: var(--text-size);
+  font-weight: var(--text-weight);
+  color: var(--main-color);
 }
 
-.nav_link::after,
+.nav__link:not(:first-child) {
+  margin-left: 20px;
+}
+
+.is-active,
+.nav__link:hover {
+  color: var(--color-active);
+}
+
+.is-active {
+  position: relative;
+}
+
 .is-active::after {
-  display: block;
   position: absolute;
   content: "";
   height: 4px;
-  width: 0;
-  top: 56px;
-  background-color: var(--color-active-link);
+  background-color: var(--color-active);
   border-radius: 8px;
-}
-
-.nav_link:active:after,
-.is-active:active:after {
   width: 100%;
-}
-
-li {
-  margin-right: 20px;
-  font-family: inherit;
-  font-size: var(--text-size-nav);
-  font-weight: var(--text-size-nav);
-}
-
-li:last-child {
-  margin-right: 0;
-}
-
-.nav__container {
-  margin-left: 90px;
+  top: 56px;
 }
