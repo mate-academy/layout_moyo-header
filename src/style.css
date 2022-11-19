@@ -1,16 +1,21 @@
 body {
   margin: 0;
   display: block;
+  --main-color: black;
+  --active-color: #00acdc;
+}
+
+html {
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: "Roboto", sans-serif;
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 14px;
@@ -21,8 +26,8 @@ body {
 
 .navigation {
   margin: 0;
+  padding: 0;
   display: flex;
-  /* padding: 10px 0; */
   list-style: none;
 }
 
@@ -30,28 +35,27 @@ body {
   display: flex;
   position: relative;
   align-items: center;
-  margin-left: 20px;
   text-decoration: none;
-  color: black;
+  color: var(--main-color);
   height: 60px;
 }
 
-/* li:nth-child(n + 2) {
+li:nth-child(n + 2) {
   margin-left: 20px;
-} */
+}
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .is-active::after {
   position: absolute;
   display: flex;
-  background-color: #00acdc;
+  background-color: var(--active-color);
   border-radius: 8px;
   content: "";
   width: 100%;
