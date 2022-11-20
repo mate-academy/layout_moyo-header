@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   margin: 0;
 }
 
@@ -12,6 +12,7 @@ body {
 }
 
 .logo {
+  display: block;
   height: 40px;
   width: 40px;
 }
@@ -49,21 +50,17 @@ body {
   color: #00acdc;
 }
 
-.nav__link:active {
-  color: #00acdc;
-}
-
 .is-active {
   color: #00acdc;
+  position: relative;
 }
 
 .is-active::after {
   content: "";
-  display: block;
   position: absolute;
-  top: 56px;
-  width: 37px;
-  height: 4px;
-  background-color: #00acdc;
+  display: block;
+  border-bottom: 4px solid #00acdc;
   border-radius: 8px;
+  width: 100%;
+  bottom: 0;
 }
