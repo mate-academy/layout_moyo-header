@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+:root {
+  --color_blue: #00acdc;
+}
+
 .header {
   display: flex;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -50,16 +54,13 @@ body {
 .nav__item:first-of-type {
   padding: 0;
 }
-/* .nav__list:last-child {
-  margin-right: 50px;
-} */
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color_blue);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color_blue);
   position: relative;
 }
 
@@ -69,7 +70,6 @@ body {
   height: 4px;
   bottom: 0;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--color_blue);
   position: absolute;
-
 }
