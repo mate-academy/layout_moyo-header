@@ -1,1 +1,71 @@
-/* Styles go here */
+:root {
+  --blue: #00acdc;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.photo {
+  width: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  list-style-type: none;
+  align-self: center;
+  margin: 0 0 0 20px;
+}
+
+.apple__link {
+  margin: 0;
+}
+
+.link {
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  padding: 23px 0;
+}
+
+.link:hover {
+  color: var(--blue);
+}
+
+.is-active {
+  color: var(--blue);
+  position: relative;
+}
+
+.is-active::after {
+  display: flex;
+  content: " ";
+  background-color: var(--blue);
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 8px;
+}
