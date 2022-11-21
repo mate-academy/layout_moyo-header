@@ -3,11 +3,14 @@
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
+
+  --color: #00acdc;
 }
 
 body {
   margin: 0;
+
 }
 
 .container {
@@ -33,11 +36,11 @@ body {
   list-style: none;
 }
 
-.box:not(:last-child) {
+.nav_item:not(:last-child) {
   margin-right: 20px;
 }
 
-.link {
+.nav_link {
   font-size: 12px;
   font-weight: 500;
   padding: 23px 0;
@@ -51,12 +54,12 @@ body {
   cursor: pointer;
 }
 
-.link:hover {
-  color: #00acdc;
+.nav_link:hover {
+  color: var(--color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color);
 }
 
 .is-active::after {
@@ -65,8 +68,8 @@ body {
   width: 37px;
   height: 4px;
   top: 56px;
-  background-color: #00acdc;
+  background-color: var(--color);
   border-radius: 8px;
   position: absolute;
-  color: #00acdc;
+  color: var(--color);
 }
