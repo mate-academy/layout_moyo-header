@@ -1,106 +1,66 @@
 /* Styles go here */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
-.big-header_container {
-  width: 1200px;
-  margin: 0 auto;
+.header-container {
+  max-width: 1200px;
 }
 
-.big-header {
+.header {
+  box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
-  padding: 10px 50px;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
+  height: 60px;
   align-items: center;
-}
-
-.big-nav-bar {
-  display: flex;
-}
-
-.big-nav-bar_item {
-  position: relative;
-  height: 100%;
-  margin-left: 20px;
-  list-style-type: none;
-  font-family: "Roboto", sans-serif;
-}
-
-.big-nav-item_link {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #000;
-  font-size: 12px;
-}
-
-.big-nav-item_link:hover {
-  color: #00acdc;
-}
-
-.big-nav-bar_item__active a {
-  color: #00acdc;
-}
-
-.big-nav-bar_item__active::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background: #00acdc;
-  border-radius: 8px;
-  bottom: -25px;
-}
-
-/* ////////////////////////////////////////////// */
-
-.small-header_container {
-  width: 1024px;
-  margin: 0 auto;
-}
-
-.small-header {
-  display: flex;
   justify-content: space-between;
-  padding: 10px 50px;
+  padding: 0 50px;
 }
 
-.small-nav-bar {
+.nav {
+  height: 60px;
+}
+
+.nav__list {
+  width: 100%;
   display: flex;
-}
-
-.small-nav-bar_item {
-  position: relative;
-  height: 100%;
-  margin-left: 20px;
-  list-style-type: none;
-  font-family: "Roboto", sans-serif;
-}
-
-.small-nav-item_link {
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
   text-transform: uppercase;
+}
+
+.list__item {
+  height: 60px;
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  height: 60px;
   text-decoration: none;
-  color: #000;
+  line-height: 60px;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
+  color: #000;
 }
 
-.small-nav-item_link:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
-.small-nav-bar_item__active a {
+.is-active {
   color: #00acdc;
 }
 
-.small-nav-bar_item__active::before {
-  content: "";
+.list__item:nth-last-child(-n+7) {
+  margin-left: 20px;
+}
+
+.is-active::after {
   position: absolute;
+  content: "";
   width: 100%;
   height: 4px;
-  background: #00acdc;
+  background-color: #00acdc;
   border-radius: 8px;
-  bottom: -25px;
+  right: 0;
+  bottom: 0;
 }
