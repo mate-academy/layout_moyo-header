@@ -1,31 +1,28 @@
+html {
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
 body {
   margin: 0;
-  padding: 0;
 }
 
 header {
-  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 50px;
-  top: 10px;
-}
-
-.nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .nav__list {
   display: flex;
   list-style: none;
-  margin-top: 20px;
+  margin-top: 22px;
   margin-bottom: 23px;
 }
 
@@ -34,18 +31,15 @@ header {
   margin-left: 20px;
 }
 
-.nav__item:last-child {
-  margin-right: 50px;
-}
-
 .nav__link {
-  font-family: Roboto, Helvetica, sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
+  line-height: 14px;
+  display: block;
+  height: 100%;
 }
 
 .nav__link:hover {
@@ -57,9 +51,10 @@ header {
 }
 
 .is-active::after {
-  margin-top: 18px;
-  content: " ";
+  content: "";
   display: block;
   border-bottom: 4px solid #00acdc;
   border-radius: 8px;
+  position: relative;
+  top: 18.5px;
 }
