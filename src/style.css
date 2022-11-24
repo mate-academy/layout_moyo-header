@@ -5,7 +5,7 @@
 }
 
 html {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   --header-height: 60px;
   --main-color: #000;
   --active-color: #00acdc;
@@ -15,7 +15,12 @@ body {
   margin: 0;
 }
 
-.header {
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.moyo-header {
   display: flex;
   width: 100%;
   padding: 0 50px;
@@ -30,16 +35,22 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  /* outline: tomato 1px solid; */
+}
+
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
   position: relative;
-  margin-left: 20px;
+
   display: flex;
   align-items: center;
   cursor: pointer;
-  /* background-color: aqua; */
   color: var(--main-color);
   text-decoration: none;
   text-transform: uppercase;
@@ -47,11 +58,8 @@ body {
   line-height: var(--header-height);
 }
 
+.is-active,
 .nav__link:hover {
-  color: var(--active-color);
-}
-
-.is-active {
   color: var(--active-color);
 }
 
