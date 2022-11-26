@@ -1,1 +1,115 @@
-/* Styles go here */
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+header,
+nav {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+}
+
+/* --------------------------------------- */
+
+/* fonts */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* --------------------------------------- */
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: block;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.list__item {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.list__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.list__link {
+  display: block;
+  padding: 24px 0;
+  color: #000;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.list__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px;
+  background-color: #00acdc;
+}
