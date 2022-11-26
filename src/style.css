@@ -1,1 +1,77 @@
-/* Styles go here */
+:root {
+  --aqua: #00acdc;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 0 50px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav__list {
+  flex-wrap: wrap;
+  display: flex;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  display: flex;
+  padding-top: 23px;
+  padding-bottom: 22px;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  font-weight: 500;
+}
+
+.nav__link:hover {
+  color: var(--aqua);
+  font-weight: 500;
+}
+
+.is-active {
+  color: var(--aqua);
+  padding-bottom: 23px;
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  border-radius: 4px;
+  background-color: var(--aqua);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
