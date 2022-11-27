@@ -3,12 +3,21 @@
 
 html {
   font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
 }
 
-.nav__list {
-  list-style: none;
+a {
+  text-decoration: none;
+}
+
+header {
   display: flex;
-  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav__icon {
@@ -19,18 +28,28 @@ html {
   top: 10px;
 }
 
-.nav__link {
-  position: relative;
+.nav__item {
+  display: inline-block;
   left: 100px;
+  margin-right: 20px;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
 }
 
-/* .nav__link:first-child {
+.nav__link--apple {
   color: #00acdc;
-} */
+}
 
-/* .nav__link:nth-child(4) {
+.nav__link:hover {
+  border-bottom: 4px solid #00acdc;
+  padding-bottom: 18px;
+
+  /* width: 37px;
+  height: 4px; */
+  /* border-radius: 8px; */
+}
+
+.nav__link--lapcomp {
   color: #00acdc;
-} */
+}
