@@ -1,9 +1,16 @@
 html {
   font-family: Roboto, Helvetica, sans-serif;
+  --blue-color: #00acdc;
 }
 
 body {
   margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -22,13 +29,10 @@ header {
 .nav__list {
   display: flex;
   list-style: none;
-  margin-top: 22px;
-  margin-bottom: 23px;
 }
 
-.nav__item {
-  height: 15px;
-  margin-left: 20px;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -37,17 +41,17 @@ header {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  line-height: 14px;
   display: block;
-  height: 100%;
+  padding-top: 23px;
+  padding-bottom: 19px;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active::after {
