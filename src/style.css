@@ -2,7 +2,12 @@
   --aqua: #00acdc;
 }
 
-html {
+html,
+body,
+header,
+ul,
+li,
+a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,10 +19,6 @@ html {
   color: #000;
 }
 
-body {
-  margin: 0;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -25,19 +26,18 @@ body {
   align-items: center;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  margin: 0 50px;
+  padding: 0 50px;
 }
 
 .logo {
   height: 40px;
+  width: 40px;
 }
 
 .nav__list {
   flex-wrap: wrap;
   display: flex;
   text-transform: uppercase;
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
@@ -57,7 +57,6 @@ body {
 
 .nav__link:hover {
   color: var(--aqua);
-  font-weight: 500;
 }
 
 .is-active {
@@ -71,7 +70,7 @@ body {
   width: 100%;
   height: 4px;
   bottom: 0;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: var(--aqua);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
