@@ -1,55 +1,71 @@
 /* Styles go here */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
+body {
+  margin: 0;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-  line-height: 14px;
-}
-
-a {
-  text-decoration: none;
 }
 
 header {
+  position: relative;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
-  height: 60px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
 }
 
 .nav__icon {
-  position: absolute;
+  display: flex;
   width: 40px;
   height: 40px;
-  left: 50px;
-  top: 10px;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+  margin: 0;
 }
 
 .nav__item {
-  display: inline-block;
-  left: 100px;
-  margin-right: 20px;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
+  height: 100%;
 }
 
-.nav__link--apple {
-  color: #00acdc;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: flex;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 23px 0;
+  color: #000;
+  height: 100%;
 }
 
 .nav__link:hover {
-  border-bottom: 4px solid #00acdc;
-  padding-bottom: 18px;
-
-  /* width: 37px;
-  height: 4px; */
-  /* border-radius: 8px; */
+  color: #00acdc;
 }
 
-.nav__link--lapcomp {
+.is-active {
   color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: #00acdc;
+  border-radius: 8px;
 }
