@@ -3,6 +3,7 @@
 
 body {
   margin: 0;
+  --colorblue: #00acdc;
 }
 
 html {
@@ -10,7 +11,7 @@ html {
   font-size: 12px;
 }
 
-header {
+.header {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -53,11 +54,11 @@ header {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--colorblue);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--colorblue);
 }
 
 .is-active::after {
@@ -66,6 +67,6 @@ header {
   bottom: 0;
   height: 4px;
   width: 100%;
-  background: #00acdc;
+  background: var(--colorblue);
   border-radius: 8px;
 }
