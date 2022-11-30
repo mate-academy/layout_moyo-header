@@ -1,6 +1,9 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -8,21 +11,39 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
+
 }
 
 .logo {
   margin: 10px 0;
 }
 
+.nav {
+  display: flex;
+  align-self: stretch;
+}
+
 .nav_list {
+  align-self: center;
+  margin: 0;
+  padding: 0;
   font-size: 12px;
   text-transform: uppercase;
   display: flex;
-  gap: 20px;
   list-style: none;
 }
 
+.nav_item {
+  align-items: stretch;
+}
+
+.nav_item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
 .nav_link:link {
+  position: relative;
+  padding: 21px 0;
   color: #000;
   text-decoration: none;
 }
@@ -41,10 +62,11 @@ body {
 
 .is-active::after {
   content: "";
-  display: flex;
-  position: relative;
-  top: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: #00acdc;
-  height: 3px;
+  height: 4px;
   border-radius: 8px;
 }
