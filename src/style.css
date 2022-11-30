@@ -1,8 +1,4 @@
 /* reset css */
-* {
-  margin: 0;
-}
-
 *,
 *:before,
 *:after {
@@ -15,16 +11,18 @@ a:hover {
   text-decoration: none;
 }
 
-ul li {
+ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
-  font-size: 100%;
   line-height: 1;
+  margin: 0;
 }
 
 /* --------------------------------------- */
@@ -43,6 +41,8 @@ body {
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+
+  --main-blue-color: #00acdc;
 }
 
 .header {
@@ -60,6 +60,7 @@ html {
 .nav__list {
   display: flex;
   align-items: center;
+  margin: 0;
 }
 
 .nav__item {
@@ -75,16 +76,16 @@ html {
   display: block;
   padding: 24px 0;
   color: #000;
-  transition: color 0.2s ease;
+  transition: color 200ms ease;
   position: relative;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-blue-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-blue-color);
 }
 
 .is-active::after {
@@ -95,5 +96,5 @@ html {
   bottom: 0;
   left: 0;
   border-radius: 4px;
-  background-color: #00acdc;
+  background-color: var(--main-blue-color);
 }
