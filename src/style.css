@@ -1,1 +1,100 @@
-/* Styles go here */
+/* reset css */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  margin: 0;
+}
+
+/* --------------------------------------- */
+
+/* fonts */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* --------------------------------------- */
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+
+  --main-blue-color: #00acdc;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header__logo {
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.nav__item {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: block;
+  padding: 24px 0;
+  color: #000;
+  transition: color 200ms ease;
+}
+
+.nav__link:hover {
+  color: var(--main-blue-color);
+}
+
+.is-active {
+  color: var(--main-blue-color);
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px;
+  background-color: var(--main-blue-color);
+}
