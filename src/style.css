@@ -30,27 +30,21 @@ body {
 }
 
 .nav__links {
-  display: block;
-  text-align: center;
+  display: flex;
+  align-items: center;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 12px;
   color: #000;
-  padding-top: 23px;
-  padding-bottom: 22px;
+  height: 60px;
 }
 
 li {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
 }
 
 li:first-child {
   margin-left: 0;
-}
-
-li:last-child {
-  margin-right: 0;
 }
 
 .nav__links:hover {
@@ -59,7 +53,7 @@ li:last-child {
 
 .is-active {
   color: #00acdc;
-  height: 15px;
+  position: relative;
 }
 
 .is-active::after {
@@ -67,8 +61,8 @@ li:last-child {
   content: "";
   width: 37px;
   height: 4px;
-  position: relative;
-  top: 19px;
+  bottom: 0;
+  position: absolute;
   background: #00acdc;
   border-radius: 8px;
 }
