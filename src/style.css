@@ -2,12 +2,21 @@ body {
   margin: 0;
 }
 
-.nav {
-  /* min-height: 60px; */
-  display: flex;
+header {
   padding: 0 50px;
-
+  display: flex;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  margin: 10px 0;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -19,6 +28,16 @@ body {
 .nav-link {
   color: inherit;
   text-decoration: inherit;
+  cursor: pointer;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
 }
 
 .nav-list {
@@ -37,11 +56,25 @@ body {
   margin-left: 20px;
 }
 
+.nav-item:first-child {
+  margin-left: 0;
+}
+
 .nav-item:hover {
   color: #00acdc;
 }
 
-.nav-logo {
-  margin: 10px 0;
-  height: 40px;
+.is-active {
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
 }
