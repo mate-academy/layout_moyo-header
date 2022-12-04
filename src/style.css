@@ -1,5 +1,6 @@
 html {
   font-family: "Roboto", sans-serif;
+  --color: #00acdc;
 }
 
 body {
@@ -13,8 +14,8 @@ body {
   padding: 0 50px;
 }
 
-.logo_link {
-  height: 40px;
+.logo {
+  display: block;
 }
 
 .nav_list {
@@ -40,15 +41,11 @@ body {
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--color);
 }
 
-.is-active:link {
-  color: #00acdc;
-}
-
-.is-active:visited {
-  color: #00acdc;
+.is-active {
+  color: var(--color);
 }
 
 .is-active::after {
@@ -57,7 +54,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #00acdc;
+  background-color: var(--color);
   height: 4px;
   border-radius: 8px;
 }
