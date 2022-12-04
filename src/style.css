@@ -1,1 +1,64 @@
-/* Styles go here */
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  align-self: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.navItem:last-child {
+  margin-right: 0;
+}
+
+.navLink {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  height: 15px;
+  padding-top: calc((60px - 15px) / 2);
+  padding-bottom: calc((60px - 15px) / 2);
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.navLink:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #00acdc;
+}
