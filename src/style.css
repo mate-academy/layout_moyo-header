@@ -1,3 +1,11 @@
+html {
+  font-family: Roboto, Helvetica, sans-serif;
+
+  --white: #fff;
+  --black: #000;
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
 }
@@ -6,6 +14,9 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
+
+  background: var(--white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -22,9 +33,6 @@ body {
 }
 
 .navItem {
-  display: flex;
-  align-items: center;
-  height: 60px;
   margin-right: 20px;
   position: relative;
 }
@@ -34,22 +42,22 @@ body {
 }
 
 .navLink {
-  font-family: Roboto, Helvetica, sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #000;
-  text-decoration: none;
+  display: block;
   height: 15px;
-  padding-top: calc((60px - 15px) / 2);
-  padding-bottom: calc((60px - 15px) / 2);
+  padding: 22.5px 0;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  color: var(--black);
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
-.is-active {
-  color: #00acdc;
-}
-
+.is-active,
 .navLink:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active::after {
@@ -60,5 +68,5 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--blue);
 }
