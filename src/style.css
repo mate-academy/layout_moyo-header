@@ -1,1 +1,57 @@
-/* Styles go here */
+html {
+  font-family: "Roboto", sans-serif;
+  --color: #00acdc;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  display: block;
+}
+
+.nav_list {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav_item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.nav_link {
+  display: block;
+  position: relative;
+  padding: 23px 0;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav_link:hover,
+.is-active {
+  color: var(--color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color);
+  height: 4px;
+  border-radius: 8px;
+}
