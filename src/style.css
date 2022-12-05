@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  /* box-sizing: border-box; */
 }
 
 header {
@@ -21,6 +22,7 @@ header {
 .nav-list {
   list-style: none;
   display: flex;
+  padding-bottom: 4px;
 }
 
 .nav-list-item {
@@ -31,6 +33,7 @@ header {
   color: black;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: default;
   padding: 22px 0;
   margin-left: 20px;
   position: relative;
@@ -44,7 +47,7 @@ header {
   color: #00acdc;
 }
 
-.is-active.nav-list-item::after {
+.is-active::after {
   content: " ";
   height: 4px;
   background: #00acdc;
