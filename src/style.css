@@ -1,1 +1,139 @@
-/* Styles go here */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  --secondary-color: #00acdc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  padding: 10px 0;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav__item {
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.nav__item:nth-child(n+2) {
+  margin-left: 20px;
+}
+
+.nav__link:link {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 12px;
+  height: 60px;
+}
+
+.nav__link:visited {
+  color: #000;
+}
+
+.nav__link:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.nav__link.is-active {
+  color: var(--secondary-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  background: var(--secondary-color);
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+}
