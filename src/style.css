@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 header {
@@ -22,7 +22,7 @@ header {
 .nav-list {
   list-style: none;
   display: flex;
-  padding-bottom: 4px;
+  padding: 0;
 }
 
 .nav-list-item {
@@ -35,8 +35,11 @@ header {
   text-decoration: none;
   cursor: default;
   padding: 22px 0;
-  margin-left: 20px;
   position: relative;
+}
+
+.nav-list li:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav-list-item:hover {
