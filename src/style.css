@@ -1,59 +1,52 @@
 body {
   margin: 0;
-}
-
-header {
-  padding: 0 50px;
-  display: flex;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.nav-logo {
-  margin: 10px 0;
-  height: 40px;
+  font-family: "Roboto", sans-serif;
 }
 
 .nav {
   display: flex;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-logo {
+  align-self: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
-}
-
-.nav-link {
-  color: inherit;
-  text-decoration: inherit;
-  cursor: pointer;
-  padding: 22px 0 23px;
-}
-
-.nav-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
+  text-align: center;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  flex-grow: 1;
-  line-height: 60px;
+  align-items: center;
+  color: #000;
+  height: 60px;
 }
 
-.nav-item {
-  margin-left: 20px;
-}
-
-.nav-item:first-child {
-  margin-left: 0;
-}
-
-.nav-item:hover {
+.nav-link:hover {
   color: #00acdc;
+}
+
+.nav-link:active {
+  color: #00acdc;
+  box-shadow: 0 4px 0 #00acdc;
 }
 
 .is-active {
@@ -64,10 +57,10 @@ header {
 .is-active::after {
   content: "";
   position: absolute;
-  left: 0;
   bottom: 0;
-  width: 100%;
+  left: 0;
   height: 4px;
-  background: #00acdc;
+  width: 100%;
+  background-color: #00acdc;
   border-radius: 8px;
 }
