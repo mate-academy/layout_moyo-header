@@ -2,8 +2,10 @@
 
 body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -29,14 +31,13 @@ body {
 .nav__list {
   display: flex;
   list-style: none;
-  /* gap: 20px; */
   padding: 0;
   margin: 0;
 }
 
 @media (max-width: 1024px) {
   .header-nav-menu {
-    padding-left: 0;
+    margin-left: 0;
   }
 }
 
@@ -44,8 +45,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  height: 60px;
-  font-family: "Roboto", sans-serif;
+  padding: 23px 0;
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
@@ -61,17 +61,14 @@ body {
 
 .nav-links.is-active {
   color: #00acdc;
+  cursor: pointer;
 }
 
-.nav-items {
+.nav-items:not(:first-child) {
   margin-left: 20px;
 }
 
-.nav-items:first-child {
-  margin-left: 0;
-}
-
-.nav-links.is-active::after {
+.is-active::after {
   content: "";
   position: absolute;
   bottom: 0;
