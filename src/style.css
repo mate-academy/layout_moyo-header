@@ -5,53 +5,55 @@ body {
   font-size: 12px;
 }
 
+img {
+  display: block;
+}
+
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
 }
 
 ul {
   display: flex;
   flex-direction: row;
-  justify-content: end;
-  
-  list-style: none;
   margin: 0;
-  padding-left: 0;
-}
-
-a {
-  text-decoration: none;
-  color: black;
+  list-style: none;
 }
 
 ul li:not(:last-child) {
   padding-right: 20px;
 }
 
+a {
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
+
 a:hover {
   color: #00acdc;
 }
 
-header a:not(.logo_link) {
-  padding: 1em 0;
-  margin: -1em 0;
-}
-
-.header_container {
-  margin: 10px 50px;
-}
-
 .nav__list {
   text-transform: uppercase;
-  align-items: center;
+  display: block;
+  padding: 23px 0;
+}
+
+.is-active {
+  position: relative;
 }
 
 .is-active a::after {
-  content: "";
-  display: block;
-  width: auto;
-  padding-top: 23px;
-  border-bottom: 3px solid #00acdc;
-  color: #00acdc;
+  content: "jnjn";
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  left: 0;
+  top: 56px;
+  background: #00acdc;
 }
