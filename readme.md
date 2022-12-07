@@ -1,5 +1,5 @@
 # Moyo header
-Replace `serbinm` with your Github username and copy the links to Pull Request description:
+Replace `serbinm` with  your Github username and copy the links to Pull Request description:
 - [DEMO LINK](https://serbinm.github.io/layout_moyo-header/)
 - [TEST REPORT LINK](https://serbinm.github.io/layout_moyo-header/report/html_report/)
 
