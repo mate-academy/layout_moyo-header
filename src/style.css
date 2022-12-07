@@ -1,16 +1,25 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
 
 body {
   margin: 0;
+  color: #000;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: normal;
   font-weight: 500;
 }
 
 .header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
+
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  padding: 0 50px;
 }
 
 .logo {
@@ -19,48 +28,49 @@ body {
 
 .nav__list {
   display: flex;
-  /* gap: 20px; */
   list-style: none;
   margin: 0;
   padding: 0;
-  height: 15px;
 }
 
-.nav a {
-  color: #000;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  height: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  padding: 22px 0;
+.nav__list:first-child {
+  margin-left: 0;
 }
 
 .nav__item {
   display: flex;
   align-items: center;
   text-align: left;
-}
-
-.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
-.is-active a {
-  color: #00acdc;
+.nav__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-style: normal;
+  font-weight: 500;
+
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
 }
 
-.nav a:hover {
+.is-active,
+.nav__link:hover {
   color: #00acdc;
 }
 
 .is-active::after {
   content: "";
-  background-color: #00acdc;
-  display: block;
-  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   height: 4px;
-  position: relative;
-  top: 19px;
+  border-radius: 8px;
+  background-color: #00acdc;
 }
