@@ -1,1 +1,67 @@
 /* Styles go here */
+html {
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  margin: 0 50px 0 0;
+
+}
+
+.nav__item {
+  display: flex;
+}
+
+.nav__link {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: #000;
+  transition: 0.3s color;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: blue;
+}
+
+.logo {
+  margin: 10px 0 10px 50px;
+  display: block;
+}
+
+.is-active {
+  color: blue;
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  width: 75%;
+  height: 4px;
+  bottom: 1px;
+  background-color: blue;
+  border-radius: 8px;
+}
