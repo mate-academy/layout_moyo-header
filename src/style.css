@@ -1,1 +1,115 @@
-/* Styles go here */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+svg {
+  width: 100%;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #fff;
+}
+
+.header__link-backHome {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.header__nav-list {
+  display: flex;
+}
+
+.header__nav-item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.header__nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header__nav-item:hover {
+  color: #00acdc;
+}
+
+.header__nav-link {
+  display: block;
+  position: relative;
+  padding: 23px 0;
+}
+
+.header__nav-link.is-active {
+  color: #00acdc;
+}
+
+.header__nav-link.is-active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  color: #00acdc;
+  background-color: #00acdc;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+}
