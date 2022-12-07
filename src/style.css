@@ -1,8 +1,6 @@
 body {
   margin: 0;
   font-family: Roboto, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
 }
 
 img {
@@ -14,6 +12,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 ul {
@@ -23,14 +23,8 @@ ul {
   list-style: none;
 }
 
-ul li:not(:last-child) {
-  padding-right: 20px;
-}
-
-a {
-  text-decoration: none;
-  outline: none;
-  color: black;
+li:not(:last-child) {
+  margin-right: 20px;
 }
 
 a:hover {
@@ -41,19 +35,25 @@ a:hover {
   text-transform: uppercase;
   display: block;
   padding: 23px 0;
+  text-decoration: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 12px;
+  color: black;
 }
 
 .is-active {
   position: relative;
+  color: #00acdc;
 }
 
-.is-active a::after {
-  content: "jnjn";
+.is-active::after {
+  content: "";
   position: absolute;
-  width: 37px;
-  height: 4px;
-  border-radius: 8px;
+  bottom: 0;
   left: 0;
-  top: 56px;
+  right: 0;
+  height: 4px;
   background: #00acdc;
+  border-radius: 8px;
 }
