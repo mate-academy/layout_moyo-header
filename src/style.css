@@ -3,10 +3,11 @@ html {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
+  --main-color: #00acdc;
 }
 
 body {
-  margin: initial;
+  margin: 0;
 }
 
 .header {
@@ -17,7 +18,7 @@ body {
   padding: 0 50px;
 }
 
-.logo {
+.header__logo {
   width: 40px;
   height: 40px;
 }
@@ -30,12 +31,6 @@ body {
   display: flex;
 }
 
-.list__item {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
 .list__item:not(:first-of-type) {
   margin-left: 20px;
 }
@@ -43,19 +38,23 @@ body {
 .nav__link {
   text-decoration: none;
   color: #000;
-  height: 60px;
+  padding: 23px 0;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
 }
 
+.header__link {
+  padding: 10px 0;
+}
+
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
   position: relative;
 }
 
@@ -64,7 +63,7 @@ body {
   position: absolute;
   height: 4px;
   border-radius: 8px;
-  background: #00acdc;
+  background: var(--main-color);
   bottom: 0;
   width: 100%;
 }
