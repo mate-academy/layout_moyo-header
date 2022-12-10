@@ -5,6 +5,7 @@ html {
 body {
   margin: 0;
   box-sizing: border-box;
+  --nav-Link-color: #00acdc;
 }
 
 * {
@@ -13,26 +14,23 @@ body {
 
 .header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  position: relative;
   width: 100%;
   height: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.img_style {
+.header_logo-link {
   display: flex;
   align-self: center;
-  padding-left: 50px;
-  padding-right: 10px;
 }
 
 .nav {
   margin-bottom: 1px;
-  margin-right: 50px;
 }
 
 .nav__list {
@@ -45,7 +43,8 @@ body {
 }
 
 .nav__item {
-  padding: 19px 20px 21px 0;
+  padding: 19px 0 21px ;
+  margin-right: 20px;
 }
 
 .nav__item:last-child {
@@ -64,19 +63,19 @@ body {
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var( --nav-Link-color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--nav-Link-color);
 }
 
 .is-active::after {
   content: "";
   display: block;
   height: 4px;
-  width: 37px;
+  width: 100%;
   background-color: #00acdc;
   border-radius: 5px;
   position: absolute;
