@@ -1,1 +1,74 @@
 /* Styles go here */
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.header {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav_list {
+  flex-direction: row-reverse;
+  flex-basis: auto;
+  flex-wrap: nowrap;
+  text-align: right;
+}
+
+.url {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  line-height: 60px;
+}
+
+.urls {
+  display: flex;
+  margin: auto 10px;
+  position: relative;
+}
+
+.icon {
+  display: block;
+}
+
+.links {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
+
+.last-url {
+  margin-right: 50px;
+}
+
+.url:hover {
+  color: #00acdc;
+  transition: color 0.3s;
+}
