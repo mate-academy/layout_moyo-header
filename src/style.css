@@ -11,24 +11,28 @@ body {
 
 .nav {
   display: flex;
-  margin-right: 50px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+  --color-active-hover: #00acdc;
 }
 
-.logo__link {
-  display: flex;
-  margin: 10px 0 10px 50px;
+.header__logo-link {
+  margin-top: 10px;
   width: 40px;
   height: 40px;
 }
 
 .nav__item {
   display: inline-block;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__list {
@@ -45,19 +49,14 @@ body {
   color: black;
   font-size: 12px;
   height: 60px;
-  margin-right: 20px;
-}
-
-.box__video {
-  margin: 0;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color-active-hover);
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color-active-hover);
 }
 
 .is-active::after {
@@ -66,6 +65,6 @@ body {
   content: "";
   width: 37px;
   height: 4px;
-  background: #00acdc;
+  background: var(--color-active-hover);
   border-radius: 8px;
 }
