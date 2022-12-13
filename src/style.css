@@ -11,6 +11,10 @@ a {
   padding: 0;
 }
 
+:root {
+  --color-active: #00acdc;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -27,10 +31,10 @@ body {
   min-width: 1024px;
 }
 
-.link__logo {
+.header__logo {
+  margin: 10px 0 10px 50px;
   width: 40px;
   height: 40px;
-  margin: 10px 0 10px 50px;
 }
 
 .nav__menu {
@@ -68,7 +72,7 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color-active);
   position: relative;
   padding-bottom: 23px;
 }
@@ -76,7 +80,7 @@ body {
 .is-active::after {
   content: "";
   position: absolute;
-  background: #00acdc;
+  background: var(--color-active);
   height: 4px;
   width: 37px;
   border-radius: 8px;
