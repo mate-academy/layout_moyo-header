@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\Header_tag_1024px.png",
-        "test": "..\\bitmaps_test\\20221213-165505\\Header_tag_1024px.png",
+        "test": "..\\bitmaps_test\\20221214-112632\\Header_tag_1024px.png",
         "selector": "header",
         "fileName": "Header_tag_1024px.png",
         "label": "Header tag",
@@ -21,7 +21,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.02",
-          "analysisTime": 27
+          "analysisTime": 33
         }
       },
       "status": "pass"
@@ -29,7 +29,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\Header_tag_1200px.png",
-        "test": "..\\bitmaps_test\\20221213-165505\\Header_tag_1200px.png",
+        "test": "..\\bitmaps_test\\20221214-112632\\Header_tag_1200px.png",
         "selector": "header",
         "fileName": "Header_tag_1200px.png",
         "label": "Header tag",
@@ -46,7 +46,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.02",
-          "analysisTime": 29
+          "analysisTime": 49
         }
       },
       "status": "pass"
@@ -54,7 +54,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\Nav_tag_1024px.png",
-        "test": "..\\bitmaps_test\\20221213-165505\\Nav_tag_1024px.png",
+        "test": "..\\bitmaps_test\\20221214-112632\\Nav_tag_1024px.png",
         "selector": "nav",
         "fileName": "Nav_tag_1024px.png",
         "label": "Nav tag",
@@ -71,7 +71,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.03",
-          "analysisTime": 25
+          "analysisTime": 28
         }
       },
       "status": "pass"
@@ -79,7 +79,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\Nav_tag_1200px.png",
-        "test": "..\\bitmaps_test\\20221213-165505\\Nav_tag_1200px.png",
+        "test": "..\\bitmaps_test\\20221214-112632\\Nav_tag_1200px.png",
         "selector": "nav",
         "fileName": "Nav_tag_1200px.png",
         "label": "Nav tag",
@@ -96,7 +96,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.03",
-          "analysisTime": 25
+          "analysisTime": 33
         }
       },
       "status": "pass"
@@ -104,7 +104,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\Link_with_data-qa_hover_1024px.png",
-        "test": "..\\bitmaps_test\\20221213-165505\\Link_with_data-qa_hover_1024px.png",
+        "test": "..\\bitmaps_test\\20221214-112632\\Link_with_data-qa_hover_1024px.png",
         "selector": "[data-qa=\"hover\"]",
         "fileName": "Link_with_data-qa_hover_1024px.png",
         "label": "Link with data-qa_hover",
@@ -128,7 +128,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\Link_with_data-qa_hover_1200px.png",
-        "test": "..\\bitmaps_test\\20221213-165505\\Link_with_data-qa_hover_1200px.png",
+        "test": "..\\bitmaps_test\\20221214-112632\\Link_with_data-qa_hover_1200px.png",
         "selector": "[data-qa=\"hover\"]",
         "fileName": "Link_with_data-qa_hover_1200px.png",
         "label": "Link with data-qa_hover",
@@ -152,7 +152,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\Link_with_class_is-active_1024px.png",
-        "test": "..\\bitmaps_test\\20221213-165505\\Link_with_class_is-active_1024px.png",
+        "test": "..\\bitmaps_test\\20221214-112632\\Link_with_class_is-active_1024px.png",
         "selector": "a.is-active",
         "fileName": "Link_with_class_is-active_1024px.png",
         "label": "Link with class_is-active",
@@ -169,7 +169,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.54",
-          "analysisTime": 10
+          "analysisTime": 18
         }
       },
       "status": "pass"
@@ -177,7 +177,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\Link_with_class_is-active_1200px.png",
-        "test": "..\\bitmaps_test\\20221213-165505\\Link_with_class_is-active_1200px.png",
+        "test": "..\\bitmaps_test\\20221214-112632\\Link_with_class_is-active_1200px.png",
         "selector": "a.is-active",
         "fileName": "Link_with_class_is-active_1200px.png",
         "label": "Link with class_is-active",
@@ -194,7 +194,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.54",
-          "analysisTime": 11
+          "analysisTime": 31
         }
       },
       "status": "pass"
