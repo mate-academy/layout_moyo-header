@@ -1,1 +1,69 @@
-/* Styles go here */
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  --azure-color: #00acdc;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__items {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav__list:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  display: flex;
+  padding: 23px 0;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.nav__link:hover {
+  color: var(--azure-color);
+}
+
+.is-active {
+  color: var(--azure-color);
+  position: relative;
+}
+
+.is-active::after {
+  position: absolute;
+  background-color: var(--azure-color);
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  border-radius: 8px;
+  content: "";
+}
