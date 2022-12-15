@@ -1,3 +1,7 @@
+:root {
+  --hover-color: #00acdc;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,10 +13,10 @@ ul {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   margin: 0;
+
 }
 
 .header {
@@ -21,13 +25,13 @@ body {
   background-color: #fff;
   max-width: 1200px;
   min-width: 1024px;
+  padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav {
   display: flex;
   align-items: center;
-  margin-right: 50px;
 }
 
 .nav__list {
@@ -49,17 +53,17 @@ body {
 
 .logo {
   display: flex;
-  padding: 10px 0 10px 50px;
+  padding: 10px 0;
   cursor: pointer;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active::after {
@@ -67,7 +71,7 @@ body {
   position: absolute;
   width: 100%;
   height: 4px;
-  background: #00acdc;
+  background: var(--hover-color);
   left: 0;
   bottom: 0;
   border-radius: 8px;
