@@ -17,7 +17,6 @@ body {
 .header {
   display: flex;
   height: 60px;
-  width: 1200px;
   padding: 0 50px;
   align-items: center;
   justify-content: space-between;
@@ -33,6 +32,7 @@ body {
 
 .nav__list {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
 }
 
@@ -49,18 +49,20 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
+  padding: 23px 0;
 }
 
 .is-active {
+  position: relative;
   color: var(--blue-color);
 }
 
 .is-active::after {
-  content: " ";
+  content: "";
   position: absolute;
-  left: 0;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   height: 4px;
   background-color: var(--blue-color);
   border-radius: 8px;
