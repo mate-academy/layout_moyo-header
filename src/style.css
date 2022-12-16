@@ -1,6 +1,10 @@
-body {
+html {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  font-size: 12px;
+}
+
+body {
   margin: 0;
   padding: 0;
 }
@@ -9,44 +13,33 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 50px;
+  height: 60px;
+  padding: 0 50px;
 }
 
 .logo {
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  display: inline-flex;
 }
 
 .nav__list {
   display: flex;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
-}
-
-.is-active {
-  font-family: inherit;
-  color: #00acdc;
-  font-size: 12px;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin-right: 20px;
-  padding: 23px 0;
-  position: relative;
+  list-style: none;
 }
 
 .nav__link {
-  font-family: inherit;
   color: black;
   text-decoration: none;
-  font-size: 12px;
   text-transform: uppercase;
+  margin-left: 20px;
   padding: 23px 0;
 }
 
-.nav__link:not(:last-child) {
-  margin-right: 20px;
+.is-active {
+  color: #00acdc;
+  position: relative;
+  margin-left: 0;
 }
 
 .is-active::after {
