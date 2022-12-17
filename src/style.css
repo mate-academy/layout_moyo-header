@@ -1,1 +1,67 @@
-/* Styles go here */
+@font-face {
+  font-family: "Roboto";
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.header {
+  display: flex;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.way__home {
+  flex-grow: 1;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  padding-left: 50px;
+}
+
+.nav {
+  margin-right: 40px;
+}
+
+.nav__height {
+  height: 100%;
+  display: flex;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none ;
+  padding: 0 10px;
+  text-transform: uppercase;
+  height: 100%;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  content: attr(text);
+  color: #00acdc0d;
+  background: #00acdc;
+  border-radius: 8px;
+  bottom: 0;
+  height: 4px;
+}
