@@ -8,6 +8,7 @@ html {
 body,
 ul {
   margin: 0;
+  --color: #00acdc;
 }
 
 .header {
@@ -15,6 +16,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.05);
   padding: 0 50px;
 }
 
@@ -34,18 +36,18 @@ ul {
   text-decoration: none;
 }
 
-.logo {
+.header__logo {
   width: 40px;
   margin: auto 0;
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--color);
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color);
 }
 
 .nav__item:not(:last-child) {
@@ -57,7 +59,7 @@ ul {
   position: absolute;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--color);
   left: 0;
   bottom: 0;
   border-radius: 8px;
