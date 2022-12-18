@@ -9,22 +9,20 @@ body {
 
 .header {
   display: flex;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
 }
 
-.way__home {
-  flex-grow: 1;
-  line-height: 0;
-}
-
-.icon {
+.header__home {
   width: 40px;
   height: 40px;
-  padding: 10px 50px;
+  margin: 10px 50px;
 }
 
 .nav {
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
 .nav__height {
@@ -33,24 +31,24 @@ body {
 }
 
 .nav__link {
+  position: relative;
   display: flex;
   align-items: center;
   font-family: "Roboto", Arial, sans-serif;
-  font-style: normal;
   color: #000;
+  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   text-decoration: none;
-  padding: 0 10px;
   text-transform: uppercase;
 }
 
-.nav__link:hover {
-  color: #00acdc;
+.nav__link:not(:first-of-type) {
+  margin-left: 20px;
 }
 
-.is-active {
-  position: relative;
+.is-active,
+.nav__link:hover {
   color: #00acdc;
 }
 
@@ -58,7 +56,7 @@ body {
   position: absolute;
   content: attr(text);
   color: #00acdc0d;
-  background: #00acdc;
+  background-color: #00acdc;
   border-radius: 8px;
   bottom: 0;
   height: 4px;
