@@ -6,8 +6,7 @@ html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
-
-  --color-mockup-blue: #00acdc;
+  --color-blue: #00acdc;
 }
 
 body {
@@ -32,11 +31,11 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  height: max-content;
 }
 
 .nav__link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   position: relative;
   font-family: inherit;
@@ -47,20 +46,20 @@ body {
 }
 
 .nav__link:hover {
-  color: var(--color-mockup-blue);
+  color: var(--color-blue);
 }
 
-.is-active {
-  color: var(--color-mockup-blue);
+.is-active:first-child {
+  color: var(--color-blue);
   margin-left: 0;
 }
 
-.is-active:after {
+.nav__link.is-active::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 4px;
-  background: var(--color-mockup-blue);
+  background: var(--color-blue);
   border-radius: 8px;
   bottom: 0;
   left: 0;
