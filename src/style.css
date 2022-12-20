@@ -9,10 +9,11 @@
 }
 
 html {
+  --blue: #00acdc;
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  color: #000;
   font-size: 12px;
+  line-height: 14px;
   text-transform: uppercase;
 }
 
@@ -24,65 +25,55 @@ body {
 ul {
   padding: 0;
   margin: 0;
-  display: flex;
   list-style: none;
 }
 
-li {
-  display: inline-block;
-  margin: 0;
-}
-
-a {
-  display: inline-block;
-  text-align: center;
-  color: black;
-  text-decoration: none;
-}
-
-/* Without font-size: 0; my link with logo image has height equals 
-44px (for some reason 4 pixels are added). I dont know why it is 
-happening but I've solved problem this way */
-.link {
-  font-size: 0;
+.img-link {
+  height: 40px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   padding: 0 50px;
 }
 
-.navigation__item {
-  padding-right: 20px;
+.nav-list {
+  display: flex;
 }
 
-.navigation__item:last-child {
-  padding-right: 0;
+.nav-list__item {
+  margin-right: 20px;
 }
 
-.navigation__item a {
+.nav-list__item:last-child {
+  margin-right: 0;
+}
+
+.link {
+  padding: 23px 0;
   display: inline-block;
-  padding: 22.8px 0;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
 }
 
-.navigation__item a:hover {
-  color: #00acdc;
+.link:hover {
+  color: var(--blue);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active::after {
   position: absolute;
-  top: 56px;
+  bottom: 0;
+  left: 0;
   content: " ";
-  background-color: #00acdc;
-  display: block;
+  background-color: var(--blue);
   width: 100%;
   height: 4px;
   border-radius: 8px;
