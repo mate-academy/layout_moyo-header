@@ -28,15 +28,13 @@ body {
 }
 
 .nav__ul {
+  display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .nav__item {
-  position: relative;
-  display: inline;
-  float: left;
   margin-right: 20px;
 }
 
@@ -54,17 +52,14 @@ body {
   color: #000;
 }
 
-.nav__link:hover {
-  color: var(--header-secondary-color);
-}
-
+.nav__link:hover,
 .nav__link.is-active {
   color: var(--header-secondary-color);
 }
 
 .nav__link.is-active::after {
   position: absolute;
-  top: 56px;
+  bottom: 0;
   content: "";
   display: block;
   height: 4px;
