@@ -4,6 +4,11 @@
   --header-secondary-color: #00acdc;
 }
 
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -34,15 +39,15 @@ body {
   padding: 0;
 }
 
-.nav__item {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav__link:link {
+.nav__link {
   position: relative;
   display: inline-block;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: inherit;
+  font-style: inherit;
   font-weight: 500;
   font-size: 12px;
   line-height: 12px;
@@ -65,8 +70,4 @@ body {
   height: 4px;
   width: 100%;
   background-color: var(--header-secondary-color);
-}
-
-.nav__item:last-child {
-  margin-right: 0;
 }
