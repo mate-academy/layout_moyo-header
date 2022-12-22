@@ -1,1 +1,69 @@
-/* Styles go here */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --regular-font: #000;
+  --hover-font: #00acdc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 14px;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: nowrap;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: flex;
+  text-decoration: none;
+  color: var(--regular-font);
+  cursor: pointer;
+  padding: 23px 0;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  color: var(--hover-font);
+}
+
+.is-active {
+  position: relative;
+  color: var(--hover-font);
+}
+
+.is-active::after {
+  position: absolute;
+  background-color: var(--hover-font);
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  border-radius: 8px;
+  content: "";
+}
