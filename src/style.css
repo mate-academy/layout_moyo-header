@@ -1,1 +1,75 @@
-/* Styles go here */
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  /* height: 60px; */
+}
+
+li {
+  display: inline;
+  margin-right: 20px;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.ul_nav {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  white-space: nowrap;
+  margin-right: 50px;
+  text-transform: uppercase;
+}
+
+.logo {
+  display: flex;
+  margin-left: 50px;
+  padding: 10px 0;
+}
+
+/*Слова-ссылки без подчеркивания по образцу ФИГМА*/
+.link_nav {
+  color: black;
+  /* height: 50px; */
+  position: relative;
+  text-decoration: none;
+  padding: 23px 0;
+}
+
+.is-active,
+.link_nav:hover {
+  color: #00acdc;
+}
+
+/* Блок отвечает за нижнее подчеркивание*/
+.link_nav:active::after,
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 8px;
+  background: #00acdc;
+  height: 4px;
+}
