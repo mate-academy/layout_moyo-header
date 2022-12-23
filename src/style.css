@@ -1,1 +1,76 @@
-/* Styles go here */
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/Roboto-Regular.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  color: #000;
+}
+
+.header,
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  box-sizing: border-box;
+  padding: 0 50px;
+  min-width: 850px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.moyoLogo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__link:link {
+  line-height: 60px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__link:visited {
+  color: #000;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+  font-weight: 500;
+}
+
+.nav__link:active {
+  color: #00acdc;
+}
+
+.nav__link:active::after {
+  content: "";
+  height: 4px;
+  margin-top: -4px;
+  background: #00acdc;
+  border-radius: 8px;
+}
