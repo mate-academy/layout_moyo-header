@@ -1,11 +1,11 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  --color: #00acdc;
 }
 
 .header {
   display: flex;
-  height: 60px;
   padding: 0 50px;
   justify-content: space-between;
   align-items: center;
@@ -27,16 +27,13 @@ body {
   display: block;
   text-decoration: none;
   color: black;
-  line-height: 60px;
-  font-weight: 500;
+  padding: 23px 0;
   font-size: 12px;
   text-transform: uppercase;
-  font-style: normal;
-  
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color);
 }
 
 .logo {
@@ -46,13 +43,13 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color);
   position: relative;
 }
 
 .is-active::after {
   content: "";
-  background-color: #00acdc;
+  background-color: var(--color);
   position: absolute;
   left: 0;
   bottom: 0;
