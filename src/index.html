@@ -13,51 +13,65 @@
       href="https://fonts.gstatic.com"
       crossorigin="anonymous"
     >
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    >
   </head>
   <body>
+    <!-- Added header section with clickable logo and navigation menu inside -->
+    <!-- Used semantic tags "header", "nav", "ul" -->
+    <!-- header[class="header"]>(a>img)+nav[class="header__nav"]>ul[class="nav__list"]>(li[class="nav__item"]>a[class="nav__link"])*8 -->
     <header class="header">
-      <img class="header__logo"
-        src="./images/logo.png"
-        alt="logo"
-      >
+      <!-- Added image for site logo by using tag <img> src -->
+      <a href="#">
+        <img
+          class="header__logo"
+          src="./images/logo.png"
+          alt="logo"
+        >
+      </a>
 
+
+      <!-- Added navigation menu with eight links to different sections -->
       <nav class="header__nav">
         <ul class="nav__list">
           <li class="nav__item">
+            <!-- Class is-active was added to first link "Apple" as in mock  -->
             <a
               class="nav__link is-active"
               href="#"
             >
-              APPLE
+              apple
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">SAMSUNG</a>
+            <a class="nav__link" href="#">samsung</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">SMARTPHONES</a>
+            <a class="nav__link" href="#">smartphones</a>
           </li>
+          <!-- Data-q "hover" was added for link "laptops..." for tests -->
           <li class="nav__item">
             <a
               class="nav__link"
               href="#"
               data-qa="hover"
             >
-              LAPTOPS & COMPUTERS
+              laptops & computers
             </a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">GADGETS</a>
+            <a class="nav__link" href="#">gadgets</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">TABLETS</a>
+            <a class="nav__link" href="#">tablets</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">PHOTO</a>
+            <a class="nav__link" href="#">photo</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">VIDEO</a>
+            <a class="nav__link" href="#">video</a>
           </li>
         </ul>
       </nav>
