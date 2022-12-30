@@ -1,8 +1,7 @@
 @font-face {
   font-family: "Roboto";
-  src: url(fonts/Roboto-Regular.ttf);
+  src: url(fonts/Roboto-Medium.ttf);
   font-style: normal;
-  font-weight: 500;
 }
 
 body,
@@ -41,7 +40,7 @@ body {
   list-style: none;
 }
 
-.nav__item {
+.nav__item:not(:first-of-type) {
   margin-left: 20px;
 }
 
@@ -60,14 +59,15 @@ body {
 
 .nav__link:hover {
   color: #00acdc;
-  font-weight: 500;
 }
 
-.nav__link:active {
+.nav__link:active,
+.nav__link.is-active {
   color: #00acdc;
 }
 
-.nav__link:active::after {
+.nav__link:active::after,
+.is-active::after {
   content: "";
   height: 4px;
   margin-top: -4px;
