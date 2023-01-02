@@ -1,1 +1,88 @@
-/* Styles go here */
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/Roboto-Medium.ttf);
+  font-style: normal;
+}
+
+:root {
+  --blue: #00acdc;
+  --white: #fff;
+  --black: #000;
+}
+
+body,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  color: var(--black);
+}
+
+.header,
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  padding: 0 50px;
+  min-width: 850px;
+  background: var(--white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.moyoLogo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  list-style: none;
+}
+
+.nav__item:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+.nav__link:link {
+  line-height: 60px;
+  color: var(--black);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__link:visited {
+  color: var(--black);
+}
+
+.nav__link:hover {
+  color: var(--blue);
+}
+
+.nav__link:active,
+.nav__link.is-active {
+  color: var(--blue);
+}
+
+.nav__link:active::after,
+.is-active::after {
+  content: "";
+  height: 4px;
+  margin-top: -4px;
+  background: var(--blue);
+  border-radius: 8px;
+}
