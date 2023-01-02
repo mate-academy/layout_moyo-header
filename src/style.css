@@ -11,12 +11,7 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-}
-
-li:not(:last-child) {
-  margin-right: 20px;
+  all: unset;
 }
 
 .header {
@@ -28,10 +23,6 @@ li:not(:last-child) {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.header_nav {
-  display: block;
-}
-
 .header_logo {
   height: 40px;
   width: 40px;
@@ -39,23 +30,25 @@ li:not(:last-child) {
 
 .header_navList {
   display: flex;
-  flex-shrink: 0;
-  flex-wrap: nowrap;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.header_navLink {
+.list_items {
   display: flex;
   position: relative;
-  align-items: center;
-  font-family: inherit;
-  flex-wrap: nowrap;
+}
+
+.list_items:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header_navLink {
+  white-space: nowrap;
   padding: 23px 0;
   color: #000;
   text-decoration: none;
-  text-align: center;
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
