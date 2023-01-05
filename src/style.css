@@ -1,1 +1,98 @@
-/* Styles go here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+.header {
+  /* background-color: lightgrey; */
+  width: 100%;
+  height: 60px;
+}
+
+.logo {
+  display: flex;
+  cursor: pointer;
+  align-self: center;
+}
+
+.nav__bar {
+  /* background-color: aqua; */
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  max-width: 1200px;
+  min-width: 1024px;
+  justify-content: space-between;
+  height: inherit;
+
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  height: inherit;
+  text-transform: uppercase;
+}
+
+.nav__item {
+  display: flex;
+  /* background-color: lightpink; */
+}
+
+.nav__link {
+  position: relative;
+  align-content: center;
+  align-items: center;
+  height: inherit;
+  display: flex;
+  color: #000;
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.nav__link:active::after {
+  width: 100%;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.nav__link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  top: 56px;
+  left: 0;
+  background: #00acdc;
+  border-radius: 8px;
+  display: block;
+}
+
+.is-active {
+  position: relative;
+  justify-self: center;
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 56px;
+  left: 0;
+  background: #00acdc;
+  border-radius: 8px;
+  display: block;
+}
