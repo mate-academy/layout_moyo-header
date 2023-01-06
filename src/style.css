@@ -6,13 +6,14 @@ body {
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
+  --main-color: #000;
+  --hover-color: #00acdc;
 }
 
 .main_header {
   display: flex;
   justify-content: space-between;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0 50px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -34,9 +35,8 @@ body {
 .is-active {
   position: relative;
   display: block;
-  padding-bottom: 23px;
-  padding-top: 23px;
-  color: #00acdc;
+  padding: 23px 0;
+  color: var(--hover-color);
   text-decoration: none;
 }
 
@@ -49,20 +49,19 @@ body {
   display: block;
   width: 37px;
   height: 4px;
-  background: #00acdc;
+  background: var(--hover-color);
   border-radius: 8px;
 }
 
 .nav__link {
   display: block;
-  padding-bottom: 23px;
-  padding-top: 23px;
+  padding: 23px 0;
   margin-left: 20px;
-  color: #000;
+  color: var(--main-color);
   text-decoration: none;
   cursor: pointer;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
