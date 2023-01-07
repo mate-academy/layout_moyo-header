@@ -2,6 +2,7 @@
   --navLinksFontSize: 12px;
   --colorHonorAfter: #00acdc;
   --heightBottomLine: 4px;
+  --logoSize: 40px;
 }
 
 .body {
@@ -11,7 +12,6 @@
 .header {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
   padding-right: 50px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -21,8 +21,8 @@
   display: block;
   padding-top: 10px;
   padding-left: 50px;
-  width: 40px;
-  height: 40px;
+  width: var(--logoSize);
+  height: var(--logoSize);
 }
 
 .nav__list {
@@ -39,21 +39,18 @@
 
 .nav__links {
   display: inline-block;
-  text-decoration: none;
-  line-height: 52px;
   padding-top: 4px;
-  text-transform: uppercase;
-  color: #000;
+  font-size: var(--navLinksFontSize);
+  line-height: 52px;
   font-family: Roboto, sans-serif;
   font-weight: 500px;
-  font-size: var(--navLinksFontSize);
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.nav__links:hover {
-  color: var(--colorHonorAfter);
-}
-
+.nav__links:hover,
 .is-active {
   color: var(--colorHonorAfter);
 }
