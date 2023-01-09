@@ -1,25 +1,29 @@
 * {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
-  padding: 0;
+  padding: 0 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 .header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  flex-basis: auto;
-  height: 60px;
-  padding: 0 50px;
   align-items: center;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
+  justify-content: space-between;
+  font-family: inherit;
+  font-weight: inherit;
   font-size: 12px;
   text-transform: uppercase;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .nav_list {
@@ -28,32 +32,30 @@
   align-items: center;
   list-style: none;
   position: relative;
-  height: 60px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav_list :not(:first-child) {
   margin-left: 20px;
 }
 
-.nav_list a {
+.nav_link {
   display: inline-block;
-  height: 60px;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
   vertical-align: middle;
   text-align: center;
-  line-height: 60px;
   color: black;
   text-decoration: none;
 }
 
-.nav_list a:hover {
+.nav_link.is-active {
   color: #00acdc;
 }
 
-.nav_list a:active {
-  color: #00acdc;
-}
-
-.nav_list .is-active {
+.nav_link:hover,
+.nav_link:active {
   color: #00acdc;
 }
 
@@ -61,7 +63,7 @@
   content: "";
   position: absolute;
   display: inline-block;
-  width: 100%;
+  width: 37px;
   left: 0;
   height: 4px;
   bottom: 0;
