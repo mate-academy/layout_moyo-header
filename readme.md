@@ -18,7 +18,7 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 - use images from [src/images](src/images)
 - Use semantic tags: `<header>`, `<nav>`, `ul`
 - change links styles on `:hover`
-- follow styles from the mock
+- follow styles from the mock 
 - the link with `blue` color and line below is an active link. It should have `class="is-active"` and relevant styles.
 - the link with only `blue` color is an example of `:hover` styles. Every link in the row should have `blue` color on `:hover`.
 - add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)
