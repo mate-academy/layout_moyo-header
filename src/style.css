@@ -4,43 +4,45 @@
 }
 
 .header {
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
 }
 
-.header-logo {
-  padding-left: 50px;
-  height: 60px;
+.header__link {
+  display: flex;
 }
 
-.img {
+.header__img {
   margin: 10px 0;
 }
 
-.nav-list {
+.nav {
   display: flex;
-  align-items: center;
+  justify-content: center;
+}
+
+.nav__list {
+  padding-left: 0;
+  display: flex;
   list-style: none;
 }
 
-.nav-list__item {
+.nav__item {
   position: relative;
-  margin-left: 20px;
-  height: 60px;
 }
 
-.nav-list__item:last-child {
-  margin-right: 50px;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
-.nav-list__item:hover {
+.nav__item:hover {
   color: rgba(0, 172, 220, 1);
 }
 
-.nav-list__link {
+.nav__link {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-  font-weight: 500;
   line-height: 60px;
   color: inherit;
   display: inline-block;
