@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  padding: 0 50px;
+  padding: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
@@ -13,8 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: inherit;
-  font-weight: inherit;
+  padding: 0 50px;
   font-size: 12px;
   text-transform: uppercase;
   background: #fff;
@@ -22,8 +21,7 @@ body {
 }
 
 .logo {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  display: block;
 }
 
 .nav_list {
@@ -31,9 +29,14 @@ body {
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  text-align: center;
   position: relative;
   margin: 0;
   padding: 0;
+}
+
+:root {
+  --active-link-color: #00acdc;
 }
 
 .nav_list :not(:first-child) {
@@ -42,21 +45,19 @@ body {
 
 .nav_link {
   display: inline-block;
-  padding-top: 22.5px;
-  padding-bottom: 22.5px;
-  vertical-align: middle;
-  text-align: center;
+  padding-top: 23px;
+  padding-bottom: 23px;
   color: black;
   text-decoration: none;
 }
 
 .nav_link.is-active {
-  color: #00acdc;
+  color: var(--active-link-color);
 }
 
 .nav_link:hover,
 .nav_link:active {
-  color: #00acdc;
+  color: var(--active-link-color);
 }
 
 .is-active::after {
@@ -67,6 +68,6 @@ body {
   left: 0;
   height: 4px;
   bottom: 0;
-  background: #00acdc;
+  background: var(--active-link-color);
   border-radius: 8px;
 }
