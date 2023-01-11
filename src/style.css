@@ -1,1 +1,64 @@
-/* Styles go here */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  padding-left: 50px;
+  height: 60px;
+}
+
+.img {
+  margin: 10px 0;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-list__item {
+  position: relative;
+  margin-left: 20px;
+  height: 60px;
+}
+
+.nav-list__item:last-child {
+  margin-right: 50px;
+}
+
+.nav-list__item:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.nav-list__link {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 60px;
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.is-active {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active::after {
+  content: "";
+  background-color: rgba(0, 172, 220, 1);
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  border-radius: 3px;
+}
