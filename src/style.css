@@ -1,1 +1,76 @@
-/* Styles go here */
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Medium.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo__link {
+  display: flex;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item {
+  display: inline-block;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: inline-block;
+  cursor: pointer;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+  background-color: #00acdc;
+}
