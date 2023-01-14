@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  --blue: #00acdc;
 }
 
 .header {
@@ -53,7 +54,7 @@ body {
   margin-right: 20px;
 }
 
-.menu__item__link {
+.menu__item-link {
   text-decoration: none;
   cursor: pointer;
   color: #000;
@@ -61,18 +62,18 @@ body {
   padding: 23px 0;
 }
 
-.menu__item__link:hover {
-  color: #00acdc;
+.menu__item-link:hover {
+  color: var(--blue);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active::after {
   content: "";
-  background-color: #00acdc;
+  background-color: var(--blue);
   height: 4px;
   width: 100%;
   border-radius: 8px;
