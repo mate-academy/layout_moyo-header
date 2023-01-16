@@ -1,15 +1,13 @@
 /* Styles go here */
-/* stylelint-disable-next-line string-quotes */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
-body,
-ul {
-  all: initial;
+* {
+  all: unset;
+  display: revert;
   box-sizing: border-box;
-  font-size: 12px;
-  /* stylelint-disable-next-line string-quotes */
-  font-family: 'Roboto', sans-serif;
+}
 
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
   --color-blue: #00acdc;
 }
 
@@ -17,7 +15,6 @@ ul {
   display: flex;
   justify-content: space-between;
   max-width: 1200px;
-
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -34,7 +31,6 @@ ul {
 
 .nav__list {
   display: flex;
-  justify-content: space-between;
   list-style: none;
 }
 
@@ -67,13 +63,11 @@ ul {
 }
 
 .is-active::after {
-  /* stylelint-disable-next-line string-quotes */
-  content: '';
+  content: "";
   height: 4px;
   width: 100%;
   background-color: var(--color-blue);
   border-radius: 8px;
-
   position: absolute;
   bottom: 0;
 }
