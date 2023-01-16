@@ -9,7 +9,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px 10px 50px;
+  padding: 0 50px;
   min-width: 900px;
 }
 
@@ -20,14 +20,18 @@ header > img {
 
 .nav__list {
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
 }
 
-.nav__list > li {
-  display: inline-block;
-  padding: 0 10px;
+.nav__list > li:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__list a {
+  padding: 23px 0;
+  float: left;
   position: relative;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
@@ -45,7 +49,7 @@ header > img {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -22.5px;
+  bottom: 0;
   width: 0;
   height: 4px;
   background: #00acdc;
