@@ -1,7 +1,8 @@
 /* Styles go here */
-body {
+* {
   margin: 0;
   box-sizing: border-box;
+  --main-color: #00acdc;
 }
 
 .header {
@@ -12,16 +13,16 @@ body {
   align-items: center;
 }
 
-.header-logo {
+.logo {
   display: flex;
   align-items: center;
 }
 
-.header-logo-link {
+.logo__link {
   text-decoration: none;
 }
 
-.header-icon {
+.logo__icon {
   display: block;
 }
 
@@ -30,34 +31,34 @@ body {
   list-style: none;
   align-items: stretch;
   text-align: center;
-  justify-content: space-between 20px;
+  justify-content: space-between;
   padding: 0;
   margin: 0;
-  margin-left: -20px;
 }
 
-.nav__list-li {
+.nav__li {
   margin-left: 20px;
+}
+
+.nav__li:first-child {
+  margin: 0;
 }
 
 .nav__link {
   display: inline-block;
-
   text-decoration: none;
   text-transform: uppercase;
-
   font-family: Roboto, serif;
   font-weight: 500;
   font-size: 12px;
   color: rgb(0, 0, 0);
-
   padding: 23px 0;
   position: relative;
 }
 
 .nav__link:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active::after {
@@ -65,8 +66,7 @@ body {
   position: absolute;
   content: "";
   width: 100%;
-
-  background: #00acdc;
+  background: var(--main-color);
   height: 4px;
   border-radius: 8px;
   bottom: 0;
