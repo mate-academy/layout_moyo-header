@@ -9,17 +9,15 @@ a {
 
 body {
   margin: 0;
-  --linkColor: #00acdc;
-}
-
-.header {
-  margin: 0 50px;
-}
-
-.header__container {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
+  --color-link: #00acdc;
+}
+
+.header {
+  padding-left: 50px;
+  padding-right: 50px;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -53,7 +51,7 @@ body {
 
 .menu__item:hover,
 .is-active {
-  color: var(--linkColor);
+  color: var(--color-link);
 }
 
 .is-active::after {
@@ -62,7 +60,7 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: var(--linkColor);
+  background-color: var(--color-link);
   position: absolute;
   bottom: 0;
 }
