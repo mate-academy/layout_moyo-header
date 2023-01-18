@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+:root {
+--blue:var(--blue);
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -63,18 +66,18 @@ body {
 }
 
 .nav_link:hover {
-  color: rgba(0, 172, 220, 1);
+  color: var(--blue);
 }
 
 .nav_link:focus {
-  color: rgba(0, 172, 220, 1);
+  color: var(--blue);
 }
 
 .nav_link:active::after {
   content: " ";
   display: block;
   margin-top: 19px;
-  border-bottom: 4px solid rgba(0, 172, 220, 1);
+  border-bottom: 4px solid var(--blue);
   border-radius: 2px;
 }
 
@@ -82,10 +85,10 @@ a.is-active::after {
   content: " ";
   display: block;
   margin-top: 18.5px;
-  border-bottom: 4px solid rgba(0, 172, 220, 1);
+  border-bottom: 4px solid var(--blue);
   border-radius: 2px;
 }
 
 a.is-active {
-  color: rgba(0, 172, 220, 1);
+  color: var(--blue);
 }
