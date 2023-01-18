@@ -1,1 +1,96 @@
 /* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue: rgba(0, 172, 220, 1)
+  ;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+
+.logo {
+  padding-top: 10px;
+  padding-left: 50px;
+}
+
+.box {
+  flex-grow: 1;
+  background-color: white;
+}
+
+.nav {
+  padding-top: 18px;
+  margin-right: 50px;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  list-style: none;
+}
+
+.nav_list :first-child {
+  padding-left: 0;
+}
+
+.nav_list :last-child {
+  padding-right: 0;
+}
+
+.nav_item {
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.nav_link {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+  font-size: 12px;
+  line-height: 14px;
+  color: black;
+}
+
+.nav_link:hover {
+  color: var(--blue);
+}
+
+.nav_link:focus {
+  color: var(--blue);
+}
+
+.nav_link:active::after {
+  content: " ";
+  display: block;
+  margin-top: 19px;
+  border-bottom: 4px solid var(--blue);
+  border-radius: 2px;
+}
+
+a.is-active::after {
+  content: " ";
+  display: block;
+  margin-top: 18.5px;
+  border-bottom: 4px solid var(--blue);
+  border-radius: 2px;
+}
+
+a.is-active {
+  color: var(--blue);
+}
