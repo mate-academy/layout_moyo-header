@@ -8,7 +8,6 @@
 
 body {
   margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
@@ -27,7 +26,7 @@ body {
   display: block;
 }
 
-.nav_list {
+.nav__list {
   display: flex;
   align-items: center;
   list-style: none;
@@ -35,11 +34,11 @@ body {
   padding: 0;
 }
 
-.nav_list :not(:first-child) {
+.nav :not(:first-child) {
   margin-left: 20px;
 }
 
-.nav_link {
+.nav__link {
   display: inline-block;
   padding-top: 23px;
   padding-bottom: 23px;
@@ -47,13 +46,13 @@ body {
   text-decoration: none;
 }
 
-.nav_link.is-active {
+.nav__link.is-active {
   position: relative;
   color: var(--active-link-color);
 }
 
-.nav_link:hover,
-.nav_link:active {
+.nav__link:hover,
+.nav__link:active {
   color: var(--active-link-color);
 }
 
@@ -61,7 +60,7 @@ body {
   content: "";
   position: absolute;
   display: inline-block;
-  width: 37px;
+  width: 100%;
   left: 0;
   height: 4px;
   bottom: 0;
