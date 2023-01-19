@@ -1,3 +1,6 @@
+:root {
+  --accent-color: #00acdc;
+}
 /* Styles go here */
 * {
   box-sizing: border-box;
@@ -19,7 +22,6 @@ body {
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
   display: flex;
@@ -49,7 +51,7 @@ body {
   padding-right: 20px;
 }
 
-.nav__list a {
+.nav__list .nav__link {
   text-decoration: none;
   color: inherit;
   font-weight: inherit;
@@ -57,9 +59,9 @@ body {
   position: relative;
 }
 
-.nav__list a:hover,
+.nav__list .nav__link:hover,
 .nav__list .is-active {
-  color: #00acdc;
+  color: var(--accent-color);
 }
 
 .is-active::after {
@@ -70,5 +72,5 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background: #00acdc;
+  background: var(--accent-color);
 }
