@@ -1,73 +1,78 @@
-/* Styles go here */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
 * {
   margin: 0;
   padding: 0;
 }
 
-a {
+a,
+a:hover,
+a:active {
   text-decoration: none;
+  color: #000;
 }
 
 body {
-  font-family: "Roboto", serif;
-  font-style: normal;
+  --main-blue: #00acdc;
+  font-weight: 500;
+}
+
+.header {
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
-}
-
-.heder {
   display: flex;
   justify-content: space-between;
 }
 
-.heder__img {
-  height: 40px;
+.header__link-img {
+  margin: 10px 0 10px 50px;
+}
+
+.header__img {
   width: 40px;
-  margin: 10px 0 0 50px;
+  height: 40px;
 }
 
-.nav {
-  margin: 0 50px 0 0;
+.header__nav {
+  margin-right: 50px;
 }
 
-.nav__list {
+.header__list {
   display: flex;
   list-style: none;
-  /* border: 1px solid; */
 }
 
-.nav__item {
-  padding: 22.5px 0 0;
+.header__item {
+  margin-right: 20px;
 }
 
-.nav__link,
-.nav__link:active {
-  color: black;
-  padding: 0 10px;
+.header__item:last-child {
+  margin-right: 0;
 }
 
-.nav__link:last-child {
-  padding: 0 0 0 10px;
+.header__link {
+  display: block;
+  height: 40px;
+  padding: 22.5px 0	;
 }
 
-.nav__link:hover {
-  color: #00acdc;
+.header__link:hover {
+  color: var(--main-blue);
 }
 
 .is-active {
-  color: #00acdc;
-  padding: 0 10px 0 0;
+  color: var(--main-blue);
 }
 
 .is-active::after {
   content: "";
-  margin: 19.5px 0 0;
   display: block;
-  background-color: #00acdc;
   height: 4px;
+  background-color: var(--main-blue);
+  border: 0 solid;
   border-radius: 8px;
+  margin-top: 19px;
 }
