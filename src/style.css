@@ -7,6 +7,7 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -38,11 +39,12 @@ body {
 }
 
 .nav-item {
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .nav-link {
-  padding: 23px 0 18.5px;
+  position: relative;
+  padding: 23px 0;
   text-decoration: none;
   color: #000;
   font-size: 12px;
@@ -50,21 +52,19 @@ body {
   text-transform: uppercase;
 }
 
-.nav-link:hover {
-  color: var(--blue);
-}
-
+.nav-link:hover,
 .is-active {
   color: var(--blue);
 }
 
-.is-active:active:after {
-  position: relative;
-  top: 18px;
+.is-active::after {
   content: "";
   display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 4px;
-  width: 37px;
   background-color: var(--blue);
   border-radius: 8px;
 }
