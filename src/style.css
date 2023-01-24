@@ -1,12 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  line-height: 14.06px;
-  font-weight: 500;
   text-decoration: none;
   color: #000;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .container {
@@ -18,25 +20,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.box-1 {
-  display: flex;
-  flex-direction: row;
-  padding: 22.5px 0;
-  margin-left: 20px;
-}
-
-.box-1:first-child {
-  margin-left: 0;
-  padding: 0;
-}
-
-.logo {
-  display: flex;
-  align-self: baseline;
-  margin-top: 10px;
-  cursor: pointer;
+  --main-bg-color: #00acdc;
 }
 
 .nav__list {
@@ -47,16 +31,34 @@
   display: flex;
 }
 
+.nav__item {
+  display: flex;
+  flex-direction: row;
+  padding: 22.5px 0;
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+  padding: 0;
+}
+
+.logo {
+  display: flex;
+  align-self: baseline;
+  margin-top: 10px;
+}
+
 .is-active {
   position: relative;
-  color: #00acdc;
   padding: 23px 0;
+  color: var(--main-bg-color);
 }
 
 .is-active::after {
   position: absolute;
   content: "";
-  background-color: #00acdc;
+  background-color: var(--main-bg-color);
   height: 4px;
   width: 100%;
   left: 0;
@@ -65,6 +67,6 @@
 }
 
 a:hover {
-  color: #00acdc ;
+  color: var(--main-bg-color);
   padding: 23px 0;
 }
