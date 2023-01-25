@@ -18,21 +18,21 @@ html {
   padding: 0 50px;
 }
 
+.logo {
+  padding-top: 2px;
+}
+
 .nav_list {
-  width: 641px;
+  width: 635.5px;
   display: flex;
   justify-content: space-between ;
+  padding: 0;
 }
 
 .nav_item {
-  display: block;
   list-style-type: none ;
   text-transform: uppercase;
   padding: 11px 0;
-}
-
-.nav_item:last-child {
-  margin-right: 0;
 }
 
 .nav_link {
@@ -46,13 +46,17 @@ html {
   color: #00acdc;
 }
 
-.is-active:hover::after {
+.is-active {
+  color: #00acdc;
+}
+
+.is-active:after {
   position: absolute;
   content: "";
   height: 4px;
   background-color: #00acdc;
-  left: 0;
+  left: -4px;
   right: 0;
-  bottom: -18.5px;
+  bottom: -23px;
   border-radius: 8px;
 }
