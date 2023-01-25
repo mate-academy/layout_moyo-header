@@ -1,16 +1,21 @@
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
 html {
+  margin: 0;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500;
+}
+
+body {
+  margin: 0;
 }
 
 .header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -18,7 +23,6 @@ html {
 
 .logo_section {
   display: flex;
-  flex-grow: 1;
   align-items: center;
 }
 
@@ -26,15 +30,10 @@ html {
   padding-top: 5px;
 }
 
-.nav {
-  max-width: 700px;
-  overflow: hidden;
-}
-
 .nav__list {
   display: flex;
-  flex-direction: row;
   padding: 0;
+  margin: 0;
 }
 
 .li_for_link {
@@ -55,16 +54,16 @@ html {
   text-decoration: none;
 }
 
-.nav__list > .li_for_link:nth-child(1) {
+.clear_padding {
   padding-left: 0;
 }
 
 .nav__link:hover {
-  color: rgb(0, 172, 220);
+  color: #00acdc;
 }
 
 .nav__link.is-active {
-  color: rgb(0, 172, 220);
+  color: #00acdc;
 }
 
 .nav__link.is-active::after {
