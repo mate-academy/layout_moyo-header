@@ -1,1 +1,81 @@
-/* Styles go here */
+body {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo__section {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.logo {
+  padding-top: 5px;
+}
+
+.nav {
+  overflow: hidden;
+}
+
+.nav__list {
+  list-style: none;
+  width: max-content;
+  display: flex;
+  padding: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  height: 60px;
+  display: flex;
+  position: relative;
+  font-size: 12px;
+  font-weight: 500;
+  align-items: center;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.nav__link.is-active {
+  color: #00acdc;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
+
+.nav__item {
+  padding-left: 20px;
+}
+
+.nav__list > .nav__item:nth-child(1) {
+  padding-left: 0;
+}
