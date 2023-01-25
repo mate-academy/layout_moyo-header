@@ -1,1 +1,78 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 60px;
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+}
+
+.moyo_logo {
+  margin: 10px 50px;
+  cursor: pointer;
+}
+
+.nav_link {
+  text-align: center;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+  padding: 22.5px 10px;
+  transition: 0.2s;
+}
+
+.nav_item {
+  position: relative;
+  display: inline-block;
+}
+
+.nav_item:last-child {
+  margin-right: 40px;
+}
+
+.nav_link:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  background-color: rgba(0, 172, 220, 1);
+  height: 4px;
+  display: block;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 25px;
+}
