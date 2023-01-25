@@ -12,11 +12,8 @@ ul {
 }
 
 .header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,13 +30,10 @@ ul {
 .nav__list {
   list-style: none;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .nav__item {
   margin-right: 20px;
-  height: 60px;
 }
 
 .nav__item:last-child {
@@ -48,9 +42,8 @@ ul {
 
 .nav__link {
   position: relative;
-  display: flex;
-  align-items: center;
-  height: 100%;
+  display: inline-block;
+  padding: 23px 0;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
@@ -58,11 +51,11 @@ ul {
 }
 
 .nav__link:hover,
-.nav__link.is-active {
+.is-active {
   color: #00acdc;
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   position: absolute;
   content: "";
   height: 4px;
