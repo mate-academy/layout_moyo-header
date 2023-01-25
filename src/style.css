@@ -17,9 +17,7 @@ body {
 }
 
 .header {
-  padding-left: 50px;
-  padding-right: 50px;
-  height: 60px;
+  padding: 0 50px;
   display: flex;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -31,10 +29,12 @@ body {
   align-items: center;
 }
 
+.nav {
+  display: flex;
+}
+
 .nav-list {
   display: flex;
-  position: relative;
-  top: 22.5px;
   list-style: none;
 }
 
@@ -47,11 +47,15 @@ body {
 }
 
 .nav-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60px;
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
-  padding-top: 22.5px;
-  padding-bottom: 22.5px;
 }
 
 .nav-link:hover {
@@ -63,9 +67,10 @@ body {
 }
 
 .is-active::after {
-  position: relative;
-  top: 19px;
+  position: absolute;
   display: block;
+  bottom: 0;
+  width: 100%;
   content: '';
   border-bottom: 4px solid;
   border-radius: 8px;
