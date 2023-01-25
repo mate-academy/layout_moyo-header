@@ -1,1 +1,77 @@
-/* Styles go here */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo_section {
+  display: flex;
+  align-items: center;
+}
+
+.logo_moyo {
+  padding-top: 5px;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.li_for_link {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.nav__link {
+  display: flex;
+  position: relative;
+  font-size: 12px;
+  font-weight: 500;
+  align-items: center;
+  color: black;
+
+  height: 60px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.clear_padding {
+  padding-left: 0;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.nav__link.is-active {
+  color: #00acdc;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: rgb(0, 172, 220);
+  border-radius: 8px;
+}
