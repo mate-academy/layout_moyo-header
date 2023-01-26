@@ -1,18 +1,14 @@
-/* Added box sizing and fonts rules for all html */
 html {
   box-sizing: border-box;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
 }
 
-/* Reset browser default idents  */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* Position 'header' section and positioning rules
-for child items inside section was added */
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -22,13 +18,11 @@ for child items inside section was added */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Added logo sizing */
 .header__logo {
   width: 40px;
   height: 40px;
 }
 
-/* Added positioning rules for links inside navigation menu */
 .nav__list {
   display: flex;
   align-items: center;
@@ -37,14 +31,10 @@ for child items inside section was added */
   margin: 0;
 }
 
-/* Added for each li elements right indent,
-but not include indent for the last element li */
 .nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-/* For each li elements was added indents for click */
-/* Added typography style for each links */
 .nav__link {
   padding: 23px 0;
   color: #000;
@@ -56,18 +46,15 @@ but not include indent for the last element li */
   text-transform: uppercase;
 }
 
-/* Style that will work when hovering the li element */
 .nav__link:hover {
   color: #00acdc;
 }
 
-/* Style for active state  each links */
 .is-active {
   position: relative;
   color: #00acdc;
 }
 
-/* Added pseudo-element "::after" and style for that element */
 .nav__link.is-active::after {
   content: "";
   position: absolute;
