@@ -1,4 +1,3 @@
-/* Styles go here */
 * {
   box-sizing: border-box;
 }
@@ -30,19 +29,14 @@ ul {
 }
 
 .nav__item {
-  /* decided that there should be height declaration*/
   height: 60px;
 }
 
 .nav__link {
-  /* to strech this child div to full parent height. */
-  /* Width should be as its content, i.e. text */
   height: 100%;
-  /* to align text to center */
   display: flex;
   align-items: center;
 
-  /* to place blue line relative to .nav__link */
   position: relative;
 
   text-transform: uppercase;
@@ -55,12 +49,12 @@ ul {
   cursor: pointer;
 }
 
-.is_active:hover {
+.is-active,
+.nav__link:hover {
   color: #00acdc;
 }
 
-/* creates a pseudo-element that is the last child of the selected element */
-.nav__link:hover::after {
+.is-active::after {
   height: 4px;
   width: 100%;
 
