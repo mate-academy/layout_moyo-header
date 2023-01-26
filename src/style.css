@@ -5,15 +5,13 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0 50px;
   min-height: 60px;
   background-color: rgb(255, 255, 255);
 }
@@ -21,7 +19,6 @@ body {
 .nav {
   display: flex;
   align-items: center;
-  height: 60px;
 }
 
 .nav__list {
@@ -36,12 +33,15 @@ body {
 }
 
 .nav__link {
+  display: inline-block;
   position: relative;
+
   padding-top: 23px;
-  padding-bottom: 22px;
-  text-transform: uppercase;
-  color: black;
+  padding-bottom: 23px;
   margin-left: 20px;
+
+  color: black;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -50,21 +50,19 @@ body {
 }
 
 .is-active {
+  position: relative;
+  margin: 0;
   color: rgba(0, 172, 220, 1);
 }
 
-.nav__item:first-child > .is-active::after {
-  display: block;
+.is-active::after {
+  display: inline-block;
   position: absolute;
-  left: 1px;
-  top: 56px;
-  content: "";
-  width: 37px;
+  right: 0;
+  left: 0;
+  bottom: 0;
   height: 4px;
+  content: "";
   background: hsl(193, 100%, 43%);
   border-radius: 8px;
-}
-
-.nav__item:first-child > .nav__link {
-  margin: 0;
 }
