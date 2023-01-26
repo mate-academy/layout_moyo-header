@@ -14,32 +14,22 @@ html {
 
 .header {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   width: 100%;
   box-sizing: border-box;
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.logo__section {
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-  padding-top: 5px;
-}
-
-.nav {
-  overflow: hidden;
+  line-height: 0;
 }
 
 .nav__list {
   list-style: none;
   width: max-content;
   display: flex;
-  padding: 0;
 }
 
 .nav__link {
@@ -72,10 +62,6 @@ html {
   border-radius: 8px;
 }
 
-.nav__item {
+.nav__item:not(:first-child) {
   padding-left: 20px;
-}
-
-.nav__list > .nav__item:nth-child(1) {
-  padding-left: 0;
 }
