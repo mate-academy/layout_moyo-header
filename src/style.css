@@ -1,71 +1,69 @@
-/* Styles go here */
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  border: 0;
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
 }
 
-ol,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-li {
-  display: inherit;
-  height: 100%;
+img {
+  display: block;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  height: 100%;
 }
 
-img {
-  display: block;
+.header {
+  padding: 0 50px;
 }
 
-.container {
+.header__container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.header__inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-.logo {
-  margin-left: 50px;
-}
-
-.menu {
-  margin-right: 50px;
+.logo__img {
+  padding: 10px 0;
+  cursor: pointer;
 }
 
 .menu__list {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .menu__link {
   position: relative;
+  display: flex;
+  
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: inherit;
   font-weight: 500;
-  font-size: 12px;
+  font-size: inherit;
   line-height: 60px;
+  cursor: pointer;
 }
 
-.menu__list-item + .menu__list-item {
-  padding-left: 20px;
+.menu__link:hover {
+  color: #00acdc;
+}
+
+.menu__list-item:not(:last-child) {
+  padding-right: 20px;
 }
 
 .is-active {
@@ -81,8 +79,4 @@ img {
   left: 0;
   bottom: 0;
   border-radius: 8px;
-}
-
-.menu__link:hover {
-  color: #00acdc;
 }
