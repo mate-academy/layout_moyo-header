@@ -1,11 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
+html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
-  text-decoration: none;
-  color: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  --main-text-color: #000;
+  --hover-text-color: #00acdc;
 }
 
 .header {
@@ -25,39 +28,35 @@
   text-transform: uppercase;
   list-style: none;
   display: flex;
+
 }
 
-.li-style {
+.link {
   display: flex;
-  flex-direction: row;
   padding: 22.5px 0;
   margin-left: 20px;
+  text-decoration: none;
+  color: var(--main-text-color);
 }
 
-.li-style:first-child {
-  margin-left: 0;
-  padding: 0;
-}
-
-a:hover {
-  color: #00acdc;
-  padding-top: 23px;
+.link:hover {
+  color: var(--hover-text-color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--hover-text-color);
   padding: 23px 0;
 }
 
 .is-active::after {
   position: absolute;
   content: "";
-  background-color: #00acdc;
+  background-color: var(--hover-text-color);
   height: 4px;
-  width: 100%;
   left: 0;
   bottom: 0;
+  width: 100%;
   border-radius: 8px;
 }
 
