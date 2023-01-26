@@ -12,9 +12,8 @@ ul {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 50px;
-
-  width: 100%;
 
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -23,7 +22,6 @@ ul {
 .icon {
   width: 40px;
   height: 40px;
-  margin: auto 0;
 }
 
 .nav__list {
@@ -31,10 +29,23 @@ ul {
   list-style: none;
 }
 
-.nav__link {
-  display: block;
-  box-sizing: content-box;
+.nav__item {
+  /* decided that there should be height declaration*/
+  height: 60px;
+}
 
+.nav__link {
+  /* to strech this child div to full parent height. */
+  /* Width should be as its content, i.e. text */
+  height: 100%;
+  /* to align text to center */
+  display: flex;
+  align-items: center;
+
+  /* to place blue line relative to .nav__link */
+  position: relative;
+
+  text-transform: uppercase;
   text-decoration: none;
   font-family: Roboto, Helvetica, sans-serif;
   font-style: normal;
@@ -42,26 +53,25 @@ ul {
   font-size: 12px;
   color: #000;
   cursor: pointer;
-
-  height: 60px;
-  line-height: 60px;
-  text-transform: uppercase;
 }
 
 .is_active:hover {
   color: #00acdc;
 }
 
-.is_active:hover::after {
-  display: block;
-  content: "";
-  position: relative;
+/* creates a pseudo-element that is the last child of the selected element */
+.nav__link:hover::after {
   height: 4px;
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+
+  content: "";
   border-radius: 8px;
   background-color: #00acdc;
-  top: -4px;
 }
 
-.nav__item:not(:last-child) .nav__link {
-  padding-right: 20px;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
