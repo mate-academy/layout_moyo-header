@@ -1,7 +1,11 @@
-body {
-  margin: 0;
+html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
+}
+
+body {
+  margin: 0;
+  --active-color: #00acdc;
 }
 
 .header {
@@ -24,21 +28,13 @@ a {
   color: inherit;
 }
 
-.logo__img {
-  display: flex;
-}
-
 .nav__menu {
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-.nav__item {
-  position: relative;
-}
-
-.nav__item a {
+.buttom__item {
   display: flex;
   line-height: 60px;
 }
@@ -49,7 +45,8 @@ a {
 
 .nav__item:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--active-color);
+  position: relative;
 }
 
 .is-active::after {
@@ -58,7 +55,7 @@ a {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--active-color);
   position: absolute;
   bottom: 0;
 }
