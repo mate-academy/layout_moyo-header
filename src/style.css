@@ -1,1 +1,77 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+}
+
+.moyo_logo {
+  display: block;
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_link {
+  display: flex;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  height: 60px;
+  font-size: 12px;
+  line-height: 14px;
+  white-space: nowrap;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+  transition: 0.2s;
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav_link:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active::after {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  content: "";
+  background-color: rgba(0, 172, 220, 1);
+  height: 4px;
+  display: block;
+  border-radius: 8px;
+}
