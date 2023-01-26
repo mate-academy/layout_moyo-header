@@ -18,25 +18,26 @@ html {
   padding: 0 50px;
 }
 
-.logo {
-  padding-top: 2px;
-}
-
 .nav_list {
-  width: 635.5px;
   display: flex;
-  justify-content: space-between ;
-  padding: 0;
+  justify-content: end ;
+  padding: 23px 0;
+  margin: 0;
 }
 
 .nav_item {
+  position: relative;
   list-style-type: none ;
   text-transform: uppercase;
-  padding: 11px 0;
+
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav_link {
-  position: relative;
+  padding: 23px 0;
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -55,7 +56,7 @@ html {
   content: "";
   height: 4px;
   background-color: #00acdc;
-  left: -4px;
+  left: 0;
   right: 0;
   bottom: -23px;
   border-radius: 8px;
