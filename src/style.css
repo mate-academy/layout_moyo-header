@@ -22,30 +22,32 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: row;
 }
 
 .nav__item {
   display: flex;
   list-style: none;
+  margin-left: 20px;
 }
 
 .nav__link {
   height: 100%;
-  margin-left: 20px;
   line-height: 60px;
-
   text-decoration: none;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
-  color: rgb(0, 0, 0);
-
+  color: #000;
   position: relative;
   cursor: pointer;
 }
 
-.nav__link:hover {
+.nav__item:nth-child(1) {
+  margin-left: 0;
+}
+
+.nav__link:hover,
+.is-active {
   color: #00acdc;
 }
 
@@ -59,12 +61,4 @@ body {
   width: 100%;
   height: 4px;
   background-color: #00acdc;
-}
-
-.is-active {
-  color: #00acdc;
-}
-
-.nomargin {
-  margin-left: 0;
 }
