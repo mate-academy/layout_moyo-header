@@ -1,1 +1,73 @@
-/* Styles go here */
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  color: black;
+}
+
+body {
+  margin: 0;
+}
+
+.head {
+  border: none;
+  max-width: 100%;
+  display: flex;
+  padding: 0 50px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.link {
+  color: black;
+  transition: all 0.2s ease;
+  border: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #00acdc;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  border: none;
+  margin-right: 20px;
+}
+
+.item:last-child {
+  margin-right: 0;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-radius: 2px;
+  background-color: #00acdc;
+  content: "";
+  height: 4px;
+}
