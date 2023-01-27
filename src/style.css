@@ -9,13 +9,12 @@ ul {
 }
 
 html {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
 body {
   margin: 0;
-  padding: 0;
 }
 
 .header {
@@ -33,6 +32,7 @@ body {
   line-height: 15px;
   text-transform: uppercase;
   list-style-type: none;
+  justify-content: end;
   display: flex;
 }
 
@@ -41,8 +41,9 @@ body {
 }
 
 .nav__link {
+  height: 60px;
   display: block;
-  padding-top: 23px;
+  padding: 23px 0;
   text-decoration: none;
   color: #000;
 }
@@ -52,7 +53,7 @@ body {
 }
 
 .logo {
-  width: 40;
+  width: 40px;
   height: 40px;
 }
 
@@ -62,9 +63,11 @@ body {
 }
 
 .is-active::after {
-  margin-top: 18px;
   content: "";
-  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 4px;
   background-color: #00acdc;
   border-radius: 8px;
