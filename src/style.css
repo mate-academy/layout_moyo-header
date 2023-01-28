@@ -1,1 +1,63 @@
-/* Styles go here */
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Medium.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navList {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navItem:not(:last-child) {
+  margin-right: 20px;
+}
+
+.navLink {
+  text-decoration: none;
+  line-height: 14px;
+  color: #000;
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 60px;
+  font-size: 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+}
+
+.colorApple {
+  color: #00acdc;
+}
+
+.navLink.is-active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+  width: 100%;
+}
+
+.navLink:hover {
+  color: #00acdc;
+}
