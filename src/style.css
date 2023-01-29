@@ -1,30 +1,24 @@
 html {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", serif;
+  font-style: normal;
 }
-
-@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 
 * {
   box-sizing: border-box;
   margin: 0;
-  font-style: normal;
-  font-weight: normal;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
-}
-
-.container {
-  margin: 0 50px;
+  padding: 0 50px;
+  width: 100%;
 }
 
 .nav__list {
   display: flex;
   list-style: none;
-  height: 100%;
+  padding-inline-start: 0;
 }
 
 .nav__item {
@@ -32,17 +26,24 @@ html {
   align-self: center;
   position: relative;
   text-transform: uppercase;
-  font-size: 11.5px;
+  font-size: 12px;
   line-height: 14px;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  padding: 23px 0;
+}
+
+.nav__link:hover {
+  transition: 0.2s linear;
+  color: #00acdc;
 }
 
 .nav__item:not(:last-child) {
   margin-right: 20px;
-}
-
-.nav__item:hover {
-  transition: 0.2s linear;
-  color: #00acdc;
 }
 
 .is-active {
@@ -54,14 +55,15 @@ html {
   content: "";
   background-color: #00acdc;
   border-radius: 8px;
-  transform: translateX(-50%);
-  top: 33.5px;
-  left: 18px;
+  transform: translateX(-100%);
+  bottom: 0;
   width: 100%;
   height: 4px;
 }
 
 .logo {
+  cursor: pointer;
   width: 40px;
   height: 40px;
+  align-self: center;
 }
