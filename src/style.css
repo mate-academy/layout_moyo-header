@@ -28,13 +28,18 @@ html {
 }
 
 .nav-list__link {
-  display: flex;
+  display: inline-block;
   text-align: center;
   align-items: center;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
   padding: 23px 0;
+  margin-right: 20px;
+}
+
+.nav-list__item:last-child {
+  margin-right: -20px;
 }
 
 .nav-list__link:hover {
@@ -64,8 +69,4 @@ html {
   background: var(--blue);
   border-radius: 8px;
   display: block;
-}
-
-.nav-list__item:not(.nav-list__item:last-child) {
-  margin-right: 20px;
 }
