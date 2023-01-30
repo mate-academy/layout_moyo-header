@@ -1,6 +1,13 @@
-.body {
+* {
+  box-sizing: border-box;
+}
+
+html {
   font-family: Roboto, Arial, sans-serif;
   font-size: 12px;
+}
+
+.body {
   margin: 0;
   --blue: #00acdc;
 }
@@ -20,24 +27,21 @@
   flex-grow: 1;
 }
 
-.nav__link {
+.nav-list__link {
   display: flex;
   text-align: center;
   align-items: center;
-  white-space: nowrap;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
-  padding: 30px 0;
-  max-height: 60px;
-  box-sizing: border-box;
+  padding: 23px 0;
 }
 
-.nav__link:hover {
+.nav-list__link:hover {
   color: var(--blue);
 }
 
-.nav__list {
+.nav-list {
   list-style-type: none;
   display: flex;
   margin: 0;
@@ -62,6 +66,6 @@
   display: block;
 }
 
-.nav__link-container:not(.nav__link-container:last-child) {
+.nav-list__item:not(.nav-list__item:last-child) {
   margin-right: 20px;
 }
