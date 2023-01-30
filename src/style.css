@@ -1,5 +1,6 @@
-/* Styles go here */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+.content {
+  margin: 0;
+}
 
 .header {
   display: flex;
@@ -7,11 +8,6 @@
   align-items: center;
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-   
-}
-
-body {
-  margin: 0;
 }
 
 .logo_block {
@@ -19,15 +15,11 @@ body {
   height: 40px;
 }
 
-ul {
+.menu {
   display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-li:nth-child(-n+7) {
-  margin-right: 20px;
 }
 
 .nav__item {
@@ -36,20 +28,24 @@ li:nth-child(-n+7) {
   cursor: pointer;
 }
 
-.is-nav__item > :first-child {
+.is-active {
+  position: relative;
   color: #00acdc;
+}
+
+.menu .nav__item .is-active {
+  color: #00acdc;
+}
+
+.nav__item:nth-child(-n+7) {
+  margin-right: 20px;
 }
 
 .nav__item:hover > :first-child {
   color: #00acdc;
 }
 
-.is-active {
-  position: relative;
-  color: #00acdc;
-}
-
-a {
+.nav__link {
   box-sizing: border-box;
   display: flex;
   align-items: center;
