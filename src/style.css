@@ -1,6 +1,11 @@
 @font-face {
   font-family: "Roboto";
+  font-weight: 500;
   src: url(fonts/Roboto-Medium.ttf);
+}
+
+:root {
+  --additional-color: #00acdc;
 }
 
 html {
@@ -44,10 +49,7 @@ body {
   text-decoration: none;
   color: #000;
   height: 100%;
-}
-
-.nav__items:first-child a {
-  color: #00acdc;
+  text-transform: uppercase;
 }
 
 .nav__items:not(:last-child) {
@@ -55,15 +57,21 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--additional-color);
+}
+
+.is-active {
+  color: var(--additional-color);
+  position: relative;
 }
 
 .is-active:before {
   content: "";
-  width: 37px;
+  width: 100%;
   height: 4px;
   position: absolute;
-  top: 56px;
-  background-color: #00acdc;
+  bottom: 0;
+  left: 0;
+  background-color: var(--additional-color);
   border-radius: 8px;
 }
