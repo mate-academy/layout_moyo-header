@@ -1,3 +1,7 @@
+:root {
+  --link-color: #00acdc;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -32,10 +36,6 @@ body {
   height: 100%;
 }
 
-.nav {
-  display: block;
-}
-
 .nav__list {
   display: flex;
   list-style: none;
@@ -63,17 +63,14 @@ body {
   transition: color 0.6s;
 }
 
-.nav__link:hover {
-  color: #00acdc;
-}
-
+.nav__link:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--link-color);
 }
 
 .is-active::after {
   content: "";
-  background: #00acdc;
+  background: var(--link-color);
   border-radius: 8px;
   position: absolute;
   bottom: 0;
