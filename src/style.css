@@ -17,10 +17,6 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.nav {
-  display: block;
-}
-
 .logo {
   display: block;
   width: 40px;
@@ -39,20 +35,19 @@ body {
   list-style: none;
 }
 
-.nav__item {
-  margin-left: 20px;
-}
-
 .nav__item:first-child {
   margin-left: 0;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link {
   position: relative;
   display: flex;
   align-items: center;
-  height: 60px;
-  font-family: "Roboto", sans-serif;
+  padding: 23px 0;
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
