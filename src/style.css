@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -22,7 +20,6 @@ html {
   padding-left: 50px;
   padding-right: 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
 }
 
 .nav__list {
@@ -31,6 +28,7 @@ html {
   list-style: none;
   flex-direction: row;
   text-align: center;
+
 }
 
 .logo {
@@ -53,12 +51,13 @@ html {
   color: #000;
   text-align: center;
   padding-top: 22px;
-  padding-bottom: 22px;
+  padding-bottom: 20px;
+  display: flex;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.is-active {
   color: #00acdc;
-
 }
 
 .nav {
@@ -67,19 +66,15 @@ html {
   align-items: center ;
 }
 
-.is-active {
-  color: #00acdc;
-}
-
 .is-active::after {
   display: flex;
   content: "";
-  width: 100%;
-  height: 4px;
+  height: 2px;
+  width: 37px;
   border-radius: 8px;
   border: 2px solid #00acdc;
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
-  top: 20px;
+  top: 63px;
   align-items: flex-end;
 }
