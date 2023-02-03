@@ -1,1 +1,58 @@
-/* Styles go here */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  background: #fff;
+  justify-content: space-between;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  line-height: 14px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: auto;
+  cursor: pointer;
+  margin-right: 50px;
+}
+
+.icon {
+  padding: 10px;
+  margin-left: 50px;
+}
+
+.nav__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: auto 10px;
+  height: 60px;
+}
+
+.is_active-laptops-computers {
+  color: #00acdc;
+}
+
+.nav__item:hover,
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 8px;
+  background-color: #00acdc;
+}
