@@ -1,1 +1,96 @@
 /* Styles go here */
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+header,
+nav,
+ul,
+h1,
+html {
+  margin: 0;
+}
+
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.styleHeader {
+  width: 1024px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  cursor: pointer;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.nav__link {
+  /* margin: auto; */
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 14px;
+  color: #000;
+  /* align-content: center; */
+}
+
+.nav__item {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.video {
+  padding-right: 50px;
+}
+
+.active-item {
+  position: relative;
+}
+
+.is-active::after {
+  display: block;
+  content: "";
+  height: 4px;
+  width: 37px;
+  border-radius: 8px;
+  background-color: #00acdc;
+  position: absolute;
+  bottom: 0;
+}
+
+.logo {
+  margin: 10px 0 10px 50px;
+}
+
+.nav__link:visited {
+  color: #00acdc;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+ul {
+  padding: 0;
+}
