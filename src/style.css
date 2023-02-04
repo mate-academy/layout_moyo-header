@@ -1,1 +1,68 @@
-/* Styles go here */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2);
+  color: #000;
+}
+
+.container {
+  box-sizing: border-box;
+  height: max-content;
+  min-width: 1024px;
+  max-width: 1200px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.box {
+  display: flex;
+  margin-top: auto;
+  margin-left: 50px;
+  margin-right: 40px;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.logo {
+  margin: auto 0;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav__link {
+  padding: 25px 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+  border-bottom: 4px solid #00acdc;
+  text-decoration: none;
+  color: #00acdc;
+}
+
+.nav__link:first-child::after {
+  content: 'APPLE';
+  color: #00acdc;
+  padding: 25px 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  border-bottom: 4px solid #00acdc;
+}
+
