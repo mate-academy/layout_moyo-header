@@ -25,7 +25,6 @@ body {
   padding: 0 50px;
 
   display: flex;
-  flex-direction: row;
   align-items: center;
 
   justify-content: space-between;
@@ -43,7 +42,6 @@ body {
 
 .nav {
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
   font-size: 12px;
 }
@@ -54,16 +52,6 @@ body {
   text-transform: uppercase;
   padding-left: 0;
   margin: 0;
-}
-
-.nav__list:first-child::after {
-  content: "";
-  position: absolute;
-  background: var(--main-color);
-  height: 4px;
-  width: 37px;
-  margin: 56px auto 0;
-  border-radius: 8px;
 }
 
 .nav__list:hover:after {
@@ -92,5 +80,14 @@ body {
 
 .is-active {
   color: var(--main-color);
+}
 
+.is-active::after {
+  content: "";
+  position: absolute;
+  background: var(--main-color);
+  height: 4px;
+  width: 37px;
+  margin: 56px auto 0;
+  border-radius: 8px;
 }
