@@ -13,10 +13,12 @@ body {
 }
 
 .header {
+  --height-heder: 60px;
+  --line-height: 14px;
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
-  height: 60px;
+  padding-right: 50px;
+  height: var(--height-heder);
   max-width: 1200px;
   min-width: 1024px;
   background: #fff;
@@ -25,37 +27,49 @@ body {
 
 .nav__list {
   display: flex;
+  justify-content: space-between;
   list-style-type: none;
-  justify-content: flex-end;
-  gap: 20px;
   margin: 0;
-  line-height: 14px;
+  padding: 0;
+  line-height: var(--line-height);
 }
 
-.is-active {
+.nav__link {
+  margin-left: 20px;
+  height: var(--height-heder);
+}
+
+.nav__link:first-child {
+  margin: 0;
+}
+
+.a__link {
   display: block;
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
-  padding: 23px 0;
+  padding: calc((var(--height-heder) - var(--line-height)) / 2) 0;
 }
 
-.is-active:hover {
+.a__link:hover {
   color: #00acdc;
 }
 
-.is-active:focus {
-  display: block;
+.is-active {
+  position: relative;
   color: #00acdc;
 }
 
-.is-active:focus::after {
-  display: block;
+.is-active::after {
+  position: absolute;
+  width: 100%;
   content: "";
   height: 4px;
+  line-height: var(--height-heder);
+  left: 0;
+  bottom: 0;
   background: #00acdc;
   border-radius: 8px;
-  margin-top: 19px;
 }
 
 .img--Moyo {
