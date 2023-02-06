@@ -19,14 +19,15 @@ header {
 .nav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-around;
+  margin: 0 40px;
 }
 
 .nav__list {
   list-style: none;
   display: flex;
   margin: 0;
-  padding-right: 40px ;
+  padding: 0;
 }
 
 .nav__item {
@@ -42,16 +43,16 @@ header {
   text-transform: uppercase;
   text-decoration: none;
   color: black;
-  padding: 23px 10px;
+  padding: 23px 0;
   position: relative;
   cursor: pointer;
+  margin: 0 10px;
 }
 
 .is-active::after {
   content: "";
   height: 4px;
   display: block;
-  /* display: flex; */
   position: absolute;
   border-radius: 8px;
   background-color: #00acdc;
@@ -66,4 +67,8 @@ header {
 
 .is-active {
   color: #00acdc;
+}
+
+.nav__list:last-child {
+  margin-right: 0;
 }
