@@ -1,5 +1,9 @@
-body {
+* {
   box-sizing: border-box;
+}
+
+body {
+  --main-text-color: #00acdc;
   height: 100vh;
   margin: 0;
   background: #e5e5e5;
@@ -54,12 +58,12 @@ body {
 }
 
 .nav-link:hover {
-  color: #00acdc;
+  color: var(--main-text-color)
 }
  
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--main-text-color);
 }
 
 .nav-link.is-active::after {
@@ -68,7 +72,7 @@ body {
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--main-text-color);
   border-radius: 4px;
   bottom: 0;
 }
