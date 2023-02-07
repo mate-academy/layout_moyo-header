@@ -3,9 +3,12 @@ html {
   font-style: normal;
   font-weight: 500;
 }
+ 
+:root {
+  --color-link: #00acdc;
+}
 
 body {
-  display: block;
   margin: 0;
 }
 
@@ -32,8 +35,6 @@ body {
   position: relative;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
   line-height: 14px;
   letter-spacing: 0;
   text-align: left;
@@ -49,14 +50,11 @@ nav.list {
   width: 100%;
 }
  
-.nav_link:hover {
-  color: #00acdc;
+.nav_link:hover,
+.is-active:hover {
+  color: var(--color-link);
 }
 
-.is-active:hover {
-  color: #00acdc;
-}
- 
 .is-active::after {
   content: "";
   position: absolute;
@@ -64,7 +62,7 @@ nav.list {
   left: 0;
   right: 0;
   height: 4px;
-  background: #00acdc;
+  background: var(--color-link);
   border-radius: 8px;
 }
 
@@ -75,5 +73,5 @@ nav.list {
 }
 
 .nav_list {
-  margin: 0%;
+  margin: 0;
 }
