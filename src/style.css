@@ -1,1 +1,75 @@
-/* Styles go here */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --active-color: #00acdc;
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo {
+  margin: 10px 0;
+  height: 40px;
+}
+
+.nav-menu {
+  display: flex;
+  height: 100%;
+}
+
+.nav-button {
+  list-style: none;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav-menu > :first-child {
+  margin-right: 10px;
+}
+
+.nav-menu > :last-child {
+  margin-left: 10px;
+}
+
+.nav-menu > :not(:last-child):not(:first-child) {
+  margin: 0 10px;
+}
+
+.nav-link {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-link:hover {
+  color: var(--active-color);
+}
+
+.is-active {
+  color: var(--active-color);
+}
+
+.is-active::after {
+  position: absolute;
+  display: block;
+  content: " ";
+  bottom: 0;
+  background-color: var(--active-color);
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+}
