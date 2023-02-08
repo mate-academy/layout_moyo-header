@@ -21,9 +21,15 @@ a {
 .header {
   padding-left: 50px;
   padding-right: 50px;
+  
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-right: 20px;
   display: flex;
 }
 
@@ -33,7 +39,6 @@ a {
 
 .nav_link {
   align-items: center;
-  padding: 23px 0;
   padding: 23px 0;
   display: flex;
   text-decoration: none;
@@ -47,4 +52,15 @@ a {
 .is-active,
 .nav_link:hover {
   color: var(--color-link);
+}
+
+.is-active:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--color-link);
+  position: absolute;
+  bottom: 0;
 }
