@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  --color-hover-text: #00acdc;
 }
 
 .header {
@@ -10,11 +11,11 @@ body {
   align-items: center;
 }
 
-.header-logo {
-  height: 40px; /* cuz a have height 43,3px  */
+.header__logo {
+  height: 40px;
 }
 
-.header-list {
+.nav__list {
   display: flex;
   list-style: none;
   text-transform: uppercase;
@@ -23,34 +24,34 @@ body {
   padding: 0;
 }
 
-.header-link {
+.nav__link {
   position: relative;
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #000;
-  height: 60px;
+  padding: 23px 0;
 }
 
-.header-list-item {
+.nav__list-item {
   margin-left: 20px;
 }
 
-.header-list-item:first-child {
+.nav__list-item:first-child {
   margin: 0;
 }
 
-.header-link:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--color-hover-text);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color-hover-text);
 }
 
 .is-active::after {
   content: "";
-  background-color: #00acdc;
+  background-color: var(--color-hover-text);
   border-radius: 8px;
   height: 4px;
   width: 100%;
