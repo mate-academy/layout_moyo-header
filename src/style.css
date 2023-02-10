@@ -1,1 +1,86 @@
 /* Styles go here */
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url();
+}
+
+html,
+body,
+div,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  --main-link-color: #00acdc;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.product-categories {
+  flex-shrink: 0;
+}
+
+.nav-list-item {
+  display: inline;
+}
+
+.nav-list-item:first-child a {
+  margin-left: 0;
+}
+
+.nav-link:link {
+  display: block;
+  font-style: normal;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 23px 0;
+  margin-left: 20px;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-link:visited {
+  color: #000;
+}
+
+.nav-link:hover {
+  color: var(--main-link-color);
+}
+
+a.is-active:link {
+  color: var(--main-link-color);
+}
+
+a.is-active:visited {
+  color: var(--main-link-color);
+}
+
+a.is-active::before {
+  position: absolute;
+  content: "";
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  top: 56px;
+  background-color: var(--main-link-color);
+}
