@@ -12,6 +12,11 @@ ul {
   margin: 0;
 }
 
+html {
+  font-family: "Roboto", sans-serif;
+  --main-link-color: #00acdc;
+}
+
 .logo {
   height: 40px;
 }
@@ -27,7 +32,7 @@ ul {
   display: flex;
 }
 
-.nav-categories {
+.product-categories {
   flex-shrink: 0;
 }
 
@@ -41,7 +46,6 @@ ul {
 
 .nav-link:link {
   display: block;
-  font-family: "Roboto", sans-serif;
   font-style: normal;
   cursor: pointer;
   font-weight: 500;
@@ -60,15 +64,15 @@ ul {
 }
 
 .nav-link:hover {
-  color: #00acdc;
+  color: var(--main-link-color);
 }
 
 a.is-active:link {
-  color: #00acdc;
+  color: var(--main-link-color);
 }
 
 a.is-active:visited {
-  color: #00acdc;
+  color: var(--main-link-color);
 }
 
 a.is-active::before {
@@ -78,5 +82,5 @@ a.is-active::before {
   height: 4px;
   width: 100%;
   top: 56px;
-  background-color: #00acdc;
+  background-color: var(--main-link-color);
 }
