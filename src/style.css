@@ -1,12 +1,22 @@
 /* Styles go here */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+/* удалить!*/
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+}
 
-* {
+body,
+ul {
   margin: 0;
   padding: 0;
 }
 
-.nav-bar {
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,18 +24,18 @@
   max-width: 1200px;
 }
 
-.nav-bar__nav {
+.navigation {
   margin-right: 50px;
   display: flex;
   justify-content: center;
 }
 
-.nav-bar__logo {
+.navigation__logo {
   display: flex;
   margin-left: 50px;
 }
 
-.nav-bar__ul {
+.navigation__list {
   padding-left: 0;
   display: flex;
   justify-content: flex-end;
@@ -33,15 +43,14 @@
   text-transform: uppercase;
 }
 
-.nav-bar__li {
+.navigation__item {
   margin-right: 20px;
 }
 
-.nav-bar__a {
+.navigation__link {
   display: block;
   padding: 23px 0;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -50,15 +59,13 @@
   color: #000;
 }
 
-.nav-bar__a:hover {
+.navigation__link:hover {
   color: #00acdc;
 }
 
 .is-active {
   position: relative;
   color: #00acdc;
-  /*border-bottom: 4px solid #00acdc;*/
-  /*border-radius: 4px;*/
 }
 
 .is-active:after {
@@ -72,6 +79,6 @@
   border-radius: 2px;
 }
 
-.nav-bar__li:last-child {
+.navigation__item:last-child {
   margin: 0;
 }
