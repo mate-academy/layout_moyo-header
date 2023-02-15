@@ -18,10 +18,9 @@ body {
   display: block;
   height: 40px;
   width: 40px;
-  margin: 10px 0;
 }
 
-.nav-list {
+.nav__list {
   display: flex;
   justify-content: flex-end;
   align-items: stretch;
@@ -34,16 +33,12 @@ body {
   padding: 11px 0;
 }
 
-.nav-item {
+.nav__item:not(:last-child) {
   display: inline-block;
   margin-right: 20px;
 }
 
-.nav-item:last-child {
-  margin-right: 0;
-}
-
-.nav-link {
+.nav__link {
   position: relative;
   padding: 23px 0;
   text-decoration: none;
@@ -52,7 +47,7 @@ body {
   line-height: 14px;
 }
 
-.nav-link:hover {
+.nav__link:hover {
   color: var(--color);
 }
 
@@ -65,7 +60,6 @@ body {
   display: block;
   width: 100%;
   position: absolute;
-  top: 56px;
   left: 0;
   bottom: 0;
   background: var(--color);
