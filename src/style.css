@@ -1,6 +1,4 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -12,8 +10,10 @@
 }
 
 body {
+  margin: 0;
   font-family: Roboto, serif;
   font-size: 12px;
+  --color-main: #00acdc;
 }
 
 .header {
@@ -41,6 +41,7 @@ body {
   list-style-type: none;
   display: flex;
   margin: 23px 0 22px;
+  padding: 0;
 }
 
 .nav__link {
@@ -56,21 +57,22 @@ body {
 
 .nav__item:first-child {
   margin: 0;
+  padding: 0;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color-main);
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color-main);
 }
 
 .nav__link--active::before {
   position: absolute;
   content: "";
   display: inline-block;
-  background: #00acdc;
+  background: var(--color-main);
   background-size: contain;
   width: 37px;
   height: 4px;
