@@ -1,3 +1,7 @@
+html {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
 body,
 ul {
   margin: 0;
@@ -20,33 +24,23 @@ body {
   height: 40px;
 }
 
-.nav__menu {
+.header__menu {
   display: flex;
   height: 100%;
 }
 
-.nav__button {
+.header__button {
   list-style: none;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
 }
 
-.nav__menu > :first-child {
-  margin-right: 10px;
+.header__menu > :not(:last-child) {
+  margin-right: 20px;
 }
 
-.nav__menu > :last-child {
-  margin-left: 10px;
-}
-
-.nav__menu > :not(:last-child):not(:first-child) {
-  margin: 0 10px;
-}
-
-.nav__link {
+.header__link {
   position: relative;
   height: 100%;
   display: flex;
@@ -55,7 +49,7 @@ body {
   color: #000;
 }
 
-.nav__link:hover {
+.header__link:hover {
   color: var(--active-color);
 }
 
