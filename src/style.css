@@ -1,1 +1,81 @@
-/* Styles go here */
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, serif;
+  font-size: 12px;
+  --color-main: #00acdc;
+}
+
+.header {
+  width: 100%;
+  min-width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header__logo {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.nav {
+  justify-content: flex-end;
+  display: block;
+}
+
+.nav__table {
+  list-style-type: none;
+  display: flex;
+  margin: 23px 0 22px;
+  padding: 0;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  padding: 23px 0 22px;
+  color: black;
+  text-decoration: none;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin: 0;
+  padding: 0;
+}
+
+.is-active {
+  color: var(--color-main);
+}
+
+.nav__link:hover {
+  color: var(--color-main);
+}
+
+.nav__link--active::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background: var(--color-main);
+  background-size: contain;
+  width: 37px;
+  height: 4px;
+  margin-top: 33px;
+  border-radius: 8px;
+}
