@@ -1,6 +1,10 @@
-body {
+* {
   margin: 0;
   font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --mainColor: #00acdc;
 }
 
 .header {
@@ -26,15 +30,18 @@ body {
   list-style-type: none;
 }
 
+.nav__item {
+  margin-top: 19px;
+}
+
 .nav__link {
   color: black;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
-  display: block;
   cursor: pointer;
-  line-height: 60px;
+  padding: 23px 0;
 }
 
 .nav__item:not(:last-child) {
@@ -42,20 +49,21 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--mainColor);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--mainColor);
 }
 
 .is-active::after {
   content: "";
+  display: block;
   position: absolute;
   width: 100%;
   height: 4px;
-  background: #00acdc;
+  background: var(--mainColor);
   border-radius: 8px;
   left: 0;
   bottom: 0;
