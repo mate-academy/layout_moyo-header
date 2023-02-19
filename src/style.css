@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #00acdc;
+  --black-color: #000;
+  --white-color: #fff;
+  --gray-color: rgba(0, 0, 0, 0.05);
+}
 
 html {
   font-family: "Roboto", sans-serif;
@@ -12,8 +18,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: var(--white-color);
+  box-shadow: 0 2px 4px var(--gray-color);
 }
 
 .logo {
@@ -48,16 +54,16 @@ body {
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000;
+  color: var(--black-color);
   transition: color 0.3s;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .nav__link.is-active::after {
@@ -68,5 +74,5 @@ body {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--primary-color);
 }
