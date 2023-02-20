@@ -7,21 +7,20 @@ body {
   --moyo-size: 40px;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 50px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav-list {
+  display: flex;
+  list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.nav-item {
-  display: inline-block;
 }
 
 .nav-link {
@@ -33,14 +32,15 @@ header {
   color: black;
 }
 
-.nav-item:not(:first-child) {
-  margin-left: 16px;
-}
-
 .logo {
+  display: flex;
   width: var(--moyo-size);
   height: var(--moyo-size);
   padding: 10px 0;
+}
+
+.nav-item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .is-active {
