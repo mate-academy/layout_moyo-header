@@ -4,10 +4,16 @@ html {
   font-weight: 500;
 }
 
+li {
+  list-style: none;
+  width: auto;
+}
+
 * {
-  all: unset;
+  /* all: unset;
   display: revert;
-  margin-bottom: 0;
+  margin-bottom: 0; */
+  box-sizing: border-box;
 }
 
 body {
@@ -21,7 +27,8 @@ body {
 .conteiner {
   display: flex;
   background-color: white;
-  padding: 10px 40px 10px 50px;
+  padding: 0 30px;
+  height: 60px;
   /* padding-right: 40px; */
   flex-direction: row;
   /* justify-content: end; */
@@ -30,12 +37,20 @@ body {
 
 }
 
-.flex__box {
+.navigation {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   align-self: stretch;
+  height: 60px;
   /* border: 1px solid transparent; */
+}
+
+.nav__item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* height: 40px; */
+
 }
 
 /* nav {
@@ -47,7 +62,7 @@ body {
   height: 40px;
 } */
 
-.box {
+.nav__link {
   position: relative;
   font-size: 12px;
   line-height: 16px;
@@ -56,11 +71,17 @@ body {
   text-decoration: none;
   color: black;
   margin: 10px;
+  /* padding-left: 50px; */
+  /* padding-right: 40px; */
   padding-top: 23px;
-  padding-bottom: 24px;
-  bottom: 2px;
+  padding-bottom: 22px;
+  top: -1px;
   /* border: 1px solid transparent; */
 }
+
+/* .nav__link:not(:last-child) {
+  margin-right: 10px;
+} */
 
 a:hover {
   display: inline;
@@ -68,7 +89,7 @@ a:hover {
   cursor: pointer;
 }
 
-.box:active::after {
+.nav__link:active::after {
   content: "";
   position: absolute;
   top: 56px;
@@ -97,8 +118,9 @@ a:hover {
 
 img {
   cursor: pointer;
+  /* margin: 10px; */
 }
 
-div {
+/* div {
   height: 40px;
-}
+} */
