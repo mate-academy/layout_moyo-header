@@ -1,1 +1,84 @@
 /* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header > a {
+  line-height: 0;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.nav__list li a {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  padding: 24px 0;
+  margin: 0 10px;
+  margin-bottom: 3;
+  position: relative;
+}
+
+li {
+  list-style-type: none;
+  display: contents;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+.nav__list li a:hover {
+  color: #00acdc;
+}
+
+.nav__list li a:active {
+  color: #00acdc;
+  /* border-bottom: 4px solid #00ACDC; */
+}
+
+.nav__list li a.is-active::after,
+.nav__list li a:active::after {
+  background-color: #00acdc;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.nav__list li a.is-active {
+  color: #00acdc;
+}
+
+.container {
+  display: flex;
+  background: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
+  max-width: 1200px;
+  min-width: 1024px;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  margin-right: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
