@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
+:root {
+  --main-color: #00acdc;
+}
+
 html {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   box-sizing: border-box;
@@ -47,12 +51,9 @@ header {
   margin-left: 50px;
 }
 
-.nav__a:hover {
-  color: #00acdc;
-}
-
+.nav__a:hover,
 .nav__a:active {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active::after,
@@ -64,12 +65,12 @@ header {
   content: " ";
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--main-color);
   border-radius: 2px;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .container {
