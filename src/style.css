@@ -1,18 +1,22 @@
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  background: #fff;
   margin: 0;
+
+}
+
+.header {
+  max-width: 1200px;
+  min-width: 1024px;
+
 }
 
 .nav {
-  max-width: 1200px;
-  min-width: 1024px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  height: 60px;
+
 }
 
 .nav__list {
@@ -23,8 +27,9 @@ body {
 }
 
 .nav__item {
-  padding-right: 20px;
+  padding-left: 20px;
   list-style: none;
+  height: 60px;
 }
 
 .nav__item:last-child {
@@ -32,6 +37,7 @@ body {
 }
 
 .nav__link {
+  text-align: center;
   line-height: 14px;
   display: block;
   padding: 22.5px 0;
@@ -41,7 +47,6 @@ body {
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
-  position: relative;
 }
 
 .nav_logo {
@@ -50,11 +55,12 @@ body {
   height: 40px;
 }
 
-.is_active:active {
+.is-active {
+  position: relative;
   color: #00acdc;
 }
 
-.is_active::after {
+.is-active::after {
   content: "";
   border-radius: 8px;
   position: absolute;
