@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -8,13 +12,13 @@ html {
 
 body {
   margin: 0;
-  box-sizing: border-box;
 }
 
 .header {
   display: flex;
-  margin: 0 auto;
+  margin: auto;
   justify-content: space-between;
+  align-items: stretch;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding: 0 50px;
@@ -26,30 +30,41 @@ body {
   padding: 10px 0;
 }
 
+.nav {
+  display: flex;
+  align-items: stretch;
+}
+
 .nav_list {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
 }
 
-.ul_li:not(:last-child) {
+.nav_item {
+  display: block;
+  height: 100%;
   margin-right: 20px;
 }
 
-.links {
+.nav_item:last-child {
+  margin-right: 0;
+}
+
+.nav_links {
   text-transform: uppercase;
-  height: 14px;
+  height: 100%;
   cursor: pointer;
-  padding: 23px;
   color: #000;
   text-decoration: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   position: relative;
+  align-items: center;
 }
 
 .links:hover {
@@ -67,5 +82,5 @@ body {
   width: 37px;
   height: 4px;
   content: "";
-  top: 56px;
+  bottom: 0;
 }
