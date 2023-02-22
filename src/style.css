@@ -2,10 +2,13 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
+}
+
+body {
   margin: 0;
 }
 
@@ -13,10 +16,10 @@ body {
   height: 60px;
   display: flex;
   justify-content: space-between;
-  margin: auto;
+  align-items: center;
 }
 
-.logo {
+.nav__logo {
   margin: 10px 0 10px 50px;
 }
 
@@ -24,12 +27,13 @@ body {
   margin-right: 30px;
 }
 
-.nav-list {
-  text-transform: uppercase;
+.nav__list {
+  display: flex;
+  justify-content: center;
   list-style: none;
 }
 
-.link {
+.nav__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,14 +41,12 @@ body {
   padding: 15px 0;
   margin-right: 20px;
   text-decoration: none;
+  text-transform: uppercase;
   color: #000;
 }
 
-.default-blue {
-  color: #00acdc;
-}
-
-.link:hover {
+.default__blue,
+.nav__link:hover {
   color: #00acdc;
 }
 
