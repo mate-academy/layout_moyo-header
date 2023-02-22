@@ -7,18 +7,23 @@ body {
 
 .header {
   display: flex;
-  padding: 10px 50px;
+  padding: 0 50px;
+  justify-content: space-between;
 }
 
-.logo_link {
-  margin-right: auto;
-  width: 40px;
-  height: 40px;
+.logo {
+  margin-top: 10px;
+}
+
+.nav {
+  padding-top: 10px;
+
 }
 
 .nav__list {
   list-style: none;
   display: flex;
+  justify-content: space-between;
 }
 
 .nav__item {
@@ -48,9 +53,10 @@ body {
 .is-active::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
+  display: block;
+  width: 100%;
   bottom: 0;
-  border: 2px solid #00acdc;
+  height: 4px;
+  background-color: #00acdc;
   border-radius: 8px;
 }
