@@ -3,30 +3,42 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+li:not(:first-child) {
+  margin-left: 20px;
 }
 
 .myHeader {
   padding: 0 50px;
-  background-color: white;
   height: 60px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  flex-grow: 2;
   flex-basis: 40px;
-
   display: flex;
   text-align: center;
   align-items: center;
 }
 
-.links {
-  flex-grow: 1;
-  flex-shrink: 1;
+.headerList {
   display: flex;
-  justify-content: space-between;
+}
+
+.links {
+  padding: 0;
 }
 
 .link {
@@ -35,15 +47,13 @@ body {
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
 
-  flex-grow: 1;
+  position: relative;
 
   display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-
-  color: #000;
+  padding: 23px 0;
 }
 
 .link:hover {
@@ -52,5 +62,15 @@ body {
 
 .is-active {
   color: #00acdc;
-  /* border-bottom: 4px solid #00acdc; */
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
