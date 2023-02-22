@@ -1,1 +1,76 @@
-/* Styles go here */
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  --active-color: #00acdc;
+  --text-color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav_logo {
+  height: 40px;
+  width: 40px;
+  padding: 10px 0;
+}
+
+.nav,
+.nav__link,
+.nav__list {
+  display: flex;
+}
+
+.nav__list {
+  justify-content: space-between;
+  list-style: none;
+  text-transform: uppercase;
+  margin: auto;
+  padding: 0;
+}
+
+.nav__item {
+  height: 60px;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  padding-top: 23px;
+  padding-bottom: 22px;
+  transition: color 0.3s;
+}
+
+.is-active,
+.nav__link:hover {
+  color: var(--active-color);
+}
+
+.is-active::after {
+  display: block;
+  content: "";
+  width: 37px;
+  height: 4px;
+  position: absolute;
+  top: 56px;
+  background-color: var(--active-color);
+  border-radius: 8px;
+}
