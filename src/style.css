@@ -1,13 +1,13 @@
 html {
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  text-transform: uppercase;
 }
 
 body {
   margin: 0;
-  --blu: #00acdc;
+}
+
+:root {
+  --blue: #00acdc;
 }
 
 .header {
@@ -19,24 +19,31 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.nav-list {
+.header__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
   margin: 0;
   display: flex;
   padding-left: 0;
   align-items: center;
   align-content: center;
-  
 }
 
-.nav-item {
+.nav__item {
   list-style: none;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
-.nav-item:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav-link {
+.nav__link {
   display: flex;
   align-items: center;
   color: #000;
@@ -45,8 +52,8 @@ body {
   position: relative;
 }
 
-.nav-link:hover {
-  color: var(--blu);
+.nav__link:hover {
+  color: var(--blue);
 }
 
 .is-active {
@@ -58,7 +65,7 @@ body {
   position: absolute;
   top: 56px;
   height: 4px;
-  background-color: var(--blu);
+  background-color: var(--blue);
   border-radius: 8px;
   width: 100%;
 }
