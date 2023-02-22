@@ -16,7 +16,7 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 - pay attention the mock is adaptive. Develop the layout to fit on 1024px and 1200px the same as on the mock.
 - reset browser default margins
 - use images from [src/images](src/images)
-- Use semantic tags: `<header>`, `<nav>`, `ul`
+- use semantic tags: `<header>`, `<nav>`, `ul`
 - change links styles on `:hover`
 - follow styles from the mock
 - the link with `blue` color and line below is an active link. It should have `class="is-active"` and relevant styles.
@@ -26,6 +26,7 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 --> [CHECKLIST](https://github.com/mate-academy/layout_moyo-header/blob/master/checklist.md)
 
 ### Tips & Hints
+- Don't `gap` property for indents. It's not supported in tests, use `margin` instead.
 - Check one more time if you added `data-qa="hover"` and `class="is-active"`
 required for tests
 - Do not use `tabs`. Use `2 spaces` for indentation.
