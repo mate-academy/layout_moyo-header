@@ -1,1 +1,90 @@
-/* Styles go here */
+@font-face {
+  font-family: "Roboto";
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e5e5e5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.nav__links {
+  display: flex;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+  padding: 0;
+  align-items: flex-end;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav__list:first-child {
+  margin-left: 0;
+}
+
+.nav__list:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: flex;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  height: 60px;
+  align-items: center;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  display: flex;
+  position: absolute;
+  content: "";
+  background-color: #00acdc;
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+}
