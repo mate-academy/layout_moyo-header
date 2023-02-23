@@ -12,42 +12,56 @@ html {
 
 .header {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  align-items: stretch;
+  margin: auto;
+  padding: 0 50px;
+  height: 100%;
 }
 
 .moyo_logo {
-  position: absolute;
   width: 40px;
   height: 40px;
-  padding: 10px 50px;
+  margin: 10px 0;
 }
 
 .navigation {
+  display: flex;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  text-align: right;
+  align-items: stretch;
 }
 
-.list {
+.nav__list {
+  padding: 0;
+  margin: 0;
   list-style: none;
-  margin: auto 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.list_item {
-  display: inline-block;
-  height: 60px;
+.nav__item {
+  display: block;
+  margin-right: 20px;
+  height: 100%;
 }
 
-.list_link {
-  display: inline-block;
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: flex;
+  position: relative;
+  align-items: center;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 23px 10px;
+  height: 100%;
 }
 
-.list_link:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
@@ -62,6 +76,7 @@ html {
   border-radius: 8px;
   background: #00acdc;
   height: 4px;
-  width: 37px;
-  top: 56px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
