@@ -16,7 +16,7 @@ body,
   align-items: center;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
+  padding: 0 50px;
 }
 
 .nav {
@@ -32,7 +32,7 @@ body,
   height: 40px;
   padding: 0;
   justify-self: center;
-  margin: 10px 0 10px 50px;
+  margin: 10px 0;
 }
 
 .nav__list {
@@ -40,16 +40,8 @@ body,
   list-style: none;
 }
 
-.nav__item {
-  padding: 0 10px;
-}
-
-.nav__item:last-child {
-  padding-right: 50px;
-}
-
-.nav__item:first-child {
-  padding-right: 10px;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -60,6 +52,7 @@ body,
   font-size: 12px;
   text-transform: uppercase;
   padding: 23px 0;
+  position: relative;
 }
 
 .nav__link:hover {
@@ -76,8 +69,8 @@ body,
   content: "";
   height: 4px;
   background-color: #00acdc;
-  width: 36px;
+  width: 100%;
   border-radius: 8px;
   bottom: 0;
-  left: 10px;
+  left: 0;
 }
