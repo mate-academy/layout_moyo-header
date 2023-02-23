@@ -1,1 +1,71 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  height: 60px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moyo__logo {
+  margin: auto 50px;
+}
+
+.nav {
+  margin: auto;
+  margin-right: 50px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item:not(:last-child) {
+  padding-right: 20px;
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 23px 0;
+}
+
+.is-active,
+.nav__link:hover,
+.nav__link:focus {
+  color: #00acdc;
+  transition: 0.5s color;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #00acdc;
+  border-radius: 8px;
+}
