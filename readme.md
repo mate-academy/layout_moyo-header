@@ -33,7 +33,7 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 
 ### Tips & Hints
 
-- Don't `gap` property for indents. It's not supported in tests, use `margin` instead.
+- Don't use `gap` property for indents. It's not supported in tests, use `margin` instead.
 - Check one more time if you added `data-qa="hover"` and `class="is-active"`
   required for tests
 - Do not use `tabs`. Use `2 spaces` for indentation.
