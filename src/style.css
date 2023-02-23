@@ -13,28 +13,19 @@ html {
 
 body {
   margin: 0;
-  background-color: #e5e5e5;
-}
-
-.header {
-  background-color: white;
+  height: 300px;
 }
 
 .header--inner {
   display: flex;
   padding: 0 50px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo--inner {
   /*as i got it, due to the logo--link height of logo--inner becomes 40+ px*/
   height: 40px;
-}
-
-.header__logo--img {
-  position: relative;
-  top: 50%;
-  transform: translateY(-25%);
 }
 
 .header__navigation {
@@ -58,10 +49,10 @@ body {
   text-decoration: none;
   color: inherit;
   text-transform: uppercase;
-  padding: 5px 0;
+  padding: 23px 0;
   position: relative;
-
-  /* only for +2 tests*/
+  
+  /* only for tests */
   line-height: 60px;
 }
 
@@ -69,17 +60,17 @@ body {
   color: #00acdc;
 }
 
-.is-active:focus {
+.is-active {
   color: #00acdc;
 }
 
-.is-active:focus::after {
+.is-active::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 3px;
+  height: 4px;
   background-color: #00acdc;
   left: 0;
-  bottom: -18.5px;
+  bottom: 0;
   border-radius: 8px;
 }
