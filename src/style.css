@@ -1,1 +1,93 @@
 /* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+
+  background-color: rgb(241, 241, 241);
+}
+
+.header {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1200px;
+  min-width: 1024px;
+
+  padding: 0 50px;
+  background-color: #fff;
+}
+
+.logo__link {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  align-items: stretch;
+  align-self: stretch;
+  justify-self: flex-end;
+  text-transform: uppercase;
+}
+
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.item__link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  height: 60px;
+
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+.item__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+
+  border-radius: 8px;
+
+  background-color: #00acdc;
+}
