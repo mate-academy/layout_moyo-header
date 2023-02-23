@@ -9,6 +9,61 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>Moyo header</h1>
+    <header class="header">
+      <a class="logoLink" href="#home">
+        <img
+          class="logo"
+          src="images/logo.png"
+          alt="logo"
+        >
+      </a>
+      <nav class="nav">
+        <ul class="nav__list" id="nav__list">
+          <li class="nav__item">
+            <a class="nav__link is-active" href="#apple">apple</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#samsung">samsung</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#smartphones">smartphones</a>
+          </li>
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="#laptops-and-computers"
+              data-qa="hover"
+            >
+              laptops & computers
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#gadgets">gadgets</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#tablets">tablets</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#photo">photo</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#video">video</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+    const btnContainer = document.getElementById('nav__list');
+    const btns = btnContainer.getElementsByClassName('nav__link');
+
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function() {
+        const current = document.getElementsByClassName('is-active');
+        current[0].className = current[0].className.replace(' is-active', '');
+        this.className += ' is-active';
+      });
+    }
+    </script>
   </body>
 </html>
