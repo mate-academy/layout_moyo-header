@@ -17,18 +17,24 @@ body {
   width: 100%;
 }
 
-header {
+.header {
   width: 100%;
   padding-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  background: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
 }
 
-.container__logo {
+.header__a {
   padding: 10px 0;
   line-height: 0;
   text-decoration: none;
 }
 
-.nav__a {
+.nav__link {
   position: relative;
   margin: 0 10px;
   padding: 24px 0;
@@ -41,12 +47,12 @@ header {
   text-decoration: none;
 }
 
-.nav__li {
+.nav__item {
   display: contents;
   list-style-type: none;
 }
 
-.header__img {
+.header__logo-img {
   width: 40px;
   height: 40px;
   margin-left: 50px;
@@ -74,15 +80,6 @@ header {
   color: var(--main-color);
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  background: #fff;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
-}
-
 .nav__list {
   display: flex;
   flex-direction: row;
@@ -90,10 +87,10 @@ header {
   padding: 0;
 }
 
-.nav__list .nav__li:first-child .nav__a {
+.nav__list .nav__item:first-child .nav__link {
   margin-left: 0;
 }
 
-.nav__list .nav__li:last-child .nav__a {
+.nav__list .nav__item:last-child .nav__link {
   margin-right: 0;
 }
