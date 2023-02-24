@@ -3,13 +3,13 @@ body {
 
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   list-style-type: none;
 
   background-color: #f1f1f1;
 }
 
 .header {
+  box-sizing: border-box;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
@@ -19,20 +19,22 @@ body {
 }
 
 .header_large {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin-bottom: 62px;
 }
 
 .logo {
   width: 40px;
   height: 40px;
-  padding: 10px;
+  margin: 10px;
+}
+
+.logo__img {
+  display: block;
 }
 
 .nav {
   display: flex;
-  justify-content: end;
-
 }
 
 .nav__list {
@@ -50,8 +52,12 @@ body {
 }
 
 .nav__link {
-  padding: 21px 0;
+  display: block;
+  padding: 23px 0 25px;
 
+  position: relative;
+
+  font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
@@ -59,12 +65,8 @@ body {
   text-decoration: none;
 }
 
-.nav__link:hover {
-  color: #00acdc;
-}
-
+.nav__link:hover,
 .is-active {
-  position: relative;
   color: #00acdc;
 }
 
