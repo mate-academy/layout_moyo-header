@@ -7,39 +7,40 @@ body {
 }
 
 .headTable {
-  width: 100%;
+  padding: 0 50px;
   background-color: #fff;
   height: 60px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .logo {
   width: 40px;
-  align-items: center;
-  margin: 5px auto 5px 25px;
+  margin: 5px auto 5px 0;
 }
 
 .container {
   background-color: #fff;
   padding: 0;
   align-items: center;
-  margin-right: 50px;
 }
 
 .nav__list {
   text-transform: uppercase;
+  height: 60px;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 .nav__item {
   display: inline-block;
   padding: 22.5px 0;
   position: relative;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -56,9 +57,6 @@ body {
   display: block;
   width: 0;
   height: 4px;
-  background-color: #00acdc;
-  position: absolute;
-  border-radius: 4px;
   bottom: 0;
   left: 0;
 }
@@ -78,19 +76,7 @@ body {
 
 .is-active::after {
   width: 100%;
-}
-
-.nav__hover {
-  color: #000;
-  text-decoration: none;
-  position: relative;
-  padding: 22.5px 0;
-}
-
-.nav__hover::after {
-  width: 100%;
-}
-
-.nav__hover:hover {
-  color: #00acdc;
+  background-color: #00acdc;
+  position: absolute;
+  border-radius: 4px;
 }
