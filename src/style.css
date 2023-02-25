@@ -4,71 +4,67 @@ html {
   font-weight: 400;
 }
 
-li {
+/* body {
+  padding: 0;
+  margin: 0;
+} */
+
+ul li {
   list-style: none;
+  display: inline;
 }
 
 * {
   all: unset;
   display: revert;
-  margin: 0;
   box-sizing: border-box;
 }
 
-body {
-  background-color: grey;
-  margin: 5px;
-}
-
-.conteiner {
+.header {
   display: flex;
-  background-color: white;
-  padding: 0 49px;
-  padding-right: 50px;
-  flex-direction: row;
+  padding: 0 50px;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .navigation {
   display: flex;
+  margin-top: 20px;
+  /* align-items: center; */
+  /* border: 1px solid transparent; */
+  /* align-items: center; */
+}
+
+.navigation__list {
   position: relative;
-  flex-wrap: wrap;
-  height: auto;
-  padding-top: 19px;
+  padding-left: 0;
+  margin: 0;
 }
 
-.nav__img {
-  margin-top: 10px;
-  margin-bottom: 12px;
-}
-
-.nav__link {
+.nav-link {
   position: relative;
   font-size: 12px;
-  font-style: normal;
+  /* font-style: normal; */
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  /* color: black; */
   margin-left: 20px;
-  padding-top: 23px;
-  padding-bottom: 18px;
-  height: 60px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  /* height: 60px; */
 }
 
-a:hover {
-  display: inline;
+.nav-link:hover {
   color: #00acdc;
   cursor: pointer;
 }
 
-.nav__link:active::after {
+.a:active::after {
   content: "";
-  position: absolute;
-  top: 56px;
+  position: relative;
+  bottom: 0;
   left: 0;
   background-color: #00acdc;
-  width: 100%;
+  width: 90%;
   height: 4px;
   border-radius: 2px;
 }
@@ -82,7 +78,7 @@ a:hover {
 .is-active::after {
   content: "";
   position: absolute;
-  top: 56px;
+  bottom: 0;
   left: 0;
   background-color: #00acdc;
   width: 100%;
@@ -93,4 +89,5 @@ a:hover {
 
 img {
   cursor: pointer;
+  margin: 10px 0;
 }
