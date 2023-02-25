@@ -5,24 +5,24 @@ html {
 
 body {
   margin: 0;
+  box-sizing: border-box;
 }
 
 .header {
-  padding-right: 50px;
-  padding-left: 50px;
   display: flex;
-  height: 60px;
   justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
+  height: 60px;
+
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.logo {
+.header__logo {
+  /* display: block; */
   width: 40px;
   height: 40px;
-
-  display: block;
 }
 
 .logo__image {
@@ -31,52 +31,52 @@ body {
 }
 
 .nav__list {
+  display: flex;
   list-style: none;
-  display: flex;
-}
-
-.nav {
-  display: flex;
-}
-
-.nav__list:first-child {
   padding: 0;
+  margin: 0;
 }
 
-.link {
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  white-space: nowrap;
+  height: 60px;
+
   font-style: normal;
   font-weight: 500;
-  margin-left: 20px;
   font-size: 12px;
   line-height: 14.6px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
-  display: flex;
-  align-items: center;
-  position: relative;
-
-  cursor: pointer;
-  /* min-width: 100%;
-  max-width: 100%; */
 }
 
-.link:hover,
-.link:focus,
+.nav__link:hover,
+.nav__link:focus,
 .is-active {
   color: #00acdc;
   transition: 0.5s;
 }
 
-.is-active::after,
-.link:focus::after {
+.is-active::after {
   content: "";
+  position: absolute;
+
+  left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
+
   background-color: #00acdc;
-  border-radius: 8px;
+  border-radius: 2px;
   height: 4px;
-  position: absolute;
-  top: 33.5px;
 }
