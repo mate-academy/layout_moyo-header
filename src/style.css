@@ -4,19 +4,18 @@ html {
   font-weight: 400;
 }
 
-/* body {
+body {
   padding: 0;
   margin: 0;
-} */
+}
 
-ul li {
+ul {
   list-style: none;
-  display: inline;
+  padding: 0;
+  margin: 0;
 }
 
 * {
-  all: unset;
-  display: revert;
   box-sizing: border-box;
 }
 
@@ -24,49 +23,31 @@ ul li {
   display: flex;
   padding: 0 50px;
   justify-content: space-between;
+  align-items: center;
 }
 
-.navigation {
+.nav__item {
+  margin-top: 19px;
+  margin-bottom: 23px;
+}
+
+.nav__list {
   display: flex;
-  margin-top: 20px;
-  /* align-items: center; */
-  /* border: 1px solid transparent; */
-  /* align-items: center; */
 }
 
-.navigation__list {
-  position: relative;
-  padding-left: 0;
-  margin: 0;
-}
-
-.nav-link {
-  position: relative;
+.nav__link {
   font-size: 12px;
-  /* font-style: normal; */
   text-transform: uppercase;
   text-decoration: none;
-  /* color: black; */
+  color: black;
   margin-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 25px;
-  /* height: 60px; */
+  padding-top: 23px;
+  padding-bottom: 23px;
 }
 
-.nav-link:hover {
+.nav__link:hover {
   color: #00acdc;
   cursor: pointer;
-}
-
-.a:active::after {
-  content: "";
-  position: relative;
-  bottom: 0;
-  left: 0;
-  background-color: #00acdc;
-  width: 90%;
-  height: 4px;
-  border-radius: 2px;
 }
 
 .is-active {
@@ -89,5 +70,7 @@ ul li {
 
 img {
   cursor: pointer;
-  margin: 10px 0;
+  display: flex;
+  height: 40px;
+  width: 40px;
 }
