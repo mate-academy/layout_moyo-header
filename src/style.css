@@ -1,1 +1,84 @@
-/* Styles go here */
+.moyo-box {
+  display: flex;
+  max-width: 1200px;
+  min-width: 1024px;
+  height: 60px;
+  flex-direction: row-reverse;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.text {
+  height: 14px;
+}
+
+.box {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 20px;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-style: medium;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.last-box {
+  margin-right: 50px;
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.img-box {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-grow: 1;
+  margin-left: 50px;
+}
+
+.box:hover {
+  cursor: pointer;
+  color: #00acdc;
+}
+
+.active::after {
+  cursor: default;
+  content: "";
+  position: relative;
+  top: 18.5px;
+  display: block;
+  border-bottom: #00acdc solid 4px;
+  border-radius: 8px;
+  opacity: 0;
+}
+
+.active:active::after {
+  opacity: 1;
+}
+
+.is-active::after {
+  cursor: default;
+  content: "";
+  position: relative;
+  top: 18.5px;
+  display: block;
+  border-bottom: #00acdc solid 4px;
+  border-radius: 8px;
+}
+
+.last-text {
+  color: #00acdc;
+}
