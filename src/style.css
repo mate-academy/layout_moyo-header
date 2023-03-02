@@ -36,41 +36,39 @@
   display: flex;
   align-items: center;
   margin-right: 20px;
-  height: 60px;
 }
 
 .nav__item:last-child {
   margin-right: 0;
 }
 
-.link {
+.nav__link {
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 60px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
+  height: 60px;
   cursor: pointer;
-  padding: 22px 0;
 }
 
-.link:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
-.link:focus {
+.nav__link:focus {
   color: #00acdc;
 }
 
 .is-active {
   color: #00acdc;
-  position: relative;
-  top: 3px;
 }
 
 .is-active::after {
-  position: relative;
-  top: 19px;
+  position: absolute;
+  top: 60px;
+  left: 500px;
   content: "";
   height: 4px;
   background: #00acdc;
