@@ -1,17 +1,17 @@
 /* Styles go here */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 12px;
   font-weight: 500;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 .header {
@@ -43,7 +43,7 @@ body {
 
 .is-active,
 .nav__link:hover {
-  color: #00acdc;
+ --color: #00acdc;
 }
 
 .is-active {
@@ -57,6 +57,6 @@ body {
   height: 4px;
   left: 0;
   top: 56px;
-  background: #00acdc;
+  background: var(--color);
   border-radius: 8px;
 }
