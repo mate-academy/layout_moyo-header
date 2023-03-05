@@ -5,6 +5,14 @@
   font-style: normal;
   font-weight: 500;
 }
+/* VARIABLES */
+:root {
+  --link-color: #00acdc;
+}
+
+html {
+  font-family: "Roboto" , Arial, sans-serif;
+}
 /* RESET ALL DEFAULT MARGINS */
 * {
   margin: 0;
@@ -13,6 +21,8 @@
 /* HEADER LOGO */
 .header__logo {
   display: flex;
+  width: 40px;
+  height: 40px;
 }
 /* HEADER */
 .header {
@@ -20,7 +30,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  font-family: "Roboto" , Arial, sans-serif;
   font-size: 12px;
   font-weight: 500;
 }
@@ -46,17 +55,17 @@
 }
 /* HOVER EFFECT */
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--link-color);
 }
 /* IS ACTIVE FOR THE TASK */
 .is-active {
-  color: #00acdc;
+  color: var(--link-color);
 }
 /*   IS ACTIVE FOR TASK */
 .is-active::after {
   content: "";
   display: block;
-  background-color: #00acdc;
+  background-color: var(--link-color);
   position: absolute;
   bottom: 0;
   width: 100%;
