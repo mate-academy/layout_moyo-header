@@ -1,12 +1,9 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+@import url(./reset.css);
 
 body {
   font-family: "Roboto", sans-serif;
   --hover-active-color: #00acdc;
+  box-sizing: border-box;
 }
 
 .header {
@@ -17,9 +14,7 @@ body {
   padding: 0 50px;
 }
 
-.header__img_logo {
-  margin: 10px 0;
-  cursor: pointer;
+.header__logo {
   height: 40px;
   width: 40px;
 }
@@ -32,28 +27,34 @@ body {
   display: flex;
 }
 
-.nav__item:nth-of-type(n + 2) {
+.nav__item {
+  height: 60px;
+  position: relative;
+}
+
+.nav__item:not(:first-of-type) {
   margin-left: 20px;
 }
 
-.nav__item_link {
-  display: block;
-  height: 60px;
-  line-height: 60px;
+.nav__link {
+  height: 100%;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: black;
 }
 
-.nav__item_link:hover,
+.nav__link:hover,
 .is-active {
   color: var(--hover-active-color);
 }
 
 .is-active::after {
   content: "";
-  display: block;
-  position: relative;
-  bottom: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   height: 4px;
   border-radius: 2px;
   background-color: var(--hover-active-color);
