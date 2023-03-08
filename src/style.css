@@ -1,1 +1,73 @@
-/* Styles go here */
+html {
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+body {
+  --active_text_color: #00acdc;
+
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 50px;
+
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav_items_list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.nav_items:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: block;
+
+  padding: 23px 0;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+}
+
+.nav__link:hover {
+  color: var(--active_text_color);
+}
+
+.is-active {
+  position: relative;
+  
+  color: var(--active_text_color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 4px;
+
+  background: var(--active_text_color);
+  border-radius: 8px;
+}
