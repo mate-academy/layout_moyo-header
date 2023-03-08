@@ -1,117 +1,95 @@
 /* Styles go here */
-* {
+
+html {
 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
-html {
-
-  font-family: "Roboto", Arial, sans-serif;
-}
 .header {
 
-  position: absolute;
-  width: 1200px;
-  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
   background: #fff;
-  box-shadow: 0px 2px 4px #0000000d;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
 }
 
-@media (width: 1024px) {
+nav {
 
-  .header {
-
-    width: 1024px;
-    height: 60px;
-  }
-
-  .header__logo {
-
-    width: 333px;
-  }
-
-  .header__links-block ul {
-
-    width: 691px;
-  }
+  display: block;
 }
 
-.header__container {
+.logo {
+
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.logo__image {
+
+  height: 100%;
+  width: 100%;
+}
+
+.nav__list {
 
   display: flex;
-  align-items: center;
-  height: 60px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.header__logo {
+[data-qa="hover"]:hover {
 
-  width: 394px;
+  color: #00acdc;
 }
 
-.header__logo img {
+.nav__item {
 
-  margin-left: 50px;
-}
-
-.header__links-block ul {
-
-  width: 720px;
-  display: flex;
-  align-items: center;
-  height: 60px;
-  list-style-type: none;
-}
-
-.header__link {
-
-  height: 60px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  color: #000;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
   margin-left: 20px;
 }
 
-.header__link a {
-
-  color: black;
-  text-decoration: none;
-  margin-bottom: 1%;
-  text-transform: uppercase;
-}
-
-.header__link:first-child {
+.nav__item:first-child {
 
   margin-left: 0;
+}
+
+.nav__link.is-active {
+
   color: #00acdc;
 }
 
-.header__link:first-child::after {
+.nav__link {
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.nav__link.is-active::after {
 
   content: "";
   position: absolute;
-  width: 36px;
-  margin-top: 55px;
-  border-bottom: 4px solid #00acdc;
-  border-radius: 4px;
-}
-
-.is-active:hover {
-
-  color: #00acdc;
-}
-
-.header__link > .data-qa:hover {
-
-  color: #00acdc;
-}
-
-.header__link a[href="#apple"] {
-
-  color: #00acdc;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
 }
