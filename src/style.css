@@ -1,1 +1,80 @@
-/* Styles go here */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: medium;
+  font-weight: 500;
+  src: url("./fonts/Roboto-Medium.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 5rem;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.menu__item {
+  font-size: 1.2rem;
+}
+
+.menu__link {
+  color: #000;
+  display: block;
+  margin-right: 2rem;
+  min-height: 6rem;
+  padding: 2.25rem 0;
+  text-decoration: none;
+}
+
+.menu__link--first {
+  margin-left: 0;
+}
+
+.menu__link--last {
+  margin-right: 0;
+}
+
+.menu__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  background-color: #00acdc;
+  border-radius: 0.8rem;
+  bottom: 0;
+  content: "";
+  display: inline-block;
+  height: 0.4rem;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
