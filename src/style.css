@@ -2,19 +2,28 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+body,
+h1,
+ul {
   margin: 0;
 }
 
+ul,
+li {
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .navigation {
-  line-height: 14px;
-  text-transform: uppercase;
-  color: #000;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  line-height: 14px;
+  color: #000;
+  text-transform: uppercase;
 }
 
 .navigation :hover {
@@ -23,18 +32,17 @@ body {
 
 .nav__item {
   display: block;
-  cursor: pointer;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
   margin-right: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .nav__link {
-  text-decoration: none;
-  color: #000;
-  padding: 23px 0;
   display: block;
+  padding: 23px 0;
+  color: #000;
+  text-decoration: none;
 }
 
 .nav__item:last-child {
@@ -42,29 +50,27 @@ body {
 }
 
 .is-active {
-  display: block;
   position: relative;
+  display: block;
   color: #00acdc;
 }
 
 .is-active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
   width: 37px;
   height: 4px;
   background-color: #00acdc;
   border-radius: 8px;
-  display: block;
-  position: absolute;
-  top: 56px;
-  right: 654px;
-  bottom: 0;
-  left: 0;
   content: "";
 }
 
 .header {
-  padding: 0 50px;
   display: flex;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
 .logo {
