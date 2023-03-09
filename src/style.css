@@ -13,15 +13,18 @@ body {
   display: flex;
 }
 
-a {
+.link {
   text-decoration: none;
   color: black;
+}
+
+.link:hover {
+  color: var(--color-link);
 }
 
 .header {
   padding-left: 50px;
   padding-right: 50px;
-  
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -52,7 +55,7 @@ a {
   color: var(--color-link);
 }
 
-.is-active:after {
+.is-active::after {
   content: "";
   display: block;
   height: 4px;
