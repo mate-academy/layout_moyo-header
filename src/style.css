@@ -1,68 +1,78 @@
 html {
   margin: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .header {
-  position: relative;
   display: flex;
   justify-content: space-between;
-  flex-flow: row;
   padding-left: 50px;
   padding-right: 50px;
-  width: 1200px;
+  align-items: center;
+  flex-flow: row;
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.header-small {
-  width: 1024px;
+  width: 40px;
+  height: 40px;
+  display: block;
 }
 
 .nav {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
   flex-flow: row;
+  margin: 0;
+  padding: 0;
 }
 
 .list {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
   flex-flow: row;
+  margin: 0;
+  padding: 0;
 }
 
 .nav_item {
-  display: inline-block;
-  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", Helvetica, sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
-  height: 15px;
+  cursor: pointer;
+  height: 40px;
+}
+
+.nav_item:not(:last-child) {
   margin-right: 20px;
-  padding: 20px 5px;
+}
+
+.nav_item:first-child {
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .is-active {
+  position: relative;
   color: #00acdc;
 }
 
-.nav_item:active::after {
-  border: 4px solid #00acdc;
-  border-radius: 8px;
+.nav_item.is-active::after {
+  position: absolute;
+  content: "";
+  background-color: #00acdc;
+  border-radius: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: inherit;
+  height: 4px;
 }
 
 .nav_item:hover {
