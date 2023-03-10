@@ -1,1 +1,86 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo_pic {
+  width: 40px;
+  height: 40px;
+}
+
+.logo__link {
+  margin: 10px 0 10px 50px;
+}
+
+.nav__link,
+.nav__item {
+  text-decoration: none;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  margin-right: 50px;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav__item {
+  display: flex;
+}
+
+.nav__link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 14px;
+  color: black;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link:hover,
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  bottom: 0;
+  background-color: #00acdc;
+}
