@@ -39,6 +39,11 @@ html {
 .nav_item {
   display: flex;
   justify-content: center;
+}
+
+.nav_link {
+  padding: 22.5px 0;
+  display: flex;
   font-family: "Roboto", Helvetica, sans-serif;
   text-transform: uppercase;
   text-decoration: none;
@@ -46,7 +51,6 @@ html {
   font-weight: 500;
   font-size: 12px;
   cursor: pointer;
-  height: 40px;
 }
 
 .nav_item:not(:last-child) {
@@ -58,12 +62,12 @@ html {
   padding-left: 0;
 }
 
-.is-active {
+.nav_link.is-active {
   position: relative;
   color: #00acdc;
 }
 
-.nav_item.is-active::after {
+.nav_link.is-active::after {
   position: absolute;
   content: "";
   background-color: #00acdc;
@@ -75,6 +79,6 @@ html {
   height: 4px;
 }
 
-.nav_item:hover {
+.nav_link:hover {
   color: #00acdc;
 }
