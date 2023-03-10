@@ -1,4 +1,4 @@
-body {
+* {
   box-sizing: border-box;
   margin: 0;
 }
@@ -49,27 +49,16 @@ body {
   position: relative;
 }
 
+:root {
+  --main-color: #00acdc;
+}
+
 .nav__link:hover {
-  color: #000;
-  text-decoration: underline #00acdc solid 2px;
-}
-
-[data-qa="hover"] {
-  color: #00acdc;
-}
-
-[data-qa="hover"]:hover {
-  color: #00acdc;
-  text-decoration: underline #00acdc solid 2px;
-}
-
-.is-active {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active:hover {
-  color: #00acdc;
-  text-decoration: underline #00acdc solid 2px;
+  color: var(--main-color);
 }
 
 .is-active:after {
@@ -79,6 +68,6 @@ body {
   display: block;
   width: 37px;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--main-color);
   border-radius: 8px;
 }
