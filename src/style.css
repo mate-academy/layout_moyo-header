@@ -2,21 +2,25 @@
 
 :root {
   --color-blue: #00acdc;
+  --nav-height: 60px;
 }
 
 * {
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
   font-family: "Roboto", sans-serif;
-  font-style: normal;
 }
 
 body {
-  width: 100%;
+  margin: 0;
   background: #e5e5e5;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -26,11 +30,12 @@ body {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding: 0 50px 0 0;
+  height: var(--nav-height);
 }
 
 .logo_container {
   padding: 10px 0 10px 50px;
-  height: 40px;
+  height: var(--nav-height);
 }
 
 .nav_list {
@@ -38,7 +43,7 @@ body {
   list-style: none;
 }
 
-.nav_item:not(:first-child) {
+.nav_item:nth-child(n+2) {
   margin-left: 20px;
 }
 
@@ -65,9 +70,9 @@ body {
 .nav_link.is-active:after {
   content: "";
   position: absolute;
-  width: 37px;
+  width: 100%;
   height: 4px;
-  top: 56px;
+  bottom: 0;
   background: var(--color-blue);
   border-radius: 8px;
 }
