@@ -26,6 +26,7 @@ html {
 .nav_list {
   display: flex;
   list-style: none;
+  --hover-color: #00acdc;
 }
 
 .nav_item:not(:last-child) {
@@ -41,12 +42,12 @@ html {
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active::after {
@@ -54,7 +55,7 @@ html {
   position: absolute;
   width: 37px;
   height: 4px;
-  background: #00acdc;
+  background: var(--hover-color);
   border-radius: 8px;
   bottom: 0;
   left: 0;
