@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Roboto:wght@500&display=swap");
 
-body {
+body,
+nav,
+.list {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", Helvetica, sans-serif;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0 50px;
   align-items: center;
   flex-flow: row;
   background: #fff;
@@ -45,7 +47,7 @@ body {
 .nav-link {
   padding: 23px 0;
   display: flex;
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: inherit;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
@@ -70,12 +72,12 @@ body {
 
 .nav-link.is-active::after {
   position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   content: "";
   background-color: #00acdc;
   border-radius: 2px;
-  bottom: 0;
-  left: 0;
-  right: 0;
   width: inherit;
   height: 4px;
 }
