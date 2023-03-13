@@ -4,7 +4,6 @@ html {
   line-height: 14px;
   font-weight: 500;
   font-style: normal;
-  text-transform: uppercase;
   background: #e5e5e5;
 }
 
@@ -13,18 +12,19 @@ html {
   margin: 0;
 }
 
+:root {
+  --main-color: #00acdc;
+}
+
 header {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  list-style: none;
   background: #fff;
-  box-shadow: 0 2px 4px #0000 0.05;
   padding: 0 50px;
 }
 
 .navigation {
-  display: inline;
   margin: 0;
   padding: 0;
 }
@@ -39,7 +39,8 @@ header {
 
 .nav__item {
   display: inline-block;
-  padding-right: 17px;
+  margin-right: 17px;
+  text-transform: uppercase;
 }
 
 .nav__item:last-child {
@@ -57,15 +58,16 @@ header {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
+  position: relative;
 }
 
-a:hover {
-  text-decoration: underline 2px #00acdc;
+.nav__link:hover {
+  text-decoration: underline 2px var(--main-color);
 }
 
 .collor_one:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active:after {
@@ -73,8 +75,8 @@ a:hover {
   content: " ";
   height: 4px;
   width: 100%;
-  position: relative;
-  top: 18.5px;
-  background-color: #00acdc;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--main-color);
   border-radius: 8px;
 }
