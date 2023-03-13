@@ -1,74 +1,56 @@
-html {
+* {
   margin: 0;
-  font-family: Roboto, Arial, sans-serif;
-}
-
-body {
-  margin: inherit;
+  padding: 0;
 }
 
 .header {
-  box-sizing: border-box;
-  margin: 0;
+  margin: 0 50px;
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
   justify-content: space-between;
-  padding: 0 50px;
-  width: 100%;
-  font-weight: 500;
+  align-items: center;
 }
 
 .logo {
-  position: left;
-  text-decoration: none;
   height: 40px;
-  margin: 10px 0;
-}
-
-.nav__bar {
-  color: aliceblue;
-  display: flex;
-  align-items: stretch;
-  align-content: center;
 }
 
 .nav__list {
-  list-style: none;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  align-content: stretch;
-  margin: 0;
+
+  list-style: none;
+}
+
+.nav__listItem {
+  display: flex;
+  position: relative;
 }
 
 .nav__link {
-  /* margin-right: 10px; */
-  color: black;
+  font-family: Roboto, Arial, sans-serif;
   font-size: 12px;
-  text-decoration: none;
+  color: black;
   text-transform: uppercase;
-  /* display: inline; */
+  text-decoration: none;
+  height: 60px;
+  line-height: 60px;
 }
 
-.nav__list li {
-  height: inherit;
-}
-
-.nav__link:hover {
-  color: #00acdc;
-}
-
-.nav__list li:not(:last-child) {
+.nav__listItem:not(:last-child) {
   margin-right: 20px;
 }
 
+.nav__link:hover,
 .is-active {
   color: #00acdc;
-  border-bottom: 4px solid #00acdc;
-  border-radius: 4px;
 }
 
 .is-active::after {
-  border-bottom: 4px solid #00acdc;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 4px;
 }
