@@ -1,3 +1,8 @@
+:root {
+  --link-color: #00acdc;
+  --link-color2: #000;
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -14,6 +19,7 @@ body {
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
+  box-shadow: 0 2px 4px #0000000d;
 }
 
 .logoLink {
@@ -36,8 +42,7 @@ body {
   padding: 23px 0;
   font-size: 12px;
   font-weight: 500;
-  color: rgb(41, 41, 41);
-  cursor: pointer;
+  color: var(--link-color2);
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
@@ -48,11 +53,12 @@ body {
 }
 
 .navLink:hover {
-  color: #00acdc;
+  color: var(--link-color);
+  cursor: pointer;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--link-color);
 }
 
 .is-active::after {
