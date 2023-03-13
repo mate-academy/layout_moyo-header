@@ -11,7 +11,7 @@ body {
 
 .header {
   display: flex;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding: 0 50px;
   justify-content: space-between;
@@ -25,14 +25,15 @@ body {
 }
 
 .nav__list {
+  display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-nav li {
+/* nav li {
   display: inline-block;
-}
+} */
 
 .is-active::after {
   content: "";
@@ -45,6 +46,10 @@ nav li {
   position: absolute;
 }
 
+.is-active {
+  position: relative;
+}
+
 .nav__link {
   display: block;
   color: #000;
@@ -53,7 +58,11 @@ nav li {
   cursor: pointer;
   font-weight: 500;
   padding: 23px 0;
-  position: relative;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
 }
 
 .nav__item {
@@ -72,7 +81,7 @@ li:last-of-type {
   color: #00acdc;
 }
 
-.logo {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+/* .logo {
+  height: 40px;
+  width: 40px;
+} */
