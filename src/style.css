@@ -9,6 +9,9 @@ html {
 
 * {
   box-sizing: border-box;
+}
+
+.one_tem {
   margin: 0;
 }
 
@@ -16,9 +19,8 @@ html {
   --main-color: #00acdc;
 }
 
-header {
+.main_tem {
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
   background: #fff;
   padding: 0 50px;
@@ -39,13 +41,11 @@ header {
 
 .nav__item {
   display: inline-block;
-  margin-right: 17px;
   text-transform: uppercase;
 }
 
-.nav__item:last-child {
-  padding-right: 0;
-  margin-right: 0;
+.nav__item:not(:last-child) {
+  margin-right: 17px;
 }
 
 .nav__link {
@@ -62,7 +62,7 @@ header {
   position: relative;
 }
 
-.nav__link:hover {
+.nav__item:hover {
   text-decoration: underline 2px var(--main-color);
 }
 
