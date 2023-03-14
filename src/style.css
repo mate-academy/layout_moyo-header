@@ -1,1 +1,99 @@
 /* Styles go here */
+:root {
+  --primary-text-color: #000;
+  --accent-color: #00acdc;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: var(--primary-text-color);
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+body,
+ul,
+li {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+/* .container {
+  width: 1200px;
+  margin: auto;
+} */
+
+.logo {
+  margin: 10px 0 10px 50px;
+}
+
+.navigation {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu .link {
+  display: block;
+  padding-top: 23px;
+  padding-bottom: 23px;
+
+  color: var(--primary-text-color);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.is-active.link {
+  color: var(--accent-color);
+}
+
+.menu .link:hover,
+.menu .link:focus {
+  color: var(--accent-color);
+}
+
+.menu .item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.is-active {
+  position: relative;
+}
+
+.is-active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  bottom: 0;
+  background-color: var(--accent-color);
+  border-radius: 8px;
+}
