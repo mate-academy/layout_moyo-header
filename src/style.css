@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+html {
+  --color: #00acdc;
+}
+
 .header {
   flex-basis: 1024px;
   display: flex;
@@ -52,11 +56,11 @@
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color);
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--color);
 }
 
 .nav__link.is-active::after {
@@ -67,5 +71,5 @@
   bottom: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--color);
 }
