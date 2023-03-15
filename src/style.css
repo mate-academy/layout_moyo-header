@@ -54,13 +54,16 @@ body {
 
 .is-active {
   color: rgba(0, 172, 220, 1);
+  position: relative;
 }
 
 .is-active::after {
   content: "";
   display: block;
-  position: relative;
-  top: 18.5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   border-top: hsl(193, 100%, 43%) 4px solid;
   border-radius: 8px;
   align-self: center;
