@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  --active-color: #00acdc;
 }
 
 .header {
@@ -35,12 +36,7 @@ body {
   height: 4px;
   display: inline-block;
   position: absolute;
-  background-color: #00acdc;
-}
-
-.is-active {
-  color: #00acdc;
-  position: relative;
+  background-color: var(--active-color);
 }
 
 .nav__item {
@@ -59,8 +55,8 @@ body {
   margin-right: 0;
 }
 
-a[data-qa="hover"]:hover {
-  color: #00acdc;
+.a[data-qa="hover"]:hover {
+  color: var(--active-color);
 }
 
 .nav__list {
@@ -68,9 +64,15 @@ a[data-qa="hover"]:hover {
   height: 60px;
 }
 
-a {
-  height: 60px;
-  line-height: 60px;
+.a {
+  display: inline-block;
+  padding-top: 23px;
+  padding-bottom: 23px ;
   text-decoration: none;
   color: black;
+}
+
+.is-active {
+  color: var(--active-color);
+  position: relative;
 }
