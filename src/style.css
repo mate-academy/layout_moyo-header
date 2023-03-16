@@ -1,1 +1,122 @@
-/* Styles go here */
+/*Обнуление*/
+*,
+html,
+body,
+div,
+nav {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/*------------------*/
+
+@font-face {
+  font-family: "Roboto";
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+  font-style: normal;
+  font-weight: 500;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+body {
+  --hover-color: #00acdc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  display: flex;
+  justify-content: center;
+}
+
+.nav__link {
+  padding: 23px 0;
+  display: flex;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.is-active {
+  color: var(--hover-color);
+  position: relative;
+}
+
+.nav__link.is-active::after {
+  position: absolute;
+  content: "";
+  background-color: var(--hover-color);
+  border-radius: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: inherit;
+  height: 4px;
+}
+
+.nav__link:hover {
+  color: var(--hover-color);
+}
