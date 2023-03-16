@@ -1,57 +1,71 @@
-body {
-  margin: 0;
-  font-size: 12px;
+html {
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-family: "Roboto", Helvetica, sans-serif;
-  --custom-color: #00acdc;
 }
 
-.menu {
+.body {
+  margin: 0;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
-  margin: inherit;
   padding: 0 50px;
+  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.logo-space {
-  margin: 10px 0 7px;
+.nav {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  margin: 10px 0;
+  width: 40px;
+  height: 40px;
 }
 
 .nav__list {
   display: flex;
   list-style: none;
-  margin: inherit;
-  padding-inline-start: 0;
+  padding: 0;
+  margin: 0;
 }
 
-.nav__list-li:not(:last-child) {
+.nav__item {
   margin-right: 20px;
 }
 
-.nav__list-a {
-  height: 60px;
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 23px 0;
 }
 
-.nav__list-a::after,
-.nav__list-a::before {
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
   content: "";
+  background: #00acdc;
+  border-radius: 8px;
   height: 4px;
-}
-
-.nav__list-a:hover,
-.nav__list-a.is-active {
-  color: var(--custom-color);
-}
-
-.nav__list-a.is-active::after {
   width: 100%;
-  border-radius: 4px;
-  background-color: var(--custom-color);
+  bottom: 0;
 }
