@@ -30,11 +30,10 @@ body {
 
 .nav__item {
   list-style: none;
-  margin-left: 20px;
 }
 
-.nav__item:first-child {
-  margin-left: 0;
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link {
@@ -60,10 +59,8 @@ body {
 .is-active::after {
   content: "";
   display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  position: relative;
+  top: 18.5px;
   border-top: hsl(193, 100%, 43%) 4px solid;
   border-radius: 8px;
   align-self: center;
