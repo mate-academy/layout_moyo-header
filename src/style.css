@@ -7,6 +7,7 @@ nav {
   padding: 0;
   margin: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
 nav,
@@ -43,13 +44,13 @@ ul li {
 }
 
 html {
-  box-sizing: border-box;
-}
-
-body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
+}
+
+body {
+  --hover-color: #00acdc;
 }
 
 .header {
@@ -100,14 +101,14 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--hover-color);
   position: relative;
 }
 
 .nav__link.is-active::after {
   position: absolute;
   content: "";
-  background-color: #00acdc;
+  background-color: var(--hover-color);
   border-radius: 2px;
   bottom: 0;
   left: 0;
@@ -117,5 +118,5 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
