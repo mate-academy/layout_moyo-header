@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -7,9 +7,15 @@
   color: #000;
 }
 
+body {
+  margin: 0;
+}
+
 .container {
+  display: flex;
   box-sizing: border-box;
   height: max-content;
+  background: #fff;
   min-width: 1024px;
   max-width: 1200px;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.05);
@@ -17,52 +23,102 @@
 
 .box {
   display: flex;
-  margin-top: auto;
-  margin-left: 50px;
-  margin-right: 40px;
   flex-direction: row;
+  min-width: 924px;
+  max-width: 1100px;
+  height: fit-content;
   justify-content: space-between;
-  background: #fff;
+  margin: auto 50px;
 }
 
 .logo {
-  margin: auto 0;
+  display: flex;
+  margin-left: 0;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__link {
   height: 40px;
+  width: 40px;
 }
 
 .nav__list {
   display: flex;
   margin: 0;
-  align-items: center;
+  padding: 0;
+  flex-direction: row;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 
 .nav__link {
-  padding: 25px 0;
+  display: flex;
   margin-left: 10px;
   margin-right: 10px;
-  text-decoration: none;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-  font-family: 'Roboto';
+.nav__link:first-child {
+  flex-direction: column;
+}
+
+.nav__link:last-child {
+  margin-right: 0;
+}
+
+a:first-child.is-active {
+  display: flex;
+  height: 54px;
+  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
-}
-
-.nav__link:hover {
-  text-decoration: underline;
-  border-bottom: 4px solid #00acdc;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
   text-decoration: none;
   color: #00acdc;
 }
 
-.nav__link:first-child::after {
-  content: 'APPLE';
-  color: #00acdc;
-  padding: 25px 0;
-  margin-left: 10px;
-  margin-right: 10px;
+a:first-child {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
   text-decoration: none;
-  border-bottom: 4px solid #00acdc;
 }
 
+a:hover {
+  text-decoration: none;
+  color: #00acdc;
+}
+
+.dash::after {
+  display: flex;
+  content: "";
+  width: 39px;
+  height: 4px;
+  align-items: center;
+  justify-content: center;
+  background-color: #00acdc;
+  border-radius: 4px;
+}
