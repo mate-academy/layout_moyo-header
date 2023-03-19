@@ -1,105 +1,75 @@
 @font-face {
-  font-family: "Roboto";
-  src: url(Roboto/Roboto-Black.ttf);
+  font-family: Roboto;
+  src: url(Roboto/Roboto-Medium.ttf);
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
 }
 
 body {
-  display: flex;
   margin: 0;
-  padding: 0;
-  font-weight: 500px;
-  font-style: normal ;
-  font-size: 12px;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
-li {
-  display: block;
-}
-
-a {
-  color: #000;
-  text-decoration: none ;
-  border: none;
-  display: block;
-}
-
-.first {
-  position: absolute;
-  width: 100%;
+.header {
   height: 60px;
-  box-shadow: 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.link {
-  position: absolute;
-  top: 22px;
-  white-space: nowrap;
-}
-
-.is-active {
-  position: absolute;
-  color: #00acdc;
-  left: 509px;
-}
-
-.first::after {
-  content: "";
-  width: 37px;
-  height: 4px;
-  top: 56px;
-  left: 509px;
-  position: relative;
-  background-color: #00acdc;
-  border-radius: 8px;
-  display: block;
-
-}
-
-.link li:nth-child(2) {
-  position: absolute;
-  left: 566px;
-}
-
-.link li:nth-child(3) {
-  position: absolute;
-  left: 644px;
-}
-
-.link li:nth-child(4) {
-  position: absolute;
-  left: 752px;
-  color: #00acdc;
-}
-
-.link li:nth-child(5) {
-  position: absolute;
-  left: 910px;
-}
-
-.link li:nth-child(6) {
-  position: absolute;
-  left: 984px;
-}
-
-.link li:nth-child(7) {
-  position: absolute;
-  left: 1055px;
-}
-
-.link li:nth-child(8) {
-  position: absolute;
-  left: 1115px;
-}
-
-:hover {
-  color: #00acdc;
-}
-
-.icon {
+.logo {
   position: relative;
   width: 40px;
   height: 40px;
   left: 50px;
-  top: 10px;
+}
+
+.nav {
+  --hover-color: #00acdc;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0 50px;
+
+}
+
+.nav__item:not(:last-child) {
+  padding-right: 20px;
+}
+
+.nav__link {
+  display: block;
+  line-height: 14px;
+  padding: 23px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+
+}
+
+.nav__link:hover {
+  color: var(--hover-color);
+}
+
+.is-active {
+  color: var(--hover-color);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 37px;
+  margin-top: 18.5px;
+  background-color: var(--hover-color);
+  border-radius: 8px;
 }
