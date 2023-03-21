@@ -12,7 +12,7 @@ body {
   padding: 0;
 }
 
-.img {
+.logo_Moyo {
   width: 40px;
   height: 40px;
   margin-right: 0;
@@ -24,7 +24,6 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  box-sizing: border-box;
   padding-right: 50px;
   padding-left: 50px;
 }
@@ -43,21 +42,25 @@ body {
   text-align: center;
   list-style: none;
   padding: 0;
-  height: 60px;
+  margin: 0;
+}
+
+.nav_link {
+  color: black;
+}
+
+.nav_link,
+.is-active {
+  padding-top: 22.8px;
+  padding-bottom: 22.8px;
+  position: relative;
+  text-decoration: none;
 }
 
 .is-active,
-a:hover {
+.is-active:hover,
+.nav_link:hover {
   color: #00acdc;
-}
-
-.link,
-.is-active {
-  display: block;
-  height: 100%;
-  line-height: 60px;
-  position: relative;
-  text-decoration: none;
 }
 
 .is-active::after {
@@ -71,16 +74,6 @@ a:hover {
   border-radius: 8px;
 }
 
-.nav_item {
-  display: flex;
-  align-items: center;
-  padding: auto;
-}
-
 .nav_item:nth-child(n+2) {
-  padding-left: 20px;
-}
-
-.link {
-  color: black;
+  margin-left: 20px;
 }
