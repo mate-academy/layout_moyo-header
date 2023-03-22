@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
   --active-color: #00acdc;
 }
 
@@ -47,15 +46,14 @@ body {
   font-size: 12px;
   font-weight: 500;
   font-style: normal;
-  margin-right: 20px;
   height: 60px;
 }
 
-.item_last {
-  margin-right: 0;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
-.a[data-qa="hover"]:hover {
+.text[data-qa="hover"]:hover {
   color: var(--active-color);
 }
 
@@ -64,12 +62,13 @@ body {
   height: 60px;
 }
 
-.a {
+.text {
   display: inline-block;
   padding-top: 23px;
   padding-bottom: 23px ;
   text-decoration: none;
   color: black;
+  font-family: Roboto, sans-serif;
 }
 
 .is-active {
