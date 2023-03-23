@@ -1,1 +1,69 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  --link-color: #00acdc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.moyo-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.moyo-logo {
+  width: 40px;
+  height: 40px;
+  padding: 10px 0;
+}
+
+.nav__list {
+  border: none;
+  text-transform: uppercase;
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: block;
+  line-height: 60px;
+  text-decoration: none;
+  color: #000;
+}
+
+.is-active {
+  position: relative;
+  color: var(--link-color);
+}
+
+.nav__link:hover {
+  color: var(--link-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--link-color);
+  left: 0;
+  bottom: 0;
+}
