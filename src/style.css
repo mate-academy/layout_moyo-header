@@ -1,1 +1,89 @@
-/* Styles go here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --main-color: #00acdc;
+  --header-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --text-color: #000;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("https://fonts.googleapis.com");
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  padding: 0 50px;
+  margin: auto;
+  box-shadow: var(--header-shadow);
+}
+
+.logo {
+  width: 40px;
+  margin: 10px 0;
+}
+
+.logo__href {
+  height: 60px;
+}
+
+.nav-menu__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 12px;
+}
+
+.nav-menu__list-item {
+  position: relative;
+  margin: 0 10px;
+  line-height: 15px;
+}
+
+.nav-menu__list-item:first-child {
+  margin-left: 0;
+}
+
+.nav-menu__list-item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 22.5px 0;
+  
+}
+
+.nav__link:hover {
+  color: var(--main-color);
+}
+
+.is-active {
+  color: var(--main-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-color);
+  border-radius: 8px;
+}
