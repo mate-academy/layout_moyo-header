@@ -2,9 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  --main-color: #00acdc;
-  --header-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --text-color: #000;
 }
 
 @font-face {
@@ -17,12 +14,18 @@ html {
   font-weight: 500;
 }
 
+:root {
+  --main-color: #00acdc;
+  --header-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --text-color: #000;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  width: 100%;
   padding: 0 50px;
   margin: auto;
   box-shadow: var(--header-shadow);
@@ -60,7 +63,7 @@ html {
   margin-right: 0;
 }
 
-.nav__link {
+.nav-menu__link {
   display: block;
   text-transform: uppercase;
   text-decoration: none;
@@ -69,7 +72,7 @@ html {
   
 }
 
-.nav__link:hover {
+.nav-menu__link:hover {
   color: var(--main-color);
 }
 
