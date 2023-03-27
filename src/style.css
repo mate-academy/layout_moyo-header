@@ -1,6 +1,7 @@
 /* Styles go here */
 * {
-  margin: 0
+  margin: 0;
+  padding: 0;
 }
 
 .container__main {
@@ -8,18 +9,12 @@
   flex-direction: row;
   justify-content: flex-start;
 
-  height: 60px;
   background: #FFFFFF;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.block {
-  background-color: yellowgreen;
-  flex-basis: 50px;
-  flex-shrink: 0;
-}
-
 .logo {
+  margin-left: 50px;
   align-self: center;
   flex-basis: 40px;
   height: 40px;
@@ -29,42 +24,43 @@
 .space {
   flex-basis: 100%;
   flex-shrink: 1;
-  background-color: yellow;
+  background-color: #fff;
 }
 
 .list {
-  margin: auto;
+  margin: auto 50px auto 0;
   display: flex;
   list-style-type: none;
 }
 
 .list__item {
-
   margin-left: 20px;
+  padding: 22.5px 0;
 }
 
-.list__text {
+.nav__link {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  text-decoration: none;
+  color: #000;
+  padding: 22.5px 0;
 }
 
-.list__text:hover {
+.nav__link:hover {
   text-decoration: none;
   color: #00ACDC;
 }
 
-.list__text:active::after {
+.nav__link:active::after {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   content: '';
   display: block;
   height: 4px;
   background-color: #00ACDC;
 }
 
-.nav__link:link {
-  text-decoration: none;
-  color: #000;
-}
+
 
 
 
