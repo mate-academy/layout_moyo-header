@@ -17,9 +17,7 @@
 }
 
 .img {
-  display: flex;
-  align-items: center;
-  flex-grow: 2;
+  display: block;
 }
 
 .nav__list {
@@ -27,7 +25,6 @@
   padding: 0;
   list-style: none;
   display: flex;
-  justify-content: flex-end;
 }
 
 .nav__link {
@@ -41,7 +38,7 @@
   padding: 23px 0;
 }
 
-.nav__item:nth-child(1n + 2) {
+.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
@@ -50,7 +47,7 @@
 }
 
 .is-active:before {
-  content: " ";
+  content: "";
   height: 4px;
   background-color: var(--main_blue_color);
   position: absolute;
