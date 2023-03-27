@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -6,27 +10,27 @@
 
 .header {
   height: 60px;
+  padding: 0 50px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  min-width: 1024px;
 }
 
 .img {
-  margin-left: 50px;
+  display: flex;
+  align-items: center;
   flex-grow: 2;
 }
 
 .nav__list {
-  margin: 0 50px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   justify-content: flex-end;
 }
 
-.nav__item {
-  margin-left: 20px;
+.nav__link {
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
@@ -35,6 +39,10 @@
   display: block;
   position: relative;
   padding: 23px 0;
+}
+
+.nav__item:nth-child(1n + 2) {
+  margin-left: 20px;
 }
 
 .is-active {
