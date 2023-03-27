@@ -14,7 +14,7 @@
 }
 
 .block {
-  background-color: blueviolet;
+  background-color: yellowgreen;
   flex-basis: 50px;
   flex-shrink: 0;
 }
@@ -39,8 +39,8 @@
 }
 
 .list__item {
-  flex-direction: column;
-  margin-left: 10px;
+
+  margin-left: 20px;
 }
 
 .list__text {
@@ -49,16 +49,23 @@
   transform: translateY(-50%);
 }
 
-.list__underline {
-  height: 4px;
-  background-color: blue;
-
-  position: relative;
-  top: 100%;
-  transform: translateY(-100%);
+.list__text:hover {
+  text-decoration: none;
+  color: #00ACDC;
 }
 
-.list__upperline {
+.list__text:active::after {
+  content: '';
+  display: block;
   height: 4px;
-  background-color: blue;
+  background-color: #00ACDC;
 }
+
+.nav__link:link {
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+
