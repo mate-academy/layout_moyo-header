@@ -1,17 +1,18 @@
 :root {
   --header-height: 60px;
   --underline-height: 4px;
+  --horizontal-padding: 50px;
 }
 
 body {
-  margin: 0 50px;
+  margin: 0;
 }
 
 .header {
-  width: 100%;
+  width: calc(100% - 2 * var(--horizontal-padding));
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  padding: 0 50px;
+  padding: 0 var(--horizontal-padding);
   display: flex;
   justify-content: space-between;
 }
@@ -41,10 +42,9 @@ body {
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  position: relative;
 }
 
-.nav__item-margin-left {
+.nav__item:nth-child(n + 2) {
   margin-left: 20px;
 }
 
@@ -61,12 +61,12 @@ body {
   color: #00acdc;
 }
 
-.is-active__item::after {
-  position: absolute;
+.is-active::after {
+  display: block;
   content: " ";
   background-color: #00acdc;
   width: 100%;
   height: var(--underline-height);
   border-radius: 8px;
-  top: calc(var(--header-height) - var(--underline-height));
+  transform: translateY(calc(-1 * var(--underline-height)));
 }
