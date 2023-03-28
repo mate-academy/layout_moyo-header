@@ -1,1 +1,90 @@
-/* Styles go here */
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --blue-color: #00acdc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  box-shadow: 0 2px 4px #0000000d;
+
+  font-weight: 500;
+  font-size: 12px;
+
+  padding: 0 50px;
+}
+
+.logo {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-self: center;
+  flex-basis: 40px;
+  flex-shrink: 1;
+}
+
+.space {
+  flex-basis: 100%;
+  flex-shrink: 1;
+}
+
+.list {
+  display: flex;
+  list-style-type: none;
+}
+
+.list__item {
+  margin-left: 20px;
+  padding: 22.5px 0;
+  text-transform: uppercase;
+}
+
+.list__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  padding: 22.5px 0;
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+}
+
+.nav__link:active::after {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
+}
+
+.is-active {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
+}
