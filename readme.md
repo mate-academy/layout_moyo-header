@@ -1,7 +1,7 @@
 # Moyo header
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://zisuan-od.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://zisuan-od.github.io/layout_moyo-header/report/html_report/)
 
 > Follow [these instructions](https://mate-academy.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
@@ -30,15 +30,15 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 + Check one more time if you added `data-qa="hover"` and `class="is-active"`
 required for tests
 + Do not use `tabs`. Use `2 spaces` for indentation.
-- Don't use repeated styles.
-- Don't just copy all styles from Figma. Think, which of them are relevant.
++ Don't use repeated styles.
++ Don't just copy all styles from Figma. Think, which of them are relevant.
 Uneven sizes (e.g. `line-height: 14.6px`) are definitely useless.
 + Don't use extra elements for blue line. Figure out how to work with `::after`
 and positioning
-- Check font styles. Use [google fonts](https://fonts.google.com/)
++ Check font styles. Use [google fonts](https://fonts.google.com/)
 + Links in `nav` should have clickable area above and below the text
-- Uppercase letters for `nav__list` are made with styles, not hardcoded into
++ Uppercase letters for `nav__list` are made with styles, not hardcoded into
 html (you should have usual text with first uppercase letter in html)
 + Don't set height for `header` explicitly. Let the content (links) dictate it.
-- Logo should also be a link to the main page of the website (#home). But it
++ Logo should also be a link to the main page of the website (#home). But it
 should not be part of `nav`.
