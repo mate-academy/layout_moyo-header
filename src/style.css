@@ -1,1 +1,91 @@
-/* Styles go here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--grey-color);
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --blue-color: #00acdc;
+  --grey-color: #e5e5e5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  min-width: 1024px;
+  background-color: var(--white-color);
+  align-items: center;
+  margin: auto;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.nav_item {
+  font-size: 12px;
+  font-style: normal;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+}
+
+.margin_left {
+  margin-left: 20px;
+}
+
+.home {
+  background-image: url(images/logo.png);
+  border: 0;
+  height: 40px;
+  width: 40px;
+}
+
+a {
+  color: black;
+}
+
+.nav_item_ {
+  position: relative;
+}
+
+.link:link {
+  text-decoration: none;
+  color: var(--black-color);
+
+}
+
+.link:hover {
+  color: var(--blue-color);
+}
+
+.apple_blue {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--blue-color);
+  bottom: 0;
+  position: absolute;
+  left: 0;
+}
