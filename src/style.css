@@ -1,1 +1,65 @@
 /* Styles go here */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.nav__list-el {
+  display: flex;
+}
+
+.nav__list-el:not(:first-child) {
+  margin-left: 20px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  display: block;
+}
+
+.nav__list-link {
+  line-height: 60px;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.nav__list-link:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "" ;
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
