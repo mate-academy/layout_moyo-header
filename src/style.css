@@ -1,8 +1,7 @@
 body {
+  width: 100%;
   background: #e5e5e5;
   margin: 0;
-  min-width: 375px;
-  max-width: 1200px;
 }
 
 .header {
@@ -23,15 +22,14 @@ body {
 }
 
 .nav {
-  position: relative;
   margin: 0;
 }
 
 .nav__list {
   display: flex;
-  cursor: pointer;
   text-transform: uppercase;
   margin: 0;
+  padding: 0;
 }
 
 .nav__item {
@@ -41,7 +39,14 @@ body {
   margin-left: 20px;
 }
 
+.nav__item:first-child {
+  margin-left: 0;
+}
+
 .nav__link {
+  position: relative;
+  padding: 23px 0;
+  cursor: pointer;
   color: #000;
   text-decoration: none;
   font-size: 12px;
@@ -60,13 +65,8 @@ body {
   bottom: 0;
 }
 
-.nav__link:hover::after {
-  width: 37px;
-  color: #00acdc;
-}
-
 .is-active::after {
-  width: 37px;
+  width: 100%;
   color: #00acdc;
 }
 
