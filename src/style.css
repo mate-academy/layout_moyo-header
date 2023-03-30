@@ -6,7 +6,7 @@ html {
 
 .body {
   margin: 0;
-  color: #00acdc;
+  --best-color: #00acdc;
 }
 
 .header {
@@ -17,7 +17,10 @@ html {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.nav {
+.nav,
+.nav__list {
+  display: flex;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -26,13 +29,6 @@ html {
   margin: 10px 0;
   width: 40px;
   height: 40px;
-}
-
-.nav__list {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .nav__item:not(:last-child) {
@@ -52,13 +48,13 @@ html {
 
 .nav__link:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--best-color);
 }
 
 .is-active::after {
   position: absolute;
   content: "";
-  background-color: #00acdc;
+  background-color: var(--best-color);
   border-radius: 8px;
   height: 4px;
   width: 100%;
