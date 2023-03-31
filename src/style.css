@@ -1,8 +1,7 @@
 /* Styles go here */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 * {
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
 }
 :root{
   --active-color: #00ACDC;
@@ -16,42 +15,54 @@ header{
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: bold;
+  font-size: 12px;
   text-transform: uppercase;
 
-  padding: 20px;
-  margin: 5px;
-
+  height: 60px;
+  padding: 10px 50px;
 }
 .nav__links li{
   display: inline-block;
   list-style-type: none;
-  margin: 15px;
+
+  margin: 20px;
 }
 .li-link{
+  position: relative;
   text-align: center;
   color: var(--no-active-color);
   text-decoration: none;
+
+}
+header ul li:nth-of-type(4) a{
+  color: var(--active-color);
 }
 
 .li-link::after{
+  
   content: "";
+  position: absolute;
   background-color: var(--active-color);
-  height: 3px;
+  height: 4px;
   width:0;
   left: 0;
-  margin: auto;
   display: block;
+  bottom: -20px;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 .li-link:hover::after{
   width: 100%;
   transition: width 0.3s linear;
+  
 }
 .li-link:hover{
   color:var(--active-color);
   text-decoration: none;
 }
 .logo{
+  height: 40px;
+  width: 40px;
   cursor: pointer;
   margin-right: auto;
 }
