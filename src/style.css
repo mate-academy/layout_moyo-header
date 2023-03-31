@@ -33,12 +33,12 @@ header {
   justify-content: space-around;
   list-style: none;
   padding: 0;
-  /* gap: 0 10px; */
 }
 
 .navigation__element {
   display: inline-block;
   font-size: 12px;
+  padding: 0 10px;
 }
 
 .navigation__link {
@@ -51,7 +51,7 @@ header {
   height: 60px;
   font-size: 12px;
   font-weight: 500;
-  padding: 0 10px;
+
 }
 
 .navigation__link:hover {
@@ -60,16 +60,16 @@ header {
 
 .is-active {
   color: #00acdc;
-  padding-left: 0;
+  /* padding-left: 0; */
 }
 
 .is-active::after {
   content: "";
   position: absolute;
-  width: 80%;
+  width: 100%;
   height: 4px;
   left: 50%;
-  transform: translateX(-60%);
+  transform: translateX(-50%);
   bottom: 0;
   background: #00acdc;
   border-radius: 8px;
@@ -77,4 +77,8 @@ header {
 
 .padding_right_zero {
   padding-right: 0;
+}
+
+.first__element {
+  padding-left: 0;
 }
