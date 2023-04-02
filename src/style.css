@@ -1,1 +1,77 @@
 /* Styles go here */
+body {
+  margin: 0;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #00acdc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header__logo {
+  padding: 10px 0;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+}
+
+.nav__item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+/* Alternative way of using margins between links */
+/* Please explain in comments what method do you prefer and why */
+/* .nav__item + .nav__item {
+  margin-left: 20px;
+} */
+
+.nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  /* Should I use it for body? */
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  /* ------------------------- */
+  color: var(--primary-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link.is-active {
+  color: var(--secondary-color);
+}
+
+.nav__link.is-active::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+}
+
+.nav__link:hover {
+  color: var(--secondary-color);
+}
