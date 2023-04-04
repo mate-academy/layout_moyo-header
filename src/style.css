@@ -1,12 +1,14 @@
 /* Styles go here */
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
-body {
+html {
   font-family: "Roboto", sans-serif;
-  padding: 0;
+}
+
+body {
+  margin: 0;
 }
 
 :root {
@@ -26,18 +28,17 @@ body {
   vertical-align: middle;
 }
 
-.navList {
+.nav-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  list-style: none;
 }
 
-.link {
-  display: flex;
-  padding: 20px;
+.nav-item:not(:last-child) {
+  margin-right: 20px;
 }
 
-.navLink {
+.nav-link {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -49,7 +50,7 @@ body {
   color: #000;
 }
 
-.navLink:hover {
+.nav-link:hover {
   color: var(--color);
 }
 
