@@ -1,27 +1,44 @@
-/* Styles go here */
 body {
   display: flex;
-  justify-content: center;
   margin: 0;
   font-family: Roboto, sans-serif;
-  font-style: normal;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
   text-transform: uppercase;
 }
 
 .menu__head {
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 50px;
+  background-color: #fff;
+  height: 60px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.menu__ul {
+  display: flex;
+  justify-content: space-between;
+  width: 641px;
+  padding-left: 0;
+}
+
+.menu_logo {
+  height: 40px;
+  width: 40px;
 }
 
 .menu__li {
   list-style-type: none;
+  position: relative;
 }
 
 .menu__a {
-  position: relative;
   text-decoration: none;
   color: #000;
 }
@@ -29,24 +46,18 @@ body {
 .is-active:before {
   content: "";
   position: absolute;
-  right: 0;
   top: 34px;
   width: 100%;
   height: 4px;
   background-color: #00acdc;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s;
-}
-
-.is-active:active::before {
-  transform: scaleX(1);
-  transition: transform 0.5s;
-  transform-origin: left;
 }
 
 .menu__a:visited {
   color: #000;
+}
+
+.menu__li .is-active {
+  color: #00acdc;
 }
 
 .menu__a:hover {
@@ -54,51 +65,13 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .menu__head {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 50px;
-    background-color: #fff;
-    height: 60px;
-  }
-
-  .logo {
-    height: 40px;
-    width: 40px;
+  .menu_logo {
     margin-right: 419px;
-  }
-
-  .menu__ul {
-    display: flex;
-    justify-content: space-between;
-    width: 641px;
-    padding-left: 0;
   }
 }
 
 @media (min-width: 1024px) {
-  .logo {
+  .menu_logo {
     margin-right: 243px;
-  }
-
-  .menu__head {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 50px;
-    background-color: #fff;
-    height: 60px;
-  }
-
-  .menu__ul {
-    display: flex;
-    justify-content: space-between;
-    width: 641px;
-    padding-left: 0;
   }
 }
