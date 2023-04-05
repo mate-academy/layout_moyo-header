@@ -3,8 +3,12 @@
   padding: 0;
 }
 
-body {
+html {
   font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --strong-cyan: #00adcd;
 }
 
 .header {
@@ -38,8 +42,8 @@ body {
   font-weight: 500;
 }
 
-.nav__item:nth-last-child(1) {
-  margin-right: 0;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -53,7 +57,7 @@ body {
 }
 
 .nav__item .is-active {
-  color: #00adcd;
+  color: var(--strong-cyan);
 }
 
 .is-active::after {
@@ -64,9 +68,9 @@ body {
   bottom: 0;
   height: 4px;
   border-radius: 5px;
-  background-color: #00adcd;
+  background-color: var(--strong-cyan);
 }
 
 .nav__link:hover {
-  color: #00adcd;
+  color: var(--strong-cyan);
 }
