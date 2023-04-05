@@ -1,1 +1,91 @@
 /* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  height: auto;
+}
+
+.header__container {
+  display: inherit;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  margin: 10px 0 10px 50px;
+  display: inherit;
+  align-items: center;
+}
+
+.nav {
+  display: inherit;
+  height: 100%;
+  align-items: center;
+}
+
+.nav__list {
+  list-style: none;
+  display: inherit;
+  align-items: center;
+  height: 100%;
+}
+
+.nav__list li {
+  display: inherit;
+  height: 100%;
+  align-items: center;
+}
+
+.category {
+  display: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #000;
+  position: relative;
+  text-decoration: none;
+  margin: 10px;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.nav__list li:first-child a.category {
+  margin-left: 50px;
+}
+
+.nav__list li:last-child a.category {
+  margin-right: 50px;
+}
+
+.category:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  color: #00acdc;
+}
