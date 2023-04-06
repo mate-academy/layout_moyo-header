@@ -1,10 +1,10 @@
 body {
-  display: flex;
   margin: 0;
   font-family: Roboto, sans-serif;
   --blueLight-color: #00acdc;
   --white-color: #fff;
   --black-color: #000;
+  --size-logo: 40px;
 }
 
 .menu__head {
@@ -35,8 +35,8 @@ body {
 }
 
 .menu_logo {
-  height: 40px;
-  width: 40px;
+  height: var(--size-logo);
+  width: var(--size-logo);
 }
 
 .nav_item {
@@ -62,10 +62,7 @@ body {
   color: var(--black-color);
 }
 
-.nav_item .is-active {
-  color: var(--blueLight-color);
-}
-
+.nav_item .is-active,
 .nav_link:hover {
   color: var(--blueLight-color);
 }
