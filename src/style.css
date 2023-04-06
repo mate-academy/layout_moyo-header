@@ -5,9 +5,12 @@
   box-sizing: border-box;
 }
 
+html {
+  --header-color: #00acdc;
+}
+
 body {
   margin: 0;
-  outline: none;
   font-family: "Roboto", sans-serif;
 }
 
@@ -18,18 +21,17 @@ body {
   align-items: center;
   max-width: 1200px;
   height: 60px;
+  padding: 0 50px;
 }
 
 .link__logo {
   text-decoration: none;
-  margin-left: 50px;
   width: 40px;
   height: 40px;
 }
 
 .nav {
   height: 100%;
-  margin-right: 50px;
 }
 
 .nav__list {
@@ -65,15 +67,16 @@ body {
   align-items: center;
   border-bottom: 4px solid white;
   border-radius: 4px;
-  padding-top: 4px;
+  padding: 26px 0 23px;
   text-decoration: none;
+  outline: none;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--header-color);
 }
 
 .is-active {
-  color: #00acdc;
-  border-bottom: 4px solid #00acdc;
+  color: var(--header-color);
+  border-bottom: 4px solid var(--header-color);
 }
