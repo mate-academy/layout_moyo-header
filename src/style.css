@@ -1,11 +1,16 @@
-* {
+html {
+  font-family: "Roboto", sans-serif;
+  --light-blue: #00acdc;
+}
+
+body {
   margin: 0;
 }
 
 .header {
-  font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: space-between;
+  margin: 0;
   padding: 0 50px;
   align-items: center;
 }
@@ -32,18 +37,18 @@
 }
 
 .link:hover {
-  color: #00acdc;
+  color: var(--light-blue);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--light-blue);
   margin-left: 0;
 }
 
 .is-active::after {
   position: absolute;
   border-radius: 4px;
-  background-color: #00acdc;
+  background-color: var(--light-blue);
   bottom: 0;
   right: 0;
   content: "";
