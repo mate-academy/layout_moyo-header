@@ -6,6 +6,8 @@
 body {
   font-family: Roboto, sans-serif;
   font-size: 12px;
+  --height: 60px;
+  --item-color: #00acdc;
 }
 
 .header {
@@ -23,13 +25,8 @@ body {
   display: inline-flex;
 }
 
-.nav,
-.nav-item,
-.nav-link {
-  display: inline-block;
-}
-
 .nav-item {
+  display: inline-block;
   position: relative;
   cursor: pointer;
 }
@@ -39,7 +36,7 @@ body {
 }
 
 .nav-link {
-  --height: 60px;
+  display: inline-block;
   text-transform: uppercase;
   height: var(--height);
   line-height: var(--height);
@@ -54,14 +51,16 @@ body {
 
 .nav-item .is-active,
 .nav-link:hover {
-  color: #00acdc;
+  color: var(--item-color);
 }
 
-.underline {
+.is-active::after {
+  content: "";
   position: absolute;
   bottom: 0;
+  left: 0;
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--item-color);
 }
