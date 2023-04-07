@@ -1,1 +1,66 @@
-/* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  --height: 60px;
+  --item-color: #00acdc;
+}
+
+.header {
+  padding: 0 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo,
+.header {
+  display: flex;
+}
+
+.link-list {
+  display: inline-flex;
+}
+
+.nav-item {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-link {
+  display: inline-block;
+  text-transform: uppercase;
+  height: var(--height);
+  line-height: var(--height);
+  background: none;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-item .is-active,
+.nav-link:hover {
+  color: var(--item-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--item-color);
+}
