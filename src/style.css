@@ -1,6 +1,6 @@
 :root {
-  --header-height: 60px;
-  --header-line-height: 14px;
+  --nav-item-height: 60px;
+  --nav-line-height: 14px;
 }
 
 html {
@@ -13,7 +13,6 @@ body {
 
 .header {
   padding: 0 50px;
-  height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,6 +35,7 @@ body {
 
 .nav__item {
   margin-right: 20px;
+  height: var(--nav-item-height);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,10 +47,10 @@ body {
 }
 
 .nav__link {
-  padding: calc((var(--header-height) - var(--header-line-height)) / 2) 0;
+  padding: calc((var(--nav-item-height) - var(--nav-line-height)) / 2) 0;
   font-weight: 500;
   font-size: 12px;
-  line-height: var(--header-line-height);
+  line-height: var(--nav-line-height);
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
