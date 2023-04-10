@@ -1,25 +1,226 @@
-html {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Start */
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto-Medium.ttf);
+  font-weight: 500px;
+}
+
+@font-face {
+  font-family: "Roboto-bold";
+  src: url(./fonts/Roboto-Bold.ttf);
+  font-weight: 800;
 }
 
 .header {
   display: flex;
-  width: 1024px;
+  font-family: "Roboto", sans-serif;
+  justify-content: space-between;
+  min-width: 1024px;
+  max-width: 1200px;
   height: 60px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header:hover {
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header__logo {
+  margin: 10px 0 10px 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .nav {
   display: flex;
-  list-style-type: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.nav__list:last-child {
+  margin-right: 30px;
+}
+
+.nav__list:first-child {
+  margin-left: 20px;
 }
 
 .nav__link {
   margin-right: 20px;
-  flex-direction: row-reverse;
 }
 
 .link {
+  color: black;
   text-decoration: none;
+}
+
+.link:hover {
+  color: #00acdc;
+}
+
+.mark {
+  padding: 23px 0;
+}
+
+.is-active {
+  position: relative;
+  display: block;
+  color: #00acdc;
+  text-decoration: none;
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  width: 37px;
+  height: 4px;
+  left: 1;
+  right: 0;
+  top: 56px;
+
+  background: #00acdc;
+  border-radius: 16px;
 }
 /* Styles go here */
