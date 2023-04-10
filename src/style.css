@@ -1,6 +1,10 @@
 /* Styles go here */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
+:root {
+  --blue: #00acdc;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -27,7 +31,6 @@
 
 .nav__item {
   font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -50,7 +53,7 @@
 
 .nav__link.is-active::after {
   content: "";
-  background-color: #00acdc;
+  background-color: var(--blue);
   width: 100%;
   height: 4px;
   position: absolute;
@@ -61,5 +64,5 @@
 
 .nav__item:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
