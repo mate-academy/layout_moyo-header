@@ -1,1 +1,86 @@
 /* Styles go here */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./fonts/Roboto-Medium.ttf);
+  font-style: normal;
+  font-weight: 500;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav_logo {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.nav {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+  margin-left: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav_list {
+  display: flex;
+  align-items: baseline;
+  padding: 0;
+}
+
+.nav_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_link {
+  text-transform: uppercase;
+  list-style-type: none;
+  text-decoration: none;
+  margin: 23px 10px;
+  color: black;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.nav_link:hover {
+  color: #00acdc;
+}
+
+.nav_link:active {
+  content: "";
+  border-radius: 8px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  top: 19px;
+  border-radius: 8px;
+  background: #00acdc;
+}
