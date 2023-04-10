@@ -1,4 +1,12 @@
 /* Styles go here */
+:root {
+  --hover-color: #00acdc;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -10,7 +18,6 @@ body {
   height: 60px;
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --hover-color: #00acdc;
 }
 
 .header__logo {
@@ -20,6 +27,8 @@ body {
 
 .nav__list {
   display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
   text-transform: uppercase;
 }
@@ -27,13 +36,15 @@ body {
 .nav__link {
   position: relative;
   display: block;
-  padding: 22.5px 0;
-  margin-left: 20px;
-  font-family: Roboto, sans-serif;
+  padding: 23px 0;
   font-size: 12px;
   font-weight: 500;
   color: #000;
   text-decoration: none;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link:hover {
@@ -46,11 +57,11 @@ body {
 
 .is-active::after {
   position: absolute;
-  content: " ";
+  content: "";
   width: 37px;
   height: 4px;
   border-radius: 8px;
   background-color: var(--hover-color);
-  top: 56px;
+  bottom: 0;
   right: 0;
 }
