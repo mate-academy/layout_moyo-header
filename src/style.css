@@ -8,30 +8,41 @@ body {
 }
 
 .header {
+  max-width: 1200px;
   min-width: 1024px;
+  padding: 0 50px;
   height: 60px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 12px;
 }
 
 .logo {
-  margin: 10px 0 10px 50px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
 .nav__list {
-  list-style: none;
   display: flex;
+  list-style: none;
+}
+
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:last-of-type {
+  margin: 0;
 }
 
 .nav__link {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
-  margin-right: 20px;
-  position: relative;
-  padding: 18.5px;
+  padding: 23px 0;
 }
 
 .nav__link:hover {
@@ -42,6 +53,7 @@ body {
 .is-active {
   color: #00acdc;
   position: relative;
+
 }
 
 .is-active::after {
@@ -50,6 +62,7 @@ body {
   height: 4px;
   background-color: #00acdc;
   bottom: 0;
+  width: 37px;
   left: 0;
   right: 0;
   border-radius: 8px;
