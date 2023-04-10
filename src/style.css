@@ -1,6 +1,7 @@
 html {
   font-family: "Roboto", Helvetica, sans-serif;
   font-weight: 500;
+  --color-blue: #00acdc;
 }
 
 body {
@@ -8,7 +9,8 @@ body {
 }
 
 .header {
-  max-width: 1200px;
+  box-sizing: border-box;
+  /* max-width: 1200px; */
   min-width: 1024px;
   padding: 0 50px;
   height: 60px;
@@ -28,6 +30,8 @@ body {
 .nav__list {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 .nav__item {
@@ -46,21 +50,20 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color-blue);
   position: relative;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color-blue);
   position: relative;
-
 }
 
 .is-active::after {
   position: absolute;
   content: "";
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--color-blue);
   bottom: 0;
   width: 37px;
   left: 0;
