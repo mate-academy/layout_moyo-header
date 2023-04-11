@@ -1,15 +1,16 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 :root {
-  --header-hover-color: #00acdc;
+  --accent-color: #00acdc;
 }
 
-body {
+body,
+ul {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -21,28 +22,25 @@ a {
   color: inherit;
 }
 
-.container {
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: auto;
   padding: 0 50px;
 }
 
-.logo-link {
+.header_logo-link {
   display: inline-flex;
 }
 
-.header-body {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.menu-list {
+.nav-list {
   display: flex;
   align-items: center;
 }
 
-.menu-item {
+.nav-item {
   display: flex;
   align-items: center;
   margin-right: 20px;
@@ -50,28 +48,29 @@ a {
   font-size: 12px;
 }
 
-.menu-item:last-child {
+.nav-item:last-child {
   margin-right: 0;
 }
 
-.menu-item:hover {
-  color: var(--header-hover-color);
+.nav-item:hover {
+  color: var(--accent-color);
 }
 
-.menu-link {
+.nav-link {
   padding: 23px 0;
 }
 
 .is-active {
   position: relative;
-  color: var(--header-hover-color);
+  color: var(--accent-color);
 }
 
 .is-active::after {
   content: " ";
   position: absolute;
-  border-bottom: 4px solid var(--header-hover-color);
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
   bottom: 0;
   left: 0;
-  right: 0;
 }
