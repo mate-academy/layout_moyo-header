@@ -42,38 +42,37 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
 }
 
 .nav__link {
   text-decoration: none;
   line-height: 60px;
   color: var(--black);
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 17px;
+  padding-top: 23px;
+  padding-bottom: 23px;
 }
 
 .nav__link:hover {
   color: var(--blue);
 }
 
-.nav__item {
-  display: inline;
-  cursor: pointer;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .is-active {
   color: var(--blue);
+  position: relative;
 }
 
 .is-active::after {
   content: "";
   display: block;
-  width: 37px;
+  width: 100%;
   height: 4px;
   position: absolute;
   background: var(--blue);
   border-radius: 8px;
   bottom: 0;
-  margin-left: 17px;
 }
