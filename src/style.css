@@ -1,5 +1,13 @@
+html {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+
 body {
   margin: 0;
+  --color: #00acdc;
 }
 
 .header {
@@ -12,10 +20,6 @@ body {
   margin-bottom: 50px;
 }
 
-.nav_list {
-  display: block;
-}
-
 .logo {
   display: block;
   width: 40px;
@@ -23,37 +27,33 @@ body {
 
 }
 
-.ul {
+.nav_list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.li {
+.nav_item {
   margin-left: 20px;
 }
 
-.li:first-child {
+.nav_item:first-child {
   margin-left: 0;
 }
 
-.link {
+.nav_link {
   display: flex;
   position: relative;
   align-items: center;
-  font-family: Roboto, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 500;
   text-decoration: none;
   color: black;
   height: 60px;
   text-transform: uppercase;
-  font-size: 12px;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color);
 }
 
 .is-active::after {
@@ -63,9 +63,9 @@ body {
   right: 0;
   bottom: 0;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--color);
 }
 
-.link:hover {
-  color: #00acdc;
+.nav_link:hover {
+  color: var(--color);
 }
