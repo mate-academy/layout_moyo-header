@@ -21,6 +21,7 @@
 }
 
 .nav__link {
+  position: relative;
   margin: 0 10px;
   display: flex;
   text-decoration: none;
@@ -32,10 +33,47 @@
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
+
+.nav__link:hover {
+  color: rgb(0, 172, 220);
+}
+
+.is-active {
+  color: rgb(0, 172, 220);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgb(0, 172, 220);
+  height: 4px;
+  /* border-radius: 8px; */
+}
+
+/* .nav__link:focus::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgb(0, 172, 220);
+  height: 4px;
+}
+
+.nav__link:focus {
+  color: rgb(0, 172, 220);
+} */
 
 .nav__item:last-child a {
   margin-right: 0;
+}
+
+.nav__item:first-child a {
+  margin-left: 0;
 }
 
 .logo {
