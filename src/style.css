@@ -18,7 +18,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.logo {
+.header_logo {
   display: block;
   height: 40px;
   width: 40px;
@@ -26,10 +26,13 @@ body {
 
 .nav__list {
   display: flex;
-  position: relative;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.nav__item {
+  position: relative;
 }
 
 .nav__item:not(:first-child) {
@@ -39,18 +42,15 @@ body {
 .nav__link {
   display: flex;
   align-items: center;
-  height: 60px;
+  padding: 23px 0;
   text-decoration: none;
   cursor: pointer;
   color: #000;
   text-transform: uppercase;
 }
 
+.is-active,
 .nav__link:hover {
-  color: #00acdc;
-}
-
-.is-active {
   color: #00acdc;
 }
 
@@ -61,7 +61,7 @@ body {
   bottom: 0;
   content: "";
   background-color: #00acdc;
-  width: 37px;
+  width: 100%;
   height: 4px;
   border-radius: 8px;
 }
