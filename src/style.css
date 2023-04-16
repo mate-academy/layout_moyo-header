@@ -1,10 +1,14 @@
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
 html {
   font-family: Roboto, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  --color-hover: #00acdc;
 }
 
 .header {
@@ -43,14 +47,14 @@ html {
   display: block;
   text-decoration: none;
   color: #000;
-  line-height: 60px;
+  padding: 23px 0;
   position: relative;
   font-weight: 500;
   font-size: 12px;
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--color-hover);
 }
 
 .nav__link.is-active::after {
@@ -60,7 +64,7 @@ html {
   height: 4px;
   left: 0;
   bottom: 0;
-  background: #00acdc;
+  background: var(--color-hover);
   border-radius: 8px;
 }
 
