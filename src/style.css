@@ -11,8 +11,17 @@ body {
 }
 
 .navi__list {
-  display: flex;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
+}
+
+.navi__listItem {
+  display: inline-block;
+}
+
+.navi__listItem:not(:last-of-type) {
+  margin-right: 16px;
 }
 
 .navi__link {
@@ -25,6 +34,7 @@ body {
   text-decoration: none;
   outline: none;
   padding: 23px 0;
+  display: inline-block;
 }
 
 .navi__link:active {
@@ -42,10 +52,6 @@ body {
   left: 0;
 }
 
-.navi__listItem:not(:last-child) {
-  margin-right: 20px;
-}
-
 .navi__link:hover {
   color: #00acdc;
 }
@@ -58,7 +64,7 @@ body {
   display: block;
 }
 
-.navi .is-active {
+.is-active {
   position: relative;
   color: #00acdc;
 }
