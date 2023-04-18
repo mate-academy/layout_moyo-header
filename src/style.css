@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --focus_color: #00acdc;
+}
+
 html {
   font-family: Roboto , sans-serif;
   font-size: 12px;
@@ -14,14 +18,11 @@ body {
 
 .main_header {
   display: flex;
-  justify-content: space-between;
-  padding: auto 50px;
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav__list {
-  --focus_color: #00acdc;
   margin: 0;
   padding-inline-start: 0;
   display: flex;
@@ -37,17 +38,14 @@ body {
 }
 
 .link_list_item {
-  flex-basis: max-content;
-  word-wrap: normal;
-  --height: 60px;
-  text-align: center;
+  white-space: nowrap;
+  padding: 22.5px 0;
   display: flex;
   background-color: #fff;
-  height: var(--height);
-  line-height: var(--height);
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
+  line-height: 14px;
 }
 
 .link_list_item:hover {
@@ -55,23 +53,22 @@ body {
 }
 
 .logo_link {
-  position: relative;
-  margin-right: 50px;
   height: 40px;
   width: 40px;
-  top: 10px;
+  padding-top: 10px;
 }
 
 .is-active {
+  position: relative;
   color: var(--focus_color);
 }
 
 .is-active::after {
   content: "";
   position: absolute;
-  height: 4px;
-  width: 37px;
   top: 56px;
+  height: 4px;
+  width: 100%;
   background-color: var(--focus_color);
   border-radius: 8px;
 }
