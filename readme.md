@@ -37,7 +37,7 @@ Uneven sizes (e.g. `line-height: 14.6px`) are definitely useless.
 and positioning
 - Check font styles. Use [google fonts](https://fonts.google.com/)
 - Links in `nav` should have clickable area above and below the text
-- Uppercase letters for `nav__list` are made with styles, not hardcoded into
+- Uppercase letters for `nav__itemst` are made with styles, not hardcoded into
 html (you should have usual text with first uppercase letter in html)
 - Don't set height for `header` explicitly. Let the content (links) dictate it.
 - Logo should also be a link to the main page of the website (#home). But it
