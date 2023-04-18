@@ -10,15 +10,15 @@ ul {
   padding: 0;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 50px;
 }
 
-.logo-link {
-  display: flex;
-  padding: 10px 0;
+.header__logo {
+  display: block;
 }
 
 .nav {
@@ -28,22 +28,20 @@ header {
 .nav__list {
   display: flex;
   list-style-type: none;
+
+  --blue-color: #00acdc;
 }
 
 .nav__item {
   display: flex;
+}
+
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
-}
-
 .nav__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding: 23px 0;
   color: #000;
   text-transform: uppercase;
   text-decoration: none;
@@ -51,11 +49,11 @@ header {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
   position: relative;
 }
 
@@ -64,7 +62,7 @@ header {
   content: "";
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   position: absolute;
   left: 0;
   right: 0;
