@@ -4,36 +4,42 @@
 
 :root {
   --focus_color: #00acdc;
+  --is-active_underline_heght: 4px;
 }
 
 html {
-  font-family: Roboto , sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
 }
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 .main_header {
-  display: flex;
-  width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+}
+
+.list_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .nav__list {
   margin: 0;
-  padding-inline-start: 0;
   display: flex;
   list-style: none;
-  flex-wrap: nowrap;
-  flex-direction: row;
   justify-content: space-between;
-  background-color: #fff;
+  padding-inline-start: 0;
 }
 
-.list__item:nth-child(n + 2) {
+.list__item:not(:first-child) {
   margin-left: 20px;
 }
 
@@ -41,11 +47,10 @@ body {
   white-space: nowrap;
   padding: 22.5px 0;
   display: flex;
-  background-color: #fff;
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
-  line-height: 14px;
+  line-height: 15px;
 }
 
 .link_list_item:hover {
@@ -66,17 +71,9 @@ body {
 .is-active::after {
   content: "";
   position: absolute;
-  top: 56px;
-  height: 4px;
+  top: calc(100% - var(--is-active_underline_heght));
+  height: var(--is-active_underline_heght);
   width: 100%;
   background-color: var(--focus_color);
   border-radius: 8px;
-}
-
-.list_container {
-  width: 100%;
-  display: inline-flex;
-  justify-content: space-between;
-  margin-left: 50px;
-  margin-right: 50px;
 }
