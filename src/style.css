@@ -1,1 +1,90 @@
 /* Styles go here */
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+:root {
+  --link-hover: #00acdc;
+  --is-active: var(--link-hover);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+ul {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.header__logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.nav__list {
+  list-style: none;
+  display: inline-flex;
+  font-weight: 500;
+  padding-inline-start: 0;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  text-transform: uppercase;
+  transition: color 0.4s;
+}
+
+.nav__link:link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+}
+
+.nav__link:visited {
+  color: black;
+}
+
+.nav__link:hover {
+  color: var(--link-hover);
+}
+
+.is-active:link {
+  color: var(--is-active);
+}
+
+.is-active:visited {
+  color: var(--is-active);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  background-color: var(--is-active);
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  border-radius: 8px;
+}
