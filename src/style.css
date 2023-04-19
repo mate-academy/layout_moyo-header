@@ -1,9 +1,12 @@
 body {
   margin: 0;
+
+  --active-color: #00acdc;
+  --background-color: #fff;
 }
 
 .header {
-  background: #fff;
+  background: var(--background-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: flex-end;
@@ -51,11 +54,11 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .is-active::after {
@@ -65,6 +68,6 @@ body {
   bottom: 0;
   left: 0;
   height: 4px;
-  background: #00acdc;
+  background: var(--active-color);
   border-radius: 8px;
 }
