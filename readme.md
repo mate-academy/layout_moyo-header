@@ -25,6 +25,7 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 ---
 --> [CHECKLIST](https://github.com/mate-academy/layout_moyo-header/blob/master/checklist.md)
 
+
 ### Tips & Hints
 - Don't use `gap` property for indents. It's not supported in tests, use `margin` instead.
 - Check one more time if you added `data-qa="hover"` and `class="is-active"`
