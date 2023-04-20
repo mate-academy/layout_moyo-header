@@ -1,9 +1,15 @@
+:root {
+  --mainColor: #000;
+  --actionColor: #00acdc;
+  --mainFontFamily: "Roboto", sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--mainFontFamily);
 }
 
 body {
@@ -47,7 +53,7 @@ a {
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
-  color: #000;
+  color: var(--mainColor);
 }
 
 .icon {
@@ -55,12 +61,12 @@ a {
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--actionColor);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--actionColor);
 }
 
 .is-active::after {
@@ -71,6 +77,6 @@ a {
   bottom: 0%;
   left: 0%;
 
-  background-color: #00acdc;
+  background-color: var(--actionColor);
   border-radius: 8px;
 }
