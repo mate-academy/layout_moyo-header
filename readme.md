@@ -1,7 +1,7 @@
 # Moyo header
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://ivan-baranovskyi.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://ivan-baranovskyi.github.io/layout_moyo-header/report/html_report/)
 
 > Follow [these instructions](https://mate-academy.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
@@ -24,6 +24,7 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 - add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)
 ---
 --> [CHECKLIST](https://github.com/mate-academy/layout_moyo-header/blob/master/checklist.md)
+
 
 ### Tips & Hints
 - Don't use `gap` property for indents. It's not supported in tests, use `margin` instead.
