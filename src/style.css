@@ -1,9 +1,7 @@
-
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 12px;
-  width: 100%;
 }
 
 body {
@@ -27,6 +25,7 @@ body {
   justify-content: flex-end;
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 }
 
 .nav__item:not(:first-child) {
@@ -40,8 +39,12 @@ body {
   line-height: 60px;
 }
 
+:root {
+  --blue: #00acdc;
+}
+
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .logo_img {
@@ -53,14 +56,14 @@ body {
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active::after {
   position: absolute;
   content: "";
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--blue);
   height: 4px;
   left: 0;
   bottom: 0;
