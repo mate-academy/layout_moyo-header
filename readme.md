@@ -1,7 +1,7 @@
 # Moyo header
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://<MOstapchyk>.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://<MOstapchyk>.github.io/layout_moyo-header/report/html_report/)
 
 > Follow [these instructions](https://mate-academy.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
@@ -32,7 +32,7 @@ required for tests
 - Do not use `tabs`. Use `2 spaces` for indentation.
 - Don't use repeated styles.
 - Don't just copy all styles from Figma. Think, which of them are relevant.
-Uneven sizes (e.g. `line-height: 14.6px`) are definitely useless.
+Uneven sizes (e.g.`line-height: 14.6px`) are definitely useless.
 - Don't use extra elements for blue line. Figure out how to work with `::after`
 and positioning
 - Check font styles. Use [google fonts](https://fonts.google.com/)
