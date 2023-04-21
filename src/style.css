@@ -1,1 +1,79 @@
-/* Styles go here */
+:root {
+  --nav-item-height: 60px;
+  --nav-line-height: 14px;
+  --main-color: #00acdc;
+}
+
+html {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 50px;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.nav__item {
+  margin-right: 20px;
+  height: var(--nav-item-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  padding: calc((var(--nav-item-height) - var(--nav-line-height)) / 2) 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: var(--nav-line-height);
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.5s;
+}
+
+.nav__link:hover {
+  color: var(--main-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--main-color);
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-color);
+  border-radius: 8px;
+}
