@@ -1,1 +1,64 @@
-/* Styles go here */
+:root {
+  --hover-color: #00acdc;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  margin: 10px 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  padding-bottom: 6px;
+  padding-right: 34px;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav-item:hover {
+  color: var(--hover-color);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 23px 0;
+}
+
+.underline {
+  color: var(--hover-color);
+  position: relative;
+}
+
+.underline::after {
+  content: """";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--hover-color);
+  border-radius: 8px;
+}
