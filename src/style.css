@@ -1,1 +1,78 @@
-/* Styles go here */
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+}
+
+.nav__item {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 10px;
+  padding: 0;
+}
+
+.nav__item:last-of-type {
+  margin-right: 0;
+}
+
+.nav__item:first-of-type {
+  margin-left: 0;
+}
+
+.nav__link {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.nav__link:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.nav__link::after {
+  content: "";
+  width: inherit;
+  height: 0;
+  border: 2px solid rgba(0, 172, 220, 0);
+  border-radius: 4px;
+  margin-top: 19px;
+}
+
+.nav__link.is-active {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active::after {
+  border: 2px solid rgba(0, 172, 220, 1);
+}
+
+.nav:hover {
+  align-self: flex-end;
+}
+
+.logoImage {
+  display: flex;
+  height: 40px;
+  width: 40px;
+}
