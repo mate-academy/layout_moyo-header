@@ -8,8 +8,7 @@ html {
 
 body {
   margin: 0;
-  max-width: 1200px;
-  min-width: 1024px;
+  --nav-link-hover-color: #00acdc;
 }
 
 .header {
@@ -69,7 +68,7 @@ body {
 .is-active,
 .list__item__link:hover {
   position: relative;
-  color: #00acdc;
+  color: var(--nav-link-hover-color);
 }
 
 .is-active::after {
@@ -79,6 +78,6 @@ body {
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--nav-link-hover-color);
   border-radius: 8px;
 }
