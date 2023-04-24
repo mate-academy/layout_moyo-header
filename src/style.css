@@ -12,6 +12,7 @@ html {
 
 body {
   margin: 0;
+  --color: #00acdc;
 }
 
 .header {
@@ -26,21 +27,23 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.nav__item {
   text-transform: uppercase;
 }
 
-.nav-list {
+.nav__list {
   display: flex;
 }
 
-.logo {
+.header__logo {
   display: block;
   width: 40px;
   height: 40px;
-  margin: 10px 0;
 }
 
-.nav-link {
+.nav__link {
   display: block;
   text-decoration: none;
   color: black;
@@ -48,13 +51,13 @@ ul {
   padding: 23px 0;
 }
 
-.nav-item:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav-link:hover,
+.nav__link:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--color);
 }
 
 .is-active {
@@ -69,6 +72,6 @@ ul {
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--color);
   border-radius: 8px;
 }
