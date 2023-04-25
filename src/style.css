@@ -1,11 +1,6 @@
 
-/* Styles go here */
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 ol,
@@ -15,6 +10,7 @@ ul {
 
 body {
   margin: 0;
+  background-color: #e5e5e5;
 }
 
 .header {
@@ -25,7 +21,7 @@ body {
   justify-content: space-between;
 }
 
-.nav__logo {
+.header__logo {
   width: 40px;
   height: 40px;
 }
@@ -49,7 +45,7 @@ body {
   margin-right: 20px;
 }
 
-.nav__item-link {
+.nav__link {
   padding: 23px 0;
   height: 60px;
   line-height: 14px;
@@ -71,16 +67,16 @@ body {
   position: relative;
 }
 
-.nav__item-link:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
-.nav__item-link:after {
+.nav__link:after {
   position: relative;
   color: #00acdc;
 }
 
-.is-active:after {
+.is-active::after {
   position: absolute;
   bottom: 0;
   content: "";
