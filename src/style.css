@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 40px 0 50px;
 }
 
 .nav_list {
@@ -38,28 +38,32 @@ body {
   font-size: 12px;
   line-height: 14px;
 }
-
+/* 
 .nav_item:last-child {
   padding-right: 0;
-}
+} */
 
 .nav__link {
+  position: relative;
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #000;
   height: 60px;
-  position: relative;
 }
 
-.nav_item:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
-.is_active::after {
+.nav__link.is-active::after {
+  content: "";
   position: absolute;
-  border-radius: 8px;
   bottom: 0;
   left: 0;
   right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
+  color: #00acdc;
 }
