@@ -19,10 +19,9 @@ body {
 }
 
 .header {
-  max-width: 1200px;
-  min-width: 1024px;
+  /* min-width: 1024px; */
   padding: 10px 50px;
-  margin: auto;
+  /* margin: auto; */
   display: flex;
   justify-content: space-between;
 }
@@ -34,17 +33,20 @@ body {
   display: flex;
 }
 
+.nav__item {
+  margin: 0 10px;
+}
+
 .nav__link {
   color: #000;
   text-decoration: none;
-  padding: 10px;
   font-size: 12px;
   text-transform: uppercase;
   transition: 3s;
 }
 
-.nav__link--last {
-  padding-right: 0;
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link:hover {
@@ -59,10 +61,10 @@ body {
 .is-active::after {
   content: "";
   height: 4px;
+  width: 100%;
   background-color: var(--colorBlye);
   border-radius: 8px;
   position: absolute;
-  top: 46px;
-  left: 10px;
-  right: 10px;
+  top: 36px;
+  left: 0;
 }
