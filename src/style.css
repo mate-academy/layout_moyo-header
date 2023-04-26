@@ -1,1 +1,68 @@
-/* Styles go here */
+:root {
+  --colorBlye: #00acdc;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  max-width: 1200px;
+  min-width: 1024px;
+  padding: 10px 50px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__list {
+  margin: 9px 0 15px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav__link {
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: 3s;
+}
+
+.nav__link--last {
+  padding-right: 0;
+}
+
+.nav__link:hover {
+  color: var(--colorBlye);
+}
+
+.is-active {
+  color: var(--colorBlye);
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  background-color: var(--colorBlye);
+  border-radius: 8px;
+  position: absolute;
+  top: 46px;
+  left: 10px;
+  right: 10px;
+}
