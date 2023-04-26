@@ -1,10 +1,11 @@
-:root {
-  --hover-color: #00acdc;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  box-sizing: border-box;
+:root {
+  --hover-color: #00acdc;
 }
 
 .header {
@@ -13,31 +14,37 @@ body {
 }
 
 .logo {
-  margin: 10px 50px;
+  height: 40px;
+  width: 40px;
+  display: block;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+  padding: 0 50px;
 }
 
-.nav {
-  padding-bottom: 6px;
-  padding-right: 34px;
+.ul {
+  padding: 0;
 }
 
 .nav-item {
   display: inline-block;
-  margin-right: 16px;
+  height: 60px;
+  padding-top: 22.5px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
+  margin-right: 20px;
+  white-space: nowrap;
 }
 
-.nav-item:hover {
-  color: var(--hover-color);
+.nav-item:last-child {
+  margin-right: 0;
 }
 
 .nav-link {
@@ -47,13 +54,17 @@ body {
   padding: 23px 0;
 }
 
+.nav-link:hover {
+  color: var(--hover-color);
+}
+
 .underline {
   color: var(--hover-color);
   position: relative;
 }
 
 .underline::after {
-  content: """";
+  content: " ";
   position: absolute;
   left: 0;
   bottom: 0;
