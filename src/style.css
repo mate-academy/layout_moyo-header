@@ -1,3 +1,13 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --colorBlye: #00acdc;
 }
@@ -29,14 +39,9 @@ body {
 }
 
 .nav__list {
-  margin-top: 19px;
-  padding: 0;
+  margin: 19px 0;
   list-style-type: none;
   display: flex;
-}
-
-.nav__item {
-  margin: 0 10px;
 }
 
 .nav__link {
@@ -49,17 +54,9 @@ body {
   transition: 3s;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
-
-.nav__item:first-child {
-  margin-left: 0;
-}
-
-/* .nav__link:hover {
-  color: var(--colorBlye);
-} */
 
 .is-active {
   color: var(--colorBlye);
