@@ -1,1 +1,82 @@
-/* Styles go here */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --colorBlye: #00acdc;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__img {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 23px 0;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--colorBlye);
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.is-active {
+  color: var(--colorBlye);
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: var(--colorBlye);
+  border-radius: 8px;
+  position: absolute;
+  top: 56px;
+  left: 0;
+}
