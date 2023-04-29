@@ -2,9 +2,9 @@
 * {
   box-sizing: border-box;
   cursor: pointer;
+  --main-color: #00acdc;
 }
 
-html,
 body,
 nav {
   margin: 0;
@@ -59,7 +59,8 @@ nav {
 }
 
 .nav__link__apple {
-  color: #00acdc;
+  color: var(--main-color);
+
 }
 
 .nav__link__apple.is-active::after {
@@ -69,13 +70,13 @@ nav {
   left: 0;
   right: 0;
   height: 4px;
-  border-radius: 2px;
+  border-radius: 8px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--main-color);
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 @media screen and (max-width: 1200px) {
@@ -84,7 +85,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .nav__item {
     flex-flow: column wrap;
     padding: 0;
