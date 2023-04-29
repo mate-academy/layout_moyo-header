@@ -1,1 +1,93 @@
 /* Styles go here */
+* {
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+html,
+body,
+nav {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.nav {
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: auto;
+  list-style: none;
+}
+
+.nav__item {
+  position: relative;
+  margin-right: 20px;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  line-height: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  flex-direction: row-reverse;
+  color: black;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link__apple {
+  color: #00acdc;
+}
+
+.nav__link__apple.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  width: 100%;
+  background-color: #00acdc;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav__item {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav__item {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+}
