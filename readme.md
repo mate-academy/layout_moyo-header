@@ -1,7 +1,7 @@
 # Moyo header
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://generatedman.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://generatedman.github.io/layout_moyo-header/report/html_report/)
 
 > Follow [these instructions](https://mate-academy.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
@@ -37,7 +37,7 @@ Uneven sizes (e.g. `line-height: 14.6px`) are definitely useless.
 and positioning
 - Check font styles. Use [google fonts](https://fonts.google.com/)
 - Links in `nav` should have clickable area above and below the text
-- Uppercase letters for `nav__list` are made with styles, not hardcoded into
+- Uppercase letters for `nav__itemst` are made with styles, not hardcoded into
 html (you should have usual text with first uppercase letter in html)
 - Don't set height for `header` explicitly. Let the content (links) dictate it.
 - Logo should also be a link to the main page of the website (#home). But it
