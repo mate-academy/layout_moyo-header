@@ -1,5 +1,7 @@
 html {
   font-family: "Roboto", sans-serif;
+
+  --text-color: #00acdc;
 }
 
 body {
@@ -51,13 +53,13 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--text-color);
 }
 
 .nav__link:active::after {
   display: block;
   content: "";
-  background-color: #00acdc;
+  background-color: var(--text-color);
   height: 4px;
   border-radius: 8px;
   position: absolute;
@@ -66,7 +68,7 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--text-color);
   position: relative;
   margin: 0;
 }
@@ -74,7 +76,7 @@ body {
 .is-active::after {
   display: block;
   content: "";
-  background-color: #00acdc;
+  background-color: var(--text-color);
   height: 4px;
   border-radius: 8px;
   position: absolute;
