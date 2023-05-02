@@ -1,1 +1,87 @@
-/* Styles go here */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color_hover: #00acdc;
+  --color_text: #000;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+  color: var(--color_hover);
+}
+
+.nav_list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_item {
+  list-style: none;
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.nav_list li:last-child {
+  margin-right: 0;
+}
+
+.nav_list li:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color_text);
+  height: 60px;
+}
+
+.nav__link:hover {
+  color: var(--color_hover);
+}
+
+.is-active {
+  color: var(--color_hover);
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color_hover);
+  color: var(--color_hover);
+}
