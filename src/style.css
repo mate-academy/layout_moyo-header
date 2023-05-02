@@ -1,1 +1,87 @@
-/* Styles go here */
+:root {
+  --text-color: #00acdc;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 50px;
+}
+
+.logo {
+  display: block;
+}
+
+.logo__img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.nav {
+  margin: 0;
+}
+
+.nav__list {
+  padding: 0;
+  display: flex;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__link {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 23px 0;
+  margin-left: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: var(--text-color);
+}
+
+.nav__link:active::after {
+  display: block;
+  content: "";
+  background-color: var(--text-color);
+  height: 4px;
+  border-radius: 8px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.is-active {
+  color: var(--text-color);
+  position: relative;
+  margin: 0;
+}
+
+.is-active::after {
+  display: block;
+  content: "";
+  background-color: var(--text-color);
+  height: 4px;
+  border-radius: 8px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
