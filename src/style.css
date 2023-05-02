@@ -1,54 +1,63 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
 body {
   background-color: #aaa;
   font-family: "Roboto", sans-serif;
-}
-
-pre {
-  font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 
 .head {
+  position: relative;
   display: flex;
+  justify-content: flex-end;
+  max-width: 1200px;
+  padding: 0 50px;
   background-color: #fff;
-  width: 1200px;
 }
 
-@media (min-width:1024px) {
+@media (max-width:1024px) {
   .head {
-    display: flex;
-    background-color: #fff;
-    width: 1024px;
+    max-width: 1024px;
   }
 }
 
 .icon {
-  margin: 10px 50px;
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 .nav__list {
   display: flex;
-  margin-left: 334px;
+  margin: 0;
+  padding-left: 250px;
 }
 
 .nav__item a {
   display: inline-block;
   text-decoration: none;
   font-size: 12px;
+  font-weight: 500;
   height: 60px;
   line-height: 60px;
-  font-weight: 500;
   color: black;
-  margin-right: 20px;
   cursor: pointer;
   text-transform: uppercase;
 }
 
+.nav__item {
+  list-style: none;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
 .nav__item a:hover {
+  color: #00acdc;
+}
+
+a.is-active {
   color: #00acdc;
 }
 
@@ -56,13 +65,10 @@ pre {
   color: #00acdc;
 }
 
-.nav__item {
-  list-style: none;
-}
-
-.is-active:after {
+.is-active::after {
   content: "";
   position: absolute;
+  bottom: 0;
   display: block;
   height: 4px;
   width: 37px;
