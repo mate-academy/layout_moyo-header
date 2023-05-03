@@ -5,6 +5,9 @@
 html {
   font-family: "Roboto", sans-serif;
   font-style: normal;
+  --color-link: #000;
+  --color-link-active: #00acdc;
+  --background-color-haeder: #fff;
 }
 
 .header {
@@ -12,7 +15,7 @@ html {
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
-  background: #fff;
+  background: var(--background-color-haeder);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -48,33 +51,33 @@ body {
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
-  color: #000;
+  color: var(--color-link);
   text-decoration: none;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color-link-active);
 }
 
-a.is-active {
+.is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--color-link-active);
 }
 
-a.is-active::after {
+.is-active::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--color-link-active);
   border-radius: 8px;
 }
 
 .nav__link:active {
   color: #00acdc;
-  box-shadow: 0 4px 0 #00acdc;
+  box-shadow: 0 4px 0 var(--color-link-active);
 }
 
 @media (width: 1024px) {
