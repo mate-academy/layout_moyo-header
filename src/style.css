@@ -1,1 +1,66 @@
-/* Styles go here */
+/* stylelint-disable rule-empty-line-before */
+* {
+  box-sizing: border-box;
+}
+html {
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  --color-background-header: #fff;
+  --color-link-active: #00acdc;
+  --color-link: #000;
+}
+body {
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: var(--color-background-header);
+}
+.logo__img {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+.nav__list {
+  display: flex;
+  margin: 0 ;
+  padding: 0;
+  list-style: none;
+
+}
+.nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 20px;
+  padding: 10px 0;
+  height: 60px;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: var(--color-link);
+}
+.nav__link:hover {
+  color: var(--color-link-active);
+}
+a.is-active {
+  position: relative;
+  color: var(--color-link-active);
+}
+a.is-active::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  height: 4px;
+  width: 37px;
+  background-color: var(--color-link-active);
+  border-radius: 8px;
+}
