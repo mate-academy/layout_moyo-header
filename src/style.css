@@ -1,8 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  box-sizing: border-box;
   font-family: "Roboto", "Arial", sans-serif;
-
+  --blue: #00acdc;
 }
 
 .header {
@@ -45,13 +48,13 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active::after {
   content: "";
   position: absolute;
-  background-color: #00acdc;
+  background-color: var(--blue);
   bottom: 0;
   width: 100%;
   left: 0;
@@ -60,5 +63,5 @@ body {
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
