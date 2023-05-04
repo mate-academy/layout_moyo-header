@@ -1,5 +1,11 @@
-* {
+html {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  --color: #00acdc;
 }
 
 .header {
@@ -23,20 +29,14 @@
 
 .nav__link {
   display: block;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
   text-transform: uppercase;
   color: #000;
   text-decoration: none;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding: 23px 0;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color);
 }
 
 .nav__item:not(:last-child) {
@@ -45,7 +45,7 @@
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--color);
 }
 
 .is-active::after {
@@ -55,7 +55,7 @@
   height: 4px;
   position: absolute;
   bottom: 0;
-  background-color: #00acdc;
+  background-color: var(--color);
   border-radius: 8px;
 }
 
