@@ -4,21 +4,21 @@ body {
   margin: 0;
 }
 
+:root {
+  --link-color: #00acdc ;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
-  
+  align-items: center;
+  padding: 0 50px;
 }
 
 .header__logo {
+  display: block;
   height: 40px;
   width: 40px;
-  margin: 10px 0 0 50px;
-}
-
-.nav {
-  display: inline-block;
-  margin: auto 40px;
 }
 
 .nav__list {
@@ -31,7 +31,11 @@ body {
 
 .nav__item {
   position: relative;
-  margin: 0 10px;
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
@@ -45,8 +49,9 @@ body {
   font-style: normal;
 }
 
-.is-active {
-  color: #00acdc;
+.is-active,
+.nav__link:hover {
+  color: var(--link-color);
 }
 
 .is-active::after {
@@ -57,9 +62,5 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
-}
-
-.nav__link:hover {
-  color: #00acdc;
+  background-color: var(--link-color);
 }
