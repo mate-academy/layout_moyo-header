@@ -1,77 +1,73 @@
-* {
-  box-sizing: border-box;
+:root {
+  --header-height: 60px;
+  --underline-height: 4px;
+  --horizontal-padding: 50px;
+  --hover-color: #00acdc;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
   margin: 0;
 }
 
 .header {
+  width: calc(100% - 2 * var(--horizontal-padding));
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 var(--horizontal-padding);
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
-  align-items: center;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.header__logo {
-  width: 40px;
-  height: 40px;
 }
 
 .header__images {
-  height: 100%;
-  width: 100%;
+  margin-top: 10px;
 }
 
 .header__nav {
-  height: 100%;
-  /* align-items: center; */
+  height: var(--header-height);
 }
 
 .nav__list {
+  text-transform: uppercase;
+  list-style-type: none;
   display: flex;
-  align-items: center;
-  list-style: none;
-  margin: 0;
+  height: 100%;
   padding: 0;
+  margin: 0;
 }
 
-.nav__link {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  margin-left: 20px;
+.nav__item {
   font-size: 12px;
-  color: #000;
-  text-transform: uppercase;
-  line-height: 60px;
-  text-align: center;
-  align-items: center;
-  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   cursor: pointer;
 }
 
-.nav__link:hover {
-  color: #00acdc;
+.nav__item:nth-child(n + 2) {
+  margin-left: 20px;
 }
 
-.is-active {
-  color: #00acdc;
-  margin: 0;
-  position: relative;
+.nav__link {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: 100%;
+  line-height: var(--header-height);
+}
+
+.is-active,
+.nav__link:hover {
+  color: var(--hover-color);
 }
 
 .is-active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 37px;
-  height: 4px;
-  background: #00acdc;
-  border-radius: 2px;
+  display: block;
+  content: " ";
+  background-color: var(--hover-color);
+  width: 100%;
+  height: var(--underline-height);
+  border-radius: 8px;
+  transform: translateY(calc(-1 * var(--underline-height)));
 }
