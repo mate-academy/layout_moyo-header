@@ -75,8 +75,12 @@ ul {
   border-radius: 8px;
 }
 
-.nav__link:not(.is-active) {
-  margin-left: 20px;
+.nav__link:not(.is-active):first-child {
+  margin-left: 0;
+}
+
+.nav__link.is-active + .nav__link {
+  margin-left: 0;
 }
 
 :root {
