@@ -1,6 +1,6 @@
 # Moyo header
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://emanzyuk.github.io/layout_moyo-header/index.html)
+- [DEMO LINK](https://emanzyuk.github.io/layout_moyo-header/i)
 - [TEST REPORT LINK](https://emanzyuk.github.io/layout_moyo-header/report/html_report/)
 
 > Follow [these instructions](https://mate-academy.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
