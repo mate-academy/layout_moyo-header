@@ -18,7 +18,6 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
-  max-width: 100%;
   align-items: center;
 }
 
@@ -56,11 +55,11 @@ ul {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue);
   margin: 0;
   position: relative;
 }
@@ -70,8 +69,16 @@ ul {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 37px;
+  right: 0;
   height: 4px;
-  background: #00acdc;
+  background: var(--blue);
   border-radius: 8px;
+}
+
+.nav__link:not(.is-active) {
+  margin-left: 20px;
+}
+
+:root {
+  --blue: #00acdc;
 }
