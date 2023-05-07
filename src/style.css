@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 * {
   box-sizing: border-box;
 }
@@ -41,7 +42,12 @@ ul {
   align-items: center;
 }
 
+.nav__link:first-child:not(.is-active) {
+  margin-left: 0;
+}
+
 .nav__link {
+  position: relative;
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -51,15 +57,15 @@ ul {
   line-height: 60px;
   text-align: center;
   align-items: center;
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .nav__link:hover {
   color: var(--blue);
 }
 
-.nav__link:first-child {
-  margin-left: 0;
+.nav__link:not(.is-active) {
+  transform: translateX(20px);
 }
 
 .is-active {
@@ -79,8 +85,8 @@ ul {
   border-radius: 8px;
 }
 
-.nav__link:not(.is-active) {
-  margin-left: 20px;
+.is-active + .nav__link:not(:first-child) {
+  margin-right: 0;
 }
 
 :root {
