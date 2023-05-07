@@ -1,7 +1,14 @@
-body {
-  margin: 0;
+:root {
+  --main--color: #00acdc;
+}
+
+html {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+}
+
+body {
+  margin: 0;
 }
 
 header {
@@ -10,7 +17,8 @@ header {
   align-items: center;
   padding: 0 50px 0 40px;
   border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  box-shadow: 0 2px 4px #0000000d;
 }
 
 .logo {
@@ -56,12 +64,13 @@ header {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+
+  color: var(--main--color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--main--color);
 }
 
 .is-active::after {
