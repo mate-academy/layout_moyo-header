@@ -4,13 +4,17 @@ body {
   font-weight: 500;
 }
 
+:root {
+  --color: #00acdc;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px  0 40px;
+  box-shadow: 0 2px 4px #000005;
   border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -47,7 +51,6 @@ body {
 }
 
 .nav__link {
-
   display: flex;
   position: relative;
   padding: 23px 0;
@@ -59,12 +62,12 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color) ;
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--color);
 }
   
 .is-active::after {
@@ -75,5 +78,5 @@ body {
   right: 0;
   border-radius: 8px;
   height: 4px;
-  background: #00acdc;
+  color: var(--color);
 }
