@@ -5,11 +5,6 @@ body {
   --color-branding: #00acdc;
 }
 
-.nav__link {
-  display: flex;
-  list-style: none;
-}
-
 .container {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -18,17 +13,18 @@ body {
   padding: 0 50px;
 }
 
-.nav__list {
-  color: #000;
+.nav__link {
   display: flex;
-  padding: 23px 0;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
+  list-style: none;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
 }
 
 .logo {
-  position: absolute;
+  position: block;
   margin-left: 50px;
   padding-top: 10px;
 }
@@ -39,8 +35,20 @@ body {
   text-decoration: none;
 }
 
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
 .li_link {
-  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #000;
 }
 
 .link:hover {
@@ -49,4 +57,14 @@ body {
 
 .last {
   margin-right: 50px;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #00acdc;
 }
