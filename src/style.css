@@ -22,18 +22,15 @@ a {
   min-width: 1024px;
   padding: 0 50px;
   margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 .logo_link {
   display: flex;
   align-items: center;
-}
-
-.flex_container {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
 }
 
 .flex_container .logo {
@@ -55,8 +52,12 @@ a {
   display: flex;
 }
 
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
 .nav__link {
-  padding: 23px;
+  padding: 23px 0;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -64,13 +65,12 @@ a {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.nav__link:hover {
-  color: var(--main-color);
-}
+.nav__link:hover,
 
-.nav__link.is-active {
+.is-active {
   color: var(--main-color);
 }
 
