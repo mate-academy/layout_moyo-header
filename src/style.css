@@ -1,1 +1,97 @@
-/* Styles go here */
+/* reset browser default margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 50px;
+}
+
+.logo {
+  display: flex;
+  align-content: center;
+}
+
+.logo img {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  align-content: center;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+nav ul li:nth-child(1) {
+  margin-right: 10px;
+}
+
+nav ul li:last-child {
+  margin-left: 10px;
+}
+
+nav ul li:nth-child(n+2):not(:last-child) {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  display: block;
+  position: relative;
+  padding: 23px 0;
+  color: rgba(0, 0, 0, 1);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+nav ul li a:link {
+  text-decoration: none;
+}
+
+nav ul li a:visited {
+  text-decoration: none;
+}
+
+nav ul li a:hover { 
+  /* text-decoration: underline; */
+  color: rgba(0, 172, 220, 1);
+}
+
+nav ul li a:active {
+  text-decoration: none;
+  color: rgba(0, 172, 220, 1);
+}
+
+ul li .is-active {
+  color: rgba(0, 172, 220, 1);
+}
+
+ul li a.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: rgba(0, 172, 220, 1);
+}
