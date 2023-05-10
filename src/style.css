@@ -1,1 +1,76 @@
-/* Styles go here */
+
+* {
+  margin: 0;
+}
+
+.moyo-container {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  /* max-width: 1200px; */
+}
+
+.moyo-logo1 {
+  padding: 10px 0;
+}
+
+.main-header {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  padding: 0 50px;
+}
+
+.main-header .main-nav-list {
+  display: flex;
+  justify-content: space-around;
+  padding: 19.5px 0;
+}
+
+.main-nav-list > li {
+  list-style: none;
+  margin-right: 20px;
+
+}
+
+.main-nav-list > li:last-child {
+  margin-right: 0;
+}
+
+a {
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500px;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  border-radius: 8px;
+  background-color: #00acdc;
+  position: absolute;
+  height: 4px;
+  bottom: -1px;
+  width: 37px;
+  display: block;
+  border: #000 1px;
+}
+
+:hover {
+  color: #00acdc;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-header {
+    max-width: 1024px;
+  }
+}
