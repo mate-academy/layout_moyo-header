@@ -3,6 +3,7 @@
 body {
   margin: 0;
   padding: 0;
+  --menu-link--color: #00acdc;
 }
 
 .header {
@@ -10,6 +11,7 @@ body {
   justify-content: space-between;
   padding: 0 50px;
   align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo img {
@@ -37,7 +39,7 @@ body {
   margin-right: 20px;
 }
 
-.menu-item a {
+.menu-item--link {
   color: black;
   text-decoration: none;
   display: block;
@@ -45,16 +47,16 @@ body {
 }
 
 .menu-item a:hover {
-  color: #00acdc;
+  color: var(--menu-link--color);
   text-decoration: none;
 }
 
 .menu-item a:active {
-  color: #00acdc;
+  color: var(--menu-link--color);
 }
 
 a.is-active {
-  color: #00acdc;
+  color: var(--menu-link--color);
   position: relative;
 }
 
@@ -65,7 +67,7 @@ a.is-active::after {
   bottom: 1px;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--menu-link--color);
   border-radius: 8px;
 }
 
