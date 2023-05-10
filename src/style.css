@@ -1,1 +1,94 @@
-/* Styles go here */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --nav-color: #00acdc;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header_style {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 50px;
+}
+
+.logo {
+  display: flex;
+  align-content: center;
+}
+
+.logo_image {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+.menu-item:nth-child(1) {
+  margin-right: 10px;
+}
+
+.menu-item:last-child {
+  margin-left: 10px;
+}
+
+.menu-item:nth-child(n+2):not(:last-child) {
+  margin: 0 10px;
+}
+
+.menu_link {
+  display: block;
+  position: relative;
+  padding: 23px 0;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.menu_link:hover,
+.menu_link:active {
+  color: var(--nav-color);
+}
+
+.is-active {
+  color: var(--nav-color);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--nav-color);
+}
