@@ -1,1 +1,60 @@
-/* Styles go here */
+:root {
+  --higthlight-color: #00acdc;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: #000;
+  display: flex;
+  padding: 23px 0;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.logo {
+  margin-top: 2px;
+}
+
+.nav-link:hover,
+.is-active {
+  color: var(--higthlight-color);
+}
+
+.is-active::after {
+  content: "";
+  background-color: var(--higthlight-color);
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
