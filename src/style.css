@@ -1,1 +1,76 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  --menu-link--color: #00acdc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: block;
+}
+
+.nav {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.menu {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu-item {
+  float: left;
+  margin-right: 20px;
+}
+
+.menu-item--link {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 23px 0;
+}
+
+.menu-item a:hover {
+  color: var(--menu-link--color);
+  text-decoration: none;
+}
+
+.menu-item a:active {
+  color: var(--menu-link--color);
+}
+
+a.is-active {
+  color: var(--menu-link--color);
+  position: relative;
+}
+
+a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  height: 4px;
+  width: 100%;
+  background-color: var(--menu-link--color);
+  border-radius: 8px;
+}
+
+.menu-item:last-child {
+  margin-right: 0;
+}
