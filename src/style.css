@@ -1,4 +1,8 @@
 /* Styles go here */
+* {
+  --blue-color: #00acdc;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -7,7 +11,7 @@ body {
 
 .header {
   max-width: 1200px;
-  padding: 10px 50px;
+  padding: 0 50px;
   margin: 0 auto;
 }
 
@@ -24,6 +28,7 @@ body {
 .header__img {
   width: 40px;
   height: 40px;
+  margin-top: 9px;
 }
 
 .header__link {
@@ -42,6 +47,10 @@ body {
   padding: 0;
 }
 
+.nav__item {
+  margin-top: 9px;
+}
+
 .nav__item:not(:last-child) {
   margin-right: 20px;
 }
@@ -57,12 +66,12 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active::after {
@@ -73,5 +82,5 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
