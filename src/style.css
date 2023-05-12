@@ -1,1 +1,96 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #00acdc;
+}
+
+html {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  padding-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  background: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
+}
+
+.header__a {
+  padding: 10px 0;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.nav__link {
+  position: relative;
+  margin: 0 10px;
+  padding: 24px 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+  line-height: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav__item {
+  display: contents;
+  list-style-type: none;
+}
+
+.header__logo-img {
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+.nav__a:hover,
+.nav__a:active {
+  color: var(--main-color);
+}
+
+.is-active::after,
+.nav__a:active::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  content: " ";
+  height: 4px;
+  width: 100%;
+  background-color: var(--main-color);
+  border-radius: 2px;
+}
+
+.is-active {
+  color: var(--main-color);
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list .nav__item:first-child .nav__link {
+  margin-left: 0;
+}
+
+.nav__list .nav__item:last-child .nav__link {
+  margin-right: 0;
+}
