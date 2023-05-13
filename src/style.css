@@ -1,7 +1,11 @@
 html {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
   --item-color: #00acdc;
   --nav-size: 60px;
+  --logo-size: 40px;
 }
 
 body,
@@ -22,8 +26,8 @@ ul {
 
 .logo {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: var(--logo-size);
+  height: var(--logo-size);
 }
 
 .nav__list {
@@ -45,7 +49,6 @@ ul {
 .nav__link {
   display: block;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -53,10 +56,7 @@ ul {
   color: #000;
 }
 
-.nav__link:hover {
-  color: var(--item-color);
-}
-
+.nav__link:hover,
 .is-active {
   color: var(--item-color);
 }
