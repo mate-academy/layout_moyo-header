@@ -4,7 +4,10 @@ html {
   --nav-size: 60px;
 }
 
-body {
+body,
+header,
+nav,
+ul {
   display: block;
   margin: 0;
   padding: 0;
@@ -12,12 +15,9 @@ body {
 
 .header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  margin: 0;
-  background-color: #fff;
 }
 
 .logo {
@@ -29,8 +29,6 @@ body {
 .nav__list {
   display: flex;
   text-transform: uppercase;
-  padding: 0;
-  margin: 0;
 }
 
 .nav__item {
@@ -40,7 +38,7 @@ body {
   min-width: fit-content;
 }
 
-#nav__first__item {
+.nav__item:first-child {
   margin: 0;
 }
 
@@ -53,8 +51,6 @@ body {
   font-size: 12px;
   line-height: var(--nav-size);
   color: #000;
-  padding: 0;
-  margin: 0;
 }
 
 .nav__link:hover {
