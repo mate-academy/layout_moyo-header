@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 :root {
   --color-link-active: #00acdc;
@@ -14,17 +17,11 @@ body {
   font-size: 12px;
 }
 
-ul {
-  list-style: none;
-}
-
-.main-nav {
+.header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0 50px;
-  font-size: 12px;
-  text-transform: uppercase;
   background: var(--color-background-container);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -37,16 +34,23 @@ ul {
 
 .nav-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.nav-items {
-  margin-right: 20px;
+.nav-link {
+  cursor: pointer;
+  display: flex;
+  text-decoration: none;
+  position: relative;
+  align-items: center;
+  text-transform: uppercase;
+  margin-left: 20px;
   padding: 23px 0;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--color-link);
 }
 
 .nav-items:last-child {
@@ -57,19 +61,11 @@ a {
   cursor: pointer;
   color: var(--color-link);
   text-decoration: none;
-  padding: 23px 0;
 }
 
 .is-active {
   position: relative;
-}
-
-.nav-link {
-  font-size: 12px;
-  font-weight: 500;
-  font-style: normal;
-  text-transform: uppercase;
-  line-height: 14px;
+  margin: 0;
 }
 
 .nav-link:hover,
