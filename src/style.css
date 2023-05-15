@@ -1,1 +1,76 @@
 /* Styles go here */
+
+:root {
+  --main-color: #00acdc;
+}
+
+body {
+  all: initial;
+  margin: 0;
+  display: revert;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 50px;
+  background: #fff;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.main-nav {
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav_li {
+  margin-left: 20px;
+}
+
+.nav_li:first-child {
+  margin-left: 0;
+}
+
+.main-nav-link {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+  align-items: center;
+  position: relative;
+  height: 60px;
+}
+
+.main-nav-link:hover,
+.main-nav-link.is-active {
+  color: var(--main-color);
+}
+
+.main-nav-link.is-active::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--main-color);
+}
