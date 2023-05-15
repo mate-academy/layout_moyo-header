@@ -1,4 +1,5 @@
-body {
+body,
+.nav {
   margin: 0;
   padding: 0;
   max-width: 1200px;
@@ -7,17 +8,14 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   height: 60px;
-  padding-right: 50px;
-  padding-left: 50px;
-  margin: 0;
   padding-right: 50px;
   padding-left: 50px;
 }
 
-.nav_link:hover {
-  color: #00acdc;
+.nav {
+  justify-content: space-between;
+  display: flex;
 }
 
 .logo {
@@ -27,18 +25,9 @@ body {
   margin-bottom: 10px;
 }
 
-.is-active:hover {
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-  color: #00ACDC;
-
-}
-
 .nav_link {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -50,15 +39,12 @@ body {
   padding-bottom: 23px;
 }
 
-.is-active {
-  position: relative;
-  color: #00acdc;;
+.nav_link:last-child {
+  margin-right: 0;
 }
 
-
-.nav {
-  max-width: 1200;
-  justify-content: space-between;
+.nav_link:hover {
+  color: #00acdc;
 }
 
 .is-active::after {
@@ -72,8 +58,4 @@ body {
   background: #00acdc;
   border-radius: 8px;
   height: 4px;
-}
-
-.nav__link:last-child {
-  margin-right: 0;
 }
