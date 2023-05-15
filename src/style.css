@@ -1,3 +1,7 @@
+:root {
+  --blue: #00acdc;
+  --black: #000;
+}
 
 * {
   box-sizing: border-box;
@@ -54,7 +58,7 @@ body {
 }
 
 .default-link {
-  color: #000;
+  color: var(--black);
   text-transform: uppercase;
   text-decoration: none;
   padding-top: 22.5px;
@@ -62,7 +66,7 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue);
   position: relative;
   text-transform: uppercase;
   padding-top: 22.5px;
@@ -74,15 +78,15 @@ body {
   content: "";
   display: block;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--blue);
   position: absolute;
   height: 4px;
   bottom: 0;
   width: 100%;
-  border: #000 1px;
+  border: var(--black) 1px;
 }
 
-:hover {
-  color: #00acdc;
+:hover.default-link {
+  color: var(--blue);
   cursor: pointer;
 }
