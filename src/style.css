@@ -1,1 +1,87 @@
-/* Styles go here */
+html {
+  --accent-color: #00acdc;
+  --header-height: 60px;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.head__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo__img {
+  display: block;
+}
+
+.logo {
+  margin: 10px 0;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 20px;
+  height: var(--header-height);
+  line-height: var(--header-height);
+}
+
+.nav__list :nth-child(1) {
+  margin-left: 0;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #000;
+}
+
+.nav__link:hover {
+  color: var(--accent-color);
+}
+
+.is-active {
+  color: var(--accent-color);
+}
+
+.is-active::after {
+  background-color: var(--accent-color);
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  content: "";
+  color: var(--accent-color);
+}
