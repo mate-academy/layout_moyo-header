@@ -1,1 +1,91 @@
-/* Styles go here */
+:root {
+  --blue: #00acdc;
+  --black: #000;
+}
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500px;
+  margin: 0;
+
+}
+
+.moyo-container {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 0;
+  max-height: 60px;
+
+}
+
+.moyo-logo1 {
+  padding: 10px 0;
+  margin: 0;
+  max-height: 60px;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  margin: 0;
+  max-height: 60px;
+}
+
+.main-nav-list {
+  display: flex;
+  justify-content: space-around;
+  padding: 22.5px 0;
+  margin: 0;
+}
+
+.menu-list {
+  list-style: none;
+  margin-right: 20px;
+  height: 15px;
+
+}
+
+.menu-list:last-child {
+  margin-right: 0;
+}
+
+.default-link {
+  color: var(--black);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+}
+
+.is-active {
+  color: var(--blue);
+  position: relative;
+  text-transform: uppercase;
+  padding-top: 22.5px;
+  padding-bottom: 23px;
+  text-decoration: none;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  border-radius: 8px;
+  background-color: var(--blue);
+  position: absolute;
+  height: 4px;
+  bottom: 0;
+  width: 100%;
+  border: var(--black) 1px;
+}
+
+:hover.default-link {
+  color: var(--blue);
+  cursor: pointer;
+}
