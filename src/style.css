@@ -1,1 +1,69 @@
-/* Styles go here */
+:root {
+  --color-accent: #00acdc;
+  --color-default: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+  line-height: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  list-style-type: none;
+}
+
+.nav__link {
+  padding: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-default);
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav__link:hover,
+.is-active {
+  color: var(--color-accent);
+}
+
+.is-active::after {
+  content: "";
+  width: 37px;
+  height: 4px;
+  position: absolute;
+  left: 10px;
+  bottom: -12px;
+  border-radius: 8px;
+  background-color: var(--color-accent);
+}
