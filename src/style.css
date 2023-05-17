@@ -1,7 +1,6 @@
 body {
   margin: 0;
 
-  --nav-link-padding: 5px;
   --nav-link-height: 60px;
 }
 
@@ -18,7 +17,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #0005;
   font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
@@ -35,6 +33,7 @@ body {
 .nav {
   font-size: 12px;
   text-transform: uppercase;
+  margin-right: 50px;
 }
 
 .nav__list {
@@ -46,13 +45,17 @@ body {
 }
 
 .nav__item {
-  margin-right: 15px;
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
   position: relative;
   text-decoration: none;
-  padding: 0 var(--nav-link-padding);
+  padding: 0;
   display: block;
   height: var(--nav-link-height);
   line-height: var(--nav-link-height);
@@ -74,10 +77,10 @@ body {
 .nav__link.is-active::after {
   position: absolute;
   bottom: 0;
-  left: var(--nav-link-padding);
+  left: 0;
+  right: 0;
   content: "";
-  width: calc(100% - 2 * var(--nav-link-padding));
-  height: 3px;
+  height: 4px;
   border-radius: 10px;
   background-color: #00acdc;
 }
