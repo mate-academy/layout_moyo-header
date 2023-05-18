@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -6,73 +8,65 @@
 .header {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
-  margin: 2px 40px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
+  align-items: center;
   font-size: 12px;
   line-height: 14px;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 1);
-  background: rgba(255, 255, 255, 1);
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-a {
-  text-decoration: none;
-}
-
 .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-}
-
-.logo-link {
   width: 40px;
   height: 40px;
   object-fit: cover;
+  margin-left: 50px;
+
+}
+
+.logo-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.nav-list {
+  text-transform: uppercase;
+  margin-right: 40px;
 }
 
 .list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  text-transform: uppercase;
-  list-style: none;
+  list-style-type: none;
 }
 
 .list > li {
-  margin: 0 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  margin: 0 10px;
 }
 
-.up-line,
-.down-line {
-  height: 4px;
-  width: 100%;
-  transition: all 500ms;
-}
-
-.down-line {
-  border-radius: 8px;
-  background-color: rgba(0, 172, 220, 1);
-  visibility: hidden;
-}
-
-li > a {
-  padding: 19px 0;
+.menu-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 23px 0 19px;
+  text-decoration: none;
   color: rgba(0, 0, 0, 1);
 }
 
-.list > li:hover > a {
-  color: rgba(0, 172, 220, 1);
+.down-line {
+  height: 4px;
+  width: 100%;
+  background-color: rgba(0, 172, 220, 1);
+  border-radius: 8px;
+  visibility: hidden;
 }
 
 .is-active {
@@ -80,11 +74,6 @@ li > a {
   visibility: visible;
 }
 
-/*
-li:target > .down-line {
-  background-color: rgba(0, 172, 220, 1);
-}
-
-li:target > a {
+.menu-link:hover {
   color: rgba(0, 172, 220, 1);
-}*/
+}
