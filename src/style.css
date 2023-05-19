@@ -34,17 +34,14 @@ li {
 
 .header_nav_item {
   text-decoration: none;
-  padding: 22.5px 10px;
+  padding: 22.5px 0;
+  margin-left: 20px;
   color: var(--black-color);
   font-size: 12px;
 }
 
-.header_nav_item:last-child {
-  padding-right: 0;
-}
-
 .link_item {
-  padding: 50% 0;
+  padding: 22px 0;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--black-color);
@@ -55,11 +52,17 @@ li {
 }
 
 .is-active {
-  color: var(--blue-color);
+  position: relative;
 }
 
 .is-active::after {
   content: "";
-  border-bottom: 4px solid var(--blue-color);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 4px;
   border-radius: 8px;
+  background-color: var(--blue-color);
 }
