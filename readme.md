@@ -2,7 +2,7 @@
 
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
 
-- [DEMO LINK](https://adv55.github.io/layout_moyo-header/)
+- [DEMO LINK](https://adv555.github.io/layout_moyo-header/)
 - [TEST REPORT LINK](https://adv555.github.io/layout_moyo-header/report/html_report/)
 
 > Follow [these instructions](https://mate-academy.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
