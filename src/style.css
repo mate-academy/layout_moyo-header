@@ -1,107 +1,71 @@
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
   padding: 0;
+}
+
+html {
   font-family: "Roboto", sans-serif;
-  --main-color: #00acdc;
-  font-size: 14px;
 }
 
-.nav__bar {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
-  background-color: #fff;
-  width: 100%;
-}
-
-.header {
-  padding: 0 50px;
-}
-
-img {
-  display: block;
-  margin: 10px;
+.logo {
   width: 40px;
   height: 40px;
-  text-decoration: none;
+}
+
+.navbar {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .nav__list {
-  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: row;
-  /* margin-right: 50px; */
 }
 
-.nav__list__item {
+.nav__item {
+  display: block;
+  line-height: 60px;
   margin-right: 20px;
 }
 
 .nav__link {
   display: block;
-  text-transform: uppercase;
   text-decoration: none;
-  position: relative;
   color: #000;
-  padding: 23px 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .is-active {
-  color: var(--main-color);
+  color: var(--blue);
+  position: relative;
+}
+
+.is-active:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  background-color: var(--blue);
+  border-radius: 8px;
+  display: block;
 }
 
 .nav__link:hover {
-  color: var(--main-color);
-}
-
-.is-active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--main-color);
-  border-radius: 8px;
-  transform: scaleX(1);
-  transform-origin: left center;
-}
-
-@media (max-width: 1024px) {
-  .nav__bar {
-    flex-wrap: wrap;
-  }
-
-  img {
-    margin: 10px 0 10px 50px;
-  }
-
-  .nav__list {
-    margin-right: 50px;
-    margin-left: 10px;
-  }
-
-  .nav__link {
-    margin: 0 5px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .nav__bar {
-    flex-wrap: wrap;
-  }
-
-  img {
-    margin: 10px 0 10px 50px;
-  }
-
-  .nav__list {
-    margin-right: 50px;
-    margin-left: 10px;
-  }
-
-  .nav__link {
-    margin: 0 5px;
-  }
+  color: var(--blue);
 }
