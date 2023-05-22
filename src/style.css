@@ -19,23 +19,24 @@ html {
   position: relative;
   align-items: center;
   justify-content: space-between;
-  height: var(--header-height);
   background-color: var(--header-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav {
   display: flex;
-  height: var(--header-height);
   align-items: center;
   margin-right: 50px;
+}
+
+.logo {
+  padding: 10px 0 10px 50px;
 }
 
 .logo__img {
   display: block;
   height: var(--logo-height);
   width: var(--logo-width);
-  margin-left: 50px;
 }
 
 .nav__list {
@@ -57,14 +58,11 @@ html {
 .is-active {
   color: var(--link-color);
   margin-left: 0;
+  position: relative;
 }
 
 .nav__link:hover {
   color: var(--link-color);
-}
-
-.nav__link.is-active {
-  position: relative;
 }
 
 .nav__link.is-active::after {
@@ -76,10 +74,6 @@ html {
   width: 100%;
   background: var(--link-color);
   border-radius: 8px;
-}
-
-[data-qa="hover"] {
-  color: #000;
 }
 
 @media (min-width: 1200px) {
