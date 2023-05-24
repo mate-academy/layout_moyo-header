@@ -37,14 +37,18 @@ body {
 }
 
 /*-------HEADER--------------*/
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.header__container {
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
   padding: 0 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__container {
+    max-width: 1024px;
+  }
 }
 
 .header__homelink {
@@ -67,6 +71,7 @@ body {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
 .nav__link.is-active::after {
