@@ -12,6 +12,10 @@ html {
   text-transform: uppercase;
 }
 
+body {
+  --main-color: #00acdc;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -50,17 +54,17 @@ html {
 }
 
 .nav__item .is-active {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .nav__item .is-active::after {
   display: block;
   content: "";
-  border: 0 solid #00acdc;
+  border: 0 solid var(--main-color);
   width: 37px;
   height: 4px;
   position: absolute;
   bottom: 0;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--main-color);
 }
