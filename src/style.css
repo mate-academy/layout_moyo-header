@@ -1,1 +1,81 @@
-/* Styles go here */
+html {
+  --link-hover-active: #00acdc;
+}
+
+body,
+div,
+ul,
+li,
+a {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.nav {
+  margin-right: 50px;
+  margin-left: auto;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.nav__link {
+  display: block;
+  line-height: 60px;
+  margin-right: 20px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  color: #000;
+}
+
+.nav__link:hover,
+.nav__link:active {
+  color: var(--link-hover-active);
+}
+
+.nav__list > :last-child .nav__link {
+  margin-right: 0;
+}
+
+.nav__link.is-active {
+  position: relative;
+  color: var(--link-hover-active);
+}
+
+.is-active::after {
+  display: block;
+  position: absolute;
+  transform: translateY(-100%);
+  content: "";
+  height: 4px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--link-hover-active);
+}
