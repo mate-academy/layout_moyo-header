@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  --color-primary: #000;
+  --color-additional: #00acdc;
 }
 
 .header {
@@ -50,14 +52,14 @@ body {
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
-  color: #000;
+  color: var(--color-primary);
   padding-top: 23px;
 }
 
 .nav__link:hover {
   display: block;
   cursor: pointer;
-  color: #00acdc;
+  color: var(--color-additional);
 }
 
 .nav__link::after {
@@ -70,7 +72,7 @@ body {
   right: 0;
   height: 4px;
   box-sizing: border-box;
-  background-color: #00acdc;
+  background-color: var(--color-additional);
 }
 
 .is-active.nav__link::after {
@@ -78,5 +80,5 @@ body {
 }
 
 .is-active.nav__link {
-  color: #00acdc;
+  color: var(--color-additional);
 }
