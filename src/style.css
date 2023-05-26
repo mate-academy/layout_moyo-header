@@ -1,1 +1,87 @@
-/* Styles go here */
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  --background-color: #e5e5e5;
+  --header-color: #fff;
+  --header-height: 60px;
+  --logo-size: 40px;
+  --link-color: #00acdc;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+}
+
+.header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-sizing: border-box;
+  background-color: var(--header-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo__img {
+  display: block;
+  height: var(--logo-size);
+  width: var(--logo-size);
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  display: inline-block;
+  line-height: var(--header-height);
+  color: #000;
+  text-decoration: none;
+}
+
+.nav__item:not(:first-child) {
+  margin: 0 0 0 20px;
+}
+
+.is-active {
+  color: var(--link-color);
+  position: relative;
+}
+
+.nav__link:hover {
+  color: var(--link-color);
+}
+
+.nav__link.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: var(--link-color);
+  border-radius: 8px;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    width: 1200px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .header {
+    width: 1024px;
+  }
+}
