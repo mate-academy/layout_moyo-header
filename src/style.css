@@ -7,11 +7,14 @@ body {
 }
 
 .header {
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .header__logo {
@@ -71,8 +74,15 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  .header {
+  .header__container {
     max-width: 1200px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__container {
+    max-width: 1024px;
     margin: auto;
   }
 }
