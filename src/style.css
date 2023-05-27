@@ -1,1 +1,83 @@
 /* Styles go here */
+html {
+  --text-color: #00acdc;
+  --header-height: 60px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  /* width: 1024px; */
+  min-width: 1024px;
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: yellow; */
+}
+
+.logo {
+  margin-left: 50px;
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  /* width: 100%; */
+  height: 100%;
+  margin-right: 50px;
+  /* background-color: yellowgreen; */
+}
+
+.nav__list {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding-inline-start: 0;
+  /* background-color: coral; */
+}
+
+.nav__list > :not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__item {
+  display: flex;
+  list-style: none;
+  /* background-color: aqua; */
+}
+
+.nav__link {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.is-active {
+  color: var(--text-color);
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--text-color);
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+}
+
+.nav__link:hover {
+  color: var(--text-color);
+}
