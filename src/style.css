@@ -1,3 +1,7 @@
+:root {
+  --nav-color-active: #00acdc;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -48,11 +52,11 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--nav-color-active);
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--nav-color-active);
 }
 
 .nav__link.is-active::after {
@@ -62,18 +66,18 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--nav-color-active);
   border-radius: 8px;
 }
 
 @media screen and (max-width: 1200px) {
   .header {
-    padding: 0 50px;
+    width: auto;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .header {
-    padding: 0 50px;
+    width: auto;
   }
 }
