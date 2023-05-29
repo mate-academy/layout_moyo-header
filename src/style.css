@@ -49,22 +49,26 @@ body {
   align-items: center;
 }
 
-.nav__link {
+.nav__link:link,
+.nav__link:visited {
   position: relative;
   padding: 23px 0;
   cursor: pointer;
+  text-decoration: none;
+  color: #000;
 }
 
 .nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link:active {
   color: var(--color-primary);
 }
 
 .is-active {
-  color: var(--color-primary);
+  color: var(--color-primary) !important;
 }
 
 .is-active::after {
