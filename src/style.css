@@ -41,15 +41,25 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0 10px;
   font-size: 12px;
-  line-height: 60px;
 }
 
-.nav__item:hover {
+.nav__item-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 23px 0;
+  color: #000;
+}
+
+.nav__item-link:hover {
   cursor: pointer;
   color: #00acdc;
 }
 
-.nav__item:active::after {
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
   content: "";
   display: block;
   position: absolute;
