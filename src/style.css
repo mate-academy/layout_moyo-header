@@ -1,6 +1,13 @@
-/* Styles go here */
 * {
-  margin: unset;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
 }
 
 .header {
@@ -9,9 +16,14 @@
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   max-width: 1024px;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    max-width: 1200px;
+  }
 }
 
 .header__logo {
@@ -24,7 +36,7 @@
   list-style: none;
   display: flex;
   padding: unset;
-  box-sizing: border-box;
+  margin: 0;
 }
 
 .header__listitem:not(:last-child) {
@@ -34,7 +46,6 @@
 .header__link {
   display: block;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
   color: #000;
   text-transform: uppercase;
   font-size: 12px;
