@@ -1,17 +1,20 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
+:root {
+  --color-primary: #00acdc;
 }
 
 html {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: "Roboto", "Times New Roman", Times, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -55,11 +58,11 @@ html {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color-primary);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color-primary);
 }
 
 .is-active::after {
@@ -68,7 +71,7 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #00acdc;
+  background: var(--color-primary);
   height: 4px;
   border-radius: 8px;
 }
