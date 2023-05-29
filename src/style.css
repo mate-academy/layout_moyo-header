@@ -1,1 +1,88 @@
-/* Styles go here */
+html {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  --main-blue-color: #00acdc;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  box-sizing: border-box;
+  padding: 0 50px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    max-width: 1200px;
+  }
+}
+
+.logo__link {
+  text-decoration: none;
+  color: #000;
+}
+
+.logo__img {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav__item {
+  margin-inline-end: 20px;
+}
+
+.nav__item:last-of-type {
+  margin-inline-end: 0;
+}
+
+.nav__link {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.nav__link:hover {
+  color: var(--main-blue-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--main-blue-color);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--main-blue-color);
+}
