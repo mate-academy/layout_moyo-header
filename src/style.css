@@ -1,1 +1,83 @@
-/* Styles go here */
+html {
+  --blue-color: #00acdc;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.header {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+}
+
+.logo__container {
+  padding: 10px 0;
+}
+
+.header__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.list__item {
+  list-style-type: none;
+}
+
+.list__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.list__link {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  align-items: center;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  cursor: pointer;
+}
+
+.list__link:hover,
+.is-active {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--blue-color);
+}
+
+@media (max-width: 1024px) {
+  .header {
+    min-width: 1024px;
+  }
+}
