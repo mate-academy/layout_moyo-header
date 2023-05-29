@@ -2,12 +2,14 @@
 html {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
   --active-color: #00acdc;
 }
 
 body {
   background-color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .header {
@@ -17,7 +19,6 @@ body {
   align-items: center;
   padding: 0 50px;
   height: 60px;
-  max-width: 1200px;
   min-width: 1024px;
 }
 
@@ -28,6 +29,8 @@ body {
 
 .nav__item {
   display: inline-block;
+  position: relative;
+  margin-left: 20px;
 }
 
 .nav__link:link {
@@ -37,6 +40,7 @@ body {
   text-decoration: none;
   color: #000;
   padding: 1rem 0;
+  line-height: 15px;
 }
 
 .nav__link:hover {
@@ -51,10 +55,9 @@ body {
 .is-active::after {
   content: "";
   position: absolute;
-  bottom: 0;
   height: 4px;
   width: 100%;
+  bottom: 0;
   background-color: var(--active-color);
-  display: block;
   border-radius: 8px;
 }
