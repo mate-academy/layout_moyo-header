@@ -1,22 +1,27 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
   --color: #00acdc;
+  --default_color: #000;
 }
 
-.menu {
-  max-width: 1200px;
+.header {
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.menu__logo {
+.header__logo {
   display: inline-block;
-  padding: 10px 0;
+  align-items: center;
   width: 40px;
   height: 40px;
 }
 
-.menu__container {
+.header__container {
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -32,26 +37,21 @@ body {
   margin: 0;
 }
 
-.nav__item {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
-}
-
 .nav__link {
-  font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
   height: 60px;
-  font-weight: 500px;
+  font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
-  color: black;
+  color: var(--default_color);
   font-style: normal;
 }
 
