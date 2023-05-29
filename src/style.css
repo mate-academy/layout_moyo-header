@@ -1,6 +1,10 @@
+html:root {
+  --colorForLinks: #00acdc;
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
-  --colorForLinks: #00acdc;
 }
 
 .menu {
@@ -43,18 +47,15 @@ body {
   align-items: center;
   height: 60px;
   position: relative;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
   color: #000;
   text-decoration: none;
+  font-family: inherit;
 }
 
-.nav__link:hover {
-  color: var(--colorForLinks);
-}
-
+.nav__link:hover,
 .nav__link.is-active {
   color: var(--colorForLinks);
 }
