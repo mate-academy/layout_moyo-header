@@ -1,7 +1,7 @@
 # Moyo header
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://alex-samokhin83.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://alex-samokhin83.github.io/layout_moyo-header/report/html_report/)
 
 > Follow [these instructions](https://mate-academy.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
@@ -17,7 +17,7 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 - reset browser default margins
 - use images from [src/images](src/images)
 - use semantic tags: `<header>`, `<nav>`, `ul`
-- change links styles on `:hover`
+- change links styles on `:hover`np
 - follow styles from the mock
 - the link with `blue` color and line below is an active link. It should have `class="is-active"` and relevant styles.
 - the link with only `blue` color is an example of `:hover` styles. Every link in the row should have `blue` color on `:hover`.
