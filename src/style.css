@@ -1,1 +1,70 @@
-/* Styles go here */
+/* stylelint-disable color-hex-case */
+body,
+header,
+nav,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* stylelint-disable-next-line string-quotes */
+  font-family: 'Roboto', sans-serif;
+  background-color: #EFEFEF;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+/* stylelint-disable-next-line block-opening-brace-space-before */
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  /* stylelint-disable-next-line color-hex-length */
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  padding: 22px 0;
+}
+/* stylelint-disable-next-line block-opening-brace-space-before */
+nav ul li:not(:last-child){
+  padding-right: 20px;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+}
+/* stylelint-disable-next-line block-opening-brace-space-before */
+nav ul li a:hover{
+  color: #00ACDC;
+}
+
+.is-active:hover::after {
+  color: #00ACDC;
+  display: block;
+  position: absolute;
+  content: "";
+  height: 4px;
+  left: 0;
+  top: 22px;
+  width: 100%;
+  background: #00ACDC;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+/* stylelint-disable-next-line block-opening-brace-space-before */
