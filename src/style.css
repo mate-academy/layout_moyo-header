@@ -1,1 +1,88 @@
-/* Styles go here */
+:root {
+  --blueHover: #00acdc;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  color: var(--blueHover);
+}
+
+.nav__link.is-active {
+  color: var(--blueHover);
+}
+
+.nav__link.is-active::after {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--blueHover);
+}
+
+@media screen and (min-width: 1024px) {
+  .header__container {
+    max-width: 1024px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__container {
+    max-width: 1200px;
+  }
+}
