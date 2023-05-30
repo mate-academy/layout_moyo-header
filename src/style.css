@@ -1,1 +1,87 @@
 /* Styles go here */
+/* !!!!basic styles!!! */
+body,
+header,
+nav,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12.5px;
+}
+
+/* !!!!header chars!!!! */
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-image: linear-gradient(to left, navy, powderblue );
+  opacity: 0.75;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 50px;
+}
+
+.header__homepage {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.nav__list {
+  display: flex;
+  height: 100%;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  height: 100%;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__link.active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: 0;
+  height: 4.5px;
+  border-radius: 5px;
+  background-color: #00acdc;
+}
+
+.nav__link:hover,
+.nav__link.active {
+  color: #009fcb;
+}
