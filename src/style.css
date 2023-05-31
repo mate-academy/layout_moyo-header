@@ -1,3 +1,6 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
 
 body {
   --link-color: #00acdc;
@@ -6,61 +9,52 @@ body {
   margin: 0;
 }
 
-header {
+.header {
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
-  height: fit-content;
+  padding: 0 50px;
 }
 
 .nav__list {
   display: flex;
-  flex-direction: row;
   align-items: center;
   list-style-type: none;
-  margin-right: 50px;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .logo {
-  margin: 10px 0 10px 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   width: 40px;
-  height: var(--logo-height);
+  height: 40px;
 }
 
 .nav__item {
   display: flex;
-  margin-left: 20px;
   line-height: 14px;
   text-transform: uppercase;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link {
   text-decoration: none;
   color: #000;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
-  height: calc(var(--logo-height) + (var(--logo-margin)*2));
+  padding: 22.5px 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.nav__link1 {
+.is-active {
   color: var(--link-color);
-}
-
-.nav__item1 {
   position: relative;
   display: inline-flex;
 }
@@ -69,7 +63,7 @@ header {
   color: var(--link-color);
 }
 
-.nav__item1::after {
+.is-active::after {
   position: absolute;
   content: "";
   height: 4px;
