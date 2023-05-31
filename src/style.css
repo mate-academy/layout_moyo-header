@@ -1,30 +1,32 @@
 
-* {
-  box-sizing: border-box;
-}
-
 html {
+  margin: 0;
+  padding: 0;
   font-family: Roboto, Arial, sans-serif;
   font-size: 12px;
 }
 
-.header {
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1200px;
-  padding: 0 50px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+header {
+  display: block;
+  padding: 0 50px;
+}
+
 @media screen and (max-width: 1024px) {
-  .header {
+  .container {
     max-width: 1024px;
   }
 }
 
 .nav {
-  display: block;
+  display: flex;
 }
 
 a {
@@ -32,12 +34,15 @@ a {
   display: flex;
   align-items: center;
   height: 60px;
+  color: #000;
 }
 
 .nav_list {
   list-style-type: none;
   display: flex;
   align-items: center;
+  position: relative;
+  text-transform: uppercase;
   padding: 0;
   margin: 0;
 }
@@ -55,7 +60,7 @@ body {
   padding: 0;
 }
 
-.item {
+.item:not(:last-child) {
   margin-right: 20px;
 }
 
@@ -67,7 +72,8 @@ a:hover {
   content: "";
   display: block;
   position: absolute;
-  width: 100%;
+  color: var(--main-color);
+  width: 37px;
   height: 4px;
   bottom: 0;
   background: var(--main-color);
