@@ -1,8 +1,8 @@
 html {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-
   --max__height: 60px;
+  --active_color_link: #00acdc;
 }
 
 body {
@@ -15,10 +15,7 @@ body {
   align-items: center;
   padding: 0 50px;
   max-height: var(--max__height);
-
   box-sizing: border-box;
-
-  /* border: 2px solid black; */
 }
 
 .logo {
@@ -32,20 +29,19 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   line-height: 14px;
-
   display: flex;
 }
 
-.nav__element_of_list {
+.nav__element_list-item {
   list-style: none;
   margin: 0 10px;
 }
 
-.nav__element_of_list:last-child {
+.nav__element_list-item:last-child {
   margin-right: 0;
 }
 
-.nav__element_of_list:first-child {
+.nav__element_list-item:first-child {
   margin-left: 0;
 }
 
@@ -53,17 +49,16 @@ body {
   display: flex;
   color: #000;
   text-decoration: none;
-  /* padding: calc((var(--max__height) - 14px) / 2) 0; */
   height: var(--max__height);
   line-height: var(--max__height);
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--active_color_link);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--active_color_link);
   position: relative;
 }
 
@@ -71,9 +66,8 @@ body {
   content: "";
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--active_color_link);
   width: 100%;
-
   position: absolute;
   bottom: 0;
 }
