@@ -1,5 +1,5 @@
 # Moyo header
-Replace `<your_account>` with your Github username and copy the links to Pull Request description:
+Replace `Valentyna08` with your Github username and copy the links to Pull Request description:
 - [DEMO LINK](https://Valentyna08.github.io/layout_moyo-header/)
 - [TEST REPORT LINK](https://Valentyna08.github.io/layout_moyo-header/report/html_report/)
 
