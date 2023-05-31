@@ -19,13 +19,12 @@ body {
 
 /* stylelint-disable-next-line block-opening-brace-space-before */
 .container{
-  max-width: 1200px;
-  margin: 0 auto;
+  background-color: #fff;
 }
 
 header {
-  /* stylelint-disable-next-line color-hex-length */
-  background-color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,6 +51,24 @@ nav ul li a {
 /* stylelint-disable-next-line block-opening-brace-space-before */
 nav ul li a:hover{
   color: #00ACDC;
+}
+
+.active {
+  color: #00ACDC;
+}
+
+.active::after {
+  color: #00ACDC;
+  display: block;
+  position: absolute;
+  content: "";
+  height: 4px;
+  left: 0;
+  top: 22px;
+  width: 100%;
+  background: #00ACDC;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
 }
 
 .is-active:hover::after {
