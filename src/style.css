@@ -1,39 +1,32 @@
 /* Styles go here */
-
-html {
+* {
   margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  box-sizing: border-box;
   background: #fff;
   --main-color: #00acdc;
+  --main-font: roboto, arial, sans-serif;
+  --link-color: #000;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  position: relative;
   top: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav {
-  position: relative;
-  display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin-right: 50px;
 }
 
 .nav_list {
   display: flex;
-  position: relative;
   padding: 0 40px;
-  margin-left: -50px;
-  margin-right: -50px;
+  margin: 16px -50px;
 }
 
 .nav_item {
@@ -44,14 +37,12 @@ body {
 
 .nav_link {
   text-decoration: none;
-  color: #000;
-  font-family: Roboto, Arial, sans-serif;
+  color: var(--link-color);
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
   text-transform: uppercase;
-  position: relative;
   padding: 23px 0;
   margin: 0 10px;
 }
@@ -61,7 +52,6 @@ body {
 }
 
 .logo {
-  position: relative;
   justify-content: space-between;
   display: flex;
   margin: 5px 0;
