@@ -1,1 +1,91 @@
 /* Styles go here */
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: #fff;
+  --main-color: #00acdc;
+}
+
+.header {
+  position: relative;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* border: 1px solid black; */
+  /* padding: 4px 40px; */
+}
+
+.nav_list {
+  display: flex;
+  position: relative;
+  margin-right: 40px;
+}
+
+.nav_item {
+  display: inline-block;
+  list-style-type: none;
+  padding: 4px 0;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: #000;
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 23px 0;
+  margin: 0 10px;
+}
+
+.nav_link:hover {
+  color: var(--main-color);
+}
+
+.logo {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 5px 0;
+}
+
+.nav_logo {
+  position: absolute;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.is-active {
+  color: var(--main-color);
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  /* display: flex; */
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  background-color: var(--main-color);
+  border-radius: 8px;
+  pointer-events: none;
+}
