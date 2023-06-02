@@ -1,5 +1,3 @@
-/* Styles go here */
-/* reset default styles */
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -9,15 +7,21 @@ body {
   box-sizing: border-box;
 }
 
-/* Header */
 .header {
-  padding: 10px 50px 10px 23.5px;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.header__logo--img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+.header__list {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.header__logo-img {
+  width: 100%;
+  height: 100%;
 }
 
 .header__wrapper {
@@ -26,13 +30,18 @@ body {
   align-items: center;
 }
 
-.header__list {
-  display: flex;
-  list-style: none;
+.header__item {
+  margin-left: 20px;
 }
 
-.header__item + .header__item {
-  margin-left: 20px;
+.header__item:first-child {
+  margin-left: 0;
+}
+
+.header__logo-link {
+  display: block;
+  width: 40px;
+  height: 40px;
 }
 
 .header__link {
@@ -43,7 +52,9 @@ body {
   text-transform: uppercase;
   color: #000;
   transition: color 0.3s ease-in;
-  padding: 18px 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .header__link:hover {
@@ -59,9 +70,10 @@ body {
 .header__link.is-active::after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 4px;
   bottom: 0;
   left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
   background-color: #00acdc;
 }
