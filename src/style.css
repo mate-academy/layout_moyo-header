@@ -1,1 +1,81 @@
 /* Styles go here */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  --main-color: #00acdc;
+  --main-font: roboto, arial, sans-serif;
+  --link-color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+  flex-direction: row;
+  margin-right: 50px;
+}
+
+.nav_list {
+  display: flex;
+  padding: 0 40px;
+  margin: 16px -50px;
+}
+
+.nav_item {
+  display: inline-block;
+  list-style-type: none;
+  padding: 4px 0;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: var(--link-color);
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 23px 0;
+  margin: 0 10px;
+}
+
+.nav_link:hover {
+  color: var(--main-color);
+}
+
+.logo {
+  justify-content: space-between;
+  display: flex;
+  margin: 5px 0;
+}
+
+.nav_logo {
+  position: absolute;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.is-active {
+  color: var(--main-color);
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  background-color: var(--main-color);
+  border-radius: 8px;
+  pointer-events: none;
+}
