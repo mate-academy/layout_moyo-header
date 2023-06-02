@@ -1,4 +1,8 @@
 /* Styles go here */
+:root {
+  --main-clr: #00acdc;
+}
+
 * {
   margin: 0;
 }
@@ -26,13 +30,12 @@ body {
   margin: 0;
 }
 
-.list-item {
-
+.nav__item {
   margin-right: 20px;
   text-transform: uppercase;
 }
 
-.list-item:last-child {
+.nav__item:last-child {
   margin: 0;
 }
 
@@ -48,7 +51,7 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-clr);
 }
 
 .is-active::after {
@@ -56,11 +59,11 @@ body {
   content: "";
   width: 37px;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--main-clr);
   border-radius: 8px;
   bottom: 0;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-clr);
 }
