@@ -7,12 +7,15 @@ body {
   margin: 0;
 }
 
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -33,15 +36,15 @@ body {
   display: flex;
 }
 
-.nav__list__item {
+.nav__item {
   display: flex;
 }
 
-.nav__list__item:not(:first-child) {
+.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
-.nav__list__item__link {
+.nav__link {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
@@ -49,10 +52,7 @@ body {
   padding: 23px 0;
 }
 
-.nav__list__item__link:hover {
-  color: var(--color-hover);
-}
-
+.nav__link:hover,
 .is-active {
   color: var(--color-hover);
 }
