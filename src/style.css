@@ -1,5 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
-  font-family: Roboto , sans-serif ;
+  font-family: Roboto, sans-serif;
   margin: 0;
 }
 
@@ -9,7 +13,6 @@ body {
 }
 
 .header {
-  box-sizing: border-box;
   position: relative;
   width: 1200px;
   margin: 0;
@@ -24,17 +27,17 @@ body {
   width: 40px;
 }
 
-.links {
+.nav_list {
   display: flex;
   padding: 0;
 }
 
-li {
+.nav__item {
   list-style: none;
   margin-left: 20px;
 }
 
-.link {
+.nav__link {
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
@@ -45,9 +48,8 @@ li {
   padding: 10px 0 ;
 }
 
-.link:hover ,
-.is-active ,
-.colored {
+.nav__link:hover ,
+.is-active {
   color: #00acdc;
 }
 
@@ -58,6 +60,10 @@ li {
   background-color: #00acdc;
   width: 37px;
   height: 4px;
+}
+
+.nav__link:active {
+  color: #00acdc;
 }
 
 @media(max-width: 1199px) {
