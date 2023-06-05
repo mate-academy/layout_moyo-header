@@ -1,1 +1,76 @@
-/* Styles go here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+:root {
+  --color-hover: #00acdc;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo-img {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link:hover {
+  cursor: pointer;
+  color: var(--color-hover);
+}
+
+.nav__link:active {
+  color: var(--color-hover);
+}
+
+.nav__link:focus {
+  color: var(--color-hover);
+}
+
+.is-active {
+  color: var(--color-hover);
+}
+
+.is-active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-hover);
+  border-radius: 8px;
+}
