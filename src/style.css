@@ -1,6 +1,14 @@
 /* Styles go here */
+html {
+  --primary-color: #00acdc;
+  --nav-link-height: 60px;
+  --nav-link-font-size: 12px;
+  --nav-link-margin-right: 20px;
+}
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -30,19 +38,19 @@ body {
 .nav__link {
   display: flex;
   align-items: center;
-  height: 60px;
+  height: var(--nav-link-height);
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  margin-right: 20px;
+  font-size: var(--nav-link-font-size);
+  margin-right: var(--nav-link-margin-right);
   position: relative;
 }
 
 .nav__link:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .is-active:after {
@@ -51,7 +59,7 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 3px;
-  background-color: #00acdc;
+  background-color: var(--primary-color);
   position: absolute;
   bottom: 0;
   left: 0;
