@@ -1,9 +1,8 @@
-/* Styles go here */
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-  text-transform: uppercase;
+  --hover-color: #00acdc;
 }
 
 .header {
@@ -11,6 +10,7 @@ body {
   padding: 0 50px;
   align-items: center;
   justify-content: space-between;
+  text-transform: uppercase;
 }
 
 .logo__img {
@@ -26,38 +26,33 @@ body {
   padding: 0;
 }
 
-.nav__item {
+.nav__item:not(:first-child) {
   margin-left: 20px;
-}
-
-.nav__item:first-of-type {
-  margin-left: 0;
 }
 
 .nav__link {
   display: block;
-  height: 60px;
-  line-height: 60px;
+  padding: 23px 0;
   color: #000;
   text-decoration: none;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--hover-color);
   position: relative;
 }
 
 .is-active::after {
-  display: flex;
+  display: block;
   position: absolute;
   bottom: 0;
   content: "";
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--hover-color);
 }
