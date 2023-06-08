@@ -1,4 +1,10 @@
 /* Styles go here */
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -12,14 +18,11 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
-  height: 60px;
 }
 
 .logo__img {
   width: 40px;
   height: 40px;
-  margin-top: 10px;
-  margin-bottom: 10px;
   display: block;
 }
 
@@ -46,6 +49,7 @@ body {
   display: flex;
   justify-items: center;
   align-items: center;
+  padding: 23px 0;
 }
 
 .nav__item {
@@ -58,11 +62,11 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
   position: relative;
 }
 
@@ -70,15 +74,13 @@ body {
   content: "";
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--main-color);
   display: block;
   position: absolute;
   bottom: 0;
-  width: 37px;
+  width: 100%;
 }
 
-ul,
-li {
-  margin: 0;
-  padding: 0;
+:root {
+  --main-color: #00acdc;
 }
