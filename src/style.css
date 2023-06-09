@@ -1,5 +1,8 @@
-.body {
-  max-width: 1200px;
+:root {
+  --link-color: #00acdb;
+}
+
+body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
 }
@@ -23,31 +26,39 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  list-style-type: none;
+  float: right;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
 }
 
 .nav-link {
   text-decoration: none;
   cursor: pointer;
   display: flex;
-  align-items: center;
-  position: relative;
-  margin-right: 20px;
   color: black;
   padding: 23px 0;
+  align-items: center;
+  position: relative;
 }
 
 .nav-link:hover {
-  color: #00acdb;
+  color: var(--link-color);
 }
 
 .is-active {
-  color: #00acdb;
+  color: var(--link-color);
   font-style: normal;
   font-size: 12px;
   text-transform: uppercase;
 }
 
-a:last-child {
+li {
+  margin-right: 20px;
+}
+
+li:last-child {
   margin-right: 0;
 }
 
