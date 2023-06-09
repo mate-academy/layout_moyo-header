@@ -53,7 +53,7 @@ body {
 }
 
 .nav__item {
-  margin-left: 20px;
+  margin: 0 20px 0 0;
   line-height: var(--main-height);
   list-style: none;
   position: relative;
@@ -73,19 +73,6 @@ body {
 
 }
 
-.nav__item:hover::after {
-  content: "";
-  height: 4px;
-  width: 100%;
-  background-color: var(--main-color);
-  border-radius: 8px;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-}
-
 .nav__link:hover {
   color: var(--main-color);
 }
@@ -94,6 +81,6 @@ body {
   color: var(--main-color);
 }
 
-.hover {
-  color: var(--main-color);
+.nav__item:last-child {
+  margin: 0;
 }
