@@ -1,6 +1,10 @@
 /* stylelint-disable selector-list-comma-newline-after */
 @import url(https://fonts.googleapis.com/css2?family=Caveat&family=Roboto:wght@500&display=swap);
 
+:root {
+  --main-font-color: #00acdc;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,11 +19,11 @@ header {
   width: 1200px;
   height: 60px;
   margin: auto;
-  padding-top: 30px;
+
 }
 
 .nav_link , .is-active {
-  flex-direction: row;
+  height: 40px;
   color: #000;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -32,8 +36,7 @@ header {
 }
 
 .nav_link:hover {
-  color: #00acdc;
-  border-bottom: 4px solid #00acdc;
+  color: var(--main-font-color);
 }
 
 .picture {
@@ -56,6 +59,6 @@ header {
 }
 
 .is-active {
-  color: #00acdc;
-  border-bottom: 4px solid #00acdc;
+  color: var(--main-font-color);
+  border-bottom: 4px solid  var(--main-font-color);
 }
