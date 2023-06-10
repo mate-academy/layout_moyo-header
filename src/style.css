@@ -1,3 +1,84 @@
-body {
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+ul,
+li {
   margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #00acdc;
+}
+
+.header {
+  display: flex;
+  padding: 0 50px;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.logo__img {
+  height: 40px;
+  width: 40px;
+  display: block;
+}
+
+.nav {
+  display: inline-block;
+  height: 100%;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  height: 100%;
+}
+
+.nav__link {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 500;
+  height: 100%;
+  padding: 23px 0;
+}
+
+.nav__item {
+  margin-right: 20px;
+  height: 100%;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.is-active {
+  position: relative;
+  color: var(--main-color);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: var(--main-color);
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav__link:hover {
+  color: var(--main-color);
 }
