@@ -6,12 +6,11 @@ body {
 }
 
 .header {
-  min-width: 1024px;
-  max-width: 1200px;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 50px;
+  padding: 0 50px;
   background-color: #fff;
   height: 60px;
 }
@@ -33,12 +32,16 @@ body {
   font-size: 12px;
   padding: 23px 0;
   text-decoration: none;
+  color: #000;
 }
 
 .nav__list {
   display: flex;
   list-style: none;
   height: 100%;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .nav__item {
@@ -65,4 +68,20 @@ body {
   height: 4px;
   position: absolute;
   border-radius: 8px;
+}
+
+.nav_item_last {
+  margin-right: 0;
+}
+
+@media (min-width > 120px) {
+  .header {
+    width: 1200px;
+  }
+}
+
+@media (min-width < 1200px) {
+  .header {
+    width: 1024px;
+  }
 }
