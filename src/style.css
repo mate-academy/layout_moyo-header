@@ -2,35 +2,37 @@
 :root {
   --header-height: 60px;
   --line-height: 14.6px;
+  --mainColor: #00acdc;
+}
+
+body {
+  margin: 0;
 }
 
 .header {
-  width: 1024px;
+  max-width: 1200px;
   margin: auto 0;
   height: var(--header-height);
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
-  position: relative;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
 .nav {
-  position: absolute;
-  right: 50px;
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
+  justify-content: space-between;
 }
 
 .moyo {
   height: 40px;
   width: 40px;
-  position: absolute;
-  left: 50px;
 }
 
 .nav__list {
@@ -69,11 +71,11 @@
 
 .nav__link:hover {
   cursor: pointer;
-  color: #00acdc;
+  color: var(--mainColor);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--mainColor);
 }
 
 .is-active::after {
@@ -81,14 +83,8 @@
   position: absolute;
   width: 100%;
   transform: scaleX(1);
-  border-bottom: 4px solid #00acdc;
+  border-bottom: 4px solid var(--mainColor);
   border-radius: 8px;
   bottom: 0;
   left: 0;
-}
-
-@media (min-width: 1200px) {
-  .header {
-    width: 1200px;
-  }
 }
