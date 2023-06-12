@@ -1,5 +1,5 @@
 html {
-  --header-font-family: "Roboto", "sans-serif";
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
 
@@ -26,7 +26,6 @@ body {
 }
 
 .header {
-  font-family: var(--header-font-family);
   font-size: 12px;
   display: flex;
   align-items: center;
@@ -35,12 +34,8 @@ body {
   padding: 0 50px;
 }
 
-.nav__item {
+.nav__item:not(:last-child) {
   margin-right: 20px;
-}
-
-.nav__item:last-child {
-  margin-right: 0;
 }
 
 .header__logo {
