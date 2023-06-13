@@ -1,7 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", sans-serif;
-  min-width: 1024px;
-  max-width: 1200px;
 }
 
 body {
@@ -10,35 +12,33 @@ body {
 }
 
 .header {
+  min-width: 1024px;
   display: flex;
-  padding: 0 40px 0 50px;
+  padding: 0 50px;
   align-items: center;
   justify-content: space-between;
   background: #fff;
+  width: 100%;
 }
 
 .logo__img {
   display: block;
   width: 40px;
   height: 40px;
-  position: absolute;
   align-self: center;
-  margin: 10px 0 10px 50px;
 }
 
-.nav__lists {
+.nav__list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
-  text-transform: uppercase;
 }
 
 .nav__link {
   color: black;
   position: relative;
   display: block;
-  font-style: normal;
   padding: 23px 0;
   font-weight: 500;
   line-height: 14px;
@@ -48,22 +48,18 @@ body {
   margin-right: 20px;
 }
 
-.nav__item a::after {
-  content: " ";
+.is-active::after {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 3px;
-  width: 0%;
+  height: 4px;
+  width: 100%;
   background: #00acdc;
   border-radius: 12px;
 }
 
 .nav__link:hover,
 .nav__link.is-active {
-  color: #00acdc;
-}
-
-.nav__link[data-qa="hover"]:hover {
   color: #00acdc;
 }
