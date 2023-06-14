@@ -5,6 +5,7 @@ html {
 
 body {
   margin: 0;
+  --main-color: #00acdc;
 }
 /* #endregion */
 
@@ -17,6 +18,7 @@ body {
 .logo__link {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .nav {
@@ -47,14 +49,15 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active::after {
+  color: var(--main-color);
   content: " ";
   position: absolute;
   bottom: 0;
@@ -62,16 +65,4 @@ body {
   width: 100%;
   border-radius: 2px;
   background-color: #00acdc;
-}
-
-@media (min-width: 1200px) {
-  /* .logo {
-    margin: 10px 419px 10px 50px;
-  } */
-}
-
-@media (min-width: 1024px) {
-  /* .logo {
-    margin: 10px 243px 10px 50px;
-  } */
 }
