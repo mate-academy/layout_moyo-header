@@ -1,5 +1,8 @@
 html {
   font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 body {
@@ -16,13 +19,14 @@ h1 {
   padding: 0 50px;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: white;
+  --main-hd-color: #00acdc;
 }
 
 .nav__list {
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
   list-style-type: none;
 }
 
@@ -39,10 +43,6 @@ h1 {
 .nav__link {
   display: block;
   margin: 0 0 0 20px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
   height: 60px;
   line-height: 60px;
   text-transform: uppercase;
@@ -52,60 +52,49 @@ h1 {
 }
 
 a:hover {
-  color: #00acdc;
-  text-decoration-color: #00acdc;
+  color: var(--main-hd-color);
+  text-decoration-color: var(--main-hd-color);
 }
 
 a:active {
-  color: #00acdc;
-  text-decoration-color: #00acdc;
+  color: var(--main-hd-color);
+  text-decoration-color: var(--main-hd-color);
 }
 
 a[rev]:after {
   display: block;
   position: relative;
-  border: 2px solid #00acdc;
+  border: 2px solid var(--main-hd-color);
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--main-hd-color);
   bottom: 4px;
   z-index: 1;
 }
 
-a:active:after {
+a:active::after {
   content: "";
-  /* width: 100%; */
   width: inherit;
 }
 
-/* [data-qa="hover"] {
-  color: #00acdc;
-  text-decoration-color: #00acdc;
-} */
-
 a.is-active {
   display: block;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
   height: 60px;
   line-height: 60px;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  color: #00acdc;
-  text-decoration-color: #00acdc;
+  color: var(--main-hd-color);
+  text-decoration-color: var(--main-hd-color);
 }
 
-a[rel]:after {
+a[rel]::after {
   display: block;
   position: relative;
-  border: 2px solid #00acdc;
+  border: 2px solid var(--main-hd-color);
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--main-hd-color);
   bottom: 4px;
   z-index: 1;
   content: "";
-  /* width: 100%; */
   width: inherit;
 }
