@@ -1,18 +1,10 @@
+html {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
 body {
   margin: 0;
   --link-collor: #00acdc;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .container {
@@ -27,6 +19,9 @@ ul {
 }
 
 .nav__list-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: flex;
   flex-direction: row;
 }
@@ -46,16 +41,15 @@ ul {
 }
 
 .nav__link {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
-  cursor: pointer;
+  text-decoration: none;
   color: #000;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .is-active,
@@ -66,7 +60,7 @@ ul {
 .is-active::after {
   content: "";
   display: block;
-  border-bottom: 4px solid #00acdc;
+  border-bottom: 4px solid var(--link-collor);
   border-radius: 8px;
   position: absolute;
   bottom: 0;
