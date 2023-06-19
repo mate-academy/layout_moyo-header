@@ -40,5 +40,4 @@ and positioning
 - Uppercase letters for `nav__list` are made with styles, not hardcoded into
 html (you should have usual text with first uppercase letter in html)
 - Don't set height for `header` explicitly. Let the content (links) dictate it.
-- Logo should also be a link to the main page of the website (#home). But it
-should not be part of `nav`.
+- Logo should also be a link to the main page of the website (#home). But it should not be part of `nav`.
