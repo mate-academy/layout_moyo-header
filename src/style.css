@@ -8,20 +8,24 @@ body {
   margin: 0;
 }
 
+.header {
+  padding: 0 50px;
+  box-shadow: 0 2px 4px #0a0a0a1a;
+}
+
 .header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  box-shadow: 0 2px 4px #0a0a0a1a;
-  padding: 0 50px;
+}
+
+.logo {
+  height: 40px;
 }
 
 .logo__img {
-  position: absolute;
   height: 40px;
-  left: 50px;
-  top: 10px;
 }
 
 .nav__list {
@@ -31,12 +35,8 @@ body {
   padding: 0;
 }
 
-.nav__item {
+.nav__item:not(.nav__item:first-child) {
   margin-left: 20px;
-}
-
-.nav__item:first-child {
-  margin-left: 0;
 }
 
 .nav__link {
