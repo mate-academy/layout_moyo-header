@@ -1,4 +1,11 @@
 /* Styles go here */
+@import url("https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,500;1,500 & display=swap");
+
+html {
+  font-family: "Roboto", sans-serif;
+  --navcolor: #00acdc;
+}
+
 .header {
   width: 100%;
   height: 60px;
@@ -10,8 +17,6 @@
 }
 
 .nav__list {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-size: 12px;
   line-height: 14px;
   font-weight: 500;
@@ -31,9 +36,6 @@
 
 .nav__item {
   display: flex;
-  flex-direction: row ;
-  align-items: center;
-  text-align: center;
   margin-right: 20px;
 }
 
@@ -44,7 +46,6 @@
 .nav__link {
   text-decoration: none;
   color: #000;
-  height: 60px;
   line-height: 60px;
   cursor: pointer;
   display: flex;
@@ -62,23 +63,19 @@
 
 .is-active {
   display: flex;
-  color: #00acdc;
+  color: var(--navcolor);
   text-decoration: none;
 }
 
 .is-active::after {
   content: "";
   bottom: 0;
-  border-bottom: 4px #00acdc solid;
+  border-bottom: 4px var(--navcolor) solid;
   border-radius: 8px;
   width: 100%;
   position: absolute;
 }
 
 .nav__link:hover {
-  color: #00acdc;
-}
-
-[data-qa="hover"]:hover {
-  color: #00acdc;
+  color: var(--navcolor);
 }
