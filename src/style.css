@@ -47,17 +47,17 @@ body {
   cursor: pointer;
 }
 
-a:hover {
+.nav__link:hover {
   color: var(--main-hd-color);
   text-decoration-color: var(--main-hd-color);
 }
 
-a:active {
+.nav__link:active {
   color: var(--main-hd-color);
   text-decoration-color: var(--main-hd-color);
 }
 
-a[rev]:after {
+.nav__link:after {
   display: block;
   position: relative;
   border: 2px solid var(--main-hd-color);
@@ -67,12 +67,12 @@ a[rev]:after {
   z-index: 1;
 }
 
-a:active::after {
+.nav__link:active::after {
   content: "";
   width: inherit;
 }
 
-a.is-active {
+.is-active {
   display: block;
   height: 60px;
   line-height: 60px;
@@ -83,7 +83,7 @@ a.is-active {
   text-decoration-color: var(--main-hd-color);
 }
 
-a[rel]::after {
+.is-active::after {
   display: block;
   position: relative;
   border: 2px solid var(--main-hd-color);
