@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
+:root {
+  --light-blue: rgb(0, 172, 220);
+  --white: rgb(255, 255, 255);
+}
+
 * {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -13,25 +18,27 @@ body {
   margin: 0 auto;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
-
-.navigation {
-  background: rgb(255, 255, 255);
-  /* height: 60px; */
+header {
+  background: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 10px 50px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.nav__link:hover {
+  color: var(--light-blue);
 }
 
 .logo {
@@ -40,11 +47,11 @@ a {
   align-items: center;
 }
 
-.bar {
+.nav__wrapper {
   display: flex;
 }
 
-.item {
+.nav__item {
   position: relative;
   margin-right: 20px;
   font-size: 12px;
@@ -55,12 +62,8 @@ a {
   margin-right: 0;
 }
 
-.item [data-qa="hover"] {
-  color: rgb(0, 172, 220);
-}
-
 .is-active {
-  color: rgb(0, 172, 220);
+  color: var(--light-blue);
 }
 
 .is-active:after {
@@ -71,9 +74,5 @@ a {
   bottom: -25px;
   width: 100%;
   height: 4px;
-  background-color: rgb(0, 172, 220);
-}
-
-a:hover {
-  color: rgb(0, 172, 220);
+  background-color: var(--light-blue);
 }
