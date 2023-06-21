@@ -1,3 +1,121 @@
-body {
-  margin: 0;
+/* stylelint-disable no-duplicate-selectors */
+html {
+  background-color: #e5e5e5;
+  font-family: Roboto, sans-serif;
+}
+
+.nav1 {
+  width: 1200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  font-size: 12px;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+}
+
+.apple {
+  color: #00acdc;
+  text-decoration: underline;
+  text-decoration-color: #00acdc;
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.3em;
+  text-underline-offset: 2.7em;
+}
+
+[data-qa="laptops"] {
+  color: #00acdc;
+  text-decoration: none;
+
+}
+
+.box2 {
+  width: 1024px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px 20px;
+  font-size: 12px;
+  border: 2px solid #fff;
+}
+
+.box {
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+
+.is-active {
+  color: #00acdc;
+  text-decoration: underline;
+  text-decoration-color: #00acdc;
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+a {
+  margin: 0 5px;
+}
+
+a:hover {
+  color: #00acdc;
+  text-decoration: underline;
+}
+
+.nav1:hover {
+  border-color: #00acdc;
+}
+
+.box2:hover {
+  border-color: #00acdc;
+}
+
+.logo {
+  border: 2px solid #fff;
+  display: inline-block ;
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.logo:hover {
+  border-color: #00acdc;
+}
+
+.nav__link a {
+  position: relative;
+  /* stylelint-disable-next-line shorthand-property-no-redundant-values */
+  padding: 5px 5px;
+}
+
+.nav__link a.is-active {
+  position: relative;
+
+}
+
+.nav__link a.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 5px;
+  height: 4px;
+  width: 37px;
+  border-radius: 8px;
+  background-color: #00acdc;
+  transform: scaleX(0);
+}
+
+.nav__link a.is-active:first-child::after,
+.nav__link a.is-active:nth-child(2)::after {
+  transform: scaleX(1);
 }
