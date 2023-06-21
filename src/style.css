@@ -12,63 +12,60 @@ html {
 
 body {
   margin: 0;
-  background: #e5e5e5;
 }
 
 .header {
-  width: 100%;
   display: flex;
-  background-color: #fff;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 50px;
 }
 
-.nav {
-  display: inline-block;
-  font-weight: 500;
-  font-size: 12px;
+.logo {
+  width: 40px;
+  height: 40px;
 }
 
 .nav__list {
   display: flex;
   list-style: none;
-  text-transform: uppercase;
   padding: 0;
   margin: 0;
 }
 
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
 .nav__link {
-  display: inline-block;
   position: relative;
+  text-transform: uppercase;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
   color: #000;
-  margin: 0 10px;
   height: 60px;
-  line-height: 60px;
-}
-
-.is-active {
-  color: var(--hoverColor);
-}
-
-.is-active::after {
-  display: block;
-  content: "";
-  color: var(--hoverColor);
-  background-color: var(--hoverColor);
-  position: absolute;
-  bottom: 0;
-  height: 4px;
-  border-radius: 8px;
-  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .nav__link:hover {
   color: var(--hoverColor);
 }
 
-.logo {
-  margin: 10px;
-  display: block;
+.is-active {
+  color: var(--hoverColor);
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  background-color: var(--hoverColor);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 8px;
+  width: 100%;
 }
