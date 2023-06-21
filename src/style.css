@@ -1,51 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
   --hoverColor: #00acdc;
 }
 
 body {
   margin: 0;
   background: #e5e5e5;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
 }
 
 .header {
+  width: 100%;
   display: flex;
   background-color: #fff;
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
-  position: relative;
-  box-sizing: border-box;
 }
 
-@media screen and (width="1200px") {
-  .header {
-    width: 1200px;
-  }
-}
-
-@media screen and (width="1024") {
-  .header {
-    width: 1024px;
-  }
+.nav {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .nav__list {
   display: flex;
   list-style: none;
   text-transform: uppercase;
-  font-weight: 500;
   padding: 0;
   margin: 0;
 }
 
-.list__item {
-  display: inline-block;
-}
-
 .nav__link {
   display: inline-block;
+  position: relative;
   text-decoration: none;
   color: #000;
   margin: 0 10px;
@@ -66,7 +61,7 @@ body {
   bottom: 0;
   height: 4px;
   border-radius: 8px;
-  width: 3em;
+  width: 100%;
 }
 
 .nav__link:hover {
@@ -74,6 +69,6 @@ body {
 }
 
 .logo {
+  margin: 10px;
   display: block;
-  margin: 0 10px;
 }
