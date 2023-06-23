@@ -1,4 +1,8 @@
-body {
+:root {
+  --my-color: #00acdc;
+}
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -56,21 +60,21 @@ ul {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--my-color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--my-color);
 }
 
 .is-active::after {
   content: "";
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  color: var(--my-color);
   display: block;
   position: absolute;
   bottom: 0;
-  width: 37px;
+  width: 100%;
 }
