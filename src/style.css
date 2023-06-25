@@ -1,11 +1,13 @@
 html {
+  --nav-link-color: #00acdc;
+
   font-family: Roboto, sans-serif;
 }
 
 body {
   margin: 0;
 }
-/* #region header */
+
 .header {
   display: flex;
   align-items: center;
@@ -21,8 +23,7 @@ body {
   height: 40px;
   padding: 10px 0;
 }
-/* #endregion */
-/* #region nav */
+
 .nav {
   display: inline-block;
 }
@@ -49,11 +50,11 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--nav-link-color);
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--nav-link-color);
 }
 
 .is-active {
@@ -67,7 +68,6 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  border-bottom: 4px solid #00acdc;
+  border-bottom: 4px solid var(--nav-link-color);
   border-radius: 8px;
 }
-/* #endregion */
