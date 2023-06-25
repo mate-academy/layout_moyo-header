@@ -5,10 +5,10 @@ body {
   margin: 0;
 }
 
-a {
+.link {
   text-decoration: none;
   color: #000;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   position: relative;
   height: 100%;
   display: flex;
@@ -17,8 +17,8 @@ a {
   font-size: 12px;
 }
 
-a.is-active::after {
-  content: '';
+.link.is-active::after {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -29,20 +29,20 @@ a.is-active::after {
   background: #00acdc;
 }
 
-a.is-active,
-a[data-qa="hover"],
-a:hover {
+.link.is-active,
+.link[data-qa="hover"],
+.link:hover {
   color: #00acdc;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 50px;
+  align-items:center;
 }
 
-li {
+.li_list_header {
   list-style-type: none;
   height: 100%;
   display: flex;
@@ -51,7 +51,7 @@ li {
   margin: 0 10px;
 }
 
-ul {
+.ul_list_header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -63,8 +63,6 @@ ul {
 .logo-img {
   width: 40px;
   height: 40px;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .nav__list {
