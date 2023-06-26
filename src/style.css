@@ -1,14 +1,22 @@
 /* stylelint-disable rule-empty-line-before */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
+:root {
+  --color-blue: #00acdc;
+  --color-black: #000;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
 }
 
 .link {
   text-decoration: none;
-  color: #000;
-  font-family: "Roboto", sans-serif;
+  color: var(--color-black);
   position: relative;
   height: 100%;
   display: flex;
@@ -26,13 +34,13 @@ body {
   height: 4px;
   width: 100%;
   z-index: 9;
-  background: #00acdc;
+  background: var(--color-blue);
 }
 
 .link.is-active,
 .link[data-qa="hover"],
 .link:hover {
-  color: #00acdc;
+  color: var(--color-blue);
 }
 
 .header {
