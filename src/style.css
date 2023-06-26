@@ -6,7 +6,7 @@ html {
   text-transform: uppercase;
   white-space: nowrap;
   text-decoration: none;
-  color: #000;
+  --main-color: #000;
 }
 
 .body {
@@ -51,12 +51,12 @@ html {
   position: relative;
   height: 60px;
   cursor: pointer;
-  color: black;
+  color: var(--main-color);
   text-decoration: none;
 }
 
 .is-active {
-  color: #00acdc;
+  --active-color: #00acdc;
 }
 
 .is-active::after {
@@ -67,11 +67,11 @@ html {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--active-color);
 }
 
 :hover {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .logo {
