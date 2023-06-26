@@ -1,3 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color_hover: #00acdc;
+  --color_text: #000;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
 body {
   margin: 0;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav_link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 60px;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+
+  transition: color 0.3s;
+}
+
+.nav_link:hover {
+  color: var(--color_hover);
+}
+
+.apple-link {
+  color: #00acdc;
+}
+
+.nav_link.is-active::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color_hover);
 }
