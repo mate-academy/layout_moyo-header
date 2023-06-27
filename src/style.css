@@ -1,3 +1,78 @@
+/* stylelint-disable selector-list-comma-newline-after */
+@import url(https://fonts.googleapis.com/css2?family=Caveat&family=Roboto:wght@500&display=swap);
+
+:root {
+  --main-font-color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: block;
+}
+
+.nav__item {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: flex;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  height: 60px;
+  line-height: 14px;
+  align-items: center;
+}
+
+.is-active {
+  color: var(--main-font-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--main-font-color);
+}
+
+.nav__link:hover {
+  color: #00acdc;
 }
