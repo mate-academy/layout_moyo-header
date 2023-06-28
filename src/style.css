@@ -1,5 +1,6 @@
 html {
   font-family: Roboto, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,24 +12,16 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  margin: 0 50px;
-
   background-color: #fff;
-  /* border: 5px solid orange; */
 }
 
 .logo {
   display: flex;
-  margin: 0 auto 0 0;
-}
-
-.logo__img {
-  /* border: 2px solid pink; */
+  margin: 0 auto 0 50px;
 }
 
 .nav {
-  /* border: 2px solid green; */
+  margin: 0 50px 0 0;
 }
 
 .nav__list {
@@ -37,23 +30,16 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  /* border: 2px solid pink; */
-}
 
-.nav__item {
-  margin: 0;
-  /* border: 2px solid purple; */
 }
 
 .nav__link {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
-  margin: 0 0 0 20px;
-
   height: 60px;
-  /* border: 2px solid red; */
+  margin: 0 10px;
 
   color: #000;
   text-align: center;
@@ -61,6 +47,14 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 12px;
+}
+
+.nav__link__first {
+  margin-left: 0;
+}
+
+.nav__link__last {
+  margin-right: 0;
 }
 
 .nav__item .nav__link {
