@@ -1,3 +1,73 @@
+:root {
+  --activeColor: #00acdc;
+  --textcolor: #000;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  padding: 23px 0;
+  line-height: 60px;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--textcolor);
+}
+
+.nav__link:hover {
+  color: var(--activeColor);
+}
+
+.is-active {
+  position: relative;
+  color: var(--activeColor);
+}
+
+.is-active::after {
+  position: absolute;
+  display: block;
+  content: "";
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  background-color: var(--activeColor);
+  bottom: 0;
 }
