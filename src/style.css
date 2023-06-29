@@ -1,12 +1,10 @@
 html {
-  margin: 0;
-  padding: 0;
+  font-family: Roboto, sans-serif;
   --alternative-text-color: #00acdc;
 }
 
 body {
   margin: 0;
-  padding: 0;
 }
 
 .header {
@@ -31,32 +29,39 @@ body {
   padding: 0;
 }
 
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
 .nav__link {
   display: block;
   cursor: pointer;
-  color: black;
-  font-family: Roboto, sans-serif;
+  color: #000;
   font-size: 12px;
   text-decoration: none;
   text-transform: uppercase;
   padding: 23px 0;
-  margin-left: 20px;
 }
 
-.nav__link:hover {
-  color: var(--alternative-text-color);
-}
-
+.nav__link:hover,
 .is-active {
   color: var(--alternative-text-color);
 }
 
+.is-active {
+  position: relative;
+}
+
 .is-active::after {
   position: absolute;
-  top: 56px;
+  bottom: 0;
   display: block;
   content: "";
-  width: 37px;
+  width: 100%;
   height: 4px;
   border-radius: 8px;
   background: var(--alternative-text-color);
