@@ -1,93 +1,78 @@
-/* Actual styles */
+/* Root styles, css variables, maybe should move to html? */
 :root {
   --main-bg-color: #fff;
   --text-color: #000;
   --link-color: #00acdc;
 }
-
-.moyo-nav {
-  height: 60px;
-  background-color: var(--main-bg-color);
-  display: flex;
-  align-items: center;
-  box-shadow: 0 4 4 0 rgba(0, 0, 0, 0.25);
-  /* border: var(--text-color) solid 1px; */
-}
-
-.moyo-links {
-  display: flex;
-  margin-right: 30px;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.moyo-image {
-  margin-left: 50px;
-}
-
-.moyo-image img {
-  height: 40px;
-  width: 40px;
-  display: block;
-  margin: 0 auto;
-}
-
-.moyo-link {
-  margin-right: 20px;
-  color: var(--text-color);
-  font-size: 12px;
+/* Typography */
+html {
   font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  text-transform: uppercase;
-  text-decoration: none;
+}
+/* Use normilize.css instead */
+/* body {
+  margin: 0;
+} */
+
+.header {
+  align-items: center;
 }
 
-.moyo-link:hover {
+.logo {
+  margin-right: 40px;
+  height: 40px;
+}
+
+.list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list__item {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+}
+
+.list__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.list__item__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  height: 60px;
+}
+
+.header__nav {
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list__item__link.is-active,
+.list__item__link:hover {
   position: relative;
   color: var(--link-color);
 }
 
-.moyo-link:hover::after {
+.list__item__link.is-active::after,
+.list__item__link:hover::after {
   content: "";
   position: absolute;
-  bottom: -18.5px;
+  bottom: 0;
   left: 0;
-  width: 100%;
   height: 4px;
+  width: 100%;
   background-color: var(--link-color);
   border-radius: 8px;
-}
-
-.moyo-link[data-qa="hover"]:hover {
-  content: "";
-  position: absolute;
-  bottom: -18.5px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--link-color);
-  border-radius: 8px;
-}
-
-/* Adaptive design */
-@media (min-width: 1200px) {
-  .moyo-header {
-    width: 1200px;
-  }
-
-  .moyo-image {
-    margin-right: 419px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .moyo-header {
-    width: 1024px;
-  }
-
-  .moyo-image {
-    margin-right: 243px;
-  }
 }
