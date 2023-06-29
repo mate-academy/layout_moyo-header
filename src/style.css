@@ -8,6 +8,7 @@ html {
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
+  --active-color: #00acdc;
 }
 
 body {
@@ -15,10 +16,8 @@ body {
 }
 
 .header {
-  max-width: 1200px;
-  min-width: 1024px;
+  width: 100%;
   padding: 0 50px;
-  /* text-align: right; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +48,7 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .is-active::after {
@@ -60,7 +59,7 @@ body {
   right: 0;
   display: block;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--active-color);
   position: absolute;
   bottom: 0;
 }
@@ -73,5 +72,5 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--active-color);
 }
