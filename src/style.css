@@ -58,20 +58,22 @@ body {
   align-items: center;
 }
 
-.list__item__link.is-active,
 .list__item__link:hover {
+  color: var(--link-color);
+}
+
+.is-active {
   position: relative;
   color: var(--link-color);
 }
 
-.list__item__link.is-active::after,
-.list__item__link:hover::after {
-  content: "";
+.is-active::after {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  display: block;
+  content: "";
+  border-radius: 8px;
   height: 4px;
   width: 100%;
   background-color: var(--link-color);
-  border-radius: 8px;
+  bottom: 0;
 }
