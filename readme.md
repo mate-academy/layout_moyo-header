@@ -1,7 +1,7 @@
 # Moyo header
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://robsza1122.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://robsza1122.github.io/layout_moyo-header/report/html_report/)
 
 > Follow [these instructions](https://mate-academy.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
@@ -19,7 +19,7 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 - use semantic tags: `<header>`, `<nav>`, `ul`
 - change links styles on `:hover`
 - follow styles from the mock
-- the link with `blue` color and line below is an active link. It should have `class="is-active"` and relevant styles.
+- the link with `blue` color and line below is an active link. It should have `class="nav__item"` and relevant styles.
 - the link with only `blue` color is an example of `:hover` styles. Every link in the row should have `blue` color on `:hover`.
 - add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)
 ---
@@ -27,7 +27,7 @@ Create HTML page with the header using `flexbox` basing on [this mockup](https:/
 
 ### Tips & Hints
 - Don't use `gap` property for indents. It's not supported in tests, use `margin` instead.
-- Check one more time if you added `data-qa="hover"` and `class="is-active"`
+- Check one more time if you added `data-qa="hover"` and `class="nav__item"`
 required for tests
 - Do not use `tabs`. Use `2 spaces` for indentation.
 - Don't use repeated styles.
