@@ -1,3 +1,47 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    width: 1024px;
+  }
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin-right: 50px;
+}
+
+.logo__moyo {
+  display: block;
+  padding: 10px 10px 10px 50px ;
+}
+
+.nav__link {
+  display: block;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
 }
