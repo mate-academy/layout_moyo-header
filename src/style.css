@@ -1,3 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+:root {
+  --color-blue: #00acdc;
+  --color-black: #000;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--color-black);
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  z-index: 9;
+  background: var(--color-blue);
+}
+
+.nav__link.is-active,
+.nav__link:hover {
+  color: var(--color-blue);
+}
+
+.header {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+}
+
+.nav__item {
+  list-style-type: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+.nav__list .nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  text-transform: uppercase;
+  height: 100%;
 }
