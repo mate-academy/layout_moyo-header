@@ -1,70 +1,67 @@
+body {
+  margin: 0;
+  width: 100%;
+}
 
-@media (min-width: 1024px) and (max-width: 1200px) {
+html {
+  --nav_height: 60px;
+  --apple_rect_color: #00acdc;
+}
 
-  body {
-    margin: 0;
-  }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+  margin: 0 auto;
+}
 
-  html {
-    --nav_height: 60px;
-    --apple_rect_color: #00acdc;
-  }
+.logo {
+  width: 40px;
+  height: 40px;
+}
 
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-    padding: 0 50px;
-    margin: 0 auto;
-  }
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  .logo {
-    width: 40px;
-    height: 40px;
-  }
+.nav__link {
+  display: inline-block;
+  text-decoration: none;
+  line-height: var(--nav_height);
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
 
-  .nav__list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
 
-  .nav__link {
-    display: inline-block;
-    text-decoration: none;
-    line-height: var(--nav_height);
-    padding: 0;
-    background-color: #fff;
-    color: #000;
-    font-size: 12px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
+.nav__link:hover {
+  color: var(--apple_rect_color);
+}
 
-  .nav__item:not(:first-child) {
-    margin-left: 20px;
-  }
+.is-active {
+  color: var(--apple_rect_color);
+}
 
-  .nav__link:hover {
-    color: var(--apple_rect_color);
-  }
-
-  .is-active {
-    color: var(--apple_rect_color);
-  }
-
-  .is-active::after {
-    content: "";
-    display: block;
-    background-color: var(--apple_rect_color);
-    width: 100%;
-    height: 4px;
-    position: relative;
-    margin-top: -4px;
-    border-radius: 8px;
-  }
+.is-active::after {
+  content: "";
+  display: block;
+  background-color: var(--apple_rect_color);
+  width: 100%;
+  height: 4px;
+  position: relative;
+  margin-top: -4px;
+  border-radius: 8px;
 }
