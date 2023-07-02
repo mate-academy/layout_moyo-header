@@ -1,17 +1,17 @@
-/* stylelint-disable no-descending-specificity */
-/* stylelint-disable CssSyntaxError */
-/* stylelint-disable color-hex-length */
-/* stylelint-disable declaration-colon-space-after */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
 
 body {
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
   font-size: 12px;
   margin: 0;
 }
 
 header {
-  background-color:#ffffff;
   padding: 0 50px;
   display: flex;
   align-items: center;
@@ -19,6 +19,7 @@ header {
   margin: 0;
   box-sizing: border-box;
   font-size: 12px;
+  background-color: #fff;
 }
 
 header > a {
@@ -65,7 +66,7 @@ ul {
   color: #00acdc;
 }
 
-.nav__link::after {
+.is-active::after {
   content: "";
   display: block;
   position: absolute;
@@ -74,22 +75,13 @@ ul {
   background-color: #00acdc;
   bottom: 0;
   left: 0;
-  visibility: hidden;
   border-radius: 8px;
 }
 
-.nav__link.is-active::after {
-  visibility: visible;
+.nav__link:hover {
+  color: #00acdc;
 }
 
 .nav__item:hover .nav__link {
   color: #00acdc;
-}
-
-[data-qa="hover"] .nav__link:hover {
-  color: #00acdc;
-}
-
-.content {
-  margin: 20px;
 }
