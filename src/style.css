@@ -21,7 +21,7 @@ ul {
   display: flex;
 }
 
-.link {
+.nav_link {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   cursor: pointer;
@@ -30,9 +30,11 @@ ul {
   height: 60px;
   align-items: center;
   display: flex;
+  text-decoration: none;
+  color: black;
 }
 
-.link::after {
+.nav_link::after {
   display: block;
   content: "";
   height: 4px;
@@ -47,11 +49,11 @@ ul {
 
 }
 
-li:active::after {
+.nav_link:active::after {
   width: 100%;
 }
 
-li:hover {
+.nav_link:hover {
   color: #00acdc;
 }
 
@@ -65,20 +67,7 @@ li:hover {
   display: flex;
 }
 
-.nav_link {
-  text-decoration: none;
-  color: black;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  cursor: pointer;
-  position: relative;
-  font-size: 12px;
-  height: 60px;
-  align-items: center;
-  display: flex;
-}
-
-.nav_link.is-active::after {
+.nav__link.is-active::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -89,6 +78,21 @@ li:hover {
   background-color: #00acdc;
 }
 
-.nav_link.is-active {
+.nav__link.is-active {
   color: #00acdc;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  transition: color 0.3s;
 }
