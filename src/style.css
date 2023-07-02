@@ -1,4 +1,7 @@
 body {
+  --default-nav-line-height: 60px;
+  --current-page-indicator-height: 4px;
+
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -34,9 +37,10 @@ body {
 
 .nav__link {
   display: inline-block;
-  line-height: 60px;
+  line-height: var(--default-nav-line-height);
   text-decoration: none;
   color: #000;
+  position: relative;
 }
 
 .nav__link:hover,
@@ -47,8 +51,13 @@ body {
 .is-active::after {
   content: "";
   display: block;
-  height: 4px;
-  margin-top: -4px;
+  position: absolute;
+  top: calc(
+    var(--default-nav-line-height) -
+    var(--current-page-indicator-height)
+  );
+  height: var(--current-page-indicator-height);
   border-radius: 2px;
   background-color: #00acdc;
+  width: 100%;
 }
