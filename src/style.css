@@ -1,16 +1,13 @@
-/* zeroing */
+
+* {
+  line-height: 1;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 img {
   vertical-align: top;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul,
-li {
-  list-style: none;
 }
 
 html,
@@ -18,82 +15,66 @@ body {
   font-family: Roboto, sans-serif;
   color: #000;
   font-size: 12px;
-  margin: 0;
-  line-height: 1;
-  box-sizing: border-box;
 }
 
-/* -------------------------- wrapper -------------------------- */
+:root {
+  --color: #00acdc;
+}
 
 .wrapper {
   min-height: 100%;
-  overflow: hidden;       /* to remove horizontal scroll */
+  overflow: hidden;
 }
-
-/* -------------------------- container -------------------------- */
 
 [class*="__container"] {
   max-width: 1230px;
   margin: 0 auto;
-  padding: 0 15px;       /* padding for mobile devices, so max-width: 1230px */
+  padding: 0 15px;
 }
-
-@media (max-width: 1230px) {
-  [class*="__container"] {
-    max-width: 1024px;
-  }
-}
-
-/* -------------------------- header -------------------------- */
 
 .header__container {
   display: flex;
-  justify-content: space-between;
-  padding: 0 50px;
-  min-height: 60px;
   align-items: center;
-}
-
-.header__logo {
-  height: 40px;
-  width: 40px;
-  overflow: hidden;
-  cursor: pointer;
+  padding: 0 50px;
+  justify-content: space-between;
 }
 
 .menu__list {
   display: flex;
-  flex-wrap: wrap;
+  list-style: none;
 }
 
 .menu__item:not(:last-child) {
-  margin-right: 20px;          /* to remove extra margin */
+  margin-right: 20px;
 }
 
 .menu__link {
+  display: inline-block;
   position: relative;
   color: inherit;
-  font-weight: 500;
-  cursor: pointer;
   text-transform: uppercase;
+  font-weight: 500;
+  padding: 24px 0;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .menu__link:hover {
-  color: #00acdc;
+  color: var(--color);
 }
 
-.menu__link::after {
+.is-active {
+  color: var(--color);
+}
+
+.is-active::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -18px;
+  bottom: 0;
   height: 4px;
-  width: 0;
-  background-color: #00acdc;
-  border-radius: 8px;
-  transition: all 0.3s ease 0s;       /* for smoothness */
-}
-
-.menu__link:hover::after {
   width: 100%;
+  border-radius: 8px;
+  background-color: var(--color);
+  z-index: 5;
 }
