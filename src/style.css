@@ -1,3 +1,15 @@
+/* stylelint-disable color-hex-case */
+
+html {
+  background-color: #eee;
+  --blue-color-for-link: #00ACDC;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-size: 12px;
@@ -9,37 +21,55 @@ body {
 }
 
 header {
-  border: 1px solid gray;
+  background-color: #fff;
+  min-width: 1024px;
 }
 
 .nav {
   display: flex;
-  min-width: 1024px;
   justify-content: space-between;
-  align-items: center;
   margin: auto 50px;
 }
 
 .nav__list {
-  height: 40px;
   display: flex;
-  align-items: center;
-  justify-items: flex-end;
-  gap: 20px;
-  border: 1px solid green;
 }
 
 .img__link {
   width: 40px;
   height: 40px;
   background-image: url(images/logo.png);
-  background-repeat: no-repeat;
   margin: 10px 0;
 }
 
 .nav__link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   list-style-type: none;
   color: black;
+  margin-left: 20px;
+}
+
+.nav__link:link {
+  color: black;
+}
+
+.nav__link:visited {
+  color: black;
+}
+
+.nav__link:hover {
+  color: var(--blue-color-for-link);
+}
+
+.nav__link:active {
+  border-bottom: 2px solid var(--blue-color-for-link);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  background-color: red;
 }
