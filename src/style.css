@@ -1,5 +1,6 @@
 
 html {
+  --blue-color: #00acdc;
   font-family: Roboto, sans-serif;
   box-sizing: border-box;
 }
@@ -37,9 +38,20 @@ body {
   display: inline-block;
   color: #000;
   text-decoration: none;
-  /* padding: 0 10px; */
   height: 60px;
   line-height: 60px;
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--blue-color);
 }
 
 .logo__img {
