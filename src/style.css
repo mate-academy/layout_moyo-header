@@ -1,3 +1,70 @@
-body {
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 50px;
+}
+
+.logolink {
+  width: 40px;
+  height: 40px;
+}
+
+.navlist {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.navitem {
+  margin-left: 20px;
+}
+
+.navitem:first-of-type {
+  margin-left: 0;
+}
+
+.navitem:hover {
+  color: #00acdc;
+  cursor: pointer;
+}
+
+.navlink {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+}
+
+.navitem .is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
