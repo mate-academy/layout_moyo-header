@@ -1,3 +1,83 @@
+:root {
+  --color-is-hover: #00acdc;
+}
+
 body {
   margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 60px;
+}
+
+.logo {
+  display: block;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+}
+
+.nav,
+.nav__list,
+.nav__item,
+.nav__link {
+  height: 100%;
+}
+
+/*bez powyższego ::after leci do góry i strona nie przechodzi testów*/
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+/* kiedy zmieniam na not last child tekst idzie
+delikatnie w bok i nie zalicza testu*/
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link:link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  color: black;
+}
+
+.nav__link:hover {
+  color: var(--color-is-hover);
+  cursor: pointer;
+}
+
+.nav .is-active {
+  color: var(--color-is-hover);
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--color-is-hover);
+  bottom: 0;
 }
