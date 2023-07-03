@@ -1,5 +1,9 @@
-body {
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -15,6 +19,14 @@ body {
   height: 40px;
 }
 
+.nav {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  margin-right: 50px;
+  text-transform: uppercase;
+}
+
 .nav__list {
   padding: 0;
   margin: 0;
@@ -24,6 +36,7 @@ body {
 
 .nav__item {
   margin-left: 20px;
+  padding: 0;
 }
 
 .nav__item:first-child {
@@ -31,14 +44,8 @@ body {
 }
 
 .nav__link {
-  display: block;
+  display: inline-block;
   position: relative;
-  font-family: Roboto, sans-serif;
-  color: #000;
-  font-style: normal;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -54,7 +61,7 @@ body {
   color: #00acdc;
 }
 
-.is-active:after {
+.is-active::after {
   content: "";
   position: absolute;
   background-color: #00acdc;
