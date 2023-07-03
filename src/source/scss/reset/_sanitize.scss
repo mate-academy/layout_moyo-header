@@ -1,0 +1,187 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+body {
+  margin: 0;
+
+  color: var(--text);
+  line-height: var(--line-height-base);
+
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+}
+
+h1 {
+  margin: 0.67em 0;
+  font-size: var(--font-size-h1);
+}
+
+dl,
+ol,
+ul > dl,
+ul {
+  margin: 0;
+}
+
+hr {
+  color: inherit;
+  height: 0;
+
+  border: 0;
+  border-top: var(--border);
+  display: block;
+  margin-top: var(--sm-pad);
+  margin-bottom: var(--sm-pad);
+  width: 100%;
+  box-sizing: content-box;
+  overflow: visible;
+}
+
+nav > ol,
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li::before {
+  content: "\200B";
+  float: left;
+}
+
+pre {
+  overflow: auto;
+
+  background-color: var(--grey);
+  color: var(--text);
+  display: block;
+  font-family: var(--monospace);
+  font-size: var(--font-size-base);
+  margin: var(--md-pad) 0;
+  padding: var(--md-pad);
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+
+  color: var(--secondary);
+  vertical-align: bottom;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+iframe {
+  border-style: none;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+table {
+  border-collapse: collapse;
+  border-color: currentColor;
+  text-indent: 0;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+button,
+[type="button i"],
+[type="reset i"],
+[type="submit i"] {
+  -webkit-appearance: button;
+}
+
+fieldset {
+  border: 1px solid #a0a0a0;
+}
+
+textarea {
+  margin: 0;
+  resize: vertical;
+}
+
+[type="search i"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+dialog {
+  background-color: white;
+  border: solid;
+  color: black;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: fit-content;
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+details > summary:first-of-type {
+  display: list-item;
+}
+
+[aria-busy="true i"] {
+  cursor: progress;
+}
+
+[aria-disabled="true i"],
+[disabled] {
+  cursor: not-allowed;
+}
+
+[aria-hidden="false i"][hidden] {
+  display: initial;
+}
+
+[aria-hidden="false i"][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}

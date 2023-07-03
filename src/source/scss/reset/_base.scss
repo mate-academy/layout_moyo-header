@@ -1,0 +1,60 @@
+main,
+header,
+footer,
+article,
+section,
+aside {
+  margin: 0 auto;
+  width: 100%;
+}
+//details,
+//summary,
+//details > summary:first-of-type
+
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: var(--lg-breakpoint);
+  min-width: var(--sm-breakpoint);
+  padding: 0 var(--md-pad);
+}
+
+footer {
+  border-top: var(--border);
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: var(--sm-breakpoint)) {
+  article,
+  section,
+  aside {
+    clear: both;
+    display: block;
+    max-width: 100%;
+  }
+
+  img {
+    margin-right: var(--md-pad);
+  }
+}
+
+embed,
+iframe,
+video {
+  border: 0;
+}
+
+progress {
+  background-repeat: repeat;
+  vertical-align: baseline;
+
+}
