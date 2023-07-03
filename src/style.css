@@ -1,10 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Roboto, sans-serif;
-  font-weight: 500;
   margin: 0;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
@@ -12,7 +15,6 @@ header {
 }
 
 .logo {
-  margin: 10px 0;
   width: 40px;
   height: 40px;
 }
@@ -21,24 +23,20 @@ header {
   display: flex;
   margin: 0;
   padding: 0;
-  text-transform: uppercase;
-  list-style-type: none;
 }
 
-.nav__item {
+li {
   list-style: none;
 }
 
 .nav__link {
   color: black;
-  padding: 23px 0;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
-  line-height: 14px;
-  display: flex;
-  align-items: center;
+  line-height: 60px;
   font-weight: 500;
+  display: inline-block;
 }
 
 .nav__item:not(:last-child) {
