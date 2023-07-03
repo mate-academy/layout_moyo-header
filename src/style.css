@@ -28,15 +28,31 @@ body {
 .nav__item {
   margin-right: 20px;
   text-transform: uppercase;
+  position: relative;
+}
+
+.nav__item:first-child {
+  color: var(--blue-color);
 }
 
 .nav__item:last-child {
   margin-right: 0;
 }
 
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 37px;
+  border-radius: 8px;
+  background-color: var(--blue-color);
+}
+
 .nav__link {
-  display: inline-block;
-  color: #000;
+  display: block;
+  color: inherit;
   text-decoration: none;
   height: 60px;
   line-height: 60px;
@@ -44,14 +60,6 @@ body {
 
 .nav__link:hover {
   color: var(--blue-color);
-}
-
-.is-active::after {
-  content: "";
-  display: block;
-  height: 4px;
-  border-radius: 8px;
-  background-color: var(--blue-color);
 }
 
 .logo__img {
