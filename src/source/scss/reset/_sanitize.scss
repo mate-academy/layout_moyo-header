@@ -1,0 +1,42 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+body {
+  margin: 0;
+
+  color: var(--text);
+  line-height: var(--line-height-base);
+
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+}
+
+dl,
+ol,
+ul > dl,
+ul {
+  margin: 0;
+}
+
+nav > ol,
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li::before {
+  content: "\200B";
+  float: left;
+}
