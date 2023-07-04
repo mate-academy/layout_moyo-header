@@ -1,3 +1,79 @@
+:root {
+  --activeColor: #00acdc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 60px;
+}
+
+.logo {
+  margin: 10px 0;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  margin: 0 10px;
+}
+
+.nav__item:first-of-type {
+  margin-left: 0;
+}
+
+.nav__item:last-of-type {
+  margin-right: 0;
+}
+
+.nav__link:hover {
+  color: var(--activeColor);
+}
+
+.nav__link.is-active {
+  color: var(--activeColor);
+  position: relative;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--activeColor);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 4px;
+  border-radius: 8px;
 }
