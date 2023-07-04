@@ -1,3 +1,5 @@
+/* #region Reset */
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -5,28 +7,23 @@ body {
   font-weight: 500;
 }
 
+a {
+  cursor: pointer;
+}
+/* #endregion */
+
 .navigation {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: auto;
-  padding: 10px 50px;
+  padding: 0 50px;
 }
 
-a {
-  cursor: pointer;
-}
-
-.link {
-  color: black;
-  text-decoration: none;
+.nav-logo {
   display: block;
-}
-
-.is-active,
-.link:hover {
-  color: #00acdc;
+  margin-top: 5px;
 }
 
 .nav-list {
@@ -35,11 +32,45 @@ a {
   flex-direction: row;
   text-transform: uppercase;
   white-space: nowrap;
-  column-gap: 10px;
   margin: 0;
   padding: 0;
 }
 
-.nav-logo {
-  vertical-align: bottom;
+.link {
+  color: black;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+}
+
+.center {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.left {
+  margin-right: 10px;
+}
+
+.right {
+  margin-left: 10px;
+}
+
+.is-active,
+.link:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background: #00acdc;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
 }
