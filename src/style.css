@@ -1,3 +1,93 @@
+/* reset browser default margins */
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: var(--main-collor) #000;
+  background-color: #fff;
+}
+/* #region header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo__link {
+  color: var(--main-collor);
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+}
+
+.header__logo {
+  width: 40px;
+  margin: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  height: fit-content;
+}
+
+li {
+  margin: 0;
+  height: fit-content;
+}
+
+.nav__link {
+  display: block;
+  color: var(--main-collor);
+  text-decoration: none;
+  padding: 22.5px 0;
+  margin: 0 10px;
+  line-height: 15px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.last {
+  margin-right: 0;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+}
+
+a.is-active::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* .nav__link:link */
+/* .nav__link:visited */
+.nav__link:hover {
+  color: #00acdc;
+}
+/* .nav__link:active */
+/* endregion */
+
+@media  (max-width: 1024px) {
+  .nav {
+    margin-left: 0;
+  }
 }
