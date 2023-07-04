@@ -1,3 +1,69 @@
-body {
+*,
+*::after,
+*::before {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo_link {
+  width: 40px;
+  height: 40px;
+}
+
+.nav_list {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_item {
+  margin-left: 20px;
+}
+
+.nav_item:first-of-type {
+  margin-left: 0;
+}
+
+.nav_item:hover {
+  color: #00acdc;
+  cursor: pointer;
+}
+
+.nav_link {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav_item .is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
