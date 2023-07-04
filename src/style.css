@@ -9,8 +9,7 @@ body {
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
-  /* stylelint-disable-next-line color-hex-case */
-  --blue-color-for-link: #00ACDC;
+  --blue-color-for-link: #00acdc;
 }
 
 header {
@@ -42,18 +41,13 @@ header {
   display: flex;
   align-items: center;
   text-decoration: none;
-  height: 40px;
-  padding: 10px 0;
+  height: 60px;
   position: relative;
+  color: black;
+}
+
+.is-active {
   color: var(--blue-color-for-link);
-}
-
-:not(:first-of-type) .nav__link:link {
-  color: black;
-}
-
-:not(:first-of-type) .nav__link:visited {
-  color: black;
 }
 
 :not(:first-of-type) .nav__link:hover {
@@ -61,8 +55,7 @@ header {
 }
 
 .nav__link:after {
-  /* stylelint-disable-next-line string-quotes */
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 4px;
@@ -73,8 +66,7 @@ header {
 }
 
 .is-active:after {
-  /* stylelint-disable-next-line string-quotes */
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 4px;
