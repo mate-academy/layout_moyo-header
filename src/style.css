@@ -1,14 +1,10 @@
-body {
-  margin: 0;
-  margin-right: 0;
-  width: auto;
-  font-family: Roboto, sans-serif;
+:root {
+  --main-color: #00acdc;
 }
 
-.logo {
-  display: flex;
-  text-decoration: none;
-  margin: 10px 0;
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
 }
 
 .header {
@@ -28,10 +24,9 @@ body {
   height: 100%;
 }
 
-.link:not(:last-child) {
+.nav__link {
   text-decoration: none;
   color: black;
-  font-family: Roboto, sans-serif;
   display: flex;
   height: 100%;
   align-items: center;
@@ -39,44 +34,28 @@ body {
   margin-right: 20px;
 }
 
-.right {
-  text-decoration: none;
-  color: black;
-}
-
-ul {
-  display: flex;
-  height: 100%;
+.nav__link:last-child {
+  margin-right: 0;
   align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
 }
 
-.link:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--main-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
   position: relative;
-  text-decoration: none;
-  font-family: Roboto, sans-serif;
-  display: flex;
-  height: 100%;
-  align-items: center;
-  text-align: -webkit-match-parent;
-  margin-right: 20px;
 }
 
 .is-active::after {
   content: "";
   display: block;
   height: 4px;
-  width: 37px;
+  width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
-  color: #00acdc;
+  background-color: var(--main-color);
+  color: var(--main-color);
   position: absolute;
   bottom: 0;
 }
