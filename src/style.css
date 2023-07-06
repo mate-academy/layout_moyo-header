@@ -1,16 +1,10 @@
-/* Stylowanie wszystkich divów */
-/* div,
-nav {
-  border: 2px solid;
-} */
-
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-ul {
+.MoyoHeader__nav__list {
   margin: 0;
   padding: 0;
 }
@@ -24,7 +18,7 @@ ul {
   align-items: center;
 }
 
-.MoyoHeader__nav__links a {
+.nav__link {
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -36,12 +30,6 @@ ul {
   margin-left: 50px;
   border-color: blue;
   font-size: 0;
-}
-
-.MoyoLogo__Image {
-  width: 40px;
-  height: 40px;
-  vertical-align: bottom;
 }
 
 .MoyoHeader__nav {
@@ -99,26 +87,20 @@ ul {
   background-color: #00acdc;
 }
 
-.MoyoHeader__nav__elem a:hover {
-  text-decoration: none;
-  color: #00acdc;
-}
-
-.MoyoHeader__nav__elem img {
-  width: 20px;
-  height: 20px;
+.MoyoLogo__Image {
+  width: 40px;
+  height: 40px;
+  vertical-align: bottom;
 }
 
 .MoyoHeader__nav__elem:last-child {
   margin-right: 0;
 }
 
-[data-qa="hover"] {
+[data-qa="hover"]:hover,
+a:hover,
+.is-active {
   cursor: pointer;
-  text-decoration: none;
-}
-
-a.is-active {
   text-decoration: none;
   color: #00acdc;
 }
