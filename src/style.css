@@ -1,27 +1,33 @@
+html,
+div,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 .root {
   --Height-header: 60px;
 }
 
-a {
-  color: #333;
-}
-
-.all {
+body {
   font-size: 15px;
   height: var(--Height-header);
   margin: 0;
   padding: 0;
   font-weight: 600;
   font-family: "Roboto", Times, serif;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: #333;
 }
 
-header {
+.header__home {
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .logo {
@@ -40,7 +46,9 @@ header {
   align-items: center;
   color: #333;
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 15px;
+  padding: 0 10px;
+  margin-top: 10px;
 }
 
 .is-active {
@@ -48,20 +56,8 @@ header {
   border-bottom: 2px solid blue;
 }
 
-@media (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav__list {
-    padding: 0 10px;
-    margin-top: 10px;
-    margin-right: 15px;
-  }
-}
-
-li a {
+.nav__list-link {
+  color: #333;
   padding: 30px 0;
   margin-left: 10px;
   margin-top: 10px;
@@ -72,13 +68,6 @@ li a {
   height: 100%;
 }
 
-@media (max-width: 1200px) {
-  .nav__list {
-    padding: 0 10px;
-    margin-right: 10px;
-  }
-}
-
-:hover {
+.nav__list-link:hover {
   color: blue;
 }
