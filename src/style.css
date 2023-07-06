@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -27,29 +31,26 @@ body {
   margin: 0;
 }
 
-.nav__item {
+.nav__item:not(:first-child) {
   margin-left: 20px;
-}
-
-.nav__item:first-child {
-  margin-left: 0;
 }
 
 .nav__link {
   text-transform: uppercase;
   color: #000;
   font-weight: 500;
-  height: 60px;
+  /* height: 60px; */
   text-decoration: none;
   display: flex;
   align-items: center;
   font-size: 12px;
   line-height: 14px;
+  padding: 23px 0;
 }
 
 .is-active,
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active {
@@ -64,5 +65,5 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
