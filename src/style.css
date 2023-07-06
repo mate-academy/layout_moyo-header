@@ -1,3 +1,70 @@
+:root {
+  --main-color: #00acdc;
+}
+
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+}
+
+.header {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  height: 100%;
+}
+
+.nav__ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  height: 100%;
+  margin-right: 20px;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.nav__link--last {
+  margin-right: 0;
+}
+
+.nav__link:hover {
+  color: var(--main-color);
+}
+
+.is-active {
+  color: var(--main-color);
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0;
 }
