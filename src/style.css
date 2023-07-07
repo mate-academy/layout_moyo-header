@@ -1,7 +1,11 @@
-body {
-  margin: 0;
+:root {
   font-family: "Roboto", sans-serif;
   --active-color: #00acdc;
+}
+
+body {
+  margin: 0;
+
 }
 
 .logo__link {
@@ -38,11 +42,13 @@ body {
   margin: 0 10px;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.is-active {
   color: var(--active-color);
 }
 
-.nav__link:active::after {
+.nav__link:active::after,
+.is-active::after {
   position: absolute;
   bottom: 0;
   width: 100%;
