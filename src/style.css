@@ -1,3 +1,81 @@
-body {
+* {
+  box-sizing: border-box;
+}
+
+html {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  --link-color: black;
+  --header-height: 60px;
+  --blue-color-hover: #00acdc;
+}
+
+ul,
+body,
+nav,
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__list.nav__list:not(:last-child) {
+  margin-right: 20px;
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .header {
+    width: 100%;
+  }
+}
+
+.header {
+  margin: 0 auto;
+  padding-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 1024px;
+  max-width: 1200px;
+}
+
+.link__home {
+  margin: 10px 0 0 50px;
+}
+
+.container {
+  display: flex;
+}
+
+.nav__list {
+  text-align: center;
+  line-height: var(--header-height);
+  height: calc(var(--header-height));
+}
+
+.nav__link {
+  text-transform: uppercase;
+  display: block;
+  color: var(--link-color);
+}
+
+.nav__link:hover {
+  color: var(--blue-color-hover);
+}
+
+.is-active::after {
+  color: var(--blue-color-hover);
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 4px solid var(--blue-color-hover);
+  border-radius: 8px;
+  margin-top: -4px;
+}
+
+.is-active {
+  color: var(--blue-color-hover);
 }
