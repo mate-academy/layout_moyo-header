@@ -2,22 +2,25 @@
   box-sizing: border-box;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  --link-color: black;
+  --header-height: 60px;
+  --blue-color-hover: #00acdc;
+}
+
 ul,
 body,
 nav,
-a,
-html {
+a {
   text-decoration: none;
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  color: black;
-  text-transform: uppercase;
-  --header-height: 60px;
-  --blue-color-hover: #00acdc;
 }
 
 .nav__list.nav__list:not(:last-child) {
@@ -54,7 +57,9 @@ html {
 }
 
 .nav__link {
+  text-transform: uppercase;
   display: block;
+  color: var(--link-color);
 }
 
 .nav__link:hover {
