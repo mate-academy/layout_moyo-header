@@ -1,8 +1,11 @@
+
 body {
   margin: 0;
-  font-family: "Roboto", "Times New Roman", Times, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 12px;
+  --main-color: #000;
   --active-color: #00acdc;
+  --nav-height: 60px;
 }
 
 .header {
@@ -10,6 +13,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
+}
+
+.logo {
+  max-width: 40px;
+  max-height: 40px;
 }
 
 .nav__list {
@@ -20,33 +28,45 @@ body {
 }
 
 .nav__item {
-  margin-right: 10px;
+  margin: 0 10px;
   align-items: center;
   text-transform: uppercase;
 }
 
 .nav__link {
-  color: black;
+  color: var(--main-color);
   text-decoration: none;
   display: flex;
   align-items: center;
   position: relative;
-  height: 60px;
+  height: var(--nav-height);
+
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
 }
 
 .nav__link:hover {
   color: var(--active-color);
-  text-decoration: underline;
 }
 
-.is-active:hover::after {
+.is-active {
   color: var(--active-color);
-  text-decoration: underline;
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--active-color);
+  display: block;
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
-  content: "";
-  display: block;
-  border: 2px solid var(--active-color);
-  border-radius: 8px;
 }
