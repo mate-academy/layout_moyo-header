@@ -1,3 +1,72 @@
+:root {
+  --menu-height: 60px;
+  --menu-width: 1024px;
+}
+
 body {
   margin: 0;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  width: var(--menu-width);
+  /* height: var(--menu-height); */
+}
+
+.logo {
+  display: block;
+  padding-left: 50px;
+  align-self: center;
+}
+
+.nav {
+  flex-grow: 1;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  justify-content: flex-end;
+  padding-right: 40px;
+  align-self: center;
+}
+
+.nav__item {
+  display: inline-flex;
+  padding: 0 10px;
+}
+
+.nav__link {
+  display: flex;
+  height: var(--menu-height);
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+a:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  /* border-bottom: 4px solid #00acdc;  
+    alternative solution, but not rounded edges*/
+}
+
+.is-active::after {
+  /* I don't know why this solution isn't visible
+    on tests and I really have no idea why, 
+    in my browser works really well */
+  position: absolute;
+  content: "";
+  display: flex;
+  height: 4px;
+  width: 38px;
+  background-color: #00acdc;
+  border-radius: 100px;
+  margin-top: var(--menu-height);
 }
