@@ -46,6 +46,15 @@ html {
 
 }
 
+.is-active::after {
+  content: "";
+  width: 100%;
+  border-bottom: 4px solid var(--active-color) ;
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+}
 .nav__item:first-child {
   position: relative;
 
@@ -62,12 +71,4 @@ html {
   color: var(--active-color);
 }
 
-.is-active::after {
-  content: "";
-  width: 100%;
-  border-bottom: 4px solid var(--active-color) ;
-  position: absolute !important;
-  bottom: 0;
-  left: 0;
-  border-radius: 8px;
-}
+
