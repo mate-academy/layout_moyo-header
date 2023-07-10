@@ -1,8 +1,10 @@
-body {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
 
+body {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -11,54 +13,29 @@ body {
 a {
   text-decoration: none;
   color: black;
-  /* cursor: pointer; */
-  /* padding: 100% 0; */
-  /* pad: 5px 0; */
 }
 
-nav a {
+.link__item {
   padding: 23px 0;
 }
 
 .container {
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between; */
-  /* justify-items: space-between; */
-  /* padding: 0 50px; */
-  /* padding: 10px 50px; */
-  /* padding: 0 50px; */
-  /* margin: 20px 50px; */
-  /* padding: 20px; */
-  /* height: 60px; */
-  /* font-family: "Roboto", sans-serif; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 0 50px; */
   padding: 0 50px;
 }
 
-/* .nav__box {
-} */
-
 .logo {
   display: inline-block;
-  justify-content: center;
-  margin-top: 2px;
-  /* padding: 10px 0; */
 }
 
 .nav__list {
   display: flex;
-  /* flex-direction: row; */
   text-transform: uppercase;
   list-style: none;
-  /* text-decoration: none; */
-  /* text-align: center; */
   margin: 23px 0;
   padding: 0;
-  /* margin: 0; */
 }
 
 .nav__item {
@@ -69,24 +46,22 @@ nav a {
   margin-right: 20px;
 }
 
-a:hover {
+.link__item:hover {
   color: #00acdc;
 }
 
-a.is-active {
+.is-active {
   color: #00acdc;
   position: relative;
 }
 
-a.is-active::after {
+.is-active::after {
   position: absolute;
   content: "";
-  display: block;
   left: 0;
-  /* top: 100%; */
-  margin-top: 52%;
+  bottom: 0;
   height: 4px;
   width: 100%;
   border-radius: 2px;
-  background: #00acdc;
+  background-color: #00acdc;
 }
