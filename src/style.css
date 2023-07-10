@@ -1,6 +1,17 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
   font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  --light-blue: #00acdc;
+  --black: #000;
+  color: var(--black);
 }
 
 header {
@@ -20,17 +31,12 @@ header {
 .nav__list {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
-
-  box-sizing: border-box;
 }
 
 .nav__link {
   display: inline-block;
   text-decoration: none;
-  color: #000;
-  font-family: Roboto, sans-serif;
+  color: var(--black);
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -48,21 +54,18 @@ header {
   margin-right: 20px;
 }
 
-.nav__link:hover {
-  color: #00acdc;
-}
-
+.nav__link:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--light-blue);
 }
 
 .is-active::after {
   width: 100%;
   position: absolute;
+  height: 4px;
   bottom: 0;
   left: 0;
   content: "";
-  background-color: #00acdc;
-  height: 4px;
+  background-color: var(--light-blue);
   border-radius: 8px;
 }
