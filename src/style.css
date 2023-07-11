@@ -1,1 +1,81 @@
 /* Styles go here */
+html {
+  background-color: hsl(0, 0%, 90%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --active-color: #00acdc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  min-width: 1024px;
+  background-color: white;
+  margin: auto;
+  padding: 0 50px;
+}
+
+.nav,
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__link {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal ;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+  margin-right: 20px;
+  padding: 23px 0;
+}
+
+.last_item {
+  margin-right: 0;
+
+}
+
+.nav__link:hover,
+.data-qa:hover {
+  color: var(--active-color);
+}
+
+.is-active {
+  color: var(--active-color);
+  margin-left: 0;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--active-color);
+  border-radius: 2px;
+  bottom: 0;
+  left: 0;
+}
