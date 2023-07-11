@@ -18,20 +18,18 @@ body {
 }
 
 html {
-  min-width: 1024px;
   font-family: "Roboto", sans-serif;
 }
 
 .nav__link {
   font-size: 12px;
   line-height: 14px;
-  padding: 20px 5px;
+  padding: 23px 0;
   color: var(--main-color);
   text-decoration: none;
   cursor: pointer;
   display: block;
   text-transform: uppercase;
-
 }
 
 .nav__item:not(:last-of-type) {
@@ -43,32 +41,31 @@ html {
   display: flex;
   padding: 0;
   align-items: center;
-
 }
 
 .is-active::after {
   content: "";
   width: 100%;
-  border-bottom: 4px solid var(--active-color) ;
-  position: absolute !important;
+  height: 4px;
+  background-color: var(--active-color);
+  position: absolute;
   bottom: 0;
   left: 0;
   border-radius: 8px;
 }
+
 .nav__item:first-child {
   position: relative;
-
 }
 
 .header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 0 50px;
 }
 
 .nav__link:hover,
 .is-active {
   color: var(--active-color);
 }
-
-
