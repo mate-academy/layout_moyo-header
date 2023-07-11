@@ -1,3 +1,76 @@
-body {
+:root {
+  --main-color: #000;
+  --hover-color: #00acdc;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.moyo-logo {
+  display: block;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.nav {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  display: block;
+  height: 100%;
+  color: var(--main-color);
+  text-decoration: none;
+  line-height: 60px;
+}
+
+.nav__link:hover {
+  color: var(--hover-color);
+}
+
+.nav__link.is-active {
+  color: var(--hover-color);
+  cursor: default;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--hover-color);
 }
