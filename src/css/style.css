@@ -22,12 +22,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: var(--header-h);
   box-sizing: border-box;
 }
 
 .nav {
-  min-width: 641px;
+  min-width: 635.54px;
+
 }
 
 .nav__list {
@@ -38,10 +38,13 @@ body {
 }
 
 .nav__link {
+  display: block;
   text-transform: uppercase;
   position: relative;
-  padding-bottom: calc(var(--header-h) / 2 - var(--fz) + var(--bd-link-h));
   transition: color 0.3s ease 0s;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
 }
 
 .nav__link:hover {
@@ -59,7 +62,16 @@ body {
   transition: background-color 0.3s ease 0s, width 0.3s ease 0s;
 }
 
-.nav__link:hover::after {
+.nav__link::before {
   background-color: var(--blue);
   width: 100%;
+}
+
+.nav__link.is-active {
+  color: var(--blue);
+}
+
+.nav__link.is-active::after {
+  width: 100%;
+  background-color: var(--blue);
 }
