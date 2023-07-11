@@ -1,6 +1,6 @@
 :root {
   --menu-height: 60px;
-  --menu-width: 1024px;
+  --menu-color: #00acdc;
 }
 
 body {
@@ -11,8 +11,6 @@ body {
 
 .header {
   display: flex;
-  width: var(--menu-width);
-  /* height: var(--menu-height); */
 }
 
 .logo {
@@ -48,25 +46,22 @@ body {
 }
 
 a:hover {
-  color: #00acdc;
+  color: var(--menu-color);
 }
 
 .is-active {
-  color: #00acdc;
-  /* border-bottom: 4px solid #00acdc;  
+  color: var(--menu-color);
+  /* border-bottom: 4px solid #00acdc;
     alternative solution, but not rounded edges*/
 }
 
 .is-active::after {
-  /* I don't know why this solution isn't visible
-    on tests and I really have no idea why, 
-    in my browser works really well */
   position: absolute;
   content: "";
   display: flex;
   height: 4px;
   width: 38px;
-  background-color: #00acdc;
+  background-color: var(--menu-color);
   border-radius: 100px;
   margin-top: var(--menu-height);
 }
