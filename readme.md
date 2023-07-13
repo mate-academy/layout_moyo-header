@@ -11,7 +11,7 @@ Replace `AlyonaTsehelnyk` with your Github username and copy the links to Pull R
 
 ## The task
 
-Create HTML page with the header using `flexbox` basing on [this mockup](https://www.figma.com/file/1sog2rmfyCjnVxkeZ3ptnc/MOYO-%2F-Header?node-id=0%3A1).
+Create HTML page with the header using `flexbox` basing on [this mockup](тзь).
 
 ![screenshot](./references/header-example.png)
 
