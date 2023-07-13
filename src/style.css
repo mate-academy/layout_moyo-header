@@ -53,7 +53,7 @@ html {
   position: relative;
 }
 
-.nav__link::after {
+/* .nav__link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -63,7 +63,7 @@ html {
   border-radius: 8px;
   background-color: var(--primary-color);
   opacity: 0;
-}
+} */
 
 .nav__link.is-active,
 .nav__link:hover {
@@ -71,5 +71,13 @@ html {
 }
 
 .nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--primary-color);
   opacity: 1;
 }
