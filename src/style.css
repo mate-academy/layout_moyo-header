@@ -1,3 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.nav__wrap {
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  align-self: center;
+}
+
+.link__logo {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.nav__item {
+  cursor: pointer;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  align-items: center;
+  height: 60px;
+  text-align: center;
+}
+
+.nav__link:hover {
+  color: hsl(193, 100%, 43%);
+  position: relative;
+}
+
+.is-active {
+  position: relative;
+  color: hsl(193, 100%, 43%);
+}
+
+.first::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: hsl(193, 100%, 43%);
 }
