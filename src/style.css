@@ -4,8 +4,6 @@
 
 body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -14,46 +12,53 @@ html {
   font-weight: 500;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
 .nav__list {
   list-style: none;
   margin: 0;
-  padding-right: 40px;
   display: flex;
-  flex-direction: row;
+
+  padding: 0;
+}
+
+.nav__item {
+  margin: 0 10px;
+  align-items: center;
+  text-transform: uppercase;
 }
 
 .nav__item:first-child {
-  position: relative;
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
   color: #000;
   text-decoration: none;
-  margin: 0 10px;
   font-size: 12px;
-  display: inline-block;
   line-height: 60px;
-
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .nav__link:hover {
   cursor: pointer;
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-  align-items: center;
-  flex-direction: row-reverse;
-}
-
-.moyo-logo {
-  position: fixed;
+.logo {
   height: 40px;
-  margin-left: 50px;
-  margin-top: 10px;
+  width: 40px;
+  margin: 10px 0;
 }
 
 .is-active::after {
@@ -62,11 +67,14 @@ html {
   position: absolute !important;
   bottom: 0;
   left: 0;
-  border-bottom: solid 4px var(--primary-color);
+  right: 0;
   border-radius: 8px;
-  height: 4px;
+  border-bottom: solid 4px var(--primary-color);
+  background-color: var(--primary-color);
+  opacity: 1;
 }
 
 .is-active {
   color: var(--primary-color);
+  position: relative;
 }
