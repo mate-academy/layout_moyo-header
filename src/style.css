@@ -38,6 +38,7 @@
   text-decoration: none;
   padding: 22.5px 0;
   box-sizing: border-box;
+  position: relative;
 
 }
 
@@ -47,6 +48,17 @@
 
 .is-active {
   color: #00acdc;
-  border-bottom: 4px solid #00acdc;
+
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   border-radius: 8px;
 }
