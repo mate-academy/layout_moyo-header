@@ -1,28 +1,30 @@
-body {
-  margin: 0 auto;
+html {
   font-family: "Roboto", sans-serif;
-  max-width: 1200px;
-  min-width: 830px;
+  font-size: 12px;
+  font-weight: 500;
   --MOYO-color: #00acdc;
   --header-height: 23px;
 }
 
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 800px;
+}
+
 .header {
   display: flex;
-  padding: 0 50px;
   align-items: center;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
 .header__menu {
-  font-size: 12px;
-  font-weight: 500;
   text-transform: uppercase;
 }
 
 .header__list {
   margin: var(--header-height) 0;
-  padding: 0;
   display: flex;
   justify-content: space-between;
 }
@@ -53,7 +55,6 @@ body {
 .is-active::after {
   content: "";
   position: absolute;
-  display: block;
   bottom: 0;
   left: 0;
   width: 100%;
