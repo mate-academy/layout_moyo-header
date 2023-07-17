@@ -1,8 +1,11 @@
+/*  #region variables */
 :root {
   --main-color: #000;
   --hover-color: #00acdc;
 }
+/* #endregion varibles */
 
+/* #region base-info */
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -16,6 +19,8 @@ img {
   height: auto;
 }
 
+/* #endregion base-info */
+
 .header {
   display: flex;
   align-items: center;
@@ -23,9 +28,12 @@ img {
   padding: 0 50px;
 }
 
+/* #region nav */
+
 .nav {
   font-size: 12px;
   text-transform: uppercase;
+  margin-left: 20px;
 }
 
 .nav__list {
@@ -57,12 +65,14 @@ img {
   color: var(--hover-color);
 }
 
-.nav__link.is-active {
+/* #endregion nav */
+
+/* #region active-link */
+.is-active {
   color: var(--hover-color);
-  cursor: default;
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   content: "";
   position: absolute;
   left: 0;
@@ -72,3 +82,4 @@ img {
   border-radius: 8px;
   background-color: var(--hover-color);
 }
+/* #enderegion activelink */
