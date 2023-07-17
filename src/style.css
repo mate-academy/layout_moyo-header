@@ -1,10 +1,22 @@
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
-.logo {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1415px;
+  margin: auto;
+  padding: 0 50px;
+  height: 60px;
+}
+
+.logo__link {
+  line-height: 0;
+}
+
+.logo__image {
   height: 40px;
   width: 40px;
 }
@@ -13,6 +25,7 @@
   display: flex;
   font-family: "Roboto", sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 .nav__link {
@@ -57,23 +70,4 @@
 
 .nav__item .nav__link:hover {
   color: #00acdc;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1415px;
-  margin: auto;
-  padding: 0 50px;
-  height: 60px;
-}
-
-.content {
-  padding: 10px 0;
-}
-
-@media only screen and (min-width: 1200px) {
-  .nav__item:not(:first-of-type) {
-    margin-left: 20px;
-  }
 }
