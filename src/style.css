@@ -1,3 +1,63 @@
+html {
+  font-family: "Roboto", Arial, sans-serif;
+  --hover-color: #00acdc;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  height: 60px;
+  align-items: center;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  padding: 23px 0;
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  color: var(--hover-color);
+}
+
+.is-active {
+  color: var(--hover-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background: var(--hover-color);
 }
