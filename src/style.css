@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Helvetica", sans-serif;
 }
 
 body {
@@ -12,13 +12,10 @@ body {
 
 .logo {
   margin-left: 50px;
-}
-
-.logo__link {
+  display: block;
   width: 40px;
   height: 40px;
   vertical-align: bottom;
-  display: block;
 }
 
 .header__content {
@@ -29,7 +26,6 @@ body {
 
 .container {
   max-width: 1200px;
-  min-width: 1024px;
   margin: 0 auto;
 }
 
@@ -46,23 +42,6 @@ body {
   justify-content: space-around;
 }
 
-.nav__link.is-active {
-  color: var(--color__nav);
-  position: relative;
-  margin-left: 0;
-}
-
-.nav__link.is-active::after {
-  content: "";
-  display: block;
-  background-color: var(--color__nav);
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  border-radius: 8px;
-}
-
 .nav__link {
   font-weight: 500;
   min-height: 60px;
@@ -73,6 +52,23 @@ body {
   color: black;
   font-size: 12px;
   margin-left: 20px;
+}
+
+.is-active {
+  color: var(--color__nav);
+  position: relative;
+  margin-left: 0;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  background-color: var(--color__nav);
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 8px;
 }
 
 .nav__link:hover {
