@@ -1,22 +1,32 @@
 :root {
   --menu-height: 60px;
   --menu-color: #00acdc;
+
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 body {
   margin: 0;
-  font-size: 12px;
-  font-family: Roboto, sans-serif;
 }
 
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   display: block;
   padding-left: 50px;
-  align-self: center;
+  height: 40px;
+  width: 40px;
+}
+
+.logo__image {
+  height: 100%;
+  width: 100%;
 }
 
 .nav {
@@ -32,13 +42,13 @@ body {
 }
 
 .nav__item {
-  display: inline-flex;
+  list-style: none;
   padding: 0 10px;
 }
 
 .nav__link {
   display: flex;
-  height: var(--menu-height);
+  min-height: var(--menu-height);
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
@@ -50,9 +60,8 @@ a:hover {
 }
 
 .is-active {
+  position: relative;
   color: var(--menu-color);
-  /* border-bottom: 4px solid #00acdc;
-    alternative solution, but not rounded edges*/
 }
 
 .is-active::after {
@@ -60,8 +69,8 @@ a:hover {
   content: "";
   display: flex;
   height: 4px;
-  width: 38px;
+  width: 100%;
   background-color: var(--menu-color);
-  border-radius: 100px;
-  margin-top: var(--menu-height);
+  border-radius: 8px;
+  bottom: 0;
 }
