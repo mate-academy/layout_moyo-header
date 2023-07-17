@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #00acdc;
+}
+
 body {
   margin: 0;
 }
@@ -21,32 +25,32 @@ header img {
   height: 40px;
 }
 
-.container {
+.navigation {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.box {
+.navigation-item {
   margin-left: 20px;
-  position: relative;
 }
 
-.box a {
+.navigation-item a {
   color: #000;
   text-decoration: none;
 }
 
-.box-2 a {
-  color: #00acdc;
+.highlighted a {
+  color: var(--primary-color);
 }
 
-.box a:hover {
-  color: #00acdc;
+.active a {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  border-radius: 2px;
 }
 
-.box.is-active {
-  color: #00acdc;
-  border-bottom: 5px solid #00acdc;
-  margin-bottom: -10px;
+.navigation-item a:hover {
+  color: var(--primary-color);
 }
