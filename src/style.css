@@ -1,3 +1,8 @@
+:root {
+  --blue: #00acdc;
+  --black: #000;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -36,17 +41,17 @@ body {
   text-align: center;
   display: flex;
   align-items: center;
-  color: #000;
+  color: var(--black);
   height: 60px;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active::after {
@@ -56,6 +61,6 @@ body {
   bottom: 0;
   left: 0;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue);
   border-radius: 8px;
 }
