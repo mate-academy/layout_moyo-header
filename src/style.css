@@ -1,3 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
 body {
+  --interaction-color: #00acdc;
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  header {
+    max-width: 1024px;
+  }
+}
+
+.moyo-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+}
+
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.nav__link:hover {
+  color: var(--interaction-color);
+}
+
+.is-active {
+  color: var(--interaction-color);
+}
+
+.is-active::after {
+  color: var(--interaction-color);
+  position: absolute;
+  content: "";
+  border-bottom: 4px solid;
+  border-radius: 10px;
+  width: 100%;
+  bottom: 0%;
 }
