@@ -1,3 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+/* @media (min-width: 1024px) or (max-width: 1024px) {
+  body {
+    background-color: green;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: yellow;
+  }
+} */
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 50px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+}
+
+.nav__item {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: black;
+
+  text-transform: uppercase;
+
+  display: block;
+  line-height: 28px;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+/* .nav__link:link {
+  color: black;
+}
+
+.nav__link:visited {
+  color: black;
+} */
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+/* .nav__link:active {
+  color: #00acdc;
+} */
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #00acdc;
+}
+
+/* .logo__img {
+
+} */
+
+.logo__link {
+  line-height: 0;
 }
