@@ -1,13 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html {
   font-family: "Roboto", sans-serif;
-  color: #000;
+  --normal-color: #000;
   font-size: 12px;
   font-weight: 500;
+}
+
+body,
+ul,
+li,
+header {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --active-color: #00acdc;
 }
 
 .header {
@@ -43,16 +48,16 @@ html {
   height: 60px;
   align-items: center;
   text-decoration: none;
-  color: #000;
+  color: var(--normal-color);
 
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .nav__link.is-active::after {
@@ -60,7 +65,7 @@ html {
   content: "";
   height: 4px;
   width: 100%;
-  background: #00acdc;
+  background: var(--active-color);
   position: absolute;
   border-radius: 8px;
   bottom: 0;
