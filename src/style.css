@@ -1,5 +1,5 @@
 .logo {
-  margin-top: 6px;
+  display: block;
   padding: 10px 0;
   height: 40px;
   width: 40px;
@@ -7,6 +7,8 @@
 
 body {
   margin: 0;
+  --hex-color: #00acdc;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .header {
@@ -17,19 +19,18 @@ body {
   align-items: center;
   height: 60px;
   padding-left: 50px;
+  padding-top: 0;
 }
 
-.nav {
+.nav__list {
   padding-right: 30px;
-  margin-top: 23px;
-}
-
-.nav_list {
   list-style-type: none;
   display: flex;
+  height: 62px;
+  line-height: 60px;
 }
 
-.nav_link {
+.nav__link {
   margin-right: 20px;
   text-decoration: none;
   color: black;
@@ -39,30 +40,17 @@ body {
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
-  padding-top: 22.5px;
-  padding-bottom: 20px;
+  padding-top: 23px;
+  padding-bottom: 21px;
   transition: color 0.33s;
 }
 
-.nav_link:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--hex-color);
 }
 
 .is-active {
-  color: #00acdc;
-}
-
-.is-active::after {
-  display: inline-block;
-  content: "";
-  margin-top: 18px;
-  padding: 0;
-  width: 65%;
-  height: 4px;
-  background: #00acdc;
-  position: inherit;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 8px;
+  color: var(--hex-color);
+  border-bottom: 4px solid #00acdc;
+  border-radius: 2px;
 }
