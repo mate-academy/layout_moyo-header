@@ -6,7 +6,8 @@ body {
   font-weight: 500;
   text-transform: uppercase;
 }
-
+/*In general we should use "!important" very carefully.
+But in case of hidden element it useful*/
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -58,9 +59,13 @@ body {
   cursor: pointer;
 }
 
-.list_link {
+.nav_link {
   text-decoration: none;
   color: #000;
+}
+
+.nav_link:hover {
+  color: #00acdc;
 }
 
 .is-active {
@@ -79,10 +84,6 @@ a.is-active::after {
   border-radius: 8px;
   bottom: 0;
   left: 0;
-}
-
-.list_link:hover {
-  color: #00acdc;
 }
 
 .last_link {
