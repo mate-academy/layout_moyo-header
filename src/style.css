@@ -34,7 +34,11 @@ body {
 .nav__item {
   display: flex;
   justify-content: space-between;
-  margin-left: 20;
+  /* margin-left: 20px; */
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link {
@@ -56,9 +60,10 @@ body {
   width: 37px;
   height: 4px;
   border-radius: 8px;
-  color: hsl(193, 100%, 43%);
+  background-color: hsl(193, 100%, 43%);
   position: absolute;
   bottom: 0;
+  margin-bottom: -22.5px;
 }
 
 .nav__link:hover {
