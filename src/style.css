@@ -1,8 +1,12 @@
+:root {
+  --black: #000;
+  --active: #00acdc;
+}
+
 nav,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Roboto, sans-serif;
 }
 
@@ -36,14 +40,14 @@ body {
   display: flex;
   height: 60px;
   text-decoration: none;
-  color: #000;
+  color: var(--black);
   font-size: 12px;
   font-weight: 500;
   align-items: center;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--active);
 }
 
 .logo__img {
@@ -52,16 +56,16 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--active);
 }
 
 .nav__link.is-active::after {
   display: block;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--active);
   position: absolute;
   bottom: 0;
-  border-radius: 8px;
+  border-radius: 4px;
   content: "";
 }
