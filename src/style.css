@@ -20,16 +20,13 @@ body {
   display: flex;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .nav_list {
   display: flex;
   font-size: 12px;
   font-weight: 500;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav_item {
@@ -47,19 +44,16 @@ ul {
   align-items: center;
   height: 60px;
   text-align: center;
+  text-transform: uppercase;
 }
 
+.is-active ,
 .nav_link:hover {
   color: #00acdc;
   position: relative;
 }
 
-.is-active {
-  position: relative;
-  color: #00acdc;
-}
-
-.first::after {
+.is-active::after {
   position: absolute;
   content: "";
   bottom: 0;
