@@ -1,13 +1,11 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 html {
-
   font-family: "Roboto", sans-serif;
+  --Moyo_color: #00acdb;
 }
 
+ul,
+nav,
+header,
 body {
   padding: 0;
   margin: 0;
@@ -27,21 +25,21 @@ body {
   align-items: center;
 }
 
-.nav_all {
+.nav_list {
   display: flex;
   list-style: none;
   align-items: center;
 }
 
-.nav_unit {
+.nav_item {
   position: relative;
 }
 
-.nav_unit:not(:first-child) {
+.nav_item:not(:first-child) {
   margin-left: 20px;
 }
 
-.nav_unit_link {
+.nav_item_link {
   font-size: 12px;
   display: flex;
   height: 60px;
@@ -52,19 +50,19 @@ body {
   flex-shrink: 0;
 }
 
-.nav_unit_link:hover {
-  color: #00acdb;
+.nav_item_link:hover {
+  color: var(--Moyo_color);
 }
 
 .is-active {
-  color: #00acdb ;
+  color: var(--Moyo_color) ;
 }
 
 .is-active::after {
   position: absolute;
   display: block;
   content: "";
-  background-color: #00acdb;
+  background-color: var(--Moyo_color);
   height: 4px;
   border-radius: 8px;
   bottom: 0;
