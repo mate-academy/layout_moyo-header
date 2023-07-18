@@ -1,5 +1,10 @@
-*,
 html {
+  margin: 0;
+  padding: 0;
+  --color-active: #00acdc;
+}
+
+ul {
   margin: 0;
   padding: 0;
 }
@@ -7,7 +12,6 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
-  max-width: 1200px;
 }
 
 .header {
@@ -48,7 +52,7 @@ body {
 }
 
 .nav__list-item :hover {
-  color: #00acdc;
+  color: var(--color-active);
 }
 
 .is-active::after {
@@ -57,12 +61,25 @@ body {
   display: block;
   height: 4px;
   width: 100%;
-  background: #00acdc;
+  background: var(--color-active);
   border-radius: 8px;
   bottom: 0;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color-active);
   position: relative;
+}
+
+@media screen and (max-width: 799px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+  }
 }
