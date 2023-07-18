@@ -1,15 +1,12 @@
 html {
   font-family: Roboto, sans-serif;
+  --text_color: #00acdc;
 }
 
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-ul {
-  padding: 0;
 }
 
 .header {
@@ -25,9 +22,10 @@ ul {
   align-items: center;
   text-transform: uppercase;
   margin: 0;
+  padding: 0;
 }
 
-img {
+.logo {
   height: 40px;
   width: 40px;
 }
@@ -41,7 +39,6 @@ img {
 }
 
 .menu__link {
-  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
   text-align: left;
@@ -53,11 +50,11 @@ img {
 }
 
 .menu__link:hover {
-  color: #00acdc;
+  color: var(--text_color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--text_color);
 }
 
 .is-active::after {
