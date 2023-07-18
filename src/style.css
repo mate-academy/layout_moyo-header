@@ -1,4 +1,7 @@
-body {
+body,
+nav,
+ul,
+li {
   margin: 0;
   padding: 0;
   --main-color: #000;
@@ -9,18 +12,14 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+.conteiner__header__logo {
+  margin: 10px 0 10px 50px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  /* box-sizing: border-box; */
-  padding: 0 50px;
-
-}
-
-.header__logo {
-  display: block;
-  line-height: 0;
+  height: 60px;
 }
 
 a {
@@ -28,12 +27,14 @@ a {
   cursor: pointer;
 }
 
+.nav {
+  margin-right: 40px;
+}
+
 .nav__list {
   list-style: none;
   display: flex;
-  align-items: center;
   text-transform: uppercase;
-  box-sizing: border-box;
 }
 
 .nav__list__item {
@@ -42,10 +43,16 @@ a {
   height: 60px;
   margin: 0 10px;
   align-items: center;
-  justify-content: flex-end;
-  max-width: 1200px;
   font-size: 12px;
   font-weight: 500;
+  color: var(--main-color);
+}
+
+.nav__link {
+  color: var(--main-color);
+}
+
+.nav__link:link {
   color: var(--main-color);
 }
 
@@ -53,11 +60,11 @@ a {
   color: var(--secound-color);
 }
 
-.is-active {
+.nav__link.is-active {
   color: var(--secound-color);
 }
 
-.nav__list__item.is-active::after {
+.nav__link.is-active::after {
   content: "";
   position: absolute;
   display: block;
