@@ -1,17 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
-/* @media (min-width: 1024px) or (max-width: 1024px) {
-  body {
-    background-color: green;
-  }
-}
-
-@media (min-width: 1200px) {
-  body {
-    background-color: yellow;
-  }
-} */
-
 body {
   margin: 0;
   padding: 0;
@@ -29,15 +17,23 @@ body {
 .nav__list {
   list-style: none;
   display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__item {
   margin: 0 10px;
   position: relative;
+
 }
 
 .nav__item:last-child {
   margin-right: 0;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
 }
 
 .nav__link {
@@ -50,7 +46,8 @@ body {
   text-transform: uppercase;
 
   display: block;
-  line-height: 28px;
+  text-align: center;
+  line-height: 60px;
 }
 
 .is-active {
@@ -75,6 +72,7 @@ body {
 
 .is-active::after {
   content: "";
+
   position: absolute;
   left: 0;
   bottom: 0;
@@ -84,10 +82,12 @@ body {
   background-color: #00acdc;
 }
 
-/* .logo__img {
-
-} */
+.logo__img {
+  object-fit: fill;
+}
 
 .logo__link {
-  line-height: 0;
+  width: 40px;
+  height: 40px;
+  align-self: center;
 }
