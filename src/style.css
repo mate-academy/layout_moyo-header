@@ -1,10 +1,16 @@
+html {
+  --link-default: black;
+  --link-active: #00acdc;
+  font-family: "Roboto", monospace;
+  font-size: 12px;
+}
+
 body {
   margin: 0;
 }
 
 header {
   display: flex;
-  background: white;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
@@ -46,20 +52,15 @@ nav {
   position: relative;
   display: flex;
   text-decoration: none;
-  color: black;
   height: 60px;
   align-items: center;
-  font-family: "Roboto", monospace;
-  font-size: 12px;
   text-transform: uppercase;
+  color: var(--link-default);
 }
 
-.nav__link:hover {
-  color: #00acdc;
-}
-
+.nav__link:hover,
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--link-active);
 }
 
 .nav__link.is-active::after {
@@ -70,5 +71,5 @@ nav {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--link-active);
 }
