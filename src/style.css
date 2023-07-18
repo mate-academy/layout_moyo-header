@@ -1,16 +1,17 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  --header-color: #00acdc;
+  --header-color-active: #00acdc;
   --height-header: 60px;
   --margin-header: 50px;
+  --bg-color-header: #fff;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--bg-color-header);
   margin: 0 auto;
 }
 
@@ -57,11 +58,11 @@ body {
 }
 
 .nav__item-link:hover {
-  color: var(--header-color);
+  color: var(--header-color-active);
 }
 
 .is-active {
-  color: var(--header-color);
+  color: var(--header-color-active);
 
 }
 
@@ -70,7 +71,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: var(--header-color);
+  background-color: var(--header-color-active);
   height: 4px;
   border-radius: 8px;
   width: 100%;
