@@ -9,24 +9,17 @@ body {
   --hover-color: #00acdc;
 }
 
-header {
+.header {
   display: flex;
   padding: 0 50px;
   box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
-  letter-spacing: 0 em;
-  line-height: 14.06px;
   text-transform: uppercase;
+  min-width: 800px;
 }
 
-nav {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
+.nav-container {
   margin: 0;
   padding: 0;
 }
@@ -40,6 +33,7 @@ li {
 }
 
 .nav-item {
+  list-style: none;
   margin: 0 10px;
 }
 
@@ -58,21 +52,23 @@ li {
 
 .nav-link {
   display: block;
+  text-align: center;
   text-decoration: none;
   color: black;
   height: 60px;
+  cursor: pointer;
 }
 
-a:hover {
+.nav-link:hover {
   color: var(--hover-color);
 }
 
-a.is-active {
+.is-active {
   color: var(--hover-color);
   position: relative;
 }
 
-a.is-active::after {
+.is-active::after {
   content: "";
   display: block;
   position: absolute;
