@@ -37,10 +37,11 @@ body {
   height: 60px;
   line-height: 60px;
   cursor: pointer;
+  margin-left: 20px;
 }
 
-.nav__item:not(:first-child) {
-  margin-left: 20px;
+.nav__item:first-child {
+  margin-left: 0;
 }
 
 .nav__link {
@@ -59,7 +60,7 @@ body {
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--active-color);
   margin: 0;
 }
 
@@ -70,6 +71,6 @@ body {
   bottom: 0;
   content: "";
   width: 100%;
-  background: #00acdc;
+  background: var(--active-color);
   border-radius: 8px;
 }
