@@ -1,3 +1,74 @@
-body {
+:root {
+  --active-color: #00acdc;
+}
+
+html {
   margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: normal;
+  font-size: 12px;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0 50px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav_item {
+  text-transform: uppercase;
+  margin-left: 20px;
+  position: relative;
+}
+
+.nav_list :first-child {
+  margin: 0;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: #000;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.is-active {
+  color: var(--active-color);
+}
+
+.is-active::after {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  content: "";
+  color: var(--active-color);
+  display: block;
+  border: 2px solid var(--active-color);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.nav_link:hover {
+  color: var(--active-color);
 }
