@@ -1,3 +1,91 @@
-body {
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap"); */
+
+body,
+nav,
+ul,
+li,
+div,
+a {
   margin: 0;
+  padding: 0;
+  --main-color: #000;
+  --secound-color: #00acdc;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.conteiner__header__logo {
+  margin: 14px 0 10px 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav {
+  margin-right: 40px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+}
+
+.nav__list__item {
+  display: flex;
+  position: relative;
+  height: 60px;
+  margin: 0 10px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--main-color);
+}
+
+.nav__list__item:first-child {
+  margin-left: 0;
+}
+
+.nav__list__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: block;
+  line-height: 60px;
+  color: var(--main-color);
+}
+
+.nav__link:link {
+  color: var(--main-color);
+}
+
+.nav__link:hover {
+  color: var(--secound-color);
+}
+
+.nav__link.is-active {
+  color: var(--secound-color);
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--secound-color);
+  height: 4px;
+  width: 100%;
+  border-radius: 6px;
+  bottom: 0;
 }
