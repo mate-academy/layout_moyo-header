@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
 
 :root {
-  --colour: #00acdc;
+  --moyo-blue: #00acdc;
 }
 
 body {
@@ -35,10 +35,11 @@ body {
 
 .nav_item {
   cursor: pointer;
+  margin-left: 20px;
 }
 
-.nav_item:not(:first-child) {
-  margin-left: 20px;
+.nav_item:first-child {
+  margin-left: 0;
 }
 
 .nav_link {
@@ -49,12 +50,12 @@ body {
   height: 60px;
   text-align: center;
   text-transform: uppercase;
+  position: relative;
 }
 
 .is-active ,
 .nav_link:hover {
-  color: var(--colour);
-  position: relative;
+  color: var(--moyo-blue);
 }
 
 .is-active::after {
@@ -64,5 +65,5 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: var(--colour);
+  background-color: var(--moyo-blue);
 }
