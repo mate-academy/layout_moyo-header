@@ -2,13 +2,15 @@ html {
   --main-color: #000;
   --link-color: #00acdc;
   font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 body {
   margin: 0;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,18 +19,10 @@ header {
 
 .logo {
   display: block;
-  line-height: 0;
 }
 
 .logo__image {
   display: block;
-  width: 100%;
-  object-fit: cover;
-  height: auto;
-}
-
-.nav {
-  font-size: 12px;
 }
 
 .nav__list {
@@ -40,22 +34,26 @@ header {
 }
 
 .nav__item {
-  position: relative;
-  margin-left: 20px;
-}
-
-.nav__link {
-  display: block;
-  line-height: 60px;
-  text-decoration: none;
-  color: var(--main-color);
+  margin: 0 10px;
 }
 
 .nav__item:first-child {
   margin-left: 0;
 }
 
-.nav__link.is-active {
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: block;
+  padding: 23px 0;
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.is-active {
+  position: relative;
   color: var(--link-color);
   cursor: default;
 }
@@ -66,6 +64,7 @@ header {
 
 .is-active::after {
   content: "";
+  display: block;
   position: absolute;
   left: 0;
   bottom: 0;
