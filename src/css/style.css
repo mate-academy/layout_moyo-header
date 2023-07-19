@@ -1,0 +1,74 @@
+@import url("./helpers/reset.css");
+@import url("./helpers/variables.css");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--fz);
+  font-style: normal;
+  font-weight: 500;
+  color: var(--black);
+  margin: 0;
+  line-height: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 50px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.nav {
+  min-width: 635.54px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav__link {
+  display: block;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease 0s;
+  padding: 24px 0;
+  text-align: center;
+}
+
+.nav__link:hover {
+  color: var(--blue);
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease 0s, width 0.3s ease 0s;
+}
+
+.nav__link::before {
+  background-color: var(--blue);
+  width: 100%;
+}
+
+.nav__link.is-active {
+  color: var(--blue);
+}
+
+.nav__link.is-active::after {
+  width: 100%;
+  background-color: var(--blue);
+}
