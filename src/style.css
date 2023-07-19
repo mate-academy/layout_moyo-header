@@ -43,6 +43,7 @@ body {
 
 .nav__list {
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -59,7 +60,11 @@ body {
   height: 60px;
 }
 
-.is-active {
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.active {
   text-decoration: none;
   color: #000;
   display: flex;
@@ -70,11 +75,15 @@ body {
   position: relative;
 }
 
-.is-active:hover {
+.active:hover {
   color: #00acdc;
 }
 
-.is-active:target::after {
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
   display: block;
   background: #00acdc;
   content: " ";
@@ -87,3 +96,18 @@ body {
   width: 100%;
   bottom: 0;
 }
+
+/* This comment for activation :target::after from all links */
+/* .active:target::after {
+  display: block;
+  background: #00acdc;
+  content: " ";
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  bottom: 0;
+} */
