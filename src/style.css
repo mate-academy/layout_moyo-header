@@ -1,3 +1,83 @@
-body {
+:root {
+  --color-active: #00acdc;
+}
+
+ul {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.link__logo {
+  height: 40px;
+  width: 40px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav__list-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  color: #000;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 23px 0;
+}
+
+.nav__list-item :hover {
+  color: var(--color-active);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: var(--color-active);
+  border-radius: 8px;
+  bottom: 0;
+}
+
+.is-active {
+  color: var(--color-active);
+  position: relative;
+}
+
+@media screen and (max-width: 799px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+  }
 }
