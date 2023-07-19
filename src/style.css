@@ -10,7 +10,7 @@ body {
   max-width: 1200px;
   min-width: 800px;
   --blue-color: #00acdc;
-  --header-height: 23px;
+  --nav-element-height: 23px;
 }
 
 .header {
@@ -32,19 +32,15 @@ body {
 .nav__list {
   display: flex;
   justify-content: space-between;
-  margin: var(--header-height) 0;
+  margin: var(--nav-element-height) 0;
   padding-left: 0;
   font-size: 0;
 }
 
 .nav__item {
-  display: inline-block;
   margin: 0;
   padding: 0;
-  align-items: center;
   height: fit-content;
-  font-size: 12px;
-  line-height: 14px;
 }
 
 .nav__item:not(:last-child) {
@@ -54,12 +50,13 @@ body {
 .nav__link {
   font-weight: 500;
   font-size: 12px;
+  line-height: 14px;
   text-transform: uppercase;
   color: #000;
   text-decoration: none;
   transition: 0.2s;
-  padding: var(--header-height) 0;
-  height: 60px;
+  padding: var(--nav-element-height) 0;
+  position: relative;
 }
 
 .nav__link:hover {
@@ -69,7 +66,6 @@ body {
 
 .is-active {
   color: var(--blue-color);
-  position: relative;
 }
 
 .is-active::after {
