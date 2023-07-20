@@ -20,7 +20,7 @@ html {
   font-size: 12px;
 }
 
-.header img {
+.header__logo {
   height: 40px;
   display: block;
 }
@@ -32,21 +32,21 @@ html {
   margin: 0;
 }
 
-.navigation-item {
+.navigation__item {
   margin-left: 20px;
 }
 
-.navigation-item a {
+.navigation__link {
   color: #000;
   text-decoration: none;
 }
 
-.navigation-item.active a {
+.navigation__item--active .navigation__link {
   position: relative;
   color: var(--primary-color);
 }
 
-.navigation-item.active a::after {
+.navigation__item--active .navigation__link::after {
   content: "";
   position: absolute;
   bottom: -18.2px;
@@ -57,6 +57,6 @@ html {
   border-radius: 2px;
 }
 
-.navigation-item a:hover {
+.navigation__link:hover {
   color: var(--primary-color);
 }
