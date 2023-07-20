@@ -1,6 +1,6 @@
 html {
-  --main-color: #000;
-  --link-color: #00acdc;
+  --text-color: #000;
+  --active-color: #00acdc;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -49,17 +49,17 @@ body {
   display: block;
   padding: 23px 0;
   text-decoration: none;
-  color: var(--main-color);
+  color: var(--text-color);
+  position: relative;
 }
 
 .is-active {
-  position: relative;
-  color: var(--link-color);
+  color: var(--active-color);
   cursor: default;
 }
 
 .nav__link:hover {
-  color: var(--link-color);
+  color: var(--active-color);
 }
 
 .is-active::after {
@@ -71,5 +71,5 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: var(--link-color);
+  background-color: var(--active-color);
 }
