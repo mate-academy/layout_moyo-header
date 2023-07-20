@@ -1,69 +1,45 @@
 html body {
   font-family: Roboto, Arial, sans-serif;
-  --header-menu-active-color: rgba(0, 172, 220, 1);
-  --menu-apple-width: 37px;
-  --blue-underline-height: 4px;
-  --blue-underline-redius: 30%;
-  --total-length-horizontal-margins-inside-header: 140px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --header-active-color: #00acdc;
 }
 
 .header {
-  background: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  height: 60px;
+  flex-shrink: 0;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
-.logo {
-  position: relative;
-  left: 50px;
-  display: flex;
-  height: 40px;
-  width: 40px;
-}
-
-.logo__link {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo__link img {
+.header .logo img {
   display: block;
   max-width: 100%;
   height: auto;
+  margin-left: 50px;
 }
 
 .nav {
-  position: relative;
-  right: 50px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
 }
 
 .nav__list {
-  font-size: 12px;
   list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
-  width: calc(
-    var(--menu-apple-width) +
-    58px +
-    88px +
-    138px +
-    54px +
-    51px +
-    40px +
-    35px +
-    var(--total-length-horizontal-margins-inside-header)
-  );
+  padding-inline-start: 0;
 }
 
 .nav_item {
@@ -73,75 +49,45 @@ html body {
   align-items: center;
   height: 15px;
   margin-left: 20px;
+  position: relative;
 }
 
-.nav_item.apple {
-  margin-left: 0;
+.nav_item:first-child {
+  margin: 0;
 }
 
-.is-active {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.nav_item .is-active::after {
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--header-active-color);
+  bottom: -22px;
+  left: 0;
+}
+
+.nav_item a {
   text-decoration: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   text-transform: uppercase;
-  padding: 100% 0;
+  padding: 23px 0;
   color: rgba(0, 0, 0, 1);
 }
 
-.is-active.apple {
-  color: var(--header-menu-active-color);
-  width: var(--menu-apple-width);
+.nav_item .is-active {
+  margin-left: 0;
+  color: var(--header-active-color);
 }
 
-.is-active.samsung {
-  width: 58px;
+.nav_item a:hover {
+  color: var(--header-active-color);
 }
 
-.is-active.smartphones {
-  width: 88px;
-}
-
-.is-active.laptops&computers {
-  width: 138px;
-}
-
-.is-active.gadgets {
-  width: 54px;
-}
-
-.is-active.tablets {
-  width: 51px;
-}
-
-.is-active.photo {
-  width: 40px;
-}
-
-.is-active.video {
-  width: 35px;
-}
-
-.is-active:hover {
-  color: var(--header-menu-active-color);
-}
-
-.is-active:active {
-  color: var(--header-menu-active-color);
+.nav_item:active {
   text-decoration: underline;
-}
-
-.is-active::after {
-  content: "";
-  position: absolute;
-  width: var(--menu-apple-width);
-  height: var(--blue-underline-height);
-  border-top-left-radius: var(--blue-underline-redius);
-  border-top-right-radius: var(--blue-underline-redius);
-  border-bottom-left-radius: var(--blue-underline-redius);
-  border-bottom-right-radius: var(--blue-underline-redius);
-  background-color: var(--header-menu-active-color);
-  bottom: -10px;
-  left: 1px;
+  text-decoration-color: var(--header-active-color);
 }
