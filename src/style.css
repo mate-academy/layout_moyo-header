@@ -1,7 +1,7 @@
 :root {
-  --blue: hsl(193, 100%, 43%);
-  --black: hsl(0, 0%, 0%);
-  --white: hsl(0, 0%, 100%);
+  --active: hsl(193, 100%, 43%);
+  --text: hsl(0, 0%, 0%);
+  --background: hsl(0, 0%, 100%);
 }
 
 body {
@@ -12,17 +12,21 @@ body {
 
 .header {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100%; */
+  background-color: var(--background);
 }
 
-.container {
+/* .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: var(--white);
-}
+  background-color: var(--background);
+} */
 
 .link__logo {
   display: flex;
@@ -58,11 +62,11 @@ body {
 .nav__link {
   text-decoration: none;
   padding: 23px 0;
-  color: var(--black);
+  color: var(--text);
 }
 
 .is-active {
-  color: var(--blue);
+  color: var(--active);
   position: relative;
 }
 
@@ -72,11 +76,11 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background-color: var(--blue);
+  background-color: var(--active);
   position: absolute;
   bottom: 0;
 }
 
 .nav__link:hover {
-  color: var(--blue);
+  color: var(--active);
 }
