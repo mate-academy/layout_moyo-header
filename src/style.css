@@ -1,3 +1,86 @@
+:root {
+  --active-color: #00acdc;
+}
+
+html {
+  position: relative;
+  align-items: center;
+  height: 60px;
+  font-family: "Roboto", sans-serif;
+  --active-color: #00acdc;
+  line-height: normal;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  cursor: pointer;
+  height: 14px;
+  padding: 23px 0;
+}
+
+.nav__item {
+  margin-left: 20px;
+  position: relative;
+}
+
+.nav__item:nth-child(1) {
+  margin-left: 0;
+}
+
+.is-active::after {
+  content: "";
+  border-radius: 2px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--active-color);
+  position: absolute;
+}
+
+.nav__link:link {
+  color: #000;
+}
+
+.is-active:link {
+  color: var(--active-color);
+}
+
+.nav__link:hover {
+  color: var(--active-color);
 }
