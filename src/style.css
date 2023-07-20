@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
   --main-color: #00acdc;
 }
 
@@ -20,10 +22,6 @@ body {
 }
 
 .nav_list {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
   display: flex;
   padding: 0;
   margin: 0;
@@ -33,10 +31,7 @@ body {
   display: flex;
   align-items: center;
   list-style: none;
-  height: 60px;
-  line-height: 60px;
   margin-right: 20px;
-  cursor: pointer;
 }
 
 .nav_item:last-child {
@@ -45,7 +40,11 @@ body {
 
 .nav_link {
   text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
   color: #000;
+  padding: 23px 0;
+  transition: color 0.3s;
 }
 
 .nav_link:hover {
@@ -55,7 +54,6 @@ body {
 .is-active {
   color: var(--main-color);
   position: relative;
-  display: inline-block;
 }
 
 .is-active::after {
