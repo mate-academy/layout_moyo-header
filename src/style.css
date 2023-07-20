@@ -8,9 +8,7 @@ body {
   background: #fff;
 }
 
-*,
-*::before,
-*::after {
+ul {
   margin: 0;
   padding: 0;
   border: none;
@@ -29,8 +27,7 @@ a {
 .header {
   display: flex;
   align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0 50px;
   justify-content: space-between;
 }
 
@@ -40,11 +37,20 @@ a {
 
 .header__list {
   display: flex;
-  text-transform: uppercase;
 }
 
 .header__item:not(:last-child) {
   margin-right: 20px;
+}
+
+.header__link {
+  display: inline-block;
+  padding: 22.5px 0;
+  text-transform: uppercase;
+}
+
+.header__link:hover {
+  color: #00acdc;
 }
 
 .is-active {
@@ -62,13 +68,4 @@ a {
   top: 56px;
   background: #00acdc;
   border-radius: 8px;
-}
-
-.header__link {
-  display: inline-block;
-  padding: 22.5px 0;
-}
-
-.header__link:hover {
-  color: #00acdc;
 }
