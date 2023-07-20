@@ -33,7 +33,6 @@ li {
 
 .nav__item {
   margin-left: 20px;
-  position: relative;
 }
 
 .nav__item:first-child {
@@ -56,10 +55,11 @@ li {
 }
 
 .nav__link.is-active {
+  position: relative;
   color: var(--color-active);
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   content: "";
   height: 4px;
   width: 100%;
@@ -73,8 +73,4 @@ li {
 
 .logo__link {
   height: 40px;
-}
-
-.logo__img {
-  width: 40px;
 }
