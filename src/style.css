@@ -49,21 +49,24 @@ html body {
   align-items: center;
   height: 15px;
   margin-left: 20px;
-  position: relative;
 }
 
 .nav_item:first-child {
   margin: 0;
 }
 
-.nav_item .is-active::after {
+.is-active {
+  position: relative;
+}
+
+.is-active::after {
   content: "";
   position: absolute;
   width: 37px;
   height: 4px;
   border-radius: 8px;
   background-color: var(--header-active-color);
-  bottom: -22px;
+  bottom: 0;
   left: 0;
 }
 
