@@ -55,6 +55,15 @@ body {
 
 .is-active {
   color: rgba(0, 172, 220, 1);
-  border-bottom: 4px solid rgba(0, 172, 220, 1);
-  box-sizing: border-box;
+}
+
+.is-active::after {
+  display: flex;
+  content: "";
+  height: 4px;
+  bottom: 4px;
+  width: 100%;
+  background-color: rgba(0, 172, 220, 1);
+  border-radius: 8px;
+  position: relative;
 }
