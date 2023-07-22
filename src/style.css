@@ -1,3 +1,100 @@
-body {
+:root {
+  --blue-color: #00acdc;
+}
+
+body,
+ul,
+li {
   margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 10px; */
+  position: relative;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  /* text-align: left; */
+  position: relative;
+}
+
+nav a.is-active {
+  color: var(--blue-color);
+}
+
+nav a:hover {
+  color: var(--blue-color);
+  text-decoration: none;
+}
+
+nav a[data-qa="hover"]:hover {
+  color: var(--blue-color);
+}
+
+nav a.is-active:after {
+  content: "";
+  width: auto;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    margin-right: 419px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    margin-right: 243px;
+  }
+
+  nav ul {
+    margin-right: 20px;
+  }
+
+  nav li {
+    margin-right: 10px;
+  }
 }
