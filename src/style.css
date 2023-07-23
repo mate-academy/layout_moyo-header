@@ -1,100 +1,82 @@
-:root {
-  --blue-color: #00acdc;
+* {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
 }
 
 body,
 ul,
+ol,
 li {
   margin: 0;
-  padding: 0;
 }
 
-header {
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+body {
+  --hover-active-color: #00acdc;
+}
+
+.header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  /* padding: 10px; */
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__item {
   position: relative;
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  margin-top: 10px;
-  margin-left: 50px;
-}
-
-.logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin-right: 50px;
-}
-
-nav li {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-nav a {
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 14px;
-  color: #000;
+.nav__link {
+  display: block;
+  padding: 23px 0;
   text-decoration: none;
-  display: inline-block;
   text-transform: uppercase;
-  /* text-align: left; */
-  position: relative;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s all;
 }
 
-nav a.is-active {
-  color: var(--blue-color);
+.nav__link:hover {
+  color: var(--hover-active-color);
 }
 
-nav a:hover {
-  color: var(--blue-color);
-  text-decoration: none;
+.is-active {
+  color: var(--hover-active-color);
 }
 
-nav a[data-qa="hover"]:hover {
-  color: var(--blue-color);
-}
-
-nav a.is-active:after {
-  content: "";
-  width: auto;
-  height: 4px;
-  background-color: var(--blue-color);
-  border-radius: 8px;
+.is-active::after {
+  display: block;
   position: absolute;
-  bottom: -100%;
-  left: 0;
-  right: 0;
-}
-
-@media (max-width: 1200px) {
-  .logo {
-    margin-right: 419px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .logo {
-    margin-right: 243px;
-  }
-
-  nav ul {
-    margin-right: 20px;
-  }
-
-  nav li {
-    margin-right: 10px;
-  }
+  content: "";
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  background-color: var(--hover-active-color);
+  border-radius: 8px;
 }
