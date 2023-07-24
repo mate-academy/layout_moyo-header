@@ -34,23 +34,26 @@ body {
 }
 
 .nav__link:hover,
-.nav__link.is-active {
+.is-active {
   color: rgba(0, 172, 220, 1);
+  position: relative;
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   content: "";
+  position: absolute;
   display: block;
   background-color: rgba(0, 172, 220, 1);
   height: 4px;
+  width: 100%;
   border-radius: 8px;
-  margin-top: -4px;
+  bottom: 0;
 }
 
-.nav__item:last-child .nav__link {
-  margin-right: 0;
-}
-
-.nav__item:first-child .nav__link {
+.first-item .nav__link {
   margin-left: 0;
+}
+
+.last-item .nav__link {
+  margin-right: 0;
 }
