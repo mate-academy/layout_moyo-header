@@ -1,24 +1,24 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  --color: #00acdc;
+  --link-color: #00acdc;
+  --bg-color: #fff;
 }
 
 header {
-  max-width: 1200px;
-}
-
-.nav {
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  height: 60px;
-  background-color: #fff;
-  flex-shrink: 0;
+  align-items: center;
   padding: 0 50px;
 }
 
+.nav {
+  background-color: var(--bg-color);
+}
+
 .nav__list {
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   list-style: none;
@@ -27,7 +27,7 @@ header {
 .nav__item {
   font-style: normal;
   font-weight: 500;
-  color: #fff;
+  color: var(--bg-color);
   font-size: 12px;
   line-height: normal;
   text-transform: uppercase;
@@ -35,7 +35,7 @@ header {
 
 .nav__link {
   position: relative;
-  padding: 22.5px 0;
+  padding: 22px 0;
   margin-left: 20px;
   color: black;
   cursor: pointer;
@@ -43,7 +43,7 @@ header {
 }
 
 .is-active {
-  color: var(--color);
+  color: var(--link-color);
 }
 
 .is-active::after {
@@ -52,15 +52,16 @@ header {
   left: 0;
   right: 0;
   content: "";
-  border: 2px solid var(--color);
+  height: 4px;
+  background-color: var(--link-color);
   border-radius: 8px;
   width: 100%;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--link-color);
 }
 
-.nav__link__logo {
-  margin: 10px 0;
-}
+/* .logo {
+
+} */
