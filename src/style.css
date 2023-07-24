@@ -1,46 +1,56 @@
 body {
   margin: 0;
+  --link-hover-color: #00acdc;
+  --link-active-color: var(--link-hover-color);
 }
 
 .header {
+  font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1200px;
+  min-width: 1024px;
+  margin: 0 auto;
   background-color: #fff;
   border: 1px solid red;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  position: relative;
+  left: 50px;
 }
 
 .logo__img {
   display: block;
   height: 40px;
   width: 40px;
-  margin: 0 0 0 50px;
+  /* margin: 0 0 0 50px; */
 }
 
 .nav {
-  /* margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-  border: 1px solid red;
+  margin: 0;
+  /* position: relative; */
 }
 
 .nav__list {
-  /* position: absolute; */
-  margin: 0 50px 0 0;
+  margin: 0;
+  position: relative;
+  /* margin: 0 50px 0 0; */
+  right: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 20px;
   align-items: center;
+  gap: 20px;
   list-style: none;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
-.nav_item {
+.nav__item {
   /* padding: 0 22px 0 23px 0; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .nav__link {
@@ -48,9 +58,32 @@ body {
   justify-content: center;
   align-items: center;
   height: 60px;
-  color: #00acdc;
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
-  border: 1px solid red;
+
+  position: relative;
+  /* border: 1px solid red; */
+}
+/* LoVeHAte */
+.nav__link:hover {
+  color: var(--link-hover-color);
+}
+
+.nav__link:active {
+  color: var(--link-active-color);
+}
+
+.nav__link:active::after {
+  /* display: block; */
+  position: absolute;
+  content: "";
+  background-color: var(--link-active-color);
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  /* transform-origin: bottom right; */
+  border-radius: 8px;
 }
