@@ -1,3 +1,116 @@
-body {
+/* ================reset============================================== */
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+* {
+  user-select: none;
+}
+
+/* ============================================================== */
+
+body {
+  --blue-color: #00acdc;
+  margin: 0;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px;
+  height: 60px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  position: relative;
+  line-height: 60px;
+  height: 100%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link,
+.is-active {
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  color: #000;
+  line-height: 60px;
+  display: block;
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+  position: relative;
+}
+
+.is-active {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--blue-color);
 }
