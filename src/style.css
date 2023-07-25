@@ -2,8 +2,6 @@ body {
   margin: 0;
   --link-color: #00acdc;
   --bg-color: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-
 }
 
 header {
@@ -11,6 +9,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
 .nav {
@@ -27,11 +26,20 @@ header {
 
 .nav__item {
   color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.nav__list :first-child {
+  margin-left: 0;
+}
+
+.nav__list :last-child {
+  margin-right: 0;
 }
 
 .nav__link {
-  display: flex;
-  align-items: center;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -40,7 +48,6 @@ header {
   text-transform: uppercase;
   position: relative;
   padding: 23px 0;
-  margin-left: 20px;
   color: black;
   cursor: pointer;
   text-decoration: none;
