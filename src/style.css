@@ -1,10 +1,11 @@
-* {
-  box-sizing: border-box;
+html {
+  --color-primary: #00acdc;
 }
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 .nav {
@@ -46,12 +47,12 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color-primary);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--color-primary);
 }
 
 .is-active::after {
@@ -61,6 +62,6 @@ body {
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--color-primary);
   border-radius: 8px;
 }
