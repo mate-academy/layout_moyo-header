@@ -7,6 +7,7 @@ body {
   --header-max-width: 1200px;
   --header-min-width: 1024px;
   --header-bckgrd-color: #fff;
+  --header-line-height: 60px;
 }
 
 .header {
@@ -34,22 +35,20 @@ body {
 }
 
 .nav__list {
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
   list-style: none;
 }
 
 .nav__link {
-  display: flex;
-  align-items: center;
-  height: 60px;
+  line-height: var(--header-line-height);
+  position: relative;
   margin-left: 20px;
-  color: #000;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
-  position: relative;
+  color: #000;
 }
 
 /* LoVeHAte */
@@ -64,11 +63,11 @@ body {
 .nav__link:active::after {
   position: absolute;
   content: "";
-  background-color: var(--link-active-color);
   height: 4px;
   width: 100%;
   bottom: 0;
   left: 0;
+  background-color: var(--link-active-color);
   border-radius: 8px;
 }
 
