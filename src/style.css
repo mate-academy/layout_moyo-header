@@ -4,58 +4,63 @@ html {
 
 body {
   margin: 0;
-
+  --link-color: #00acdc;
 }
 
-.is-active {
-  border: 1px solid red;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px;
 }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
   color: white;
 }
 
 .img {
   width: 40px;
   height: 40px;
-  margin-top: 10px;
-  margin-left: 50px;
 }
 
 .nav-list {
   display: flex;
   list-style: none;
-  margin-top: 10px;
-  margin-right: 50px;
-
 }
 
 .nav-item {
-  margin-right: 10px;
+  position: relative;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.is-active {
+  color: var(--link-color);
 }
 
 .nav-link {
   display: block;
-  padding: 7px;
+  padding: 7px 0 ;
   font-weight: 500;
   text-decoration: none;
+  font-size: 12px;
 }
 
 .nav-link:hover {
-  color: #00acdc;
-}
-
-.nav-item.is-active {
-  color: #00acdc;
+  color: var(--link-color);
 }
 
 .is-active::after {
+  position: absolute;
   content: "";
   display: block;
-  background-color: #00acdc;
-  margin-top: 19px;
+  background-color: var(--link-color);
+  bottom: 0;
   border-radius: 8px;
   height: 4px;
+  width: 100%;
 }
+
+/* @media (max-width: 1024px) {
+ Я не понимаю как сделать медиа запрос чтобы он соответсвовал тестам
+} */
