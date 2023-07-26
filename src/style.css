@@ -41,10 +41,13 @@ body {
   list-style: none;
 }
 
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
 .nav__link {
   position: relative;
   display: block;
-  margin-left: 20px;
   line-height: var(--header-line-height);
   text-decoration: none;
   text-transform: uppercase;
@@ -53,40 +56,19 @@ body {
 }
 
 /* LoVeHAte */
-.nav__link:hover {
+.nav__link:hover,
+.is-active {
   color: var(--link-hover-color);
 }
 
-.nav__link:active {
-  color: var(--link-active-color);
-}
-
-.nav__link:active::after {
-  position: absolute;
-  content: "";
-  height: 4px;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: var(--link-active-color);
-  border-radius: 8px;
-}
-
-.nav__item:first-child .nav__link {
-  margin-left: 0;
-}
-
-.is-active {
-  color: var(--link-active-color);
-}
-
+.nav__link:active::after,
 .is-active::after {
   position: absolute;
   content: "";
-  background-color: var(--link-active-color);
   height: 4px;
   width: 100%;
   bottom: 0;
   left: 0;
+  background-color: var(--link-active-color);
   border-radius: 8px;
 }
