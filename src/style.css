@@ -2,14 +2,10 @@ body {
   margin: 0;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500;
+  --active-color: #00acdc;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-img {
+.logo-img {
   display: block;
 }
 
@@ -17,15 +13,16 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
   max-width: 1200px;
   min-width: 1024px;
 }
 
-.nav {
-  margin-right: 50px;
-}
-
 .nav__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
   text-transform: uppercase;
@@ -50,11 +47,11 @@ img {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .is-active:after {
@@ -63,11 +60,10 @@ img {
   content: "";
   display: block;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--active-color);
   border-radius: 8px;
 }
 
 .logo {
   display: block;
-  margin-left: 50px;
 }
