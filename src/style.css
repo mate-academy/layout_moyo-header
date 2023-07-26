@@ -1,3 +1,68 @@
 body {
   margin: 0;
 }
+
+.header {
+  min-width: 1024px;
+  max-width: 1200px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  --main-color-hover: #00acdc;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.nav__link {
+  color: #000;
+  text-decoration: none;
+  /* padding-top: calc((60px - 12px) / 2) ;
+  padding-bottom: calc((60px - 12px) / 2); */
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  padding: 10px 0;
+  text-decoration: none;
+
+}
+
+.nav__link:hover {
+  color: var(--main-color-hover);
+}
+
+.is-active {
+  color: var(--main-color-hover);
+  height: 100%;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color-hover);
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  border-radius: 8px;
+  right: 0;
+  left: 0;
+  /* top: 56px;   без явного прописування */
+}
