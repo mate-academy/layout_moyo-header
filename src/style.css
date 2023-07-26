@@ -1,13 +1,15 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  --color-item: #00acdc;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -25,18 +27,19 @@ body {
 
 .nav_link_item {
   display: inline-block;
-  margin: 0 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   font-size: 12px;
   text-decoration: none;
   text-transform: uppercase;
-  line-height: 60px;
+  padding: 23px 0;
   color: #000;
   cursor: pointer;
 }
 
 .nav_link_item:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--color-item);
   position: relative;
 }
 
@@ -44,17 +47,17 @@ body {
   content: "";
   position: absolute;
   display: block;
-  background-color: #00acdc;
+  background-color: var(--color-item);
   height: 4px;
   width: 100%;
   border-radius: 8px;
   bottom: 0;
 }
 
-.first_link .nav_link_item {
-  margin-left: 0;
+.nav_list > .nav_list_item:first-child > .nav_link_item {
+  margin-left: 0 !important;
 }
 
-.last_link .nav_link_item {
-  margin-right: 0;
+.nav_list > .nav_list_item:last-child > .nav_link_item {
+  margin-right: 0 !important;
 }
