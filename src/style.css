@@ -1,6 +1,6 @@
 html {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -10,7 +10,6 @@ body {
 header {
   display: flex;
   background-color: white;
-  flex-direction: row;
   margin: 0;
   justify-content: space-between;
 }
@@ -21,16 +20,15 @@ header {
   height: 40px;
 }
 
-.nav {
+.nav__header {
   display: flex;
   align-self: flex-end;
   margin-right: 50px;
 }
 
-.ul {
+.ul__links {
   margin: 0;
   display: flex;
-  flex-direction: row;
 }
 
 .nav__link {
@@ -50,6 +48,20 @@ header {
 }
 
 .nav__link:hover::after {
+  content: "";
+  display: block;
+  background-color: #00acdc;
+  height: 4px;
+  border-radius: 8px;
+  position: relative;
+  top: -4px;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
   content: "";
   display: block;
   background-color: #00acdc;
