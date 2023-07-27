@@ -5,6 +5,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   --link-color: #00acdc;
 }
 
@@ -20,6 +21,7 @@ body {
 }
 
 .img {
+  margin: 10px 0;
   width: 40px;
   height: 40px;
 }
@@ -27,11 +29,11 @@ body {
 .nav-list {
   display: flex;
   list-style: none;
+  padding-left: 0;
 }
 
 .nav-item {
   position: relative;
-  margin-left: 20px;
   text-transform: uppercase;
 }
 
@@ -46,10 +48,16 @@ body {
   text-decoration: none;
   font-size: 12px;
   color: black;
+  margin-left: 20px;
 }
 
 .nav-link:hover {
   color: var(--link-color);
+}
+
+.nav-link.is-active {
+  color: var(--link-color);
+  margin-left: 0;
 }
 
 .is-active::after {
@@ -57,7 +65,7 @@ body {
   content: "";
   display: block;
   background-color: var(--link-color);
-  bottom: -19px;
+  bottom: -17px;
   border-radius: 8px;
   height: 4px;
   width: 100%;
