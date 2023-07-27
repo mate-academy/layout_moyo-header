@@ -1,4 +1,9 @@
-html,
+html {
+  font-family: Roboto, sans-serif;
+  --blue_color: #00acdc;
+  font-size: 12px;
+}
+
 body,
 ul {
   margin: 0;
@@ -26,12 +31,8 @@ ul {
 }
 
 .nav__item {
-  margin-left: 20px;
   display: flex;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  cursor: pointer;
+  margin-left: 20px;
   text-transform: uppercase;
 }
 
@@ -48,10 +49,10 @@ ul {
 
 .nav__link:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--blue_color);
 }
 
-.is-active.nav__link::after {
+.is-active::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -59,5 +60,5 @@ ul {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--blue_color);
 }
