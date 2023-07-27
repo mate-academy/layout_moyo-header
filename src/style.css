@@ -1,3 +1,77 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+html {
+  --header-height: 60px;
+  --main-color: #000;
+  --blue-color: #00acdc;
+}
+
+body,
+div,
+nav,
+header,
+ul,
+li,
+a {
   margin: 0;
+  padding: 0;
+}
+
+.header__container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.header__logo {
+  height: 40px;
+  width: 40px;
+}
+
+.nav {
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  display: block;
+  position: relative;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--main-color);
+  height: var(--header-height);
+  line-height: var(--header-height);
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+  transition: all 0.3s ease 0s;
+}
+
+.is-active {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--blue-color);
+  position: absolute;
+  bottom: 0;
 }
