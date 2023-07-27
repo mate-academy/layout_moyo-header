@@ -1,6 +1,7 @@
 html {
-  margin: 0;
   font-family: Roboto, Arial, Helvetica, sans-serif;
+  --normal-color: black;
+  --hover-color: #00acdc;
 }
 
 body {
@@ -10,47 +11,50 @@ body {
 header {
   display: flex;
   background-color: white;
-  margin: 0;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
 .logo {
-  margin: 10px 50px;
   width: 40px;
   height: 40px;
+  margin-top: 10px;
 }
 
 .nav__header {
   display: flex;
   align-self: flex-end;
-  margin-right: 50px;
 }
 
-.ul__links {
+.nav__list {
   margin: 0;
   display: flex;
+  list-style: none;
+}
+
+.nav__li {
+  display: flex;
+  margin-left: 20px;
 }
 
 .nav__link {
-  color: #000;
+  color: var(--normal-color);
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  margin-left: 20px;
   height: 60px;
-  text-align: center;
   line-height: 60px;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .nav__link:hover::after {
   content: "";
   display: block;
-  background-color: #00acdc;
+  background-color: var(--hover-color);
   height: 4px;
   border-radius: 8px;
   position: relative;
@@ -64,7 +68,7 @@ header {
 .is-active::after {
   content: "";
   display: block;
-  background-color: #00acdc;
+  background-color: var(--hover-color);
   height: 4px;
   border-radius: 8px;
   position: relative;
