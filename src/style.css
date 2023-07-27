@@ -5,6 +5,8 @@ body {
 .header {
   min-width: 1024px;
   max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 
   display: flex;
   justify-content: space-between;
@@ -16,32 +18,34 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   --main-color-hover: #00acdc;
+
 }
 
 .nav__list {
+  margin: 0;
+  padding: 0;
   display: flex;
   list-style: none;
 }
 
 .nav__link {
+  display: block;
   color: #000;
+  height: 60px;
+  line-height: 60px;
   text-decoration: none;
-  /* padding-top: calc((60px - 12px) / 2) ;
-  padding-bottom: calc((60px - 12px) / 2); */
-  padding-top: 22.5px;
-  padding-bottom: 22.5px;
 }
 
-.nav__item {
-  margin-left: 20px;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .logo {
+  display: block;
   height: 40px;
   width: 40px;
-  padding: 10px 0;
+  line-height: 60px;
   text-decoration: none;
-
 }
 
 .nav__link:hover {
@@ -50,7 +54,6 @@ body {
 
 .is-active {
   color: var(--main-color-hover);
-  height: 100%;
   position: relative;
 }
 
@@ -64,5 +67,10 @@ body {
   border-radius: 8px;
   right: 0;
   left: 0;
-  /* top: 56px;   без явного прописування */
 }
+
+/* @media (min-width:1024px) {
+  .nav__list {
+    padding: 0;
+  }
+} */
