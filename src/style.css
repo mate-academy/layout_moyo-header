@@ -1,14 +1,10 @@
 body {
   margin: 0;
   font-family: Roboto, Arial, Helvetica, sans-serif;
-
-}
-
-a {
-  line-height: 60px;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
+  --a-line-height: 60px;
+  --a-text-decoration: none;
+  --a-text-transform: uppercase;
+  --a-cursor: pointer;
 }
 
 .header {
@@ -24,7 +20,7 @@ a {
   width: 40px;
 }
 
-.nav__links {
+.nav__list {
   display: flex;
   list-style: none;
   margin: 0;
@@ -34,6 +30,10 @@ a {
 .nav__link {
   display: inline-block;
   color: black;
+  text-decoration: var(--a-text-decoration);
+  text-transform: var(--a-text-transform);
+  cursor: var(--a-cursor);
+  line-height: var(--a-line-height);
   font-size: 12px;
   font-weight: 500;
 }
