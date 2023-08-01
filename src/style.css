@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  --colors: #00acdc;
 }
 
 a {
@@ -30,10 +30,10 @@ a {
   font-weight: 500;
   text-transform: uppercase;
   font-size: 12px;
-  /* line-height: 14px; */
   height: 60px;
   display: flex;
   align-items: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .nav__item:not(:last-child) {
@@ -41,12 +41,12 @@ a {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--colors);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--colors);
 }
 
 .is-active:after {
@@ -57,5 +57,5 @@ a {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--colors);
 }
