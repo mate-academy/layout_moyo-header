@@ -2,11 +2,17 @@ body {
   margin: 0;
 }
 
+:root {
+  --main-color: #000;
+  --active-color: #00abcd;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50;
+  padding-left: 50px;
+  padding-right: 50px;
   height: 60;
 }
 
@@ -37,16 +43,18 @@ a {
   align-items: center;
   font-family: "Roboto", sans-serif;
   height: 60px;
+  line-height: 60px;
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
-  color: #000;
+  color: var(--main-color);
   text-decoration: none;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 a:hover {
-  color: #00abcd;
+  color: var(--active-color);
 }
 
 .is-active::after {
@@ -56,6 +64,10 @@ a:hover {
   left: 0;
   right: 0;
   height: 4px;
-  border-radius: 2px;
-  background-color: #00abcd;
+  border-radius: 8px;
+  background-color: var(--active-color);
+}
+
+.is-active {
+  color: var(--active-color);
 }
