@@ -1,3 +1,57 @@
+
 body {
   margin: 0;
+  padding: 0;
+}
+
+.box {
+  background-color: silver;
+  display: flex;
+  height: 60px;
+  width: 1200px;
+}
+
+.logotip {
+  margin: 10px 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.list {
+  position: absolute;
+  flex-direction: row;
+  list-style: none;
+  left: 300px;
+}
+
+.wrapper .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.list li {
+  font-family: "Roboto", sans-serif;
+  margin: 10px 20px;
+}
+
+.sections:hover {
+  box-sizing: content-box;
+  display: table;
+  border-bottom: 1.2px solid #00acdc;
+  color: #00acdc;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .box .list {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .box .list {
+    width: 70%;
+  }
 }
