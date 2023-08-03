@@ -1,3 +1,104 @@
-body {
+/*Reset default margins*/
+html,
+body,
+div,
+object,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+img,
+var,
+b,
+u,
+i,
+ol,
+ul,
+li,
+form,
+label,
+legend,
+table,
+tr,
+th,
+td,
+footer,
+header,
+menu,
+nav,
+section {
   margin: 0;
+  padding: 0;
+}
+
+html {
+  --link-active-color: #00acdc;
+  --link-color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  height: auto;
+  margin-right: 50px;
+}
+
+.nav__list {
+  display: flex;
+  background-color: #fff;
+  margin-right: -20px;
+  list-style-type: none;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.nav__link {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-decoration: none;
+  color: var(--link-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: 100%;
+  text-transform: uppercase;
+  margin-right: 20px;
+  justify-content: center;
+  line-height: normal;
+}
+
+.nav__link:hover {
+  color: var(--link-active-color);
+}
+
+.is-active {
+  color: var(--link-active-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--link-active-color);
+  width: 100%;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin: 10px 0 10px 50px;
 }
