@@ -1,3 +1,72 @@
+/* Variables */
+:root {
+  --font-family: "Roboto", "Helvetica", sans-serif;
+  --main-color: #000;
+  --active-color: #00acdc;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --nav-item-margin: 20px;
+  --nav-item-font-size: 12px;
+  --nav-item-font-weight: 500;
+  --nav-item-line-height: 60px;
+  --nav-item-padding: 23px 0;
+  --nav-item-text-transform: uppercase;
+}
+
+/* General Styles */
 body {
   margin: 0;
+  font-family: var(--font-family);
+}
+
+/* Header */
+.header {
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  min-width: 1000px;
+}
+
+.logo__link {
+  display: flex;
+}
+
+/* Navigation */
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: var(--nav-item-margin);
+}
+
+.nav__link {
+  color: var(--main-color);
+  position: relative;
+  line-height: var(--nav-item-line-height);
+  padding: var(--nav-item-padding);
+  text-decoration: none;
+  font-size: var(--nav-item-font-size);
+  font-weight: var(--nav-item-font-weight);
+  text-transform: var(--nav-item-text-transform);
+}
+
+.nav__link:hover,
+.is-active {
+  color: var(--active-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  background-color: var(--active-color);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
 }
