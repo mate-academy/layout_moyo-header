@@ -1,3 +1,80 @@
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0 em;
+  text-align: left;
+}
+
 body {
+  display: block;
   margin: 0;
+  --header--height: 60px;
+  --header-min-weight: 1200px;
+  --header-max-weight: 1024px;
+  --header-line-height: 14px;
+  --main-color: #00acdc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--header--height);
+  line-height: var(--header-line-height);
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  margin: 0;
+}
+
+.nav__item {
+  list-style: none;
+  margin-left: 20px;
+  height: var(--header--height);
+  line-height: var(--header-line-height);
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--main-color);
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__link:hover,
+.is-active {
+  color: var(--main-color);
 }
