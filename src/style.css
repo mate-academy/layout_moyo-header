@@ -27,6 +27,7 @@ body {
 .nav {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nav__list {
@@ -38,9 +39,30 @@ body {
 
 .nav__link {
   display: block;
-  padding: 10px 0;
+  padding: 23px 0 ;
   font-size: 12px;
   margin-left: 20px;
   text-decoration: none;
   color: #000;
+}
+
+a:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  margin: 0;
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  top: 56px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
 }
