@@ -1,57 +1,67 @@
 body {
-  font-family: "Roboto", "Arial", sans-serif;
-  background-color: silver;
   margin: 0;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
-
-.block {
-  background-color: white;
-  height: 60px;
-  width: 1200px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 50px;
 }
 
 .logo {
+  display: block;
   height: 40px;
   width: 40px;
-  padding-top: 10px;
-  padding-left: 50px;
 }
 
-.list {
+.logo__image {
+  padding: 10px 0;
+}
+
+.nav__list {
   display: flex;
-  float: right;
-  align-items: center;
+  padding: 0;
+  margin: 0;
   list-style: none;
-  padding: 7px 50px;
 }
 
-.list .alignment {
-  font-weight: 700;
-  margin: 0 10px;
-  font-size: 12px;
+.nav__item {
+  margin-left: 20px;
 }
 
-.is-active:hover {
-  text-underline-offset: 22px;
-  text-decoration-line: underline;
-  text-decoration-thickness: 3px;
-  cursor: pointer;
-  color: #00acdc;
+.nav__item:first-child {
+  margin-left: 0;
 }
 
-.sections {
+.nav_link {
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
   text-transform: uppercase;
-  color: black;
+  font-size: 12px;
   text-decoration: none;
+  color: black;
 }
 
-.sections:hover {
-  cursor: pointer;
+.nav_link:hover {
   color: #00acdc;
 }
 
-.navigation {
-  display: inline;
+.nav_link.is-active {
+  color: #00acdc;
+}
+
+.nav_link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
 }
