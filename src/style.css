@@ -14,38 +14,43 @@ html {
 .header {
   display: flex;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
 .nav {
   height: auto;
-  margin-right: 50px;
 }
 
 .nav__list {
   display: flex;
   background-color: #fff;
-  margin-right: -20px;
   list-style-type: none;
   height: 100%;
   flex-wrap: wrap;
 }
 
 .nav__link {
-  cursor: pointer;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
   position: relative;
+
+  cursor: pointer;
   text-decoration: none;
+  text-transform: uppercase;
+
   color: var(--link-color);
   font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  height: 100%;
-  text-transform: uppercase;
-  margin-right: 20px;
-  justify-content: center;
   line-height: normal;
+}
+
+.nav__list > :not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link:hover {
@@ -71,5 +76,5 @@ html {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
-  margin: 10px 0 10px 50px;
+  margin: 10px 0;
 }
