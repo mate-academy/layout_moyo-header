@@ -11,9 +11,15 @@ body {
   font-size: 12px;
 }
 
-.header {
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header {
   margin: 0 auto;
   max-width: 1200px;
+  min-width: 1024px;
   height: 60px;
   padding: 0 50px;
   display: flex;
@@ -31,10 +37,10 @@ body {
 
 .nav__item {
   display: flex;
-  gap: 20px;
 }
 
 .nav__link {
+  margin-right: 20px;
   position: relative;
   text-decoration: none;
   color: #000;
@@ -43,31 +49,27 @@ body {
   cursor: pointer;
 }
 
-.nav__link:visited {
+.nav__link:last-child {
+  margin-right: 0;
+}
+
+.is-active {
   color: rgb(0, 172, 220);
 }
 
-.nav__link::after {
+.nav__link.is-active::after {
   content: "";
   bottom: 0;
   left: 0;
+  right: 0;
   width: 100%;
   position: absolute;
   height: 4px;
   border-radius: 8px;
   background: rgb(0, 172, 220);
-  opacity: 0;
+  opacity: 1;
 }
 
 .nav__link:hover {
   color: rgb(0, 172, 220);
-}
-
-.nav__link:hover::after {
-  opacity: 1;
-}
-
-img {
-  max-width: 100%;
-  display: block;
 }
