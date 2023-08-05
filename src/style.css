@@ -1,3 +1,80 @@
-body {
+/*Reset default margins*/
+html,
+body,
+ul {
   margin: 0;
+  padding: 0;
+}
+
+html {
+  --link-active-color: #00acdc;
+  --link-color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.nav {
+  height: auto;
+}
+
+.nav__list {
+  display: flex;
+  background-color: #fff;
+  list-style-type: none;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  position: relative;
+
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: var(--link-color);
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.nav__list > :not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link:hover {
+  color: var(--link-active-color);
+}
+
+.is-active {
+  color: var(--link-active-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--link-active-color);
+  width: 100%;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin: 10px 0;
 }
