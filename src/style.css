@@ -1,19 +1,10 @@
 body {
+  --link-color: #00acdc;
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-.wrapper {
+.container {
   display: flex;
   padding: 0 50px;
   justify-content: space-between;
@@ -27,6 +18,9 @@ a {
 }
 
 .navigation__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
 }
 
@@ -35,6 +29,7 @@ a {
 }
 
 .navigation__link {
+  text-decoration: none;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -43,7 +38,7 @@ a {
   display: flex;
   align-items: center;
   color: #000;
-  height: 60px;
+  padding: 22.5px 0;
 }
 
 .navigation__link:hover {
@@ -51,7 +46,7 @@ a {
 }
 
 .navigation__link:active {
-  color: #00acdc;
+  color: var(--link-color);
   box-shadow: 0 4px 0 #00acdc;
 }
 
@@ -63,10 +58,10 @@ a {
 .is-active::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -4px;
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--link-color);
   border-radius: 8px;
 }
