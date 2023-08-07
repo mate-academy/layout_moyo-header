@@ -18,7 +18,6 @@ header {
 
 .nav__list {
   display: flex;
-  z-index: 1;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -40,23 +39,23 @@ header {
   transition: color 0.3s;
 }
 
+.nav__link:hover {
+  color: #00acdc;
+}
+
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.nav__link:target {
-  color: #00acdc;
-}
-
-.nav__link:hover {
-  color: #00acdc;
-}
-
 .nav__text {
   display: flex;
   align-items: center;
+}
+
+.nav__link.is-active {
+  color: #00acdc;
 }
 
 .nav__link.is-active::after {
@@ -76,8 +75,4 @@ li:last-child {
 
 li:first-child {
   margin: 0 10px 0 0;
-}
-
-.nav__link.is-active {
-  color: #00acdc;
 }
