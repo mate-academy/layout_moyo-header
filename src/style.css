@@ -1,9 +1,11 @@
 html {
   font-family: Roboto, Arial, sans-serif;
   font-size: 12px;
+  font-weight: 500;
   --header-min-width: 1024px;
   --header-max-width: 1200px;
   --header-height: 60px;
+  --blue-color: #00acdc;
 }
 
 body {
@@ -32,12 +34,6 @@ body {
 .nav__list {
   display: flex;
   margin: 0;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 14px;
-  text-align: left;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 .nav__item {
@@ -53,7 +49,6 @@ body {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  cursor: pointer;
 }
 
 .nav__link.is-active:first-child::after {
@@ -65,13 +60,10 @@ body {
   right: 0;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
 
-.nav__link:hover {
-  color: #00acdc;
-}
-
+.nav__link:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
