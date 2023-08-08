@@ -1,112 +1,72 @@
-
 body {
   margin: 0;
 }
 
 .header {
-  background-color: #fff;
-  color: black;
-  padding: 0 50px;
   display: flex;
-  align-items: center;
-}
-
-.container {
-  width: 1200px;
-  height: 60px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
   display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.logo__image {
+  height: 100%;
+  width: 100%;
 }
 
 .nav__list {
   display: flex;
-  list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .nav__item {
-  margin: 0;
-  padding: 0;
-  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
 }
 
 .nav__link {
-  margin: 0;
-  padding: 23px 0;
-  display: block;
-  text-decoration: none;
-  color: #000;
   position: relative;
-  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  height: 60px;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
 }
 
 .nav__link:hover {
   color: #00acdc;
-
 }
 
-.nav__link::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #00acdc;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.2s ease-in-out;
-}
-
-.nav__link:hover::after {
-  transform: scaleX(1);
+.nav__link.is-active {
+  color: #00acdc;
 }
 
 .nav__link.is-active::after {
-  transform: scaleX(1);
-}
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-.hower {
-  color: #00acdc;
-}
-
-.body {
-  margin: 0;
-  padding: 0;
-
-}
-
-@media screen and (max-width: 1024px) {
-
-  .nav__link {
-    font-size: 10px;
-  }
-  .container {
-    padding: 0 10px;
-  }
-  .header {
-    padding: 10px 0;
-  }
-  .logo {
-    font-size: 20px;
-  }
-}
-
-[data-qa="hover"] {
-  padding: 23px 0;
-  display: block;
-  color: #00acdc;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
 }
