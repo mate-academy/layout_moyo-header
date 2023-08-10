@@ -1,3 +1,11 @@
+:root {
+  --custom-color: #00acdc;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -24,8 +32,6 @@ body {
   font-size: 12px;
   font-weight: 500;
   line-height: 14.06px;
-  letter-spacing: 0;
-  text-align: left;
   text-decoration: none;
   text-transform: uppercase;
   height: 100%;
@@ -35,8 +41,8 @@ body {
 }
 
 .nav__link:hover {
-  text-decoration: underline;
-  color: #00acdc;
+  text-decoration: none;
+  color: var(--custom-color);
 }
 
 .nav__item:first-child {
@@ -53,18 +59,18 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--custom-color);
   position: relative;
 }
 
 .is-active::after {
   content: "";
   position: absolute;
+  height: 4px;
   bottom: 0;
   left: 0;
   display: block;
   width: 100%;
-  background-color: #00acdc;
-  height: 4px;
+  background-color: var(--custom-color);
   border-radius: 8px;
 }
