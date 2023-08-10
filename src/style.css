@@ -1,56 +1,59 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
-.container {
-  position: relative;
-  max-width: 1200px;
+.header {
   display: flex;
-  flex-direction: row;
+  padding: 4px 22.5px 22.5px;
   justify-content: space-between;
-  margin: auto;
-  padding: 16px;
   align-items: center;
 }
 
+body {
+  color: #00acdc;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.06px;
+  margin: 0;
+}
+
 .logo {
-  width: 20px;
-  height: 40px;
-  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 20px;
 }
 
 .logo img {
   max-height: 60px;
   display: block;
+  padding: 5px;
 }
 
-.navigation {
-  position: relative;
-}
-
-nav ul {
+.nav-list {
   list-style-type: none;
   display: flex;
   align-items: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
+.nav-item {
   margin-right: 20px;
-}
-
-nav ul li a {
-  color: #555;
-  text-decoration: none;
-  font-family: Roboto, sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
   position: relative;
 }
 
-nav ul li a::after {
+.nav-item a {
+  position: relative;
+  color: #000;
+  transition: color 0.3s;
+  margin: 5px 0;
+}
+
+.nav-item a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -63,17 +66,29 @@ nav ul li a::after {
   transition: 0.3s;
 }
 
-nav ul li a:hover::after,
-nav ul li a.is-active::after {
+.nav-item a:hover::after,
+.nav-item a.is-active::after {
   transform: scaleX(1);
 }
 
-nav ul li a.is-active {
+.nav-item a.is-active {
   color: #00acdc;
 }
 
-nav ul li a.nav__link--hover {
+.nav-item a:hover {
   color: #00acdc;
+}
+
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+  background-color: transparent;
+  border-radius: 20px;
+  pointer-events: auto;
 }
 
 @media (max-width: 1024px) {
@@ -81,7 +96,7 @@ nav ul li a.nav__link--hover {
     padding: 16px 8px;
   }
 
-  nav ul li {
+  .nav-item {
     margin-right: 12px;
   }
 }
