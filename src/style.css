@@ -1,319 +1,79 @@
-/* stylelint-disable string-quotes */
 body {
   margin: 0;
 }
 
-html {
-  background-color: gray;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  padding: 0 50px;
+
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-@media (min-width: 1200px) {
-
-  .rectangle {
-    width: 1200px;
-    height: 60px;
-    flex-shrink: 0;
-
-    background-color: white;
-    border-color: green;
-    border: 10px;
-
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
-  }
-
-  .moyo_1 {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    background: url(https://avatars.mds.yandex.net/get-images-cbir/4302638/j6F0sZ_w4LfMJmnS6wn_Jw7392/ocr),
-    lightgray 50% / cover no-repeat;
-
-    margin-left: 50px;
-  }
-
-  .Apple {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-
-    margin-left: 419px;
-  }
-
-  .Samsung {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-
-    margin-left: 20px;
-  }
-
-  .Smartphones {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-
-    margin-left: 20px;
-  }
-
-  .lap {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-
-    margin-left: 20px;
-    white-space: nowrap;
-  }
-
-  .Gadgets {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-
-    margin-left: 20px;
-  }
-
-  .Tablets {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-
-    margin-left: 20px;
-  }
-
-  .Photo {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-
-    margin-left: 20px;
-  }
-
-  .Vdeo {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-
-    margin-left: 20px;
-    margin-right: 50px;
-  }
-
-  /*.rectang {
-    width: 37px;
-    height: 4px;
-    flex-shrink: 0;
-    border-radius: 8px;
-    background: #00acdc;
-
-    position: absolute;
-    margin-bottom: -56px;
-    margin-left: 509px;
-  }*/
-
-  .is-active:hover {
-    color: #00acdc;
-  }
-
-  .is-active:hover::before {
-
-    content: "";
-    display: block;
-    width: 37px;/*inherit*/
-    height: 4px;/*inherit*/
-    flex-shrink: 0;
-    border-radius: 8px;
-    background: #00acdc;
-
-    position: absolute;
-    margin: auto 0;
-    margin-top: 33px;
-
-  }
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
 }
 
-@media (max-width: 1200px) {
-  .rectangle {
-    width: 1200px;
-    height: 60px;
-    flex-shrink: 0;
+.logo__image {
+  height: 100%;
+  width: 100%;
+}
 
-    background-color: white;
-    border-color: green;
-    border: 10px;
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
-  }
+.nav__item {
+  margin-left: 20px;
+}
 
-  .moyo_1 {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    background: url(https://avatars.mds.yandex.net/get-images-cbir/4302638/j6F0sZ_w4LfMJmnS6wn_Jw7392/ocr),
-    lightgray 50% / cover no-repeat;
+.nav__item:first-child {
+  margin-left: 0;
+}
 
-    margin-left: 50px;
-  }
+.nav__link {
+  position: relative;
 
-  .Apple {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
+  display: flex;
+  align-items: center;
 
-    margin-left: 333px;
-  }
+  height: 60px;
 
-  .Samsung {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
 
-    margin-left: 20px;
-  }
+  transition: color 0.3s;
+}
 
-  .Smartphones {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
+.nav__link:hover {
+  color: #00acdc;
+}
 
-    margin-left: 20px;
-  }
+.nav__link.is-active {
+  color: #00acdc;
+}
 
-  .lap {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-    margin-left: 20px;
-    white-space: nowrap;
-  }
-
-  .Gadgets {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-
-    margin-left: 20px;
-  }
-
-  .Tablets {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-
-    margin-left: 20px;
-  }
-
-  .Photo {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-
-    margin-left: 20px;
-  }
-
-  .Vdeo {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-
-    margin-left: 20px;
-  }
-
-  /*.rectang {
-    width: 37px;
-    height: 4px;
-    flex-shrink: 0;
-    border-radius: 8px;
-    background: #00acdc;
-
-    position: absolute;
-    margin-bottom: -56px;
-    margin-left: 423px;
-  }*/
-
-  .is-active:hover {
-    color: #00acdc;
-  }
-  .is-active:hover::before {
-
-    content: "";
-    display: block;
-    width: 37px;/*inherit*/
-    height: 4px;/*inherit*/
-    flex-shrink: 0;
-    border-radius: 8px;
-    background: #00acdc;
-
-    position: absolute;
-    margin: auto 0;
-    margin-top: 33px;
-  }
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
 }
