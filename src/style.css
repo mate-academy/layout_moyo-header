@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  --line-height-header: 60px;
   --color-link-hover: #00acdc;
   --color-link-main: #000;
 }
@@ -11,7 +10,7 @@ body {
   justify-content: space-between;
   max-width: 1200px;
   padding: 0 50px;
-  line-height: var(--line-height-header);
+  height: 60px;
   box-sizing: border-box;
   margin: 0 auto;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
@@ -25,14 +24,16 @@ body {
 .nav__list {
   display: flex;
   margin: 0;
+  padding: 0;
 }
 
 .nav__item {
   list-style: none;
+  margin-left: 20px;
 }
 
-.nav__item:not(:last-child) {
-  margin-right: 20px;
+.nav__item:first-child {
+  margin-left: 0;
 }
 
 .nav--link {
@@ -42,7 +43,7 @@ body {
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  line-height: var(--line-height-header);
+  line-height: 60px;
   color: var(--color-link-main);
   cursor: pointer;
 }
@@ -76,5 +77,5 @@ body {
   display: inline-block;
   width: 40px;
   height: 40px;
-  line-height: var(--line-height-header);
+  line-height: 60px;
 }
