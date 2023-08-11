@@ -1,31 +1,33 @@
-* {
-  margin: 0;
-}
-
 :root {
   --blue: #00acdc;
 }
 
+body,
+ul,
+li {
+  margin: 0;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 12px;
   max-width: 1200px;
   min-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-a {
+.navigation__link {
   color: #000;
   text-decoration: none;
+  height: 60px;
+  display: inline-block;
+  line-height: 60px;
 }
 
-.logo,
-.logo a {
+.logo {
   height: 40px;
-}
-
-li {
-  list-style: none;
 }
 
 .header {
@@ -44,19 +46,14 @@ li {
 .navigation__list {
   margin-left: 20px;
   text-transform: uppercase;
+  list-style: none;
 }
 
 .navigation__list:first-of-type {
   margin-left: 0;
 }
 
-.navigation__list a {
-  height: 60px;
-  display: inline-block;
-  line-height: 60px;
-}
-
-a:hover {
+.navigation__link:hover {
   cursor: pointer;
   color: var(--blue);
 }
