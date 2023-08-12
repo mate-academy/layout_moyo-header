@@ -1,35 +1,25 @@
 body {
   margin: 0;
+  --active-color: #00acdc;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-@media all and (max-width: 1024px) {
-  .header {
-    width: 1024px;
-  }
-}
-
-@media all and (min-width: 1200px) {
-  .header {
-    width: 1200px;
-  }
+  min-width: 1024px;
+  max-width: 1200px;
+  padding: 0 50px;
 }
 
 .logo_img {
   display: block;
   width: 40px;
   height: 40px;
-  margin: 10px 0 10px 50px;
 }
 
 .nav__list {
   display: flex;
-  list-style: none;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -40,27 +30,17 @@ header {
 
 .nav__link {
   color: #000;
-  display: inline-block;
   text-decoration: none;
   height: 60px;
   line-height: 60px;
 }
 
-a:visited {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--active-color);
 }
 
-a:hover {
-  color: #00acdc;
-}
-
-a:active {
-  position: relative;
-  color: #00acdc;
-}
-
-a.is-active {
-  color: #00acdc;
+.is-active {
+  color: var(--active-color);
   position: relative;
 }
 
@@ -72,25 +52,18 @@ a.is-active {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--active-color);
 }
 
 .nav {
-  display: inline-block;
   margin-right: 50px;
 }
 
 .nav__item {
   display: flex;
-  align-items: flex-end;
   padding-right: 20px;
 }
 
 .nav__item:last-child {
-  padding: 0;
   margin-right: 0;
-}
-
-.nav:first-child {
-  padding-left: 0;
 }
