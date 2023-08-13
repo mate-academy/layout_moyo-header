@@ -1,25 +1,27 @@
+html {
+  --hover-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 500;
-  font-style: normal;
 }
 
 .logo {
   height: 40px;
   width: 40px;
-  margin-left: 50px;
   align-items: center;
 }
 
 .header {
-  min-width: 1024px;
-  max-width: 1200px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
 .nav {
@@ -43,22 +45,21 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-right: 50px;
 }
 
 a:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--hover-color);
   position: relative;
 }
 
 .is-active::after {
   content: "";
   display: block;
-  background-color: #00acdc;
+  background-color: var(--hover-color);
   height: 4px;
   width: 100%;
   border-radius: 8px;
