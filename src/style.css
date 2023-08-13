@@ -1,3 +1,70 @@
+html {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.logo {
+  height: 40px;
+  padding: 10px 0;
+  margin-left: 50px;
+  margin-right: auto;
+}
+
+.nav {
+  margin-right: 50px;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: inline-block;
+  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 60px;
+  height: 60px;
+}
+
+.nav__link:hover {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.is-active {
+  color: var(--blue);
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 4px solid;
+  background-color: var(--blue);
+  border-radius: 8px;
 }
