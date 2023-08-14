@@ -1,22 +1,22 @@
 
-body, h1, h2, h3, p, ul, li {
+body,
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
 
-/* глобальная ст*/
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
 }
-
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #ffffff;
 }
 
 .logo img {
@@ -36,6 +36,7 @@ header {
   font-weight: bold;
   text-transform: uppercase;
   transition: color 0.3s;
+  margin-right: 20px;
 }
 
 .nav__list a:hover {
@@ -47,7 +48,7 @@ header {
 }
 
 .is-active::after {
-  content: '';
+
   display: block;
   width: 100%;
   height: 4px;
@@ -56,12 +57,12 @@ header {
 }
 @media screen and (max-width: 1200px) {
   .nav__list {
-     margin-right: 10px;
+    margin-right: 20px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   header {
-      padding: 10px;
+    padding: 20px;
   }
 }
