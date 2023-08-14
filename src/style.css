@@ -1,3 +1,139 @@
 body {
   margin: 0;
+  padding: 0;
+  --header-height: 60px;
 }
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: calc((var(--header-height) - 15px) / 2) 0;
+}
+
+.header {
+  margin: 0;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+  height: var(--header-height);
+  padding: 0;
+  margin: 0;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  color: #000;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__item {
+  margin: 10px;
+}
+
+.logo {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  margin: 10px 0 10px 50px;
+  z-index: 1;
+}
+
+.nav__list :hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.line {
+  position: absolute;
+  height: 4px;
+  width: 37px;
+  border-radius: 8px;
+  background: #00acdc;
+  bottom: 0;
+}
+/* @media (max-width:1024px) {
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .header {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    padding: 0 50px;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    height: var(--header-height);
+  }
+
+  .nav__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    color: #000;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav__item {
+    margin: 0 10px;
+  }
+
+  .logo {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    margin: 10px 243px 10px 50px;
+    z-index: 1;
+  }
+
+  .nav__list :hover {
+    color: #00acdc;
+  }
+
+  .is-active {
+    color: #00acdc;
+  }
+
+  .line {
+    position: absolute;
+    height: 4px;
+    width: 37px;
+    border-radius: 8px;
+    background: #00acdc;
+    bottom: 0;
+  }
+} */
