@@ -1,8 +1,14 @@
+:root {
+  --second-color: #00acdc;
+  --main-color: #000;
+}
+
 body,
 .nav {
   margin: 0;
   padding: 0;
   max-width: 1200px;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -25,14 +31,12 @@ body,
 }
 
 .nav_link {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #000;
+  color: var(--main-color);
   margin-right: 20px;
   padding-top: 23px;
   padding-bottom: 23px;
@@ -40,7 +44,7 @@ body,
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--second-color);
 }
 
 .nav_link:last-child {
@@ -48,7 +52,7 @@ body,
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--second-color);
 }
 
 .is-active::after {
@@ -59,7 +63,7 @@ body,
   bottom: 0;
   display: block;
   content: "";
-  background: #00acdc;
+  background-color: var(--second-color);
   border-radius: 8px;
   height: 4px;
 }
