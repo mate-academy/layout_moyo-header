@@ -1,3 +1,106 @@
+:root {
+  --highlight-color: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
 body {
+  color: var(--highlight-color);
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.06px;
   margin: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  max-height: 60px;
+  display: block;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-item a {
+  position: relative;
+  color: #000;
+  transition: color 0.3s;
+  margin: 5px 0;
+}
+
+.nav-item:first-child a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -20px;
+  left: 0;
+  border-radius: 8px;
+  background-color: var(--highlight-color);
+  transform: scaleX(0);
+  transition: 0.3s;
+}
+
+.nav-item:first-child a:hover::after,
+.nav-item:first-child a.is-active::after {
+  transform: scaleX(1);
+}
+
+.nav-item a.is-active {
+  color: var(--highlight-color);
+}
+
+.nav-item a:hover {
+  color: var(--highlight-color);
+}
+
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  border-radius: 20px;
+  pointer-events: auto;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  transform: scale(1.2);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.nav-item a:hover::before {
+  opacity: 1;
 }
