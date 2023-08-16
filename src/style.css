@@ -3,10 +3,6 @@ body {
   box-sizing: border-box;
 }
 
-.header {
-  max-width: 1200px;
-}
-
 .list__logo {
   width: 40px;
   height: 40px;
@@ -14,8 +10,8 @@ body {
 }
 
 .header__list {
-  height: 60px;
   margin-left: 50px;
+  margin-right: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,6 +23,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  margin: 0;
 }
 
 .nav__item {
@@ -42,7 +39,17 @@ body {
   font-size: 12px;
   line-height: 14px;
   display: block;
-  padding: 10px;
+  padding: 6px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.nav__item:first-child {
+  padding-left: 0;
+}
+
+.nav__item:last-child {
+  padding-right: 0;
 }
 
 .is-active {
@@ -61,8 +68,7 @@ body {
   border-radius: 8px;
   background-color: #00acdb;
   display: block;
-  margin-left: 10px;
-  margin-top: 5px;
+  margin-left: 6px;
 }
 
 .list__nav {
@@ -81,5 +87,4 @@ body {
   .header {
     max-width: 1024px;
   }
-
 }
