@@ -12,11 +12,10 @@ nav a {
 }
 
 .header {
-  margin: 0;
   position: relative;
   background: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-  padding: 0 50px;
+  /* padding: 0 50px; */
 }
 
 .nav {
@@ -25,27 +24,29 @@ nav a {
   align-items: center;
   flex-shrink: 0;
   height: var(--header-height);
-  padding: 0;
-  margin: 0;
+  margin-right: 50px;
+
+  /* max-width: 569px; */
 }
 
 .nav__list {
   list-style: none;
   display: flex;
   flex-direction: row;
-  color: #000;
-  line-height: normal;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  /* height: var(--header-height); */
 }
 
 .nav__item {
-  font-family: Roboto, sans-serif;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   font-size: 12px;
   font-style: normal;
-  margin: 10px;
-  font-weight: 700;
+  line-height: normal;
   text-transform: uppercase;
+  margin: 0 10px;
 }
 
 .logo {
@@ -61,79 +62,26 @@ nav a {
 }
 
 .is-active {
+  position: relative;
   color: #00acdc;
+  width: 100%;
 }
 
-.line {
+a.is-active::after {
+  content: "";
   position: absolute;
   height: 4px;
-  width: 37px;
+  width: 100%;
   border-radius: 8px;
-  background: #00acdc;
   bottom: 0;
+  background-color: #00acdc;
+  left: 0;
 }
-/* @media (max-width:1024px) {
-  a {
-    text-decoration: none;
-    color: #000;
-  }
 
-  .header {
-    position: relative;
-    background: #fff;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-    padding: 0 50px;
-  }
+.nav__item-8 {
+  margin: 0 0 0 10px;
+}
 
-  .nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-shrink: 0;
-    height: var(--header-height);
-  }
-
-  .nav__list {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    color: #000;
-    font-family: Roboto, sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav__item {
-    margin: 0 10px;
-  }
-
-  .logo {
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    margin: 10px 243px 10px 50px;
-    z-index: 1;
-  }
-
-  .nav__list :hover {
-    color: #00acdc;
-  }
-
-  .is-active {
-    color: #00acdc;
-  }
-
-  .line {
-    position: absolute;
-    height: 4px;
-    width: 37px;
-    border-radius: 8px;
-    background: #00acdc;
-    bottom: 0;
-  }
-} */
+.nav__item-1 {
+  margin: 0 10px 0 0;
+}
