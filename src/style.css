@@ -1,7 +1,6 @@
-/* stylelint-disable color-hex-case */
-/* stylelint-disable string-quotes */
+
 html {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   font-size: 12px;
 }
 
@@ -9,6 +8,10 @@ html {
   min-width: 1024px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+:root {
+  --main-color: #00acdc;
 }
 
 .header {
@@ -35,17 +38,12 @@ html {
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 23px 0; /* як це прописати замість тупого підбору? */
-  /* stylelint-disable-next-line color-hex-length */
-  color: #000000;
+  padding: 23px 0;
+  color: #000;
 }
 
 .nav__list > :not(:last-child) {
   margin-right: 20px;
-}
-
-.is-active {
-  color: #00ACDC;
 }
 
 .is-active::after {
@@ -56,9 +54,10 @@ html {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00ACDC;
+  background-color: var(--main-color);
 }
 
+.is-active,
 .nav__link:hover {
-  color: #00ACDC;
+  color: var(--main-color);
 }
