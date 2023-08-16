@@ -5,7 +5,7 @@ html {
   font-size: 12px;
 }
 
-.body__navigation {
+.body {
   min-width: 1024px;
   max-width: 1200px;
   margin: 0 auto;
@@ -15,12 +15,11 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 50px;
 }
 
 .logo__img {
   display: block;
-  margin: 0 10px;
 }
 
 .nav__list {
@@ -36,10 +35,13 @@ html {
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  height: 60px;
-  line-height: 60px;
-  margin: 0 10px;
-  color: #000;
+  padding: 23px 0; /* як це прописати замість тупого підбору? */
+  /* stylelint-disable-next-line color-hex-length */
+  color: #000000;
+}
+
+.nav__list > :not(:last-child) {
+  margin-right: 20px;
 }
 
 .is-active {
@@ -58,9 +60,5 @@ html {
 }
 
 .nav__link:hover {
-  color: #00ACDC;
-}
-
-.hover {
   color: #00ACDC;
 }
