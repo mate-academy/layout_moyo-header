@@ -1,6 +1,11 @@
+:root {
+  --blue: #00acdc;
+  --white: #fff;
+  --black: #000;
+}
+
 body {
   margin: 0;
-  text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -13,26 +18,24 @@ body {
   padding: 0 50px;
   margin: 0;
   justify-content: space-between;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white);
 }
 
-ul.nav__list {
-  background-color: rgb(255, 255, 255);
+.nav__list {
   display: flex;
+  text-transform: uppercase;
   margin: 0;
   padding: 0;
 }
 
-li.nav__item {
+.nav__item {
   display: flex;
   margin: 0;
 }
 
-a.nav__link {
-  outline: none;
+.nav__link {
   text-decoration: none;
-  color: rgba(0, 0, 0, 1);
-  background-color: rgb(255, 255, 255);
+  color: var(--black);
 }
 
 .nav a {
@@ -41,7 +44,7 @@ a.nav__link {
   margin: 0;
 }
 
-img {
+.logo {
   width: 40px;
   height: 40px;
   margin-top: 10px;
@@ -49,11 +52,11 @@ img {
 }
 
 a:hover {
-  color: rgba(0, 172, 220, 1);
+  color: var(--blue);
 }
 
 .is-active {
-  color: rgba(0, 172, 220, 1);
+  color: var(--blue);
   text-decoration: none;
 }
 
@@ -71,5 +74,5 @@ a:hover {
   height: 4px;
   margin-top: -4px;
   border-radius: 4px;
-  background-color: rgba(0, 172, 220, 1);
+  background-color: var(--blue);
 }
