@@ -3,51 +3,54 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box;
 }
 
 .header {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   width: 100%;
   background-color: #fff;
+  padding: 0 50px;
 }
 
 .header__logo {
-  margin: auto 0 auto 50px;
   width: 40px;
   height: 40px;
 }
 
-.header__nav {
-  margin: auto 50px auto 0;
+.header__logo,
+.nav {
+  margin: auto 0;
 }
 
-.header__list {
+.nav__list {
+  padding: 0;
+  margin: 0;
   display: flex;
   list-style: none;
 }
 
-.header__item:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.header__link {
-  position: relative;
+.nav__link {
   display: block;
-  line-height: 60px;
+  padding: 23px 0;
   color: #000;
   font-size: 12px;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-.header__link:hover,
 .is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.nav__link:hover {
   color: #00acdc;
 }
 
