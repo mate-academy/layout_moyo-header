@@ -20,14 +20,8 @@ body {
 .nav__list {
   padding: 0;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   margin: 0;
-  list-style-type: none;
-}
-
-.nav__item {
-  text-decoration: none;
+  list-style: none;
 }
 
 .nav__link {
@@ -51,19 +45,16 @@ body {
   position: relative;
 }
 
-.is-active::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
 .nav__link:hover {
   color: #00acdb;
   cursor: pointer;
 }
 
-.nav__item:first-child::after {
+.is-active::after {
   content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 4px;
   border-radius: 8px;
