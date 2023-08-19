@@ -15,7 +15,9 @@ body {
 }
 
 .header {
+  min-width: 1024px;
   width: 100%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   background-color: #fff;
@@ -45,6 +47,8 @@ body {
 }
 
 .nav__link {
+  display: block;
+  height: var(--header-height);
   color: #000;
   text-decoration: none;
   font-family: roboto, serif;
@@ -58,7 +62,9 @@ body {
 
 .nav__item {
   height: var(--link-height);
-  line-height: var(--link-height);
+}
+
+.nav__item:not(:first-of-type) {
   margin-left: 20px;
 }
 
