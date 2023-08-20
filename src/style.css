@@ -1,8 +1,15 @@
-body {
-  margin: 0;
+:root {
+  --hover-color: #00acdc;
+}
+
+html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
+}
+
+body {
+  margin: 0;
 }
 
 .header {
@@ -27,7 +34,7 @@ body {
   margin-left: 20px;
 }
 
-.nav__item:nth-child(1) {
+.nav__item:first-child {
   margin-left: 0;
 }
 
@@ -40,7 +47,7 @@ body {
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--hover-color);
   position: relative;
 }
 
@@ -51,11 +58,11 @@ body {
   height: 4px;
   left: 0;
   bottom: 0;
-  background-color: #00acdc;
+  background-color: var(--hover-color);
   border-radius: 8px;
   z-index: 1;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
