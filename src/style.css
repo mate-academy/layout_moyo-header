@@ -1,3 +1,81 @@
+/* #region page */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+:root {
+  --header-height: 60px;
+  --active-link: #00acdc;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+  padding: 0;
 }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* #endregion */
+
+/* #region header */
+.header {
+  height: var(--header-height);
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.logo-link img {
+  vertical-align: bottom;
+}
+
+.nav {
+  align-self: stretch;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  position: relative;
+  margin-left: 20px;
+  line-height: var(--header-height);
+}
+
+.nav__item a {
+  padding: 14px 0;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__item .is-active {
+  color: var(--active-link);
+  pointer-events: none;
+}
+
+.nav__item .is-active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: var(--active-link);
+  height: 4px;
+  border-radius: 8px;
+}
+
+.nav__item a:hover {
+  color: var(--active-link);
+}
+/* #endregion */
