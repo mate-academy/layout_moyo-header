@@ -1,3 +1,52 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 5px 10px 0;
+}
+
+.nav {
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+.nav__link {
+  font-weight: bold;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.active:focus {
+  color: #00acdc;
+  border-bottom: 8px solid  #00acdc;
+  width: 37px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 5px;
+}
+
+.logo {
+  padding: 10px 50px;
 }
