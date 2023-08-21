@@ -24,16 +24,21 @@ img {
 }
 
 .nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .nav__item {
   display: inline-block;
+  position: relative;
 }
 
 .nav__link {
-  padding: 22px 0;
-  margin: 0 20px;
+  display: flex;
+  padding: 23px 0;
+  margin-left: 20px;
   text-align: center;
 
   font-family: "Roboto", sans-serif;
@@ -55,13 +60,13 @@ img {
   color: #00acdc;
   position: relative;
   width: 100%;
-  margin-left: 0;
+  margin: 0;
 }
 
 .is-active::after {
-  display: block;
   content: "";
   position: absolute;
+  left: 0;
   bottom: 0;
   width: 100%;
   height: 4px;
