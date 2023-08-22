@@ -1,3 +1,92 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+}
+
+:root {
+  --nav-color: #00acdc;
+}
+
+body {
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+li,
+a {
+  text-decoration: none;
+  color: #000;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+li,
+a:hover {
+  color: var(--nav-color);
+}
+
+a.is-active {
+  color: var(--nav-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+  margin: 10px 50px;
+}
+
+.nav {
+  position: relative;
+  list-style: none;
+  margin: 22px 20px;
+}
+
+.nav li {
+  padding: 0 20px;
+  display: inline-block;
+}
+
+.nav__list a {
+  padding: 20px 0;
+}
+
+.nav__list::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+  opacity: 1;
+  border-radius: 8px;
+  background: var(--nav-color);
+  width: 37px;
+  height: 4px;
+}
+
+@media screen and (max-width: 1200px) {
+  .logo {
+    margin: 10px 20px;
+  }
+  .nav {
+    margin: 10px 0;
+  }
+  @media screen and (max-width: 1024px) {
+    .nav {
+      margin-right: 50px;
+    }
+  }
 }
