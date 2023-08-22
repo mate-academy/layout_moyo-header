@@ -25,24 +25,12 @@ a {
   box-sizing: border-box;
 }
 
-[class*="__container"] {
-  max-width: 1130px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-@media (min-width: 1024px) {
-  [class*="__container"] {
-    max-width: 1200px;
-    padding: 0 50px;
-    margin: 0 auto;
-  }
-}
-
-.header__container {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
+  margin: 0 auto;
 }
 
 .header__logo {
@@ -65,7 +53,7 @@ a {
   text-transform: uppercase;
   line-height: var(--nav-link-height);
   color: #000;
-  transition: all 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
   font-weight: 500;
 }
 
@@ -86,4 +74,5 @@ a {
   right: 0;
   height: 4px;
   background-color: var(--link-hover);
+  border-radius: 8px;
 }
