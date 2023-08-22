@@ -1,3 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+html {
+  --link-hover: #00acdc;
+  --nav-link-height: 60px;
+
+  font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 12px;
+}
+
 body {
   margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[class*="__container"] {
+  max-width: 1130px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  [class*="__container"] {
+    max-width: 1200px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  height: 40px;
+  flex-basis: 40px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: var(--nav-link-height);
+  color: #000;
+  transition: all 0.3s ease 0s;
+  font-weight: 500;
+}
+
+.nav__link:hover {
+  color: var(--link-hover);
+}
+
+.is-active {
+  position: relative;
+  color: var(--link-hover);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--link-hover);
 }
