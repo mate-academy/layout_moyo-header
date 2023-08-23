@@ -1,10 +1,20 @@
 body {
   margin: 0;
-  display: flex;
 }
 
 header {
   height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 0 20px;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  height: 40px;
 }
 
 img {
@@ -13,7 +23,18 @@ img {
   flex-shrink: 0;
 }
 
-a {
+ul.nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-right: 15px;
+}
+
+a.nav {
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -24,18 +45,16 @@ a {
   text-decoration: none;
 }
 
-a.is-active {
+a.nav:hover {
   color: blue;
-  text-decoration: underline;
 }
 
-:hover {
+a.is-active {
   color: blue;
-  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 2px solid blue;
 }
 
 nav {
   text-align: center;
-  justify-items: center;
-  display: flex;
 }
