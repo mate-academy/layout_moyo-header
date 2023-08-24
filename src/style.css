@@ -1,3 +1,62 @@
+/* stylelint-disable string-quotes */
 body {
   margin: 0;
+  padding: 0;
+  --header-color: #00acdc;
+}
+
+.header {
+  display: flex;
+  padding: 0 50px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+  padding: 10px 0;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 23px 0;
+  color: #000;
+  position: relative;
+}
+
+.is-active {
+  color: var(--header-color);
+}
+
+.nav__link:hover {
+  color: var(--header-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--header-color);
 }
