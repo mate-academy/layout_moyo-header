@@ -1,5 +1,6 @@
 html {
   font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --active_color: #00acdc;
 }
 
 body {
@@ -26,8 +27,25 @@ body {
   align-items: center;
 }
 
+.nav__list {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__el {
+  list-style: none;
+  margin-left: 20px;
+  display: flex;
+}
+
+.nav__el:first-child {
+  margin-left: 0;
+}
+
 .nav__link {
-  box-sizing: border-box;
   position: relative;
   text-transform: uppercase;
   font-style: normal;
@@ -37,11 +55,6 @@ body {
   font-weight: 500;
   height: 60px;
   line-height: 60px;
-  margin-left: 20px;
-}
-
-.nav__link:first-child {
-  margin-left: 0;
 }
 
 .nav__link:hover {
