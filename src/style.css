@@ -1,81 +1,64 @@
 html {
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 14px;
+  font-family: "Roboto", sans-serif;
+  --secondaryColor: #00acdc;
 }
 
 body {
-  margin: 0;
-  --color: #00acdc;
-}
-
-* {
-  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .header {
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
+  padding: 0 50px;
   align-items: center;
-  width: 100%;
 }
 
-.moyo {
+.img__link {
   width: 40px;
   height: 40px;
-}
-
-.nav {
-  display: flex;
-  align-items: self-end;
-}
-
-.nav_list {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  margin: auto;
-}
-
-.nav_list:last-child {
-  margin-right: 50px;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.nav_link {
   display: inline-block;
-  margin: 0 20px;
-  padding: 20px;
-  height: 100%;
 }
 
-.nav_item {
-  padding: 20px;
+.nav__list {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav__link {
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 23px 0;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link:hover {
+  color: var(--secondaryColor);
 }
 
 .is-active {
-  color: var(--color);
+  color: var(--secondaryColor);
   position: relative;
 }
 
 .is-active::after {
-  content: " ";
+  display: block;
   position: absolute;
-  border: 2px solid var(--color);
+  width: 100%;
+  height: 4px;
   border-radius: 8px;
+  content: "";
+  background: var(--secondaryColor);
   bottom: 0;
   left: 0;
-  width: 95%;
-  height: 4;
-}
-
-a:hover {
-  color: var(--color);
 }
