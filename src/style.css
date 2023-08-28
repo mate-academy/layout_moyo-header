@@ -5,15 +5,15 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
 }
 
 .header {
-  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -23,50 +23,57 @@ body {
   padding: 0;
   display: flex;
   color: var(--color-col);
-  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
-  text-decoration: none;
   position: relative;
 }
 
-.nav__list li {
+.nav__item {
   margin-right: 20px;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
 }
 
-.nav__list li:last-child {
+.nav__list:last-child {
   margin-right: 50px;
 }
 
-.nav:hover {
+.nav__link {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  display: block;
+  line-height: 1;
+}
+
+.nav__link:active {
   color: var(--color-col);
 }
 
-.apple {
+.nav__link:hover {
   color: var(--color-col);
-  border-bottom: 2px solid var(--color-col);
-  padding-bottom: 20px;
 }
 
 .header__logo {
   max-width: 100%;
   height: auto;
-  margin-left: 50px;
 }
 
-.nav__link {
-  text-decoration: none;
+.is-active {
+  color: var(--color-col);
+  position: relative;
 }
 
-.nav__link::after {
-  display: block;
-  width: 100%;
-  height: 2px;
-  border: 8px solid var(--color-col);
+.is-active.apple::after {
+  content: "";
   border-radius: 8px;
+  background: var(--color-col);
+  width: 100%;
+  height: 4px;
   position: absolute;
-  bottom: 0;
+  left: 0;
+  bottom: -22.5px;
 }
