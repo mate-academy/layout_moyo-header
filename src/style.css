@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  --hover-color: #00acdc;
 }
 
 header {
@@ -45,22 +46,22 @@ nav {
   text-transform: uppercase;
   cursor: pointer;
   margin: 0 10px;
-  padding: 22.5px 0;
+  padding: 22px 0;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active::after {
   content: "";
   display: block;
   position: absolute;
-  background-color: #00acdc;
+  background-color: var(--hover-color);
   top: 56px;
   right: 650px;
   width: 37px;
