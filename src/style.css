@@ -1,3 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Roboto:wght@400;500;700&display=swap");
+
+html {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  --image-size: 40px;
+  --highlighted-text: #00acdc;
+  --normal-text: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  position: relative;
+}
+
+.logo__block {
+  width: var(--image-size);
+  height: var(--image-size);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  padding: 0;
+}
+
+.nav__item {
+  margin-left: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav__item a {
+  text-decoration: none;
+  color: var(--normal-text);
+  padding: 23px 0;
+  text-align: center;
+}
+
+.nav__item a:hover {
+  color: var(--highlighted-text);
+}
+
+.nav__item .is-active {
+  color: var(--highlighted-text);
+}
+
+.is-active::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 37px;
+  height: 4px;
+  border-radius: 15px;
+  background-color: var(--highlighted-text);
 }
