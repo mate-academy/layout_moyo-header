@@ -1,33 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Roboto:wght@400;500;700&display=swap");
 
-html {
-  overflow: hidden;
-}
-
-body {
+:root {
   --image-size: 40px;
   --highlighted-text: #00acdc;
   --normal-text: #000;
 }
 
+html {
+  overflow: hidden;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 10px 50px;
 }
 
 .logo__block {
   width: var(--image-size);
   height: var(--image-size);
+  margin: 10px 0 10px 50px;
 }
 
 .nav {
-  height: 60px;
   display: flex;
   align-items: center;
+  margin-right: 50px;
   position: relative;
-  padding: 0;
-  margin: 0;
 }
 
 .nav__list {
@@ -38,28 +42,17 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
-  padding: 0;
-  margin: 0;
 }
 
 .nav__item {
   cursor: pointer;
-  margin: 0 10px;
-}
-
-.first-child {
-  margin-left: 0;
-}
-
-.last-child {
-  margin-right: 0;
 }
 
 .nav__item a {
+  margin-left: 20px;
   text-decoration: none;
   color: var(--normal-text);
   padding: 23px 0;
-  text-align: center;
 }
 
 .nav__item a:hover {
@@ -67,6 +60,7 @@ body {
 }
 
 .nav__item .is-active {
+  margin: 0;
   color: var(--highlighted-text);
 }
 
