@@ -5,8 +5,6 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   --image-size: 40px;
   --highlighted-text: #00acdc;
   --normal-text: #000;
@@ -15,9 +13,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 10px 50px;
-  position: relative;
 }
 
 .logo__block {
@@ -26,29 +22,37 @@ body {
 }
 
 .nav {
+  height: 60px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
 
 .nav__list {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   list-style: none;
   text-transform: uppercase;
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
-  text-align: center;
   padding: 0;
+  margin: 0;
 }
 
 .nav__item {
-  margin-left: 20px;
   cursor: pointer;
-  text-align: center;
+  margin: 0 10px;
+}
+
+.first-child {
+  margin-left: 0;
+}
+
+.last-child {
+  margin-right: 0;
 }
 
 .nav__item a {
