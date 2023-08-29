@@ -47,6 +47,7 @@ a {
   display: flex;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .nav__item {
@@ -64,16 +65,13 @@ a {
   align-items: center;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link.is-active {
   color: var(--main-color);
 }
 
 .nav__item:not(:last-child) {
   margin-right: 20px;
-}
-
-.nav__link.is-active {
-  color: var(--main-color);
 }
 
 .nav__link.is-active:after {
