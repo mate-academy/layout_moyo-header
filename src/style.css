@@ -1,3 +1,80 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
+  background-color: yellowgreen;
+}
+
+.container {
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+img {
+  background: url(moyo_1.png), lightgray 50% / cover no-repeat;
+}
+
+.nav__list {
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  display: flex;
+  list-style: none;
+}
+
+.nav__link {
+  margin: 0 20px;
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav__item:visited {
+  color: #00acdc;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active :active {
+  color: #00acdc;
+}
+
+.blue {
+  color: #00acdc;
+  font-weight: 500;
+}
+
+.is-active::after {
+  color: #00acdc;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  position: absolute;
+  content: "";
+  border-radius: 8px;
+  bottom: 0;
+  left: 0;
+}
+
+.nav {
+  justify-content: flex-end;
 }
