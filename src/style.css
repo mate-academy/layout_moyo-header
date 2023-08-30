@@ -1,3 +1,11 @@
+:root {
+  --repeated-color: #00acdc;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -29,35 +37,27 @@ header {
   list-style: none;
 }
 
-.nav__item {
+.nav__item:not(:first-child) {
   margin-left: 20px;
-}
-
-.nav__item:first-child {
-  margin-left: 0;
 }
 
 .nav__link {
   display: flex;
   align-items: center;
-  height: 60px;
+  padding: 23px 0;
   text-decoration: none;
   cursor: pointer;
   position: relative;
   color: #000;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 12px;
   white-space: nowrap;
   text-transform: uppercase;
 }
 
-.nav__list a:hover {
-  color: #00acdc;
-}
-
+.nav__link:hover,
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--repeated-color);
 }
 
 .nav__link.is-active::after {
@@ -67,6 +67,5 @@ header {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
-
+  background-color: var(--repeated-color);
 }
