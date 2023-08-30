@@ -5,22 +5,22 @@ body {
 }
 
 .header {
+  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
 }
 
 .logo__img {
   display: block;
   width: 40px;
   height: 40px;
-  margin-left: 50px;
 }
 
 .nav {
-  display: flex;
-  justify-content: center;
-  margin-right: 50px;
+  display: block;
 }
 
 .nav__list {
@@ -31,28 +31,31 @@ body {
 }
 
 .nav__item {
-  margin-left: 20px;
-  position: relative;
+  height: 60px;
+  display: flex;
 }
 
-.nav__item:first-child {
-  margin-left: 0;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
-  line-height: 60px;
-  display: inline-block;
-  margin: 0 auto;
+  position: relative;
+  padding: 23px 0;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
+  flex-grow: 1;
 }
 
-.nav__link:hover,
+.nav__link:hover {
+  color: var(--blue);
+}
+
 .is-active {
+
   color: var(--blue);
 }
 
@@ -64,7 +67,6 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  border-radius: 8px;
+  border-radius: 4px;
   background-color: var(--blue);
-  padding: 0;
 }
