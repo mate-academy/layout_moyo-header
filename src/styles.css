@@ -6,6 +6,10 @@ li {
   padding: 0;
 }
 
+:root {
+  --active-color: #00acdc;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   line-height: 14.6px;
@@ -20,11 +24,11 @@ body {
   background-color: #fff;
 }
 
-.logo img {
+.logo_img {
   max-width: 100%;
 }
 
-nav {
+.nav {
   flex: auto;
 }
 
@@ -41,7 +45,7 @@ nav {
   margin: 0 10px;
 }
 
-.nav__list a {
+.nav__link {
   font-weight: 500;
   margin-right: 20px;
   color: #000;
@@ -51,18 +55,19 @@ nav {
   font-size: 12px;
 }
 
-.nav__list a.is-active::after {
+.is-active::after {
   content: "";
-  display: block;
+  display: inline-block;
   position: absolute;
   bottom: -18px;
   left: 0;
   border-radius: 8px;
-  width: 37px;
+  width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--active-color);
+  padding-bottom: 0;
 }
 
 .nav__list a:hover {
-  color: #00acdc;
+  color: var(--active-color);
 }
