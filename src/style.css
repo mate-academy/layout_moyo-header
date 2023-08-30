@@ -10,26 +10,40 @@ html {
 
 body {
   margin: 0;
+  max-width: 1200px;
+  min-width: 1024px;
 }
 
 .header {
-  margin: 0 50px;
+  padding: 0 50px;
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
 
 .logo {
+  display: flex;
   width: 40px;
   height: 40px;
-  flex-shrink: 0;
   margin: 10px 0;
 }
 
+/* .nav {
+  margin: 0 50px 0 0;
+} */
+
 .nav__item {
   display: inline-block;
-  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__link {
@@ -38,15 +52,17 @@ body {
   text-decoration: none;
   color: #000;
   height: 60px;
+  line-height: 60px;
   position: relative;
 }
 
-.is-active {
+.is-active,
+.nav__link:hover {
   color: #00acdc;
 }
 
-.nav__link:hover {
-  color: #00acdc;
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .is-active::after {
@@ -57,17 +73,4 @@ body {
   bottom: 0;
   border: 2px solid #00acdc;
   border-radius: 8px;
-
-}
-
-.visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  border: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  clip: rect(0,0,0,0) !important;
-  white-space: nowrap !important;
 }
