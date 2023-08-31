@@ -1,6 +1,8 @@
 html {
   font-family: Roboto, sans-serif;
   --main-color: #00acdc;
+  --text-color: #000;
+  --back-color: #fff;
 }
 
 body {
@@ -8,7 +10,7 @@ body {
 }
 
 .container {
-  background: #fff;
+  background: var(--back-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +21,7 @@ body {
   flex-shrink: 0;
 }
 
-.img {
+.logo__img {
   background: url(moyo_1.png), lightgray 50% / cover no-repeat;
   display: block;
 }
@@ -40,10 +42,10 @@ body {
 .nav__link {
   position: relative;
   display: block;
-  background-color: #fff;
+  background-color: var(--back-color);
   padding: 23px 0;
   text-align: center;
-  color: #000;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -68,7 +70,6 @@ body {
 }
 
 .nav {
-  justify-content: flex-end;
   display: flex;
 }
 
