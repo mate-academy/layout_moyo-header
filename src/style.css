@@ -16,13 +16,12 @@ body {
   padding-left: 50px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   height: 60px;
+  flex-shrink: 0;
 }
 
 img {
   background: url(moyo_1.png), lightgray 50% / cover no-repeat;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .nav__list {
@@ -34,15 +33,16 @@ img {
   text-transform: uppercase;
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__link {
-  margin: 0 20px;
   position: relative;
-  display: inline-table;
+  display: block;
   background-color: #fff;
+  padding: 23px 0;
   text-align: center;
-  padding: 22.5px 0;
   color: #000;
   text-decoration: none;
 }
@@ -71,6 +71,6 @@ img {
   justify-content: flex-end;
 }
 
-.nav__link:last-child {
-  margin-right: 0;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
