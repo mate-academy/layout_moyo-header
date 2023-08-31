@@ -1,25 +1,28 @@
 html {
   font-family: Roboto, sans-serif;
+  --main-color: #00acdc;
 }
 
 body {
-  margin: 0;
-  background-color: yellowgreen;
+  margin: 0 auto;
 }
 
 .container {
   background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
   padding-right: 50px;
   padding-left: 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  height: 60px;
 }
 
 img {
   background: url(moyo_1.png), lightgray 50% / cover no-repeat;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav__list {
@@ -28,7 +31,6 @@ img {
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
   text-transform: uppercase;
   display: flex;
   list-style: none;
@@ -37,44 +39,38 @@ img {
 .nav__link {
   margin: 0 20px;
   position: relative;
-  display: inline-block;
+  display: inline-table;
   background-color: #fff;
-  height: 60px;
   text-align: center;
-  line-height: 60px;
+  padding: 22.5px 0;
   color: #000;
   text-decoration: none;
 }
 
-.nav__item:visited {
-  color: #00acdc;
-}
-
-.nav__link:hover {
-  color: #00acdc;
-}
-
-.is-active :active {
-  color: #00acdc;
-}
-
-.blue {
-  color: #00acdc;
-  font-weight: 500;
-}
-
 .is-active::after {
-  color: #00acdc;
+  color: var(--main-color);
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--main-color);
   position: absolute;
   content: "";
   border-radius: 8px;
   bottom: 0;
-  left: 0;
+  right: 0;
+}
+
+.is-active {
+  color: var(--main-color);
+}
+
+:hover {
+  color: var(--main-color);
 }
 
 .nav {
   justify-content: flex-end;
+}
+
+.nav__link:last-child {
+  margin-right: 0;
 }
