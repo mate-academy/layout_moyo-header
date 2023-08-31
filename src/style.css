@@ -1,3 +1,72 @@
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  --hover-color: #00acdc;
+}
+
+header {
+  background-color: #fff;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding-right: 50px;
+  box-shadow: 0 2px 4px 0 #0000000d;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  display: flex;
+  height: 15px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 23px 0;
+}
+
+.nav__link:hover,
+
+.is-active {
+  color: var(--hover-color);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--hover-color);
+  top: 56px;
+  right: 650px;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+}
+
+li:not(:last-child) {
+  margin-right: 20px;
 }
