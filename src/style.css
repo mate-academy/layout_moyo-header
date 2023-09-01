@@ -1,3 +1,60 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+@media (max-width: 1024px) {
+  body {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  body {
+    max-width: 1200px;
+  }
+}
+
+.header {
+  text-decoration: none;
+  display: flex;
+  gap: 200px;
+  margin-top: 20px;
+  margin-left: 15px;
+  font-size: 8px;
+  text-align: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+}
+
+.nav a {
+  padding: 15px 7px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+}
+
+.is-active:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: #00acdc;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.is-active:hover::after {
+  width: 100%;
+  border-radius: 10px;
 }
