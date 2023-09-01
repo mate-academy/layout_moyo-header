@@ -1,3 +1,57 @@
-body {
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #000;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 50px;
+  width: 1024px;
+
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+
+}
+
+.nav__ul {
+  list-style: none;
+  display: flex;
+  justify-self: space-between;
+}
+
+.nav__li {
+  display: flex;
+  margin-left: 20px;
+}
+
+.nav__ul:first-child {
+  margin-left: 0;
+}
+
+.nav__link:hover {
+  color: hsl(193, 100%, 43%);
+}
+
+.is-active {
+  color: hsl(193, 100%, 43%);
 }
