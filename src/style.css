@@ -5,15 +5,13 @@
 body {
   margin: 0;
   font-family: Roboto, Arial, sans-serif;
-  font-size: 12px;
 }
 
 .header {
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0 10px 50px;
+  padding: 0 50px;
 }
 
 .image__logo {
@@ -22,17 +20,17 @@ body {
 
 .nav__list {
   display: flex;
-  justify-content: space-between;
-  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__item {
-  padding: 0 20px;
   display: inline-block;
+  list-style: none;
 }
 
-.nav__item:last-child {
-  padding-right: 50px;
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link {
@@ -40,7 +38,8 @@ body {
   color: black;
   text-transform: uppercase;
   font-size: 12px;
-  line-height: 59px;
+  font-weight: 500;
+  line-height: 60px;
   position: relative;
   display: inline-block;
 }
