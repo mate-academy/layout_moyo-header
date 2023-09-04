@@ -1,52 +1,52 @@
+html {
+  font-family: Roboto, serif;
+}
+
 body {
   margin: 0;
-  --background-color: #4f4d4d;
+  --background-color: #fff;
   --primary_color: #00acdc;
   --text-color: #000;
 }
 
-header {
+.moyo__header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin: 0;
-  background-color: #fff;
+  align-items: center;
+  padding: 0 50px;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
 .company__logo {
+  display: block;
   height: 40px;
   width: 40px;
-  margin-top: 20px;
-  justify-content: flex-start;
 }
 
 .nav__block {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-.nav__item {
-  list-style: none;
-  text-transform: uppercase;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
+  display: flex;
   text-decoration: none;
+  text-transform: uppercase;
   color: var(--text-color);
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
   position: relative;
-  align-content: center;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding: 23px 0;
 }
 
 .nav__link:hover {
@@ -56,6 +56,7 @@ header {
 
 .is-active {
   color: var(--primary_color);
+  position: relative;
 }
 
 .is-active:active {
@@ -64,31 +65,10 @@ header {
 
 .is-active::after {
   content: "";
-  border-bottom: 4px solid var(--primary_color);
-  margin-left: 20px;
+  height: 4px;
   width: 100%;
+  background-color: var(--primary_color);
   border-radius: 8px;
-  display: block;
   position: absolute;
   bottom: 0;
-}
-
-@media (min-width: 1200px) {
-  .nav__block a {
-    margin-left: 20px;
-  }
-
-  .is-active::after {
-    margin-left: 20px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .nav__block a {
-    margin-left: 25px;
-  }
-
-  .is-active::after {
-    margin-left: 25px;
-  }
 }
