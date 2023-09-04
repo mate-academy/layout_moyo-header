@@ -1,3 +1,164 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500,500italic);
+
+:root {
+  --accent-color: #00acdc;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
 body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.header {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    max-width: 1024px;
+  }
+}
+
+.logo__img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("./images/logo.png");
+}
+
+.nav__list {
+  height: 60px;
+  display: flex;
+}
+
+.nav__link {
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__link:last-child {
   margin: 0;
 }
+
+.nav__link-link {
+  font-size: 12px;
+  position: relative;
+  line-height: 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 500;
+}
+
+.is-active,
+.nav__link-link:hover {
+  color: var(--accent-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color);
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  bottom: 0;
+  left: 0;
+}
+
+/* .nav__link-link[data-qa="hover"] {
+  color: var(--accent-color);
+} */
