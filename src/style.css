@@ -2,10 +2,17 @@ html {
   --active-color--: #00acdc;
 }
 
+* {
+  border: 0;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  padding: 0 50px;
+  font-size: 12px;
+  font-weight: 500;
+  box-sizing: border-box;
+  background-color: #d3d3d3;
 }
 
 .header {
@@ -13,31 +20,38 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 50px;
   align-items: center;
+}
 
+.nav {
+  margin-right: 50px;
 }
 
 .nav_list {
   display: flex;
-  justify-content: space-between;
-  height: 60px;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav_item {
   display: flex;
   position: relative;
-  margin: 0 20px;
-  align-items: center;
+  margin-left: 20px;
+}
+
+.nav_item:first-child {
+  margin-left: 0;
 }
 
 .link {
   color: #000;
-  font-size: 12px;
-  font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
+  padding: 23px 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .link:hover {
@@ -57,10 +71,11 @@ body {
   left: 0;
   height: 4px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .logo {
   width: 40px;
   height: 40px;
+  margin: auto auto auto 50px;
 }
