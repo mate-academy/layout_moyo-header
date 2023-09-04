@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color: gray;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -8,11 +9,9 @@ body {
   background-color: white;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
-.container-2 {
-  gap: 20px;
+.nav {
   display: flex;
   margin-left: auto;
   margin-right: 50px;
@@ -20,35 +19,42 @@ body {
 
 img {
   margin-left: 50px;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  background-color: #00acdc;
+  height: 4px;
+  width: 37px;
+  bottom: 0px;
+  border-radius: 8px;
 
 }
 
 a {
   color: #000;
-  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 22px;
+  padding-bottom: 24px;
 }
-
+a:first-child {
+  display: flex;
+  position: relative;
+}
 a:hover {
   color: #00acdc;
   cursor: pointer;
 }
 
-.rectangle {
-  background-color: #00acdc;
-  height: 4px;
-  width: 37px;
-  position: absolute;
-  bottom: 0px;
-  border-radius: 8px;
-}
-
 ul {
   display: flex;
-  gap: 20px;
+  list-style-type: none;
 }
