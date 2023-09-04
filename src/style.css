@@ -3,29 +3,62 @@ body {
 }
 
 header {
+  height: 60px;
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  line-height: 14px;
+}
+
+img {
+  align-self: center;
+  display: block;
+  margin-left: 10px;
 }
 
 .nav__list {
   display: flex;
-  gap: 10px;
   list-style-type: none;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
 }
 
 .list__link {
+  height: 60px;
+  display: flex;
+  align-items: center;
   color: black;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  position: relative;
 }
 
 .list__link:hover {
-  color: blue;
-
+  color: rgba(0, 172, 220, 1);
 }
 
-.list__link::after {
-  color: blue;
+.is-active {
+  color: rgba(0, 172, 220, 1);
+}
 
+.is-active::after {
+  display: block;
+  content: "";
+  height: 4px;
+  border-radius: 8px;
+  background-color: rgba(0, 172, 220, 1);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
