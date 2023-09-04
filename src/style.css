@@ -1,4 +1,5 @@
 body {
+  display: block;
   margin: 0;
   font-family: Roboto, sans-serif;
 }
@@ -18,16 +19,24 @@ body {
 .header {
   text-decoration: none;
   display: flex;
+  justify-content: space-between;
   gap: 200px;
   margin-top: 20px;
   margin-left: 15px;
-  font-size: 8px;
+  font-size: 12px;
   text-align: center;
   align-items: center;
 }
 
 .container {
   display: flex;
+}
+
+.nav {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .nav a {
@@ -39,22 +48,18 @@ body {
   cursor: pointer;
 }
 
-.is-active:hover {
+.nav a:hover {
   color: #00acdc;
 }
 
 .is-active::after {
   content: "";
   display: block;
-  width: 0;
   height: 4px;
   background-color: #00acdc;
   position: absolute;
   bottom: -1px;
   left: 0;
-}
-
-.is-active:hover::after {
   width: 100%;
   border-radius: 10px;
 }
