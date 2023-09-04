@@ -1,3 +1,7 @@
+:root {
+  --blue: #00acdb;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +36,7 @@
   text-transform: uppercase;
 }
 
-.nav__item:first-child a {
+.is-active a {
   margin-left: 0;
   color: #00acdb;
   position: relative;
@@ -48,7 +52,7 @@
 }
 
 .nav__link:hover {
-  color: #00acdb;
+  color: var(--blue);
 }
 
 .is-active:after {
@@ -56,7 +60,7 @@
   border-radius: 8px;
   width: 100%;
   height: 6px;
-  background-color: hsl(193, 100%, 43%);
+  background-color: var(--blue);
   position: absolute;
   bottom: 0;
 }
