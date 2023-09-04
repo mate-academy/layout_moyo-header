@@ -2,7 +2,6 @@ body {
   margin: 0;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   --main-color: #00acdc;
-  --nav-height: 60px;
 }
 
 .header {
@@ -37,8 +36,7 @@ body {
   font-size: 12px;
   text-decoration: none;
   font-weight: 500;
-  line-height: var(--nav-height);
-  height: var(--nav-height);
+  padding: 23px 0;
   display: block;
 
 }
@@ -53,14 +51,13 @@ body {
 
 .is-active {
   color: var(--main-color);
-  top: 43px;
-  height: var(--nav-height);
 }
 
 .is-active::after {
   display: block;
+  position: absolute;
+  bottom: 0;
   content: "";
-  margin-top: -4px;
   height: 4px;
   width: 100%;
   border-radius: 8px;
