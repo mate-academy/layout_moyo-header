@@ -1,4 +1,4 @@
-html {
+:root {
   font-family: Roboto, sans-serif;
 
   --main-color: #00acdc;
@@ -12,13 +12,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff; /* change later */
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-  padding-right: 50px;
-}
-
-.logo {
-  margin-left: 50px;
+  padding: 0 50px;
 }
 
 .logo__img {
@@ -30,7 +25,6 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  position: relative;
 }
 
 .nav__link {
@@ -38,18 +32,17 @@ body {
   height: 60px;
   line-height: 60px;
   text-decoration: none;
-  color: #000;
+  color: inherit;
   text-transform: uppercase;
   font-size: 12px;
-  margin: 0 0 0 20px;
 }
 
 .nav__link:hover {
   color: var(--main-color);
 }
 
-.nav__list > :first-child .nav__link {
-  margin-left: 0;
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .is-active {
@@ -58,13 +51,11 @@ body {
 }
 
 .is-active::after {
-  position: absolute;
   content: "";
-  background-color: var(--main-color);
-  border-radius: 8px;
+  display: block;
+  margin-top: -4px;
   width: 100%;
   height: 4px;
-  bottom: 0;
-  left: 0;
-  padding: 0 -10px;
+  border-radius: 8px;
+  background-color: var(--main-color);
 }
