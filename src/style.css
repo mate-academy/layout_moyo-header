@@ -1,9 +1,5 @@
-* {
-  margin: 0;
-}
 
-body {
-  margin: 0;
+html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -11,68 +7,88 @@ body {
   color: #00acdc;
 }
 
-header {
-  min-width: 1024px;
-  max-width: 1200px;
-  flex-shrink: 0;
-  background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-  justify-content: space-around;
-  align-items: center;
-  align-content: space-around;
-  flex-direction: row;
-  margin: 0 auto;
-  padding: 0 50px;
+@media(min-width: 1024px) {
+  body {
+    width: 1024px;
+  }
+}
+
+body {
+  margin: 0;
+  width: 1200px;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.header {
   display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
 .moyo_logo {
-  width: 40px;
-  height: 40px;
-  display: block;
-  margin: 10px 50px;
+  padding-left: 10px 0;
+  display: flex;
 }
 
 .nav {
-  display: inline-block;
-  justify-content: flex-end;
+  display: flex;
 }
 
-.nav_list {
-  text-align: center;
+.nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.nav_link {
+.nav__link {
   color: black;
-  margin-right: 20px;
   padding: 20px 0;
-  display: inline;
+  display: flex;
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
+  text-align: center;
+  height: 16px;
 }
 
-.nav_link:hover {
+.nav__item {
+  align-items: stretch;
+  display: flex;
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link:hover {
   color: #00acdc;
   text-transform: uppercase;
 }
 
 .is-active {
   color: #00acdc;
-  position: inherit;
+  position: relative;
 }
 
 .is-active::after {
-  position: relative;
+  position: absolute;
   background-color: #00acdc;
   border-radius: 8px;
   height: 4px;
   width: 100%;
   display: block;
   content: "";
-  box-sizing: border-box;
+  right: 0;
+  left: 0;
+  top: 60px;
 }
