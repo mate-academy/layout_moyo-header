@@ -1,51 +1,50 @@
 body {
-  box-sizing: border-box;
   margin: 0;
+  box-sizing: border-box;
   padding: 0;
-  background-color: lightgray;
-  font-family: "Roboto", sans-serif;
+  background-color: white;
   font-size: 12px;
+  font-family: "Roboto", sans-serif;
   font-weight: 500px;
+
   --accent-color: #00acdc;
 }
 
 .header {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 50px;
   background-color: #fff;
-  min-width: 1024px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
 .logo__img {
-  margin: auto;
-  margin-left: 50px;
-  height: 40px;
-  width: 40px;
   cursor: pointer;
 }
 
-.navigation {
-  margin-right: 50px;
+.nav__menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.nav__menu {
-  margin: 0;
-  display: flex;
-  list-style: none;
-  padding: 0;
+.nav__menu > li:first-child > a:first-child {
+  margin-left: 0;
 }
 
 .nav__link {
   display: inline-block;
-  color: black;
+  margin-left: 20px;
+  padding: 22.5px 0;
+  line-height: 15px;
+  cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
-  cursor: pointer;
-  line-height: 15px;
-  padding: 22.5px 0;
-  margin-left: 20px;
+  color: black;
 }
 
 .nav__link:hover {
@@ -55,19 +54,18 @@ body {
 .is-active {
   color: var(--accent-color);
   position: relative;
-  margin-left: 0;
 }
 
 .is-active::after {
+  content: "";
   position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: block;
   margin: 0 auto;
-  right: 0;
-  left: 0;
-  content: "";
-  height: 4px;
   border-radius: 4px;
   width: 100%;
-  bottom: 0;
+  height: 4px;
   background-color: var(--accent-color);
 }
