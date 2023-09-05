@@ -1,21 +1,18 @@
-html {
-  --bg-color: #fff;
-  --txt-color: #000;
+:root {
   --txt-color-a: #00acdc;
 }
 
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 0 50px;
-
-  background: var(--bg-color);
+  background: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -25,11 +22,6 @@ body {
   width: 40px;
 }
 
-.logo__image {
-  height: 100%;
-  width: 100%;
-}
-
 .nav__list {
   display: flex;
   margin: 0;
@@ -37,37 +29,25 @@ body {
   list-style: none;
 }
 
-.nav__item {
+.nav__item:not(:first-child) {
   margin-left: 20px;
-}
-
-.nav__item:first-child {
-  margin: 0;
 }
 
 .nav__link {
   position: relative;
-
   display: flex;
   align-items: center;
-
   height: 60px;
-
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
-  color: var( --txt-color);
-
+  color: #000;
   transition: color 0.3s;
 }
 
-.nav__link:hover {
-  color: var(--txt-color-a);
-}
-
+.nav__link:hover,
 .is-active {
   color: var(--txt-color-a);
 }
@@ -78,7 +58,6 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-
   height: 4px;
   border-radius: 8px;
   background-color: var(--txt-color-a);
