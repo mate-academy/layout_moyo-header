@@ -1,35 +1,28 @@
 html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
-  --active-hover-text-color: #00acdc;
-  --default-text-color: #000;
+}
+
+:root {
+  --textColor: #00acdc;
 }
 
 body {
   margin: 0;
-  max-width: 1200px;
   min-width: 1024px;
 }
 
 .header {
-  padding: 0 50px;
   display: flex;
-  position: relative;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  padding: 0 50px;
 }
 
 .logo {
-  display: flex;
   width: 40px;
   height: 40px;
   margin: 10px 0;
-}
-
-.nav__item {
-  display: inline-block;
-  margin-right: 20px;
 }
 
 .nav__list {
@@ -39,11 +32,16 @@ body {
   padding: 0;
 }
 
+.nav__item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
 .nav__link {
   padding: 23px 0;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--default-text-color);
+  color: #000;
   height: 60px;
   line-height: 60px;
   position: relative;
@@ -53,7 +51,7 @@ body {
 
 .is-active,
 .nav__link:hover {
-  color: var(--active-hover-text-color);
+  color: var(--textColor);
 }
 
 .nav__item:last-child {
@@ -63,9 +61,10 @@ body {
 .is-active::after {
   content: "";
   position: absolute;
-  display: flex;
-  width: 90%;
+  display: block;
+  width: 100%;
+  height: 4px;
   bottom: 0;
-  border: 2px solid #00acdc;
+  background-color: var(--textColor);
   border-radius: 8px;
 }
