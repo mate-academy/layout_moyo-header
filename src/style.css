@@ -6,16 +6,16 @@ body {
 
 .header {
   display: flex;
-  padding-right: 50px;
+  padding: 0 50px;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo__img {
   display: block;
   width: 40px;
   height: 40px;
-  margin: 10px 50px;
 }
 
 .nav {
@@ -31,6 +31,7 @@ body {
 
 .nav__link {
   display: block;
+  position: relative;
   margin-left: 20px;
   font-weight: 500;
   font-size: 12px;
@@ -51,9 +52,11 @@ body {
 
 .is-active::after {
   content: "";
-  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 4px;
-  margin-top: -4px;
   border-radius: 8px;
   background-color: #00acdc;
 }
