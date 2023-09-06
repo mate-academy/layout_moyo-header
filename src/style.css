@@ -1,20 +1,28 @@
 body {
   margin: 0;
   background-color: gray;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
-  height: 60px;
+  max-height: 60px;
   background-color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav {
   display: flex;
-  margin-left: auto;
+  align-items: center;
   margin-right: 50px;
+}
+
+.is-active {
+  color: #00acdc;
+  margin-left: 0;
+  padding-left: 0;
+  position: relative;
 }
 
 img {
@@ -22,17 +30,18 @@ img {
 }
 
 .is-active::after {
-  content: '';
+  content: "";
   position: absolute;
   background-color: #00acdc;
   height: 4px;
   width: 37px;
-  bottom: 0px;
+  bottom: 0;
   border-radius: 8px;
 
 }
 
 a {
+  display: flex;
   color: #000;
   font-size: 12px;
   font-style: normal;
@@ -40,21 +49,29 @@ a {
   line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 22px;
-  padding-bottom: 24px;
-}
-a:first-child {
-  display: flex;
-  position: relative;
-}
-a:hover {
-  color: #00acdc;
-  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
 }
 
 ul {
   display: flex;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.video--selector {
+  margin-right: 0;
+}
+
+a:hover {
+  color: #00acdc;
+  cursor: pointer;
 }
