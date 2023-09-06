@@ -1,62 +1,60 @@
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  padding: 0 40px;
-  padding-right: 50px;
+  padding: 0 50px;
   align-items: center;
-  line-height: 14px;
 }
 
 img {
-  align-self: center;
   display: block;
-  margin-left: 10px;
+  height: 40px;
+  width: 40px;
 }
 
-.nav__list {
-  display: flex;
+ul {
+  /* what is the best place to put there reset type styles? */
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+.nav__list {
+  display: flex;
+}
+
 li {
-  padding: 0 10px;
+  margin: 0 10px;
 }
 
 li:first-of-type {
   padding-left: 0;
-  /* border: solid black 1px; */
   margin-left: 0;
 }
 
 li:last-of-type {
   padding-right: 0;
-  /* border: solid black 1px; */
   margin-right: 0;
 }
 
 .list__link {
   height: 60px;
+  /* can`t move flex because then links and underline shifts */
   display: flex;
   align-items: center;
   color: black;
-  font-family: "Roboto", sans-serif;
   text-decoration: none;
   font-size: 12px;
   text-transform: uppercase;
   position: relative;
 }
 
+.is-active,
 .list__link:hover {
-  color: rgba(0, 172, 220, 1);
-}
-
-.is-active {
   color: rgba(0, 172, 220, 1);
 }
 
