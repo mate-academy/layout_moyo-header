@@ -1,3 +1,74 @@
+html {
+  font-family: Roboto, serif;
+}
+
 body {
   margin: 0;
+  --background-color: #fff;
+  --primary_color: #00acdc;
+  --text-color: #000;
+}
+
+.header__moyo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.company__logo {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.nav__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  position: relative;
+  padding: 23px 0;
+}
+
+.nav__link:hover {
+  color: var(--primary_color);
+  cursor: pointer;
+}
+
+.is-active {
+  color: var(--primary_color);
+  position: relative;
+}
+
+.is-active:active {
+  color: var(--primary_color);
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: var(--primary_color);
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
 }
