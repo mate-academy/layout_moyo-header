@@ -35,20 +35,11 @@ body {
 .nav__list {
   list-style: none;
   display: flex;
-  flex-direction: row;
   margin: 0;
   padding: 0;
 }
 
 .nav__link {
-  margin-left: 20px;
-}
-
-.nav__link:first-child {
-  margin-left: 0;
-}
-
-.nav__item {
   display: flex;
   text-decoration: none;
   color: var(--text-main-color);
@@ -60,23 +51,27 @@ body {
   line-height: 60px;
 }
 
-.nav__item:hover {
+.nav__link:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link:hover {
   color: var(--main-accent-color);
 }
 
-.nav__item.is-active {
+.is-active {
   color: var(--main-accent-color);
   margin: 0;
   position: relative;
 }
 
-.nav__item.is-active::after {
+.is-active::after {
   content: "";
   position: absolute;
   display: block;
   background-color: var(--main-accent-color);
   height: 4px;
-  width: 36.61px;
+  width: 100%;
   border-radius: 4px;
   bottom: 0;
 }
