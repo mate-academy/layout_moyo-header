@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 
-img {
+.img {
   height: 40px;
   width: 40px;
 }
@@ -15,12 +15,12 @@ img {
 .menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 50px;
 }
 
 .nav_header {
   display: flex;
-  align-items: stretch;
   list-style-type: none;
 }
 
@@ -28,18 +28,16 @@ img {
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: center;
   list-style: none;
 }
 
 .menu__logo {
   display: flex;
-  padding: 10px 0;
+  align-items: center;
 }
 
 .menu_nav_link {
   display: flex;
-  align-items: stretch;
   margin-left: 20px;
 }
 
@@ -67,6 +65,7 @@ img {
 
 .is-active {
   position: relative;
+  color: #00acdc;
 }
 
 .is-active:link::before {
@@ -77,19 +76,5 @@ img {
   width: 100%;
   border-radius: 8px;
   position: absolute;
-  top: 56px;
-  left: 0;
-  right: 0;
-}
-
-@media (min-width: 1024px) {
-  .is-active {
-    color: #00acdc;
-  }
-}
-
-@media (max-width: 1200px) {
-  .is-active {
-    color: #00acdc;
-  }
+  bottom: 0;
 }
