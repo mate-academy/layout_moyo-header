@@ -1,10 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  box-sizing: border-box;
   padding: 0;
   background-color: white;
   font-size: 12px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500px;
 
   --accent-color: #00acdc;
@@ -14,15 +17,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
-  width: 100%;
   padding: 0 50px;
   background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-}
-
-.logo__img {
-  cursor: pointer;
 }
 
 .nav__menu {
@@ -32,13 +29,12 @@ body {
   list-style: none;
 }
 
-.nav__menu > li:first-child > a:first-child {
-  margin-left: 0;
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link {
   display: inline-block;
-  margin-left: 20px;
   padding: 22.5px 0;
   line-height: 15px;
   cursor: pointer;
