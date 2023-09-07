@@ -15,10 +15,8 @@
 body,
 header,
 div,
-a,
 nav,
-ul,
-img {
+ul {
   margin: 0;
   padding: 0;
 }
@@ -35,25 +33,21 @@ img {
 .header {
   display: flex;
   justify-content: center;
-  margin: auto;
   text-transform: uppercase;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   background-color: var(--background-color);
 }
 
 .container {
-  margin: 0 50px;
-  width: 1200px;
-  height: 100%;
+  width: 100%;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .nav__list {
-  position: relative;
   display: flex;
-  text-align: center;
   list-style-type: none;
 }
 
@@ -76,11 +70,7 @@ img {
   margin-right: 20px;
 }
 
-.link:hover {
-  color: var(--active-color);
-  cursor: pointer;
-}
-
+.link:hover,
 .is-active {
   color: var(--active-color);
 }
@@ -94,10 +84,4 @@ img {
   bottom: 0;
   color: var(--active-color);
   border-radius: 8px;
-}
-
-@media screen and (max-width: 1024px) {
-  .container {
-    width: 1024px;
-  }
 }
