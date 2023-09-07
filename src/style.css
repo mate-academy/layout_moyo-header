@@ -1,3 +1,103 @@
-body {
+:root {
+  --main-color: #000;
+  --active-color: #0ad;
+  --background-color: #fff;
+  --font-size: 12px;
+  --line-height: 14px;
+  --font-family: "Roboto", "Helvetica", sans-serif;
+  --font-weight: 500;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+header,
+div,
+a,
+nav,
+ul,
+img {
   margin: 0;
+  padding: 0;
+}
+
+.body {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  background-color: rgb(241, 231, 231);
+  color: var(--main-color);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--background-color);
+}
+
+.container {
+  margin: 0 50px;
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  position: relative;
+  display: flex;
+  text-align: center;
+  list-style-type: none;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.link {
+  position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav__list > :not(:last-child) {
+  margin-right: 20px;
+}
+
+.link:hover {
+  color: var(--active-color);
+  cursor: pointer;
+}
+
+.is-active {
+  color: var(--active-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--active-color);
+  bottom: 0;
+  color: var(--active-color);
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 1024px;
+  }
 }
