@@ -1,13 +1,15 @@
 html {
   --hover-title-color: #00acdc;
   margin: 0;
+  background-color: #000;
 }
 
-nav {
+header {
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto 50px;
+  padding: 0 50px;
 }
 
 body {
@@ -15,22 +17,28 @@ body {
 }
 
 ul {
+  padding: 0;
+  margin: 0;
+  height: 100%;
   list-style-type: none;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
   text-transform: uppercase;
 }
 
 li {
-  margin: 0 20px;
+  height: 100%;
 }
 
-li:hover {
+li:not(:first-child) {
+  margin-left: 20px;
+}
+
+a:hover {
   color: var(--hover-title-color);
 }
 
@@ -38,11 +46,11 @@ li:hover {
   margin: 10px 0;
 }
 
-.is-active {
+a.is-active {
   color: var(--hover-title-color);
 }
 
-.is-active::after {
+a.is-active::after {
   display: block;
   content: "";
   position: relative;
@@ -50,5 +58,6 @@ li:hover {
   width: 100%;
   height: 4px;
   border-radius: 8px;
+  transform: translateY(50%);
   background-color: var(--hover-title-color);
 }
