@@ -1,3 +1,54 @@
+html {
+  --hover-title-color: #00acdc;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 50px;
+}
+
 body {
   margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: baseline;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+li {
+  margin: 0 20px;
+}
+
+li:hover {
+  color: var(--hover-title-color);
+}
+
+.logo {
+  margin: 10px 0;
+}
+
+.is-active {
+  color: var(--hover-title-color);
+}
+
+.is-active::after {
+  display: block;
+  content: "";
+  position: relative;
+  bottom: -18.5px;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--hover-title-color);
 }
