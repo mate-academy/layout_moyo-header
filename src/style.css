@@ -1,3 +1,70 @@
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+}
+
+.logo__image {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+ul {
+  /* what is the best place to put there reset type styles? */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list {
+  display: flex;
+}
+
+li {
+  margin: 0 10px;
+}
+
+li:first-of-type {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+li:last-of-type {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.list__link {
+  height: 60px;
+  /* can`t delete flex because then links and underline shifts */
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.is-active,
+.list__link:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active::after {
+  display: block;
+  content: "";
+  height: 4px;
+  border-radius: 8px;
+  background-color: rgba(0, 172, 220, 1);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
