@@ -1,12 +1,14 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
 }
 
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 0 50px;
 }
@@ -22,47 +24,41 @@ body {
   list-style: none;
 }
 
+.nav_item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.nav_item:first-child {
+  margin-left: 0;
+}
+
 .nav_link {
   color: #000;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  height: 16px;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
-  margin-left: 20px;
   display: block;
   padding: 22px 0;
-  position: relative;
 }
 
 .nav_link:hover {
   color: #00acdc;
 }
 
-.icon {
-  align-self: left;
-  height: 40px;
-  width: 40px;
-}
-
-.space {
-  flex-grow: 1;
-}
-
-.is_active {
+.is-active {
   color: #00acdc;
 }
 
-.is_active::after {
-  content: " ";
-  display: block;
-  height: 4px;
-  width: 100%;
-  background-color: #00acdc;
-  border-radius: 8px;
+.is-active::after {
+  content: "";
   position: absolute;
   bottom: 0;
+  display: block;
+  border-radius: 8px;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
 }
