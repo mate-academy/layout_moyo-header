@@ -1,6 +1,14 @@
 body {
   margin: 0;
   font-family: Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .logo__img {
@@ -10,28 +18,17 @@ body {
   width: 40px;
 }
 
-.nav {
-  font-size: 12px;
-  font-weight: 500;
-  display: block;
-}
-
 .nav__list {
-  margin: 0;
-  list-style: none;
-  padding: 0;
   display: flex;
 }
 
 .nav__link {
   line-height: 60px;
-  height: 60px;
   display: block;
   text-decoration: none;
   color: #000;
   white-space: nowrap;
   text-transform: uppercase;
-  position: relative;
 }
 
 .header {
@@ -42,12 +39,15 @@ body {
 }
 
 .nav__item:not(:first-child) {
-  display: block;
   margin-left: 20px;
 }
 
-.is-active {
+.is-active,
+.nav__link:hover {
   color: #00acdc;
+}
+
+.is-active {
   position: relative;
 }
 
