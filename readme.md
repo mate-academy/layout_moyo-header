@@ -3,8 +3,6 @@ Replace `<your_account>` with your Github username and copy the links to Pull Re
 > Follow [these instructions](https://heorhiig.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 > Follow [these instructions](https://heorhiig.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
-> Follow [these instructions](https://heorhiig .github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
-
 ## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](https://github.com/mate-academy/layout_moyo-header/blob/master/checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
 
 ## The task
