@@ -1,5 +1,7 @@
 # Moyo header
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
+> Follow [these instructions](https://heorhiig.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
+> Follow [these instructions](https://heorhiig.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
 > Follow [these instructions](https://heorhiig .github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
