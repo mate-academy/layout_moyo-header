@@ -1,3 +1,69 @@
 body {
+  font-family: Roboto, sans-serif;
+  --text-color: rgba(0, 0, 0, 1);
+  --text-color-active: rgba(0, 172, 220, 1);
+  background-color: rgb(229, 229, 229);
+}
+
+ul {
   margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 50px;
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* .nav {
+
+} */
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 22.5px 0;
+}
+
+.nav-link:hover {
+  color: var(--text-color-active);
+}
+
+.is-active {
+  position: relative;
+  color: var(--text-color-active);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  height: 4px;
+  width: 37px;
+  background-color: var(--text-color-active);
+  display: block;
+  border-radius: 5px;
 }
