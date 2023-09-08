@@ -2,6 +2,10 @@ html {
   --hover-title-color: #00acdc;
   margin: 0;
   background-color: #000;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
 }
 
 header {
@@ -14,24 +18,22 @@ header {
 
 body {
   margin: 0;
+  padding: 0;
+}
+
+.nav {
+  padding: 0;
+  margin: 0;
+  display: block;
 }
 
 .nav-list {
   padding: 0;
   margin: 0;
-  height: 100%;
   list-style-type: none;
   display: flex;
   align-items: center;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
   text-transform: uppercase;
-}
-
-.nav-item {
-  height: 100%;
 }
 
 .nav-item:not(:first-child) {
@@ -39,8 +41,7 @@ body {
 }
 
 .nav-link {
-  display: inline-block;
-  padding: 22.5px 0;
+  padding: 23px 0;
 }
 
 .nav-link:hover {
@@ -53,6 +54,7 @@ body {
 
 .is-active {
   color: var(--hover-title-color);
+  position: relative;
 }
 
 .is-active::after {
@@ -60,11 +62,10 @@ body {
   margin: 0;
   display: block;
   content: "";
-  position: relative;
-  bottom: -18.5px;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  transform: translateY(50%);
   background-color: var(--hover-title-color);
 }
