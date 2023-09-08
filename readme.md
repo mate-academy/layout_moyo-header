@@ -2,7 +2,6 @@
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
 - [DEMO LINK](https://heorhiig.github.io/layout_moyo-header/)
 - [TEST REPORT LINK](https://heorhiig.github.io/layout_moyo-header/report/html_report/)
-git commit -m 'add task solution'
 
 > Follow [these instructions](https://heorhiig.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
