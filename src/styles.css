@@ -7,7 +7,7 @@ li {
 }
 
 body {
-  display: block;
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   line-height: 14.6px;
   background-color: antiquewhite;
@@ -52,6 +52,7 @@ body {
 
 .nav__item {
   margin: 0 10px;
+  display: block;
 }
 
 .nav__link {
@@ -60,24 +61,30 @@ body {
   color: #000;
   text-decoration: none;
   position: relative;
-  padding-bottom: 5px;
+  padding: 0 10px;
   font-size: 12px;
+  display: block;
+  height: 100%;
 }
 
 .is-active::after {
   content: "";
-  display: inline-block;
+  display: block;
   position: absolute;
-  bottom: -18px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 8px;
-  width: 100%;
+  width: 37px;
   height: 4px;
+  bottom: -18px;
   background-color: var(--active-color);
-  padding-bottom: 0;
 }
 
 .nav__list a:hover {
+  color: var(--active-color);
+}
+
+.is-active {
   color: var(--active-color);
 }
 
