@@ -5,13 +5,15 @@
 
 html {
   --header-height: 60px;
+  --link-color: #00acdc;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,11 +33,9 @@ header {
 .nav__list {
   display: flex;
   list-style: none;
-  position: relative;
 }
 
 .nav__item {
-  position: relative;
   cursor: pointer;
 }
 
@@ -44,46 +44,32 @@ header {
 }
 
 .nav__link {
+  height: var(--header-height);
   line-height: var(--header-height);
+  font-size: 12px;
   text-decoration: none;
   color: #000;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
   text-transform: uppercase;
-
+  display: inline-block;
+  position: relative;
 }
 
-.is-active {
-  color: #00acdc;
+.nav__link.is-active {
+  color: var(--link-color);
 }
 
-.is-active::after {
+.nav__link.is-active::after {
   content: "";
   bottom: 0;
   position: absolute;
+  width: 100%;
   right: 0;
   left: 0;
   height: 4px;
   border-radius: 8px;
-  background: #00acdc;
+  background: var(--link-color);
 }
 
 .nav__link:hover {
-  color: #00acdc;
-}
-
-.nav__link:active::after {
-  bottom: 0;
-  position: absolute;
-  right: 0;
-  left: 0;
-  content: "";
-  height: 4px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background: #00acdc;
-}
-
-.nav__link:visited {
-  color: #00acdc;
+  color: var(--link-color);
 }
