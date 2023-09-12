@@ -11,13 +11,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
 }
 
 .logo__img {
   display: block;
   width: 40px;
   height: 40px;
-  margin-left: 50px;
 }
 
 .nav__list {
@@ -26,27 +26,31 @@ body {
   list-style: none;
   text-transform: uppercase;
   margin: 0;
+  padding-left: 0;
 }
 
-.nav__item:last-child {
-  margin-right: 50px;
+.nav__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-left: 20px;
+}
+
+.nav__list > .nav__item:first-of-type {
+  margin-left: 0;
 }
 
 .nav__link {
-  display: inline-block;
-  position: relative;
   text-decoration: none;
   color: #000;
   font-size: 12px;
-  margin-left: 20px;
   height: 60px;
   line-height: 60px;
 }
 
-.nav__link:hover {
-  color: var(--blue-color);
-}
-
+.nav__link:hover,
 .is-active {
   color: var(--blue-color);
 }
