@@ -1,24 +1,15 @@
-body,
-p,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
 
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   line-height: 14.6px;
   background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
   --active-color: #00acdc;
-}
-
-.menu {
-  padding: 10px 50px;
 }
 
 .header {
@@ -27,33 +18,31 @@ body {
   align-items: center;
   background-color: #fff;
   min-width: 1024px;
+  padding: 0 50px;
+  height: 60px;
 }
 
 .logo_img {
-  max-width: 100%;
   width: 40px;
   height: 40px;
-  margin: 10px 50px;
-
 }
 
 .nav {
-  flex: auto;
+  display: flex;
+  height: 100%;
 }
 
 .nav__list {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-right: 50px;
+  gap: 20px;
 }
 
 .nav__item {
-  margin: 0 ;
-  display: block;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .nav__link {
@@ -64,29 +53,27 @@ body {
   padding: 0;
   font-size: 12px;
   display: inline-block;
-  line-height: 15px;
-  width: auto;
-  margin-right: 20px;
+  text-transform: uppercase;
+  line-height: 60px;
+}
 
+.is-active {
+  position: relative;
+  color: var(--active-color);
 }
 
 .is-active::after {
   content: "";
   display: block;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   border-radius: 8px;
   height: 4px;
-  bottom: -18px;
+  bottom: 0;
   background-color: var(--active-color);
   width: 100%;
 }
 
 .nav__list a:hover {
-  color: var(--active-color);
-}
-
-.is-active {
   color: var(--active-color);
 }
