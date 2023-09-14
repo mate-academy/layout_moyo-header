@@ -1,3 +1,87 @@
 body {
   margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  --link-height: 52px;
+  --line-decoration: 4px;
+  --link-color: #00acdc;
+}
+
+.container {
+  display: flex;
+  width: 1200px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.navigation {
+  display: flex;
+  margin-right: 50px;
+
+}
+
+.nav__list {
+  display: flex;
+  margin: auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav__link {
+  display: block;
+  text-align: center;
+  line-height: var(--link-height);
+  padding-bottom: var(--line-decoration);
+  padding-top: var(--line-decoration);
+  height: var(--link-height);
+  text-decoration: none;
+  margin: 0 10px;
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+ 
+}
+
+a {
+  height: 40px;
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+a:hover {
+  color: var(--link-color);
+}
+
+a.is-active {
+  color: #00acdc;
+  margin-left: 0;
+}
+
+a.last-link {
+  margin-right: 0;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  height: var(--line-decoration);
+  background-color: var(--link-color);
+  border-radius: 2px;
+}
+
+@media all and (max-width: 1024px) {
+  .container {
+    width: 1024px;
+  }
 }
