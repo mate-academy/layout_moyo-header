@@ -1,3 +1,74 @@
-body {
+:root {
+  --main-color: #00acdc;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  margin: auto;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar .nav__list .nav__item {
+  padding: 22.5px 0;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  margin-left: 16px;
+}
+
+.navbar .nav__list .nav__item:first-child {
+  margin-left: 0;
+}
+
+.navbar .nav__list .nav__item .nav__link {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  height: 100%;
+  line-height: 15px;
+}
+
+.nav__list .nav__item .nav__link:hover {
+  color: var(--main-color);
+}
+
+a.is-active {
+  padding: 22.5px 0;
+  color: var(--main-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 100%;
+  line-height: 15px;
+}
+
+a.is-active::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background: var(--main-color);
+  border-radius: 8px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
