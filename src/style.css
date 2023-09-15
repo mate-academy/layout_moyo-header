@@ -1,3 +1,57 @@
+html {
+  --main-bg-color: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+.Moyo_img {
+  display: block;
+
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__link {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  height: 60px;
+  color: black;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  text-align: left;
+  line-height: 60px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--main-bg-color);
+  text-decoration: underline var(--main-bg-color) 2px;
+}
+
+.is-active::after {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  content: "";
+  background-color: var(--main-bg-color);
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
 }
