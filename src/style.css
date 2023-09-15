@@ -14,7 +14,6 @@ html {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  margin: 0;
   padding: 0 50px;
 }
 
@@ -35,18 +34,8 @@ html {
   padding: 0;
 }
 
-.nav__item {
-  margin: 0 10px;
-}
-
-.first_item {
-  margin: 0;
-  margin-right: 10px;
-}
-
-.last_item {
-  margin: 0;
-  margin-left: 10px;
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link {
@@ -58,8 +47,8 @@ html {
 }
 
 .logo {
-  display: block;
-  margin: auto 0;
+  display: flex;
+  align-items: center;
 }
 
 :hover {
@@ -67,6 +56,7 @@ html {
 }
 
 .is-active {
+  position: relative;
   display: block;
   color: var(--blue_color--);
   text-decoration: none;
@@ -75,8 +65,8 @@ html {
 .is-active::after {
   content: "";
   display: block;
-  position: relative;
-  bottom: -19px;
+  position: absolute;
+  bottom: 0;
   height: 4px;
   width: 100%;
   background-color: var(--blue_color--);
