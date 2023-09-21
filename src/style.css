@@ -7,7 +7,6 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
 }
 
 ul {
@@ -46,23 +45,23 @@ ul {
   text-decoration: none;
   font-size: 12px;
   color: black;
-  height: 60px;
-  line-height: 60px;
+  padding: 22.8px 0;
+  line-height: normal;
+}
+
+.nav__item:not(:last-child) {
   margin: 0 10px;
 }
 
-.nav__link[href="#Apple"] {
+.nav__item:last-child {
+  margin-left: 10px;
+}
+
+.nav__item:first-child {
   margin-left: 0;
 }
 
-.nav__link[href="#Video"] {
-  margin-right: 0;
-}
-
-.nav__link:hover {
-  color: var(--blue-color);
-}
-
+.nav__link:hover,
 .is-active {
   color: var(--blue-color);
 }
