@@ -1,3 +1,94 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.cdnfonts.com/css/roboto?styles=14400");
+
+body {
+  background-color: #f0f0f0;
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.container img {
+  margin-left: 40px;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li:last-child {
+  margin-right: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #00acdc;
+  font-size: 12px;
+  text-transform: uppercase;
+  height: 60px;
+  padding: 20px;
+}
+
+nav ul li a.is-active {
+  color: #000;
+
+}
+
+nav ul li a:hover {
+  color: #00acdc;
+}
+
+nav ul li a.is-active:hover {
+  position: relative;
+  height: 2px;
+}
+
+nav ul li a.is-active:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #00acdc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 5px;
+  }
+  .container img {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  nav ul li a {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .container {
+    padding: 0;
+  }
+  .container img {
+    margin-right: 30px;
+    padding: 20px;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+
 }
