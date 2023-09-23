@@ -1,5 +1,5 @@
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -10,11 +10,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .logo__img {
   display: block;
+}
+
+.nav {
+  display: flex;
 }
 
 .nav__list {
@@ -23,28 +28,42 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+}
 
+.nav__item {
+  display: flex;
+  height: 60px;
+  line-height: 60px;
 }
 
 .nav__link {
   display: inline-block;
-  margin: 0 0 0 20px;
-  height: 60px;
-  line-height: 60px;
+  margin: 0 10px;
   font-size: 12px;
   text-transform: uppercase;
   text-decoration: none;
   color: black;
 }
 
-.nav__link:hover, .is-active {
+.nav__link:hover,
+.is-active {
   color: #00acdc;
 }
 
+.nav__item:first-child .nav__link {
+  margin-left: 0;
+}
+
+.nav__item:last-child .nav__link {
+  margin-right: 0;
+}
+
 .is-active::after {
-  content: '';
-  height: 4px;
+  content: "";
+  bottom: 10px;
   display: block;
-  background-color: #00acdc;
+  transform: translateY(-4px);
+  height: 4px;
   border-radius: 8px;
+  background-color: #00acdc;
 }
