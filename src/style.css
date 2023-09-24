@@ -1,5 +1,7 @@
 html {
   font-family: "Roboto", sans-serif;
+  --font-color: #00acdc;
+  --underline-thickness: 4px;
 }
 
 body {
@@ -46,7 +48,7 @@ body {
 
 .nav__link:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--font-color);
 }
 
 .nav__item:first-child .nav__link {
@@ -61,8 +63,8 @@ body {
   content: "";
   bottom: 10px;
   display: block;
-  transform: translateY(-4px);
-  height: 4px;
+  transform: translateY(calc(-1 * var(--underline-thickness)));
+  height: var(--underline-thickness);
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--font-color);
 }
