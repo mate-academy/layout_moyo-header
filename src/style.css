@@ -1,14 +1,22 @@
+@import url("https://fonts.cdnfonts.com/css/roboto?styles=14400");
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+:root {
+  --black: black;
+  --blue: #00acdc;
+}
+
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-@import url("https://fonts.cdnfonts.com/css/roboto?styles=14400");
-
 body {
   background-color: #f0f0f0;
-  font-family: Roboto, sans-serif;
+  width: 100%;
 }
 
 .container {
@@ -39,7 +47,7 @@ body {
 
 .header_text a {
   text-decoration: none;
-  color: #00acdc;
+  color: var(--black);
   font-size: 12px;
   text-transform: uppercase;
   height: 60px;
@@ -48,12 +56,12 @@ body {
 }
 
 a.is-active {
-  color: #000;
+  color: var(--black);
   margin: 10px;
 }
 
 a:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active:hover {
@@ -65,13 +73,13 @@ a:hover {
   content: "";
   width: 100%;
   height: 2px;
-  background: #00acdc;
+  background: var(--blue);
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .container {
     padding: 5px;
   }
@@ -96,4 +104,4 @@ a:hover {
     font-size: 14px;
   }
 
-}
+} */
