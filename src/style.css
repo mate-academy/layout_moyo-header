@@ -14,7 +14,7 @@ body {
   min-width: 700px;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-  padding: 0 40px 0 50px;
+  padding: 0 50px;
 }
 
 .logo {
@@ -22,8 +22,16 @@ body {
   height: 40px;
 }
 
-.nav {
-  align-self: end;
+@media (min-width: 1024px) {
+  .nav {
+    left: 333px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav {
+    left: 509px;
+  }
 }
 
 .nav-list {
@@ -31,7 +39,7 @@ body {
   list-style: none;
   flex-shrink: 0;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   padding: 0;
 }
@@ -48,6 +56,14 @@ body {
   font-weight: 500;
   color: rgba(0, 0, 0, 1);
   line-height: normal;
+}
+
+.first {
+  margin-left: 0;
+}
+
+.last {
+  margin-right: 0;
 }
 
 .link:hover {
