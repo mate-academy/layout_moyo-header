@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -18,23 +19,30 @@ body {
   height: 40px;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  position: relative;
+}
+
 .nav__list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
-  list-style: none;
-  margin-right: 30px;
-  position: relative;
+  height: 60px;
+  margin-right: 50px;
 }
 
 .nav__list-item {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-decoration: none;
   color: black;
-  margin-right: 20px;
+  margin-left: 20px;
   font-size: 12px;
   height: 60px;
 }
@@ -46,12 +54,10 @@ body {
 .is-active {
   color: var(--main-color);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-decoration: none;
-  margin-right: 20px;
   font-size: 12px;
+  height: 60px;
 }
 
 .is-active::after {
