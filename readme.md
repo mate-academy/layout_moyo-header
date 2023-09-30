@@ -2,7 +2,6 @@
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
 - [DEMO LINK](https://Half-a-man.github.io/layout_moyo-header/)
 - [TEST REPORT LINK](https://Half-a-man.github.io/layout_moyo-header/report/html_report/)
-
 > Follow [these instructions](https://mate-academy.github.io/layout_task-guideline/#how-to-solve-the-layout-tasks-on-github)
 
 ## ❗️❗️❗️ DON'T FORGET TO PROOFREAD YOUR CODE WITH [CHECKLIST](https://github.com/mate-academy/layout_moyo-header/blob/master/checklist.md) BEFORE SENDING YOUR PULL REQUEST❗️❗️❗️
