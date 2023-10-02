@@ -14,16 +14,18 @@ body {
 
 .header {
   display: flex;
-  justify-items: baseline;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 50px;
+}
+
+.nav :not(:first-child) {
+  margin-left: 20px;
 }
 
 .logo {
   height: 40px;
   width: 40px;
-  margin: 10px;
 }
 
 .link-list {
@@ -35,15 +37,14 @@ body {
 }
 
 .link {
-  display: block;
-  height: 40px;
-  line-height: 40px;
+  position: relative;
+  display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
   font-weight: 500;
   font-size: 12px;
-  margin: 10px;
+  padding: 23px 0;
 }
 
 .link:hover {
@@ -51,7 +52,6 @@ body {
 }
 
 .is-active {
-  position: relative;
   color: var(--color-decor);
 }
 
@@ -63,5 +63,5 @@ body {
   border-radius: 2px;
   height: 4px;
   width: 100%;
-  bottom: -18px;
+  bottom: 0;
 }
