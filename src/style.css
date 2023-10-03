@@ -1,7 +1,13 @@
+:root {
+  --primary: #00acdc;
+  --fnSmall: 12px;
+}
+
 body {
   margin: 0;
   max-width: 1200px;
   min-width: 1024px;
+  font-family: "Roboto", sans-serif;
 }
 
 .head {
@@ -12,7 +18,7 @@ body {
   padding: 0 50px;
 }
 
-.a_img {
+.head_logo {
   height: 40px;
 }
 
@@ -28,15 +34,14 @@ body {
 }
 
 .head_list > li > a:not(.is-active) {
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
+  font-size: var(--fnSmall);
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
 }
 
 .head_list > li > a:hover {
-  color: #00acdc;
+  color: var(--primary);
 }
 
 .head_list > li {
@@ -49,9 +54,8 @@ ul > li:not(:first-child) {
 }
 
 .is-active {
-  color: #00acdc;
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
+  color: var(--primary);
+  font-size: var(--fnSmall);
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -64,5 +68,5 @@ ul > li:not(:first-child) {
   top: 56px;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--primary);
 }
