@@ -1,3 +1,63 @@
+:root {
+  --color-primary: #00acdc;
+}
+
+header {
+  position: relative;
+}
+
 body {
   margin: 0;
+
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  left: 50px;
+  position: absolute;
+}
+
+.nav__link {
+  margin: 0 0 0 20px;
+  padding: 22.5px 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.nav__list {
+  list-style-type: none;
+  margin-right: 50px;
+  padding: 0;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.is-active {
+  position: relative;
+  color: var(--color-primary);
+}
+
+.is-active::after {
+  content: url(./images/Rectangle2.png);
+  width: 100%;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.nav__link:hover {
+  color: var(--color-primary);
 }
