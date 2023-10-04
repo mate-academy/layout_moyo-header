@@ -1,3 +1,70 @@
+:root {
+  --primary: #00acdc;
+  --fnSmall: 12px;
+}
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+}
+
+.head_logo {
+  height: 40px;
+}
+
+.head_list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.list_link {
+  display: block;
+  padding: 23px 0;
+}
+
+.list_link:not(.is-active) {
+  font-size: var(--fnSmall);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.list_link:hover {
+  color: var(--primary);
+}
+
+.head_list__li {
+  position: relative;
+  list-style: none;
+}
+
+.head_list__li:not(:first-child) {
+  margin-left: 20px;
+}
+
+.is-active {
+  color: var(--primary);
+  font-size: var(--fnSmall);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--primary);
 }
