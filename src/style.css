@@ -5,8 +5,6 @@
 
 body {
   margin: 0;
-  max-width: 1200px;
-  min-width: 1024px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -30,26 +28,26 @@ body {
 
 .list_link {
   display: block;
-  padding: 22.8px 0;
+  padding: 23px 0;
 }
 
-.head_list > li > a:not(.is-active) {
+.list_link:not(.is-active) {
   font-size: var(--fnSmall);
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
 }
 
-.head_list > li > a:hover {
+.list_link:hover {
   color: var(--primary);
 }
 
-.head_list > li {
+.head_list__li {
   position: relative;
   list-style: none;
 }
 
-ul > li:not(:first-child) {
+.head_list__li:not(:first-child) {
   margin-left: 20px;
 }
 
@@ -65,7 +63,7 @@ ul > li:not(:first-child) {
   display: block;
   position: absolute;
   width: 100%;
-  top: 56px;
+  bottom: 0;
   height: 4px;
   border-radius: 8px;
   background-color: var(--primary);
