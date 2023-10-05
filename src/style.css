@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --logo-size: 40px;
+  --color-ordinary: #000;
+  --color-active: #00acdc;
+  --header-height: 60px;
+  --font-size: 12px;
+  --line-height: calc(var(--font-size) * 1.2);
+}
+
 body,
 ul,
 li,
@@ -12,15 +21,9 @@ a {
   text-decoration: none;
 }
 
-html {
-  --logo-size: 40px;
-  --color-ordinary: #000;
-  --color-active: #00acdc;
-}
-
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
+  font-size: var(--font-size);
 }
 
 .header {
@@ -37,10 +40,7 @@ body {
   display: block;
   width: var(--logo-size);
   height: var(--logo-size);
-  background-image: url(./images/logo.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background: url(./images/logo.png) center / contain no-repeat;
 }
 
 .nav__list {
@@ -54,9 +54,8 @@ body {
 
 .nav__link {
   position: relative;
-  display: flex;
-  height: 60px;
-  align-items: center;
+  display: block;
+  padding: calc((var(--header-height) - var(--line-height)) / 2) 0;
   color: var(--color-ordinary);
   transition: color 0.2s;
 }
