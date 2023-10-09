@@ -1,3 +1,8 @@
+/* stylelint-disable-next-line block-opening-brace-space-before */
+:root{
+  --main-color: #00acdc;
+}
+
 body {
   overflow-x: hidden !important;
   box-sizing: border-box;
@@ -42,32 +47,32 @@ img {
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
-  transition: all .3s;
+  transition: all 0.3s;
   display: block;
   padding: 18px 0;
 }
 
 .header__link:hover {
-  color: #00ACDC;
+  color: var(--main-color);
 }
 
 .header__link.is-active {
-  color: #00ACDC;
+  color: var(--main-color);
   position: relative;
 }
 
 .header__link::after {
-  content: '';
-  transition: all .3s;
+  content: "";
+  transition: all 0.3s;
 }
 
 .header__link.is-active::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
-  transition: all .3s;
+  transition: all 0.3s;
   border-radius: 8px;
-  background: #00ACDC;
+  background: var(--main-color);
   height: 4px;
   width: 100%;
   bottom: 0;
