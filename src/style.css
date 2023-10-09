@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 :root {
-  --color: #00acdc;
+  --color-primary: #00acdc;
   --logo-size: 40px;
 }
 
@@ -9,14 +7,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  background-color: black;
+  background-color: #000;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: #fff;
   padding: 0 50px;
 }
 
@@ -34,9 +32,7 @@ body {
 
 .nav__item {
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   text-transform: uppercase;
   padding: 7px 0;
 }
@@ -45,7 +41,7 @@ body {
   margin-left: 20px;
 }
 
-a {
+.nav__item a {
   text-decoration: none;
   color: #000;
   font-size: 12px;
@@ -53,15 +49,19 @@ a {
   padding: 23px 0;
 }
 
-a.is-active {
-  color: var(--color);
+.nav__item a:hover {
+  color: var(--color-primary);
+}
+
+.nav__item a.is-active {
+  color: var(--color-primary);
   position: relative;
 }
 
-a.is-active::after {
+.nav__item a.is-active::after {
   content: "";
   display: flex;
-  border-bottom: 4px solid #00acdc;
+  border-bottom: 4px solid var(--color-primary);
   border-radius: 2px;
   padding-bottom: 19px;
   position: absolute;
@@ -70,6 +70,6 @@ a.is-active::after {
   right: 0;
 }
 
-[data-qa="hover"]:hover {
-  color: var(--color);
+.nav__item [data-qa="hover"]:hover {
+  color: var(--color-primary);
 }
