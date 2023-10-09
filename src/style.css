@@ -18,13 +18,13 @@ body {
   max-width: 1200px;
 }
 
-.header img {
+img {
   display: block;
   margin-left: 50px;
   padding: 10px 0;
 }
 
-.nav__item {
+.navigation {
   display: flex;
   margin-right: 50px;
 }
@@ -35,13 +35,12 @@ body {
   padding: 0;
 }
 
-.nav__item li {
+.nav__item {
   display: flex;
 }
 
 .nav__link {
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
   color: #000;
@@ -52,7 +51,7 @@ body {
   height: 100%;
 }
 
-li:not(:first-child) {
+.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
@@ -62,6 +61,7 @@ li:not(:first-child) {
 
 .is-active.nav__link {
   color: var(--active-link);
+  position: relative;
 }
 
 .is-active.nav__link::after {
