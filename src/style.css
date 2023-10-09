@@ -1,3 +1,95 @@
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  --link-color-inactive: #000;
+  --link-color-active: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.logo {
+  display: flex;
+  margin: 0 auto 0 50px;
+}
+
+.nav {
+  margin: 0 50px 0 0;
+}
+
+.nav__list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+}
+
+.nav__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 60px;
+  margin: 0 10px;
+
+  color: var(--link-color-inactive);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.nav__link__first {
+  margin-left: 0;
+}
+
+.nav__link__last {
+  margin-right: 0;
+}
+
+.nav__item .nav__link {
+  position: relative;
+}
+
+.nav__link.nav__link.is-active {
+  color: var(--link-color-active);
+}
+
+.nav__link.is-active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+  background-color: var(--link-color-active);
+}
+
+.nav__link:link {
+  color: var(--link-color-inactive);
+}
+
+.nav__link:visited {
+  color: var(--link-color-inactive);
+}
+
+.nav__link:hover {
+  color: var(--link-color-active);
+}
+
+.nav__link:active {
+  color: var(--link-color-active);
 }
