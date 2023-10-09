@@ -1,3 +1,8 @@
+:root {
+  --logo-dimensions: 40px;
+  --moyo-blue: #00acdc;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,8 +22,8 @@ body {
 }
 
 .header__logo--img {
-  height: 40px;
-  width: 40px;
+  height: var(--logo-dimensions);
+  width: var(--logo-dimensions);
   display: flex;
   align-self: center;
 }
@@ -46,13 +51,13 @@ body {
 
 .nav__link:hover,
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--moyo-blue);
 }
 
 .nav__link.is-active::after {
   content: "";
   display: block;
-  background-color: #00acdc;
+  background-color: var(--moyo-blue);
   height: 4px;
   width: 100%;
   position: absolute;
