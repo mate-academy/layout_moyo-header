@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --bluecolor: #00acdc;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
 .nav__list {
   display: flex;
   justify-content: flex-end;
+  list-style: none;
 }
 
 .nav__link {
@@ -36,20 +38,18 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   &:hover {
-    color: #00acdc;
+    color: var(--bluecolor);
   }
   &:active {
-    color: #00acdc;
-    border-bottom: #00acdc solid 4px;
+    color: var(--bluecolor);
+    border-bottom: var(--bluecolor) solid 4px;
     border-radius: 1px;
   }
 }
 
 .is-active {
-  color: #00acdc;
-  border-bottom: #00acdc solid 4px;
-  padding-bottom: 19px;
-
+  color: var(--bluecolor);
+  border-bottom: var(--bluecolor) solid 4px;
 }
 
 .container {
@@ -59,7 +59,7 @@ body {
 }
 
 [data-qa="hover"]:hover {
-  color: #00acdc;
+  color: var(--bluecolor);
 }
 
 .nav__list > :not(:first-child) {
