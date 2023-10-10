@@ -1,10 +1,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
-* {
+html {
   font-family: sans-serif, Roboto;
-  /* font-weight: bold; */
-  /* outline: solid 1px black; */
+  font-weight: bold;
 }
 
 body {
@@ -13,9 +12,7 @@ body {
 }
 
 .moyo {
-  top: 10px;
-  left: 50px;
-  position: relative;
+  margin-top: 10px;
   width: 40px;
   height: 40px;
   flex-shrink: 0;
@@ -28,12 +25,16 @@ body {
   text-transform: uppercase;
 }
 
+a {
+  height: 60px;
+}
+
 ul {
   margin: 0;
   padding: 0;
 }
 
-a {
+li {
   box-sizing: border-box;
   font-size: 12px;
   display: inline-block;
@@ -43,28 +44,27 @@ a {
   height: 60px;
 }
 
-a:hover {
+li:hover {
   color: var(--color-blue);
-  text-decoration: underline 3px var(--color-blue);
+  border-bottom: 2px solid var(--color-blue);
+  margin-bottom: -2px;
   cursor: pointer;
-}
-
-a:after {
-  color: var(--color-blue);
-  text-decoration: underline 3px var(--color-blue);
 }
 
 .container {
   display: flex;
   justify-content: space-between;
+  padding-left: 50px;
 }
 
-a.is-active {
+li:has(> a.is-active) {
   color: var(--color-blue);
-  text-decoration: underline 3px var(--color-blue);
+  border-bottom: 2px solid var(--color-blue);
+  margin-bottom: -2px;
+  cursor: pointer;
 }
 
-.video {
+.nav__list > ul:last-child {
   margin-right: 50px;
 }
 
