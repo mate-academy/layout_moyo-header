@@ -6,7 +6,7 @@
 
 * {
   margin: 0;
-  padding-inline-start: 0;
+  padding: 0;
 }
 
 body {
@@ -25,8 +25,7 @@ body {
 }
 
 header {
-  padding-left: var(--padding-size);
-  padding-right: var(--padding-size);
+  padding: 0 var(--padding-size);
 }
 
 ul {
@@ -37,13 +36,15 @@ ul {
   margin: 0;
 }
 
-.is-active span {
+.is-active {
   position: relative;
   display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
   color: var(--blue-color);
 }
 
-.is-active span::after {
+.is-active::after {
   content: "";
   position: absolute;
   left: 0;
@@ -62,10 +63,9 @@ li:last-child {
   padding-right: 0;
 }
 
-li a {
+.not-active {
   display: block;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding: 23px 0;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--black-color);
