@@ -1,9 +1,10 @@
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
+  --main-color: #00acdc;
 }
 
-header {
+.header {
   display: flex;
   padding: 0 50px;
   align-items: center;
@@ -26,8 +27,8 @@ header {
 .nav__link {
   display: block;
   position: relative;
-  height: 60px;
-  line-height: 60px;
+  padding: 23px 0;
+  line-height: normal;
   font-size: 12px;
   margin-left: 20px;
   color: #000;
@@ -36,12 +37,11 @@ header {
 }
 
 .is-active {
-  color: #00acdc;
   margin-left: 0;
 }
 
 .is-active::after {
-  background: #00acdc;
+  background: var(--main-color);
   bottom: 0;
   content: "";
   height: 4px;
@@ -50,6 +50,7 @@ header {
   width: 100%;
 }
 
+.is-active,
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
