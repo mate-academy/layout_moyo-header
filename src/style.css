@@ -1,3 +1,8 @@
+:root {
+  --blue-color: #00acdc;
+  --padding-size: 50px;
+}
+
 * {
   margin: 0;
   padding-inline-start: 0;
@@ -19,8 +24,8 @@ body {
 }
 
 header {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: var(--padding-size);
+  padding-right: var(--padding-size);
 }
 
 ul {
@@ -34,7 +39,7 @@ ul {
 .is-active span {
   position: relative;
   display: inline-block;
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active span::after {
@@ -45,7 +50,7 @@ ul {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
 
 li {
@@ -70,5 +75,5 @@ a img {
 }
 
 a:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
