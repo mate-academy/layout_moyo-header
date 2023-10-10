@@ -1,3 +1,99 @@
+:root {
+  --background-color: #fff;
+  --text-color: #00acdc;
+  --text-link: #000;
+  --background-nav: #fff;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
 body {
   margin: 0;
+  background-color: var(--background-color);
+}
+
+section {
+  visibility: hidden;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+header {
+  background-color: var(--background-nav);
+  height: 100%;
+}
+
+.navigation {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  background-color: var(--background-nav);
+  margin-right: 50px;
+}
+
+.icon {
+  margin: 10px 50px;
+  justify-self: flex-start;
+}
+
+nav {
+  margin: 0;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-content: center;
+  justify-self: flex-end;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.nav__link {
+  position: relative;
+  margin: 0 10px;
+  text-align: center;
+  line-height: 60px;
+  color: var(--text-link);
+  text-decoration: none;
+  padding: 23px 0;
+}
+
+.is-active {
+  color: var(--text-color);
+}
+
+.is-active::after {
+  color: var(--text-color);
+  display: absolute;
+  background-color: var(--text-color);
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 94%;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+}
+
+.margin__block {
+  margin-left: 0;
+}
+
+.right_block {
+  margin-right: 0;
+}
+
+a:hover {
+  color: var(--text-color);
 }
