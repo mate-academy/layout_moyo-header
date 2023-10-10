@@ -1,3 +1,8 @@
+:root {
+  --black: #000;
+  --highlight-blue: #00acdc;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +11,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   padding: 0 50px;
 }
 
@@ -27,7 +32,7 @@ header {
 }
 
 .nav__link {
-  color: #000;
+  color: var(--black);
   align-items: center;
   display: flex;
   text-decoration: none;
@@ -45,11 +50,11 @@ li.nav__item:not(:first-child) {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--highlight-blue);
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--highlight-blue);
   position: relative;
 }
 
@@ -59,10 +64,9 @@ li.nav__item:not(:first-child) {
   height: 4px;
   border-radius: 2px;
   bottom: 0;
-  top: 56px;
   margin: 0;
   left: 0;
   right: 0;
-  width: 37px;
-  background: #00acdc;
+  width: 100%;
+  background: var(--highlight-blue);
 }
