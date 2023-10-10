@@ -1,4 +1,8 @@
 /* stylelint-disable string-quotes */
+:root {
+  --blue: #00acdc;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,46 +14,63 @@ body {
   padding: 0;
   font-size: 12px;
   font-family: "Roboto", sans-serif;
-  background-color: rgb(209, 209, 209);
 }
 
-.content {
+header {
   display: flex;
   justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   align-items: stretch;
   min-width: 1024px;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
   background-color: #fff;
-  line-height: 14px;
+  padding-right: 30px;
+
 }
 
 .logo {
+  display: flex;
   width: 40px;
   height: 40px;
   margin: 10px 0;
   padding-left: 50px;
 }
 
+.content {
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  background-color: #fff;
+  line-height: 14px;
+}
+
 .nav__list {
   display: flex;
-
+  justify-content: flex-end;
   list-style: none;
   text-decoration: none;
   text-transform: uppercase;
+  margin-right: 20px;
 }
 
-.nav__link a {
+.nav__link {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: black;
+  height: 60px;
 }
 
-.nav__link {
+.nav__item {
   display: flex;
   margin-right: 20px;
 }
@@ -58,20 +79,20 @@ body {
   margin-right: 0;
 }
 
-.nav__link a:hover,
-.nav__link.is-active a {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--blue);
 }
 
-.nav__link.is-active {
+.nav__item .is-active {
   position: relative;
+  color: var(--blue);
 }
 
-.nav__list .is-active::after {
+.is-active::after {
   content: '';
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue);
   display: block;
   position: absolute;
   bottom: 0;
