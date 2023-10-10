@@ -15,7 +15,7 @@ body {
 
 .header {
   background-color: white;
-  padding: 0 50px;
+  padding: 10px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,7 +44,7 @@ body {
   text-transform: uppercase;
   color: black;
   font-size: 12px;
-  padding: 23px 0;
+  padding: 13px 0;
   display: block;
   position: relative;
 }
@@ -61,6 +61,33 @@ body {
   height: 4px;
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   border-radius: 4px;
 }
+
+.nav__label,
+.burger-menu__checkbox {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .header__nav ul {
+    display: none;
+  }
+
+  .nav__label {
+    display: inline-block;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+  }
+
+  .burger-menu__checkbox  {
+    display: none;
+  }
+  
+  .burger-menu__checkbox:checked ~ .nav__list {
+    display: flex;
+  }
+}
+
