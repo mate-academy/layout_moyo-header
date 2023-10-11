@@ -1,48 +1,64 @@
 body {
-  padding: 0;
+  box-sizing: border-box;
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
+  padding: 0;
+  --moyo-blue: #00acdc;
 }
 
-.nav {
-  height: 60px;
+.header {
   background-color: white;
-  list-style: none;
+  padding: 10px 50px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-end;
-  margin: 0 30px;
+  height: 40px;
 }
 
-.nav a {
-  color: black;
-  text-decoration: none;
-  font-size: 12px;
+.header__logo {
+  height: 40px;
+  width: 40px;
+}
+
+.header__img {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-self: center;
+}
+
+.nav__list {
+  list-style: none;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
-  margin: 10px;
-  height: 15px;
+  display: flex;
 }
 
-.nav a:hover {
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
   color: black;
-  text-decoration: underline ;
-  text-decoration-color: blue;
-}
-
-.logo {
-  size: 40px 40px;
-  margin-right: auto;
-}
-
-.is-active {
-  color: rgba(0, 172, 220, 1);
   font-size: 12px;
-  border-bottom: 4px;
-  border-color: rgba(0, 172, 220, 1);
+  display: block;
+  position: relative;
+  margin-left: 20px;
 }
 
-div {
-  background-color: aqua;
-  margin-bottom: 20px;
+.nav__link:hover,
+.nav__link.is-active {
+  color: #00acdc;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  display: block;
+  background-color: #00acdc;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: -23px;
+  border-radius: 4px;
+}
+
+.nav.link--last {
+  margin: 0;
 }
