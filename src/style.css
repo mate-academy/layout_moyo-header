@@ -1,3 +1,65 @@
+:root {
+  --color1: #00acdc;
+  --color2: #000;
+  --blockheight: 4px;
+  --blocktopgap: 26.5px;
+  --blockwidth: 37px;
+  --border1: 8px;
+}
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.nav__link {
+  text-decoration: none;
+  padding: 5px 0;
+  color: var(--color2);
+}
+
+.apple,
+.laptops {
+  color: var(--color1);
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.elements {
+  margin-right: 20px;
+  color: var(--color2);
+  position: relative;
+}
+
+ul:last-child {
+  margin-right: 50px;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: var(--blockwidth);
+  height: var(--blockheight);
+  top: var(--blocktopgap);
+  border-radius: var(--border1);
+  background: var(--color1);
 }
