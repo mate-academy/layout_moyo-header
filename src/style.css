@@ -1,5 +1,10 @@
 :root {
   --color1: #00acdc;
+  --color2: #000;
+  --blockheight: 4px;
+  --blocktopgap: 26.5px;
+  --blockwidth: 37px;
+  --border1: 8px;
 }
 
 body {
@@ -25,7 +30,7 @@ a {
 }
 
 .nav__link {
-  color: #000;
+  color: var(--color2);
 }
 
 .apple,
@@ -42,7 +47,7 @@ a {
 
 .elements {
   margin-right: 20px;
-  color: black;
+  color: var(--color2);
   position: relative;
 }
 
@@ -54,9 +59,9 @@ ul:not(:first-child) {
   content: "";
   display: block;
   position: absolute;
-  width: 37px;
-  height: 4px;
-  top: 26.5px;
-  border-radius: 8px;
+  width: var(--blockwidth);
+  height: var(--blockheight);
+  top: var(--blocktopgap);
+  border-radius: var(--border1);
   background: var(--color1);
 }
