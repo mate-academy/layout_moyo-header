@@ -1,3 +1,70 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+:root {
+  --textColor: #00acdc;
+}
+
 body {
   margin: 0;
+  min-width: 1024px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav__link {
+  padding: 23px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.is-active,
+.nav__link:hover {
+  color: var(--textColor);
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  background-color: var(--textColor);
+  border-radius: 8px;
 }
