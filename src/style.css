@@ -1,66 +1,69 @@
-:root {
-  --logo-dimensions: 40px;
-  --moyo-blue: #00acdc;
-}
-
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.header {
-  background-color: white;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 900px;
-  padding: 0 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+body {
+  margin: 0;
+  font-family: "Helvetica", sans-serif;
 }
 
-.header__logo {
-  height: var(--logo-dimensions);
-  width: var(--logo-dimensions);
+.nav {
   display: flex;
-  align-self: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  box-sizing: border-box;
+  margin-right: 50px;
 }
 
 .nav__list {
-  list-style: none;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-weight: 500;
   display: flex;
-}
-
-.nav__list li:not(:first-child) a {
-  margin: 0 0 0 20px;
+  justify-content: flex-end;
 }
 
 .nav__link {
+  display: flex;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  padding-top: 23px;
+  padding-bottom: 22px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  color: black;
   text-decoration: none;
   text-transform: uppercase;
-  color: black;
-  font-size: 12px;
-  padding: 23px 0;
-  line-height: 15px;
-  display: block;
-  position: relative;
 }
 
-.nav__link[data-qa="hover"]:hover,
-.nav__link.is-active {
-  color: var(--moyo-blue);
+.nav__link:hover {
+  color: #00acdc;
 }
 
-.nav__link.is-active::after {
-  content: "";
-  display: block;
-  background-color: var(--moyo-blue);
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  border-radius: 4px;
+.nav__link:active {
+  color: #00acdc;
+  border-bottom: #00acdc solid 4px;
+  border-radius: 1px;
+}
+
+.is-active:hover {
+  color: #00acdc;
+  border-bottom: #00acdc solid 4px;
+  padding-bottom: 19px;
+
+}
+
+.container {
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
+}
+
+.nav__list > :not(:first-child) {
+  margin-left: 20px;
+}
+
+.container > :first-child {
+  padding-top: 5px;
 }
