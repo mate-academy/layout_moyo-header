@@ -1,3 +1,74 @@
-body {
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --logo-size: 40px;
+  --color-ordinary: #000;
+  --color-active: #00acdc;
+}
+
+body,
+ul,
+li,
+a {
   margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  min-width: 1024px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.moyo-logo {
+  display: block;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  background: url(./images/logo.png) center / contain no-repeat;
+}
+
+.nav__list {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  padding: 23px 0;
+  color: var(--color-ordinary);
+  transition: color 0.2s;
+}
+
+.nav__link:hover,
+.is-active {
+  color: var(--color-active);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-active);
+  border-radius: 8px;
 }
