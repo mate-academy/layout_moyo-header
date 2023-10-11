@@ -1,3 +1,92 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  position: relative;
+}
+
+.logo {
+  padding-top: 2px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  margin-right: 20px;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  background-color: transparent;
+  font-size: 12px;
+  padding: 23px 0;
+}
+
+nav a:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after,
+nav a:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+}
+
+.is-active::after {
+  width: 37px;
+}
+
+.samsung::after {
+  width: 58px;
+}
+
+.phones::after {
+  width: 88px;
+}
+
+.gadgets::after {
+  width: 54px;
+}
+
+.tablets::after {
+  width: 51px;
+}
+
+.photo::after {
+  width: 40px;
+}
+
+.video::after {
+  width: 35px;
 }
