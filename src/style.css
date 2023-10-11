@@ -1,3 +1,85 @@
+/* stylelint-disable-next-line block-opening-brace-space-before */
+:root{
+  --main-color: #00acdc;
+}
+
 body {
-  margin: 0;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 50px;
+  margin: 0 auto;
+  height: 60px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.header {
+  padding: 0;
+  background-color: #fff;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+
+}
+
+.header__item + .header__item {
+  margin-left: 20px;
+}
+
+.header__link {
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  display: block;
+  /* padding: 18px 0; */
+
+}
+
+.header__link:hover {
+  color: var(--main-color);
+}
+
+.header__link.is-active {
+  color: var(--main-color);
+  position: relative;
+}
+
+.header__link::after {
+  content: "";
+  transition: all 0.3s;
+}
+
+.header__link.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  transition: all 0.3s;
+  border-radius: 8px;
+  background: var(--main-color);
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+
 }
