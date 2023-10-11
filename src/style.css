@@ -15,17 +15,14 @@ body {
   font-size: 12px;
 }
 
-.container {
+.header {
   display: flex;
   align-items: center;
+  padding: 0 var(--padding-size);
 }
 
 .spacer {
   flex-grow: 1;
-}
-
-header {
-  padding: 0 var(--padding-size);
 }
 
 ul {
@@ -36,12 +33,19 @@ ul {
   margin: 0;
 }
 
+.nav__link {
+  display: block;
+  padding: 23px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--black-color);
+}
+
 .is-active {
   position: relative;
   display: flex;
   align-items: center;
-  height: 60px;
-  white-space: nowrap;
+  flex-wrap: nowrap;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--blue-color);
@@ -64,14 +68,6 @@ li {
 
 li:last-child {
   padding-right: 0;
-}
-
-.not-active {
-  display: block;
-  padding: 23px 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--black-color);
 }
 
 a img {
