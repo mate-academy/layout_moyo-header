@@ -1,4 +1,5 @@
 # Moyo header
+
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
 - [DEMO LINK](https://yehorkk.github.io/layout_moyo-header/)
 - [TEST REPORT LINK](https://yehorkk.github.io/layout_moyo-header/report/html_report/)
@@ -9,6 +10,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 > Here are the [Layout Tasks Instructions](https://mate-academy.github.io/layout_task-guideline)
 
 ## Requirements:
+
 - reset browser default margins.
 - use [Roboto font](https://fonts.google.com/specimen/Roboto)
 - use semantic tags: `<header>`, `<img>`, `<nav>`, `<ul>`, `<li>` and `<a>`
@@ -26,6 +28,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - Nav Links should not have any padding, but have text centered
 
 ## Checklist
+
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
 - [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
@@ -40,4 +43,3 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [ ] **CSS Variable** is used for a blue color
 - [ ] Pseudo-element is used for a blue line below the active link
 - [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
-
