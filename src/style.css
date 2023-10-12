@@ -27,8 +27,7 @@ body {
   color: var(--primarycolor);
 }
 
-.apple,
-.laptops {
+.nav__link:hover {
   color: var(--secondarycolor);
 }
 
@@ -45,8 +44,16 @@ body {
   position: relative;
 }
 
-ul:last-child {
+[data-qa="hover"].nav__link {
+  color: var(--secondarycolor);
+}
+
+.list:last-child {
   margin-right: 50px;
+}
+
+.is-active {
+  color: var(--secondarycolor);
 }
 
 .is-active::after {
