@@ -1,3 +1,9 @@
+* {
+  --logo-size: 40px;
+  --background-color: #00acdc;
+  --text-color: black;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -16,13 +22,13 @@ body {
 }
 
 .header__logo {
-  height: 40px;
-  width: 40px;
+  height: var(--logo-size);
+  width: var(--logo-size);
 }
 
 .header__img {
-  height: 40px;
-  width: 40px;
+  height: var(--logo-size);
+  width: var(--logo-size);
   display: flex;
   align-self: center;
 }
@@ -35,7 +41,7 @@ body {
 .nav__link {
   text-decoration: none;
   text-transform: uppercase;
-  color: black;
+  color: var(--text-color);
   font-size: 12px;
   display: block;
   position: relative;
@@ -44,13 +50,13 @@ body {
 
 .nav__link:hover,
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--background-color);
 }
 
 .nav__link.is-active::after {
   content: "";
   display: block;
-  background-color: #00acdc;
+  background-color: var(--background-color);
   height: 4px;
   width: 100%;
   position: absolute;
