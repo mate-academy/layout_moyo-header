@@ -1,8 +1,10 @@
 body {
   margin: 0;
+
 }
 
 .nav__item {
+  display: block;
   color: var(--nav_item--color);
   text-decoration: none;
   font-family: "Roboto", sans-serif;
@@ -10,13 +12,17 @@ body {
   font-weight: 500;
   text-align: left;
   margin-left: auto;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   text-transform: uppercase;
   position: relative;
   padding-top: 22.5px;
   padding-bottom: 22.5px;
-  line-height: 14px;
   margin-bottom: 0;
+}
+
+a {
+  height: 60px;
+  box-sizing: border-box;
 }
 
 a:hover {
@@ -24,10 +30,13 @@ a:hover {
 }
 
 .header {
+  height: 60px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
+  /* background-color: gray; */
 }
 
 img {
@@ -39,11 +48,14 @@ img {
 }
 
 .nav {
+  height: 60px;
+  padding-top: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 50px;
+  /* background-color: brown; */
 }
 
 .is-active::after {
@@ -65,4 +77,15 @@ img {
 ul {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
+  /* background-color: bisque; */
+}
+
+li {
+  margin-right: 20px;
+}
+
+li:last-child {
+  margin-right: 0;
 }
