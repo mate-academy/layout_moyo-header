@@ -26,15 +26,16 @@ ul {
   align-items: center;
 }
 
-li {
+.nav__item {
   margin-right: 20px;
 }
 
-li:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
-nav a {
+.nav__link,
+a[data-qa="hover"] {
   display: block;
   text-decoration: none;
   color: black;
@@ -44,7 +45,8 @@ nav a {
   padding: 23px 0;
 }
 
-nav a:hover {
+.nav__link:hover,
+a[data-qa="hover"]:hover {
   color: #00acdc;
 }
 
@@ -53,7 +55,7 @@ nav a:hover {
 }
 
 .is-active::after,
-nav a:hover::after {
+.nav__link:hover::after {
   content: "";
   display: block;
   position: absolute;
