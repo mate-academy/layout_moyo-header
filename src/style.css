@@ -12,6 +12,7 @@ body {
   display: flex;
   padding: 0 50px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__image img {
@@ -20,10 +21,8 @@ body {
 }
 
 .nav__list {
-  height: 100%;
   display: flex;
   list-style: none;
-  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -31,7 +30,6 @@ body {
 .nav__list-item {
   position: relative;
   margin-left: 20px;
-  line-height: 12px;
 }
 
 .nav__list-item:first-child {
@@ -39,6 +37,8 @@ body {
 }
 
 .nav__list-link {
+  display: inline-flex;
+  padding: 23px 0;
   font-size: 12px;
   font-weight: 500;
   color: var(--color-black);
@@ -54,7 +54,7 @@ body {
 .is-active::after {
   content: "";
   position: absolute;
-  bottom: -22px;
+  bottom: 0;
   display: block;
   height: 4px;
   width: 100%;
