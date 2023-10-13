@@ -11,14 +11,11 @@ body {
 
 .container {
   display: flex;
+  box-sizing: border-box;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
-}
-
-.logo {
-  margin-top: 10px;
 }
 
 .nav__link {
@@ -45,7 +42,11 @@ body {
   position: relative;
 }
 
-[data-qa="hover"].nav__link {
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+[data-qa="hover"] {
   color: var(--secondarycolor);
 }
 
