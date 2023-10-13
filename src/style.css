@@ -1,19 +1,17 @@
 :root {
   --blue: #00acdc;
-}
-
-* {
-  margin: 0;
+  --size: 40px;
 }
 
 body {
+  margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
 .logo {
   margin-top: 10px;
-  height: 40px;
-  width: 40px;
+  height: var(--size);
+  width: var(--size);
 }
 
 .nav__list {
@@ -21,6 +19,7 @@ body {
   list-style-type: none;
   display: flex;
   padding-left: 0;
+  margin: 0;
 }
 
 .nav__item {
@@ -59,6 +58,10 @@ body {
   padding: 0 50px;
 }
 
+.is-active {
+  color: var(--blue);
+}
+
 .is-active::after {
   content: "";
   display: block;
@@ -67,8 +70,4 @@ body {
   bottom: 0;
   background-color: var(--blue);
   position: absolute;
-}
-
-.nav__link.is-active {
-  color: var(--blue);
 }
