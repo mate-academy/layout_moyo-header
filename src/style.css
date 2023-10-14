@@ -39,7 +39,7 @@ body {
   justify-content: flex-end;
 }
 
-.logo-container a {
+.logo-container .link__inner {
   height: 40px;
   width: 40px;
   align-self: center;
@@ -54,7 +54,7 @@ body {
   font-size: 12px;
 }
 
-.menu-nav li {
+.menu-nav .link {
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -62,11 +62,11 @@ body {
   position: relative;
 }
 
-.menu-nav li:nth-child(n+2) {
+.menu-nav .link:nth-child(n+2) {
   margin-left: 20px;
 }
 
-.menu-nav li > a {
+.menu-nav .link > .link__inner {
   height: 100%;
   line-height: 60px;
   white-space: nowrap;
@@ -78,16 +78,16 @@ body {
   text-transform: uppercase;
 }
 
-.menu-nav li > a:hover {
+.menu-nav .link > .link__inner:hover {
   color: var(--aqua_gradient);
   cursor: pointer;
 }
 
-.menu-nav li a.is-active {
+.menu-nav .link .link__inner.is-active {
   color: var(--aqua_gradient);
 }
 
-.menu-nav li a.is-active::after {
+.menu-nav .link .link__inner.is-active::after {
   content: "";
 
   position: absolute;
