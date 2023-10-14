@@ -1,21 +1,25 @@
-/* stylelint-disable string-quotes */
 @font-face {
-  font-family: 'Roboto';
-  src: url('fonts/Roboto-Medium.ttf') format('woff2');
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Medium.ttf") format("woff2");
   font-weight: 500;
   font-style: normal;
+}
+
+html {
+  --WHITE_COLOR: #fff;
+  --BLACK_COLOR: #000;
+  --AQUA_GRADIENT: #00acdc;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
 }
 
 .header {
   display: flex;
   height: 60px;
-  background-color: #fff;
+  background-color: var(--WHITE_COLOR);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   padding: 0 50px;
   width: 100%;
@@ -41,7 +45,7 @@ body {
   align-self: center;
 }
 
-nav > .menu-nav {
+.navigation > .menu-nav {
   display: flex;
   margin: 0;
   padding: 0;
@@ -66,33 +70,31 @@ nav > .menu-nav {
   height: 100%;
   line-height: 60px;
   white-space: nowrap;
-  color: #000;
-  font-family: 'Roboto', sans-serif;
+  color: var(--BLACK_COLOR);
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-/* .menu-nav li > a[data-qa="hover"] {
-  color: #00acdc;
-} */
-
 .menu-nav li > a:hover {
-  color: #00acdc;
+  color: var(--AQUA_GRADIENT);
   cursor: pointer;
 }
 
 .menu-nav li a.is-active {
-  color: #00acdc;
+  color: var(--AQUA_GRADIENT);
 }
 
 .menu-nav li a.is-active::after {
-  width: 100%;
-  border: 2px solid #00acdc;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  border: 2px solid var(--AQUA_GRADIENT);
   border-radius: 8px;
 }
