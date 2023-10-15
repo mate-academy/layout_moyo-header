@@ -1,3 +1,100 @@
 body {
   margin: 0;
+  padding: 0;
+  --color-active: #00acdc;
+  --color-base: #000;
+  --color-background: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+  justify-content: space-between;
+  background-color: var(--color-background);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.logo {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+nav {
+  display: flex;
+  height: 60px;
+  margin-right: 50px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.marg {
+  margin-right: 20px;
+}
+
+.nav__item {
+  display: flex;
+}
+
+.nav__link {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  color: var(--color-base);
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-active);
+  border-radius: 8px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.nav__link:link {
+  color: var(--color-base);
+}
+
+.nav__link:visited {
+  color: var(--color-base);
+}
+
+.is-active:hover {
+  color: var(--color-active);
+}
+
+.is-active:hover::after {
+  background-color: var(--color-active);
+}
+
+.nav__link:active {
+  color: var(--color-active);
+}
+
+.nav__link[data-qa="hover"]:hover {
+  color: var(--color-active);
+}
+
+#active {
+  color: var(--color-active);
 }
