@@ -1,3 +1,70 @@
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  --activ-color: rgba(0, 172, 220, 1);
+}
+
+header {
+  margin: 0;
+}
+
+.container {
+  margin: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  max-height: 40px;
+}
+
+.nav_list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  padding: 0;
+}
+
+.nav_item {
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_item + .nav_item {
+  margin-left: 20px;
+}
+
+.nav_linck {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+  line-height: 60px;
+  font-size: 12px;
+}
+
+.nav_linck:hover {
+  color: var(--activ-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--activ-color);
+}
+
+.is-active::after {
+  content: "";
+  background-color: var(--activ-color);
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
 }
