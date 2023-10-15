@@ -14,10 +14,8 @@ body {
   padding: 0 50px;
 }
 
-.nav__logo {
+.logo {
   height: 40px;
-  object-fit: contain;
-  align-self: center;
 }
 
 .nav__item {
@@ -36,8 +34,7 @@ body {
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
-  display: flex;
-  align-items: center;
+  display: block;
   color: #000;
   padding: 23px 0;
   text-decoration: none;
@@ -47,13 +44,17 @@ body {
   margin-right: 20px;
 }
 
+:root {
+  --mainColor: #00acdc;
+}
+
 .is-active {
-  color: #00acdc;
+  color: var(--mainColor);
   position: relative;
 }
 
 .is-active::after {
-  background-color: #00acdc;
+  background-color: var(--mainColor);
   content: "";
   position: absolute;
   bottom: 0;
@@ -64,5 +65,5 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--mainColor);
 }
