@@ -4,27 +4,16 @@ html {
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-}
-
-body {
-  background-color: #000;
+  --main-color: #00acdc;
 }
 
 .header {
-  background-color: rgba(255, 255, 255, 1);
+  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0;
   box-shadow: 0 2 rgba(0, 0, 0, 0.05);
-}
-
-.nav {
-  margin-right: 50px;
-}
-
-.logo {
-  margin-left: 50px;
 }
 
 .logo__img {
@@ -40,7 +29,7 @@ body {
 }
 
 .nav__link.last {
-  margin-right: 0 !important;
+  margin-right: 0;
 }
 
 .nav__link {
@@ -55,11 +44,11 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .nav__link.is-active::after {
@@ -70,12 +59,8 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--main-color);
   border-radius: 8px;
   margin: 0;
   padding: 0;
 }
-
-/* #pc {
-  color: #00acdc;
-} */
