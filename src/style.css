@@ -1,3 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  --active-link-color: #00acdc;
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav__li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__li:first-child {
+  margin-left: 0;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+}
+
+.link:hover {
+  color: var(--active-link-color);
+}
+
+.nav__li:last-child {
+  margin-right: 0;
+}
+
+.link-logo {
+  align-self: center;
+  justify-content: center;
+  height: 40px;
+  padding: 10px 0;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  max-height: 60px;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.is-active {
+  color: var(--active-link-color);
+
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  left: 0;
+  right: 0;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--active-link-color);
+  border-radius: 8px;
 }
