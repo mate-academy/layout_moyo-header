@@ -1,8 +1,11 @@
+:root {
+  --link-color: #00acdc;
+  --header-links-height: 60px;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  --link-color: #00acdc;
-  --header-links-height: 60px;
 }
 
 .header {
@@ -57,11 +60,13 @@ body {
 
 .nav__link.is-active {
   color: var(--link-color);
+  position: relative;
 }
 
 .is-active::after {
-  position: relative;
-  top: -4px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   content: "";
   display: block;
   background-color: var(--link-color);
