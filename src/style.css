@@ -16,7 +16,8 @@ body {
 }
 
 .moyo {
-  margin-top: 10px;
+  display: flex;
+  align-items: center;
   width: 40px;
   height: 40px;
   flex-shrink: 0;
@@ -27,12 +28,23 @@ body {
   display: flex;
   background-color: #fff;
   text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
-  padding: 22px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
   text-decoration: none;
   color: black;
+  position: relative;
+  padding: 0 10px;
+}
+
+a:not(:last-child) {
+  padding-right: 0;
 }
 
 ul {
@@ -45,10 +57,9 @@ ul {
 li {
   box-sizing: border-box;
   font-size: 12px;
-  margin: 0 10px;
-  padding-top: 23px;
   align-items: center;
   list-style-type: none;
+  position: relative;
 }
 
 a:hover {
@@ -60,16 +71,14 @@ a:hover {
 
 .is-active::after {
   content: "";
+  width: 37px;
   height: 4px;
-  background-color: var(--color-blue);
-  color: var(--color-blue);
-  /* border-bottom: 2px solid var(--color-blue); */
-  margin-bottom: 0;
-  cursor: pointer;
+  display: block;
   position: absolute;
   bottom: 0;
-  left: 355px;
-  width: 40px;
+  left: 10px;
+  border-radius: 8px;
+  background-color: var(--color-blue);
 }
 
 .is-active {
@@ -79,7 +88,7 @@ a:hover {
 .container {
   display: flex;
   justify-content: space-between;
-  /* padding-inline: 50px; */
-  padding: 22px 50px;
   position: relative;
+  align-items: center;
+  padding: 0 50px;
 }
