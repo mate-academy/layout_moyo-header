@@ -1,86 +1,83 @@
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
-.container {
+.header {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: #fff;
-  padding: 10px 50px;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
-.container:hover {
+/* .header:hover {
   border: 2px solid #00acdc;
+} */
+
+.img {
+  height: 40px;
+  width: 40px;
+  display: block;
 }
 
-nav a {
+.nav {
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.header__container-img {
+  height: 40px;
+  width: 40px;
+  color: #000;
+  display: block;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
   text-decoration: none;
+  text-transform: uppercase;
   color: #000;
 }
 
-nav a:hover {
+.nav__link:hover {
+  color: #00acdc ;
+}
+
+.nav__link.is-active {
   color: #00acdc;
 }
 
-li {
-  list-style-type: none;
-}
-
-.header_nav {
-  margin-top: 3px;
-  color: black;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.img {
-  display: flex;
-  align-items: center;
-}
-
-.img:hover {
-  border: 2px solid #00acdc;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-}
-
-.header_nav:hover {
-  text-decoration: underline 2px #00acdc;
-  color: #00acdc;
-}
-
-nav a.is-active::after {
+.nav__link.is-active::after {
   content: "";
-  display: flex;
-  align-self: end;
-  width: auto;
-  height: 0;
-  color: #00acdc;
-  bottom: -2px;
+  position: absolute;
+  bottom: 0;
   left: 0;
-  text-decoration: underline 2px #00acdc;
-  border: 2px solid #00acdc;
-  margin-top: 50px;
-}
-
-.item-8 {
-  padding-right: 0;
-}
-
-[data-qa="hover"] {
-  color: #00acdc;
-}
-
-nav a.is-active {
-  color: #00acdc;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
 }
