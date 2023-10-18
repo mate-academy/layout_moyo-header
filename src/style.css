@@ -1,5 +1,15 @@
+ul,
+li,
 body {
   margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
   --header-high: 60px;
   --link_highlight: #00acdc;
   font-family: "Roboto", sans-serif;
@@ -12,7 +22,7 @@ body {
   background-color: gray;
 }
 
-header {
+.header {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -26,7 +36,7 @@ header {
 
 }
 
-.logo__image {
+.logo {
   vertical-align: middle;
 }
 
@@ -39,8 +49,23 @@ header {
   margin-right: 50px;
 }
 
-.nav__link {
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
   margin: 0 10px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
   display: inline-block;
   text-decoration: none;
   color: #000;
@@ -62,14 +87,6 @@ header {
   display: block;
   position: relative;
   top: -4px;
-}
-
-.first-link {
-  margin-left: 0;
-}
-
-.last-link {
-  margin-right: 0;
 }
 
 .nav-link[data-qa="hover"] {
