@@ -29,7 +29,6 @@ body {
 }
 
 .nav__link {
-  margin-left: 20px;
   height: 60px;
   line-height: 60px;
   font-family: "Roboto", sans-serif;
@@ -40,7 +39,7 @@ body {
   font-size: 12px;
 }
 
-.is__active::after {
+.is-active::after {
   content: "";
   height: 4px;
   border-radius: 8px;
@@ -54,8 +53,16 @@ body {
   color: var(--color-link-active);
 }
 
-.is__active {
+.is-active {
   color: var(--color-link-active);
   border-radius: 8px;
   position: relative;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
 }
