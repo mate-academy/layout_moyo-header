@@ -7,6 +7,7 @@
 html {
   --hover-color: #00acdc;
   --menu-height: 60px;
+  --bar-height: 4px;
 }
 
 body {
@@ -17,8 +18,6 @@ body {
 }
 
 .header {
-  background-color: #fff;
-  align-items: center;
   position: relative;
 }
 
@@ -31,6 +30,7 @@ body {
 
 .nav {
   padding-right: 50px;
+  background-color: #fff;
 }
 
 .nav__menu {
@@ -67,14 +67,15 @@ body {
 
 .is-active {
   position: relative;
+  color: var(--hover-color);
 }
 
 .is-active::after {
   content: "";
   display: block;
   position: absolute;
-  height: 4px;
-  top: calc(var(--menu-height) - 4px);
+  height: var(--bar-height);
+  top: calc(var(--menu-height) - var(--bar-height));
   left: 0;
   border-radius: 8px;
   width: 100%;
