@@ -3,6 +3,7 @@ body {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-size: 12px;
+  --color-blue: #00acdc;
 }
 
 a {
@@ -38,18 +39,18 @@ a {
 }
 
 .menu__item:hover {
-  color: #00acdc;
+  color: var(--color-blue);
 }
 
-.item001 {
-  color: #00acdc;
+.is-active {
+  color: var(--color-blue);
   margin: 0;
 }
 
 .is-active::after {
   content: "";
   display: block;
-  border: #00acdc 2px solid;
+  border: var(--color-blue) 2px solid;
   border-radius: 8px;
   position: relative;
   bottom: 4px;
