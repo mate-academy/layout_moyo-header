@@ -1,41 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
-html {
-  --link-active-color: #00acdc;
-}
-
 * {
   margin: 0;
   padding: 0;
+}
+
+html {
+  --link-active-color: #00acdc;
   font-family: "Roboto", sans-serif;
 }
 
-header {
+.header {
   display: flex;
   background-color: #fff;
+  justify-content: space-between;
 }
 
 .logo {
   margin: 10px 0 10px 50px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
+  height: 40px;
 }
 
 .nav_list {
   list-style: none;
+
   display: flex;
+  justify-content: flex-end;
   margin-right: 50px;
 }
 
 .nav_item {
   margin: 0 10px;
+  position: relative;
 }
 
 .nav_link {
-  display: block;
   padding: auto;
   text-align: center;
 
@@ -43,6 +42,8 @@ nav {
   text-decoration: none;
   color: #000;
   font-size: 12px;
+  line-height: 60px;
+
 }
 
 .is-active,
@@ -51,5 +52,12 @@ nav {
 }
 
 .is-active::after {
-  /* something I do not understand how to do*/
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--link-active-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
 }
