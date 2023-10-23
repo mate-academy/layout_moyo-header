@@ -1,9 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+html {
+  --link-active-color: #00acdc;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
 
+header {
+  display: flex;
+  background-color: #fff;
+}
+
+.logo {
+  margin: 10px 0 10px 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav_list {
+  list-style: none;
+  display: flex;
+  margin-right: 50px;
+}
+
 .nav_item {
+  margin: 0 10px;
+}
+
+.nav_link {
+  display: block;
+  padding: auto;
+  text-align: center;
+
   text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+}
+
+.is-active,
+.nav_link:hover {
+  color: var(--link-active-color);
+}
+
+.is-active::after {
+  /* something I do not understand how to do*/
 }
