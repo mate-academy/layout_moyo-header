@@ -1,3 +1,66 @@
+nav {
+  --mainColor: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.box-ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.box {
+  height: 100%;
+  margin-left: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.box-1 {
+  margin: 0;
+}
+
+.is-active:hover {
+  color: var(--mainColor);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.box:hover ::after {
+  content: "";
+  position: absolute;
+  border-radius: 8px;
+  background: #00acdc;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
