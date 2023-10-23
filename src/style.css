@@ -1,17 +1,11 @@
-/* stylelint-disable property-no-unknown */
-/* stylelint-disable no-descending-specificity */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-head {
-  display: none;
-}
-
-body {
-  display: block;
+html {
+  --accent-color: #00acdc;
 }
 
 .header {
@@ -35,14 +29,12 @@ body {
 .logo__image {
   height: 100%;
   width: 100%;
-  overflow-clip-margin: content-box;
   overflow: clip;
   cursor: pointer;
   flex-shrink: 0;
-  background: url(images/logo.png), lightgray 50% / cover no-repeat;
 }
 
-nav {
+.nav {
   display: block;
   height: 60px;
 }
@@ -57,31 +49,16 @@ nav {
   margin-inline-end: 0;
 }
 
-.nav__item:first-child {
-  margin-left: 0;
-}
-
 .nav__item {
   margin-left: 20px;
 }
 
-ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 50px;
-}
-
-li {
-  display: list-item;
-  text-align: -webkit-match-parent;
+.nav__item:first-child {
+  margin-left: 0;
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--accent-color);
 }
 
 .nav__link {
@@ -101,7 +78,7 @@ li {
 }
 
 .nav__link.link_lc {
-  color: #00acdc;
+  color: var(--accent-color);
 }
 
 .nav__link.is-active::after {
@@ -112,9 +89,9 @@ li {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background: var(--accent-color);
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--accent-color);
 }
