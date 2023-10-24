@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   --header-height: 60px;
+  --hover-color: #00acdc;
 }
 
 .header {
@@ -49,16 +50,19 @@ body {
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active {
   margin: 0;
+  color: var(--hover-color);
 }
 
 .is-active::after {
   display: block;
   content: "";
-  border-bottom: 3px solid #00acdc;
+  position: relative;
+  height: 4px;
+  background-color: var(--hover-color);
   border-radius: 8px;
 }
