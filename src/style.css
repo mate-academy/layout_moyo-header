@@ -1,3 +1,87 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --accent-color: #00acdc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: 60px;
+}
+
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.logo__image {
+  height: 100%;
+  width: 100%;
+  overflow: clip;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav {
+  display: block;
+  height: 60px;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+  list-style: none;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link.is-active {
+  color: var(--accent-color);
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent-color);
+}
+
+.nav__link:hover {
+  color: var(--accent-color);
 }
