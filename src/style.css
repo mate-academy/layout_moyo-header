@@ -1,10 +1,12 @@
 html {
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+
   --header-height: 60px;
   --hover-color: #00acdc;
 }
@@ -15,17 +17,14 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
-  width: 100%;
-}
-
-.nav {
-  text-align: center;
+  margin: 0;
 }
 
 .nav_list {
   list-style: none;
-  list-style-type: none;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
@@ -37,7 +36,9 @@ body {
 }
 
 .nav_link {
-  display: inline-block;
+  position: relative;
+  display: block;
+  align-items: center;
   font-size: 12px;
   text-decoration: none;
   margin-left: 20px;
@@ -59,10 +60,12 @@ body {
 }
 
 .is-active::after {
-  display: block;
   content: "";
-  position: relative;
   height: 4px;
   background-color: var(--hover-color);
   border-radius: 8px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
