@@ -1,3 +1,7 @@
+html {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
   text-transform: uppercase;
@@ -9,18 +13,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #fff;
   width: 100% - 100px;
   padding: 0 50px;
 }
 
 .logo__img {
   display: block;
-}
-
-.nav {
-  text-align: center;
-  display: inline-block;
 }
 
 .nav__link {
@@ -33,7 +32,6 @@ header {
 .nav__list {
   display: flex;
   list-style: none;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
@@ -43,20 +41,20 @@ header {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active::after {
   display: block;
   content: "";
-  position: absolute;
-  background-color: #00acdc;
+  position: relative;
+  background-color: var(--blue);
   height: 4px;
-  width: 37px;
-  top: 56px;
+  width: 100%;
+  bottom: 0;
   border-radius: 2px;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
