@@ -1,5 +1,7 @@
 body {
   --main-color: #00acdc;
+  --background-color: #fff;
+  --text-secondary-color: #000;
 
   font-family: "Roboto", sans-serif;
   font-size: 12px;
@@ -12,7 +14,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  background: #fff;
+  background: var(--background-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -38,7 +40,7 @@ body {
 }
 
 .nav__link {
-  color: #000;
+  color: var(--text-secondary-color);
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
@@ -47,8 +49,8 @@ body {
   line-height: 60px;
 }
 
-.nav__list li a:hover,
-.nav__link.is-active {
+.nav__link:hover,
+.is-active {
   color: var(--main-color);
 }
 
