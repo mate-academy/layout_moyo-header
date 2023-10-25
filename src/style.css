@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: white;
   padding: 0 50px;
   width: 100% - 100px;
 }
@@ -23,7 +23,6 @@ body {
 .nav {
   display: inline-block;
   text-align: center;
-
 }
 
 .nav__link {
@@ -31,7 +30,10 @@ body {
   display: inline-block;
   color: black;
   line-height: 60px;
-  margin: 0;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__list {
@@ -41,7 +43,7 @@ body {
   padding: 0;
 }
 
-a:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
@@ -56,18 +58,6 @@ a:hover {
   top: 56px;
 }
 
-.nav__link__margin {
-  margin: 0 10px;
-}
-
-.nav__link__margin__apple {
-  margin-right: 10px;
-}
-
-.nav__link__margin__video {
-  margin-left: 10px;
-}
-
-.apple__link__color {
+.is-active {
   color: #00acdc;
 }
