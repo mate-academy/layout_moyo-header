@@ -5,8 +5,8 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
-  align-items: center;
+  width: 100%;
+  padding: 0 50px;
 }
 
 .logo {
@@ -14,45 +14,42 @@ header {
   width: 40px;
   height: 40px;
   padding: 10px 0;
-  margin-left: 50px;
 }
 
-.nav__link {
+.nav__list {
   display: flex;
   white-space: nowrap;
   height: 60px;
   margin: 0 auto;
-}
-
-.nav__item {
-  display: flex;
-  align-items: center;
-  padding: 10 20px;
-  margin: 0;
+  list-style: none;
   text-align: center;
+  align-items: center;
 }
 
 .links {
-  display: block;
+  display: inline-block;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
-  margin: 0 10px;
+  margin-right: 10px;
   width: auto;
   align-items: center;
   text-decoration: none;
   color: #000;
 }
 
+.nav__item {
+  display: block;
+}
+
 .nav__item:first-child {
   margin-left: 0;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
-  padding-right: 40px;
+.nav__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .links:hover {
@@ -66,9 +63,11 @@ header {
 
 .is-active::after {
   content: "";
-  position: absolute;
+  display: block;
+  position: relative;
   left: 0;
-  bottom: -18.5px;
+  bottom: 0;
+  top: -4px;
   width: 100%;
   height: 4px;
   border-radius: 8px;
