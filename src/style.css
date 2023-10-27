@@ -2,14 +2,13 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   --active-link-color: #00acdc;
+  --text-color: #000;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  box-sizing: border-box;
 }
 
 .logo {
@@ -18,16 +17,19 @@ body {
   margin-left: 50px;
 }
 
+.nav__bar {
+  margin-right: 50px;
+}
+
 .nav__list {
   display: flex;
   font-size: 12px;
   font-weight: 500;
-  margin-right: 50px;
 }
 
 .list__item {
-  text-transform: uppercase;
   list-style: none;
+  position: relative;
 }
 
 .list__item:not(:last-child) {
@@ -35,10 +37,11 @@ body {
 }
 
 .nav__link {
+  display: block;
   text-decoration: none;
-  color: #000;
+  color: var(--text-color);
+  text-transform: uppercase;
   line-height: 60px;
-  position: relative;
 }
 
 .is-active,
@@ -48,10 +51,10 @@ body {
 
 .is-active:after {
   position: absolute;
+  content: "";
   bottom: 0;
   left: 0;
   width: 100%;
-  content: "";
   height: 4px;
   border-radius: 8px;
   background-color: var(--active-link-color);
