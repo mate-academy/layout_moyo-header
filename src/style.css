@@ -11,10 +11,10 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: silver;
-  font-weight: 500;
+
 }
 
-header {
+.header {
   width: 100%;
   height: 60px;
   font-size: 12px;
@@ -22,8 +22,8 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  padding: 20px;
-  border: 3px solid blue;
+
+  border: 3px solid none;
   box-shadow: 0 2 4 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -33,9 +33,10 @@ header {
 
 nav {
   text-align: center;
+  font-weight: 500;
 }
 
-ul {
+.list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -46,15 +47,18 @@ li {
   margin-right: 20px;
 }
 
-a {
+.nav__item a {
   text-decoration: none;
   color: #000;
   position: relative;
   transition: color 0.3s;
-
 }
 
-.is-active:hover {
+.nav__item:hover a {
+  color: var(--blue-color);
+}
+
+.nav__item:first-child a {
   color: var(--blue-color);
 }
 
@@ -74,6 +78,14 @@ a {
   opacity: 1;
 }
 
-a[data-qa="hover"]:hover {
-  color: blue;
+.nav__item:first-child a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--blue-color);
+  opacity: 1;
+  transition: width 0.3s, opacity 0.3s;
+  bottom: -22px;
+  left: 0;
 }
