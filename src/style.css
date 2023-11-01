@@ -11,6 +11,7 @@ html {
 body {
   margin: 0;
   background-color: #fff;
+  --hover-color: #00acdc;
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -39,7 +40,6 @@ body {
   display: flex;
   align-content: stretch;
   flex-direction: row;
-  /* margin-right: 50px; */
 }
 
 .nav__item {
@@ -47,17 +47,16 @@ body {
 }
 
 .nav__link {
-  /* margin-right: 20px; */
   color: black;
   text-decoration: none;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--hover-color);
   text-decoration: none;
 }
 
@@ -67,7 +66,7 @@ body {
   height: 4px;
   content: "";
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--hover-color);
   top: 20px;
   display: block;
 }
