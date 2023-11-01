@@ -11,7 +11,7 @@ body {
 .header {
   display: flex;
   align-items: center;
-  margin-left: 50px;
+  padding: 0 50px;
   justify-content: space-between;
 }
 
@@ -30,10 +30,6 @@ body {
   list-style: none;
 }
 
-.nav {
-  display: inline-block;
-}
-
 .nav__item:not(:last-child) {
   margin-right: 20px;
 }
@@ -45,15 +41,13 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--black);
   font-size: 12px;
+  line-height: 14px;
   font-weight: 500;
   text-transform: uppercase;
   padding: 23px 0;
 }
 
-.nav__link:hover {
-  color: var(--blue);
-}
-
+.nav__link:hover,
 .is-active::after {
   content: "";
   position: absolute;
@@ -61,6 +55,6 @@ body {
   bottom: 0;
   width: 100%;
   height: 4px;
-  background: #00acdc;
+  color: #00acdc;
   border-radius: 8px;
 }
