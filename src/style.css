@@ -5,11 +5,11 @@ html {
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   background-color: aquamarine;
 }
 
-header {
+.moyo__header {
   background-color: white;
   padding: 0 50px;
   display: flex;
@@ -41,32 +41,32 @@ ul {
   font-weight: 500;
 }
 
-ul a.is-active {
+.nav__list .is-active {
   color: var(--main-color);
   position: relative;
   text-decoration: none;
   display: block;
 }
 
-li {
+.nav__item {
   margin-left: 20px;
 
 }
 
-li:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-li:hover {
+.nav__item:hover {
   color: var(--main-color);
 }
 
-ul .is-active::after {
+.nav__list .is-active::after {
   position: absolute;
   content: "";
   background-color: var(--main-color);
   height: 4px;
-  width: 37px;
+  width: 100%;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
