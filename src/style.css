@@ -14,43 +14,48 @@ body {
   --hover-color: #00acdc;
 }
 
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
-    height: 60px;
-  }
-}
-
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  height: 60px;
 }
 
-.header__logo {
+.header__logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
   width: 40px;
 }
 
+.header__logo {
+  height: 100%;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 0;
+}
+
 .nav__list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  align-content: stretch;
-  flex-direction: row;
+  align-content: center;
 }
 
-.nav__item {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
 .nav__link {
+  display: inline-block;
+  padding: 23px 0;
   color: black;
   text-decoration: none;
 }
@@ -60,19 +65,18 @@ body {
 }
 
 .is-active {
+  position: relative;
   color: var(--hover-color);
   text-decoration: none;
 }
 
 .is-active::after {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 4px;
   content: "";
   border-radius: 8px;
   background-color: var(--hover-color);
-  top: 20px;
-  display: block;
+  bottom: 0;
+  left: 0;
 }
-
-/* stylelint-disable-next-line block-no-empty */
