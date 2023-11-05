@@ -3,10 +3,12 @@
   margin: 0;
 }
 
-body {
+html {
   font-family: "Roboto", sans-serif;
+}
 
-  --hover-color: #00acdc;
+:root {
+  --primary-blue-color: #00acdc;
 }
 
 .header {
@@ -50,12 +52,12 @@ body {
 
 .nav__link:hover,
 .nav__link:active {
-  color: var(--hover-color);
+  color: var(--primary-blue-color);
 }
 
 .nav__link.is-active {
   position: relative;
-  color: var(--hover-color);
+  color: var(--primary-blue-color);
 }
 
 .is-active::after {
@@ -63,7 +65,7 @@ body {
   display: block;
   height: 4px;
   width: 100%;
-  background-color: var(--hover-color);
+  background-color: var(--primary-blue-color);
   border-radius: 8px;
   position: absolute;
   bottom: 0;
