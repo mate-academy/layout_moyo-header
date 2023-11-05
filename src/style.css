@@ -1,3 +1,7 @@
+:root {
+  --active-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -50,19 +54,19 @@ ul {
 }
 
 .list__link:hover {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .is-active::after {
   position: absolute;
   content: "";
   border-radius: 8px;
-  border: 2px solid #00acdc;
+  border: 2px solid var(--active-color);
   width: 100%;
   left: -2px;
   bottom: 0;
