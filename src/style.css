@@ -1,17 +1,28 @@
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+
 }
-.header{
+
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
 }
-
-.nav {
-  display: block;
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .nav {
+    margin-left: 419px;
+    display: block;
+  }
 }
+@media screen and (max-width: 1024px) {
+  .nav {
+    margin-left: 243px;
+    display: block;
+  }
+}
+
 .nav__list {
   display: flex;
   justify-content: flex-end;
@@ -20,8 +31,8 @@ body {
   text-decoration: none;
 }
 
-.nav__item  {
-  font-size: 20px;
+.nav__item {
+  font-size: 12px;
   margin: 5px 14px;
   list-style: none;
   font-weight: bold;
@@ -35,24 +46,24 @@ body {
   line-height: 60px;
 }
 
-.nav__item :hover{
-  color: blue;
-  border-bottom: 5px solid blue;
-  border-radius: 2px;
-
-
+.is-active :hover {
+  color: #00acdc;
+  border-bottom: 5px solid #00acdc;
+  border-radius: 5px;
 }
 
-.LogoM{
-  margin-left: 70px;
-  margin-top: 5px;
-  width: 60px;
+.data-qa {
+  display: block;
+  color: #00acdc;
+  text-decoration: none;
   height: 60px;
-
+  line-height: 60px;
 }
 
-
-
-.example {
-  margin-top: 500px;
+.LogoM {
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
 }
