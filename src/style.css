@@ -1,3 +1,69 @@
+html {
+  --color-nav-selected: #00acdc;
+  --header-height: 60px;
+}
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  align-content: center;
+  position: relative;
+  height: var(--header-height);
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+  line-height: normal;
+  padding-right: 40px;
+  color: #000;
+  background-color: #fff;
+}
+
+.logo {
+  position: absolute;
+  left: 50px;
+}
+
+.nav {
+  display: flex;
+  height: var(--header-height);
+  flex-direction: row;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.laptops {
+  color: var(--color-nav-selected);
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #000;
+  margin: 10px;
+  padding: 23px 0;
+}
+
+.nav__link:hover {
+  color: var(--color-nav-selected);
+}
+
+.is-active {
+  color: var(--color-nav-selected);
+}
+
+.is-active::after {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  content: "";
+  height: 4px;
+  width: 37px;
+  border-radius: 8px;
+  background-color: var(--color-nav-selected);
 }
