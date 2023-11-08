@@ -1,3 +1,73 @@
 body {
   margin: 0;
+  --headerItemColor: #00acdc;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  height: 60px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+}
+
+.Apple {
+  color: var(--headerItemColor);
+}
+
+.list_item {
+  margin: 0 10px;
+  position: relative;
+}
+
+.list_item:first-child {
+  margin: 0 10px 0 0;
+}
+
+.list_item:last-child {
+  margin: 0 0 0 10px;
+}
+
+.nav_list :nth-child(4) :hover {
+  color: var(--headerItemColor);
+}
+
+.is-active::after {
+  content: "";
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--headerItemColor);
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
