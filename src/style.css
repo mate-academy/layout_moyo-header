@@ -1,3 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+html {
+  /* stylelint-disable-next-line string-quotes */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
 body {
+  margin: auto;
+  /* padding: 0; */
+  background-color: #e2e2e2;
+}
+
+.header {
+  /* padding: 0; */
+  /* padding-bottom: 23px;
+  padding-top: 22px; */
+  width: 100%;
+  background-color: #fff;
+  /* border: 2px solid transparent; */
+  /* height: 60px; */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* height: 60px; */
+}
+
+.header:hover {
+  border-color: #00acdc;
+}
+
+.logo {
+  margin-top: 10px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
   margin: 0;
+  padding: 0;
+  /* height: 100%; */
+}
+
+.nav__link {
+  /* margin: 0;
+  padding: 0; */
+  height: 35px;
+  /* height: 100%; */
+  display: block;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  padding-top: 23px;
+  font-size: 12px;
+}
+
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.container:last-child {
+  margin-right: 50px;
+}
+
+.container:first-child {
+  margin-left: 50px;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  content: "";
+  border-radius: 8px;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+}
+
+.nav__list a:hover {
+  color: #00acdc;
 }
