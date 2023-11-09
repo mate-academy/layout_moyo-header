@@ -1,6 +1,6 @@
+
 :root {
   --color-nav-selected: #00acdc;
-  --header-height: 60px;
 }
 
 body {
@@ -10,39 +10,25 @@ body {
 
 .header {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  align-content: center;
-  height: var(--header-height);
+  justify-content: space-between;
+  padding: 0 50px;
+
+  line-height: 15px;
   font-weight: 500;
   font-size: 12px;
-  font-style: normal;
-  line-height: normal;
-  padding-right: 50px;
-  color: #000;
-  background-color: #fff;
 }
 
 .logo {
-  position: absolute;
-  left: 50px;
-}
-
-.nav {
   display: flex;
-  height: var(--header-height);
-  align-items: center;
 }
 
 .nav__list {
   display: flex;
   padding: 0;
-  list-style: none;
-}
+  margin: 0;
 
-.nav__item {
-  position: relative;
+  list-style: none;
 }
 
 .nav__item:not(:last-child) {
@@ -50,21 +36,24 @@ body {
 }
 
 .nav__link {
+  display: block;
+  padding: 22.5px 0;
+
   text-decoration: none;
-  color: #000;
-  padding: 23px 0;
   text-transform: uppercase;
+  color: rgb(0, 0, 0);
 }
 
 .nav__link:hover,
 .is-active {
+  position: relative;
   color: var(--color-nav-selected);
 }
 
 .is-active::after {
-  display: block;
   position: absolute;
-  margin-top: 18.5px;
+  left: 0;
+  bottom: 0;
   content: "";
   height: 4px;
   width: 100%;
