@@ -1,3 +1,72 @@
+html {
+  --linkcolor: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+header {
+  display: flex;
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  margin-left: 50px;
+  width: 40px;
+  height: 40px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-right: 50px;
+}
+
+.link {
+  line-height: 60px;
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+.link:hover {
+  color: var(--linkcolor);
+}
+
+.box {
+  margin-right: 20px;
+  position: relative;
+}
+
+.colorlink {
+  color: var(--linkcolor);
+}
+
+:hover {
+  color: var(--linkcolor);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: var(--linkcolor);
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+}
+
+.last {
+  margin-right: 0;
 }
