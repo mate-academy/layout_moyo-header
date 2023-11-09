@@ -14,13 +14,12 @@ body {
   align-items: center;
   justify-content: flex-end;
   align-content: center;
-  position: relative;
   height: var(--header-height);
   font-weight: 500;
   font-size: 12px;
   font-style: normal;
   line-height: normal;
-  padding-right: 40px;
+  padding-right: 50px;
   color: #000;
   background-color: #fff;
 }
@@ -33,37 +32,42 @@ body {
 .nav {
   display: flex;
   height: var(--header-height);
-  flex-direction: row;
   align-items: center;
-  text-transform: uppercase;
 }
 
-.laptops {
-  color: var(--color-nav-selected);
+.nav__list {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
   text-decoration: none;
   color: #000;
-  margin: 10px;
   padding: 23px 0;
+  text-transform: uppercase;
 }
 
-.nav__link:hover {
-  color: var(--color-nav-selected);
-}
-
+.nav__link:hover,
 .is-active {
   color: var(--color-nav-selected);
 }
 
 .is-active::after {
-  display: flex;
+  display: block;
   position: absolute;
-  bottom: 0;
+  margin-top: 18.5px;
   content: "";
   height: 4px;
-  width: 37px;
+  width: 100%;
   border-radius: 8px;
   background-color: var(--color-nav-selected);
 }
