@@ -15,6 +15,7 @@ body {
 }
 
 .logo {
+  display: block;
   padding-top: 2px;
 }
 
@@ -26,17 +27,13 @@ body {
   align-items: center;
 }
 
-.nav__item {
+.nav__item:not(:last-child) {
   margin-right: 20px;
-  position: relative;
-}
-
-.nav__item:last-child {
-  margin-right: 0;
 }
 
 .nav__link,
 a[data-qa="hover"] {
+  position: relative;
   display: block;
   text-decoration: none;
   color: black;
@@ -46,12 +43,9 @@ a[data-qa="hover"] {
   padding: 23px 0;
 }
 
+.is-active,
 .nav__link:hover,
 a[data-qa="hover"]:hover {
-  color: #00acdc;
-}
-
-.is-active {
   color: #00acdc;
 }
 
