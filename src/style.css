@@ -5,14 +5,21 @@ html {
   font-weight: 500;
 }
 
+:root {
+  --blue-color: rgba(0, 172, 220, 1);
+  --wite-color: rgba(255, 255, 255, 1);
+  --main-b-color: rgb(213, 211, 211);
+  --black-t-color: #000;
+}
+
 body {
   margin: auto;
-  background-color: rgb(213, 211, 211);
+  background-color: var(--main-b-color);
 }
 
 .header {
   width: 100%;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--wite-color);
 }
 
 .container {
@@ -35,7 +42,7 @@ body {
   height: 35px;
   display: block;
   text-decoration: none;
-  color: #000;
+  color: var(--black-t-color);
   text-transform: uppercase;
   padding-top: 23px;
   font-size: 12px;
@@ -58,7 +65,7 @@ body {
 }
 
 .is-active {
-  color: rgba(0, 172, 220, 1);
+  color: var(--blue-color);
   position: relative;
 }
 
@@ -70,9 +77,9 @@ body {
   border-radius: 8px;
   width: 100%;
   height: 4px;
-  background-color: rgba(0, 172, 220, 1);
+  background-color: var(--blue-color);
 }
 
 .nav__list a:hover {
-  color: rgba(0, 172, 220, 1);
+  color: var(--blue-color);
 }
