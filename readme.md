@@ -37,5 +37,5 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [x] CSS is used to show all letters in Uppercase (don't type them in HTML)
 - [x] Logo is an image wrapped with a link
 - [x] **CSS Variable** is used for a blue color
-- [х] Pseudo-element is used for a blue line below the active link
-- [х] Code follows all the [Code Style Rules ❗️](./checklist.md)
+- [x] Pseudo-element is used for a blue line below the active link
+- [x] Code follows all the [Code Style Rules ❗️](./checklist.md)
