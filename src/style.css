@@ -1,3 +1,48 @@
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f3f5;
+  color: #070000;
+  padding: 20px;
+}
+
+.logo img {
+  width: 70px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #050505;
+  margin: 0 20px;
+  position: relative;
+}
+
+nav a:hover {
+  color: #66BFFF;
+}
+
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #66BFFF;
+}
+
+
