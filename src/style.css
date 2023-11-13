@@ -1,3 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  align-items: center;
+  border: none;
+}
+
+a.link {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.img {
+  height: 40px;
+  width: 40px;
+  background: url(images/logo.png), lightgray 50% / cover no-repeat;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-left: 20px;
+}
+
+a.is-active {
+  color: #00acdc;
+}
+
+.is-active {
+  position: relative;
+}
+
+.link:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: "";
+  box-sizing: border-box;
+  display: block;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 8px;
+  background: #00acdc;
 }
