@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Roboto:wght@400;500;700&display=swap");
 
+html {
+  font-family: Roboto, Arial, sans-serif;
+}
+
 body {
   margin: 0;
   --blue-color: #00acdc;
@@ -7,10 +11,13 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
+header {
+  padding-left: 50px;
+  box-sizing: border-box;
+}
+
 .nav {
-  margin-left: 50px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   height: 60px;
   justify-content: space-between;
@@ -20,10 +27,17 @@ body {
   height: 40px;
 }
 
+.nav__list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin-right: 50px;
+  height: 60px;
+}
+
 .nav__list .menu {
   text-decoration: none;
   color: #000;
-  font-family: Roboto, Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -33,14 +47,6 @@ body {
 
 .menu:hover {
   color: var(--blue-color);
-}
-
-.nav__list {
-  display: flex;
-  list-style: none;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-right: 50px;
 }
 
 .nav__list .nav__item:not(:last-child) {
