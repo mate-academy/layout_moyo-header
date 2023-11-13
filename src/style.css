@@ -1,3 +1,85 @@
-body {
-  margin: 0;
+/* Styles go here */
+* {
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.logo {
+  height: 40px;
+  margin: 10px 0 10px 50px;
+}
+
+nav.list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 50px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding-inline-start: 0;
+}
+
+li {
+  padding-left: 20px;
+}
+
+li.is-active {
+  padding-left: 0;
+}
+
+li a {
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.nav-item a {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+.is-active {
+  color: #00acdc;
+  margin-left: 0;
+}
+
+a.is-active,
+a.nav-link {
+  padding: 1.4rem 0;
+}
+
+a.is-active:hover,
+a.nav-link:hover {
+  color: #00acdc;
+}
+
+li.is-active::after {
+  content: "";
+  background-color: #00acdc;
+  height: 4px;
+  width: 37px;
+  border-radius: 8px;
+  position: absolute;
+  margin-top: -3.5px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    max-width: 1024px;
+  }
 }
