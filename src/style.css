@@ -1,49 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Roboto:wght@400;500;700&display=swap");
+
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
   --blue-color: #00acdc;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
-header {
-  width: 1024px;
+.nav {
+  margin-left: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
+  height: 60px;
+  justify-content: space-between;
 }
 
-header nav {
-  display: flex;
+.img {
+
+  height: 40px;
+}
+
+.nav__list .menu {
+  text-decoration: none;
   color: #000;
+  font-family: Roboto, Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
   text-transform: uppercase;
-
+  margin-right: 20px;
+  line-height: 60px;
 }
 
-nav a {
-  text-decoration: none;
-  color: black;
-  text-align: center;
-}
-
-a:hover {
+.menu:hover {
   color: var(--blue-color);
 }
 
-ul {
+.nav__list {
   display: flex;
-  flex-direction: row;
   list-style: none;
-}
-
-header li {
-  display: flex;
-  margin-right: 20px;
-  height: 60px;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 30px;
 }
 
 li:last-child {
@@ -51,7 +50,8 @@ li:last-child {
 }
 
 .is-active {
-  color: var(--blue-color);
+  color: var(--blue-color) !important;
+  position: relative;
 }
 
 .is-active::after {
@@ -62,6 +62,6 @@ li:last-child {
   flex-shrink: 0;
   border-radius: 8px;
   background: var(--blue-color);
-  position: relative;
-  top: 18.5px;
+  position: absolute;
+  top: 28px;
 }
