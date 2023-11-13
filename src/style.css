@@ -11,15 +11,6 @@
 
 html {
   font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-}
-
-h1 {
-  text-align: center;
-}
-
-.body {
-  margin: 0;
 }
 
 .header {
@@ -50,6 +41,7 @@ h1 {
 }
 
 .nav_link {
+  text-transform: uppercase;
   height: var(--header-height);
   line-height: var(--header-height);
   font-size: 12px;
@@ -59,7 +51,8 @@ h1 {
   position: relative;
 }
 
-.nav_link.is-active {
+.nav_link.is-active,
+.nav_link:hover {
   color: var(--link-color);
 }
 
@@ -73,8 +66,4 @@ h1 {
   height: 4px;
   border-radius: 8px;
   background: var(--link-color);
-}
-
-.nav_link:hover {
-  color: var(--link-color);
 }
