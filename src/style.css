@@ -1,11 +1,17 @@
 html {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   --hover_color: #00acdc;
+  --background_color: #808080;
+  --header_background_color: hsl(0, 0%, 100%);
+  --text_color: hsl(0, 0%, 0%);
 }
 
 body {
   margin: 0;
-  background-color: gray;
+  background-color: var(--background_color);
   width: 100%;
 }
 
@@ -13,7 +19,7 @@ body {
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-color: var(--header_background_color);
   height: 60px;
   justify-content: space-between;
   padding: 0 50px;
@@ -27,21 +33,26 @@ body {
 
 .ul {
   display: flex;
-  align-items: baseline;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .text {
-  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text_color);
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
   line-height: 60px;
-  display: inline-block;
 }
 
 .li:not(:last-child) {
