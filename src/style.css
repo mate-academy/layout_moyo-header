@@ -10,49 +10,50 @@ body {
   padding: 0 50px;
   background-color: whitesmoke;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
 .nav {
   height: 60px;
-  align-items: center;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  align-items: center;
-  object-fit: contain;
   padding: 0;
+  --isActiveColor: #00acdc;
 }
 
-.nav-item {
-  margin: 0 20px;
+.nav-item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav-link {
   text-decoration: none;
   color: #000;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+
 }
 
 .nav-link:hover {
-  color: var(--is-active-clor, #00acdc);
+  color: var(--isActiveColor);
 }
 
 .is-active {
   position: relative;
+  padding-bottom: 25.5px;
 }
 
 .is-active::after {
   height: 4px;
   width: 100%;
   content: "";
-  background-color: #00acdc;
+  background-color: var(--isActiveColor);
   position: absolute;
-  bottom: -130%;
+  bottom: 0;
   left: 0;
   border-radius: 8px;
 }
