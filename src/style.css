@@ -1,5 +1,4 @@
 body {
-  --border: 2px;
   --active-color: #00acdc;
 }
 
@@ -63,9 +62,10 @@ img {
 
 .is-active::after {
   position: absolute;
-  top: calc(100% - (var(--border) * 2));
-  width: calc(100% - (var(--border) * 2));
   content: "";
-  border: solid var(--border) var(--active-color);
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--active-color);
   border-radius: 8px;
 }
