@@ -7,16 +7,21 @@ html {
   --background_color: #808080;
   --header_background_color: hsl(0, 0%, 100%);
   --text_color: hsl(0, 0%, 0%);
+  --text_style: "Roboto", sans-serif;
 }
 
 body {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
   background-color: var(--background_color);
   width: 100%;
 }
 
 .header {
-  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--text_style);
   display: flex;
   flex-direction: row;
   background-color: var(--header_background_color);
@@ -32,6 +37,7 @@ body {
 }
 
 .ul {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +53,7 @@ body {
   align-items: center;
   text-align: center;
   color: var(--text_color);
-  font-family: "Roboto", sans-serif;
+  font-family: var(--text_style);
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
