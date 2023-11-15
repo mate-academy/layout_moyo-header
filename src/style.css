@@ -9,23 +9,26 @@ body {
 }
 
 .header {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  text-transform: uppercase;
   align-items: center;
 }
 
 .logo {
+  box-sizing: border-box;
   display: flex;
   margin-left: 50px;
 }
 
 .menu {
+  box-sizing: border-box;
   margin-right: 50px;
 }
 
 .menu-list {
+  box-sizing: border-box;
   list-style: none;
   display: flex;
   align-items: center;
@@ -33,21 +36,22 @@ body {
   padding: 0;
 }
 
-.list-item {
+.menu-link {
+  box-sizing: border-box;
   text-decoration: none;
   color: #000;
   margin-right: 20px;
   line-height: 60px;
-  height: 60px;
   display: inline-block;
+  text-transform: uppercase;
 }
 
-.list-item:hover {
+.menu-link:hover {
   color: var(--blue-color);
   cursor: pointer;
 }
 
-.menu-list li:last-child .list-item {
+.menu-list .menu-item:last-child .menu-link {
   margin-right: 0;
 }
 
