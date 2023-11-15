@@ -1,10 +1,13 @@
-body {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 .header {
@@ -18,7 +21,6 @@ body {
 .logo {
   width: 40px;
   height: 40px;
-  padding: 10px 0;
 }
 
 nav {
@@ -34,7 +36,6 @@ ul {
 .nav__item {
   display: inline-block;
   list-style: none;
-
 }
 
 .nav__item:not(:last-child) {
@@ -50,16 +51,13 @@ ul {
   align-items: center;
   display: flex;
   line-height: 60px;
-}
-
-.nav__item a {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
 }
 
-.nav__item a:hover,
-.nav__link.is-active {
+.nav__link.is-active,
+a:hover {
   color: #00acdc;
 }
 
