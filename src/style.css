@@ -27,16 +27,22 @@ body {
 }
 
 nav {
-  display: flex;
   margin-right: 50px;
 }
 
-li {
+.nav__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav__item {
+  position: relative;
   list-style: none;
 }
 
-.nav__list {
-  position: relative;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -46,10 +52,6 @@ li {
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
-}
-
-.nav__list:not(:last-child) {
-  margin-right: 20px;
 }
 
 .nav__link:hover {
@@ -69,5 +71,4 @@ li {
   height: 4px;
   background: #00acdc;
   border-radius: 8px;
-  /* opacity: 0; */
 }
