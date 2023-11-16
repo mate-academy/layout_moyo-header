@@ -10,6 +10,7 @@ html {
 
 body {
   margin: 0;
+  --color-nav-selected: #00acdc;
 }
 
 .header {
@@ -25,14 +26,11 @@ body {
   height: 40px;
 }
 
-nav {
-  height: 60px;
-}
-
-ul {
+.nav__list {
   display: flex;
   padding: 0;
   margin: 0;
+  height: 60px;
 }
 
 .nav__item {
@@ -44,31 +42,27 @@ ul {
   margin-right: 20px;
 }
 
-.nav__item:first-child {
-  margin-left: 0;
-}
-
 .nav__link {
   position: relative;
-  align-items: center;
-  display: flex;
-  line-height: 60px;
+  display: block;
+  padding: 23px 0;
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
 }
 
 .nav__link.is-active,
-a:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--color-nav-selected);
 }
 
 .nav__link.is-active::after {
+  display: block;
   content: "";
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--color-nav-selected);
   bottom: 0;
   right: 0;
   left: 0;
