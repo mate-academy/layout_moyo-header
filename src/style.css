@@ -18,6 +18,12 @@ header {
   margin: 0;
   background: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  min-width: 1024px;
+  width: 100%;
+}
+
+.logo {
+  font-size: 0;
 }
 
 nav {
@@ -25,9 +31,12 @@ nav {
   align-items: center;
 }
 
+ul {
+  display: flex;
+}
+
 ul li {
   list-style: none;
-  display: inline;
 }
 
 .nav__item:not(:last-child) {
@@ -39,8 +48,9 @@ ul li {
   text-transform: uppercase;
   text-decoration: none;
   color: black;
-  padding-top: 22.5px;
-  padding-bottom: 22.5px;
+  line-height: 60px;
+  height: 60px;
+  display: block;
 }
 
 .nav__link:hover {
@@ -69,5 +79,4 @@ ul li {
 
 .nav__link[data-qa] {
   position: relative;
-  color: #00acdc;
 }
