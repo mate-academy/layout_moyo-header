@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:500,700");
+
 body {
   text-align: center;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  max-width: 1200px;
 }
 
 .header {
@@ -11,10 +12,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.nav {
-  height: 60px;
+  min-width: 1024px;
 }
 
 .nav-list {
@@ -22,6 +20,7 @@ body {
   display: flex;
   padding: 0;
   --isActiveColor: #00acdc;
+  margin: 0;
 }
 
 .nav-item:not(:last-child) {
@@ -34,8 +33,8 @@ body {
   color: #000;
   font-weight: 500;
   font-size: 12px;
-  padding-top: 8px;
   text-transform: uppercase;
+  line-height: 60px;
 }
 
 .nav-link:hover {
@@ -44,7 +43,7 @@ body {
 
 .is-active {
   position: relative;
-  padding-bottom: 21px;
+  color: var(--isActiveColor);
 }
 
 .is-active::after {
