@@ -1,15 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+html {
+  --color-text-hover: #00acdc;
+}
 
 body {
   margin: 0;
-  box-sizing: border-box;
 }
 
 .header {
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0 50px;
   width: 100%;
   background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
@@ -17,20 +18,19 @@ body {
   border: none;
 }
 
-.header__container {
-  box-sizing: border-box;
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 50px;
-  align-items: center;
-  border: none;
+.nav__item {
+  display: block;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link {
   display: block;
   height: 60px;
   line-height: 60px;
+
   text-decoration: none;
   color: #000;
   font-family: "Roboto", sans-serif;
@@ -48,24 +48,17 @@ body {
 
 .nav__list {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
   margin: 0;
   padding: 0;
-  list-style-type: none;
-}
-
-.nav__item {
-  margin-left: 20px;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color-text-hover);
   position: relative;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color-text-hover);
 }
 
 .is-active::after {
@@ -77,5 +70,5 @@ body {
   bottom: 0;
   width: 100%;
   border-radius: 8px;
-  background: #00acdc;
+  background: var(--color-text-hover);
 }
