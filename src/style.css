@@ -10,7 +10,7 @@ body {
   padding: 0;
 }
 
-header {
+.header {
   height: 60px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   display: flex;
@@ -23,34 +23,34 @@ header {
   text-transform: uppercase;
 }
 
-header .logo {
+.header .logo {
   margin-top: 13px;
   margin-bottom: 11px;
 }
 
-.navbar .navlist {
+.nav__bar .nav__list {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-.navbar .navlist li {
+.nav__bar .nav__list .list__elements {
   height: 60px;
   margin: 0 10px;
 }
 
-.navbar .navlist > li:last-of-type {
-  margin: 0;
+.nav__bar .nav__list > .list__elements:last-of-type {
+  margin-right: 0;
   margin-left: 10px;
 }
 
-.navbar .navlist > li:first-of-type {
-  margin: 0;
+.nav__bar .nav__list > .list__elements:first-of-type {
+  margin-left: 0;
   margin-right: 10px;
 }
 
-.navbar .navlist li a {
+.nav__bar .nav__list .list__elements a {
   display: block;
   line-height: 60px;
   text-decoration: none;
@@ -58,11 +58,11 @@ header .logo {
   color: var(--main-text-color);
 }
 
-.navbar .navlist li a:hover {
+.nav__bar .nav__list .list__elements a:hover {
   color: var(--main-hover-text-color);
 }
 
-.navbar .navlist li .is-active {
+.nav__bar .nav__list .list__elements .is-active {
   position: relative;
   color: var(--main-hover-text-color);
 }
@@ -80,9 +80,3 @@ header .logo {
   flex-shrink: 0;
 }
 
-@media all and (min-width: 600px)
-  and (max-width: 1200px) and (orientation: landscape) {
-  .navbar .navlist {
-    font-size: 12px;
-  }
-}
