@@ -2,13 +2,16 @@
   box-sizing: border-box;
 }
 
-html {
-  width: 100%;
+:root {
   --hover_color: #00acdc;
   --background_color: #808080;
   --header_background_color: hsl(0, 0%, 100%);
   --text_color: hsl(0, 0%, 0%);
-  --text_style: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  width: 100%;
 }
 
 body {
@@ -19,7 +22,6 @@ body {
 }
 
 .header {
-  font-family: var(--text_style);
   display: flex;
   flex-direction: row;
   background-color: var(--header_background_color);
@@ -41,7 +43,7 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  list-style: none;
 }
 
 .nav_link {
@@ -50,7 +52,7 @@ body {
   align-items: center;
   text-align: center;
   color: var(--text_color);
-  font-family: var(--text_style);
+  font-family: inherit;
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
