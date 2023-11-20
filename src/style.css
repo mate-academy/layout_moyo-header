@@ -1,3 +1,77 @@
+:root {
+  --active-color: #00acdc;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.logo_pic {
+  margin: 10px 0;
+  height: 40px;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.navItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.listItem {
+  margin: 0 10px;
+}
+
+.listItem8 {
+  margin-right: 0;
+}
+
+.listItem1 {
+  margin-left: 0;
+}
+
+.navItem:hover,
+.is-active {
+  color: var(--active-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--active-color);
 }
