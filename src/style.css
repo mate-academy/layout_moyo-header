@@ -1,3 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --hover-color: #00acdc;
+  --menu-height: 60px;
+  --bar-height: 4px;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  background-color: lightgray;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.logo__img {
+  padding: 10px 0 10px 50px;
+  object-fit: contain;
+  height: 40px;
+  width: 40px;
+}
+
+.logo__link {
+  display: inline-block;
+}
+
+.nav {
+  margin-right: 50px;
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding-inline-start: 0;
+  font-size: 0;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  height: var(--menu-height);
+  line-height: var(--menu-height);
+  color: #000;
+  display: inline-block;
+}
+
+.nav__link:hover {
+  color: var(--hover-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--hover-color);
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: var(--bar-height);
+  top: calc(var(--menu-height) - var(--bar-height));
+  left: 0;
+  border-radius: 8px;
+  width: 100%;
+  background-color: var(--hover-color);
 }
