@@ -10,14 +10,15 @@ body {
 }
 
 .header {
-  margin: 0 50px;
-}
-
-.navigation {
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: var(--header-height);
+  padding: 0 50px;
+}
+
+.navigation {
+  max-width: 1200px;
 }
 
 .logo {
@@ -34,21 +35,28 @@ body {
   list-style: none;
   padding-left: 0;
   height: 100%;
+  margin: 0;
 }
 
 .menu-item {
   position: relative;
   margin-right: 20px;
   display: flex;
-  align-items: center;
+}
+
+.menu-item:last-of-type {
+  margin: 0;
 }
 
 .menu-link {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
+  font-style: normal;
+  line-height: var(--header-height);
   font-size: 12px;
   color: #000;
+  height: var(--header-height);
 }
 
 .menu-link:hover {
