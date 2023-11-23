@@ -36,12 +36,8 @@ body {
   list-style: none;
 }
 
-.nav__item {
+.nav__item:not(:first-child) {
   margin-left: 20px;
-}
-
-.nav__item:first-child {
-  margin-left: 0;
 }
 
 .nav__link {
@@ -58,14 +54,8 @@ body {
   transition: color 0.3s;
 }
 
-.nav__link:hover {
-  color: var(--color);
-}
-
-.nav__link.active {
-  color: var(--color);
-}
-
+.nav__link:hover,
+.nav__link.active,
 .nav__link.is-active {
   color: var(--color);
 }
