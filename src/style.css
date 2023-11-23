@@ -1,3 +1,72 @@
+:root {
+  --main-color:  rgba(0, 172, 220, 1);
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.nav {
+  height: 60px;
+}
+
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.nav-ul {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  height: 100%;
+}
+
+.nav-ul-list {
+  margin-right: 20px;
+}
+
+.nav-ul-list-items {
+  all: unset;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 60px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.nav-items:hover {
+  color: var(--main-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--main-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--main-color);
+}
+
+
+
