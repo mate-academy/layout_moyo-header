@@ -1,8 +1,5 @@
-@media (max-width: 1024px) {
-  header {
-    width: 1024px;
-  }
-}
+
+
 
 :root {
   --color-element: #00ACDC;
@@ -20,10 +17,11 @@ body {
   justify-content: space-between;
   background: white;
   margin: auto;
-  width: 1200px;
+  width: 1150px;
   height: 60px;
   align-items: center;
   flex-shrink: 0;
+  padding-right: 50px;
 
 }
 
@@ -36,23 +34,27 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-right: 50px;
 
 }
 
 .navi-link {
-  margin-left: 20px;
+  display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #000;
   position: relative;
-
-
+  height: 60px;
 }
 
+li:nth-child(n+2) {
+  margin-left: 20px;
+}
 
-li {
+ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navi-link:hover {
@@ -71,8 +73,24 @@ li {
 
 }
 
+.navi {
+  display: ;
+  padding: 0;
+  margin: 0;
+}
+
+.is-active {
+  color: var(--color-element);
+}
+
 .logo {
   height: 40px;
   width: 40px;
   margin-left: 50px;
+}
+
+@media (max-width:1024px){
+  .header {
+    width: 974px;
+  }
 }
