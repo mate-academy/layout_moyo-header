@@ -1,5 +1,79 @@
+html {
+  --main-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+}
+
+.header {
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.header-logo img {
+  width: 100%;
+}
+
+.menu-list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  height: 60px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+}
+
+.is-active {
+  color: var(--main-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--main-color);
+  border-radius: 8px;
+}
+
+.menu-link:hover {
+  color: var(--main-color);
 }
 
