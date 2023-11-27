@@ -1,16 +1,17 @@
 body {
   font-family: "Roboto", sans-serif;
-  padding: 0;
+  font-weight: 500;
   margin: 0;
-  border: 0;
+}
+
+:root {
+  --header-height: 60px;
 }
 
 .nav__link {
   text-decoration: none;
   color: #000;
   font-size: 12px;
-  font-weight: 500;
-  margin: 0 10px;
 }
 
 .header {
@@ -18,45 +19,61 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px 40px 10px 10px;
+  position: absolute;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
 .logo {
   width: 40px;
   height: 40px;
-  margin-left: 40px;
 }
 
 .nav {
-  height: auto;
+  height: var(--header-height);
+  line-height: var(--header-height);
+  text-align: center;
   text-transform: uppercase;
 }
 
 .nav__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: space-between;
-  margin: 0 20px;
 }
 
-.nav__item--active {
-  color: #00acdc;
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.is-active {
   position: relative;
   display: inline-block;
+  color: #00acdc;
 }
 
-.nav__item--active::after {
+.is-active::after {
   content: "";
   position: absolute;
   width: 37px;
   height: 4px;
-  top: 100%;
+  background-color: #00acdc;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #00acdc;
   border-radius: 8px;
 }
 
-.nav__item--testing:hover {
+[data-qa="hover"]:hover {
   color: #00acdc;
 }
