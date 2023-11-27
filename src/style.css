@@ -1,5 +1,10 @@
 :root {
   --link-color: #00ACDC;
+  --text-color: #000;
+}
+
+html {
+  font-family: Roboto, sans-serif;
 }
 
 body {
@@ -13,42 +18,40 @@ header {
   align-items: center;
   padding: 0 50px;
   font-size: 12px;
-  font-family: Roboto, sans-serif;
 }
 
-nav ul{
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav ul.navigation {
   display: flex;
   align-items: center;
-  text-transform: uppercase;
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
+  list-style-type: none;
 }
 
-nav ul li {
+nav ul.navigation li {
   margin: 0 10px;
   position: relative;
 }
 
-ul a {
+ul.navigation a {
   display: flex;
   text-align: center;
   line-height: 60px;
   height: 60px;
 }
 
-nav ul li:first-child {
+nav ul.navigation li:first-child {
   margin-left: 0;
 }
 
-nav ul li:last-child {
+nav ul.navigation li:last-child {
   margin-right: 0;
-}
-
-
-nav a {
-  text-decoration: none;
-  color: #000;
 }
 
 nav a:hover {
@@ -63,12 +66,10 @@ nav a.is-active::after {
   content: '';
   display: block;
   position: absolute;
+  bottom: 0;
+  right: 0;
   background-color: #00ACDC;
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  bottom: 0;
-  right: 0;
 }
-
-
