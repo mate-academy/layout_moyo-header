@@ -1,11 +1,13 @@
 body {
-  --header-height: 60px;
-  --hover-color: #00ACDC;
-
   margin: 0;
   padding: 0;
+
   font-family: Roboto, sans-serif;
   font-weight: 500;
+
+  --header-height: 60px;
+  --text-color: #000;
+  --hover-color: #00ACDC;
 }
 
 .header {
@@ -13,20 +15,22 @@ body {
 }
 
 .container {
-  margin: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  margin: 0 50px;
 }
 
 .logo {
-  text-decoration: none;
   height: 40px;
+  text-decoration: none;
 }
 
 .nav-list {
   display: flex;
   justify-content: start;
+
   margin: 0;
   padding: 0;
 }
@@ -35,9 +39,11 @@ body {
   display: flex;
   align-content: center;
   align-items: center;
+
   height: var(--header-height);
-  list-style: none;
   margin-left: 20px;
+
+  list-style: none;
 }
 
 .nav-link:first-child {
@@ -45,11 +51,11 @@ body {
 }
 
 .link {
-  color: #000;
-  text-decoration: none;
   font-size: 12px;
   line-height: var(--header-height);
   text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 .link:hover {
@@ -62,12 +68,13 @@ body {
 }
 
 .is-active::after {
+  content: '';
   position: absolute;
   bottom: 0;
-  content: '';
+
   display: block;
   height: 4px;
-  background: var(--hover-color);
   width: 100%;
+  background: var(--hover-color);
   border-radius: 8px;
 }
