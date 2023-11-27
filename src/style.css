@@ -1,3 +1,51 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
 }
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+.nav-list {
+  margin-right: 50px;
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-link {
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 12px;
+  height: 60px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link:hover {
+  color: #00ACDC;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  background-color: #00ACDC;
+  height: 4px;
+  border-radius: 8px;
+}
+
+
+.nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
