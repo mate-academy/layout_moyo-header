@@ -17,9 +17,6 @@ body {
   padding: 0 50px;
 }
 
-.nav {
-  height: 60px;
-}
 
 .logo {
   display: block;
@@ -28,22 +25,32 @@ body {
 }
 
 .nav-ul {
-  margin: 0;
   display: flex;
-  flex-direction: row;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
   height: 100%;
 }
 
 .nav-ul-list {
-  margin-right: 20px;
+  position: relative;
+}
+
+.nav-ul-list:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav-ul-list-items {
   all: unset;
-  cursor: pointer;
-  text-transform: uppercase;
+  display: block;
+  height: 60px;
   line-height: 60px;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  word-wrap: break-word;
+  color: black;
   font-size: 12px;
   font-weight: 500;
 }
