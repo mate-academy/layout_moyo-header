@@ -1,5 +1,5 @@
 :root {
-  --link-color: #00acdc;
+  --link-accent-color: #00acdc;
 }
 
 body {
@@ -19,24 +19,22 @@ body {
   align-items: center;
 }
 
-.nav-link {
+.nav-links {
+  margin: 0;
+}
+
+.nav-links, .nav-link {
   display: flex;
   list-style: none;
-  margin: 0 10px;
   padding: 0;
 }
 
-.nav-link:first-child {
-  margin-left: 0;
-}
-
-.nav-link:last-child {
-  margin-right: 0;
+.nav-link:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav-link:link {
   display: block;
-  height: 60px;
 
   text-align: center;
   color: black;
@@ -47,16 +45,12 @@ body {
   line-height: 60px;
 }
 
-.nav-link:visited {
-  color: black;
-}
-
 .nav-link:hover {
-  color: var(--link-color);
+  color: var(--link-accent-color);
 }
 
 .nav-link.is-active {
-  color: var(--link-color);
+  color: var(--link-accent-color);
   position: relative;
 }
 
@@ -66,10 +60,7 @@ body {
   width: 100%;
   content: "";
   display: block;
-  background-color: var(--link-color);
+  background-color: var(--link-accent-color);
   height: 4px;
   border-radius: 8px;
-  opacity: 1;
 }
-
-
