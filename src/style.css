@@ -1,3 +1,7 @@
+html {
+  --color-blue: #00ACDC;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -32,7 +36,7 @@ body {
 }
 
 .link-item {
-  display: block;
+  display: inline-block;
   text-decoration: none;
   color: inherit;
   font-size: 12px;
@@ -41,12 +45,12 @@ body {
 }
 
 .link-item:hover {
-  color: #00ACDC;
+  color: var(--color-blue);
 }
 
 .is-active {
   position: relative;
-  color: #00ACDC;
+  color: var(--color-blue);
 }
 
 .is-active::after {
@@ -54,7 +58,7 @@ body {
   content: "";
   bottom: 0;
   border-radius: 8px;
-  background: #00ACDC;
+  background: var(--color-blue);
   width: 100%;
   height: 4px;
   left: 0;
