@@ -5,7 +5,6 @@ body, h1, h2, h3, p, ul {
 
 body {
   font-family: Roboto, sans-serif;
-  box-sizing: border-box;
 
   --accent-color: #00ACDC;
 }
@@ -49,7 +48,7 @@ body {
   color: #000;
   margin-right: 21px;
 
-  &:nth-last-child(1) {
+  &:last-child {
     margin-right: 0;
   }
 }
@@ -72,8 +71,7 @@ body {
 }
 
 .list-item-link:hover,
-.is-active,
-[data-qa] .is-active {
+.is-active[data-qa] {
   color:var(--accent-color);
 }
 
