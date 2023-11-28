@@ -6,20 +6,21 @@ body {
 
 :root {
   --main-bg-color: #00ACDC;
+  --links-color: black;
 }
 
 html {
-font-family: Roboto, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .header {
-  box-sizing: border-box;
-  background-color: white;
   display: flex;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
   padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: white;
 }
 
 .nav {
@@ -30,9 +31,9 @@ font-family: Roboto, sans-serif;
 .navbar {
   display: flex;
   align-items: center;
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .logo {
@@ -42,13 +43,13 @@ font-family: Roboto, sans-serif;
 
 .links {
   display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   font-size: 12px;
-  color: black;
-  height: 60px;
-  align-items: center;
-  justify-content: center;
   text-transform: uppercase;
+  color: var(--links-color);
 }
 
 .navbar > .nav-list {
@@ -60,9 +61,8 @@ font-family: Roboto, sans-serif;
 }
 
 .links:hover {
-  color: var(--main-bg-color);
-
   text-decoration: none;
+  color: var(--main-bg-color);
 }
 
 .is-active {
@@ -72,11 +72,11 @@ font-family: Roboto, sans-serif;
 
 .is-active::after{
   position: absolute;
-  background: var(--main-bg-color);
-  content: '';
-  width: 100%;
-  height: 4px;
   bottom: 0;
   left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--main-bg-color);
+  content: '';
   border-radius: 8px;
 }
