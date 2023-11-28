@@ -1,5 +1,6 @@
 :root {
   --link-accent-color: #00acdc;
+  --link-main-color: #000;
 }
 
 body {
@@ -9,9 +10,9 @@ body {
 
 .header {
   display: flex;
+  padding: 0 50px;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
 }
 
 .logo {
@@ -25,8 +26,9 @@ body {
 
 .nav-links, .nav-link {
   display: flex;
-  list-style: none;
   padding: 0;
+
+  list-style: none;
 }
 
 .nav-link:not(:last-child) {
@@ -37,12 +39,13 @@ body {
   display: block;
 
   text-align: center;
-  color: black;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 12px;
   font-weight: 500;
   line-height: 60px;
+
+  color: var(--link-main-color);
 }
 
 .nav-link:hover {
@@ -50,17 +53,20 @@ body {
 }
 
 .nav-link.is-active {
-  color: var(--link-accent-color);
   position: relative;
+
+  color: var(--link-accent-color);
 }
 
 .is-active::after {
   position: absolute;
   bottom: 0;
+
+  display: block;
   width: 100%;
   content: "";
-  display: block;
-  background-color: var(--link-accent-color);
   height: 4px;
+
+  background-color: var(--link-accent-color);
   border-radius: 8px;
 }
