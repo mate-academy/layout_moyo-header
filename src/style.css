@@ -1,3 +1,10 @@
+:root {
+  --default-color-link: #000;
+  --color-active-link: #00ACDC;
+  --background-header: #FFF;
+  --box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -11,8 +18,8 @@ body {
   justify-content: space-between;
   padding: 0 50px;
   height: 60px;
-  background: #FFF;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  background: var(--background-header);
+  box-shadow: var(--box-shadow);
 }
 
 .logo-link {
@@ -46,18 +53,18 @@ body {
   justify-content: center;
   padding: 23px 0;
   font-size: 12px;
-  color: #000;
+  color: var(--default-color-link);
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: #00ACDC;
+  color: var(--color-active-link);
 }
 
 .is-active {
   position: relative;
-  color: #00ACDC;
+  color: var(--color-active-link);
 }
 
 .is-active::after {
@@ -68,7 +75,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #00ACDC;
+  background: var(--color-active-link);
   content: "";
   border-radius: 8px;
 }
