@@ -1,10 +1,14 @@
+html {
+  --main-color: #00acdc;
+}
+
 body {
   margin: 0;
 }
 
 .header {
   display: flex;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, sans-serif, Arial;
   text-transform: uppercase;
   justify-content: space-between;
   align-items: center;
@@ -38,11 +42,11 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
-.nav__link.is-active {
-  color: #00acdc;
+.is-active {
+  color: var(--main-color);
 }
 
 .nav__link.is-active::after {
@@ -65,8 +69,4 @@ body {
 .logo__image {
   height: 100%;
   width: 100%;
-}
-
-.apple {
-  color: #00ACDC;
 }
