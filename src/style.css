@@ -1,3 +1,90 @@
+:root {
+  --link-color: #00ACDC;
+}
+
 body {
   margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navLink {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 60px;
+}
+
+header {
+  background-color: #fff;
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  }
+
+.nav {
+  height: 100%;
+  text-transform: uppercase;
+}
+
+.logoLink {
+  display: flex;
+  float: left;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.linkList {
+  display: flex;
+  align-items: center;
+  float: right;
+  list-style: none;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0;
+}
+
+
+li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.linkList > li {
+  margin-left: 20px;
+}
+
+.linkList > li:first-child {
+  margin-left: 0;
+}
+
+.is-active {
+  color: var(--link-color);
+}
+
+li:hover > a{
+  color: var(--link-color);
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  background: var(--link-color);
+  height: 4px;
+  border-radius: 8px;
+  width: 100%;
+  bottom: 0;
 }
