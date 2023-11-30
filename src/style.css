@@ -1,52 +1,47 @@
-body, h1, h2, h3, p, ul {
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  font-family: Roboto, sans-serif;
-
+:root {
   --accent-color: #00ACDC;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+html {
+  font-family: Roboto, Montserrat, sans-serif;
 }
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1200px;
-    margin: 0 auto;
-  }
+body, header, nav, li, a, img, div, ul {
+  margin: 0;
+  padding: 0;
+
 }
 
 .header {
   width: 100%;
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  margin-left: 50px;
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.nav {
-  margin-right: 50px;
+.logo-link {
+  display: block;
+  margin-top: 10px;
 }
 
 .list {
   display: flex;
-  height: 60px;
   align-items: center;
 }
 
 .list-item {
+  display: flex;
+  align-items: center;
   list-style-type: none;
   text-transform: uppercase;
   color: #000;
-  margin-right: 21px;
+  margin-right: 20px;
 
   &:last-child {
     margin-right: 0;
@@ -55,23 +50,19 @@ body {
 
 .list-item-link {
   height: 60px;
+  display: block;
   text-decoration: none;
   font-size: 12px;
-  position: relative;
   cursor: pointer;
+  color: #000;
+  font-weight: 500;
+  padding-top: 23px;
+  box-sizing: border-box;
 }
 
-.list-item-link:hover::after {
-  content: '';
-  width: 100%;
-  border-bottom: 4px solid var(--accent-color);
-  display: block;
-  position: absolute;
-  top: 32px;
-}
-
-.list-item-link:hover,
-.is-active[data-qa] {
+.is-active,
+[data-qa="hover"],
+.list-item-link:hover {
   color:var(--accent-color);
 }
 
@@ -80,9 +71,10 @@ body {
   content: attr(data-qa);
   border-bottom: 4px solid var(--accent-color);
   display: block;
-  position: absolute;
-  top: 25px;
-  font-size: 0;
+  position: relative;
+  top: 19px;
+  border-radius: 8px;
+
 }
 
 
