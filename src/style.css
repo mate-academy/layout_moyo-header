@@ -7,7 +7,7 @@ body {
   --header-active-link-color: #00acdc;
 }
 
-ul, li {
+ul {
   margin: 0;
   padding: 0;
 }
@@ -34,28 +34,30 @@ ul, li {
   flex: none;
 }
 
-
 .list li {
   list-style: none;
-}
-
-.nav-links .list a {
   display: flex;
-  text-decoration: none;
   align-items: center;
   margin: 0 10px;
-  color: #000;
-  font-weight: 500;
-  font-size: 12px;
-  text-transform: uppercase;
 }
 
-.list a:last-child {
+.list li:last-child {
   margin-right: 0;
 }
 
-.list a:first-child {
+.list li:first-child {
   margin-left: 0;
+}
+
+.list li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: 500;
 }
 
 .nav-links .list [data-qa="hover"]:hover {
