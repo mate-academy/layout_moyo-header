@@ -5,63 +5,72 @@ body {
   --header-active-link-color: #00acdc;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 50px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.menu ul {
-  display: flex;
-  list-style: none;
+ul, li {
   margin: 0;
   padding: 0;
 }
 
-.menu li {
-  margin: 0 10px;
+.header {
+  padding: 10px 50px
 }
 
-.menu li:first-child {
-  margin-left: 0;
-}
-
-.menu li:last-child {
-  margin-right: 0;
-}
-
-.menu ul a {
-  position: relative;
+.page-wrap {
   display: flex;
-  align-items: center; /* or lint-height */
-  height: 3.75rem;
-  text-transform: uppercase;
+}
+
+.logo {
+  flex: 1;
+}
+
+.menu {
+  margin-top: -10px;
+}
+
+.list {
+  display: flex;
+  height: 60px;
+  flex: none;
+}
+
+
+.list li {
+  list-style: none;
+}
+
+.nav-links .list a {
+  display: flex;
   text-decoration: none;
+  align-items: center;
+  margin: 0 10px;
   color: #000;
   font-weight: 500;
   font-size: 12px;
-  width: 100%;
+  text-transform: uppercase;
 }
 
-.menu .is-active::after {
+.list a:last-child {
+  margin-right: 0;
+}
+
+.list a:first-child {
+  margin-left: 0;
+}
+
+.nav-links .list [data-qa="hover"]:hover {
+  color: var(--header-active-link-color);
+}
+
+.nav-links .list .is-active {
+  position: relative;
+  color: var(--header-active-link-color);
+}
+
+.nav-links .list .is-active::after {
   position: absolute;
   content: '';
   border-bottom: 4px solid var(--header-active-link-color);
+  border-radius: 8px;
+  width: 100%;
   bottom: 0;
   left: 0;
-  width: 100%;
-  border-radius: 8px;
-}
-
-.menu ul .is-active {
-  color: var(--header-active-link-color);
-}
-
-[data-qa="hover"]:hover {
-  color: var(--header-active-link-color);
 }
