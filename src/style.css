@@ -7,7 +7,7 @@ html {
   font-family: Roboto, Montserrat, sans-serif;
 }
 
-body, header, nav, li, a, img, div, ul {
+body, header, nav, li, a, img, ul {
   margin: 0;
   padding: 0;
 
@@ -15,19 +15,16 @@ body, header, nav, li, a, img, div, ul {
 
 .header {
   width: 100%;
-}
-
-.container {
-  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
 .logo-link {
   display: block;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .list {
@@ -36,15 +33,18 @@ body, header, nav, li, a, img, div, ul {
 }
 
 .list-item {
-  display: flex;
-  align-items: center;
+  text-align: center;
   list-style-type: none;
   text-transform: uppercase;
   color: #000;
-  margin-right: 20px;
+  margin: 0 10px;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &:first-child {
+    margin-left: 0;
   }
 }
 
@@ -61,7 +61,7 @@ body, header, nav, li, a, img, div, ul {
 }
 
 .is-active,
-[data-qa="hover"],
+[data-qa="hover"]:hover,
 .list-item-link:hover {
   color:var(--accent-color);
 }
@@ -74,7 +74,6 @@ body, header, nav, li, a, img, div, ul {
   position: relative;
   top: 19px;
   border-radius: 8px;
-
 }
 
 
