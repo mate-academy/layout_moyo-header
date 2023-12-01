@@ -55,11 +55,15 @@ a {
   padding-bottom: 23px;
 }
 
-.a__li:hover {
+a[data-qa="hover"]:hover {
   color: var(--color-for-buttons-hover);
 }
 
-.a__li:hover::after {
+.is-active:hover {
+  color: var(--color-for-buttons-hover);
+}
+
+.is-active::after {
   background-color: var(--color-for-buttons-hover);
   content: '';
   position: absolute;
