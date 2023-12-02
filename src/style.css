@@ -34,22 +34,22 @@ ul {
   flex: none;
 }
 
-.list li {
+.nav-item {
   list-style: none;
   display: flex;
   align-items: center;
   margin: 0 10px;
 }
 
-.list li:last-child {
+.nav-item:last-child {
   margin-right: 0;
 }
 
-.list li:first-child {
+.nav-item:first-child {
   margin-left: 0;
 }
 
-.list li a {
+.nav-link {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -60,16 +60,20 @@ ul {
   font-weight: 500;
 }
 
-.nav-links .list [data-qa="hover"]:hover {
+.nav-link:hover {
   color: var(--header-active-link-color);
 }
 
-.nav-links .list .is-active {
+[data-qa="hover"]:hover {
+  color: var(--header-active-link-color);
+}
+
+.is-active {
   position: relative;
   color: var(--header-active-link-color);
 }
 
-.nav-links .list .is-active::after {
+.is-active::after {
   position: absolute;
   content: '';
   border-bottom: 4px solid var(--header-active-link-color);
