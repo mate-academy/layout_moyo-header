@@ -16,7 +16,6 @@ html {
   align-items: center;
   margin: 0;
   padding: 0;
-  background-color: aliceblue;
 }
 
 .logo {
@@ -38,6 +37,8 @@ html {
 }
 
 .nav__link {
+  display: inline-block;
+  position: relative;
   font-size: 12px;
   padding: 0 10px;
   line-height: 60px;
@@ -46,11 +47,6 @@ html {
   color: #000;
 }
 
-.is-active:hover {
-  color:#00ACDC;
-}
-
-
 .is-active:hover::after {
   content: "";
   height: 4px;
@@ -58,4 +54,7 @@ html {
   background: #00ACDC;
   width: 100%;
   position: absolute;
+  bottom: 0;
+  left: 0;
 }
+
