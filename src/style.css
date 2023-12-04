@@ -1,3 +1,61 @@
 body {
   margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+
+}
+
+
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
+
+.logo {
+  height: 40px;
+  padding: 0 50px;
+}
+
+.nav {
+  display: inline-block;
+  margin: 0 20px;
+  padding: 0;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0 20px;
+  padding: 0;
+}
+
+.nav__link {
+  font-size: 12px;
+  padding: 0 10px;
+  line-height: 60px;
+  height: 60px;
+  text-decoration: none;
+  color: #000;
+}
+
+.is-active:hover {
+  color:#00ACDC;
+}
+
+
+.is-active:hover::after {
+  content: "";
+  height: 4px;
+  border-radius: 8px;
+  background: #00ACDC;
+  width: 100%;
+  position: absolute;
 }
