@@ -1,3 +1,70 @@
 body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.home_page_link {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.logo_img--link-to-home-page {
+  height: 100%;
+  width: 100%;
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_item {
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.nav_item:first-child {
+  margin-left: 0;
+}
+
+.nav_link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #000;
+}
+
+.is-active,
+.nav_link:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  content: "";
+  z-index: 10;
+  width: 100%;
+  display: block;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+  bottom: 0;
 }
