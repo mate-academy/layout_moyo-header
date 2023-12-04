@@ -1,5 +1,7 @@
 html {
   --main-color: #00acdc;
+
+  font-family: Roboto, sans-serif, Arial;
 }
 
 body {
@@ -8,7 +10,6 @@ body {
 
 .header {
   display: flex;
-  font-family: Roboto, sans-serif, Arial;
   text-transform: uppercase;
   justify-content: space-between;
   align-items: center;
@@ -33,18 +34,11 @@ body {
   position: relative;
 }
 
-.nav__item {
+.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
-.nav__item:first-child {
-  margin-left: 0;
-}
-
-.nav__link:hover {
-  color: var(--main-color);
-}
-
+.nav__link:hover,
 .is-active {
   color: var(--main-color);
 }
@@ -57,7 +51,7 @@ body {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--main-color);
 }
 
 .logo {
