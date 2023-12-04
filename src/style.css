@@ -15,7 +15,7 @@ ul {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 10px 50px
+  padding: 0 50px
 }
 
 .nav {
@@ -25,22 +25,16 @@ ul {
 .nav__list {
   display: flex;
   height: 60px;
-  flex: none;
 }
 
 .nav__item {
   list-style: none;
   display: flex;
   align-items: center;
-  margin: 0 10px;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
-}
-
-.nav__item:first-child {
-  margin-left: 0;
+.nav__item:not(:last-child ) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -58,9 +52,9 @@ ul {
   color: var(--header-active-link-color);
 }
 
-[data-qa="hover"]:hover {
+/* [data-qa="hover"]:hover {
   color: var(--header-active-link-color);
-}
+} */
 
 .is-active {
   position: relative;
