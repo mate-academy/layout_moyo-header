@@ -23,16 +23,10 @@ html {
   padding: 0 50px;
 }
 
-.nav {
-  display: inline-block;
-  margin: 0 20px;
-  padding: 0;
-}
-
 .nav__list {
   display: flex;
   list-style: none;
-  margin: 0 20px;
+  margin: 0 40px;
   padding: 0;
 }
 
@@ -40,14 +34,26 @@ html {
   display: inline-block;
   position: relative;
   font-size: 12px;
-  padding: 0 10px;
+  margin: 0 10px;
   line-height: 60px;
   height: 60px;
   text-decoration: none;
   color: #000;
 }
 
-.is-active:hover::after {
+span {
+  white-space: nowrap;
+}
+
+.nav__link:hover {
+  color: #00ACDC;
+}
+
+.is-active {
+  color:#00ACDC;
+}
+
+.is-active::after {
   content: "";
   height: 4px;
   border-radius: 8px;
