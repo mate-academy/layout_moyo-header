@@ -10,8 +10,6 @@ body {
 
 .header {
   width: auto;
-
-  background-color: #eee;
 }
 
 .header__wrapper {
@@ -22,44 +20,45 @@ body {
   height: 100%;
 }
 
-.header__item {
+.nav__list {
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.header__logo {
-  /* display: inline-block; */
-}
-
-.header__nav {
+.nav__item {
   margin: 23px 10px;
   text-transform: uppercase;
+  list-style-type: none;
 }
 
-.header__nav:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-.header__nav:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
 .nav__link {
   text-decoration: none;
+  padding: 23px 0;
   color: #000;
 }
 
-.hover:hover {
+.nav__link:hover {
   color: var(--active-text-color);
 }
 
-.header__nav.is-active {
+.is-active {
   position: relative;
+  color: var(--active-text-color);
 }
 
-.header__nav.is-active::after {
+.is-active::after {
   position: absolute;
   left: 0;
-  bottom: -23px;
+  bottom: 0;
 
   content: "";
   width: 100%;
