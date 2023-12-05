@@ -3,37 +3,26 @@
 }
 
 :root {
-  --clracdc: #00acdc;
+  --turquoise: #00acdc;
 }
 
-.page__body {
-  position: relative;
-  display: inline-block;
+body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   width: 100%;
   margin: 0;
   background-color: grey;
 }
 
-/* #region header */
 .header {
   display: flex;
   justify-content: space-between;
   background-color: white;
-  min-width: 1024px;
   padding: 0 50px;
 }
-
-/* #region nav */
 
 .moyo-link {
   display: flex;
   align-items: center;
-}
-
-.nav {
-  display: flex;
-  height: 60px;
 }
 
 .nav__link {
@@ -43,7 +32,7 @@
   font-weight: 500;
   text-transform: uppercase;
   color: #000;
-  padding: 22.8px 0;
+  padding: 23px 0;
 }
 
 .nav__item:not(:last-child) {
@@ -52,22 +41,21 @@
 
 .is-active {
   position: relative;
-  color: var(--clracdc);
+  color: var(--turquoise);
 }
 
 .nav__link:hover {
-  color: var(--clracdc);
+  color: var(--turquoise);
 }
 
 .is-active::after {
-  /* Rectangle 2 */
   content: "";
   position: absolute;
   display: block;
   height: 4px;
   border-radius: 8px;
-  background: var(--clracdc);
-  bottom: -0.1%;
+  background: var(--turquoise);
+  bottom: 0;
   width: 100%;
 }
 
@@ -80,7 +68,3 @@
   text-align: center;
   list-style: none;
 }
-
-/* #endregion */
-
-/* #endregion */
