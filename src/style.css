@@ -6,8 +6,8 @@ body {
 html {
   font-family: Roboto, sans-serif;
 
+  --activation-color: #00ACDC;
 }
-
 
 .header {
   width: 100vw;
@@ -41,23 +41,23 @@ html {
   color: #000;
 }
 
-span {
+.link_four {
   white-space: nowrap;
 }
 
 .nav__link:hover {
-  color: #00ACDC;
+  color: var(--activation-color);
 }
 
 .is-active {
-  color:#00ACDC;
+  color:var(--activation-color);
 }
 
 .is-active::after {
   content: "";
   height: 4px;
   border-radius: 8px;
-  background: #00ACDC;
+  background: var(--activation-color);
   width: 100%;
   position: absolute;
   bottom: 0;
