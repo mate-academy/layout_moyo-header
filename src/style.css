@@ -1,7 +1,3 @@
-@font-face {
-  font-family: Roboto;
-  src: url(./font/Roboto-Medium.ttf);
-}
 
 html {
   font-family: Roboto, sans-serif;
@@ -14,13 +10,12 @@ body {
 .container {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   width: 100%;
   align-items: center;
+  padding: 0 50px;
 }
 
 .nav {
-  height: 60px;
   text-align: center;
   line-height: 60px;
   font-weight: 500;
@@ -30,11 +25,8 @@ body {
 .list-nav {
   display: flex;
   align-items: stretch;
-  flex-direction: row;
   list-style: none;
-  margin: 0;
   gap: 20px;
-  margin-right: 50px;
 }
 
 .nav-link {
@@ -42,9 +34,14 @@ body {
   text-decoration: none;
 }
 
-.logo {
-  margin-left: 50px;
-  margin-top: 10px;
+.nav-link.is-active::after {
+  content: "";
+  background-color: #00acdc;
+  border-radius: 8px;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  display: block;
 }
 
 .nav-link:hover {
@@ -55,12 +52,7 @@ body {
   color: #00ACDC;
 }
 
-.nav-link.is-active::after {
-  content: "";
-  background-color: #00acdc;
-  border-radius: 8px;
-  width: 100%;
-  height: 4px;
-  margin-bottom: -4px;
-  display: block;
+
+.logo {
+  size: 40px;
 }
