@@ -39,3 +39,6 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [ ] **CSS Variable** is used for a blue color
 - [ ] Pseudo-element is used for a blue line below the active link
 - [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
+
+Duplicated logo to drafts
+https://www.figma.com/file/9ES3Mo7wRjsw6Kn78tLSV8/MOYO-%2F-Header-(Copy)?type=design&mode=design
