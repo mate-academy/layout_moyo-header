@@ -1,9 +1,11 @@
+:root {
+  --main: #00acdc;
+}
 
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -23,13 +25,14 @@ header {
   height: 40px;
 }
 
-ul {
+.nav_list {
+  display: flex;
   padding: 0;
   margin: 0;
 }
 
-.nav_list {
-  display: flex;
+.nav_item {
+  list-style: none;
 }
 
 .nav_item:not(:last-child) {
@@ -40,23 +43,16 @@ ul {
   display: block;
   padding: 23px 0;
   color: #000;
-}
-
-li {
-  list-style: none;
-}
-
-a {
   text-decoration: none;
 }
 
 .nav_item a:visited,
 :hover {
-  color: #00acdc;
+  color: var(--main);
 }
 
 nav a.is-active {
-  color: #00acdc;
+  color: var(--main);
 
 }
 
@@ -71,7 +67,7 @@ nav a.is-active {
   display: block;
   content: "";
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--main);
   border-radius: 2px;
   width: 100%;
 }
