@@ -23,7 +23,7 @@ body {
 }
 
 .nav {
-  margin: 0 50px;
+  margin: 0 50px 0 0;
 }
 
 .nav__list {
@@ -51,6 +51,14 @@ body {
   align-items: center;
 }
 
+.nav__item:last-child .nav__link {
+  margin-right: 0;
+}
+
+.nav__item:first-child .nav__link {
+  margin-left: 0;
+}
+
 .is-active {
   color: var(--blue-color);
   position: relative;
@@ -69,12 +77,4 @@ body {
 
 .nav__link:hover {
   color: var(--blue-color);
-}
-
-.nav__item:last-child .nav__link {
-  margin-right: 0;
-}
-
-.nav__item:first-child .nav__link {
-  margin-left: 0;
 }
