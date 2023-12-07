@@ -3,9 +3,9 @@ body {
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
   text-transform: uppercase;
   margin: 0;
+  color: black;
 }
 
 :root {
@@ -14,6 +14,7 @@ body {
 }
 
 a {
+  font-weight: 500;
   text-decoration: none;
   color: black;
 }
@@ -24,42 +25,32 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
 }
 
 .img_header {
   max-height: 40px;
-  margin-left: 50px;
 }
 
-.nav {
-  margin-right: 50px;
-  padding: 0;
-}
-
-.ul_header {
+.nav__list {
   list-style-type: none;
   display: flex;
 }
 
-.li_header {
-  padding: 0;
+.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
-.li_header:first-child {
-  margin-left: 0;
-}
-
-.a__li {
+.nav__link {
   position: relative;
-  padding-bottom: 23px;
+  padding: 23px 0;
 }
 
-a[data-qa="hover"]:hover {
+.nav__item:nth-child(4) a:hover {
   color: var(--color-for-buttons-hover);
 }
 
-.is-active:hover {
+.is-active {
   color: var(--color-for-buttons-hover);
 }
 
@@ -71,5 +62,5 @@ a[data-qa="hover"]:hover {
   left: 0;
   right: 0;
   height: 4px;
-  border-radius: 4px;
+  border-radius: 8px;
 }
