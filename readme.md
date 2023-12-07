@@ -15,7 +15,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - header content should be vertically centered.
 - Logo should also be a link with an image inside (from [src/images](src/images)). But it should not be a part of the `<nav>`.
 - ❗️ the blue link with a line below should have a class `is-active` in addition to any other classes you add.
-- ❗️ add `data-qar="hove"` attribute to the 4th link for testing (`Laptops & computers`)
+- ❗️ add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)
 - link color should be changed on `:hover`
 - Use the `::after` and position it relative to a link with `is-active` class
 - Don't use flex `gap` property for indents. It's not supported in tests, use `margin` instead.
@@ -32,10 +32,10 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
-- [ ] Header height is set in 1 place (for the links)
-- [ ] Content is vertically centered (for any header height)
-- [ ] CSS is used to show all letters in Uppercase (don't type them in HTML)
-- [ ] Logo is an image wrapped with a link
-- [ ] **CSS Variable** is used for a blue color
-- [ ] Pseudo-element is used for a blue line below the active link
-- [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
+- [x] Header height is set in 1 place (for the links)
+- [x] Content is vertically centered (for any header height)
+- [x] CSS is used to show all letters in Uppercase (don't type them in HTML)
+- [x] Logo is an image wrapped with a link
+- [x] **color-text** is used for a blue color
+- [x] Pseudo-element is used for a blue line below the active link
+- [x] Code follows all the [Code Style Rules ❗️](./checklist.md)
