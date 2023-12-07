@@ -3,7 +3,7 @@ Create HTML page with the header using `flexbox` based on the [Figma Mockup](htt
 
 The page should match the design Pixel Perfect: all the sizes, colors and distanced MUST be the same as on the design.
 
-> Here are the [Layout Tasks Instructions](https://mate-academy.github.io/layout_task-guideline)
+> Here are the [Layout Tasks Instructions](https://mate-academy.gith.ub.io/layout_task-guideline)
 
 ## Requirements:
 
@@ -27,8 +27,8 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://dmitruz.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://dmitruz.io/layout_moyo-header/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
@@ -39,3 +39,6 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [ ] **CSS Variable** is used for a blue color
 - [ ] Pseudo-element is used for a blue line below the active link
 - [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
+
+Duplicated logo to drafts
+https://www.figma.com/file/9ES3Mo7wRjsw6Kn78tLSV8/MOYO-%2F-Header-(Copy)?type=design&mode=design
