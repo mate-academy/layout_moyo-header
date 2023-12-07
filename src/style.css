@@ -1,16 +1,15 @@
+:root {
+  --active-text-color: #00ACDC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-
   font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  font-style: normal;
-  line-height: normal;
-}
-
-:root {
-  --active-text-color: #00ACDC;
 }
 
 .header {
@@ -20,28 +19,23 @@ body {
   margin: 0 50px;
 }
 
-.logo-link {
+.logo-link, .logo {
   height: 40px;
   width: 40px;
-}
-
-.logo {
-  height: 40px;
-  width: 40px;
+  display: block;
 }
 
 .nav__list {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
 
 .nav__item {
   margin-right: 20px;
-  text-transform: uppercase;
   list-style-type: none;
-  line-height: 60px;
 }
 
 .nav__item:last-child {
@@ -49,8 +43,13 @@ body {
 }
 
 .nav__link {
+  display: block;
+  height: 100%;
+  font-size: 12px;
+  line-height: 60px;
+  font-weight: 500;
+  text-transform: uppercase;
   text-decoration: none;
-  padding: 23px 0;
   color: #000;
 }
 
