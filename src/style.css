@@ -38,41 +38,17 @@ body {
 }
 
 .box-link {
-  color: #000;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
   position: relative;
+  color: #000;
 }
 
-.box-item.is-active .box-link,
-.box-item:nth-child(1) .box-link {
+.box-item .box-link:hover {
   color: var(--main-color);
-}
-
-.box-item .box-link::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--main-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: scaleX(0);
-}
-
-.box-item .box-link:hover::after {
-  transform: scaleX(1);
-}
-
-.box-item:nth-child(1) .box-link {
-  position: relative;
 }
 
 .box-item:nth-child(1) .box-link::after {
