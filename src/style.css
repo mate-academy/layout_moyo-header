@@ -1,11 +1,8 @@
 
 * {
   margin: 0;
-
-}
-
-html {
   box-sizing: border-box;
+
 }
 
 a {
@@ -14,6 +11,8 @@ a {
   height: 60px;
   display: flex;
   align-items: center;
+
+
 }
 
 img {
@@ -27,7 +26,7 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
-  margin: 10px 50px;
+
 }
 
 
@@ -35,6 +34,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin: auto;
+  padding: 0 50px;
 }
 
 nav {
@@ -70,6 +70,18 @@ a:hover {
 
 .is-active {
   color: #00ACDC;
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: #00ACDC;
+  position: absolute;
+  border-radius: 8px;
+  bottom: 0;
+
 }
 
 
