@@ -1,5 +1,7 @@
 * {
   font-family: Roboto, sans-serif;
+
+  --color-link: #00ACDC
 }
 
 body {
@@ -8,7 +10,7 @@ body {
   font-size: 12px;
 }
 
-.logo {
+img {
   height: 40px;
   width: 40px;
 }
@@ -26,15 +28,18 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-right: -20px;
 }
 
-.nav__items {
+.nav__item {
   margin-right: 20px;
   display: inline-block;
 }
 
-.nav__links {
+.nav__item:last-child {
+  margin: 0;
+}
+
+.nav__link {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
@@ -46,15 +51,15 @@ body {
 }
 
 a:hover {
-  color: #00ACDC;
+  color: var(--color-link);
 }
 
 a:active {
-  color: #00ACDC;
+  color: var(--color-link);
 }
 
 .is-active {
-  color: #00ACDC;
+  color: var(--color-link);
 }
 
 .is-active::after {
@@ -63,13 +68,13 @@ a:active {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00ACDC;
+  background-color: var(--color-link);
   text-align: center;
   bottom: 0;
   position: absolute;
   left: 0;
 }
 
-.nav__link[data-qa="hover"]:hover {
-  color: #00ACDC;
-}
+/* .nav__link[data-qa="hover"]:hover {
+  color: var(--color-link);
+} */
