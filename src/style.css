@@ -1,63 +1,45 @@
-body {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-  box-sizing: border-box;
-
+html {
   --need-color: #00ACDC;
 }
 
-.header {
-  position: relative;
-  right: 50px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #FFF;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+body {
   margin: 0;
-  padding: 0;
-  flex-shrink: 1;
+  font-family: Roboto, sans-serif;
+  padding: 0 50px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav__list {
   display: flex;
-  text-align: center;
   list-style: none;
-  text-decoration: none;
   margin: 0;
   padding: 0;
 }
 
 .nav__item {
-  display: flex;
   color: #000;
+  display: block;
   text-decoration: none;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
   text-transform: uppercase;
+  margin-right: 20px;
   line-height: 60px;
-  height: 60px;
-  text-align: center;
-  margin: 0 10px;
-  padding: 0;
-  flex-shrink: 0;
+  font-size: 12px;
 }
 
-.nav__item.apple{
-  position: relative;
-  margin-left: 0;
-  color: var(--need-color);
-}
-
-.logo__image{
+.logo__image {
   display: flex;
-  width: 40px;
-  line-height: 40px;
-  flex-shrink: 0;
-  background-color: lightgray;
-  margin: 0 0 0 100px;
+}
+
+.is-active {
+  display: flex;
+  position: relative;
+  color: var(--need-color)
 }
 
 .video {
@@ -66,13 +48,11 @@ body {
 
 .is-active::after {
   content: "";
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  bottom: 0;
+  position: absolute;
   height: 4px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background: var(--need-color);
+  background-color: var(--need-color);
 }
 
 [data-qa="hover"]:hover {
