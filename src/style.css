@@ -12,7 +12,6 @@ body {
   padding: 0 50px;
   align-items: center;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
 }
@@ -31,11 +30,17 @@ body {
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation-item {
   position: relative;
   margin-left: 20px;
+}
+
+.navigation-item:first-child {
+  margin-left: 0;
 }
 
 .a-link {
@@ -74,9 +79,9 @@ nav li:hover::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
   height: 4px;
   border-radius: 8px;
   background-color: #00acdc;
+  display: block;
+  width: 100%;
 }
