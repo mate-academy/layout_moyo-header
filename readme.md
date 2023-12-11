@@ -16,7 +16,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - Logo should also be a link with an image inside (from [src/images](src/images)). But it should not be a part of the `<nav>`.
 - ❗️ the blue link with a line below should have a class `is-active` in addition to any other classes you add.
 - ❗️ add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)
-- link color should be changed on `:hover`
+- n
 - Use the `::after` and position it relative to a link with `is-active` class
 - Don't use flex `gap` property for indents. It's not supported in tests, use `margin` instead.
 - There should not be margins before the first and after the last list items
@@ -27,8 +27,10 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https:// NikitaSmirnovUK
+.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://NikitaSmirnovUK
+.github.io/layout_moyo-header/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
