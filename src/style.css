@@ -1,31 +1,36 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  box-sizing: border-box;
 
   --need-color: #00ACDC;
 }
 
 .header {
+  position: relative;
+  right: 50px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-shrink: 0;
   background: #FFF;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  margin: 0;
+  padding: 0;
+  flex-shrink: 1;
+
+
 }
 
 .nav__list {
   display: flex;
-  position: relative;
   text-align: center;
   list-style: none;
   text-decoration: none;
   margin: 0;
   padding: 0;
-  right: 50px;
-}
 
+}
 
 .nav__item {
   display: flex;
@@ -37,33 +42,37 @@ body {
   text-transform: uppercase;
   line-height: 60px;
   height: 60px;
-  margin-left: 20px;
   text-align: center;
-
-
-}
-
-.logo__image {
-  display: block;
-  position: relative;
-  width: 40px;
-  line-height: 40px;
+  margin: 0 10px;
+  padding: 0;
   flex-shrink: 0;
-  background-color: lightgray;
-  left: 50px;
-  align-items: center;
+
+
 }
 
-.is-active {
+.nav__item.apple{
   position: relative;
   margin-left: 0;
   color: var(--need-color);
 }
 
-.is-active::after {
+.logo__image{
+  display: flex;
+  width: 40px;
+  line-height: 40px;
+  flex-shrink: 0;
+  background-color: lightgray;
+  margin: 0 0 0 100px;
+
+}
+
+.video {
+  margin-right: 0;
+}
+
+.nav__item.is-active.apple::after {
   content: "";
   position: absolute;
-  display: block;
   bottom: 0;
   width: 100%;
   height: 4px;
@@ -74,16 +83,4 @@ body {
 
 [data-qa="hover"]:hover {
   color: var(--need-color);
-}
-
-@media (max-width: 1024px) {
-  header {
-    width: 1024px;
-  }
-}
-
-@media (min-width: 1024px) {
-  header {
-    width: 1200px;
-  }
 }
