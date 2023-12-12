@@ -1,5 +1,7 @@
 html {
   font-family: Roboto, sans-serif;
+
+  --main-color: #00ACDC;
 }
 
 body {
@@ -8,6 +10,7 @@ body {
 }
 
 .header {
+  height: 60px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -19,10 +22,6 @@ body {
   width: 40px;
   height: 40px;
   display: block;
-}
-
-.nav {
-  display: inline-block;
 }
 
 .nav__list {
@@ -42,20 +41,21 @@ body {
 }
 
 .nav__link {
+  display: flex;
+  height: 60px;
   color: #000;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 12px;
+  font-style: normal;
   font-weight: 500;
-  line-height: 60px;
-  display: inline-block;
+  line-height: normal;
   align-items: center;
   position: relative;
 }
 
 .is-active {
-  color: #00ACDC;
-  position: relative;
+  color: var(--main-color);
 }
 
 .is-active::after {
@@ -64,13 +64,14 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00ACDC;
+  background-color: var(--main-color);
   text-align: center;
   bottom: 0;
   position: absolute;
+  flex-shrink: 0;
   left: 0;
   }
 
-.nav__link[data-qa="hover"]:hover {
-  color: #00ACDC;
+.nav__link:hover {
+  color: var(--main-color);
 }
