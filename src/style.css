@@ -1,3 +1,74 @@
+html {
+  --main-color: #00acdc;
+}
+
 body {
   margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: aquamarine;
+}
+
+.moyo__header {
+  background-color: white;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moyo__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  line-height: 60px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 12px;
+  list-style-type: none;
+  font-weight: 500;
+}
+
+.nav__list .nav__item {
+  text-decoration: none;
+  display: block;
+  margin-left: 20px;
+  color: black;
+}
+
+/* .nav__item:first-child {
+  margin-left: 0;
+} */
+
+.nav__list .is-active {
+  color: var(--main-color);
+  position: relative;
+  display: block;
+  margin-left: 0;
+}
+
+.nav__item:hover {
+  color: var(--main-color);
+}
+
+.nav__list .is-active::after {
+  text-decoration: none;
+  position: absolute;
+  content: "";
+  background-color: var(--main-color);
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+
 }
