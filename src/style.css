@@ -1,3 +1,90 @@
+:root {
+  --color-touch:  #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.navigation {
+  max-height: 60px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin-right: 0;
+  padding: 0 50px;
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: block;
+  margin: 10px 0;
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.navigation-item:first-child {
+  margin-left: 0;
+}
+
+.a-link {
+  text-decoration: none;
+  height: 60px;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.a-link:hover {
+  color: var( --color-touch);
+}
+
+.is-active,
+.navigation_link:hover {
+  color: var( --color-touch);
+}
+
+.navigation-item::after {
+  content: "";
+  display: block;
+  width: 0;
+  background-color: var( --color-touch);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navigation-item:hover::after {
+  width: 100%;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var( --color-touch);
+  display: block;
+  width: 100%;
 }
