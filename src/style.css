@@ -7,17 +7,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
 }
 
 img {
-margin-left: 50px;
+  padding: 50px;
 }
 
 .nav__list {
   display: flex;
   flex-direction: row;
   list-style: none;
-  margin-right: 40px;
+  padding: 0 50px;
 }
 
 .nav__link {
@@ -28,13 +29,12 @@ margin-left: 50px;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
-  height: 14px;
+  line-height: 60px;
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
   text-align: center;
-  margin: 8.5px 10px;
+  margin: 0 10px;
 }
 
 .nav__link:hover {
@@ -47,11 +47,15 @@ margin-left: 50px;
 }
 
 .is-active::after {
-  content: ' ';
+  content: "";
   border-radius: 8px;
   background : #00ACDC;
   height: 4px;
   width: 100%;
   position: absolute;
-  bottom: -22px;
+  bottom: 0;
+}
+
+.last {
+  margin-right: 0;
 }
