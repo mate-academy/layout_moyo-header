@@ -2,23 +2,36 @@
   --link-color: #00ACDC;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
 
 .header {
-  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  width: 100vw;
   padding: 0 50px;
+
 }
 
 .nav__list {
   display: flex;
   flex-direction: row;
   list-style: none;
+}
+
+.nav__item{
+  margin-left: 20px;
+}
+
+.nav__list:first-child{
+  margin-left: 0;
 }
 
 .nav__link {
@@ -34,7 +47,6 @@ body {
   color: #000;
   text-transform: uppercase;
   text-align: center;
-  margin-left: 20px;
 }
 
 .nav__link:hover {
