@@ -4,10 +4,12 @@ body {
   font-weight: 500;
   font-size: small;
   font-style: bold;
+
+  --blue: #00ACDC;
 }
 
 
-li {
+.nav__list {
   padding: 23px 0;
   margin-right: 21px;
 }
@@ -40,28 +42,28 @@ a {
 }
 
 img {
-  align-self: center;
-  overflow: clip;
+  width: 40px;
+  height: 40px;
 }
 
 
 :hover {
-  color: #00ACDC;
+  color: var(--blue);
 }
+
+.is-active {
+  color: var(--blue);
+  position: relative;
+}
+
 
 .is-active::after {
   display: block;
   content: '';
-  background: #00ACDC;;
+  background: var(--blue);
+  ;
   position: absolute;
   width: 37px;
   height: 4px;
 
 }
-
-.is-active {
-  color: #00ACDC;
-  position: relative;
-}
-
-
