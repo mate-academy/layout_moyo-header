@@ -1,17 +1,15 @@
 
 body {
   margin: 0;
-padding: 0;
 background-color: #fff;
-border: 0;
-font-family: Roboto, sans-serif;
+font-family: Roboto, sans-serif, Arial;
 }
 
 header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
 }
 
 .logo {
@@ -22,62 +20,50 @@ line-height: 0;
 .header {
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 background: #FFF;
-
 }
 
 .nav-link {
 text-decoration: none;
 display: flex;
 align-items: center;
-color: black;
+color: #000;
 position: relative;
 text-transform: uppercase;
 padding: 23px 0;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
   }
 
 .nav-list {
   margin: 0;
 display: flex;
 list-style-type: none;
-font-family: Roboto, sans-serif;
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-text-transform: uppercase;
 align-items: center;
-justify-content: flex-end;
 padding: 0;
 }
 
-.nav-item {
-margin-left: 20px;
-}
-
-.nav-item:first-child {
-margin-left: 0;
+.nav-item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav-link:hover {
 color: #00ACDC;
 }
 
-.is-active::after{
-position:absolute;
+.is-active::after {
+position: absolute;
 height: 4px;
 border-radius: 8px;
 background: #00ACDC;
 bottom: 0;
 content: "";
-flex-shrink: 0;
-
-width: 36;
+width: 37;
 }
 
 .is-active {
   position: relative;
   color: #00ACDC;
 }
-
-
-
