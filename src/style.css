@@ -1,3 +1,102 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --nav-height: 60px;
+  --margin-between-items: 20px;
+  --blue-color: #00ACDC;
+  --underline-width: 36px;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
 }
+
+.moyo__logo {
+  display: flex;
+  width: 40px;
+  margin-left: 50px;
+  flex-shrink: 0;
+}
+
+.header__class{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--nav-height);
+}
+
+.navigation__bar {
+  /* display: flex;
+  justify-content: center;
+  text-align: center; */
+  margin-right: 50px;
+}
+
+.ul__inside__navbar a {
+  line-height: 60px;
+
+  /* text-align: center; */
+}
+
+.ul__inside__navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  margin-right: var(--margin-between-items);
+}
+
+.header__class * {
+  display: inline-block;
+}
+
+.nav__item a{
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation__bar :first-child {
+  margin-left: 0;
+}
+
+.navigation__bar :last-child {
+  margin-right: 0;
+}
+
+.nav__item.item4 a:hover {
+  color: var(--blue-color);
+}
+
+.is-active {
+  position: relative;
+}
+
+.nav__item .is-active {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  background-color: var(--blue-color);
+  width: var(--underline-width);
+  height: 4px;
+  border-radius: 2px;
+  top: 56px;
+  left: 0;
+}
+
+
+
+
+
