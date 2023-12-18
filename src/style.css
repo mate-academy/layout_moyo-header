@@ -41,6 +41,8 @@ html {
   text-decoration: none;
   height: 60px;
   line-height: 60px;
+  display: block;
+  position:relative
 }
 
 .box-item.is-active .box-link {
@@ -54,10 +56,12 @@ html {
 .box-item.is-active .box-link::after {
 content: "";
 display: block;
+bottom: 0;
 width: 100%;
 height: 4px;
 background-color: var(--main-color);
 border-radius: 4px;
+position: absolute
 }
 
 .box-item:first-child {
