@@ -26,11 +26,13 @@ html {
 }
 
 .box {
+  display: flex;
+  flex-direction: row;
   list-style: none;
 }
 
 .box-item {
-  display: inline-block;
+  display: flex;
   margin-left: 20px;
 }
 
@@ -45,15 +47,15 @@ html {
   position:relative
 }
 
-.box-item.is-active .box-link {
+.is-active {
   color:var(--main-color);
 }
 
-.box-item .box-link:hover {
+.box-link:hover {
   color: var(--main-color);
 }
 
-.box-item.is-active .box-link::after {
+.is-active::after {
 content: "";
 display: block;
 bottom: 0;
