@@ -21,7 +21,6 @@ body {
 .logo {
   display: flex;
   width: 40px;
-  margin-left: 50px;
   flex-shrink: 0;
 }
 
@@ -30,57 +29,38 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
   height: var(--nav-height);
 }
 
-.navbar {
-  margin-right: 50px;
+.nav__link {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+  padding: 23px 0;
+  line-height: normal;
 }
 
-.nav__item {
+.nav__item:not(:last-child) {
   margin-right: var(--margin-between-items);
 }
 
 .nav__list {
   display: flex;
+  justify-content: center;
+  text-align: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.nav__link {
-  display: block;
-  height: 60px;
-  line-height: 60px;
-}
-
-
-.header__class * {
-  display: inline-block;
-}
-
-.nav__item a{
-  text-decoration: none;
-  color: #000;
-}
-
-.navbar :first-child {
-  margin-left: 0;
-}
-
-.navbar :last-child {
-  margin-right: 0;
-}
-
-.nav__item.item4 a:hover {
+.nav__link:hover {
   color: var(--blue-color);
 }
 
 .is-active {
   position: relative;
-}
-
-.nav__item .is-active {
   color: var(--blue-color);
 }
 
@@ -91,11 +71,6 @@ body {
   width: var(--underline-width);
   height: 4px;
   border-radius: 2px;
-  top: 56px;
+  bottom: 0;
   left: 0;
 }
-
-
-
-
-
