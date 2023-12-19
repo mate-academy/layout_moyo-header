@@ -1,3 +1,106 @@
+:root {
+  --link-on: #00acdc;
+  --link-off: black;
+}
+
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
+
+.header {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  padding: 0 50px 0 30px;
+}
+
+a.imgs{
+  align-self: center;
+  display: block;
+  margin-left: 0;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  padding-inline-start: 0;
+
+}
+
+.nav_item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+a:link {
+  color: var(--link-off); /* Kolor tekstu */
+  text-decoration: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin-left: 20px;
+}
+
+a:visited {
+  color: var(--link-off);
+}
+
+a:hover {
+  color: var(--link-on);
+}
+
+a:active {
+  color: var(--link-on);
+  position: relative;
+}
+
+a.is-active:link {
+  color: var(--link-on);
+  position: relative;
+  margin-left: 0;
+}
+
+a.is-active:visited {
+  color: var(--link-on);
+  position: relative;
+}
+
+a.is-active:hover {
+  color: var(--link-on);
+  position: relative;
+}
+
+a.is-active:active {
+  color: var(--link-on);
+  position: relative;
+
+}
+
+a:active::after, a.is-active::after {
+  content: ""; /* Dodanie pustego elementu */
+  display: block; /* Ustawienie na blokowy, aby można było korzystać z margin i padding */
+  border-bottom: 4px solid var(--link-on); /* Dodanie linii poniżej aktywnego linku */
+  position: absolute; /* Ustawienie pozycji jako bezwzględnej */
+  border-radius: 2px;
+  left: 0; /* Ustawienie na zero, aby zaczynało się od lewej strony linku */
+  right: 0; /* Ustawienie na zero, aby kończyło się na prawej stronie linku */
+  bottom: 0; /* Ustawienie wartości ujemnej, aby umieścić linię poniżej linku */
+}
+
+
