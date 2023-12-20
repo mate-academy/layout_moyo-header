@@ -3,7 +3,6 @@
   --link-off: black;
 }
 
-
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -13,12 +12,12 @@ body {
   display: flex;
   height: 60px;
   justify-content: space-between;
-  padding: 0 50px 0 30px;
+  padding: 0 50px;
 }
 
-a.imgs{
+.header__logo{
   align-self: center;
-  display: block;
+  display: flex;
   margin-left: 0;
 }
 
@@ -43,8 +42,8 @@ a.imgs{
   height: 100%;
 }
 
-a:link {
-  color: var(--link-off); /* Kolor tekstu */
+.nav_link:link {
+  color: var(--link-off);
   text-decoration: none;
   font-size: 12px;
   font-style: normal;
@@ -57,50 +56,104 @@ a:link {
   margin-left: 20px;
 }
 
-a:visited {
+.nav_link:visited {
   color: var(--link-off);
 }
 
-a:hover {
+.nav_link:hover {
   color: var(--link-on);
 }
 
-a:active {
-  color: var(--link-on);
-  position: relative;
-}
-
-a.is-active:link {
-  color: var(--link-on);
-  position: relative;
-  margin-left: 0;
-}
-
-a.is-active:visited {
+.nav_link:active {
   color: var(--link-on);
   position: relative;
 }
 
-a.is-active:hover {
-  color: var(--link-on);
-  position: relative;
-}
-
-a.is-active:active {
-  color: var(--link-on);
-  position: relative;
-
-}
-
-a:active::after, a.is-active::after {
-  content: ""; /* Dodanie pustego elementu */
-  display: block; /* Ustawienie na blokowy, aby można było korzystać z margin i padding */
-  border-bottom: 4px solid var(--link-on); /* Dodanie linii poniżej aktywnego linku */
-  position: absolute; /* Ustawienie pozycji jako bezwzględnej */
+.nav_link:active::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid var(--link-on);
+  position: absolute;
   border-radius: 2px;
-  left: 0; /* Ustawienie na zero, aby zaczynało się od lewej strony linku */
-  right: 0; /* Ustawienie na zero, aby kończyło się na prawej stronie linku */
-  bottom: 0; /* Ustawienie wartości ujemnej, aby umieścić linię poniżej linku */
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.is-active:link {
+  color: var(--link-on);
+  text-decoration: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin-left: 0;
+  position: relative;
+}
+
+.is-active:visited {
+  color: var(--link-on);
+}
+
+.is-active:hover {
+  color: var(--link-on);
+}
+
+.is-active:active {
+  color: var(--link-on);
+  position: relative;
+}
+
+.is-active:link::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid var(--link-on);
+  position: absolute;
+  border-radius: 2px;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 
+a[data-qa="hover"]:link {
+  color: var(--link-off);
+  text-decoration: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin-left: 20px;
+}
+
+a[data-qa="hover"]:visited {
+  color: var(--link-off);
+}
+
+a[data-qa="hover"]:hover {
+  color: var(--link-on);
+}
+
+a[data-qa="hover"]:active {
+  color: var(--link-on);
+  position: relative;
+}
+
+a[data-qa="hover"]:active::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid var(--link-on);
+  position: absolute;
+  border-radius: 2px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
