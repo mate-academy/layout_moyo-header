@@ -82,52 +82,7 @@ body {
   color: var(--link-on);
 }
 
-.is-active:hover {
-  color: var(--link-on);
-}
-
-.is-active:active {
-  color: var(--link-on);
-  position: relative;
-}
-
-.is-active::after {
-  content: "";
-  display: block;
-  border-bottom: 4px solid var(--link-on);
-  position: absolute;
-  border-radius: 2px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-
-a[data-qa="hover"]:link {
-  color: var(--link-off);
-  text-decoration: none;
-  font-size: 12px;
-  text-transform: uppercase;
-  align-items: center;
-  display: flex;
-  height: 100%;
-  margin-left: 20px;
-}
-
-a[data-qa="hover"]:visited {
-  color: var(--link-off);
-}
-
-a[data-qa="hover"]:hover {
-  color: var(--link-on);
-}
-
-a[data-qa="hover"]:active {
-  color: var(--link-on);
-  position: relative;
-}
-
-a[data-qa="hover"]::after {
+.is-active::after, .nav_link:active::after {
   content: "";
   display: block;
   border-bottom: 4px solid var(--link-on);
