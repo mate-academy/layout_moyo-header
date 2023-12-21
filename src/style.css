@@ -1,3 +1,91 @@
-body {
-  margin: 0;
+:root {
+  --blue-color: #00ACDC;
 }
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
+}
+
+.img {
+  padding-left: 50px;
+  height: 40px;
+  width: 40px;
+  vertical-align: bottom;
+}
+
+.link {
+  margin-left: 20px;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 5;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1em;
+  color: black;
+}
+
+.nav {
+  margin-right: 50px;
+}
+
+.container {
+  padding: 0;
+  display: flex;
+  margin: 0;
+  list-style: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.is-active {
+  color: var(--blue-color);
+  position: relative;
+}
+
+.link.is-active::after {
+  content: "";
+  width: 37px;
+  height: 4px;
+  background-color: var(--blue-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 8px;
+}
+
+.nav .link-4:hover {
+  text-decoration: none;
+  color: var(--blue-color);
+}
+
+.container li:first-child a {
+  margin-left: 0;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    width: 100%;
+  }
+}
+
+
+
