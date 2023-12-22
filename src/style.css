@@ -39,13 +39,37 @@ nav {
 }
 
 .nav-button {
-  position: relative;
-  margin: 0 20px 0  0;
+  margin: 0 20px 0 0;
   padding: 10px 0;
   height: 40px;
   display: flex;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.is-active {
+  color: #00ACDC;
+  position: relative;
+  margin: 0 20px 0 0;
+  padding: 10px 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #00ACDC;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 8px;
 }
 
 .nav-button.last {
@@ -56,22 +80,6 @@ nav {
   color: #00ACDC;
 }
 
-.nav-button.active {
-  color: #00ACDC;
-}
-
-.nav-button.active::after {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background-color:#00ACDC;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-radius: 8px;
-}
 
 .nav-button.laptops:hover {
   color: #000;
