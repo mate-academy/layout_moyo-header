@@ -1,4 +1,3 @@
-/* Google Fonts */
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
 
 body {
@@ -6,33 +5,35 @@ body {
   background-color: lightgray;
 }
 
-/* Header */
-header {
+:root {
+  --active-color: #00ACDC;
+}
+
+.header {
   width: 100vw;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
-img {
+.logo {
   width: 40px;
-  margin-left: 50px;
 }
 
-/* Navigation */
-.navigation {
-  height: 60px;
+.nav {
   display: flex;
-  margin-right: 50px;
 }
 
-.main-nav {
+.nav__list {
   display: flex;
   list-style: none;
+  padding: 0;
 }
 
-.nav-link {
+.nav__link {
+  height: 60px; 
   text-decoration: none;
   color: black;
   font-weight: 500;
@@ -45,23 +46,23 @@ img {
   margin-left: 20px;
 }
 
-.nav-link:hover,
-.nav-link:active {
-  color: #00ACDC;
+.nav__link:hover,
+.nav__link:active {
+  color: var(--active-color);
 }
 
 .is-active {
-  color: #00ACDC;
+  color: var(--active-color);
 }
 
 .is-active::after {
   content: "";
   display: block;
   position: absolute;
-  bottom: -27px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #00ACDC;
+  background-color: var(--active-color);
   border-radius: 30px;
 }
