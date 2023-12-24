@@ -6,11 +6,16 @@ body {
   --link-active: #00ACDC;
 }
 
+a {
+  text-decoration: none;
+}
+
 ul {
   list-style-type: none;
   text-transform: uppercase;
   font-size: 12px;
   padding: 0;
+  margin: 0;
 }
 
 .header {
@@ -20,11 +25,43 @@ ul {
   padding: 0 50px;
 }
 
+.header__logo {
+  height: 40px;
+  width: 40px;
+}
+
 .header__menu-list {
   display: flex;
   align-items: center;
+}
+
+.menu__list-link {
+  color: #000;
+  line-height: 60px;
+}
+
+.menu__list-link:hover {
+  color: var(--link-active);
+  cursor: pointer;
+}
+
+.is-active .menu__list-link{
+  color: var(--link-active);
+}
+
+.is-active {
   position: relative;
-  height: 50px;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--link-active);
 }
 
 .menu__list-item {
@@ -35,26 +72,4 @@ ul {
   margin-right: 0;
 }
 
-.menu__list-item:hover {
-  color: var(--link-active);
-  cursor: pointer;
-}
 
-[data-qa="hover"] {
-  color: var(--link-active);
-}
-
-.is-active {
-  color: var(--link-active);
-}
-
-.is-active::after {
-  content: "";
-  position: absolute;
-  display: block;
-  bottom: 0;
-  width: 37px;
-  height: 4px;
-  border-radius: 4px;
-  background-color: var(--link-active);
-}
