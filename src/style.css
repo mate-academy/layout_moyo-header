@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   --need-color: #00ACDC;
 }
@@ -5,7 +9,6 @@ html {
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  padding: 0 50px;
 }
 
 .header {
@@ -13,7 +16,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  
+  padding: 0 50px;
 }
 
 .nav__list {
@@ -23,12 +26,15 @@ body {
   padding: 0;
 }
 
+.nav__item {
+  margin-right: 20px;
+}
+
 .nav__link {
   color: #000;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 20px;
   line-height: 60px;
   font-size: 12px;
 }
@@ -43,7 +49,7 @@ body {
   color: var(--need-color)
 }
 
-.nav__item:last-of-type a {
+.nav__item:last-child {
   margin-right: 0;
 }
 
