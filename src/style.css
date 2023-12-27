@@ -1,11 +1,12 @@
 :root {
   --primary-color: #00acdc;
+  --secondary-color: #000;
+  --general-font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0;
-  /* stylelint-disable-next-line font-family-name-quotes */
-  font-family: "Roboto", sans-serif;
+  font-family: var(--general-font-family);
 }
 
 .container {
@@ -35,14 +36,20 @@ body {
   display: flex;
 }
 
-.nav__link {
+.nav__item {
   list-style: none;
   margin-left: 20px;
-  text-transform: uppercase;
 }
 
-.nav__link:first-child {
+.nav__item:first-child {
   margin-left: 0;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  height: 20px;
+  color: var(--secondary-color);
 }
 
 .nav__link:hover {
@@ -50,16 +57,16 @@ body {
   color: var(--primary-color);
 }
 
-[data-qa="hover"] {
+.hover {
   color: var(--primary-color);
 }
 
 .is-active::after {
   display: block;
-  top: 18.5px;
-  position: relative;
   content: "";
   height: 4px;
+  position: relative;
+  top: 18.5px;
   border-radius: 8px;
   background: var(--primary-color);
   opacity: 0;
