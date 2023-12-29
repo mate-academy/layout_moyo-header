@@ -1,5 +1,7 @@
 html {
   font-family: Roboto, sans-serif;
+
+  --blue-color: #00ACDC;
 }
 
 body {
@@ -8,6 +10,7 @@ body {
 }
 
 .header {
+  height: 60px;
   display: flex;
   padding: 0 50px;
   justify-content: space-between;
@@ -40,7 +43,7 @@ body {
 }
 
 .link:hover {
-  color: #00ACDC;
+  color: var(--blue-color);
 }
 
 .nav-links .nav-item:not(:first-child) {
@@ -48,7 +51,7 @@ body {
 }
 
 .link.is-active {
-  color: #00ACDC;
+  color: var(--blue-color);
 }
 
 .is-active::after {
@@ -59,6 +62,6 @@ body {
   transform: translateX(-50%);
   width: 100%;
   height: 4px;
-  background-color: #00ACDC;
+  background-color: var(--blue-color);
   border-radius: 8px;
 }
