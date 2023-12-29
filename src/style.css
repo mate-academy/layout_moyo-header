@@ -1,3 +1,7 @@
+:root {
+  --hover-color: #00ACDC;
+}
+
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
@@ -12,13 +16,9 @@ body {
   padding: 0 50px;
 }
 
-.logo {
-  height: 40px;
-  flex-shrink: 0;
-}
-
 .nav__list {
   margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
 }
@@ -31,6 +31,11 @@ body {
   position: relative;
 }
 
+.nav__item:first-child {
+  margin-left: 0;
+
+}
+
 .nav__link {
   text-decoration: none;
   color: inherit;
@@ -41,11 +46,11 @@ body {
 }
 
 .nav__link:hover {
-  color: #00ACDC;
+  color: var(--hover-color);
 }
 
 .is-active {
-  color: #00ACDC;
+  color: var(--hover-color);
 }
 
 .is-active::after {
@@ -56,7 +61,7 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background-color: #00ACDC;
+  background-color: var(--hover-color);
 }
 
 ul {
