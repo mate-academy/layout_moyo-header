@@ -30,6 +30,10 @@ li{
   list-style-type: none;
 }
 
+:root {
+  --color: #00ACDC;
+}
+
 .nav__item {
   display: block;
   margin-left: 20px;
@@ -49,7 +53,7 @@ li{
 }
 
 .nav__link:hover {
-  color: #00ACDC;
+  color: var(--color);
 }
 
 .is-active {
@@ -58,7 +62,7 @@ li{
 
 .is-active::after {
   position: absolute;
-  background: #00ACDC;
+  background: var(--color);
   left: 0;
   width: 100%;
   height: 4px;
