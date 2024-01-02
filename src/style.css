@@ -1,10 +1,11 @@
-/* stylelint-disable font-family-name-quotes */
 * {
   margin: 0;
   }
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
+
+  --link-color: #00ACDC;
 }
 
 body {
@@ -32,7 +33,6 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-
 }
 
 .nav__link {
@@ -44,21 +44,20 @@ body {
   font-weight: 500;
   font-size: 12px;
   position: relative;
-
 }
 
 .nav__link:hover {
-  color: #00ACDC;
+  color: var(--link-color);
 }
 
 .is-active {
   margin-left: 0;
-  color: #00ACDC;
+  color: var(--link-color);
 }
 
 .is-active::after {
   content: " ";
-  background: #00ACDC;
+  background: var(--link-color);
   width: 100%;
   height: 4px;
   border-radius: 8px;
