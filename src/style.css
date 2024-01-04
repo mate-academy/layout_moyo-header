@@ -6,75 +6,67 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding: 0 50px;
-
-}
-
-.nav__link {
-  display: flex;
-  height: 60px;
-  position: relative;
-  text-decoration: none;
-  color: black;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: calc(100% - 12px) 0;
-  margin: 20;
-}
-
-.nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  list-style-type: none;
-
-  margin: 0;
-}
-
-.nav__link:hover {
-  color: #00ACDC;
-  display: flex;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  margin: 0;
-  padding: 0;
-  border: none;
-  vertical-align: middle;
-}
-
-.is-active {
-  position: relative;
   display: block;
-  color:#00ACDC;
-  text-decoration: none;
-  padding-top: 22.7;
-  padding-bottom: 22.7;
+  height: 40px;
+  width: 40px;
 }
 
-.is-active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0%;
-  width: 37;
-  height: 4px;
-  border-radius: 8px;
-  background-color: #00ACDC;
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.nav__link1 {
-  color: #00ACDC;
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 60px;
+
+  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
   text-transform: uppercase;
-  word-wrap: break-word;
-  padding-top: 22.7;
-  padding-bottom: 22.7;
+  color: #000;
+
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.nav__link.is-active {
+  color: #00acdc;
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
 }
