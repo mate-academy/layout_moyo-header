@@ -1,3 +1,70 @@
-body {
-  margin: 0;
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,100&display=swap';
+
+:root {
+  --link-color: #00ACDC;
 }
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moyo_logo {
+  height: 40px;
+  width: 40px;
+  margin: auto 50px;
+}
+
+.links {
+  display: flex;
+  margin-right: 50px;
+}
+
+.link {
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-left: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: var(--link-color);
+  border-radius: 8px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.is-active {
+  color: var(--link-color);
+}
+
+.menu {
+  display: flex;
+}
+
+.link_url {
+  display: block;
+  padding: 24px 0;
+}
+
+.link_url:hover {
+  color: var(--link-color);
+}
+
