@@ -2,76 +2,67 @@
   --active: #00ACDC;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  font-family: Roboto, sans-serif;
 }
 
-header {
-  font-family: Roboto, sans-serif;
+body {
+  margin: 0;
+}
+
+.header {
+  margin: 0;
   font-size: 12px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
 }
 
-.logo {
+.logo img {
   display: flex;
+  height: 40px;
+  width: 40px;
 }
 
-nav {
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+.nav__list {
   padding: 0;
-}
-
-nav ul {
+  margin: 0;
   display: flex;
-  flex-direction: row;
   list-style: none;
 }
 
-nav ul a {
+.nav__link {
   display: flex;
   text-align: center;
   align-items: center;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
-  margin-left: 20px;
-  height: 60px;
+  padding: 23px 0;
 }
 
-nav ul a:hover {
+.nav__link:hover {
   color: var(--active);
 }
 
-a.is-active {
+.nav__link.is-active {
   display: flex;
   position: relative;
   color: var(--active);
 }
 
-a.is-active::after {
-  display: flex;
+.nav__link.is-active::after {
+  bottom: 0;
+  display: block;
   position: absolute;
   border-radius: 8px;
   content: '';
-  border: 2px solid var(--active);
+  height: 4px;
+  background-color: var(--active);
   width: 100%;
-  box-sizing: border-box;
-  align-self: flex-end;
-  justify-content: center;
 }
 
-.nav ul li:first-child a {
-  margin-left: 0;
+.nav__list .nav__item:not(:first-child) .nav__link {
+  margin-left: 20;
 }
-
-/* [data-qa="hover"] {
-  color: #00ACDC;
-} */
