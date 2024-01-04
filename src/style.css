@@ -1,3 +1,7 @@
+:root {
+  --active: #00ACDC;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -43,13 +47,13 @@ nav ul a {
 }
 
 nav ul a:hover {
-  color: #00ACDC;
+  color: var(--active);
 }
 
 a.is-active {
   display: flex;
   position: relative;
-  color: #00ACDC;
+  color: var(--active);
 }
 
 a.is-active::after {
@@ -57,7 +61,7 @@ a.is-active::after {
   position: absolute;
   border-radius: 8px;
   content: '';
-  border: 2px solid #00ACDC;
+  border: 2px solid var(--active);
   width: 100%;
   box-sizing: border-box;
   align-self: flex-end;
