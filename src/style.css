@@ -30,7 +30,6 @@ nav {
 nav ul {
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
   padding: 0;
   margin: 0;
 }
@@ -41,14 +40,15 @@ nav a {
   line-height: 60px;
   text-decoration: none;
   color: black;
-}
-
-nav a:last-child {
-  margin-right: 0;
+  display: block;
 }
 
 nav a:hover {
   color: var(--main-color);
+}
+
+.nav__list li:last-child a {
+  margin-right: 0;
 }
 
 nav .is-active {
