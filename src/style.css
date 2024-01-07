@@ -8,14 +8,14 @@ body {
   margin: 0;
 }
 
-header {
+.header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-nav {
+.nav {
   margin-right: 50px;
 }
 
@@ -34,7 +34,7 @@ nav ul {
   margin: 0;
 }
 
-nav a {
+.nav__link {
   text-transform: uppercase;
   margin-right: 20px;
   line-height: 60px;
@@ -43,20 +43,20 @@ nav a {
   display: block;
 }
 
-nav a:hover {
+.nav__link:hover {
   color: var(--main-color);
 }
 
-.nav__list li:last-child a {
+.nav__item:last-child .nav__link {
   margin-right: 0;
 }
 
-nav .is-active {
+.nav__link.is-active {
   position: relative;
   color: var(--main-color);
 }
 
-nav .is-active::after {
+.nav__link.is-active::after {
   position: absolute;
   content: "";
   display: block;

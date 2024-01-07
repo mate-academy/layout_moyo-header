@@ -40,3 +40,4 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [x] **CSS Variable** is used for a blue color
 - [x] Pseudo-element is used for a blue line below the active link
 - [x] Code follows all the [Code Style Rules ❗️](./checklist.md)
+Complete
