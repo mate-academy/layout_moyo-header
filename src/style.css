@@ -3,6 +3,10 @@
   --header-height: 60px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -16,13 +20,12 @@ body {
   align-items: center;
   background-color: #fff;
   font-size: 12px;
+  padding-left: 50px;
 }
 
 .logo {
   width: 40px;
   height: 40px;
-  padding-left: 50px;
-  z-index: 1;
 }
 
 .nav {
@@ -36,15 +39,15 @@ body {
   margin: 0;
 }
 
-.nav__items {
+.nav__item {
   margin-left: 20px;
 }
 
-.nav__items:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-.nav__links {
+.nav__link {
   display: block;
   text-transform: uppercase;
   text-decoration: none;
@@ -53,7 +56,7 @@ body {
   color: #000;
 }
 
-.nav__links:hover {
+.nav__link:hover {
   color: var(--link-hover);
 }
 
