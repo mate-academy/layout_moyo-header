@@ -10,18 +10,17 @@ body {
 }
 
 img {
+  display: flex;
+  align-items:center;
   width: 40px;
   height: 40px;
-  flex-shrink: 0;
-  margin-bottom: 10px;
-  margin-top: 10px;
   margin-left: 50px;
 }
 
 .nav_item .is-active {
-  color: var(--main-color);
   position: relative;
   margin-left: 0;
+  color: #00ACDC;
 }
 
 .header {
@@ -45,7 +44,18 @@ li {
   display: flex;
   list-style: none;
   font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
+
+.nav_link[data-qa="hover"]:hover {
+  color: #00ACDC;
+}
+
+.nav_list > .nav_item:first-child {
+  margin-left: 0;
+}
+
 
 .nav_link {
   display: inline-block;
