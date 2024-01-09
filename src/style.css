@@ -1,13 +1,10 @@
 :root {
   --main-color: #3498db;
-  --border-color: #00acdc;
-  --header-height: 60px;
+  --border-color: #00ACDC;
 }
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
-  text-transform: uppercase;
 }
 
 .logo {
@@ -16,10 +13,6 @@ body {
   width: 40px;
   height: 40px;
   margin-left: 50px;
-}
-
-.is-active {
-  position: relative;
 }
 
 .header {
@@ -56,6 +49,8 @@ body {
   line-height: 16px;
   padding-bottom: 22px;
   padding-top: 22px;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
 }
 
 .nav_link:hover {
@@ -71,4 +66,13 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.nav_link[data-qa="hover"]:hover {
+  color: var(--border-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--border-color);
 }
