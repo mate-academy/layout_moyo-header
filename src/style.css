@@ -2,6 +2,8 @@ html{
   font-family: Roboto, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
+
+  --text-color: #00ACDC;
 }
 
 body{
@@ -12,80 +14,63 @@ body{
   align-items: center;
   display: flex;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
 .logo_img{
   height: 40px;
-  margin: 10px 40px;
+  width: 40px;
+  display: block;
 }
 
+.nav{
+  display: inline-block;
+}
+
+.nav_list{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item:not(:last-child){
+  margin-right: 20px;
+}
 
 .nav_links{
-  position: relative;
+  display: inline-block;
   height: 60px;
-  margin: 22.5px 20px;
+  line-height: 60px;
   color: black;
   text-decoration: none;
-  padding-bottom: 10px;
-
 }
 
-.nav_links.last {
-  margin-right: 50px;
+.is-active{
+  position: relative;
+  color: var(--text-color);
 }
 
-.nav_links::after{
+.is-active::after{
   content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 4px;
-      width: 100%;
-      top: 20px;
-      background-color: #00ACDC;
-      border-radius: 8px;
-      transform: scaleX(0);
-      transform-origin: bottom;
-      transition: transform 0.3s;
-
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--text-color);
 }
 
 .nav_links:hover{
-  color: #00ACDC;
+  color: var(--text-color);
 }
 
-.nav_links.is_active{
-  color: #00ACDC;
+.nav_links.is-active{
+  color: var(--text-color);
 }
 
-.nav_links.is_active.first::after{
-  transform: scaleX(1);
-  transform-origin: bottom;
+[data-qa="hover"]:hover{
+  color: var(--text-color);
 }
-
-.nav_links.is_active:hover{
-  color: #00ACDC;
-}
-
-
-
-.nav_links:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom;
-}
-
-
-
-
-@media screen and (max-width: 1024px) {
-.header{
-  max-width: 100%;
-}
-}
-
-@media screen and (max-width: 1200px) {
-  .header{
-    max-width: 100%;
-  }
-  }
 
