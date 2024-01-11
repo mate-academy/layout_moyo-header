@@ -1,3 +1,78 @@
+:root {
+  --color-selection: #00ACDC;
+  --w-font: 5px;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
 body {
   margin: 0;
+}
+
+.container {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.navbar_menu {
+  display: flex;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 40px;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  margin: 10px;
+}
+
+/* у зразку було підчеркування виділеного елементу, але не впевнений, що це треба було робити, можливо тільки на Figma
+/* a:hover {
+  border-bottom: solid 1px blue;
+  color:var(--color_selection) ;
+} */
+
+li {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  list-style-type: none;
+}
+
+.for_line {
+  position: relative;
+}
+
+.menu_4 {
+  color: var(--color-selection);
+  white-space: nowrap;
+}
+
+.menu_1 {
+  color: var(--color-selection);
+
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0 ;
+  border-radius: 2px;
+  height: var(--w-font);
+  width: 37px;
+  background-color: var(--color-selection);
 }
