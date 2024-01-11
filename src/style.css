@@ -15,32 +15,38 @@ a {
 }
 
 header {
-  margin: 0 50px;
-}
-
-.wrapper {
   display: flex;
   justify-content: space-between;
+  padding: 0 50px;
   align-items: center;
-  height: 60px;
 }
 
-.navigation ul {
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.navigation ul{
   display: flex;
-  margin: 0;
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .navigation li:not(:first-child) {
   margin-left: 20px;
 }
 
+
 .navigation a {
+  display: flex;
+  align-items: center;
   color: #000;
   font-size: 12px;
   text-transform: uppercase;
   transition: 300ms;
   position: relative;
+  height: 60px
 }
 
 .navigation .is-active {
@@ -52,12 +58,16 @@ header {
   position: absolute;
   height: 4px;
   width: 100%;
-  bottom: -18.5;
+  bottom: 0;
   left: 0;
   background-color: var(--sky-color);
   border-radius: 8px;
 }
 
 .navigation a:hover {
+  color: var(--sky-color);
+}
+
+.navigation a:active {
   color: var(--sky-color);
 }
