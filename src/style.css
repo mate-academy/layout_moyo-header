@@ -8,11 +8,7 @@ html {
   font-size: 12px;
 }
 
-body {
-  margin: 0;
-}
-
-.container {
+.header {
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -21,58 +17,50 @@ body {
   padding-right: 50px;
 }
 
-.navbar_menu {
-  display: flex;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-}
-
 .logo {
   height: 40px;
 }
 
-a {
+.nav__list {
+  display: flex;
+  text-transform: uppercase;
+
+}
+
+.nav__link {
   text-decoration: none;
   text-align: center;
   color: black;
-  margin: 10px;
-}
-
-/* у зразку було підчеркування виділеного елементу, але не впевнений, що це треба було робити, можливо тільки на Figma
-/* a:hover {
-  border-bottom: solid 1px blue;
-  color:var(--color_selection) ;
-} */
-
-li {
-  display: flex;
-  align-items: center;
-  height: 60px;
-  list-style-type: none;
-}
-
-.for_line {
-  position: relative;
-}
-
-.menu_4 {
-  color: var(--color-selection);
   white-space: nowrap;
 }
 
-.menu_1 {
-  color: var(--color-selection);
-
-}
-
-.line {
+.nav__item_active::after {
+  content: '';
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  bottom: 0 ;
-  border-radius: 2px;
+  bottom: 0;
+  width: 100%;
   height: var(--w-font);
-  width: 37px;
+  border-radius: 2px;
   background-color: var(--color-selection);
 }
+
+.nav__link_active {
+  color: var(--color-selection);
+}
+
+.nav__link:hover {
+  color:var(--color-selection) ;
+}
+
+li {
+  margin: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  position: relative;
+}
+
+
+
+
