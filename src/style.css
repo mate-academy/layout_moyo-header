@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
+
+  --hover-color: #00acdc;
 }
 
 a {
@@ -43,18 +45,18 @@ img {
 }
 
 .nav__link:hover {
-  color: #00acdc ;
+  color: var(--hover-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active::after {
   content: "";
   height: 5px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--hover-color);
   border-radius: 9px;
   position: absolute;
   left: 0;
