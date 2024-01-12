@@ -1,3 +1,72 @@
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Roboto, sans-serif;
+
+  --blue-color: #00ACDC;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  background: #FFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  font-style: normal;
+}
+
+.container .logo {
+  height: 40px;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation .navigationList {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  font-weight: 500;
+  font-size: 12px;
+  margin-left: 20px;
+  height: 60px;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.navigationList > li:first-child a {
+  margin-left: 0;
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+}
+
+.is-active {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
 }
