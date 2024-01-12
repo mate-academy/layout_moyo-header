@@ -1,16 +1,16 @@
+* {
+  margin: 0;
+}
 
 header {
   display:flex;
-  height: 60px;
   justify-content: space-between;
   margin: 0 50px;
 }
 
 ul {
   display: flex;
-  gap: 20px;
   list-style-type: none;
-  margin: 0;
   padding: 0;
 }
 
@@ -24,8 +24,12 @@ a {
 
 a:hover {
   color: #00ACDC;
-  cursor:pointer;
 }
+
+/* a:active {
+  color: #00ACDC;
+  cursor:pointer;
+} */
 
 li {
   position: relative;
@@ -43,9 +47,14 @@ li {
   color: #00ACDC;
   cursor:pointer;
   vertical-align: middle;
+  margin: 0 20px;
 }
 
-li:hover::after {
+.is-active {
+  color: #00ACDC;
+}
+
+.is-active::after {
   position:absolute;
   content: "";
   bottom: 0;
