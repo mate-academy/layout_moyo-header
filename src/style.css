@@ -1,3 +1,58 @@
-body {
-  margin: 0;
+@font-face {
+  font-family: Roboto;
+  src: url(../Roboto/Roboto-Regular.ttf);
 }
+
+:root{
+  --color: cornflowerblue;
+}
+
+body {
+  margin: auto;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: Roboto;
+  text-transform: uppercase;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_list{
+  display: flex;
+}
+
+.nav_item{
+  display: inline;
+  padding: 20px;
+}
+
+.is-active::after{
+  content: '';
+  position: absolute;
+  background-color: var(--color);
+  height: 5px;
+  width: 50px;
+  left: 495px;
+  top: 50px;
+}
+
+.logo{
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.is-active{
+  color: var(--color);
+}
+
+.nav_link{
+  text-decoration: none;
+}
+
+.nav_link:hover{
+  color: brown;
+}
+
