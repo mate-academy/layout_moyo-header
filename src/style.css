@@ -1,4 +1,6 @@
 body {
+  --high-light-color:  #00ACDC;
+
   margin: 0;
 }
 
@@ -12,14 +14,11 @@ li {
   flex-direction: column;
 }
 
-.navigation {
-  margin-right: 50px;
-}
-
 .header {
   display: inline-flex;
   justify-content: space-between;
-  width: 100%;
+  width: calc(100% - 50px);
+  padding-right: 50px;
 }
 
 .logo {
@@ -43,18 +42,18 @@ li {
 }
 
 .bottom_line {
-  background-color: #00ACDC;
+  background-color: var(--high-light-color);
   height: 4px;
   border-radius: 8px;
   visibility: hidden;
 }
 
 .nav__item:hover {
-  color: #00ACDC;
+  color: var(--high-light-color)
 }
 
 .is-active {
-  color: #00ACDC;
+  color: var(--high-light-color);
   visibility: visible;
 }
 
