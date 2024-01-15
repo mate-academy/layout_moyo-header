@@ -1,12 +1,20 @@
-body {
+/* stylelint-disable comment-empty-line-before */
+:root {
   --high-light-color:  #00ACDC;
+}
 
+body {
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 ul {
   padding: 0;
   margin: 0;
+  height: 60px;
 }
 
 li {
@@ -15,17 +23,18 @@ li {
 }
 
 .header {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
-  width: calc(100% - 50px);
-  padding-right: 50px;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
 }
 
 .logo {
-  margin: 10px 0 10px 50px;
+  margin: 10px 0;
 }
 
-.menu {
+.nav__list {
   display: flex;
   gap: 20px;
 }
@@ -45,7 +54,6 @@ li {
   background-color: var(--high-light-color);
   height: 4px;
   border-radius: 8px;
-  visibility: hidden;
 }
 
 .nav__item:hover {
@@ -54,12 +62,4 @@ li {
 
 .is-active {
   color: var(--high-light-color);
-  visibility: visible;
 }
-
-
-
-
-
-
-
