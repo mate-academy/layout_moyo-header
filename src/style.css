@@ -1,15 +1,21 @@
 :root {
   --color-selection: #00ACDC;
-  --w-font: 5px;
+  --f-s: 12px;
+  --w-font: calc(var(--f-s) / 3);
 }
 
 html {
   font-family: Roboto, sans-serif;
-  font-size: 12px;
+  font-size: var(--f-s);
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .header {
-  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,17 +30,18 @@ html {
 .nav__list {
   display: flex;
   text-transform: uppercase;
-
 }
 
 .nav__link {
+  height: 60px;
   text-decoration: none;
-  text-align: center;
   color: black;
+  display: flex;
   white-space: nowrap;
+  align-items: center;
 }
 
-.nav__item_active::after {
+.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -44,16 +51,12 @@ html {
   background-color: var(--color-selection);
 }
 
-.nav__link_active {
+.is-active,
+.nav__link:hover {
   color: var(--color-selection);
 }
 
-.nav__link:hover {
-  color:var(--color-selection) ;
-}
-
 li {
-  margin: 10px;
   height: 60px;
   display: flex;
   align-items: center;
@@ -61,6 +64,9 @@ li {
   position: relative;
 }
 
+li:not(:last-child) {
+  margin-right: 20px;
+}
 
 
 
