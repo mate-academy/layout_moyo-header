@@ -1,11 +1,13 @@
-.body {
+body {
   font-family: Roboto, sans-serif;
   font-size: 12px;
+  font-style: normal;
   text-transform: uppercase;
   font-weight: 500;
   margin: 0;
 
   --color: #00ACDC;
+  --link-height: 60px;
 }
 
 .header {
@@ -21,11 +23,11 @@
   list-style-type: none;
   margin: 0;
   padding-inline-start: 0;
+  gap: 20px;
 }
 
 .nav__item {
   position: relative;
-  margin: 0 20px 0 0;
 }
 
 .nav__list > .nav__item:last-child {
@@ -39,9 +41,10 @@
 
 .nav__link {
   display: inline-block;
-  line-height: 60px;
-  height: 60;
+  line-height: var(--link-height);
+  height: var(--link-height);
   text-wrap: nowrap;
+  cursor: pointer;
 }
 
 .nav__link.is-active {
