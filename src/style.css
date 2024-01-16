@@ -1,13 +1,17 @@
-body {
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin: 0;
-
+:root {
   --color: #00ACDC;
   --link-height: 60px;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
 }
 
 .header {
@@ -30,7 +34,7 @@ body {
   position: relative;
 }
 
-.nav__list > .nav__item:last-child {
+.nav__item:last-child {
   margin: 0;
 }
 
@@ -48,11 +52,11 @@ body {
   cursor: pointer;
 }
 
-.nav__link.is-active {
+.is-active {
   color: var(--color);
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   content: "";
   display: block;
   position: absolute;
