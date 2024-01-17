@@ -1,3 +1,69 @@
+* {
+  --hower-color: #00ACDC;
+}
+
 body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
   margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+ul, li{
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  min-height: 60px;
+}
+
+a {
+  position: relative;
+  margin: 0 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+a:first-child {
+  margin-left: 0;
+}
+
+a:last-child {
+  margin-right: 0;
+}
+
+*[data-qa]:hover {
+  content: attr(data-qa);
+  color: var(--hower-color);
+  cursor: pointer;
+}
+
+.is-active {
+  color: var(--hower-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  border-radius: 8px;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: var(--hower-color);
+  bottom: 0;
 }
