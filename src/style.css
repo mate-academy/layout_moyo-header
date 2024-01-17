@@ -1,6 +1,8 @@
 
 body {
   margin: 0;
+
+  --blue-color: #00acdc;
 }
 
 header {
@@ -26,6 +28,8 @@ padding: 0 50px;
   padding: 0;
   display: flex;
   list-style: none;
+  height: 60px;
+
 
 }
 
@@ -40,15 +44,35 @@ padding: 0 50px;
   position: relative;
   text-decoration: none;
   line-height: 16px;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
-li:last-of-type {
-  padding-right: 0;
+.nav_item {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav1 {
+  margin-left: 0;
 }
 
 .nav {
   margin: 0;
 }
+
+a:hover {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: '';
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 2px;
+  position: relative;
+  bottom: 0;
+}
+
+
