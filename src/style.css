@@ -8,43 +8,48 @@ body {
   margin: 0;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
 }
 
-nav {
+.nav {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-ul, li{
+.nav__list{
   list-style: none;
-  display: flex;
   margin: 0;
   padding: 0;
+  display: flex;
   min-height: 60px;
 }
 
-a {
-  position: relative;
+.list__item {
+  display: flex;
   margin: 0 10px;
+}
+
+.list__item:first-child {
+  margin-left: 0;
+}
+
+.list__item:last-child {
+  margin-right: 0;
+}
+
+.list__link {
+  position: relative;
   font-weight: 500;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   text-decoration: none;
   color: black;
-}
-
-a:first-child {
-  margin-left: 0;
-}
-
-a:last-child {
-  margin-right: 0;
 }
 
 *[data-qa]:hover {
