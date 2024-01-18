@@ -1,3 +1,151 @@
-body {
+* {
   margin: 0;
+  padding: 0;
 }
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fff;
+  width: auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  padding: 0 50px;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav_list {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav_link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  height: 60px;
+}
+
+.is-active {
+  color: #00ACDC;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  background-color: #00ACDC;
+  top: 56px;
+  border-radius: 10px;
+}
+
+.nav_link:hover {
+  color: #00ACDC;
+
+
+  /* border-bottom: 4px solid #00ACDC;
+  border-radius: 10px;
+  border-bottom-left-radius: 10px; */
+
+  /* padding-top: 18px; */
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  position: relative;
+  box-sizing: border-box;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  position: relative;
+  right: 50px;
+  text-align: center;
+}
+
+.nav_list {
+  display: flex;
+  list-style-type: none;
+
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav_link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  height: 60px;
+}
+
+.is-active {
+  color: #00ACDC;
+}
+
+.is-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  background-color: #00ACDC;
+  top: 56px;
+  border-radius: 10px;
+}
+
+.nav_link:hover {
+  color: #00ACDC;
+
+
+  /* border-bottom: 4px solid #00ACDC;
+  border-radius: 10px;
+  border-bottom-left-radius: 10px; */
+
+  /* padding-top: 18px; */
