@@ -36,7 +36,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [x] Header height is set in 1 place (for the links)
 - [x] Content is vertically centered (for any header height)
 - [x] CSS is used to show all letters in Uppercase (don't type them in HTML)
-- [ ] Logo is an image wrapped with a link
-- [ ] **CSS Variable** is used for a blue color
-- [ ] Pseudo-element is used for a blue line below the active link
-- [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
+- [x] Logo is an image wrapped with a link
+- [x] **CSS Variable** is used for a blue color
+- [x] Pseudo-element is used for a blue line below the active link
+- [x] Code follows all the [Code Style Rules ❗️](./checklist.md)
