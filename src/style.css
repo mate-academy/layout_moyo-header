@@ -6,21 +6,15 @@
   --blue: #00ACDC;
 }
 
-html {
-  font-family: Roboto, sans-serif;
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  padding: 0;
+  font-family: Roboto, sans-serif;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
   background: #fff;
   width: 100%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
@@ -28,8 +22,8 @@ body {
 }
 
 .logo {
- width: 40px;
- height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .nav_list {
@@ -39,11 +33,6 @@ body {
   padding: 0;
 }
 
-.nav_item {
-  position: relative;
-  margin-left: 20px;
-}
-
 .nav_link {
   display: block;
   text-decoration: none;
@@ -51,10 +40,11 @@ body {
   color: #000;
   font-size: 12px;
   font-weight: 500;
-  line-height: 60px;
+  padding: 23px 0;
 }
 
 .is-active {
+  position: relative;
   color: var(--blue);
 }
 
@@ -73,6 +63,6 @@ body {
   color: var(--blue);
 }
 
-.nav_item:first-child{
-  margin-left: 0;
+.nav_item:not(:first-child) {
+  margin-left: 20px;
 }
