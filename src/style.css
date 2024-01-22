@@ -1,23 +1,26 @@
+html {
+  --color-hover: #00ACDC;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-size: 12px;
-  text-transform: uppercase;
 }
 
 .header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
 }
 
 .nav__link {
-  height: 60px;
+  padding: 22.8px 0;
   display: flex;
   align-items: center;
-  margin: 0 10px;
+  margin-right: 20px;
+  text-transform: uppercase;
 }
 
 .nav :link {
@@ -36,18 +39,18 @@ body {
   margin-right: 0;
 }
 
-.nav__list .nav_item:first-child .nav__link {
-  margin-left: 0;
-}
-
 .logo {
-  min-height: 40px;
-  vertical-align: middle;
+  height: 40px;
+  width: 40px;
+  vertical-align: middle; /* I saw what I sholde delete this,
+  but if I do this - I have height of <a> for my logo 43.2px,
+  and test is down. I changed the height and width to the same
+  as in the note */
 }
 
 
-.nav__list .blue_text {
-  color: #00ACDC;
+.nav__list .is-active {
+  color: var(--color-hover);
   position: relative;
 }
 
@@ -55,12 +58,13 @@ body {
   content: '';
   display: block;
   position: absolute;
-  border-bottom: 4px solid #00ACDC;
+  background-color: var(--color-hover);
+  height: 4px;
   border-radius: 8px;
   width: 100%;
   bottom: 0;
 }
 
-.change_color:hover {
-  color: #00ACDC;
+.nav__link[data-qa="hover"]:hover {
+  color: var(--color-hover);
 }
