@@ -1,3 +1,72 @@
+:root {
+  --sky-color: #00ACDC;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-ul{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list:not(:first-child) {
+  margin-left: 20px;
+}
+
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: 300ms;
+  position: relative;
+  height: 60px;
+  text-decoration: none;
+}
+
+.is-active {
+  color: var(--sky-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--sky-color);
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  color: var(--sky-color);
+}
+
+.nav-link:active {
+  color: var(--sky-color);
 }
