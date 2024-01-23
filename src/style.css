@@ -1,6 +1,13 @@
-body {
+html {
+  --height-link-nav: 60px;
+  --color-link-nav: #000;
+  --decoration-link-nav: none;
+  --font-link-nav: Roboto, sans-serif;
+  --active-color: #00ACDC;
+}
+
+* {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -22,10 +29,10 @@ body {
 .nav__link {
   display: inline-block;
   line-height: 60px;
-  height: 60px;
-  color: #000;
-  text-decoration: none;
-  font-family: Roboto, sans-serif;
+  color: var(--color-link-nav);
+  height: var(--height-link-nav);
+  text-decoration: var(--decoration-link-nav);
+  font-family: var(--font-link-nav);
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -33,24 +40,16 @@ body {
 }
 
 .nav__link:hover {
-  color: #00ACDC;
+  color: var(--active-color);
 }
 
-.nav__list > :nth-last-child(n + 2):nth-child(n + 2) .nav__link {
-  margin: 0 10px;
-}
-
-.nav__list .nav__item:last-child .nav__link {
-  margin-left: 10px;
-}
-
-.nav__list .nav__item:first-child .nav__link {
-  margin-right: 10px;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link.is-active {
   position: relative;
-  color: #00ACDC;
+  color: var(--active-color);
 }
 
 .nav__link.is-active::before {
