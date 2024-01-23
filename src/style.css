@@ -2,21 +2,18 @@ html {
   --header-nav-color: #00ACDC;
 }
 
-body,
-ul {
+body{
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
-  font-weight: 500;
-  color: #000;
 }
 
 .header {
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
-  height: 60px;
 }
 
 .header_logo {
@@ -29,26 +26,26 @@ ul {
   width: 100%;
 }
 
-.header_menu {
+.menu_list {
+  padding: 0;
   display: flex;
-  align-items: baseline;
   justify-content: space-between;
+  align-items: baseline;
   list-style-type: none;
 }
 
 .menu_item {
+  text-decoration: none;
   font-size: 12px;
   font-weight: 500;
-  line-height: 15px;
   text-transform: uppercase;
-  margin-right: 20px;
+  color: #000;
 }
 
 .menu_item_link {
   position: relative;
   text-decoration: none;
   color: inherit;
-  line-height: 60px;
   transition: color 0.3s ease;
   padding: 23px 0;
 }
@@ -70,6 +67,6 @@ ul {
   border-radius: 8px;
 }
 
-.menu_item:last-child {
-  margin: 0;
+.menu_item:not(:last-child) {
+  margin-right: 20px;
 }
