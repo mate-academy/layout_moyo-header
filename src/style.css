@@ -4,7 +4,6 @@
   --bg-color-white: #fff;
   --text-color-black: #000;
   --text-color-blue: #00acdc;
-
 }
 
 body {
@@ -27,7 +26,7 @@ body {
   box-sizing: border-box;
 }
 
-.header__logo--link {
+.header__logo {
   object-fit: contain;
   width: 40px;
   height: 40px;
@@ -53,41 +52,27 @@ body {
   margin-right: 0;
 }
 
-.nav__item--link {
+.nav__link {
   display: inline-block;
   height: 60px;
   line-height: 60px;
   text-decoration: none;
 }
 
-.nav__item--link:link {
+.nav__link:link {
   color: var(--text-color-black);
 }
 
-.nav__item--link:visited {
-  color: var(--text-color-blue);
-}
-
-.nav__item--link:hover {
-  color: var(--text-color-blue);
-}
-
-.is-active {
-  position: relative;
+.is-active,
+.nav__link:visited,
+.nav__link:hover,
+.nav__link.is-active,
+.is-active:visited  {
   color: var(--text-color-blue);
 }
 
 .is-active:link {
   position: relative;
-  color: var(--text-color-blue);
-}
-
-.is-active:visited {
-  color: var(--text-color-blue);
-}
-
-.nav__item--link.is-active {
-  color: var(--text-color-blue);
 }
 
 .is-active::after {
