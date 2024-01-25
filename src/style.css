@@ -1,4 +1,6 @@
 html {
+  --main-blue-color: #00ACDC;
+
   font-family: Roboto, sans-serif;
 }
 
@@ -8,7 +10,6 @@ body {
 
 header {
   padding: 0 50px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +20,6 @@ header {
   height: 40px;
   width: 40px;
 }
-
 
 .nav__list {
   padding: 0;
@@ -32,7 +32,6 @@ header {
   margin-left: 20px;
 }
 
-
 .header-text {
   text-decoration: none;
   position: relative;
@@ -41,19 +40,17 @@ header {
   line-height: 60px;
   height: 60px;
   font-size: 12px;
-
   font-weight: 500;
   text-transform: uppercase;
-
   color: #000;
 }
 
 .is-active {
-  color: #00ACDC;
+  color: var(--main-blue-color);
 }
 
 .header-text:hover {
-  color: #00ACDC;
+  color: var(--main-blue-color);
 }
 
 .header-text::after {
@@ -64,8 +61,7 @@ header {
   bottom: 0;
   left: 0;
   border-radius: 2px;
-
-  background-color: #00ACDC;
+  background-color: var(--main-blue-color);
 }
 
 .is-active::after {
