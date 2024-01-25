@@ -1,3 +1,4 @@
+/* #region Reset*/
 :root {
   --blue-color: #00acdc;
 }
@@ -10,31 +11,34 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   box-sizing: border-box;
 }
 
+img {
+  vertical-align: bottom;
+}
+/* #endregion */
+
+/* #region Header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
 }
+/* #endregion */
 
-img {
-  display: flex;
-  align-items: center;
-}
-
+/* #region Nav */
 .nav__list {
   display: flex;
+  list-style: none;
   align-items: center;
   height: 60px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .nav__item {
-  list-style: none;
   margin: 0 10px;
   text-transform: uppercase;
   border-bottom: 1px solid transparent;
@@ -43,8 +47,8 @@ img {
 
 .nav__item:first-child {
   margin-left: 0;
-
-}.nav__item:last-child {
+}
+.nav__item:last-child {
   margin-right: 0;
 }
 
@@ -77,3 +81,4 @@ img {
 .nav__item a.is-active:hover::after {
   background-color: var(--blue-color);
 }
+/* #endregion */
