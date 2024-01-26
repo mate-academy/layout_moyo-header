@@ -1,3 +1,10 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --blue: #00acdc;
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+
 body {
   margin: 0;
 }
@@ -7,8 +14,8 @@ body {
   justify-content: space-between;
   padding: 0 50px;
   align-items: center;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background: var(--white);
+  box-shadow: 0 2px 4px var(--shadow);
 }
 
 .logo__link {
@@ -43,7 +50,7 @@ body {
   align-items: center;
   height: 60px;
   white-space: nowrap;
-  color: #000;
+  color: var(--black);
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.3s;
@@ -54,7 +61,7 @@ body {
 
 .nav__link:hover,
 a.is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 a.is-active::after {
@@ -64,7 +71,8 @@ a.is-active::after {
   left: 0;
   right: 0;
   display: block;
-  background-color: #00acdc;
+  background: var(--blue);
+  color: var(--blue);
   border-radius: 2px;
   width: 100%;
   height: 4px;
