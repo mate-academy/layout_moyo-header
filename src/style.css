@@ -1,3 +1,6 @@
+:root {
+  --main-color: #00acdc;
+}
 
 html {
   font-family: Roboto, sans-serif;
@@ -27,7 +30,6 @@ body {
   cursor: pointer;
 }
 
-
 .menu {
   display: flex;
   justify-content: flex-end;
@@ -52,21 +54,20 @@ body {
 
 .link:hover,
 .is-active {
-  color: #00acdc;
-
+  color: var(--main-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
   position: relative;
 }
 
 .is-active::after {
   content: "";
   position: absolute;
-  background-color: #00acdc;
+  background-color: var(--main-color);
   border-radius: 8px;
   height: 4px;
   width: 100%;
-  top: 56px;
+  bottom: 0;
 }
