@@ -1,3 +1,71 @@
-body {
+:root {
+  --active-link-color: #00ACDC;
+}
+
+ * {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+ }
+
+ body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(229, 229, 229);
+  font-size: 12px;
+}
+
+nav {
+  background-color: white;
+}
+
+.container {
+  height: 60px;
+  width: 1200px;
+  display: flex;
+}
+
+img {
+  margin: 10px 50px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+.topnav a {
+  text-decoration: none;
+  color:black;
+  text-align: center;
+  font-weight: 500;
+  border-bottom: 4px solid transparent;
+
+}
+
+.topnav .laptops {
+  color: var(--active-link-color);
+}
+
+.topnav .active {
+  color: var(--active-link-color);
+}
+
+
+.topnav .active::after {
+content: " ";
+background-color: var(--active-link-color);
+display: block;
+color: #00ACDC;
+height: 4px;
+
+
 }
