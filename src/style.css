@@ -1,84 +1,76 @@
 body {
-  --header-heigth: 60px;
+  --header-height: 60px;
 
-    margin: 0;
-    font-family: Roboto, sans-serif;
-    background-color: grey;
-    position: relative;
-  }
-
-.header {
-  position: relative;
-  background-color: #fff;
   margin: 0;
-  display: flex;
-  justify-content: space-between;
-  min-width: 1024px;
-  max-width: 1200px;
-  width: 100%;
+  font-family: Roboto, sans-serif;
+  position: relative;
 }
 
-.logo {
-  position: relative;
+.header {
   display: flex;
+  min-width: 1024px;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.a__logo {
   width: 40px;
+  margin-left: 50px;
   height: 40px;
-  margin: 0 0 0 50px;
   align-self: center;
 }
 
-
 .nav {
-  position: relative;
   display: flex;
-  padding: 0;
-  margin: 0 50px 0 0;
+  height: var(--header-height);
+  margin-right: 50px;
 }
 
-.ul {
-  position: relative;
+.nav__list {
   display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
   list-style: none;
-  text-transform: uppercase;
-  font-size: 12px;
-  margin: 0;
-  padding: 0;
+  margin: 0 0 0 20px;
 }
 
-.li_items {
-  margin-right: 20px;
-  height: var(--header-heigth);
+.nav__item:first-child {
+  margin-left: 0;
 }
 
-li:last-child {
-  margin: 0;
-}
-
-.a_items {
-  color: #000;
+.nav__link {
   display: flex;
   text-decoration: none;
-  position: relative;
   align-items: center;
-  height: var(--header-heigth);
+  text-transform: uppercase;
+  color: #000;
+  font-size: 12px;
+  height: var(--header-height);
 }
 
-.item-1 {
+.nav__link:hover {
   color: #00ACDC;
 }
 
-.a_item4:hover {
-  position: relative;
+.is-active {
   color: #00ACDC;
 }
 
-.blue-recktangle::after {
-  height: 4px;
+.is-active::after {
   content: '';
-  width: 100%;
-  display: block;
-  background-color: #00ACDC;
   position: absolute;
-  bottom: 0;
+  height: 4px;
+  width: 100%;
   border-radius: 8px;
+  background: #00ACDC;
+  bottom: 0;
 }
