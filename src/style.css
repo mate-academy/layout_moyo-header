@@ -1,3 +1,61 @@
+html{
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+
 body {
   margin: 0;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding:0 50px;
+}
+
+.logo__img {
+  height: 40px;
+  width: 40px;
+}
+
+.list__items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.list__item:not(:last-child){
+  margin-right: 20px;
+}
+
+.nav_link{
+  color:black;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 60px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.nav_link:hover,
+.nav_link.is-active{
+  color: #00ACDC;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #00ACDC;
 }
