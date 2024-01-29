@@ -1,7 +1,7 @@
 :root {
-  --white: #fff;
-  --black: #000;
-  --blue: #00acdc;
+  --main-white: #fff;
+  --main-black: #000;
+  --main-color: #00acdc;
 }
 
 
@@ -11,7 +11,7 @@ body {
 }
 
 .header {
-  background-color: var(--white);
+  background-color: var(--main-white);
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
@@ -19,12 +19,12 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
-.header-logo {
+.header__logo {
   width: 40px;
   height: 40px;
 }
 
-.nav-list {
+.nav__list {
   margin: 0;
   display: flex;
   list-style: none;
@@ -32,12 +32,12 @@ body {
   align-items: center;
 }
 
-.nav-link {
+.nav__item {
   margin-right: 20px;
   position: relative;
 }
 
-.nav-link a {
+.nav__link {
   height: 60px;
   display: flex;
   align-items: center;
@@ -45,13 +45,13 @@ body {
   margin: 0;
   font-size: 12px;
   font-weight: 500;
-  color: var(--black);
+  color: var(--main-black);
   text-transform: uppercase;
   text-decoration: none;
 }
 
-a.is-active {
-  color: var(--blue);
+.nav__link.is-active {
+  color: var(--main-color);
 }
 
 .is-active::after {
@@ -62,13 +62,13 @@ a.is-active {
   right: 0;
   height: 4px;
   border-radius: 8px;
-  background-color: var(--blue);
+  background-color: var(--main-color);
 }
 
-.nav-link a:hover, [data-qa="hover"] {
-  color: var(--blue);
+.nav__link:hover, [data-qa="hover"] {
+  color: var(--main-color);
 }
 
-.nav-link:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
