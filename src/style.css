@@ -1,3 +1,7 @@
+:root {
+  --color-brand: #00ACDC;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -5,7 +9,7 @@ body {
   font-size: 12px;
 }
 
-.header-container {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,12 +37,12 @@ body {
 }
 
 .header__item-link:hover {
-  color: #00ACDC;
+  color: var(--color-brand);
 }
 
 .is-active {
   position: relative;
-  color: #00ACDC;
+  color: var(--color-brand);
 }
 
 .is-active::after {
@@ -49,6 +53,6 @@ body {
   width: 37px;
   height: 4px;
   border-radius: 8px;
-  background-color: #00ACDC;
+  background-color: var(--color-brand);
   content: '';
 }
