@@ -7,7 +7,7 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,26 +15,26 @@ header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
-nav {
+.header__nav {
   margin-right: 50px;
 }
 
-ul {
+.nav {
   display: flex;
   padding: 0;
   margin: 0;
 }
 
-li {
+.nav__item {
   list-style: none;
   margin-left: 20px;
 }
 
-li:first-child {
+.nav__item:first-child {
   margin-left: 0; /* Remove margin for the first child */
 }
 
-a {
+.nav__link {
   text-decoration: none;
   color: black;
   font-weight: 500;
@@ -46,7 +46,7 @@ a {
   align-items: center;
 }
 
-a:hover,
+.nav__link:hover,
 .is-active {
   color: var(--active-color);
 }
@@ -61,11 +61,13 @@ a:hover,
   border-radius: 8px;
 }
 
-.logo {
+.header__logo {
   margin-left: 50px;
+  display: flex;
 }
 
-img {
+.header__logo-image {
   width: 40px;
   height: 40px;
 }
+
