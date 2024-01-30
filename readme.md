@@ -41,4 +41,4 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [ ] Pseudo-element is used for a blue line below the active link
 - [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
 
-just a commit to update again
+just a commit to update again again
