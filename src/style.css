@@ -1,3 +1,7 @@
+:root {
+  --main-color:#00ACDC;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,9 +13,10 @@ body {
 
 html {
   font-family: Roboto, sans-serif;
+
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +35,7 @@ header {
 }
 
 .link:hover {
-  color: #00ACDC;
+  color: var(--main-color);
 }
 
 .link:last-child{
@@ -40,8 +45,6 @@ margin-right: 0;
 .logo-link {
   width: 40px;
   height: 40px;
-  left: 50px;
-  top: 10px;
 }
 
 nav ul {
@@ -61,7 +64,7 @@ nav ul a {
 }
 
 .is-active {
-  color: #00ACDC;
+  color: var(--main-color);
   position: relative;
 }
 
@@ -69,10 +72,11 @@ nav ul a {
   content: '';
   height: 4px;
   width: 100%;
-  background-color: #00ACDC;
-  color: #00ACDC;
+  background-color: var(--main-color);
+  color: var(--main-color);
   display: block;
   position: absolute;
   border-radius: 8px;
   bottom: 0;
 }
+
