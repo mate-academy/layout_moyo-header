@@ -6,6 +6,8 @@ body {
 html {
   margin: 0;
   padding: 0;
+
+  --hover-color: #00ACDC;
 }
 
 header {
@@ -58,12 +60,12 @@ header {
 }
 
 .link:hover {
-  color:#00ACDC;
+  color: var(--hover-color);
 }
 
 .is-active {
   position: relative;
-  color: #00ACDC;
+  color: var(--hover-color);
 }
 
 .is-active::after  {
@@ -73,7 +75,7 @@ header {
   height: 4px;
   flex-shrink: 0;
   border-radius: 8px;
-  background: #00ACDC;
+  background: var(--hover-color);
   position: absolute;
   bottom: -20px;
   left: 0;
