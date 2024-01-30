@@ -8,6 +8,7 @@ html {
 
 body {
   margin: 0;
+  box-sizing: border-box;
 }
 
 .header {
@@ -17,7 +18,6 @@ body {
   justify-content: space-between;
   background-color: #FFF;
 }
-
 
 .logo__img {
   display: block;
@@ -42,10 +42,7 @@ body {
   margin-left: 20px;
 }
 
-.nav__list :hover {
-  color: #00ACDC;
-}
-
+.nav__list :hover,
 .nav__activ {
   color: #00ACDC;;
 }
@@ -53,8 +50,9 @@ body {
 .is-active::after {
   content: "";
   display: block;
+  position: absolute;
   width: 37px;
   height: 4px;
   border-radius: 8px;
-  background: #289ebf;
+  background:#00ACDC;;
 }
