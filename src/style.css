@@ -1,3 +1,10 @@
+:root {
+  --main-text-color: #000;
+  --hover-text-color: #00ACDC;
+  --active-text-color: #00ACDC;
+  --active-line-color: #00ACDC;
+}
+
 html {
   font-weight: 500;
   font-size: 12px;
@@ -8,7 +15,7 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.container {
+.header {
   padding: 0 50px;
   display: flex;
   align-items: center;
@@ -20,10 +27,6 @@ body {
   width: 40px;
 }
 
-/* .header-logo img {
-  width: 100%;
-} */
-
 .nav-ul {
   list-style: none;
   padding: 0;
@@ -32,7 +35,7 @@ body {
 }
 
 .nav-item {
-  color: #000;
+  color: var(--main-text-color);
   line-height: 60px;
   position: relative;
   text-transform: uppercase;
@@ -46,17 +49,17 @@ body {
 }
 
 .nav-item:hover {
-  color: #00ACDC;
+  color: var(--hover-text-color);
   transition: all .25s ease;
 }
 
 .is-active {
-  color: #00ACDC;
+  color: var(--active-text-color);
 }
 
 .is-active::after {
   content: "";
-  background-color: #00ACDC;
+  background-color: var(--active-line-color);
   height: 4px;
   width: 100%;
   border-radius: 8px;
@@ -65,5 +68,3 @@ body {
   left: 0;
   right: 0;
 }
-
-
