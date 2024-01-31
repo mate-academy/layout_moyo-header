@@ -5,30 +5,22 @@ body {
   --color: #00ACDC;
 }
 
-
-
 .header {
   display: flex;
+  position: sticky;
   justify-content: space-between;
+  align-items: center;
   padding: 0 50px;
 }
 
-.logo {
+.header__logo {
   width: 40px;
   height: 40px;
-  margin: 10px 0;
-
 }
 
-.nav {
-  position: sticky;
-  top: 0;
- }
-
 .nav__list {
-  list-style-type: none;
+  list-style: none;
   display: flex;
-  flex-direction: row;
   padding: 0;
   margin: 0;
 }
@@ -43,9 +35,9 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   text-decoration: none;
-  align-items: center;
   color: #000;
   line-height: 60px;
+  position: relative;
 }
 
 .nav__link.is-active,
@@ -62,6 +54,3 @@ body {
   border-bottom: 4px solid var(--color);
   border-radius: 2px;
 }
-
-
-
