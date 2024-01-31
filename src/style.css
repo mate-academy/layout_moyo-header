@@ -1,3 +1,7 @@
+:root {
+  --active-color: #00acdc;
+ }
+
 body {
   margin: 0;
 }
@@ -8,7 +12,7 @@ html {
 }
 
 
-.container {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +53,7 @@ li:first-child {
   margin-left: 0;
 }
 
-a {
+.a {
   text-decoration: none;
   color: black;
   font-size: 12px;
@@ -57,17 +61,18 @@ a {
 
 .is-active {
   position: relative;
-  color: #00ACDC;
+  color: var(--active-color);
 }
 
 .nav-set {
   height: 60px;
   display: flex;
   align-items: center;
+  text-transform: uppercase;
  }
 
 .nav-set:hover {
-  color: #00ACDC;
+  color: var(--active-color);
 }
 
 .is-active::after {
@@ -77,7 +82,7 @@ a {
   width: 100%;
   height: 4px;
   left: 0;
-  background: #00ACDC;
+  background: var(--active-color);
   border-radius: 8px;
   bottom: 0;
 }
