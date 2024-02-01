@@ -15,9 +15,11 @@ a {
   color: #333;
 }
 
+
 h1 {
   text-align: center;
 }
+
 
 ul {
   list-style: none;
@@ -60,19 +62,7 @@ ul {
 
 .menu-link:hover {
   color: #007bff;
-  position: relative; /* Dodajemy position: relative, aby było możliwe ustawienie pseudoelementu względem tego elementu */
-}
-
-.menu-link:hover::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -2px; /* Ustawiamy na wartość ujemną, aby podkreślenie było "na zewnątrz" tekstu */
-  left: 0;
-  width: 100%;
-  height: 2px; /* Grubość podkreślenia */
-  background-color: #007bff;
-  border-radius: 4px; /* Zaokrąglamy podkreślenie */
+  border-radius: 2px solid #007bff;
 }
 
 @media screen and (max-width: 1024px) {
@@ -101,7 +91,7 @@ ul {
     border-bottom: 1px solid #ddd;
   }
 
-  .menu-item:hover {
+  .menu-item:hover{
     display: block;
     position: absolute;
     top: 100%;
@@ -114,5 +104,5 @@ ul {
 
   [data-qa="hover"] {
     background-color: #007bff;
-  }
+}
 }

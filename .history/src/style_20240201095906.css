@@ -56,23 +56,12 @@ ul {
   color: #333;
   padding: 8px 0;
   font-weight: 500;
+  border-radius: 5px;
 }
 
 .menu-link:hover {
   color: #007bff;
-  position: relative; /* Dodajemy position: relative, aby było możliwe ustawienie pseudoelementu względem tego elementu */
-}
-
-.menu-link:hover::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -2px; /* Ustawiamy na wartość ujemną, aby podkreślenie było "na zewnątrz" tekstu */
-  left: 0;
-  width: 100%;
-  height: 2px; /* Grubość podkreślenia */
-  background-color: #007bff;
-  border-radius: 4px; /* Zaokrąglamy podkreślenie */
+  border-bottom: 2px solid #007bff;
 }
 
 @media screen and (max-width: 1024px) {
