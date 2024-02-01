@@ -1,81 +1,76 @@
 /* General reset */
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
+  font-size: 12px;
   font-family: Roboto, sans-serif;
-  line-height: 1.6;
-}
 
-a {
-  text-decoration: none;
-  color: #333;
-}
-
-h1 {
-  text-align: center;
-}
-
-ul {
-  list-style: none;
+  --color-blue: #00acdc;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 10%;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.logo-link {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 32px;
-  width: auto;
-  margin-right: 20px;
+.logo__link {
+  display: block;
+  height: 40px;
+  width: 40px;
 }
 
 .menu {
   display: flex;
+  padding-left: 0;
+}
+
+.menu__item {
+  list-style: none;
   align-items: center;
+  display: flex;
 }
 
-.menu-item {
-  padding: 0 15px;
+.menu__item:not(:first-child) {
+  margin-left: 20px;
 }
 
-.menu-link {
-  color: #333;
-  padding: 8px 0;
+.menu__link {
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #000;
+  height: 60px;
+  position: relative;
   font-weight: 500;
 }
 
-.menu-link:hover {
-  color: #007bff;
-  position: relative; /* Dodajemy position: relative, aby było możliwe ustawienie pseudoelementu względem tego elementu */
+ .is-active,
+.menu__link:hover {
+  color: var(--color-blue);
 }
 
-.menu-link:hover::after {
+.menu__link.is-active::after {
   content: "";
-  display: block;
   position: absolute;
-  bottom: -2px; /* Ustawiamy na wartość ujemną, aby podkreślenie było "na zewnątrz" tekstu */
+  bottom: 0; /* Ustawiamy na wartość ujemną, aby podkreślenie było "na zewnątrz" tekstu */
   left: 0;
+  right: 0;
   width: 100%;
-  height: 2px; /* Grubość podkreślenia */
-  background-color: #007bff;
-  border-radius: 4px; /* Zaokrąglamy podkreślenie */
+  height: 4px; /* Grubość podkreślenia */
+  background-color: var(--color-blue);
+  border-radius: 2px; /* Zaokrąglamy podkreślenie */
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .menu {
     position: relative;
   }
@@ -111,8 +106,4 @@ ul {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-
-  [data-qa="hover"] {
-    background-color: #007bff;
-  }
-}
+} */
