@@ -4,6 +4,8 @@ html {
 
   body {
     margin: 0;
+
+    --spec-color: #00ACDC;
     }
 
     .header {
@@ -15,7 +17,7 @@ html {
       }
 
       .a {
-        text-decoration: none;
+       text-decoration: none;
        }
 
       .img {
@@ -23,23 +25,22 @@ html {
         height: 40px;
         }
 
-      .nav {
-        display: block;
-      }
+        .nav {
+          display: block;
+          }
 
-       .ul {
+       .nav_list {
         padding: 0;
         margin: 0;
         display: flex;
         }
 
-      .li {
+      .nav_item {
         list-style: none;
         margin-left: 20px;
-        display: inline-block;
         }
 
-      .li_item {
+      .nav_link {
         color: #000;
         font-size: 12px;
         font-style: normal;
@@ -48,22 +49,25 @@ html {
         text-decoration: none;
         height: 60px;
         line-height: 60px;
+        position: relative;
+        display: block;
       }
 
-        a.is-active {
-          color: #00ACDC;
-
-           }
+      a.is-active {
+         color: var(--spec-color);
+      }
 
         .is-active::after {
         content: "";
-        display: block;
-        background-color: #00ACDC;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--spec-color);
         height: 4px;
-        width: auto;
+        width: 100%;
         border-radius: 8px;
         }
 
         [data-qa="hover"] {
-          color: #00ACDC;
+          color: var(--spec-color);
         }
