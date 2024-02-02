@@ -1,5 +1,5 @@
 :root {
-  --cyan: #00acdc
+  --accent-color: #00acdc
 }
 
 body {
@@ -8,20 +8,20 @@ body {
 }
 
 
-.navigation {
+.header {
   display: flex;
   padding: 0 50px;
   justify-content: space-between;
   align-items: center;
 }
 
-.navigation__logo {
+.logo__link {
   align-self: center;
   justify-content: center;
   height: 40px;
 }
 
-.navigation__list {
+.nav__list {
   display: flex;
 }
 
@@ -35,11 +35,13 @@ a {
   text-decoration: none;
 }
 
-.navigation__item:not(:first-child) {
+
+.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
-.navigation__link {
+.nav__link {
+  padding: 0;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
@@ -50,18 +52,14 @@ a {
   height: 60px;
 }
 
-.navigation__link:hover {
-  color: var(--cyan);
+.nav__link:hover {
+  color: var(--accent-color);
 }
 
-.navigation__link:active {
-  color: var(--cyan);
-  box-shadow: 0 4px 0 var(--cyan);
-}
 
 .is-active {
   position: relative;
-  color: var(--cyan);
+  color: var(--accent-color);
 }
 
 .is-active::after {
@@ -71,6 +69,6 @@ a {
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: var(--cyan);
+  background-color: var(--accent-color);
   border-radius: 8px;
 }
