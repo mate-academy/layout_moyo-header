@@ -1,23 +1,27 @@
 body {
   margin: 0;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
 }
+
 .nav > ul > li {
   display: inline-block;
   position: relative;
   margin-right: 20px;
 }
+
 .nav > ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
 .link__nav {
   margin: 10px;
   color: black;
   text-decoration: none;
   display: block;
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -30,17 +34,21 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .logo img {
-height: 40px;
+  height: 40px;
 }
+
+.laptops-computers, .link__nav:hover, .link__nav.is-active::after {
+  color: #00ACDC;
+}
+
 .wrapper {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
-.link__nav:hover {
-  color: #00ACDC;
-}
+
 .link__nav.is-active::after {
   content: '';
   position: absolute;
