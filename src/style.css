@@ -13,17 +13,15 @@ body {
   display: block;
 }
 
-
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 100vh;
   height: var(--height-bar);
   padding: 0 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-
 
 .nav__list {
   display: flex;
@@ -32,11 +30,9 @@ body {
   list-style: none;
 }
 
-
 .nav__item:not(:last-child) {
   margin-right: 20px;
 }
-
 
 .nav__link {
   display: flex;
@@ -56,11 +52,11 @@ body {
   color: var(--main-color);
 }
 
-.nav__link.is-active {
+.is-active {
   color: var(--main-color);
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   content: '';
   height: 4px;
   position: absolute;
