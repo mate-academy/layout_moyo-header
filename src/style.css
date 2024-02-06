@@ -19,9 +19,7 @@ body {
   justify-content: space-between;
 }
 
-.header:hover {
-  border: 1px solid var(--blue-color);
-}
+
 
 .header__logo {
   width: 40px;
@@ -36,7 +34,6 @@ body {
 }
 
 .nav__link {
-  margin: 0 10px;
   color: black;
   text-decoration: none;
   text-transform: uppercase;
@@ -45,7 +42,20 @@ body {
   height: 60px;
   font-family: Roboto, sans-serif;
   font-size: 12px;
-  font-weight: normal;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav__item {
+  margin: 0 10px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link:hover {
@@ -60,14 +70,13 @@ a[data-qa="hover"]:hover {
   border-radius 60px na linki, centrowanie */
 
 .is-active::after {
-  text-decoration: underline;
   background-color: var(--blue-color);
   content: "";
-  height: 3px;
+  height: 4px;
   width: 100%;
   position: absolute;
   bottom: 0;
-  font-weight: bold;
+  border-radius: 8px;
 }
 
 .is-active {
