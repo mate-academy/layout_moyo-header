@@ -1,3 +1,86 @@
+:root {
+  --maincolor: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  font-family: Roboto, Arial, sans-serif;
   margin: 0;
 }
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 50px;
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+
+  /* margin: 0 50px; */
+
+  /* musi być opcja druga, poniewaz dodaje 12px marginu na gorze i na dole */
+}
+
+.nav__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  height: 60px;
+}
+
+.nav__item:nth-child(1) {
+  margin-left: 0;
+}
+
+.nav__item:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  height: 60px;
+}
+
+.nav__link:hover {
+  color: var(--maincolor);
+}
+
+a.is-active {
+  color: var(--maincolor);
+  position: relative;
+}
+
+a.is-active::after {
+  position: absolute;
+  display: block;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: var(--maincolor);
+  border-bottom: 4px solid var(--maincolor);
+  border-radius: 8px;
+}
+
