@@ -33,10 +33,6 @@ body {
   width:100%;
 }
 
-.nav {
-  display:block;
-}
-
 .nav__list {
   display:flex;
   list-style: none;
@@ -44,8 +40,7 @@ body {
   padding: 0;
 }
 
-
-.link {
+.nav__link {
   display:flex;
   justify-content:center;
   align-items:center;
@@ -53,15 +48,15 @@ body {
   white-space: nowrap;
   color:#000;
   height:60px;
-  margin-left: 20px;
   position: relative;
 }
 
-.link_1 {
-  margin:0;
+.nav__item:not(:first-of-type){
+  margin-left: 20px;
 }
 
-.link:hover {
+
+.nav__link:hover {
   color:var(--add-blue-color);
  }
 
@@ -79,5 +74,3 @@ body {
   border-radius: 8px;
   bottom: 0;
  }
-
-
