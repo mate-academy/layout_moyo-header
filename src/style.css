@@ -19,6 +19,7 @@ body {
   padding: 0;
   border: 0;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   justify-content: space-between;
 }
@@ -51,14 +52,25 @@ body {
   text-transform: uppercase;
 }
 
-.nav__link.is-active::after {
-  text-decoration: underline;
+a[data-qa="hover"] {
   color: var(--blue-color)
 }
 
-.is-active:focus {
+/* height (!!!)
+  border-radius 60px na linki, centrowanie */
+
+.is-active::after {
+  text-decoration: underline;
+  background-color: var(--blue-color);
+  content: "";
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.is-active {
   color: var(--blue-color);
-  border-bottom: 4px solid var(--blue-color);
 }
 
 .nav__list {
