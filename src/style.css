@@ -1,6 +1,7 @@
-
 :root {
   --main-color: #00acdc;
+  --text-color: #000;
+  --link-hover-color: var(--main-color);
 }
 
 body {
@@ -13,7 +14,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  color: #000;
+  color: var(--text-color);
   position: relative;
   padding: 0 50px;
 }
@@ -60,21 +61,20 @@ body {
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000;
+  color: var(--text-color);
 }
 
 .nav__link:hover {
-  color: var(--main-color);
+  color: var(--link-hover-color);
 }
 
-
 .nav__link.is-active::after {
-content: "";
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-height: 4px;
-border-radius: 2px;
-background-color: var(--main-color);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--main-color);
 }
