@@ -1,3 +1,70 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__link {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+  height: 60px;
+  text-decoration: none;
+}
+
+.image {
+  display: flex;
+  align-self: center;
+  height: 40px;
+}
+
+ .is-active {
+  position: relative;
+  color: #00ACDC;
+ }
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+
+.nav__item :hover {
+  color:  #00ACDC;
+}
+
+.is-active::after {
+  content: "";
+  height: 4px;
+  position: absolute;
+  background-color: #00ACDC;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 8px;
 }
