@@ -1,3 +1,104 @@
-body {
+:root {
+  --main-color: #00ACDC;
+}
+
+html, body {
+  padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 50px;
+  background: #fff;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header_list {
+  display: flex;
+  gap: 20px;
+}
+
+.header_logo {
+  height: 40px;
+  width: 40px;
+  display: block;
+}
+
+.nav_link {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  padding: 23px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.first {
+  margin-left: 0;
+}
+
+.hover:hover {
+  color: var(--main-color);
+  }
+
+a::after {
+  position: absolute;
+  display: block;
+  width: 0;
+  left: 0;
+  background-color: #00ACDC;
+  height: 2px;
+  transition: width 0.3s ease-out;
+  content: "";
+}
+
+  .is-active {
+    color: var(--main-color);
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  z-index: 2;
+  background-color: var(--main-color);
 }
