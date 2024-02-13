@@ -1,7 +1,15 @@
+
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
+
+  --main-background-color: #fff;
+  --box-shadow-color: #0000000D;
+  --active-link-color: #00ACDC;
+  --default-link-color: black;
+  --hovered-link-color: #00ACDC;
 }
 
 .header {
@@ -9,8 +17,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px 0 #0000000D;
+  background-color: var(--main-background-color);
+  box-shadow: 0 2px 4px 0 var(--box-shadow-color);
 }
 
 .icon {
@@ -32,7 +40,7 @@ body {
 }
 
 .nav__links.is-active {
-  color: #00ACDC;
+  color: var(--active-link-color);
 }
 
 .nav__links {
@@ -45,8 +53,7 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
-
+  color: var(--default-link-color);
 }
 
 .nav__links.is-active::after {
@@ -57,7 +64,7 @@ body {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00ACDC;
+  background-color: var(--active-link-color);
 }
 
 .nav_items {
@@ -65,7 +72,7 @@ body {
 }
 
 .nav__links:hover {
-  color: #00ACDC;
+  color: var(--hovered-link-color);
 }
 
 .nav_items:first-child {
