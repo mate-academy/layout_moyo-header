@@ -2,7 +2,7 @@ html {
   --main-color: #00ACDC;
 }
 
-body {
+.body {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -10,14 +10,12 @@ body {
   min-width: 1024px;
 }
 
-header {
-  width: calc(100% - 100px);
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-transform: uppercase;
   padding: 0 50px;
-  overflow: hidden;
 }
 
 
@@ -27,7 +25,7 @@ header {
   height: 100%;
 }
 
-nav ul {
+.nav_list {
   display: flex;
   margin: 0;
   padding: 0;
@@ -38,7 +36,7 @@ nav li:not(:last-child) {
   margin-right: 20px;
 }
 
-nav a {
+.nav__link {
   text-decoration: none;
   color: #000;
   display: block;
@@ -46,15 +44,15 @@ nav a {
   line-height: 60px;
 }
 
-nav a:hover {
+.nav__link:hover {
   color: var(--main-color);
 }
 
-nav a.is-active {
+.nav__link.is-active {
   color: var(--main-color);
 }
 
-nav a.is-active::after {
+.nav__link.is-active::after {
   content: "";
   display: block;
   width: 100%;
