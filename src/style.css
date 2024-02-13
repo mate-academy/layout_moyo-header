@@ -13,7 +13,7 @@ header {
   padding: 0 50px;
 }
 
-.logo_link {
+.logo-link {
   display: block;
   height: 40px;
 }
@@ -44,12 +44,13 @@ header {
   color: #000;
 }
 
-.nav__link:hover {
-  color: #00acdc;
+:root {
+  --blue: #00acdc
 }
 
+.nav__link:hover,
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .nav__link.is-active::after {
@@ -60,7 +61,7 @@ header {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--blue);
 }
 
 .nav__item {
