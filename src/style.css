@@ -17,13 +17,6 @@ header {
   background-color: #FFF;
   border-color: #00ACDC;
   text-transform: uppercase;
-
-}
-
-a {
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 500;
 }
 
 nav ul li a{
@@ -37,18 +30,18 @@ nav ul li a{
 header::after {
   content: ''; /* Добавляем контент псевдоэлементу */
   position: absolute; /* Устанавливаем абсолютное позиционирование */
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid transparent; /* Устанавливаем прозрачную границу */
+  border: 2px solid transparent;
   border-color: #fff; /* Цвет границы */
   pointer-events: none;
 
 }
 
 header:hover::after {
-  border-color: #00ACDC;
+  /* border-color: #00ACDC; */
 }
 
 .container {
@@ -62,7 +55,7 @@ header:hover::after {
 }
 
 .logo-link {
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 nav ul {
@@ -74,13 +67,8 @@ li {
   margin-left: 20px;
 }
 
-
-a.is-active:visited {
-  color: #00ACDC;
-}
-
 .is-active {
-  position: relative; /* Забезпечте відносне позиціонування посилання */
+  position: relative;
   color: #00ACDC;
 }
 
@@ -97,7 +85,7 @@ a.is-active:visited {
 
  a:hover{
   text-decoration: underline;
-  text-decoration-line: #00ACDC;
+  color: #00ACDC;
 }
 
 
