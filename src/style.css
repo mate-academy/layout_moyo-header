@@ -1,3 +1,103 @@
-body {
+body, header, nav, ul, li, a {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
+
+body {
+  font-family:Roboto, sans-serif;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight:500;
+}
+
+header {
+  position: relative;
+  background-color: #FFF;
+  border-color: #00ACDC;
+  text-transform: uppercase;
+
+}
+
+a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+nav ul li a{
+  display:inline-block; /* Изменяем отображение на inline-block */
+  height: 15px; /* Устанавливаем высоту для ссылок в навигационном меню */
+  line-height: 15px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+header::after {
+  content: ''; /* Добавляем контент псевдоэлементу */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent; /* Устанавливаем прозрачную границу */
+  border-color: #fff; /* Цвет границы */
+  pointer-events: none;
+
+}
+
+header:hover::after {
+  border-color: #00ACDC;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 60px;
+
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin-left: 20px;
+}
+
+
+a.is-active:visited {
+  color: #00ACDC;
+}
+
+.is-active {
+  position: relative; /* Забезпечте відносне позиціонування посилання */
+  color: #00ACDC;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  top:31px;
+  left: 0;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00ACDC; /* Цвет псевдоэлемента */
+}
+
+ a:hover{
+  text-decoration: underline;
+  text-decoration-line: #00ACDC;
+}
+
+
