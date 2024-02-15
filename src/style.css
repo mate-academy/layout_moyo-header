@@ -1,3 +1,90 @@
+:root{
+  --color-on-hover: #00ACDC;
+}
+
+html{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header{
+  display: block;
+}
+
+.container {
+  justify-content: space-between;
+  display: flex;
+}
+
+.logo{
+  width: 40px;
+  height: 40px;
+}
+
+nav{
+  display: block;
+}
+
+.nav{
+  margin-right: 50px;
+}
+
+.header-img{
+  align-items: center;
+  margin-left: 50px;
+  display: flex;
+}
+
+.nav__item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.nav__list{
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  line-height: 60px;
+  display: flex;  /* в рядок лінки */
+}
+
+.nav__link{
+  color: black;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.nav__link:hover{
+  color: var(--color-on-hover);
+}
+
+.is-active{
+  color: var(--color-on-hover);
+  display: inline-block;
+  position: relative;
+}
+
+.is-active::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: var(--color-on-hover);
+  border-radius: 8px;
 }
