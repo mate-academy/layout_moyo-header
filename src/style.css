@@ -1,6 +1,10 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: Roboto, sans-serif;
 
   --link-color: #00ACDC;
@@ -8,6 +12,7 @@ body {
 
 .header {
   width: 100%;
+  padding: 0 50px;
 }
 
  .wrapper {
@@ -18,15 +23,12 @@ body {
 }
 
 .logo {
-  margin-left: 50px;
-  display: flex; /* Добавляем flex */
-  align-items: center; /* Центрируем содержимое по вертикали */
+  display: flex; 
+  align-items: center; 
 }
 
 .nav_menu {
   display: flex;
-  margin: 0 50px 0 0;
-  padding: 0;
 }
 
 .nav_menu_item{
@@ -42,8 +44,8 @@ body {
   text-transform: uppercase;
   position: relative;
   height: 100%;
-  display: block; /* Делаем ссылку блочным элементом */
-  line-height: 60px; /* Установите line-height равным высоте контейнера */
+  display: block; 
+  line-height: 60px; 
 }
 
 .nav_menu_link::after {
@@ -72,8 +74,3 @@ a[data-qa="hover"]:hover {
   background-color: var(--link-color); 
 } 
 
-/* @media screen and (min-width: 1024px) and (max-width: 1200px) {
-  .nav_menu {
-    margin: 0;
-  }
-}  */
