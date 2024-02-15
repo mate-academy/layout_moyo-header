@@ -3,6 +3,12 @@
   padding: 0;
   }
 
+html {
+  --main-color: #00ACDC;
+  --x-padding: 0 50px;
+
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -17,7 +23,7 @@ body {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  padding: 0 50px;
+  padding: var( --x-padding);
   font-size: 12px;
   font-weight: 500;
 
@@ -50,11 +56,11 @@ body {
 }
 
 .nav_link:hover {
-  color: #00ACDC;
+  color: var(--main-color);
 }
 
 .is-active{
-  color: #00ACDC;
+  color: var(--main-color);
 }
 
 .is-active::after {
@@ -62,7 +68,7 @@ body {
   content: '';
   height: 4px;
   width: 100%;
-  background-color: #00ACDC;
+  background-color: var(--main-color);
   display: flex;
   bottom: 0;
   border-radius: 8px;
