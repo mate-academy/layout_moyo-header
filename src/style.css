@@ -1,3 +1,7 @@
+html {
+  --active-color: #00ACDC;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -7,15 +11,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  line-height: 100%;
-}
 
-.header__logo {
-  margin: 10px 50px;
-}
-
-.nav {
-  margin-right: 50px;
+  padding: 0 50px
 }
 
 .nav__list {
@@ -31,7 +28,11 @@ body {
   list-style: none;
 }
 
-.nav__links {
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
@@ -43,16 +44,12 @@ body {
   color: #000;
 }
 
-.nav__item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.nav__links:hover {
-  color: #00ACDC;
+.nav__link:hover {
+  color: var(--active-color);
 }
 
 .is-active {
-  color: #00ACDC;
+  color: var(--active-color);
   position: relative;
 }
 
@@ -66,5 +63,5 @@ body {
   height: 4px;
 
   border-radius: 8px;
-  background-color: #00ACDC;
+  background-color: var(--active-color);
 }
