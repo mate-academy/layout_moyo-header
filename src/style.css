@@ -8,6 +8,10 @@ html{
   padding: 0;
 }
 
+:root {
+  --blue-color: #00ACDC;
+}
+
 header {
   box-sizing: border-box;
   width: 100%;
@@ -51,11 +55,11 @@ nav a {
 
 nav a:hover,
 nav a:active {
-  color: #00ACDC;
+  color: var(--blue-color);
 }
 
 nav a.is-active {
-  color: #00ACDC;
+  color: var(--blue-color);
 }
 
 nav a.is-active::after {
@@ -64,7 +68,7 @@ nav a.is-active::after {
   position: absolute;
   width: 37px;
   height: 4px;
-  background-color: #00ACDC;
+  background-color: var(--blue-color);
   bottom: -18.5px;
   left: 50%;
   transform: translateX(-50%);
@@ -72,5 +76,5 @@ nav a.is-active::after {
 }
 
 nav li[data-qa="hover"] {
-  color: #00ACDC;
+  color: var(--blue-color);
 }
