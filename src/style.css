@@ -10,39 +10,34 @@ body {
   text-decoration: none;
   font-size: 12px;
   font-weight:500;
+
+  --active-item-color: #00ACDC;
 }
 
 header {
+  display:block;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
   background-color: #FFF;
   border-color: #00ACDC;
   text-transform: uppercase;
   min-width: 1024px;
-}
-
-nav ul li a{
-  display:inline-block; /* Изменяем отображение на inline-block */
-  height: 15px; /* Устанавливаем высоту для ссылок в навигационном меню */
-  line-height: 15px;
-  font-size: 12px;
-  font-weight: 500;
+  height: 60px;
+  padding: 0 50px;
 }
 
 header::after {
-  content: ''; /* Добавляем контент псевдоэлементу */
-  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  content: '';
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: 2px solid transparent;
-  border-color: #fff; /* Цвет границы */
+  border-color: #fff;
   pointer-events: none;
 
-}
-
-header:hover::after {
-  /* border-color: #00ACDC; */
 }
 
 .container {
@@ -50,8 +45,6 @@ header:hover::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
-  height: 60px;
 
 }
 
@@ -59,18 +52,31 @@ header:hover::after {
   font-size: 0;
 }
 
-nav ul {
+.nav{
   display: flex;
-  list-style: none;
+  height: 60px;
+  align-items: center;
 }
 
-li {
+ul{
+  display: flex;
+  list-style: none;
+  height: 60px;
+  align-items: center;
+}
+
+ li {
   margin-left: 20px;
+  height: 60px;
+  line-height: 60px;
+
+  list-style: none;
 }
 
 li:first-child {
   margin-left: 0;
 }
+
 
 
 .is-active {
@@ -86,12 +92,11 @@ li:first-child {
   width: 37px;
   height: 4px;
   border-radius: 8px;
-  background-color: #00ACDC; /* Цвет псевдоэлемента */
+  background-color: #00ACDC;
 }
 
  a:hover{
   text-decoration: underline;
-  color: #00ACDC;
+  color:var(--active-item-color);
 }
-
 
