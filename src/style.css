@@ -1,3 +1,101 @@
-body {
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
+
+  
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --link-color: #00ACDC;
 }
+
+body {
+ font-family: Roboto, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.logo__link {
+  width: 40px;
+  height: 40px;
+  margin: 10px 50px;
+}
+
+.header__nav {
+  margin-right: 50px;
+}
+
+.header__nav--list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+  height: 60px;
+  padding-top: 1px;
+}
+
+.header__nav--list > li {
+  padding: 10px;
+  list-style: none;
+}
+
+li:first-child {
+  padding: 0;
+  padding-right: 10px;
+}
+
+li:last-child {
+ padding: 0;
+ padding-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  font-weight: 50;
+  text-transform: uppercase;
+  position: relative;
+}
+
+li a {
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+a:hover {
+  color: var(--link-color);
+}
+
+a.is-active {
+  color: var(--link-color);
+}
+
+a.is-active::after {
+  content: '';
+  height: 4px;
+  width: 100%;
+  opacity: 1;
+  position: absolute;
+  background: var(--link-color);
+  color: var(--link-color);
+  left: 0;
+  bottom: -0.5;
+  border-radius: 8px;
+}
+
+a.is-active:hover::after {
+  opacity: 1;
+  color: var(--link-color);
+}
+
+[data-qa="hover"]:visited {
+  color: var(--link-color);
+}
+
+
