@@ -1,5 +1,7 @@
 :root {
   --text-color-second: #00acdc;
+  --header-bg-color: #fff;
+  --text-color-main: #000;
 }
 
 html {
@@ -17,6 +19,8 @@ body {
 }
 
 .header {
+  color: var(--header-bg-color);
+  box-shadow: 0 2px 4px 0 #0000000d;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -51,7 +55,7 @@ body {
   height: 60px;
   line-height: 60px;
   text-decoration: none;
-  color: black;
+  color: var(--text-color-main);
 }
 
 .nav__link.last {
@@ -73,8 +77,8 @@ body {
 
 .nav__link.is-active::after {
   content: "";
-  background-color: var(--text-color-second);
   position: absolute;
+  background-color: var(--text-color-second);
   display: block;
   line-height: 1;
   width: 100%;
