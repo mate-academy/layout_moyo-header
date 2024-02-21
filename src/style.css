@@ -1,3 +1,90 @@
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
 }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.header > a {
+  width: 40px;
+  height: 40px;
+  margin: 10px 50px;
+}
+
+.header__nav {
+  margin: 0 50px 0 0;
+}
+
+.header__nav--list {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+}
+
+.header__nav--list > li {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.header__nav--list > li:first-of-type {
+  margin: 0 10px 0 0;
+}
+
+.header__nav--list > li:last-of-type {
+  margin: 0 0 0 10px;
+}
+
+
+.nav__link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 22.5px 0;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: #00ACDC;
+}
+
+
+.is-active {
+  color: #00ACDC;
+  padding: 23px 0;
+  margin: 0;
+  width: fit-content;
+}
+
+.is-active::after {
+  color: #00ACDC;
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom: 0;
+  height: 4px;
+  background-color: #00ACDC;
+  border-radius: 8px;
+}
+
+[data-qa='hover'] {
+  padding: 22.5px 0 23px;
+  margin: 0;
+}
+
