@@ -1,5 +1,8 @@
 body {
   font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
   display: flex;
   justify-content: center;
   margin: 0;
@@ -7,17 +10,31 @@ body {
 
 header {
   width: 100%;
-  padding: 0;
+  padding: 20px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
 }
 
 .nav__item {
   height: 15px;
   align-items: center;
+  display: inline;
 }
 
 .nav__item:hover {
   color: blue;
+}
+
+.nav__item::before {
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  padding: 20 22 20 23;
 }
 
 .is-active::after {
