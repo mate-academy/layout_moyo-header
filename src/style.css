@@ -1,30 +1,42 @@
-body {
-  margin: 0;
-  font-family: Roboto;
-  font-weight: 500;
-
-  --header-height: 60px;
-  --link-hover-color: #00ACDC;
-}
-
 * {
   box-sizing: border-box;
 }
 
+html {
+  --header-height: 60px;
+  --link-hover-color: #00ACDC;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+}
+
 @media (min-width: 1200px) {
+  /* .header {
+    width: 1200px;
+  } */
+}
+
+@media (min-width: 1024px) {
   .header {
+    margin: 0 auto;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: aquamarine;
-    height: var(--header-height);
-    padding: 0 60px;
+    padding: 0 50px;
   }
 
   .nav {
     height: 100%;
+  }
+
+  .logo {
+    display: block;
+    height: 40px;
   }
 
   .nav__list {
@@ -32,45 +44,51 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 100%;
     margin: 0;
     padding: 0;
   }
 
   .nav__link {
-    padding: 0 10px;
-    line-height: var(--header-height);
-  }
-
-  .link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    border-radius: 5px;
-    background-color: transparent;
-    bottom: 0;
-    left: 0;
+    /* padding: 0 5px; */
+    display: flex;
+    align-items: center;
   }
 
   .link {
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
-    color: #000000;
-    display: block;
+    color: black;
+    font-size: 12px;
+    line-height: var(--header-height);
+    margin: 0 10px;
   }
 
   .link:hover {
-    color:var(--link-hover-color);
+    color: var(--link-hover-color);
   }
 
-  .link:hover::after {
+  .nav__link:nth-child(1) .link {
+    margin-left: 0;
+  }
+
+  .nav__link:nth-last-child(1) .link {
+    margin-right: 0;
+  }
+
+  .link.is-active {
+    color: var(--link-hover-color);
+  }
+
+  .link.is-active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 8px;
     background-color: var(--link-hover-color);
+    bottom: 0;
+    left: 0;
   }
+
 }
-
-
-
-
-
