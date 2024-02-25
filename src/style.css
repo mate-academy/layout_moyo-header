@@ -5,6 +5,8 @@ html {
 body {
   margin: 0;
   display: flex;
+
+  --blue: #00acdc;
 }
 
 header {
@@ -16,7 +18,7 @@ header {
   padding: 0 50px;
 }
 
-.header-content{
+.header-content {
   text-decoration: none;
   display: flex;
   position: relative;
@@ -59,14 +61,14 @@ li:last-child {
 }
 
 .nav_link:hover {
-  color: #00ACDC;
+  color: var(--blue);
 }
 
-.nav_link.is-active {
-  color: #00ACDC;
+.is-active {
+  color: var(--blue);
 }
 
-.nav_link.is-active::after {
+.is-active::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -74,5 +76,5 @@ li:last-child {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00ACDC;
+  background-color: var(--blue);
 }
