@@ -5,19 +5,12 @@ body, header, ul, a {
 }
 
 body {
-  font-family:Roboto, sans-serif;
+  font-family: Roboto, sans-serif;
   text-decoration: none;
   font-size: 12px;
   font-weight: 500;
 
   --active-item-color: #00ACDC;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
 }
 
 header {
@@ -42,27 +35,36 @@ header {
   font-size: 0;
 }
 
-.nav{
+.nav {
   display: flex;
   height: 60px;
   align-items: center;
 }
 
-ul{
+.nav-list {
   display: flex;
   list-style: none;
   height: 60px;
   align-items: center;
 }
 
- li {
+ .nav-link {
   margin-left: 20px;
   height: 60px;
   line-height: 60px;
   list-style: none;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-li:first-child {
+.nav-link:hover{
+  text-decoration:underline var(--active-item-color);
+  cursor: pointer;
+}
+
+.nav-list li:first-child .nav-link {
   margin-left: 0;
 }
 
@@ -81,9 +83,3 @@ li:first-child {
   border-radius: 8px;
   background-color: var(--active-item-color);
 }
-
- a:hover{
-  text-decoration:underline var(--active-item-color);
-  cursor: pointer;
-}
-
