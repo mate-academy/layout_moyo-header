@@ -1,88 +1,69 @@
-:root {
-  --text-color-second: #00acdc;
-  --header-bg-color: #fff;
-  --text-color-main: #000;
-}
-
 html {
   font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: 12px;
 }
 
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
+  --blue-color: #00acdc;
+  --header-height: 60px;
 }
 
-.header {
-  color: var(--header-bg-color);
-  box-shadow: 0 2px 4px 0 #0000000d;
-  width: 100%;
+header {
   display: flex;
+  flex-direction: row;
+  padding: 0 50;
   justify-content: space-between;
   align-items: center;
+  max-width: 100%;
+  height: var(--header-height);
+  background-color: #fff;
 }
 
-.nav,
-.nav__list,
-.nav__item {
-  display: flex;
-}
-
-.nav {
-  padding: 0;
-  margin: 0 50px;
-}
-
-.nav__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.header-logo {
-  margin-left: 50px;
+.logo {
   width: 40px;
   height: 40px;
 }
 
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .nav__link {
-  margin: 0 10px;
-  height: 60px;
-  line-height: 60px;
-  text-decoration: none;
-  color: var(--text-color-main);
-}
-
-.nav__link.last {
-  margin-right: 0;
-}
-
-.nav__link.first {
-  margin-left: 0;
-}
-
-.nav__link.is-active {
+  display: inline-block;
+  text-align: center;
   position: relative;
-  color: var(--text-color-second);
+  text-decoration: none;
+  line-height: 15px;
+  color: #000;
+  margin-left: 20px;
+  padding-top: 22px;
+  padding-bottom: 23px;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
-.nav__link:hover {
-  color: var(--text-color-second);
-}
-
-.nav__link.is-active::after {
-  content: '';
+.is-active::after {
   position: absolute;
-  background-color: var(--text-color-second);
-  display: block;
-  line-height: 1;
+  content: ' ';
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  bottom: 0;
+  background: var(--blue-color);
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+}
+
+.is-active {
+  color: var(--blue-color);
+  margin: 0;
 }
