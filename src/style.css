@@ -15,18 +15,19 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .header {
-  padding: 0 50px;
-  height: var(--header-height);
-  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  height: var(--header-height);
+  padding: 0 50px;
+  background-color: #fff;
 }
 
 .header__logo,
@@ -36,31 +37,29 @@ body {
 }
 
 .nav__list {
+  display: flex;
   padding: 0;
   margin: 0;
-  display: flex;
 }
 
 
 .nav__list-item {
+  position: relative;
   display: flex;
+
   list-style-type: none;
   margin-left: 20px;
   height: var(--header-height);
-  position: relative;
 }
 
 .nav__link {
-  text-transform: uppercase;
-  text-decoration: none;
   display: flex;
   align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.nav__link:link {
-  color: var(--text-color-main);
-}
-
+.nav__link:link,
 .nav__link:visited {
   color: var(--text-color-main);
 }
@@ -75,13 +74,13 @@ body {
 
 .nav__link.is-active::after {
   content: '';
-  display: block;
   position: absolute;
-  background-color: var(--text-color-second);
+  bottom: 0;
+  display: block;
   width: 100%;
   height: 4px;
+  background-color: var(--text-color-second);
   border-radius: 8px;
-  bottom: 0;
 }
 
 .nav__list-item:first-child {
