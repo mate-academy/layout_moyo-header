@@ -5,20 +5,27 @@ html {
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
   --blue-color: #00acdc;
   --header-height: 60px;
 }
 
 header {
+  box-sizing: border-box;
   display: flex;
-  flex-direction: row;
   padding: 0 50;
   justify-content: space-between;
   align-items: center;
-  max-width: 100%;
-  height: var(--header-height);
+  max-width: 100vw;
+  max-height: var(--header-height);
   background-color: #fff;
+  color: #000;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -27,32 +34,29 @@ header {
 }
 
 .nav__list {
-  display: flex;
   margin: 0;
   padding: 0;
+  display: flex;
   list-style: none;
 }
 
 .nav__link {
-  display: inline-block;
-  text-align: center;
-  position: relative;
+  display: flex;
   text-decoration: none;
-  line-height: 15px;
+  margin: 0 10px;
+  height: 60px;
+  line-height: 60px;
   color: #000;
-  margin-left: 20px;
-  padding-top: 22px;
-  padding-bottom: 23px;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
 }
 
 .is-active::after {
+  display: block;
+  content: '';
   position: absolute;
-  content: ' ';
   bottom: 0;
-  left: 0;
   width: 100%;
   height: 4px;
   border-radius: 8px;
@@ -64,6 +68,11 @@ header {
 }
 
 .is-active {
+  position: relative;
+  margin-left: 0;
   color: var(--blue-color);
-  margin: 0;
+}
+
+.last {
+  margin-right: 0;
 }
