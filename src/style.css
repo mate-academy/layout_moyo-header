@@ -1,3 +1,79 @@
+:root {
+  --color-primary: #00acdc;
+}
+
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 0;
+  padding: 0;
+}
+
+.logo-header {
+  margin-left: 50px;
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.menu {
+  background-color: #fff;
+  padding-right: 50px;
+}
+
+.menu .list-menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu .list-menu .item-menu {
+  text-transform: uppercase;
+}
+
+.menu .list-menu .item-menu .link-menu {
+  text-decoration: none;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.menu .list-menu .item-menu .link-menu:not(.is-active) {
+  color: #000;
+}
+
+.menu .list-menu .item-menu .link-menu:not(.link-first) {
+  margin-left: 20px;
+}
+
+.menu .list-menu .item-menu .is-active {
+  color: var(--color-primary);
+  position: relative;
+}
+
+.menu .list-menu .item-menu .is-active::after {
+  content: '';
+  position: absolute;
+  color: var(--color-primary);
+  width: 90%;
+  bottom: 0;
+  border: 2px solid var(--color-primary);
+  border-radius: 10px;
+}
+
+.menu .list-menu .item-menu a:hover {
+  color: var(--color-primary);
 }
