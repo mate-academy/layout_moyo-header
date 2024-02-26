@@ -1,3 +1,95 @@
-body {
+* {
   margin: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+
+  --nav-link-color-hover: #00acdc;
+  --nav-link-color: #000;
+}
+
+.header {
+  background-color: #fff;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1200px;
+  padding: 0 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-position: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 60px;
+  padding: 0;
+}
+
+li {
+  margin-right: 20px;
+  height: 60px;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  color: var(--nav-link-color);
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.nav-link:link {
+  color: var(--nav-link-color);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--nav-link-color-hover);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link.is-active {
+  position: relative;
+  color: var(--nav-link-color-hover);
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 4px;
+  background-color: var(--nav-link-color-hover);
+  border-radius: 8px;
+  bottom: 0;
+  left: 0;
 }
