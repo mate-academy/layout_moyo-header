@@ -4,28 +4,34 @@
 
 html {
   font-family: Roboto, sans-serif;
+}
 
+:root {
   --nav-link-color-hover: #00acdc;
   --nav-link-color: #000;
 }
 
 .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #fff;
-  font-style: normal;
+  padding: 0 50px;
+
   font-size: 12px;
   font-weight: 500;
   line-height: 14px;
   text-transform: uppercase;
 }
 
-.container {
+/* .container {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
   max-width: 1200px;
   padding: 0 50px;
-}
+} */
 
 .logo {
   display: flex;
@@ -38,19 +44,16 @@ html {
   object-position: center;
 }
 
-ul {
-  list-style: none;
-}
-
 .menu {
   display: flex;
   flex-direction: row;
   align-items: center;
+  list-style: none;
   line-height: 60px;
   padding: 0;
 }
 
-li {
+.nav-item {
   margin-right: 20px;
   height: 60px;
 }
