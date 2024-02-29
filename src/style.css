@@ -1,8 +1,15 @@
-body {
-  margin: 0;
+html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   color: #000;
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  --blue: #00ACDC;
 }
 
 ul {
@@ -51,20 +58,20 @@ ul.nav__list {
 }
 
 .nav__link:hover {
-  color: #00ACDC;
+  color: var(--blue);
 }
 
 .is-active {
-  color: #00ACDC;
+  color: var(--blue);
   position: relative;
 }
 
 .is-active::after {
   content: '';
   position: absolute;
-  top: 56px;
+  bottom: 0;
   left: 0;
-  background-color: #00ACDC;
+  background-color: var(--blue);
   width: 37px;
   height: 4px;
   border-radius: 8px;
