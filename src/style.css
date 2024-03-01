@@ -1,60 +1,74 @@
-header {
-  width: 1200px;
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  position: fixed;
-  padding: 10px 0 10px 50px;
-  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 40px;
 }
 
-.menu {
-  height: 60px;
+.logo img {
+  width: 100%;
 }
 
-.menu_bar {
+
+.navbar {
   display: flex;
-  gap: 20px;
   height: 60px;
-  justify-content: flex-end;
-}
-
-.list {
-list-style: none;
-height: 100%;
-}
-
-
-.link {
-position: relative;
-height: 100%;
-display: flex;
-align-items: center;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 12px;
-  color: black;
-  text-decoration: none;
+  margin-right: 50px;
   text-transform: uppercase;
 }
 
+.menu {
+  list-style: none;
+  height: 100%;
+}
+
+.link {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 20px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.is-active {
+  color: rgba(0, 172, 220, 1);
+}
 
 .is-active::after {
   position: absolute;
   content: "";
   height: 4px;
   width: 100%;
-  background-color: rgba(0, 172, 220, 1);
+  background: rgba(0, 172, 220, 1);
   bottom: 0;
   left: 0;
-  display: block;
+  border-radius: 2px;
 }
 
-.blue {
+.link:hover {
   color: rgba(0, 172, 220, 1);
-}
-
-.menu li:hover {
-  text-decoration: underline rgba(0, 172, 220, 1) 25%;
 }
