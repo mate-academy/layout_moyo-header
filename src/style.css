@@ -1,3 +1,81 @@
-body {
+:root {
+  --color-blue-link: #00acdc;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header__logo {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.header__nav {
+  display: block;
+}
+
+.header__nav__ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+
+.header__nav__li-1,
+.header__nav__li-2,
+.header__nav__li-3,
+.header__nav__li-4,
+.header__nav__li-5,
+.header__nav__li-6,
+.header__nav__li-7,
+.header__nav__li-8 {
+  padding-right: 20px;
+}
+
+.header__nav__li-8 {
+  padding-right: 0;
+}
+
+.header__nav__a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  height: 60px;
+  padding: 0;
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header__nav__li-4 .header__nav__a:hover,
+.header__nav__a.is-active {
+  color: var(--color-blue-link);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--color-blue-link);
 }
