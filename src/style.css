@@ -30,7 +30,7 @@ html {
   display: block;
 }
 
-.header__nav-list {
+.nav__list {
   padding: 0;
   margin: 0;
 
@@ -38,11 +38,15 @@ html {
   list-style: none;
 }
 
-.header__nav-item {
+.nav__item {
   padding-right: 20px;
 }
 
-.header__nav-link {
+.nav__item:last-child {
+  padding-right: 0;
+}
+
+.nav__link {
   box-sizing: content-box;
 
   display: flex;
@@ -64,11 +68,11 @@ html {
   transition: color 0.3s;
 }
 
-.header__nav-item .header__nav-link:hover {
+.nav__link:hover {
   color: var(--blue-link);
 }
 
-.header__nav-link.is-active {
+.is-active {
   color: var(--blue-link);
 }
 
@@ -88,7 +92,4 @@ html {
   background-color: var(--blue-link);
 }
 
-.header__nav-item:last-child {
-  padding-right: 0;
-}
 
