@@ -9,9 +9,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 0 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -22,7 +21,8 @@ body {
   height: 40px;
 }
 
-.logo_img {
+.logo__imeg {
+  height: 100%;
   width: 100%;
 }
 
@@ -30,18 +30,19 @@ body {
   display: block;
 }
 
-.menu_items {
+.nav__menu {
   display: flex;
+  margin: 0;
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.link.is-active {
+.nav__link.is-active {
+  margin: 0;
   color: #00acdc;
 }
 
-.link {
+.nav__link {
   position: relative;
   display: flex;
   align-items: center;
@@ -57,7 +58,7 @@ body {
   transition: color 0.3s;
 }
 
-.link.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -68,6 +69,6 @@ body {
   background-color: #00acdc;
 }
 
-.link:hover {
+.nav__link:hover {
   color: #00acdc;
 }
