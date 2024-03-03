@@ -1,62 +1,78 @@
-body {
-  margin: 0;
-  padding: 0;
+html {
   font-family: Roboto, sans-serif;
 }
 
-nav ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li {
-  align-items: center;
-  font-weight: 500;
-  color: black;
-  margin: 0 0.5em;
-  height: 15px;
-  font-size: 15px;
-  line-height: 14px;
-  letter-spacing: 0;
-  text-align: left;
-}
-
-a :link {
-  color: black;
+body {
+  margin: 0;
 }
 
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  background-color: #FFF;
-  height: 60px;
-  width: 100%;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  margin: 10px 50px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.menu {
+  display: block;
 }
 
 .gadges {
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: end;
+  list-style: none;
+}
+
+.nav__list_1,
+.nav__list_2,
+.nav__list_3,
+.nav__list_4,
+.nav__list_5,
+.nav__list_6,
+.nav__list_7,
+.nav__list_8 {
+  padding-right: 20px;
+}
+
+.nav__list_8 {
+  padding-right: 0;
+}
+
+.nav__item {
+  display: flex;
   align-items: center;
-  padding: 8px 50px;
-  margin: 14.5px 0;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  height: 60px;
+  padding: 0;
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-[data-qa="hover"] :hover {
+.nav__list_4 .nav__item:hover,
+.nav__item.is-active {
   color: #00ACDC;
-  text-decoration: none;
 }
 
-[data-qa="hover"] :visited {
-  text-decoration: none;
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00ACDC;
 }
