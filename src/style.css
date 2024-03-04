@@ -1,3 +1,90 @@
+html {
+  height: 100%;
+}
+
+:root {
+  --header-height: 60px;
+  --base-color: #fff;
+  --primary-color: #00acdc;
+  --text-base-color: #000;
+}
+
 body {
+  height: 100%;
   margin: 0;
+
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--text-base-color);
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background-color: var(--base-color);
+}
+
+.logo__img {
+  display: flex;
+  height: 40px;
+  width: 40px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  margin: 0 10px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--header-height);
+}
+
+.nav__link.is-active {
+  position: relative;
+  color: var(--primary-color);
+}
+
+.nav__link.is-active::after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  content: '';
+  background-color: var(--primary-color);
+}
+
+.nav__link:hover {
+  color: var(--primary-color);
 }
