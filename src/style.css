@@ -8,9 +8,9 @@ body {
   background-color: #ccc;
   font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
+  font-style: normal;
   font-size: 12px;
   line-height: 14px;
-  color: #000;
 }
 
 .header {
@@ -30,22 +30,25 @@ body {
   margin: 0;
 }
 
-.nav__link a {
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__link {
   display: flex;
   align-items: center;
   height: 60px;
-  margin: 0 20px;
   text-align: center;
   position: relative;
   color: #000;
   text-decoration: none;
 }
 
-.nav__link.is-active a {
+.nav__link.is-active {
   color: var(--blue);
 }
 
-.nav__link.is-active a::after {
+.nav__link.is-active::after {
   content: '';
   width: 100%;
   bottom: 0;
@@ -55,18 +58,15 @@ body {
   background-color: var(--blue);
 }
 
-.nav__link a:first-child {
-  margin-left: 0;
+.nav__list:last-child {
+  margin-right: 0;
 }
 
-.nav__link a:last-child {
-  margin-left: 0;
-}
-
-.nav__link a:hover {
+.nav__link:hover {
   color: var(--blue);
 }
 
-.nav__link a:active {
+.nav__link:active {
   color: var(--blue);
+  font-weight: 500;
 }
