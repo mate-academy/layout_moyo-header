@@ -3,20 +3,21 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl,
   margin: 0;
 }
 
+:root {
+  --hovercolorblue:#007BFF;
+}
+
 /* Importação da fonte Roboto */
 body {
   background-color: rgb(230, 227, 227);
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  display: flex;
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
 }
 
 /* Estilo do header */
 header {
-  width: 1200px;
-  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +33,7 @@ header {
   margin-left: 80%;
 }
 
-nav {
+.nav {
   order: 2; /* Define a ordem da navegação para 2 (o padrão é 0) */
   margin-right: 5%;
 }
@@ -63,7 +64,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #007BFF;
+  color: var(--hovercolorblue);
 }
 
 /* Pseudo-elemento para a linha azul abaixo do link ativo */
@@ -72,7 +73,7 @@ nav ul li a.is-active::after {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #007BFF;
+  background-color: var(--hovercolorblue);
   position: relative;
   bottom: -10px;
 }
@@ -95,7 +96,7 @@ nav ul li a::after {
   display: block;
   width: 0; /* Começa com largura zero */
   height: 4px;
-  background-color: #007BFF;
+  background-color: var(--hovercolorblue);
   position: absolute;
   bottom: -130%; /* Distância entre a barra e o texto */
   left: 0;
