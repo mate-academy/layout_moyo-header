@@ -1,11 +1,9 @@
-@font-face {
-  font-family: Roboto;
-  src: url(https://fonts.google.com/specimen/Roboto);
-}
-
 html {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
+
+  --header-height: 60px;
+  --blue-color: #00acdc;
 }
 
 body {
@@ -14,73 +12,78 @@ body {
 }
 
 .header {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: justify;
-  gap: 20px;
-  height: 60px;
-  width:1200px;
+  height: var(--header-height);
   background-color: #fff;
 }
 
 img {
   display: block;
-  justify-content: left;
   height: 40px;
   width: 40px;
-  margin: 10px 0 10px 50px;
+  margin-left: 50px;
 }
 
 ul {
   display: flex;
-  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 li {
   display: block;
-  padding: 0 10px;
-  list-style-type: none;
 }
 
 .nav {
   display: flex;
-  margin: auto;
-  justify-content: space-between;
+  margin-right: 50px;
+  justify-content: right;
   align-items: center;
   text-transform: uppercase;
-  line-height: 14.06px;
+  line-height: 14px;
   font-size: 12px;
   font-weight: 500;
   color: black;
-  border: 1px solid green;
-  height: 100%;
 }
 
 .nav__link {
-  height: 12px;
-}
-
-.nav__link:link {
-  color: #00f;
-}
-
-.nav__link:active {
-  color: rgb(26, 10, 241);
-  text-decoration: underline;
+  display: block;
+  position: relative;
+  height: var(--header-height);
+  line-height: var(--header-height);
+  font-size: 12px;
+  font-weight: 500;
 }
 
 li:hover .nav__link {
-  text-decoration-line: underline;
-  text-decoration-color: #00f;
+  color: var(--blue-color);
 }
 
-li:hover::after {
-  display: block;
+.nav__link--blue {
+  color: var(--blue-color);
+}
+
+.nav :not(:last-child) {
+  margin-right: 20px;
+}
+
+a.is-active {
   position: relative;
+}
+
+a.is-active::after {
+  display: block;
+  position: absolute;
   bottom: 0;
   content: '';
+  width: 100%;
   height: 4px;
-  background-color: #00ACDC;
+  background-color: var(--blue-color);
+  border-radius: 8px;
+  color: var(--blue-color);
 }
