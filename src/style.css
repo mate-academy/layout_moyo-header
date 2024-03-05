@@ -1,3 +1,77 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #ccc;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_item {
+  margin-right: 20px;
+}
+
+.nav_link {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  height: 60px;
+  padding: 0;
+}
+
+.nav_link.is-active {
+  color: var(--blue-color);
+}
+
+.nav_list .nav_item:last-child {
+  margin-right: 0; /* Видаляє відступ справа від останнього елемента */
+}
+
+.nav_list .nav_item:first-child {
+  margin-left: 0; /* Видаляє відступ зліва від першого елемента */
+}
+
+.nav_link.is-active::after {
+  content: '';
+  width: 100%;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+  position: absolute;
+  background-color: var(--blue-color);
+}
+
+.nav_link:hover {
+  color: var(--blue-color);
+}
+
+.nav_link:active {
+  color: var(--blue-color);
+  font-weight: 500;
 }
