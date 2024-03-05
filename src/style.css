@@ -1,33 +1,36 @@
 :root {
-  --blue: #00acdc;
+  --blue-text: #00acdc;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #ccc;
+
   font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
   line-height: 14px;
+  background-color: #ccc;
 }
 
 .header {
-  background-color: #fff;
   display: flex;
   justify-content: space-between;
-  padding-inline: 50px;
-  text-transform: uppercase;
   align-items: center;
+  padding-inline: 50px;
+
+  text-transform: uppercase;
+  background-color: #fff;
 }
 
 .nav__list {
   display: flex;
   justify-content: space-between;
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .nav__item {
@@ -37,25 +40,27 @@ body {
 .nav__link {
   display: flex;
   align-items: center;
-  height: 60px;
   text-align: center;
   position: relative;
-  color: #000;
+  height: 60px;
+
   text-decoration: none;
+  color: #000;
 }
 
 .nav__link.is-active {
-  color: var(--blue);
+  color: var(--blue-text);
 }
 
 .nav__link.is-active::after {
   content: '';
   width: 100%;
-  bottom: 0;
   height: 4px;
+  bottom: 0;
   border-radius: 8px;
   position: absolute;
-  background-color: var(--blue);
+
+  background-color: var(--blue-text);
 }
 
 .nav__list:last-child {
@@ -63,10 +68,11 @@ body {
 }
 
 .nav__link:hover {
-  color: var(--blue);
+  color: var(--blue-text);
+  transition: color 150ms ease;
 }
 
 .nav__link:active {
-  color: var(--blue);
+  color: var(--blue-text);
   font-weight: 500;
 }
