@@ -1,10 +1,11 @@
-/* stylelint-disable font-family-name-quotes */
+
 :root {
   --black-color: #000;
   --blue-color: #00acdc;
 }
 
 html {
+  /* stylelint-disable-next-line font-family-name-quotes */
   font-family: 'Roboto', sans-serif;
 }
 
@@ -40,15 +41,14 @@ li:not(:last-child) {
 }
 
 .nav__link {
+  display: block;
+  position: relative;
   text-decoration: none;
   color: var(--black-color);
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
-  position: relative;
   line-height: 60px;
-  height: 60px;
-  display: block;
 }
 
 .nav__link.is-active::after {
