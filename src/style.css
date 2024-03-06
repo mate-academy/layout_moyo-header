@@ -5,6 +5,7 @@ body {
 
 header {
   display: flex;
+  align-items: center;
 }
 
 
@@ -18,13 +19,33 @@ header {
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
-  align-items: center;
   justify-content: flex-end;
 }
 
 
-.box {
+a {
   margin-left: 20px;
+  text-decoration: none;
+  cursor: default;
+  text-align: center;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: #000;
+}
+
+a:hover {
+  color: #00ACDC;
+}
+
+a:active::after {
+  position: relative;
+  border-radius: 8px;
+  background: #00ACDC;
 }
 
 .img {
@@ -34,10 +55,6 @@ header {
 
 .box8 {
   margin-right: 50px;
-}
-
-.box1 {
-  color: #00ACDC;
 }
 
 
