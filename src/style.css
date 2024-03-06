@@ -1,23 +1,23 @@
 :root {
-  --blue-color: #00ACDC;
+  --blue-color: #00acdc;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   text-transform: uppercase;
-
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 50px;
+  padding: 0 50px;
 }
 
 nav {
@@ -39,44 +39,36 @@ nav ul li:last-child {
   margin-right: 0;
 }
 
-nav ul li a {
-  display: block;
-  text-decoration: none;
-  color: #000000;
-  line-height: 60px;
-}
-
-nav ul li a:hover {
-  color: var(--blue-color);
-}
-
-.is-active {
-  position: relative;
-  color: var(--blue-color);
-}
-
 .is-active::after {
   content: '';
   display: block;
   position: relative;
-  bottom: 0pc;
-  left: 0;
+  bottom: 4px;
   width: 100%;
   height: 4px;
   border-radius: 8px;
   background-color: var(--blue-color);
 }
 
-nav ul li:nth-child(4) a {
-  color: var(--blue-color);
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  line-height: 60px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .logo a {
-  display: inline-block;
-}
-
-.logo img {
+  display: flex;
+  width: 40px;
   height: 40px;
-  width: auto;
 }
 
+.is-active {
+  color: var(--blue-color);
+}
+
+.links:hover {
+  color: var(--blue-color);
+}
