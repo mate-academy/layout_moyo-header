@@ -1,3 +1,87 @@
+:root {
+  --link-color: #00acdc;
+  --header-links-height: 60px;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+
+  &.header__logo {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    line-height: 1px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.nav {
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .nav__item {
+      padding: 0 10px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      .nav__link:link {
+        display: block;
+        text-align: center;
+        color: black;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+        height: var(--header-links-height);
+        line-height: var(--header-links-height);
+
+        &:visited {
+          color: black;
+        }
+
+        &:hover {
+          color: var(--link-color);
+        }
+
+        &.is-active {
+          color: var(--link-color);
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  content: '';
+  display: block;
+  background-color: var(--link-color);
+  height: 4px;
+  border-radius: 4px;
 }
