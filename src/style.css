@@ -2,41 +2,30 @@
   --blue-color: #00acdc;
 }
 
-html,
 body {
   margin: 0;
-  padding: 0;
 }
 
-body {
-  font-family: Roboto, sans-serif;
-  text-transform: uppercase;
-}
-
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
 }
 
-nav {
+.nav {
   height: 60px;
 }
 
-nav ul {
+.nav__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-nav ul li {
+.nav__item:not(:last-child) {
   margin-right: 20px;
-}
-
-nav ul li:last-child {
-  margin-right: 0;
 }
 
 .is-active::after {
@@ -50,13 +39,15 @@ nav ul li:last-child {
   background-color: var(--blue-color);
 }
 
-nav ul li a {
+.nav__link {
   display: block;
   text-decoration: none;
   color: #000;
   line-height: 60px;
   font-size: 12px;
   font-weight: 500;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
 }
 
 .logo a {
@@ -65,10 +56,7 @@ nav ul li a {
   height: 40px;
 }
 
-.is-active {
-  color: var(--blue-color);
-}
-
-.links:hover {
+.is-active,
+.nav__link:hover {
   color: var(--blue-color);
 }
