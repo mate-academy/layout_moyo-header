@@ -1,4 +1,6 @@
 html {
+  --blue-color: #00acdc;
+
   font-family: Roboto, sans-serif;
 }
 
@@ -28,10 +30,17 @@ body {
 
 .nav__list {
   display: flex;
-  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin: 0;
 }
 
 .nav__link {
@@ -43,11 +52,11 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active::after {
@@ -57,6 +66,6 @@ body {
   content: '';
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   border-radius: 8px;
 }
