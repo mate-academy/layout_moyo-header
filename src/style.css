@@ -1,11 +1,11 @@
 :root {
   --fw-regular: 400;
   --fw-medium: 500;
+  --color-active: #00acdc;
 }
 
 body {
   margin: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -25,15 +25,12 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
+  padding: 0 50px;
 }
 
 .header__logo {
   height: 40px;
-  margin-left: 50px;
-}
-
-.nav {
-  margin: 0 50px;
 }
 
 .nav__menu {
@@ -65,16 +62,9 @@ html {
   font-weight: var(--fw-medium);
 }
 
-.nav__link:hover {
-  color: #00acdc;
-}
-
-/* .nav__item:nth-child(n + 3) .nav__link {
-  font-weight: var(--fw-medium);
-} */
-
+.nav__link:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--color-active);
 }
 
 .is-active::after {
@@ -85,6 +75,5 @@ html {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
-  color: #00acdc;
+  background-color: var(--color-active);
 }
