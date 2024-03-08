@@ -1,3 +1,90 @@
+:root {
+  --fw-regular: 400;
+  --fw-medium: 500;
+}
+
 body {
   margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  height: 40px;
+  margin-left: 50px;
+}
+
+.nav {
+  margin: 0 50px;
+}
+
+.nav__menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item {
+  position: relative;
+  line-height: 60px;
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-weight: var(--fw-medium);
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+/* .nav__item:nth-child(n + 3) .nav__link {
+  font-weight: var(--fw-medium);
+} */
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  content: '';
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #00acdc;
+  color: #00acdc;
 }
