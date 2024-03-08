@@ -1,7 +1,11 @@
 html {
   font-family: Roboto, sans-serif;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
   font-weight: 500;
-  size: 12px;
 }
 
 body {
@@ -10,8 +14,8 @@ body {
 
 .img {
   text-align: center;
-  margin-top: 10px;
-  margin-left: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .nav__link {
@@ -19,13 +23,18 @@ body {
   color: #000;
   line-height: 60px;
   text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  position: relative;
+  white-space: nowrap;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
 li {
@@ -35,22 +44,21 @@ li {
 
 ul {
   display: flex;
-  flex-direction: row;
   text-align: right;
   margin: 0;
-  margin-right: 50px;
   padding: 0;
 }
 
 .is-active, .nav__link:hover {
- color: blue;
- border-bottom: blue 4px solid;
+ color: #00acdc;
+ border-bottom: #00acdc 4px solid;
  padding-bottom: 18.5px;
- border-radius: 8px;
 }
 
 .is-active::after {
   position: relative;
+  border-radius: 2px;
+  height: 4px;
 }
 
 li:first-child {
