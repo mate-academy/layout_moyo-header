@@ -1,4 +1,11 @@
-* {
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -9,12 +16,13 @@ body {
   font-weight: 500;
 }
 
-.nav__bar {
-  display: block;
-}
-
 .home__link {
   display: flex;
+}
+
+.home__img {
+  width: 40px;
+  height: 40px;
 }
 
 .header {
@@ -46,17 +54,22 @@ body {
   color: #000;
 }
 
-.nav__link:hover,
+.nav__link:hover {
+  color: #00acdc;
+}
+
 .is-active {
+  position: relative;
   color: #00acdc;
 }
 
 .is-active::after {
   content: '';
-  display: block;
-  position: relative;
+  position: absolute;
   background-color: #00acdc;
   border-radius: 8px;
   height: 4px;
-  bottom: 4px;
+  bottom: 0;
+  width: 100%;
+  right: 0;
 }
