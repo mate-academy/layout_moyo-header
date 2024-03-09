@@ -1,36 +1,35 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+:root {
+  --blue-color: #00acdc;
+}
+
+*{
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
 
 body {
   margin: 0;
 }
 
-html {
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-}
-
 .header {
-  box-sizing: border-box;
   padding: 0 50px;
   background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0.5rem 1rem #b1b1b1;
-  min-width: 1024px;
 }
 
 .nav {
   position: relative;
   height: 60px;
-  display: flex;
-  align-items: center;
 }
 
-.nav__item {
+.nav_item {
   margin: 0;
-  padding: 0;
   padding-right: 20px;
 }
 
@@ -42,11 +41,11 @@ html {
   padding: 23px 0;
 }
 
-.nav__item:last-child {
-  padding-right: 0;
+.nav_item:not(:last-child) {
+  margin-right: 20px;
 }
 
-.nav__list {
+.nav_list {
   list-style: none;
   display: flex;
   align-items: center;
@@ -56,7 +55,7 @@ html {
 
 .nav_link:hover,
 .nav_link.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active::after {
@@ -68,6 +67,6 @@ html {
   right: 0;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
-  border-radius: 3px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
 }
