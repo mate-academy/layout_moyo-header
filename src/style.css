@@ -13,20 +13,22 @@ body {
 }
 
 .img {
-  text-align: center;
   width: 40px;
   height: 40px;
 }
 
 .nav__link {
+  display: flex;
   text-decoration: none;
   color: #000;
-  line-height: 60px;
+  height: 60px;
   text-align: center;
   font-weight: 500;
   font-size: 12px;
   position: relative;
   white-space: nowrap;
+  align-items: center;
+  text-transform: uppercase;
 }
 
 .header {
@@ -38,28 +40,36 @@ body {
 }
 
 li {
-  list-style-type: none;
   margin-left: 20px;
 }
 
 ul {
   display: flex;
-  text-align: right;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-.is-active, .nav__link:hover {
- color: #00acdc;
- border-bottom: #00acdc 4px solid;
- padding-bottom: 18.5px;
+.nav__link:hover {
+  color: #00acdc;
 }
 
-.is-active::after {
-  position: relative;
-  border-radius: 2px;
+.is-active {
+  color: #00acdc;
+}
+
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
 }
+
 
 li:first-child {
   margin-left: 0;
