@@ -2,17 +2,14 @@
   --blue-color: #00acdc;
 }
 
-html,
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  font-weight: 500px;
+  font-weight: 500;
   font-size: 12px;
 }
 
 .header {
-  width: 100%;
-  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,20 +17,13 @@ body {
 }
 
 .logo_link {
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-}
-
-.logo_img {
   width: 40px;
   height: 40px;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .nav {
   height: 60px;
-  line-height: 60px;
 }
 
 .nav_list {
@@ -46,20 +36,22 @@ body {
   list-style: none;
 }
 
-.nav_item a {
+.nav_link {
   color: black;
   text-decoration: none;
   display: flex;
   align-items: center;
   position: relative;
   text-transform: uppercase;
+  line-height: 60px;
 }
 
-a.is-active {
+.nav_link.is-active,
+.nav_link.hover {
   color: var(--blue-color);
 }
 
-.nav_item a.is-active::after {
+.is-active::after {
   content: '';
   height: 4px;
   width: 100%;
@@ -72,14 +64,8 @@ a.is-active {
   background-color: var(--blue-color);
 }
 
-a[data-qa='hover'] {
-  color: var(--blue-color);
-}
-
-a:hover {
-  color: var(--blue-color);
-  text-decoration: none;
-  border-bottom: 2px solid var(--blue-color);
+.nav_link:hover {
+  text-decoration: underline 2px var(--blue-color);
 }
 
 .nav_item:not(:last-child) {
