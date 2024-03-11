@@ -1,3 +1,86 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&displ0ay=swap';
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
+
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  height: 60px;
+  padding: 0 50px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  margin: 10px 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+
+.element {
+  color: #000;
+  text-transform: uppercase;
+  align-items: center;
+  height: 60px;
+  margin-right: 85px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  display: flex;
+}
+
+.element::after {
+  content: '';
+  position: absolute;
+  background-color: #00acdc;
+  border-radius: 8px;
+  height: 4px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.element:active {
+  color: #00acdc;
+  box-shadow: 0 4px 0 #00acdc;
+}
+
+.element:hover {
+  color: #00acdc;
+}
+
+a {
+  text-decoration: none;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  background-color: #00acdc;
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+
+
