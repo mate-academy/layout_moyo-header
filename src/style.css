@@ -1,12 +1,16 @@
-html {
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
+* {
+  margin: 0;
+  padding: 0;
+}
 
+:root {
   --blue: #00acdc;
 }
 
-body {
+.body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
 }
 
 .logo {
@@ -21,7 +25,7 @@ body {
   padding: 0 50px;
 }
 
-.nav {
+.li {
   text-transform: uppercase;
 }
 
@@ -30,44 +34,40 @@ body {
   width: 40px;
 }
 
-.navlink {
+.nav_link {
   display: flex;
   height: 60px;
   align-items: center;
-}
-
-ul {
-  display: flex;
-  margin: 0;
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin-left: 20px;
-}
-
-.isActive {
-  margin: 0;
-}
-
-a {
   font-weight: 500;
   color: black;
   text-decoration: none;
 }
 
-.apple {
+.ul {
+  display: flex;
+  list-style: none;
+}
+
+.li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.is-active {
   color: var(--blue);
   position: relative;
 }
 
-.navlink:hover {
+.nav_link:hover {
   color: var(--blue);
 }
 
 .is-active::after {
-  content: url(./images/Rectangle\ 2.png);
+  content: '';
+  display: block;
   position: absolute;
-  bottom: -3;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--blue);
+  bottom: 0;
 }
