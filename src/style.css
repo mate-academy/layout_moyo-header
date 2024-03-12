@@ -1,9 +1,15 @@
+:root {
+  --main-color: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
-  font-style: normal;
-  box-sizing: border-box;
 }
 
 body {
@@ -25,14 +31,11 @@ a {
   color: #000;
 }
 
-.container {
-  padding: 0 50px;
-}
-
-.header-wrapper {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
 }
 
 .nav__list {
@@ -53,11 +56,11 @@ a {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active::after {
@@ -67,6 +70,6 @@ a {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--main-color);
   border-radius: 8px;
 }
