@@ -1,5 +1,9 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&displ0ay=swap';
 
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -32,7 +36,7 @@ img {
   margin-left: 20px;
 }
 
-.list {
+.nav__list {
   margin: 0;
   display: flex;
   list-style: none;
@@ -43,46 +47,34 @@ img {
   text-transform: uppercase;
   text-align: center;
   align-items: center;
-  height: 60px;
   font-size: 12px;
   font-weight: 500;
   line-height: 14px;
   display: flex;
 }
 
-.element::after {
-  content: '';
-  position: absolute;
-  background-color: #00acdc;
-  border-radius: 8px;
-  height: 4px;
-  width: 0;
-  left: 0;
-  bottom: 0;
-}
-
 .element:active {
-  color: #00acdc;
-  box-shadow: 0 4px 0 #00acdc;
+  color: var(--blue-color);
 }
 
 .element:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 a {
+  height: 60px;
   text-decoration: none;
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active::after {
   content: '';
   position: absolute;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   border-radius: 8px;
   height: 4px;
   width: 100%;
