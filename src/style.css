@@ -1,10 +1,22 @@
 html {
-  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.logo {
+  display: flex;
 }
 
 .header {
@@ -14,27 +26,26 @@ body {
   padding: 0 50px;
 }
 
-.logo__img {
-  display: block;
-}
-
 .nav__list {
   display: flex;
-  margin: 0;
-  padding: 0;
   list-style: none;
+  align-items: center;
+}
+
+.nav__item {
+  height: 60px;
+  text-transform: uppercase;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
-  display: block;
-  margin-right: 10px;
+  display: inline-block;
   line-height: 60px;
-  height: 60px;
   color: black;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 500;
 }
 
 .nav__link:hover {
@@ -48,7 +59,8 @@ body {
 
 .is-active::after {
   position: absolute;
-  display: block;
+  bottom: 0;
+  right: 0;
   content: '';
   height: 4px;
   background-color: rgba(0, 172, 220, 1);
