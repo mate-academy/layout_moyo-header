@@ -1,9 +1,24 @@
 /* stylelint-disable-next-line import-notation */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+html {
+  box-sizing: initial;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue: #00acdc;
+}
 
 body {
-  box-sizing: border-box;
-  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500px;
 }
 
 .header {
@@ -17,10 +32,8 @@ body {
 }
 
 .nav__list {
-  margin: 0;
-  padding: 0;
   display: flex;
-  height: 60px;
+  min-height: 60px;
   justify-content: space-between;
   align-items: center;
   list-style: none;
@@ -52,7 +65,6 @@ body {
 
 .nav__item {
   font-family: roboto, sans-serif;
-  font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 12px;
@@ -73,7 +85,7 @@ body {
 
 .is-active,
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active::after {
@@ -84,5 +96,5 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--blue);
 }
