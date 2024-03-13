@@ -26,7 +26,7 @@ header {
   padding: 0;
 }
 
-.img_logo {
+.img__logo {
   display: block;
   width: 40px;
   height: 40px;
@@ -37,23 +37,22 @@ header {
   padding: 0;
 }
 
-.nav_list {
+.nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
 }
 
-.link {
-  margin: 0;
+.nav__item {
+  margin-left: 20px;
   padding: 0;
-  font-family:;
 }
 
-.nav_link {
+.nav__link {
   display: inline-block;
   padding: 0;
-  margin-left: 20px;
+  margin: 0;
   text-decoration: none;
   text-transform: uppercase;
   font-family: Roboto, sans-serif;
@@ -64,16 +63,19 @@ header {
   position: relative;
 }
 
-.nav_link:hover {
+.nav__link:hover {
   color: var(--hover-link-color);
+}
+
+.nav__item:first-child {
+  margin-left: 0;
 }
 
 .is-active {
-  margin: 0;
   color: var(--hover-link-color);
 }
 
-.nav_link.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   left: 0;
