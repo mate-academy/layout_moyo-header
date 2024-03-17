@@ -1,23 +1,26 @@
 body {
-  --color:  #00ACDC;
+  --color: #00acdc;
 
   margin: 0;
-  padding: 0;
   font-family: Roboto, sans-serif;
   box-sizing: border-box;
 }
 
-header {
-  width: 100%;
+.header {
+  width: 100% - 100px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .nav__link {
+  font-size: 12px;
   text-decoration: none;
   color: black;
-  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .nav__list {
@@ -27,24 +30,23 @@ header {
 }
 
 .nav__item {
-  text-transform: uppercase;
   font-weight: 500;
+  text-transform: uppercase;
   margin-right: 20px;
 }
 
-.nav {
-  height: 60px;
-  padding-right: 30px;
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .img {
-  padding-left: 50px;
   flex: 1;
+  height: 40px;
+  width: 40px;
 }
 
 .is-active {
   position: relative;
-
 }
 
 .is-active::after {
@@ -52,7 +54,7 @@ header {
   left: 0;
   position: absolute;
   width: 100%;
-  bottom: -5px;
+  bottom: 0;
   height: 4px;
   background-color: var(--color);
   border-radius: 10px;
