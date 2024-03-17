@@ -1,3 +1,7 @@
+:root {
+  --main-color: #00acdc;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -21,11 +25,14 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-right: -20px;
 }
 
 .nav__item {
   display: inline-block;
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
   margin-right: 20px;
 }
 
@@ -43,7 +50,7 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active::after {
@@ -52,12 +59,13 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--main-color);
   text-align: center;
   bottom: 0;
   position: absolute;
   left: 0;
 }
 
- .nav__link[data-qa='hover']:hover{
-  color: #00acdc;}
+.nav__link[data-qa='hover']:hover {
+  color: var(--main-color);
+}
