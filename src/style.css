@@ -1,3 +1,69 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 120px; /* Висота header з вашого зображення */
+}
+
+.header-container {
+  width: 1200px; /* Ширина контенту з вашого зображення */
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-link img {
+  display: block; /* Щоб логотип був блочним елементом */
+  height: auto; /* Для збереження пропорцій зображення */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 60px; /* Висота навігаційних посилань */
+}
+
+nav li {
+  margin: 0 10px; /* Відступи між посиланнями */
+}
+
+nav a {
+  text-decoration: none;
+  color: black; /* Колір тексту посилань */
+  padding: 5px 0; /* Відступи для тексту посилань */
+  display: block;
+  text-align: center;
+}
+
+nav a:hover {
+  color: blue; /* Колір посилання при наведенні */
+}
+
+nav a.is-active {
+  position: relative; /* Позиціонування для псевдоелементу */
+}
+
+nav a.is-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: blue; /* Колір активної лінії */
+  position: absolute;
+  bottom: -5px; /* Розміщення лінії нижче посилання */
+  left: 0;
 }
