@@ -3,7 +3,7 @@ Create HTML page with the header using `flexbox` based on the [Figma Mockup](htt
 
 The page should match the design Pixel Perfect: all the sizes, colors and distanced MUST be the same as on the design.
 
-> Here are the [Layout Tasks Instructions](https://mate-academy.github.io/layout_task-guideline)
+> Here are the [Layout Tasks Instructions](g)
 
 ## Requirements:
 
@@ -14,7 +14,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - the height should be set for nav links (not the header), take it from the design.
 - header content should be vertically centered.
 - Logo should also be a link with an image inside (from [src/images](src/images)). But it should not be a part of the `<nav>`.
-- ❗️ the blue link with a line below should have a class `is-active` in addition to any other classes you add.
+- ❗️ the blue link with a lnine below should have a class `is-active` in addition to any other classes you add.
 - ❗️ add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)
 - link color should be changed on `:hover`
 - Use the `::after` and position it relative to a link with `is-active` class
@@ -27,12 +27,12 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://osherstiak.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://osherstiak.github.io/layout_moyo-header/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
-- [ ] Header height is set in 1 place (for the links)
+- [x] Header height is set in 1 place (for the links)
 - [ ] Content is vertically centered (for any header height)
 - [ ] CSS is used to show all letters in Uppercase (don't type them in HTML)
 - [ ] Logo is an image wrapped with a link
