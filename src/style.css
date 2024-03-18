@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+html {
+  --is-active-color:#00ACDC;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -59,12 +63,9 @@ body {
   text-transform: uppercase;
 }
 
-.is-active {
-  color: #00ACDC;
-}
-
+.is-active,
 .nav__link:hover {
-  color: #00ACDC;
+  color: var(--is-active-color);
 }
 
 .is-active::after {
@@ -75,7 +76,7 @@ body {
   font-style: normal;
   text-transform: uppercase;
   position: absolute;
-  border-bottom: 4px solid #00ACDC;
+  border-bottom: 4px solid var(--is-active-color);
   border-radius: 8px;
   width: 100%;
   bottom: 0;
