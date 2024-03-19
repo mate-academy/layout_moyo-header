@@ -1,3 +1,7 @@
+:root {
+  --main-bg-color: #00ACDC;
+}
+
 body {
   margin: 0;
   background: #dacece;
@@ -45,7 +49,7 @@ a.is-active.nav-link {
   margin: 0;
 }
 
-.nav-item a {
+.nav-link {
   text-decoration: none;
   margin-left: 20px;
   white-space: nowrap;
@@ -54,37 +58,32 @@ a.is-active.nav-link {
   font-size: 12px;
   line-height: 14.06px;
   height: 60px;
-  display: inline-block;
-}
-
-a.nav-link {
   color: black;
   display: flex;
   align-items: center;
 }
 
-a.is-active {
-  color: #00ACDC;
+.nav-list:first-child {
+  margin-left: 0;
 }
 
 .is-active {
-  color: #00ACDC;
   position: relative;
-  margin-left: 0;
+  color: var(--main-bg-color);
 }
 
 .is-active,
 .nav-link:hover {
-color: #00ACDC;
+  color: var(--main-bg-color);
 }
 
 .is-active::after {
-content: '';
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-height: 4px;
-background-color: #00ACDC;
-border-radius: 8px;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-bg-color);
+  border-radius: 8px;
 }
