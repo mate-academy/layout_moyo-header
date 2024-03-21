@@ -2,15 +2,18 @@ html {
   font-size: 12px;
 }
 
+:root {
+  font-size: 12px;
+  line-height: 14px;
+
+  --link-color: #00acdc;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-
-  --link-color: #00acdc;
 }
 
 .header {
@@ -73,18 +76,11 @@ body {
   border-radius: 8px;
 }
 
-.is-active:hover::after {
-  width: 100%;
+.nav__link[data-qa='hover'] {
+  color: var(--link-color);
 }
 
 .nav__item:last-child {
   margin: 0;
 }
 
-.nav__item:first-child {
-  margin-left: 0;
-}
-
-.nav__link[data-qa='hover'] {
-  color: var(--link-color);
-}
