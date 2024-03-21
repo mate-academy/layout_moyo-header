@@ -4,10 +4,20 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a {
+  padding: 0;
+  text-decoration: none;
   font-family: Roboto, sans-serif;
-
   font-weight: 500;
 }
 
@@ -15,58 +25,52 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff; /* Білий фон /
-  padding: 20px; / Відступи з усіх сторін  width: 100%; */
-  height: 60px;
-  width: 1200px;
+  padding: 10px 50px;
+  background: #ffff;
+  position: relative;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
+li {
+  margin-right: 20px;
 }
 
 .logo img {
-  margin-left: 50px;
-  height: 40px; /* Висота логотипу */
+  height: 40px;
   width: 40px;
 }
 
-nav {
-  display: block;
-  align-items: center;
-  justify-content: center;
-
-
-}
-
-nav ul {
-  list-style-type: none;
+.nav__list {
+  list-style: none;
   display: flex;
-  margin: 10px; /* Відстань між пунктами меню */
+  align-items: center;
+  padding-left: 0;
 }
 
-nav ul li a {
+.nav__link {
   text-decoration: none;
-  color: black;
-  display: block;
-  padding: 10px;
-  transition: color 0.3s; /* Плавна зміна кольору при наведенні */
-}
-
-nav ul li a:hover,
-nav ul li a.is-active {
-  color: #00acdc; /* Синій колір при наведенні та для активного посилання */
-}
-
-nav ul li a.is-active::after {
+  color: #070707;
+  font-size: 12px;
+  text-transform: uppercase;
   position: relative;
+  transition: color 0.3s;
+}
+
+.nav__link:hover,
+.nav__link.is-active {
+  color: #00acd7;
+}
+
+.nav__link.is-active::after {
   content: '';
+  position: absolute;
+  left: 50%;
+  top: 35px;
+  transform: translateX(-50%);
+  bottom: -8px;
   display: block;
   height: 4px;
+  width: 100%;
+  background: #00acd7;
   border-radius: 8px;
-  width: 37px;
-  background-color: #00acdc; /* Синій колір лінії під активним посиланням /
-  margin-top: 5px; / Відстань між посиланням і лінією */
-  top: 17px;
+  transition: background-color 0.3s;
 }
