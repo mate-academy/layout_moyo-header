@@ -1,17 +1,14 @@
-body {
-  margin: 0;
-
+html {
   --text-nav-color: #00acdc;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+body {
+  margin: 0;
 }
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0 50px;
 }
@@ -36,13 +33,15 @@ a {
   height: 60px;
   line-height: 60px;
   text-transform: uppercase;
+  text-decoration: none;
+  color: black;
 }
 
-.nav-ul li {
+.nav-li {
   margin-left: 20px;
 }
 
-.nav-ul li:first-of-type {
+.nav-li:first-of-type {
   margin-left: 0;
 }
 
@@ -50,7 +49,7 @@ a {
   margin-left: 0;
 }
 
-a:hover {
+.nav-link:hover {
   color: var(--text-nav-color);
 }
 
@@ -67,20 +66,4 @@ a:hover {
   display: block;
   position: absolute;
   bottom: 0;
-}
-
-[data-qa='hover'] {
-  color: #000;
-}
-
-@media (min-width: 1200px) {
-  .header {
-    justify-content: space-between;
-  }
-}
-
-@media (min-width: 1024px) {
-  .header {
-    justify-content: space-between;
-  }
 }
