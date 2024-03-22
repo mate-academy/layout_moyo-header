@@ -25,7 +25,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
+  padding: 0 50px;
   background: #ffff;
   position: relative;
 }
@@ -35,8 +35,7 @@ li {
 }
 
 .logo img {
-  height: 40px;
-  width: 40px;
+  padding-top: 10px;
 }
 
 .nav__list {
@@ -49,6 +48,7 @@ li {
 .nav__link {
   text-decoration: none;
   color: #070707;
+  padding: 23px 0;
   font-size: 12px;
   text-transform: uppercase;
   position: relative;
@@ -64,13 +64,16 @@ li {
   content: '';
   position: absolute;
   left: 50%;
-  top: 35px;
   transform: translateX(-50%);
-  bottom: -8px;
+  bottom: 0;
   display: block;
   height: 4px;
   width: 100%;
   background: #00acd7;
   border-radius: 8px;
   transition: background-color 0.3s;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
