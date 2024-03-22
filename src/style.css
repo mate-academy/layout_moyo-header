@@ -47,6 +47,7 @@ li {
 
 .nav__link {
   text-decoration: none;
+  display: block;
   color: #070707;
   padding: 23px 0;
   font-size: 12px;
@@ -55,7 +56,14 @@ li {
   transition: color 0.3s;
 }
 
-.nav__link:hover,
+[data-qa='hover']:hover {
+  color: #00acd7;
+}
+
+.nav__link:hover {
+  color: #00acd7;
+}
+
 .nav__link.is-active {
   color: #00acd7;
 }
