@@ -1,36 +1,73 @@
-body {
-  margin: 0;
+html {
   font-family: Roboto, sans-serif;
 }
 
-.photo {
-  height: 40px;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  padding: 0;
-}
-
-nav li {
+body {
   margin: 0;
-  gap: 20px;
-  padding: 10px;
+  display: flex;
 }
 
-nav a {
-  text-decoration: none;
-  transition: color 0.3s;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
-  color: #000;
+  padding: 0 50px;
+  width: 100%;
 }
 
-nav a:hover {
+.header-content {
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.nav_list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav_link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  height: 60px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  gap: 20px;
+}
+
+li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.video {
+  margin: 0;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.nav_link:hover {
   color: #00acdc;
 }
 
-nav a.is-active::after {
+.nav_link.is-active {
+  color: #00acdc;
+}
+
+.nav_link.is-active::after {
   content: '';
   display: block;
   width: 100%;
@@ -39,30 +76,5 @@ nav a.is-active::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-bottom: -23px;
   border-radius: 8px;
-  color: #00acdc;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  height: 60px;
-  padding-left: 50px;
-  padding-right: 40px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 14px;
-  text-align: left;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-nav a[href='Apple'] {
-  color: #00acdc;
 }
