@@ -29,16 +29,8 @@ body {
   padding: 0;
 }
 
-.nav__item {
-  margin-left: 20px;
-}
-
-.nav__item:first-child {
-  margin-left: 0;
-}
-
-.nav__item:last-child {
-  margin-right: 0;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -50,6 +42,7 @@ body {
   position: relative;
 }
 
+.nav__link:hover,
 .is-active {
   color: var(--blue-color);
 }
@@ -64,8 +57,4 @@ body {
   bottom: 0;
   left: 0;
   background-color: var(--blue-color);
-}
-
-.hover__effect:hover {
-  color: var(--blue-color);
 }
