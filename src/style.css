@@ -1,9 +1,14 @@
-body {
-  margin: 0;
+html {
+  --color-hover: #00acdc;
+
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
   font-style: normal;
+}
+
+body {
+  margin: 0;
 }
 
 .header {
@@ -40,6 +45,21 @@ body {
   line-height: 14.06px;
 }
 
+.nav__link {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  line-height: 14.06px;
+
+  &:hover {
+    color: var(--color-hover);
+  }
+}
+
 .nav__item {
   display: flex;
   margin-right: 20px;
@@ -48,13 +68,13 @@ body {
 }
 
 .link:hover {
-  color: #00acdc;
+  color: var(--color-hover);
 }
 
 .is-active {
   position: relative;
   bottom: 0;
-  color: #00acdc;
+  color: var(--color-hover);
 }
 
 .is-active::after {
@@ -64,7 +84,7 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--color-hover);
   border-radius: 8px;
   width: auto;
 }
