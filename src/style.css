@@ -37,7 +37,7 @@ h1 {
   text-align: center;
 }
 
-.header {
+header {
   position: relative;
   background-image: url('images/MOYO\ _\ Header.zip');
   width: 100%;
@@ -45,11 +45,12 @@ h1 {
 
 .logo {
   position: absolute;
+  z-index: 1;
   margin: 10px auto;
   margin-left: 50px;
 }
 
-.nav__list {
+nav {
   position: relative;
   width: 100%;
   display: flex;
@@ -74,6 +75,14 @@ h1 {
   text-decoration-color: #00acdc;
 }
 
+.links:active{
+  color:red;
+}
+
+.links:active::after{
+  color:red;
+}
+
 .ul_list {
   margin: 0;
   margin-top: 0;
@@ -96,15 +105,33 @@ h1 {
   bottom: 0;
 } */
 
-.links.is-active {
+.is-active {
   color: #00acdc;
 }
+
+.is-active::selection{
+  color: black;
+}
+
+.is-active:active{
+  text-decoration: none;
+}
+
+/* a.is-active {
+  color: #00acdc;
+  text-decoration: none;
+} */
 
 .hovered {
   color: #00acdc;
 }
 
-.is-active::after {
+.hovered:hover{
+  color: #00acdc;
+  text-decoration: none;
+}
+
+a.is-active::after {
   display: block;
   content: '';
   position: relative;
