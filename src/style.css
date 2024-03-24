@@ -16,13 +16,6 @@ header {
   width: 100%;
 }
 
-.header-content {
-  text-decoration: none;
-  display: flex;
-  position: relative;
-  align-items: center;
-}
-
 .nav_list {
   display: flex;
   margin: 0;
@@ -59,9 +52,13 @@ header {
   display: block;
 }
 
+:root {
+  --link-color-hover: #00acdc;
+}
+
 .nav_link:hover,
 .nav_link.is-active {
-  color: #00acdc;
+  color: var(--link-color-hover);
 }
 
 .nav_link.is-active::after {
