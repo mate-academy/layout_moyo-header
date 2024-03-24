@@ -25,6 +25,7 @@
 html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -51,6 +52,10 @@ h1 {
 .nav__list {
   position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-height: 60px;
 }
 
 .links {
@@ -58,7 +63,6 @@ h1 {
   line-height: 60px;
   font-weight: bold;
   margin: 0 auto;
-  margin-left: 20px;
   text-decoration: none;
   color: black;
   text-transform: uppercase;
@@ -70,21 +74,29 @@ h1 {
   text-decoration-color: #00acdc;
 }
 
-ul {
+.ul_list {
+  margin: 0;
+  margin-top: 0;
   margin-right: 50px;
   display: flex;
   flex-direction: row;
   justify-content: right;
   align-items: center;
   list-style: none;
+  max-height: 60px;
 }
 
-nav img {
+.list {
+  margin: 0;
+  margin-left: 20px;
+}
+
+/* nav img {
   position: absolute;
   bottom: 0;
-}
+} */
 
-a.is-active {
+.links.is-active {
   color: #00acdc;
 }
 
@@ -92,20 +104,25 @@ a.is-active {
   color: #00acdc;
 }
 
-a.is-active::after {
+.is-active::after {
   display: block;
   content: '';
   position: relative;
+  bottom: 0;
+  flex-direction: column;
   height: 4px;
   border-radius: 8px;
   background-color: #00acdc;
-  bottom: 0;
 }
 
-/* .demo{
-  flex-direction: column;
-} */
-
-.Rectangle2 {
+/* .Rectangle2 {
+  margin-top: 0;
   width: auto;
+  flex-direction: column;
+  transform: translate(20px);
 }
+
+.demo {
+  flex-direction: column;
+  vertical-align: auto;
+} */
