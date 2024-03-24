@@ -1,6 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
+:root {
+  --blue-color: #00acdc;
+  --black-color: rgb(0, 0, 0);
 }
 
 body {
@@ -52,27 +52,26 @@ body {
 
 .active-button {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: var(--black-color);
+}
+
+.item_nav_list a:hover {
+  color: var(--blue-color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
-}
-
-.item_nav_list_4 a:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active::after {
   content: '';
   width: 100%;
   height: 4px;
-  background-color: rgb(0, 172, 220);
+  background-color: var(--blue-color);
   border-radius: 8px;
   position: absolute;
   bottom: 0;
-  display: block;
 }
 
 /* #endregion */
