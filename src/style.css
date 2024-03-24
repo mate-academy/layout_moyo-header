@@ -48,6 +48,11 @@ h1 {
   margin-left: 50px;
 }
 
+.nav__list{
+  position: relative;
+  width: 100%;
+}
+
 .links {
   font-size: 12px;
   line-height: 60px;
@@ -59,7 +64,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.links:hover{
+.links:hover {
   text-decoration: underline;
   text-underline-offset: 0;
   text-decoration-color: #00acdc;
@@ -74,10 +79,6 @@ ul {
   list-style: none;
 }
 
-nav{
-  position: relative;
-}
-
 nav img {
   position: absolute;
   bottom: 0;
@@ -85,4 +86,26 @@ nav img {
 
 .is-active {
   color: #00acdc;
+}
+
+.hovered {
+  color: #00acdc;
+}
+
+.is-active::after{
+  display: block;
+  content: '';
+  position: relative;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+  bottom: 0;
+}
+
+/* .demo{
+  flex-direction: column;
+} */
+
+.Rectangle2{
+  width: auto;
 }
