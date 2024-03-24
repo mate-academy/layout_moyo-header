@@ -37,13 +37,17 @@ body {
   gap: 20px;
 }
 
-.nav_link:hover,
-.nav_link.is-active {
-  color: var(--link-color-hover);
+:root {
+  --repeated-color: #00acdc;
 }
 
-a:hover {
-  color: #00acdc;
+.nav_link:hover,
+.nav_link.is-active {
+  color: var(--repeated-color);
+}
+
+.nav-list-link:hover {
+  color: var(--repeated-color);
 }
 
 .nav-item {
@@ -65,10 +69,6 @@ a:hover {
   position: relative;
 }
 
-:root {
-  --link-color-hover: #00acdc;
-}
-
 .is-active::after {
   display: block;
   content: '';
@@ -77,10 +77,10 @@ a:hover {
   bottom: 0;
   border-radius: 8px;
   position: absolute;
-  background-color: #00acdc;
+  background-color: var(--repeated-color);
   left: 0;
 }
 
 .nav-item:nth-child(1) .nav-list-link {
-  color: #00acdc;
+  color: var(--repeated-color);
 }
