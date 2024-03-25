@@ -116,14 +116,19 @@ nav {
   color: #00acdc;
 }
 
-.hovered:hover {
+.hover:hover {
   color: #00acdc;
   text-decoration: none;
 }
 
-a.is-active {
-  color: #00acdc;
-  position: relative;
+a.is-active::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  bottom: 0;
+  background-color: #00acdc;
 }
 
 .links.is-active {
@@ -131,6 +136,7 @@ a.is-active {
   position: relative;
 }
 
+/*
 .links.is-active::after {
   display: block;
   content: '';
@@ -140,4 +146,4 @@ a.is-active {
   height: 4px;
   border-radius: 8px;
   background-color: #00acdc;
-}
+} */
