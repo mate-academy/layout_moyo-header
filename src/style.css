@@ -87,10 +87,6 @@ a.is-active {
   color: orangered;
 } */
 
-.links.is-active {
-  color: orange;
-}
-
 .links:active::after {
   color: red;
 }
@@ -119,6 +115,7 @@ a.is-active {
 
 .is-active {
   color: #00acdc;
+  position: relative;
 }
 
 .is-active::selection {
@@ -143,10 +140,18 @@ a.is-active {
   text-decoration: none;
 }
 
+.links.is-active {
+  display: block;
+  height: 4px;
+  flex-direction: column;
+  align-items: end;
+  background-color: #00acdc;
+}
+
 .links.is-active::after {
   display: block;
   content: '';
-  position: relative;
+  position: absolute;
   bottom: 0;
   flex-direction: column;
   height: 4px;
