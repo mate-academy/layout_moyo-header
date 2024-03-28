@@ -12,30 +12,13 @@ body {
   padding: 0;
 }
 
-.roboto-regular {
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-bold {
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.roboto-medium {
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
 .header {
   margin: 0;
   padding: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  box-shadow: inset;
 }
 
 .logo {
@@ -55,7 +38,6 @@ body {
 .nav {
   margin-right: 50px;
   padding: 0;
-  height: 60px;
 }
 
 .u-list {
@@ -65,19 +47,15 @@ body {
   padding: 0;
 }
 
-.is-active_image {
-  position: relative;
-  bottom: 4;
-}
-
 .nav_list_item {
   list-style-type: none;
-  padding: 0;
+  display: flex;
 }
 
 .nav_link {
   margin: 0 10px;
   line-height: 60px;
+  height: 60px;
 
   /* margin-right: 10px; */
   text-decoration: none;
@@ -94,19 +72,18 @@ body {
 }
 
 .is-active {
-  display: flex;
-  flex-direction: column;
   color: var(--blue);
   margin-left: 0;
-  text-align: left;
-}
-
-.is-active::after {
   position: relative;
-  background-image: url(./images/Rectangle.png);
-  bottom: 4;
 }
 
-.video {
+a.is-active::after {
+  position: absolute;
+  content: url(./images/Rectangle.png);
+  bottom: -26px;
+  left: 0;
+}
+
+.last-link {
   margin-right: 0;
 }
