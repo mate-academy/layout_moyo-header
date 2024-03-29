@@ -21,7 +21,7 @@ a {
   font-weight: 500;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +34,7 @@ li {
   margin-right: 20px;
 }
 
-.logo img {
+.header__link img {
   padding-top: 5px;
 }
 
@@ -64,19 +64,18 @@ li {
   color: #00acd7;
 }
 
-.nav__link.is-active {
+.is-active {
   color: #00acd7;
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   bottom: 0;
   display: block;
   height: 4px;
-  width: 37px;
+  width: 100%;
   background: #00acd7;
   border-radius: 8px;
   transition: background-color 0.3s;
