@@ -13,6 +13,10 @@ body {
   font-style: normal;
 }
 
+:root {
+  --link-color: #00acdc;
+}
+
 /* .header * {
   display: inline;
 } */
@@ -52,13 +56,13 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--link-color);;
   position: relative;
 }
 
 .is-active::after {
   content: '';
-  background-color: #00acdc;
+  background-color: var(--link-color);;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -68,5 +72,5 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--link-color);;
 }
