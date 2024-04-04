@@ -1,16 +1,18 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-
+:root {
   --accecent-color: #00acdc;
 }
 
-header {
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
@@ -21,18 +23,18 @@ header {
   height: 40px;
 }
 
-nav {
+.nav {
   align-self: center;
 }
 
-ul {
+.nav__list {
   margin: 0;
   display: flex;
   list-style-type: none;
   padding: 0;
 }
 
-li {
+.nav__item {
   display: flex;
   align-items: center;
   margin: 0 10px;
@@ -41,15 +43,15 @@ li {
   text-transform: uppercase;
 }
 
-li:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
-li:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-a {
+.nav__link {
   display: flex;
   align-items: center;
   height: 60px;
@@ -59,13 +61,10 @@ a {
 
 .is-active {
   color: var(--accecent-color);
-}
-
-.underline {
   position: relative;
 }
 
-.underline::after {
+.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -75,6 +74,6 @@ a {
   border-radius: 8px;
 }
 
-a:hover {
+.nav__link:hover {
   color: var(--accecent-color);
 }
