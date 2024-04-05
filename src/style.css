@@ -1,9 +1,12 @@
 html {
-  /* stylelint-disable-next-line font-family-name-quotes */
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
+}
+
+:root {
+  --primary-color: #00acdc;
 }
 
 body {
@@ -12,7 +15,7 @@ body {
 }
 
 .header {
-  padding: 0, 50px;
+  padding: 0 50px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -20,10 +23,10 @@ body {
   align-items: center;
 }
 
-.logo {
-  padding-left: 50px;
+.logo__link {
   width: 40px;
   height: 40px;
+  display: inline-block;
 }
 
 .nav__list {
@@ -59,17 +62,17 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .is-active {
   position: relative;
 
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .is-active::after {
-  background-color: #00acdc;
+  background-color: var(--primary-color);
   position: absolute;
   content: '';
 
