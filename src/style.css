@@ -11,46 +11,30 @@ body {
 
 header {
   display: flex;
-  padding: 10px 0;
+  padding: 0 50px;
   background-color: #fff;
   align-items: center;
+  justify-content: space-between;
 }
 
 img {
-  margin-left: 50px;
+  display: block;
   height: 40px;
-  margin-right: 243px;
-  align-items: center;
+  padding: 10px 0;
   width: 40px;
 }
 
 ul {
   display: flex;
-  height: 40px;
   font-family: Roboto, sans-serif;
-  font-weight: 500;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 20px;
+  margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .nav__list {
-  display: flex;
-  align-items: center;
-  list-style: none;
   padding: 0;
   margin-right: 20px;
-  height: 40px;
-}
-
-.nav__list_laptops {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin-right: 20px;
-  height: 40px;
 }
 
 .nav__list:last-child {
@@ -58,21 +42,17 @@ ul {
 }
 
 .nav__link {
+  display: flex;
   text-decoration: none;
   text-transform: uppercase;
   color: black;
+  font-weight: 500;
+  line-height: 60px;
   align-items: center;
-  padding: 0;
 }
 
 .is-active {
-  margin-left: 0;
-}
-
-.nav__link_is-active {
   color: var(--blue-color);
-  text-decoration: none;
-  text-transform: uppercase;
   position: relative;
 }
 
@@ -82,38 +62,17 @@ ul {
   text-transform: uppercase;
 }
 
-.nav__list:hover {
-  text-decoration: underline;
+.nav__link:hover {
   color: #00acdc;
 }
 
-.nav__list_laptops:hover {
-  text-decoration: none;
-  color: #00acdc;
-}
-
-.nav__list_is-active:hover {
-  text-decoration: none;
-  color: #00acdc;
-}
-
-.nav__link_is-active::after {
+.is-active::after {
   content: '';
+  display: block;
   position: absolute;
-  bottom: -18.5;
-  left: 0;
-  right: 0;
+  bottom: 0;
+  width: 100%;
   height: 4px;
   border-radius: 8px;
   background-color: var(--blue-color);
-}
-
-@media (min-width: 1200px) {
-  header {
-    width: 1200px;
-  }
-
-  img {
-    margin-right: 419px;
-  }
 }
