@@ -1,3 +1,7 @@
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -6,6 +10,7 @@ body {
 
 .header {
   display: flex;
+  padding: 0 50px;
 }
 
 .logo {
@@ -16,14 +21,12 @@ body {
 .logo__img {
   width: 40px;
   height: 40px;
-  margin-left: 50px;
 }
 
 .nav {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  margin-right: 50px;
 }
 
 .nav__list {
@@ -48,11 +51,11 @@ a {
 }
 
 .first__link {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .other__link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active::after {
@@ -62,5 +65,5 @@ a {
   bottom: 4px;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--blue);
 }
