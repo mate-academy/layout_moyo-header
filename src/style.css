@@ -5,7 +5,6 @@
 html {
   --header-height: 60px;
   --link-color: #00acdc;
-  --black: #000;
 }
 
 body {
@@ -19,16 +18,34 @@ body {
 }
 
 .container {
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
   align-items: center;
   width: 100%;
   max-width: 1200px;
 }
 
-a {
-  text-decoration: none;
+.logo {
+  display: flex;
+  margin-left: 50 px;
+}
+
+.nav {
+  margin-right: 50px;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link {
@@ -36,7 +53,7 @@ a {
   display: flex;
   align-items: center;
   height: var(--header-height);
-  color: var(--black);
+  color: black;
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
@@ -47,7 +64,7 @@ a {
 }
 
 .is-active {
-  position: relative;
+  color: var(--link-color);
 }
 
 .is-active::after {
@@ -58,24 +75,4 @@ a {
   width: 100%;
   background-color: var(--link-color);
   border-radius: 8px;
-}
-
-.nav__list {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav {
-  margin-right: 50px;
-}
-
-.logo {
-  display: flex;
-  margin-left: 50 px;
-}
-
-.nav__item:not(:first-child) {
-  margin-left: 20px;
 }
