@@ -1,64 +1,68 @@
-:root {
-  --blue-color: #00acdc; /* Define a variable for the blue color */
-}
-
-html {
-  font-family: Roboto, sans-serif;
-  text-transform: uppercase;
-}
-
 body {
   margin: 0;
-  font-size: 12px;
+  font-family: Roboto, sans-serif;
+}
+
+:root {
+  --color-active: #00acdc;
+}
+
+.header {
+  text-transform: uppercase;
   font-weight: 500;
+  font-size: 12px;
 }
 
-.header-content {
-  width: 100%;
+.menu_logo {
+  height: 40px;
+  width: 40px;
+  flex-grow: 1;
+}
+
+.header_menu {
+  margin: 0 50px;
+}
+
+.menu {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  position: relative;
+  align-items: center;
 }
 
-.logo-link {
-  margin-left: 50px;
+.nav_list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav {
+.nav_list_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav_link {
+  display: flex;
   height: 60px;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  display: inline-block;
-  text-decoration: none;
-  color: #000;
-  padding: 0 15px;
   line-height: 60px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav_link_blue,
+.nav_link:hover {
+  color: var(--color-active);
+}
+
+.is-active {
   position: relative;
 }
 
-nav ul li a:hover {
-  color: var(--blue-color);
-}
-
-.blue {
-  color: var(--blue-color);
-}
-
-nav a.is-active::after {
-   margin-left: 10px;
+.is-active::after {
   content: '';
-  display: block;
-  width: 70%;
-  height: 3px;
-  border-radius: 10px;
-  background-color: var(--blue-color);
   position: absolute;
   bottom: 0;
-  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--color-active);
 }
