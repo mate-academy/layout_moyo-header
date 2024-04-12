@@ -24,9 +24,7 @@ body {
 .logo {
   height: 40px;
   width: 40px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 50px;
+  margin: 10px 0 10px 50px;
 }
 
 .logo_link {
@@ -36,7 +34,7 @@ body {
 }
 
 .nav {
-  margin-right: 50px;
+  margin: 0 50px 0 0;
   padding: 0;
 }
 
@@ -53,7 +51,7 @@ body {
 }
 
 .nav_link {
-  margin: 0 10px;
+  margin: 0 0 0 20px;
   line-height: 60px;
   height: 60px;
   text-decoration: none;
@@ -69,19 +67,19 @@ body {
   color: var(--blue);
 }
 
-a.is-active {
+.is-active {
   color: var(--blue);
   margin-left: 0;
   position: relative;
 }
 
-a.is-active::after {
+.is-active::after {
+  content: '';
   position: absolute;
-  content: url(./images/Rectangle.png);
-  bottom: -26px;
+  height: 4px;
+  right: 0;
+  bottom: 0;
   left: 0;
-}
-
-.last-link {
-  margin-right: 0;
+  background-color: var(--blue);
+  border-radius: 2px;
 }
