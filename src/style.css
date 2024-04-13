@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -14,25 +15,15 @@ body {
 
 .header {
   width: 100%;
-  max-width: 1920px;
-}
-
-.container {
-  margin: 0 auto;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1200px;
 }
 
 .logo {
   display: flex;
   margin-left: 50 px;
-}
-
-.nav {
-  margin-right: 50px;
 }
 
 .nav__list {
@@ -63,11 +54,11 @@ body {
   color: var(--link-color);
 }
 
-.is-active {
+a.is-active {
   color: var(--link-color);
 }
 
-.is-active::after {
+a.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
