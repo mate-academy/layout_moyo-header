@@ -1,3 +1,57 @@
+:root {
+  --accent-color: #00acdc;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  padding: 0 50px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.06px;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  padding: 22.5px 0;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+  position: relative;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--accent-color);
+  color: var(--accent-color);
+  height: 4px;
+  border-radius: 8px;
 }
