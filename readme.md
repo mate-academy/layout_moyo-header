@@ -27,8 +27,8 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://Daniel-spec-dell.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://Daniel-spec-dell.github.io/layout_moyo-header/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
@@ -36,6 +36,6 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [ ] Content is vertically centered (for any header height)
 - [ ] CSS is used to show all letters in Uppercase (don't type them in HTML)
 - [ ] Logo is an image wrapped with a link
-- [ ] **CSS Variable** is used for a blue color
+- [ ] **CSS Variable** is used for a lue color
 - [ ] Pseudo-element is used for a blue line below the active link
 - [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
