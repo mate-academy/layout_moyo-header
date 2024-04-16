@@ -2,14 +2,15 @@ body {
   margin: 0;
   background-color: #333;
   font-family: Roboto, sans-serif;
-  font-weight: 500;
+  font-weight: normal;
   font-style: normal;
   font-size: 12px;
 }
 
 .header {
   display: flex;
-  padding: 0 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   background-color: #fff;
   align-items: center;
   justify-content: space-between;
@@ -41,6 +42,7 @@ body {
   text-decoration: none;
   list-style: none;
   text-transform: uppercase;
+  position: relative;
 }
 
 .is-active {
@@ -53,11 +55,11 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 5px;
-  position: relative;
+  position: absolute;
   background-color: #00acdc;
   bottom: 0;
 }
 
-[data-qa]:hover {
+[data-qa="hover"] {
   color: #00acdc;
 }
