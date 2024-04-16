@@ -25,11 +25,9 @@ a {
 
 .nav {
   display: flex;
-  gap: 20px;
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
-  line-height: 14.06px;
   text-transform: uppercase;
 }
 
@@ -37,14 +35,20 @@ a {
   padding: 22.5px 0;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--accent-color);
+.nav-link:not(:last-child) {
+  margin-right: 20px;
+}
+
+.is-active {
   position: relative;
 }
 
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
 .nav-link:hover::after,
-.nav-link:focus::after {
+.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
