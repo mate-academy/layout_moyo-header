@@ -1,17 +1,25 @@
-body {
-  margin: 0;
-  width: 100%;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-
+:root {
   --padding-header: 50px;
   --active-color-text: #00acdc;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+body {
+  margin: 0;
+}
+
 .header {
-  width: calc(100vw - (var(--padding-header) * 2));
+  width: 100%;
   margin: 0 auto;
   padding: 0 var(--padding-header);
   display: flex;
@@ -65,7 +73,7 @@ body {
   color: var(--active-color-text);
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   position: absolute;
   content: '';
   border-radius: 8px;
