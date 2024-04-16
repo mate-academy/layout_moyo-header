@@ -1,16 +1,17 @@
 body {
   margin: 0;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
+
   --padding-header: 50px;
   --active-color-text: #00acdc;
 }
 
 .header {
-  width: calc(100vw - var(--padding-header) * 2);
+  width: calc(100vw - (var(--padding-header) * 2));
   margin: 0 auto;
   padding: 0 var(--padding-header);
   display: flex;
@@ -60,7 +61,11 @@ body {
   color: var(--active-color-text);
 }
 
-.nav__link:hover::after {
+.is-active {
+  color: var(--active-color-text);
+}
+
+.nav__link.is-active::after {
   position: absolute;
   content: '';
   border-radius: 8px;
@@ -68,8 +73,4 @@ body {
   height: 4px;
   background-color: var(--active-color-text);
   align-self: flex-end;
-}
-
-.is-active {
-  color: var(--active-color-text);
 }
