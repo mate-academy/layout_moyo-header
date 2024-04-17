@@ -1,12 +1,13 @@
 html {
   --blue-color: #00acdc;
   --header-height: 60px;
+
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
 }
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
 }
 
 .container {
@@ -35,7 +36,7 @@ li {
   margin: 0;
 }
 
-.menu__link {
+.nav__link {
   display: inline-block;
   height: var(--header-height);
   line-height: var(--header-height);
@@ -45,11 +46,11 @@ li {
   font-size: 12px;
 }
 
-.menu__link:hover {
+.nav__link:hover {
   color: var(--blue-color);
 }
 
-.menu__list :nth-child(n + 2) {
+.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
