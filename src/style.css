@@ -1,3 +1,72 @@
+:root {
+  --navlink-active: #00acdc;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
 body {
+  box-sizing: border-box;
   margin: 0;
+}
+
+.header {
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  display: flex;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.moyo {
+  width: 100%;
+  height: 100%;
+}
+
+.nav_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav_link {
+  white-space: nowrap;
+  color: #000;
+  text-transform: uppercase;
+  background-color: #fff;
+  align-items: center;
+  height: 60px;
+  margin-left: 20px;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+.nav_link:hover {
+  color: var(--navlink-active);
+}
+
+.nav_link.is-active {
+  color: var(--navlink-active);
+  margin-left: 0;
+}
+
+.nav_link.is-active::after {
+  content: '';
+  background-color: var(--navlink-active);
+  border-radius: 8px;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
