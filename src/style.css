@@ -1,5 +1,8 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .img__logo {
@@ -9,21 +12,18 @@ body {
 
 .header {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   padding: 0 50px;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
 }
 
-.nav {
-  margin-left: auto;
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 .nav__list {
   display: flex;
-  padding: 0;
-  margin: 0;
   text-transform: uppercase;
 }
 
@@ -35,15 +35,17 @@ body {
   margin-left: 20px;
 }
 
-.nav__item:first-child::after {
+.is-active {
+  position: relative;
+}
+
+.is-active::after {
   content: '';
-  display: flex;
   position: absolute;
-  align-self: flex-end;
-  flex-shrink: 0;
-  flex-grow: 0;
+  bottom: 0;
+  left: 0;
   height: 4px;
-  width: 37px;
+  width: 100%;
   border-radius: 8px;
   background: #00acdc;
 }
