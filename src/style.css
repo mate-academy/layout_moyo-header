@@ -13,7 +13,12 @@ html {
   align-items: center;
   padding: 0 50px;
   margin: 0;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.header .nav__item {
+  display: flex;
+  margin-left: 20px;
 }
 
 .nav {
@@ -22,13 +27,8 @@ html {
   padding-left: 0;
 }
 
-.header .nav__item {
-  display: flex;
-  margin-left: 20px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-  padding: 0;
+.nav__item:first-child {
+  margin-left: 0;
 }
 
 .nav__link {
@@ -36,19 +36,18 @@ html {
   text-transform: uppercase;
   color: #000;
   text-decoration: none;
+  height: 60px;
+  line-height: 60px;
 }
 
-.nav__list {
-  justify-content: flex-end;
+.nav__link:hover {
+  color: var(--blue);
+}
+
+ul {
   display: flex;
   margin: 0;
   padding-left: 0;
-}
-
-.moyo_img {
-  position: absolute;
-  left: 50px;
-  top: 10px;
 }
 
 .is-active {
@@ -65,12 +64,4 @@ html {
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-.nav__link:hover {
-  color: var(--blue);
-}
-
-.header .nav__item:first-child {
-  margin-left: 0;
 }
