@@ -1,17 +1,15 @@
-body {
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  background-color: gray;
+:root {
+  --blue: #00acdc;
 }
 
 html {
-  --color-active: #00acdc;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .header {
   display: flex;
-  background: #fff;
   align-items: center;
   padding: 0 50px;
   margin: 0;
@@ -55,13 +53,13 @@ html {
 
 .is-active {
   position: relative;
-  color: var(--color-active);
+  color: var(--blue);
 }
 
 .is-active::after {
   content: '';
   height: 4px;
-  background-color: var(--color-active);
+  background-color: var(--blue);
   border-radius: 8px;
   width: 100%;
   position: absolute;
@@ -70,7 +68,7 @@ html {
 }
 
 .nav__link:hover {
-  color: var(--color-active);
+  color: var(--blue);
 }
 
 .header .nav__item:first-child {
