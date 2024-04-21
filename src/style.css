@@ -1,25 +1,20 @@
-/* stylelint-disable font-family-name-quotes */
-/* stylelint-disable-next-line comment-empty-line-before */
-
 :root {
   --blue: #00acdc;
   --header-height: 60px;
 }
 
-.roboto-bold {
+html {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
+  font-size: 12;
 }
 
 body {
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
   margin: 0;
-  padding: 0;
 }
 
-.moyo_head {
+.header {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -32,8 +27,6 @@ body {
 .navi_box {
   display: flex;
   flex-direction: row;
-  margin-bottom: 0;
-  margin-right: 50px;
   align-content: center;
   height: var(--header-height);
   margin-left: 0;
@@ -43,18 +36,18 @@ body {
 
 .navi_list {
   margin: 0;
-  padding: 0;
-  height: var(--header-height); /* 48px to make it equal to test 3-4 */
-  line-height: var(--header-height); /* 36px to make it equal to test 3-4 */
+  height: var(--header-height);
+  line-height: var(--header-height);
+  padding: 0 50px;
 }
 
-.navi_link {
+.nav_item {
   display: inline-block;
-  height: var(--header-height); /* 48px to make it equal to test 3-4 */
-  line-height: var(--header-height); /* 36px to make it equal to test 3-4 */
+  height: var(--header-height);
+  line-height: var(--header-height);
 }
 
-.link {
+.nav_link {
   display: inline-block;
   text-decoration: none;
   color: black;
@@ -62,43 +55,33 @@ body {
   line-height: var(--header-height); /* 36px to make it equal to test 3-4 */
 }
 
-.link:hover {
+.nav_link:hover {
   color: var(--blue);
 }
 
-li:not(:first-child) {
-  margin-left: 8.5px;
+.nav_item:not(:last-child) {
+  margin-right: 15px;
 }
 
-li:not(:last-child) {
-  margin-right: 8.5px;
-}
-
-li.is-active {
+.is-active {
   color: var(--blue);
-  position: relative; /* Added for positioning context */
+  position: relative;
 }
 
-a.is-active {
-  color: var(--blue);
-}
-
-li.is-active::after {
+.nav_item.is-active::after {
   content: '';
   position: absolute;
-  margin-top: 20px;
   background: var(--blue);
   height: 4px;
   border-radius: 10px;
   display: inline-block;
-  width: 100%; /* 37px long */
-  bottom: 0; /* Added to position at the bottom of .is-active */
-  left: 0; /* Added to position from the left of .is-active */
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
 
-.logo {
+.header_link {
   width: 40px;
   height: 40px;
-  margin-left: 50px;
   justify-content: flex-end;
 }
