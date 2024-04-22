@@ -22,17 +22,15 @@ body {
   text-transform: uppercase;
   align-items: center;
   height: var(--header-height);
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
-.nav_box {
+.nav {
   display: flex;
   flex-direction: row;
   align-content: center;
   height: var(--header-height);
-  margin-left: 0;
-  padding-left: 0;
-  box-sizing: border-box;
-  margin-right: 50px;
 }
 
 .nav_list {
@@ -69,7 +67,7 @@ body {
   position: relative;
 }
 
-.nav_item.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
   background: var(--blue);
@@ -85,5 +83,4 @@ body {
   width: 40px;
   height: 40px;
   justify-content: flex-end;
-  margin-left: 50px;
 }
