@@ -44,12 +44,23 @@ li:last-child {
   margin-right: 0;
 }
 
-li:hover {
-  color: blueviolet; /* Mudar cor ao passar o mouse */
+a:hover {
+  color: blue; /* Nova cor ao passar o mouse */
 }
 
-a {
+nav.lista ul li a {
   text-decoration: none;
+  color: #333;
+  display: inline-block;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Cor do link ao passar o mouse sobre ele */
+
+/* Aplicar a cor ao link dentro do li com data-qa="hover" */
+li[data-qa='hover'] a:hover {
+  color: red; /* Nova cor ao passar o mouse especificamente neste link */
 }
 
 /* Remover margem à esquerda do primeiro item */
@@ -100,14 +111,6 @@ nav.lista ul {
 
 nav.lista ul li:not(:first-child) {
   margin-left: 20px;
-}
-
-nav.lista ul li a {
-  text-decoration: none;
-  color: #333;
-  display: inline-block;
-  padding: 10px;
-  transition: color 0.3s ease;
 }
 
 nav.lista ul li a.is-active {
