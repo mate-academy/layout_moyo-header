@@ -1,68 +1,134 @@
-body {
-  margin: auto 0;
-}
+/* Reset browser default margins */
 
-/* Linha em branco antes da regra */
 html {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-header {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
 nav {
-  height: 50px;
+  height: 50px; /* Altura dos links de navegação */
 }
 
 .logo {
-  margin: 30px;
+  /* Remover margem nas bordas externas do logo */
 }
 
 .is-active {
-  width: 100px;
-  height: 10px;
-  background-color: #00acdc;
-  margin-left: 250px;
-  border-radius: 5px;
-  position: relative;
+  /* Propriedades da classe is-active */
 }
 
-div .lista {
-  position: relative;
+nav.lista {
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Centralizar horizontalmente */
 }
 
 ul {
   list-style-type: none;
   display: flex;
-  align-items: end;
-  margin-left: 250px;
+  align-items: center;
 }
 
 li {
-  margin-left: 20px;
-  align-items: center;
-  place-content: center;
+  margin-left: 20px; /* Adicionar margem entre os itens */
+  align-items: center; /* Centralizar verticalmente */
+}
+
+li:first-child {
+  margin-left: 0;
+}
+
+/* Remover margem à direita do último item */
+li:last-child {
+  margin-right: 0;
 }
 
 li:hover {
-  color: blueviolet;
+  color: blueviolet; /* Mudar cor ao passar o mouse */
 }
 
 a {
   text-decoration: none;
 }
 
-li:first-child a {
-  margin-left: 0; /* Remover a margem à esquerda do primeiro item */
+/* Remover margem à esquerda do primeiro item */
+
+/* Reset browser default margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
 }
 
-li:last-child a {
-  margin-right: 0; /* Remover a margem à direita do último item */
+body {
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+nav.logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+nav.lista ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav.lista ul li:not(:first-child) {
+  margin-left: 20px;
+}
+
+nav.lista ul li a {
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+nav.lista ul li a.is-active {
+  color: blue;
+  position: relative;
+}
+
+nav.lista ul li a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: blue;
+}
+
+nav.lista ul li a:hover {
+  color: #666;
+}
+
+nav.lista ul li[data-qa='hover'] a:hover {
+  color: #666;
 }
