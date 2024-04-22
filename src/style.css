@@ -44,8 +44,21 @@ li:last-child {
   margin-right: 0;
 }
 
-a:hover {
-  color: blue; /* Nova cor ao passar o mouse */
+a {
+  color: #333; /* Cor padrão do link */
+  text-decoration: none; /* Remover sublinhado padrão */
+  position: relative; /* Definir a posição relativa para permitir a barra azul */
+}
+
+.is-active a::after {
+  content: ''; /* Criar um conteúdo vazio para o pseudoelemento */
+  position: absolute; /* Posição absoluta em relação ao link */
+  bottom: -2px; /* Alinhar a barra na parte inferior do link */
+  left: 0; /* Posicionar a barra no início do link */
+  width: 100%; /* Largura igual ao link */
+  height: 8px; /* Altura da barra */
+  background-color: aqua; /* Cor da barra */
+  border-radius: 5px;
 }
 
 nav.lista ul li a {
