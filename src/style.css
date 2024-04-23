@@ -1,30 +1,37 @@
 :root {
-  --main-bg-color: #fff;
+  --default-color: #fff;
   --main-active-color: #00acdc;
   --main-text-color: #000;
 }
 
-body {
-  margin: 0;
+html {
   font-family: Roboto, sans-serif;
   width: 100%;
   font-size: 12px;
   font-weight: 500;
 }
 
-.menu {
-  background-color: var(--main-bg-color);
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: var(--default-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
 }
 
-.logo {
+.header__logo {
   display: inline-block;
   width: 40px;
   height: 40px;
   line-height: 60px;
+}
+
+.header__link {
+  height: 40px;
 }
 
 .nav__list {
@@ -52,7 +59,7 @@ body {
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--main-active-color);
 }
 
 .is-active::after {
@@ -70,20 +77,6 @@ body {
   -o-border-radius: 8px;
 }
 
-/*
-.nav__link:link {
-
-}
-
-.nav__link:visited {
-
-}
-*/
-
 .nav__link:hover {
   color: var(--main-active-color);
-}
-
-.nav__link:active {
-  /* color: var(--main-active-color); */
 }
