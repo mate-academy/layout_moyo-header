@@ -1,4 +1,8 @@
 /* stylelint-disable selector-class-pattern */
+:root {
+  --primary-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -42,7 +46,7 @@ body {
   font-style: normal;
 }
 
-.navlinks {
+.nav__link {
   color: #000;
   text-decoration: none;
   margin-left: 20px;
@@ -50,17 +54,12 @@ body {
   padding: 23px 0;
 }
 
-[data-qa]:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--primary-color);
 }
 
-.item:hover {
-  text-decoration: solid #00acdc;
-  border-radius: 180;
-}
-
-.Apple {
-  color: #00acdc;
+.is-active {
+  color: var(--primary-color);
   position: relative;
   margin-left: 0;
 }
@@ -73,5 +72,5 @@ nav a.is-active::after {
   border-radius: 8px;
   position: absolute;
   bottom: 0;
-  background-color: #00acdc;
+  background-color: var(--primary-color);
 }
