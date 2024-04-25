@@ -1,150 +1,96 @@
-/* Reset browser default margins */
-
 html {
+  --bluecolor: #00acdc;
+  --blackcolor: #000;
+}
+
+body {
+  margin: 0 auto;
   font-family: Roboto, sans-serif;
-  font-weight: 500;
+  font-size: 12px;
   font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
-nav {
-  height: 50px; /* Altura dos links de navegação */
-}
-
-.logo {
-  /* Remover margem nas bordas externas do logo */
-}
-
-.is-active {
-  /* Propriedades da classe is-active */
-}
-
-nav.lista {
+.header {
   display: flex;
+  min-width: 1024px;
   align-items: center;
-  justify-content: center; /* Centralizar horizontalmente */
+  justify-content: space-between;
+  margin: 0;
 }
 
-ul {
+.nav {
+  margin-right: 50px;
+}
+
+.nav__logo {
+  height: 40px;
+  margin-left: 50px;
+}
+
+.nav__list {
+  display: flex;
   list-style-type: none;
-  display: flex;
-  align-items: center;
-}
-
-li {
-  margin-left: 20px; /* Adicionar margem entre os itens */
-  align-items: center; /* Centralizar verticalmente */
-}
-
-li:first-child {
-  margin-left: 0;
-}
-
-/* Remover margem à direita do último item */
-li:last-child {
-  margin-right: 0;
-}
-
-a {
-  color: #333; /* Cor padrão do link */
-  text-decoration: none; /* Remover sublinhado padrão */
-  position: relative; /* Definir a posição relativa para permitir a barra azul */
-}
-
-.is-active a::after {
-  content: ''; /* Criar um conteúdo vazio para o pseudoelemento */
-  position: absolute; /* Posição absoluta em relação ao link */
-  bottom: -2px; /* Alinhar a barra na parte inferior do link */
-  left: 0; /* Posicionar a barra no início do link */
-  width: 100%; /* Largura igual ao link */
-  height: 8px; /* Altura da barra */
-  background-color: aqua; /* Cor da barra */
-  border-radius: 5px;
-}
-
-nav.lista ul li a {
-  text-decoration: none;
-  color: #333;
-  display: inline-block;
-  padding: 10px;
-  transition: color 0.3s ease;
-}
-
-/* Cor do link ao passar o mouse sobre ele */
-
-/* Aplicar a cor ao link dentro do li com data-qa="hover" */
-li[data-qa='hover'] a:hover {
-  color: red; /* Nova cor ao passar o mouse especificamente neste link */
-}
-
-/* Remover margem à esquerda do primeiro item */
-
-/* Reset browser default margins */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: Roboto, sans-serif;
+.nav__item {
+  margin: 0 0 0 20px;
 }
 
-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f2f2f2;
-  padding: 10px;
-  box-sizing: border-box;
+.nav__item:first-child {
+  margin-left: 0;
 }
 
-nav.logo img {
-  max-width: 100px;
-  height: auto;
+.nav__item:last-child {
+  margin-right: 0;
 }
 
-nav.lista ul {
-  display: flex;
-  list-style-type: none;
+.nav__link {
+  text-decoration: none;
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
 }
 
-nav.lista ul li:not(:first-child) {
-  margin-left: 20px;
+.nav__link:link {
+  color: var(--blackcolor);
 }
 
-nav.lista ul li a.is-active {
-  color: blue;
+.nav__link:visited {
+  color: var(--blackcolor);
+}
+
+.nav__link:hover {
+  color: var(--bluecolor);
+}
+
+.nav__link:active {
+  color: var(--bluecolor);
+}
+
+.is-active {
   position: relative;
+  color: var(--bluecolor);
 }
 
-nav.lista ul li a.is-active::after {
+.is-active:link {
+  color: var(--bluecolor);
+}
+
+.is-active:visited {
+  color: var(--bluecolor);
+}
+
+.is-active::after {
   content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: blue;
-}
-
-nav.lista ul li a:hover {
-  color: #666;
-}
-
-nav.lista ul li[data-qa='hover'] a:hover {
-  color: #666;
+  display: block;
+  position: relative;
+  bottom: 4px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--bluecolor);
 }
