@@ -1,12 +1,13 @@
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 12px;
-  
-  --link-color: #00acdc;
+
   --header-height: 60px;
+  --link-color: #00acdc;
 }
 
 .logo-img {
@@ -15,11 +16,12 @@ body {
 }
 
 .header {
-  padding: 0 50px;
+  height: var(--header-height);
   background-color: #fff;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
 }
 
 .nav-bar {
@@ -27,24 +29,38 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 
 .nav__link {
-  height: var(--header-height);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   text-decoration: none;
-  color: #000;
-  transition: 0.5s;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  list-style: none;
+  
+}
+
+.nav__item {
+  height: var(--header-height);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav__link:hover {
-  color: var(link-color);
+  height: var(--header-height);
+  color: var(--link-color);
 }
 
 .is-active {
+  align-items: center;
+  color: var(--link-color);
+  height: var(--header-height);
+  position: relative;
+}
+
+.is-active::after {
   position: absolute;
   align-self: flex-end;
   content: '';
