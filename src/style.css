@@ -1,32 +1,16 @@
-body {
-  margin: 0;
+html {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
 }
 
-header,
-ul,
-a {
-  display: flex;
+:root {
+  --sky-color: #00acdc;
 }
 
-header {
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Logo */
-img {
-  margin-left: 50px;
-}
-
-/* Nav */
-nav {
-  text-transform: uppercase;
-  margin-right: 50px;
+body {
+  margin: 0;
 }
 
 ul {
@@ -35,28 +19,48 @@ ul {
   line-height: 60px;
 }
 
-li {
+ul,
+.header,
+.nav__link {
+  display: flex;
+}
+
+.header {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+/* Nav */
+.nav {
+  text-transform: uppercase;
+}
+
+.nav__item {
   position: relative;
   list-style: none;
   margin-right: 20px;
 }
 
-li:last-child {
+.nav__item:last-child {
   margin: 0;
 }
 
-a {
+.nav__link {
   text-decoration: none;
   height: 100%;
   color: #000;
 }
 
-a:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--sky-color);
 }
 
+/* Nav active */
 .is-active {
-  color: #00acdc;
+  color: var(--sky-color);
 }
 
 .is-active::after {
@@ -64,7 +68,7 @@ a:hover {
   display: block;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--sky-color);
   position: absolute;
   bottom: 0;
   border-radius: 8px;
