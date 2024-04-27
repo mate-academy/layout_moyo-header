@@ -1,3 +1,161 @@
+/* ======= VARS ======= */
+
+:root {
+  /* colors */
+  --black: #000;
+  --grey: #666;
+  --yellow: #f0f4e7;
+  --violet: #e3d9ed;
+  --white: #fff;
+  --blue: #00acdc;
+
+  /* font-size */
+  --main: 12px;
+  --line-height: 1.17;
+}
+
+/* ======= NULL CSS ======= */
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
+  height: 100%;
+  width: 100%;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: var(--main);
+  color: var(--black);
+  line-height: var(--line-height);
+}
+
+*,
+*::after {
   margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > main {
+  flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/* ======= STYLES ======= */
+
+/* ======= HEADER ======= */
+
+.header {
+  background-color: var(--white);
+  width: 100%;
+}
+
+.header__container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  column-gap: 50px;
+}
+
+.header__menu {
+  flex: 1 1 auto;
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5px 35px;
+}
+
+.menu__link {
+  position: relative;
+  display: block;
+  font-size: var(--main);
+  color: var(--black);
+  line-height: var(--line-height);
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.menu__link:hover {
+  color: var(--blue);
+}
+
+.menu__link:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -23px;
+  background-color: var(--blue);
+  height: 5px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ======= MAIN  ======= */
+
+.main {
+  background-color: var(--yellow);
+}
+
+.main__container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+  min-height: 50px;
+  padding-top: 5px;
+}
+
+/* ======= FOOTER ======= */
+
+.footer {
+  background-color: var(--violet);
+}
+
+.footer__container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+  min-height: 50px;
+  padding-top: 5px;
+}
+
+/* ====== COMMON ====== */
+
+.active {
+  color: var(--blue);
 }
