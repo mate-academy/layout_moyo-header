@@ -1,87 +1,72 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-:root {
-  --blue-color: #00acdc;
-}
-
-.header {
-  width: 100%;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  position: relative;
-}
-
-.logo {
-  margin-right: 10%;
-  position: relative;
-  left: 50px;
-  top: 10px;
-  bottom: 10px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-}
-
-.nav {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  margin-right: 20px;
-}
-
-.nav__list {
-  display: flex;
-  align-items: center;
-  height: 100%;
+ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.nav__item {
-  margin: 0 10px;
-}
-
-.nav__link {
-  display: block;
-  color: #000;
+a {
   text-decoration: none;
-  position: relative;
+}
+
+.navigation__wraper {
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__logo {
+  align-self: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.navigation__list {
+  display: flex;
+}
+
+.navigation__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.navigation__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
   text-transform: uppercase;
-  padding: 0;
   text-align: center;
-  height: inherit;
+  display: flex;
+  align-items: center;
+  color: #000;
+  height: 60px;
 }
 
-.nav__link_special {
-  margin-left: 10%;
-  color: var(--blue-color);
+.navigation__link:hover {
+  color: #00acdc;
 }
 
-.nav__link_special::after {
+.navigation__link:active {
+  color: #00acdc;
+  box-shadow: 0 4px 0 #00acdc;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
   content: '';
   position: absolute;
+  bottom: 0;
   left: 0;
-  right: 0;
-  bottom: -16px;
   height: 4px;
   width: 100%;
-  background-color: var(--blue-color);
-}
-
-.nav__link.is-active {
-  color: var(--blue-color);
-}
-
-.nav__link:hover {
-  text-decoration: underline;
+  background-color: #00acdc;
+  border-radius: 8px;
 }
