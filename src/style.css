@@ -44,10 +44,11 @@ body {
   align-items: center;
   height: 100%;
   list-style: none;
+  padding: 0;
 }
 
 .nav__item {
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .nav__link {
@@ -56,6 +57,9 @@ body {
   text-decoration: none;
   position: relative;
   text-transform: uppercase;
+  padding: 0;
+  text-align: center;
+  height: inherit;
 }
 
 .nav__link_special {
@@ -63,11 +67,7 @@ body {
   color: var(--blue-color);
 }
 
-.nav__link.is-active {
-  color: var(--blue-color);
-}
-
-.nav__link.is-active::after {
+.nav__link_special::after {
   content: '';
   position: absolute;
   left: 0;
@@ -78,6 +78,10 @@ body {
   background-color: var(--blue-color);
 }
 
+.nav__link.is-active {
+  color: var(--blue-color);
+}
+
 .nav__link:hover {
-  text-decoration: underline red;
+  text-decoration: underline;
 }
