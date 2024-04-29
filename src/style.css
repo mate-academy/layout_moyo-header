@@ -1,33 +1,30 @@
-html {
+:root {
   --active-color: #00acdc;
 }
 
-.logo {
-  padding-left: 50px;
-  margin-top: 10px;
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
 }
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-style: normal;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
-  padding-right: 50px;
-  flex-direction: row;
+  padding: 0 50px;
+  align-items: center;
 }
 
-.bar {
+.nav__list {
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-.bar__link {
+.nav__link {
   line-height: 60px;
   text-decoration: none;
   font-style: normal;
@@ -37,11 +34,11 @@ header {
   text-transform: uppercase;
 }
 
-.bar__link:last-child {
+.nav__link:last-child {
   margin-right: 0;
 }
 
-.bar__link:hover {
+.nav__link:hover {
   color: var(--active-color);
 }
 
@@ -52,7 +49,6 @@ header {
 
 .is-active::after {
   position: absolute;
-  top: 56px;
   bottom: 0;
   display: block;
   content: '';
