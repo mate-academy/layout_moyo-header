@@ -1,8 +1,10 @@
+:root {
+  --main-bg-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-style: normal;
   display: block;
   box-sizing: border-box;
 }
@@ -45,8 +47,12 @@ body {
   color: black;
 }
 
+.nav_link:hover {
+  color: var(--main-bg-color);
+}
+
 .nav_link.is-active {
-  color: #00acdc;
+  color: var(--main-bg-color);
 }
 
 .nav_link.is-active::after {
@@ -57,7 +63,7 @@ body {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--main-bg-color);
 }
 
 .nav_part {
@@ -71,8 +77,4 @@ body {
 
 .nav_part:not(:last-child) {
   margin-right: 20px;
-}
-
-.nav_link:hover {
-  color: #00acdc;
 }
