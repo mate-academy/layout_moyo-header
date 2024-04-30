@@ -1,5 +1,5 @@
 :root {
-  --header-height: 60px;
+  --height: 60px;
   --link-color: #00acdc;
 }
 
@@ -9,6 +9,7 @@
 
 html {
   margin: 0;
+  padding: 0;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -16,26 +17,25 @@ html {
 
 .header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
 }
 
 .logo {
-  position: absolute;
+  display: flex;
+  align-items: center;
   width: 40px;
   height: 40px;
-  left: 50px;
-  top: 10px;
 }
 
 .nav {
   list-style: none;
-  margin-right: 50px;
 }
 
 .nav__list {
   margin: 0;
-  line-height: 60px;
+  height: var(--height);
   padding: 0;
   display: flex;
 }
@@ -47,10 +47,10 @@ html {
 }
 
 .nav__link {
-  height: 60px;
-  display: block;
-  position: relative;
-  color: black;
+  height: var(--height);
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 1);
   text-decoration: none;
   text-transform: uppercase;
 }
