@@ -6,21 +6,13 @@
 }
 
 * {
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Open Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 12px;
-  margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 12px;
 }
 
 .site_header {
@@ -37,7 +29,7 @@
   width: 40px;
 }
 
-.nav li {
+.nav_li {
   display: inline;
   align-items: center;
   position: relative;
@@ -48,31 +40,28 @@
   background-color: var(--nav-backgroundcolor);
 }
 
-.nav li a {
+.nav_li .nav_a {
   text-decoration: none;
   color: var(--nav-color);
   font-weight: 500;
 }
 
-.nav li:last-child {
+.nav_li:last-child {
   margin-right: 0;
 }
 
-.nav li .is-active {
+.nav_li .is-active,
+.nav_li .nav_a:hover  {
   color: var(--nav-active);
 }
 
-.nav li a:hover {
-  color: var(--nav-active);
-}
-
-.nav li .is-active::after {
+.nav_li .is-active::after {
   content: '';
   position: absolute;
   background-color: var(--nav-active);
   border-radius: 8px;
   height: 4px;
-  top: 34px;
+  bottom: 0;
   right: 0;
   left: 0;
 }
