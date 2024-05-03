@@ -1,5 +1,10 @@
-* {
+html {
   box-sizing: border-box;
+}
+
+:root {
+  --primary-color: hsl(0%, 0%, 0%);
+  --second-color: rgb(0, 172, 219);
 }
 
 body {
@@ -10,16 +15,15 @@ body {
 }
 
 .header {
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   padding-left: 50px;
+  align-items: center;
 }
 
 .logo {
   width: 40px;
   height: 40px;
-  margin-top: 10px;
 }
 
 .menu {
@@ -32,7 +36,7 @@ body {
   padding: 0;
   margin: 0;
   text-decoration: none;
-  color: black;
+  color: var(--main-color);
   font-size: 12px;
   height: 60px;
   align-items: center;
@@ -40,7 +44,7 @@ body {
 }
 
 .menu__link:hover {
-  color: #00acdc;
+  color: var(--second-color);
 }
 
 .menu__item {
@@ -67,7 +71,7 @@ body {
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--second-color);
 }
 
 .is-active::after {
@@ -77,6 +81,6 @@ body {
   width: 100%;
   bottom: 0;
   height: 4px;
-  background: #00acdc;
+  background: var(--second-color);
   border-radius: 8px;
 }
