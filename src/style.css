@@ -14,8 +14,8 @@ body {
   margin: 0;
 }
 
-.logo a,
-.logo img {
+.logo-link,
+.logo-img {
   display: block;
 }
 
@@ -26,7 +26,7 @@ body {
   padding: 0 50px;
 }
 
-.nav ul {
+.menu-items {
   display: flex;
   list-style: none;
   column-gap: 20px;
@@ -36,7 +36,7 @@ body {
   margin-right: 0;
 }
 
-.menu-item a {
+.menu-link {
   display: block;
   position: relative;
   align-items: center;
@@ -48,7 +48,7 @@ body {
   text-decoration: none;
 }
 
-.nav .is-active::after {
+.is-active::after {
   content: '';
   display: block;
   position: absolute;
@@ -59,7 +59,7 @@ body {
   border-radius: 4px;
 }
 
-.nav .is-active,
-.nav [data-qa='hover']:hover {
+.is-active,
+.menu-link:hover {
   color: var(--active-menu);
 }
