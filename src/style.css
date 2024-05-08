@@ -19,10 +19,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav {
-  display: flex;
+  display: block;
   align-items: center;
 }
 
@@ -35,7 +37,7 @@ body {
 .logo {
   height: 40px;
   width: 40px;
-  margin-right: 10px;
+  display: block;
 }
 
 .nav__link {
@@ -49,24 +51,21 @@ body {
   color: #000;
 }
 
-.nav__link:hover {
+.nav__link.is-active {
   color: #00acdc;
 }
 
-.is__active {
-  color: #00acdc;
-}
-
-.is__active1 {
-  color: #00acdc;
-}
-
-.is__active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
-  width: 37px;
+  left: 0;
+  right: 0;
   height: 4px;
-  border-radius: 8px;
   background-color: #00acdc;
+  border-radius: 10px;
+}
+
+.nav__link:hover {
+  color: #00acdc;
 }
