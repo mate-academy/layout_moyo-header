@@ -1,3 +1,80 @@
 body {
   margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 60px; /* Высота хедера по дизайну */
+}
+
+a:hover {
+  color: #00acdc;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.header_logo {
+  margin: 10px 0 10px 50px;
+}
+
+nav {
+  margin-right: 50px;
+  display: flex;
+  position: relative;
+}
+
+nav ul li {
+  margin-right: 20px;
+  margin-top: 22.5px;
+  margin-bottom: 22.5px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_button {
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: black;
+  text-decoration: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.blue_button,
+.apple_button {
+  color: #00acdc;
+}
+
+.nav_button.is-active::after {
+  content: '';
+  width: 37px;
+  height: 4px;
+  bottom: 0;
+  border-radius: 8px;
+  background-color: #00acdc;
+  position: absolute;
+}
+
+.free__header__space {
+  display: flex;
+  flex-grow: 1;
 }
