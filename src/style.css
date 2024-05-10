@@ -1,17 +1,18 @@
+html {
+  font-family: Roboto, Arial, sans-serif;
+
+  --color-active: #00acdc;
+}
+
 body {
   margin: 0;
-  font-family: Roboto, Arial, sans-serif;
 }
 
 header {
   width: 100%;
   display: flex;
   align-items: center;
-  height: 60px; /* Высота хедера по дизайну */
-}
-
-a:hover {
-  color: #00acdc;
+  justify-content: space-between;
 }
 
 .container {
@@ -20,48 +21,48 @@ a:hover {
 }
 
 .header_logo {
-  margin: 10px 0 10px 50px;
+  margin: 10px 0 auto 50px;
 }
 
-nav {
+.nav {
   margin-right: 50px;
   display: flex;
   position: relative;
 }
 
-nav ul li {
+.nav__item {
   margin-right: 20px;
-  margin-top: 22.5px;
-  margin-bottom: 22.5px;
 }
 
-nav ul li:last-child {
-  margin-right: 0;
+.nav__last__item {
+  margin: 0;
 }
 
-nav ul {
-  list-style: none;
+.nav__list {
   display: flex;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .nav_button {
+  display: flex;
+  position: relative;
+  height: 60px;
   text-transform: uppercase;
-  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
-  white-space: nowrap;
   color: black;
   text-decoration: none;
-  text-align: left;
-  display: flex;
   align-items: center;
 }
 
-.blue_button,
+.nav_button:hover {
+  color: var(--color-active);
+}
+
 .apple_button {
-  color: #00acdc;
+  color: var(--color-active);
 }
 
 .nav_button.is-active::after {
@@ -70,7 +71,7 @@ nav ul {
   height: 4px;
   bottom: 0;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--color-active);
   position: absolute;
 }
 
