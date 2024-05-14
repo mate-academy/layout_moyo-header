@@ -1,10 +1,13 @@
-html {
+:root {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
+
+  --color-text: rgba(0, 0, 0, 1);
+  --color-activ: rgba(0, 172, 220, 1);
 }
 
 body {
@@ -12,7 +15,7 @@ body {
   box-sizing: border-box;
 }
 
-.container {
+.header {
   padding: 0 50px;
   justify-content: space-between;
   display: flex;
@@ -24,32 +27,22 @@ body {
   align-items: center;
 }
 
-/* .nav {
-  display: flex;
-  height: 60px;
-  flex-direction: row;
-  justify-content: stretch;
-} */
-
 .nav_list {
   display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-right: -20px;
 }
 
 .nav_item {
-  display: inline-block;
-  margin-right: 20px;
+  margin: 0 10px;
 }
 
 .nav_link {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: rgba(0, 0, 0, 1);
-  margin: 0;
+  color: var(--color-text);
   height: 60px;
   line-height: 60px;
   position: relative;
@@ -57,7 +50,7 @@ body {
 
 .is-active {
   text-decoration: none;
-  color: rgba(0, 172, 220, 1);
+  color: var(--color-activ);
 }
 
 .logo:hover {
@@ -65,7 +58,7 @@ body {
 }
 
 .nav_link[data-qa='hover']:hover {
-  color: rgba(0, 172, 220, 1);
+  color: var(--color-activ);
 }
 
 .is-active::after {
@@ -73,10 +66,18 @@ body {
   display: block;
   height: 4px;
   width: 100%;
-  background-color: rgba(0, 172, 220, 1);
+  background-color: var(--color-activ);
   border-radius: 8px;
   text-align: center;
   bottom: 0;
   position: absolute;
   left: 0;
+}
+
+.nav_list .nav_item:last-child {
+  margin-right: 0;
+}
+
+.nav_list .nav_item:first-child {
+  margin-left: 0;
 }
