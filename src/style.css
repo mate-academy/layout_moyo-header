@@ -32,7 +32,6 @@ body {
 
 .img__logo {
   height: 40px;
-  width: 40px;
   margin-left: 50px;
 }
 
@@ -41,12 +40,20 @@ body {
 }
 
 .nav__list {
-  list-style: none;
   display: flex;
+  list-style: none;
 }
 
 .nav__item {
   margin-right: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
@@ -63,12 +70,12 @@ body {
   color: var(--blue-color);
 }
 
-.is__active {
+.is-active {
   position: relative;
   color: var(--blue-color);
 }
 
-.is__active::after {
+.is-active::after {
   content: '';
   position: absolute;
   left: 0;
@@ -80,6 +87,6 @@ body {
   background-color: var(--blue-color);
 }
 
-[data-qa='hover']:hover {
+[data-qa="hover"]:hover {
   color: var(--blue-color);
 }
