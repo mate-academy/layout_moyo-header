@@ -1,3 +1,64 @@
+html {
+  font-family: Roboto, sans-serif;
+
+  --active-color: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav__link {
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  color: black;
+  height: 60px;
+}
+
+.logo__img {
+  display: block;
+}
+
+.nav__item {
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+}
+
+.is-active {
+  color: var(--active-color);
+}
+
+.nav__link:hover,
+.nav__link:active {
+  color: var(--active-color);
+}
+
+.is-active::after {
+  content: '';
+  height: 4px;
+  width: 37px;
+  background-color: var(--active-color);
+  display: block;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
 }
