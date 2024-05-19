@@ -1,3 +1,81 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  min-width: 1024px;
+  width: 100%;
+  margin: 0 auto; /* Центрирование хедера */
+  padding-right: 50px;
+}
+
+.nav {
+  height: 60px;
+  margin-left: 0;
+  box-sizing: border-box; /* Учитываем padding внутри ширины */
+}
+
+.ul {
+  display: flex;
+  list-style-type: none;
+  line-height: 60px;
+  font-size: 12px;
+}
+
+a {
+  color: #000; /* Початковий колір посилання */
+  text-decoration: none; /* Відсутність підкреслення */
+  margin-left: 20px;
+}
+
+/* Стиль для посилання при наведенні */
+a:hover {
+  color: #00acdc; /* Колір посилання при наведенні */
+}
+
+/* Стиль для активного посилання */
+a:active {
+  color: #00acdc; /* Колір активного посилання */
+}
+
+.is-active {
+  color: #00acdc; /* Колір активного посилання */
+  position: relative;
+  margin-left: 0;
+}
+
+.is-active::after {
+  width: 37px;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px; /* Закруглення країв */
+  content: '';
+  position: absolute;
+  top: 56px; /* Расположение под хедером */
+  left: 0;
+}
+
+.moyo_logo {
+  padding-left: 30px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 0;
 }
