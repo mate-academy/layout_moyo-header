@@ -1,3 +1,63 @@
-body {
-  margin: 0;
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+
+html {
+  --link-active-color: #00acdc;
+
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.header__logo {
+  height: 40px;
+  width: 40px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__item {
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  line-height: 60px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav__link:hover {
+  color: var(--link-active-color);
+}
+
+.is-active {
+  color: var(--link-active-color);
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  margin-top: -4px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--link-active-color);
 }
