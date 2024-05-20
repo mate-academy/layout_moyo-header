@@ -18,41 +18,39 @@ html {
   text-transform: uppercase;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100dvw;
-  height: 60px;
   background-color: #fff;
   padding: 0 50px;
 }
 
-.logo {
+.header__logo {
   display: block;
   width: 40px;
   height: 40px;
 }
 
-ul {
+.header__list {
   list-style: none;
   display: flex;
-  height: 100%;
 }
 
-li {
+.header__item {
   position: relative;
-  height: 100%;
+  height: 60px;
   margin-right: 20px;
   display: flex;
   align-items: center;
 }
 
-li:last-child {
+.header__item:last-child {
   margin: 0;
 }
 
-a {
+.header__link {
   display: flex;
   text-align: center;
   align-items: center;
@@ -61,11 +59,11 @@ a {
   height: 100%;
 }
 
-a:hover {
+.header__link:hover {
   color: var(--brand-color);
 }
 
-a.is-active::after {
+.is-active::after {
   position: absolute;
   content: ' ';
   width: 100%;
@@ -76,10 +74,6 @@ a.is-active::after {
   background-color: var(--brand-color);
 }
 
-a.is-active {
+.is-active {
   color: var(--brand-color);
-}
-
-nav {
-  height: 100%;
 }
