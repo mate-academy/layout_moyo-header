@@ -2,15 +2,18 @@ body {
   margin: 0;
 }
 
+html {
+  --blue-color: #00acdc;
+}
+
 .header {
-  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
 }
 
-.logo__top {
+.header__logo {
   width: 40px;
   height: 40px;
   top: 10px;
@@ -60,13 +63,12 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active {
   position: relative;
-  z-index: 1;
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active::after {
@@ -75,9 +77,8 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: -1;
 }
