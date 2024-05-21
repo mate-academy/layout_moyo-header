@@ -1,6 +1,4 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -12,9 +10,10 @@ html {
   background-color: black;
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
-.header_list {
+.header {
   display: flex;
   background-color: #fff;
   justify-content: space-between;
@@ -24,22 +23,24 @@ html {
   width: 100%;
   margin: 0 auto; /* Центрирование хедера */
   padding-right: 50px;
+  padding-left: 50px;
+}
+
+.nav {
+  height: 60px;
+  margin-left: 0;
 }
 
 .nav_list {
-  height: 60px;
-  margin-left: 0;
-  box-sizing: border-box; /* Учитываем padding внутри ширины */
-}
-
-.ul_list {
   display: flex;
   list-style-type: none;
   line-height: 60px;
   font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
 
-.a_style {
+.nav__link {
   color: #000; /* Початковий колір посилання */
   text-decoration: none; /* Відсутність підкреслення */
   margin-left: 20px;
@@ -47,13 +48,13 @@ html {
 }
 
 /* Стиль для посилання при наведенні */
-.a_style:hover {
-  color: #00acdc; /* Колір посилання при наведенні */
+.nav__link:hover {
+  color: var(--active-link-color); /* Колір посилання при наведенні */
 }
 
 /* Стиль для активного посилання */
-.a_style:active {
-  color: #00acdc; /* Колір активного посилання */
+.nav__link:active {
+  color: var(--active-link-color); /* Колір активного посилання */
 }
 
 .is-active {
@@ -63,18 +64,17 @@ html {
 }
 
 .is-active::after {
-  width: 37px;
+  width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--active-link-color);
   border-radius: 8px; /* Закруглення країв */
   content: '';
   position: absolute;
-  top: 56px; /* Расположение под хедером */
+  bottom: 0; /* Расположение под хедером */
   left: 0;
 }
 
-.moyo_logo {
-  padding-left: 50px;
+.header__logo {
   display: inline-block;
   width: 40px;
   height: 40px;
