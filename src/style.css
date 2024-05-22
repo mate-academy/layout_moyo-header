@@ -1,83 +1,98 @@
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-  text-decoration: none;
-
-}
-
-/* make sure to set some focus styles for accessibility */
-:focus {
-    outline: 0;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-
 body {
-	line-height: 1.5;
+  line-height: 1.5;
   font-family: Roboto, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
-
+  padding: 0;
+  font-weight: 500;
 }
 
-ol, ul {
-	list-style: none;
+a {
+  text-decoration: none;
 }
 
-.container{
+ol,
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  min-width: 1024;
+  height: 60px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   padding: 0 50px;
 }
 
-header{
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding-top: 10px;
+img {
+  padding: 10px 0;
 }
 
-.nav-list{
+.nav-list {
   display: flex;
-
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  align-items: center;
 }
 
-.nav-link{
+li{
+  margin-right: 20px
+}
+
+
+
+.nav-link {
   color: black;
+  height: 60px;
+  align-items: center;
+  margin-right: 20px;
+  display: flex;
+  position: relative;
+
 }
 
-li:not(:last-child){
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+li:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav-link:hover{
-  color: #00ACDC;
+.nav-link:hover {
+  color: #00acdc;
+  position: relative;
 }
 
-.nav-link:active{
-  border-bottom: 4px solid #00ACDC;
-  border-radius: 8px;
+.is-active::after {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  display: block;
+  background: #00acdc;
+  color: #00acdc;
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
 }
 
-.nav-link::after{
-color: #00ACDC;
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
 
+[data-qa='hover'] {
+  color: #00acdc;
 }
