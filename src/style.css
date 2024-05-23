@@ -1,3 +1,96 @@
 body {
   margin: 0;
+  font-family: Roboto, 'Times New Roman', Times, serif;
+}
+
+.header {
+  background-color: #fff;
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav {
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.logo {
+  align-self: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    height: 60px;
+    width: 1024px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .header {
+    height: 60px;
+    width: 1200px;
+  }
+}
+
+.link {
+  height: 60px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+}
+
+.box:not(:first-child) {
+  margin-left: 20px;
+}
+
+.box a {
+  color: #000;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  align-content: center;
+  block-size: 20px;
+  position: relative;
+  padding-top: 23px;
+  padding-bottom: 22px;
+}
+
+.box-1 a {
+  color: #00acdc;
+}
+
+.box a:hover {
+  color: #00acdc;
+}
+
+is-active {
+  position: relative;
+}
+
+.is-active::after {
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 2px;
+  content: '';
+  display: block;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Medium.ttf);
 }
