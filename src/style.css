@@ -1,3 +1,10 @@
+html {
+  --main-color: #00acdc;
+  --font-size: 12px;
+  --font-weight: 500;
+  --line-height: 14px;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -36,24 +43,20 @@ body {
   margin-left: 0;
 }
 
-.nav__item a {
+.nav__link {
   display: flex;
   align-items: center;
   padding: 23px 0;
   text-decoration: none;
   color: black;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 14px; /* Adjusted to whole number */
-  height: 14px; /* Explicit height */
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  height: 14px;
 }
 
-li:nth-of-type(1) a {
-  color: #00acdc;
-}
-
-nav a:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--main-color);
   transition: color 0.15s;
 }
 
@@ -64,10 +67,11 @@ nav a:hover {
   bottom: 0;
   width: 37px;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--main-color);
   border-radius: 8px;
 }
 
 .is-active {
   position: relative;
+  color: var(--main-color);
 }
