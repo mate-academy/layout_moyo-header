@@ -6,10 +6,11 @@ html {
   font-family: Roboto, sans-serif;
 
   --header-height: 60px;
+  --color-black: #000;
+  --color-blue: #00acdc;
 }
 
-header {
-  min-width: 924px;
+.header {
   max-width: 1100px;
   padding: 0 50px;
   margin: 0 auto;
@@ -24,7 +25,7 @@ header {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: var(--color-black);
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
@@ -51,7 +52,7 @@ ul {
 .link:hover,
 .is-active,
 .is-active .link {
-  color: #00acdc;
+  color: var(--color-blue);
 }
 
 .is-active::after {
@@ -61,6 +62,6 @@ ul {
   bottom: 0;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--color-blue);
   border-radius: 2px;
 }
