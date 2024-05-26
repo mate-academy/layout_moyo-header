@@ -10,7 +10,7 @@ body {
   background-color: #ccc;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,28 +29,28 @@ header {
   bottom: 10px;
 }
 
-nav {
+.nav {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-nav ul {
+.nav .nav__list {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-nav li {
+.nav .nav__item {
   margin-right: 20px;
 }
 
-nav li:last-child {
+.nav .nav__item:last-child {
   margin-right: 0;
 }
 
-nav a {
+.nav .nav__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,11 +63,11 @@ nav a {
   text-transform: uppercase;
 }
 
-nav a.is-active {
+.nav .nav__link.is-active {
   color: #00acdc;
 }
 
-nav a.is-active::after {
+.nav .nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
