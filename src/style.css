@@ -1,3 +1,80 @@
+/* stylelint-disable import-notation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
   margin: 0;
+  background-color: #ccc;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  background-color: #ffff;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  bottom: 10px;
+}
+
+nav {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  height: 60px;
+  line-height: 60px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  position: relative;
+  padding: 0;
+}
+
+nav a.is-active {
+  color: #00acdc;
+}
+
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
+
+nav a[data-qa='hover']:hover {
+  color: #00acdc;
 }
