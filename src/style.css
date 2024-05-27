@@ -1,64 +1,91 @@
 body {
   margin: 0;
-}
-
-:root {
-  --main-font: 12px;
-  --main-color: #00acdc;
-}
-
-html {
   font-family: Roboto, sans-serif;
-  font-size: var(--main-font);
 }
 
 .header {
-  padding: 0 50px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-between;
-  font-weight: 500;
+  justify-content: center;
   align-items: center;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.nav_list {
-  display: flex;
-  text-transform: uppercase;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav_item {
-  margin-left: 20px;
-}
-
-.nav_item:first-child {
-  margin-left: 0;
-}
-
-.nav_link {
-  display: flex;
-  align-items: center;
+  width: 100%;
   height: 60px;
-  color: black;
-  text-decoration: none;
   position: relative;
 }
 
-.is-active ,
-.nav_link:hover {
-  color: var(--main-color);
+.header__wrapper {
+  max-width: 1200px;
+  min-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.is-active::after {
-  display: block;
+.header__logo a {
+  margin-left: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header__navigationMenu {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.header__navigationMenu_list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  align-items: center;
+}
+
+.header__navigationMenu_list_item {
+  color: #060b35;
+  margin: 0 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__navigationMenu_list_item:first-child {
+  margin-left: 0;
+}
+
+.header__navigationMenu_list_item:last-child {
+  margin-right: 0;
+}
+
+.header__navigationMenu_list_item a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.header__navigationMenu_list_item:hover a {
+  color: #00acdc;
+}
+
+.header__navigationMenu_list_item.is-active a {
+  color: #00acdc;
+}
+
+.header__navigationMenu_list_item.is-active a::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  background-color: var(--main-color);
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  background: #00acdc;
   width: 100%;
-  height: 4px;
-  border-radius: 8px;
+  height: 5px;
+  border-radius: 5px;
 }
