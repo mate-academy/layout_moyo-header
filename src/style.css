@@ -14,64 +14,59 @@ body {
   /* Space between logo and nav */
   align-items: center;
   /* Vertically center the content */
-  padding: 1rem;
-  background-color: #fffff;
-  color: white;
+  padding: 0 50px;
+  background-color: #fff;
   width: 100%;
 }
 
 .logo {
-  margin-left: 0;
-  /* No margin to ensure it's at the left edge */
+  width: 40px;
+  height: 40px;
 }
 
 .logo a {
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  /* Transform logo text to uppercase */
 }
 
-.logo img {
-  width: 40px;
-  height: 40px;
+.logo {
+  width: 100%;
+  height: auto;
 }
 
 .nav {
-  margin-left: auto;
-  /* Pushes the nav to the far right */
-}
-
-.nav ul {
-  list-style: none;
   display: flex;
   align-items: center;
-  /* Vertically center nav items */
 }
 
-.nav li {
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
   margin-left: 1rem;
 }
 
-.nav li:first-child {
+.nav-item:first-child {
   margin-left: 0;
-  /* Remove margin from the first list item */
 }
 
-.nav a {
-  color: black;
+.nav-link {
+  color: #000;
   text-decoration: none;
   font-size: 1rem;
   position: relative;
   text-transform: uppercase;
 }
 
-.nav a:hover {
-  color: #00f;
+.nav-link:hover {
+  color: #00ACDC;
   /* Change link color on hover */
 }
 
-.nav a.is-active::after {
+.nav-link.is-active::after {
   content: '';
   position: absolute;
   bottom: -2px;
