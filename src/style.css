@@ -1,11 +1,20 @@
 body {
   margin: 0;
   font-family: Roboto, 'Times New Roman', Times, serif;
+
+  --active-color: #00acdc;
 }
 
 .header {
-  background-color: #fff;
-  text-align: center;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.header__link {
+  height: 40px;
+  width: 40px;
 }
 
 ul {
@@ -14,46 +23,30 @@ ul {
   list-style: none;
 }
 
-.nav {
-  padding: 0 50px;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-}
-
-.logo {
+img {
   align-self: center;
   justify-content: center;
   height: 40px;
   width: 40px;
 }
 
-@media (max-width: 1024px) {
-  .header {
-    height: 60px;
-    width: 1024px;
-  }
+.nav {
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
-@media (min-width: 1025px) and (max-width: 1200px) {
-  .header {
-    height: 60px;
-    width: 1200px;
-  }
-}
-
-.link {
+.nav__list {
   height: 60px;
   width: 100%;
-  margin: auto;
   display: flex;
 }
 
-.box:not(:first-child) {
+.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
-.box a {
+.nav__link {
   color: #000;
   font-weight: 500;
   font-size: 12px;
@@ -67,15 +60,12 @@ ul {
   padding-bottom: 22px;
 }
 
-.box-1 a {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--active-color);
 }
 
-.box a:hover {
-  color: #00acdc;
-}
-
-is-active {
+.is-active {
+  color: var(--active-color);
   position: relative;
 }
 
@@ -84,7 +74,7 @@ is-active {
   width: 100%;
   bottom: 5px;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--active-color);
   border-radius: 2px;
   content: '';
   display: block;
