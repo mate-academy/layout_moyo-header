@@ -10,42 +10,43 @@ html {
 
 body {
   margin: 0;
-  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
 }
 
 header {
   display: flex;
-  position: fixed;
   justify-content: space-between;
   align-items: center;
-  top: 0;
-  left: 0;
   height: 60px;
   width: 100%;
+  box-sizing: border-box;
+  padding: 0 50px;
 }
 
 .nav_list {
-  /* stylelint-disable-next-line length-zero-no-unit */
+  padding: 0;
+  margin: 0;
   height: 60px;
-  /* stylelint-disable-next-line length-zero-no-unit */
-  margin: 0px;
   display: flex;
   align-items: center;
 }
 
 .nav_item {
   list-style: none;
-  padding: 12px;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 500;
-  line-height: 14px;
+  line-height: 60px;
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav_link {
   text-decoration: none;
   color: black;
+  display: flex;
 }
 
 .is-active {
@@ -58,10 +59,12 @@ header {
   position: absolute;
   background-color: #00ACDC;
   height: 4px;
-  width: 37px;
-  top: 30px;
+  width: 100%;
+  bottom: 0;
+  display: block;
   /* stylelint-disable-next-line length-zero-no-unit */
-  left: 0px;
+  right: 0;
+  left: 0;
   border-radius: 8px;
 }
 
@@ -70,6 +73,5 @@ header {
 }
 
 .logo {
-  margin-left: 50px;
-  margin-top: 10px;
+  display: flex;
 }
