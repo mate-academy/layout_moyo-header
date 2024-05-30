@@ -1,23 +1,11 @@
-html {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-
-  --main-color: #00ACDC;
-}
-
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14.6px;
 }
 
 img {
-  width: 40px;
-  height: 40px;
   padding-left: 50px;
   align-self: center;
 }
@@ -25,39 +13,35 @@ img {
 header {
   display: flex;
   text-transform: uppercase;
-
-  /* border: 3px solid red; */
 }
 
 nav {
-  height: 60px;
   display: flex;
-  justify-content: flex-end; 
-  flex-grow: 1;
+  margin-left: auto; /* Push nav to the right */
   align-items: center;
-
-  /* border: violet 3px solid; */
+  margin-right: 50px;
 }
 
 ul {
   display: flex;
   list-style-type: none;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 a {
   display: flex;
   text-decoration: none;
   color: black;
-  margin: 0 10px;
+  margin-right: 20px;
   height: 60px;
-
-  /* border: red solid 2px; */
   align-items: center;
 }
 
 a:hover {
   text-decoration: none;
+  color: #00acdc;
 }
 
 .a1 {
@@ -65,75 +49,29 @@ a:hover {
   position: relative;
 }
 
+.a4 {
+  margin: 0;
+}
+
 .a4:hover {
   color: #00acdc;
 }
 
+.a5 {
+  margin-left: 20px;
+}
+
 .a8 {
-  margin-right: 50px;
+  /* padding-right: 50px; */
+  margin-right: 0;
 }
 
 .a1 .rectangle {
   position: absolute;
-  align-self: flex-end;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 4px;
   background-color: #00acdc;
   border-radius: 8px;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px;
-}
-
-.logo {
-  height: 40px;
-  width: 40px;
-}
-
-.nav__list {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.nav__item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.nav__link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 60px;
-
-  color: #000;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.nav__link--active {
-  color: var(--main-color);
-}
-
-.nav__link--active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--main-color);
-}
-
-.nav__link:hover {
-  color: var(--main-color);
 }
