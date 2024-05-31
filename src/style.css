@@ -11,12 +11,18 @@ body {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 10px 50px;
+  padding: 0 50px;
+  align-items: center;
 }
 
 .logo {
   width: 40px;
   height: 40px;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
 }
 
 .nav-item {
@@ -38,7 +44,8 @@ body {
   font-weight: 500;
   font-size: 12px;
   height: 60px;
-  line-height: 15px;
+  line-height: 60px;
+  display: flex;
 }
 
 .nav-color {
@@ -47,11 +54,12 @@ body {
 
 .nav-link:hover {
   text-decoration: underline;
-  text-decoration-color: #00acdc;
+  text-decoration-color: var(--main-color);
 }
 
 .is-active {
   position: relative;
+  width: 37px;
 }
 
 .is-active::after {
@@ -60,8 +68,8 @@ body {
   border-radius: 8px;
   height: 4px;
   width: 100%;
-  border: 1px solid #00acdc;
-  background-color: #00acdc;
+  border: 1% solid var(--main-color);
+  background-color: var(--main-color);
   bottom: 0;
   left: 0;
 }
