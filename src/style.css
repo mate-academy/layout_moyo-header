@@ -3,6 +3,8 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
+
+  --main-blue-color:#00acdc;
 }
 
 img {
@@ -17,7 +19,7 @@ header {
 
 nav {
   display: flex;
-  margin-left: auto; /* Push nav to the right */
+  margin-left: auto;
   align-items: center;
   margin-right: 50px;
 }
@@ -41,11 +43,11 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #00acdc;
+  color: var(--main-blue-color);
 }
 
 .a1 {
-  color: #00acdc;
+  color: var(--main-blue-color);
   position: relative;
 }
 
@@ -54,7 +56,7 @@ a:hover {
 }
 
 .a4:hover {
-  color: #00acdc;
+  color: var(--main-blue-color);
 }
 
 .a5 {
@@ -62,16 +64,16 @@ a:hover {
 }
 
 .a8 {
-  /* padding-right: 50px; */
   margin-right: 0;
 }
 
-.a1 .rectangle {
+.a1::after {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--main-blue-color);
   border-radius: 8px;
 }
