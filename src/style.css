@@ -1,3 +1,64 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.container li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+}
+
+a.box {
+  height: 15px;
+  line-height: 15px;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  color: #000;
+
+  position: relative;
+}
+
+img {
+  display: flex;
+  justify-self: flex-start;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+}
+
+a:hover {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  display: flex;
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  content: '';
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--blue-color);
 }
