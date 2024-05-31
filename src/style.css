@@ -1,26 +1,30 @@
 html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+
   --main-color: #00acdc;
 }
 
 body {
-  margin: 0 auto;
-  font-family: Roboto, sans-serif;
+  margin: 0;
 }
 
 .header {
-  background-color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
   align-items: center;
+  background-color: #fff;
+  padding: 0 50px;
 }
 
 .logo {
+  display: block;
   width: 40px;
   height: 40px;
 }
 
 .nav-list {
+  display: flex;
   margin: 0;
   padding: 0;
 }
@@ -41,25 +45,19 @@ body {
   font-family: Roboto, sans-serif;
   text-decoration: none;
   color: #000;
-  font-weight: 500;
   font-size: 12px;
   height: 60px;
   line-height: 60px;
   display: flex;
 }
 
-.nav-color {
-  color: var(--main-color);
-}
-
 .nav-link:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--main-color);
+  color: var(--main-color);
 }
 
 .is-active {
   position: relative;
-  width: 37px;
+  color: var(--main-color);
 }
 
 .is-active::after {
