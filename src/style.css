@@ -1,3 +1,82 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.nav {
+  margin-right: 50px;
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+  padding: 10px 50px;
+}
+
+.nav__list {
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  margin: auto 10px;
+  height: 60px;
+}
+
+.nav__link.first__link {
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  margin: auto 10px auto auto;
+}
+
+.nav__link.last__link {
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  margin: auto auto auto 10px;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 4px;
+  color: #00acdc;
+  background-color: #00acdc;
+  border-radius: 8px;
+  width: 37px;
+  top: 56px;
+}
+
+.nav__link:hover,
+.first__link:hover,
+.last__link:hover {
+  text-decoration: underline #00acdc 2px;
+}
+
+.first__link.is-active {
+  color: #00acdc;
+}
+
+[data-qa='hover']:hover {
+  color: #00acdc;
+  text-decoration: none;
 }
