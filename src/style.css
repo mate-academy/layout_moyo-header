@@ -1,10 +1,12 @@
+html {
+  --nav-font-color: #000;
+  --primary-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-size: 16px;
-
-  --nav-font-color: #000;
-  --primary-color: #00acdc;
 }
 
 .header {
@@ -12,7 +14,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  background-color: #fff;
 }
 
 .logo__image {
@@ -42,7 +43,11 @@ body {
   font-size: 0.75rem;
 }
 
-.nav__link::after {
+.is-active {
+  color: var(--primary-color);
+}
+
+.is-active::after {
   content: '';
   position: absolute;
   left: 0;
@@ -51,19 +56,8 @@ body {
   height: 4px;
   background-color: var(--primary-color);
   border-radius: 8px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.2s ease;
 }
 
 .nav__link:hover {
   color: var(--primary-color);
-}
-
-.nav__link.is-active {
-  color: var(--primary-color);
-}
-
-.nav__link.is-active::after {
-  transform: scaleX(1);
 }
