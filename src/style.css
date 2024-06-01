@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -7,7 +8,7 @@ body {
   --main-blue-color:#00acdc;
 }
 
-img {
+.img {
   padding-left: 50px;
   align-self: center;
 }
@@ -17,7 +18,7 @@ header {
   text-transform: uppercase;
 }
 
-nav {
+.nav {
   display: flex;
   margin-left: auto;
   align-items: center;
@@ -32,7 +33,7 @@ ul {
   margin: 0;
 }
 
-a {
+.nav__link {
   display: flex;
   text-decoration: none;
   color: black;
@@ -41,33 +42,17 @@ a {
   align-items: center;
 }
 
-a:hover {
+.nav__link:hover {
   text-decoration: none;
   color: var(--main-blue-color);
 }
 
-.a1 {
+.is-active {
   color: var(--main-blue-color);
   position: relative;
 }
 
-.a4 {
-  margin: 0;
-}
-
-.a4:hover {
-  color: var(--main-blue-color);
-}
-
-.a5 {
-  margin-left: 20px;
-}
-
-.a8 {
-  margin-right: 0;
-}
-
-.a1::after {
+.is-active::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -76,4 +61,16 @@ a:hover {
   height: 4px;
   background-color: var(--main-blue-color);
   border-radius: 8px;
+}
+
+.laptops {
+  margin: 0;
+}
+
+.gadgets {
+  margin-left: 20px;
+}
+
+.video {
+  margin-right: 0;
 }
