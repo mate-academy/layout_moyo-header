@@ -8,9 +8,12 @@ html {
   text-transform: uppercase;
 }
 
+:root {
+  --color:#00ACDC;
+}
+
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
 }
 
 header {
@@ -52,14 +55,14 @@ header {
 }
 
 .is-active {
-  color: #00ACDC;
+  color: var(--color);
   position: relative;
 }
 
 .is-active::after {
   content: '';
   position: absolute;
-  background-color: #00ACDC;
+  background-color: var(--color);
   height: 4px;
   width: 100%;
   bottom: 0;
@@ -71,7 +74,7 @@ header {
 }
 
 .over:hover {
-  color: #00ACDC;
+  color: var(--color);
 }
 
 .logo {
