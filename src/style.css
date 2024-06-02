@@ -1,3 +1,78 @@
+/* stylelint-disable selector-class-pattern */
+html{
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+
+  --main-blue-color:#00acdc;
+}
+
 body {
   margin: 0;
 }
+
+.header {
+  display: flex;
+  text-transform: uppercase;
+  padding-left: 50px;
+  align-items: center;
+
+}
+
+.nav {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  margin-right: 50px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+  height: 60px;
+  align-items: center;
+}
+
+.nav__link:hover {
+  text-decoration: none;
+  color: var(--main-blue-color);
+}
+
+.is-active {
+  color: var(--main-blue-color);
+  position: relative;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-blue-color);
+  border-radius: 8px;
+}
+
+.laptops {
+  margin: 0;
+}
+
+.gadgets {
+  margin-left: 20px;
+}
+
+.video {
+  margin-right: 0;
+}
+
