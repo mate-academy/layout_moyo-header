@@ -1,91 +1,78 @@
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
 }
 
 .header {
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 60px;
-  position: relative;
-}
-
-.header__wrapper {
-  max-width: 1200px;
-  min-width: 1024px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding: 0 50px;
+
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.logo__image {
+  height: 100%;
   width: 100%;
-  height: 100%;
 }
 
-.header__logo a {
-  margin-left: 10px;
-  height: 100%;
+.nav__list {
   display: flex;
-  align-items: center;
-}
-
-.header__navigationMenu {
-  display: flex;
-  height: 100%;
-  align-items: center;
-}
-
-.header__navigationMenu_list {
-  list-style: none;
-  display: flex;
-  margin: 0;
   padding: 0;
-  height: 100%;
-  align-items: center;
+  margin: 0;
+  list-style: none;
 }
 
-.header__navigationMenu_list_item {
-  color: #060b35;
-  margin: 0 15px;
-  text-align: center;
-  text-transform: uppercase;
+.nav__item {
+  margin-left: 20px;
 }
 
-.header__navigationMenu_list_item:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-.header__navigationMenu_list_item:last-child {
-  margin-right: 0;
-}
+.nav__link {
+  position: relative;
 
-.header__navigationMenu_list_item a {
-  text-decoration: none;
-  color: inherit;
   display: flex;
   align-items: center;
-  height: 100%;
-  position: relative;
+
+  height: 60px;
+
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+
+  transition: color 0.3s;
 }
 
-.header__navigationMenu_list_item:hover a {
+.nav__link:hover {
   color: #00acdc;
 }
 
-.header__navigationMenu_list_item.is-active a {
+.nav__link.is-active {
   color: #00acdc;
 }
 
-.header__navigationMenu_list_item.is-active a::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
-  bottom: -20px;
+  bottom: 0;
   left: 0;
   right: 0;
-  background: #00acdc;
-  width: 100%;
-  height: 5px;
-  border-radius: 5px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
 }
