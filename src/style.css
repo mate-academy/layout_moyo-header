@@ -2,12 +2,16 @@
   --blue-color: #00acdc;
 }
 
-body {
-  margin: 0;
+html {
   font-family: Roboto, sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 .header {
+  align-items: center;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -26,9 +30,6 @@ body {
 
 .nav__list {
   display: flex;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 15px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -36,7 +37,10 @@ body {
 }
 
 .nav__link {
-  display: inline-flex;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  display: flex;
   align-items: center;
   text-decoration: none;
   color: #000;
@@ -44,14 +48,14 @@ body {
   height: 60px;
 }
 
-.nav__link.first__link {
+.nav__link.nav__link--first {
   text-decoration: none;
   text-align: center;
   color: #000;
   margin: auto 10px auto auto;
 }
 
-.nav__link.last__link {
+.nav__link.nav__link--last {
   text-decoration: none;
   text-align: center;
   color: #000;
@@ -71,12 +75,12 @@ body {
 }
 
 .nav__link:hover,
-.first__link:hover,
-.last__link:hover {
+.nav__link--first,
+.nav__link--last:hover {
   text-decoration: underline var(--blue-color) 2px;
 }
 
-.first__link.is-active {
+.nav__link--first.is-active {
   color: var(--blue-color);
 }
 
