@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
 }
 
 .header {
@@ -10,29 +11,44 @@ body {
   background-color: #ffff;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  padding: 0 50px;
+  position: relative;
 }
 
 .logo_link {
   height: 40px;
   width: 40px;
   display: block;
-  margin-left: 25px;
+}
+
+.nav_item {
+  list-style: none;
+  padding: 0;
+  margin: 0 20px;
+  float: right;
+  display: flex;
+  text-align: center;
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav_link {
+  display: block;
   height: 15px;
   color: #000;
   position: relative;
   font-weight: bold;
-  font-family: Roboto, sans-serif;
+  font-style: normal;
   text-wrap: nowrap;
   font-size: 12px;
   text-decoration: none;
   text-transform: uppercase;
-  display: block;
   padding: 23px 0;
-  margin-right: 20px;
+  justify-self: end;
+  white-space: nowrap;
+  margin: 0;
 }
 
 .nav_link-1 {
@@ -57,17 +73,14 @@ body {
   border-radius: 8px;
 }
 
-.nav_item {
-  list-style: none;
-  margin: 0 20px;
-}
-
 .nav_list {
   list-style: none;
   display: flex;
   color: #000;
+  padding: auto;
 }
 
 a:hover {
   color: #00acdc;
 }
+
