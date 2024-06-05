@@ -1,3 +1,82 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* Space between logo and nav */
+  align-items: center;
+  /* Vertically center the content */
+  padding: 1rem;
+  background-color: #fffff;
+  color: white;
+  width: 100%;
+}
+
+.logo {
+  margin-left: 0;
+  /* No margin to ensure it's at the left edge */
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  /* Transform logo text to uppercase */
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  margin-left: auto;
+  /* Pushes the nav to the far right */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  /* Vertically center nav items */
+}
+
+.nav li {
+  margin-left: 1rem;
+}
+
+.nav li:first-child {
+  margin-left: 0;
+  /* Remove margin from the first list item */
+}
+
+.nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.nav a:hover {
+  color: #00f;
+  /* Change link color on hover */
+}
+
+.nav a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: blue;
 }
