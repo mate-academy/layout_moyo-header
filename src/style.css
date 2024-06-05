@@ -6,18 +6,19 @@
   margin: 0;
   padding: 0;
   background-color: #fff;
-  font-weight: 500;
-  font-size: 12px;
 }
 
 body {
   font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 0 50px;
 }
 
@@ -32,19 +33,22 @@ body {
 }
 
 .list {
-  list-style: none;
   display: flex;
   align-items: center;
+
+  list-style: none;
 }
 
 ._link {
   display: flex;
-  height: 60px;
   align-items: center;
-  text-decoration: none;
+
+  height: 60px;
   margin: 0 10px;
+
   color: black;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 ._link:hover {
@@ -61,15 +65,17 @@ body {
 
 .is-active {
   color: var(--blue-color);
+
   position: relative;
 }
 
 .is-active::after {
-  content: ''; /* Dodanie pseudo-elementu */
-  position: absolute; /* Ustawienie absolutnej pozycji wewnątrz .is-active */
-  bottom: 0; /* Przesunięcie o 4 piksele w dół względem rodzica (.is-active) */
-  left: 0; /* Ustawienie na początku rodzica (.is-active) */
-  width: 100%; /* Szerokość 100% rodzica (.is-active) */
-  border-bottom: 4px solid var(--blue-color); /* Linia podkreślenia */
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  border-bottom: 4px solid var(--blue-color);
   border-radius: 2px;
 }
