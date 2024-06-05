@@ -4,26 +4,30 @@
 
 * {
   box-sizing: border-box;
-  appearance: none;
 }
 
 html {
+  width: 1200px;
+  height: 60px;
+
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
 }
 
 body {
   margin: 0;
-  width: 100%;
+  background-color: gray;
 }
 
 header {
+  background-color: white;
+}
+
+.container {
+  padding: 10px 50px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
-  padding: 0 50px;
 }
 
 img {
@@ -32,7 +36,16 @@ img {
 }
 
 .logo {
-  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0;
 }
 
 .nav__item {
@@ -40,29 +53,13 @@ img {
 }
 
 .nav__link {
-  display: flex;
-  margin-left: 20px;
-  height: 15px;
-  line-height: 15px;
   color: black;
   text-decoration: none;
-  position: relative;
-  align-items: center;
-  text-align: center;
-}
-
-.box-1 {
-  margin: 0;
-}
-
-.nav__list {
-  display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 .nav__link.is-active {
   color: var(--blue-color);
+  position: relative;
 }
 
 .nav__link:hover {
@@ -73,6 +70,7 @@ img {
   display: flex;
   position: absolute;
   bottom: -100%;
+  transform: translateY(100%);
   width: 100%;
   content: '';
   height: 4px;
