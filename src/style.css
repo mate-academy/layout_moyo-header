@@ -1,18 +1,17 @@
-body {
-  margin: 0;
-  padding: 0;
+html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
 }
 
+body {
+  margin: 0;
+}
+
 .header {
-  height: 60px;
   display: flex;
-  background-color: #ffff;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  position: relative;
 }
 
 .logo_link {
@@ -30,13 +29,20 @@ body {
   text-align: center;
 }
 
+.nav_item:first-of-type {
+  margin-left: 0;
+}
+
+.nav_item:last-of-type {
+  margin-right: 0;
+}
+
 .nav_item:not(:last-child) {
   margin-right: 20px;
 }
 
 .nav_link {
   display: block;
-  height: 15px;
   color: #000;
   position: relative;
   font-weight: bold;
@@ -51,12 +57,12 @@ body {
   margin: 0;
 }
 
-.nav_link-1 {
-  color: #00acdc;
+:root {
+  --is-active-color: #00acdc;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--is-active-color);
   position: relative;
 }
 
@@ -77,10 +83,9 @@ body {
   list-style: none;
   display: flex;
   color: #000;
-  padding: auto;
+  padding-left: 0;
 }
 
 a:hover {
   color: #00acdc;
 }
-
