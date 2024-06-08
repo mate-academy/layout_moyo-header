@@ -1,5 +1,14 @@
+:root {
+  --primary-color: #000;
+  --hover-color: #00acdc;
+  --header-background-color: #fff;
+}
+
 html {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 body {
@@ -13,7 +22,7 @@ body {
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--header-background-color);
   padding: 0 50px;
   box-sizing: border-box;
 }
@@ -23,7 +32,7 @@ body {
   align-items: center;
 }
 
-.logo img {
+.logo .logo-image {
   width: 40px;
 }
 
@@ -42,10 +51,6 @@ body {
   margin-right: 20px;
 }
 
-.nav__item:first-child {
-  margin-left: 0;
-}
-
 .nav__item:last-child {
   margin-right: 0;
 }
@@ -55,22 +60,19 @@ body {
   display: flex;
   align-items: center;
   height: 60px;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000;
+  color: var(--primary-color);
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--hover-color);
 }
 
 .is-active::after {
