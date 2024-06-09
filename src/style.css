@@ -24,7 +24,6 @@ a {
 
 .logo {
   align-self: center;
-  justify-content: center;
   height: 40px;
 }
 
@@ -53,18 +52,22 @@ a {
   height: 60px;
 }
 
+:root {
+  --primary-color: #00acdc;
+}
+
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .nav_link:active {
-  color: #00acdc;
-  box-shadow: 0 4px 0 #00acdc;
+  color: var(--primary-color);
+  box-shadow: 0 4px 0 var(--primary-color);
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .is-active::after {
@@ -74,6 +77,6 @@ a {
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--primary-color);
   border-radius: 8px;
 }
