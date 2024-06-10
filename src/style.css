@@ -7,7 +7,7 @@ body {
   --hover-color: #00acdc;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
 }
@@ -17,21 +17,21 @@ header {
   margin-left: 50px;
 }
 
-nav {
+.nav {
   display: flex;
   height: 60px;
   margin-right: 50px;
   align-items: center;
 }
 
-ul {
+.nav__list {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-li > a {
+.nav__link {
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
@@ -40,6 +40,10 @@ li > a {
   font-weight: 500;
   display: inline-block;
   position: relative;
+}
+
+.nav__link:hover {
+  color: var(--hover-color);
 }
 
 .is-active {
@@ -57,8 +61,4 @@ li > a {
   height: 4px;
   border-radius: 2px;
   background-color: var(--hover-color);
-}
-
-li > a:hover {
-  color: var(--hover-color);
 }
