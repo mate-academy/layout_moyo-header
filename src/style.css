@@ -25,6 +25,7 @@ body {
 }
 
 .nav__item {
+  position: relative;
   margin-left: 20px;
 }
 
@@ -42,19 +43,18 @@ body {
   text-transform: uppercase;
 }
 
-.nav__link:hover {
-  color: var(--nav-link-color);
-}
-
+.nav__link:hover,
 .is-active {
   color: var(--nav-link-color);
 }
 
 .is-active::after {
-  position: relative;
+  position: absolute;
   content: '';
-  min-height: 4px;
-  top: -4px;
+  height: 4px;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background-color: var(--nav-link-color);
   border-radius: 2px;
 }
