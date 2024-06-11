@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -14,17 +15,23 @@ ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 10px 50px;
+  padding: 0 50px;
 }
 
-.nav {
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
   display: flex;
-  align-self: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__item {
-  position: relative;
   margin-left: 20px;
 }
 
@@ -32,9 +39,25 @@ ul li {
   margin-left: 0;
 }
 
-.nav__item:first-child::after {
+.nav__link {
+  position: relative;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 60px;
+
+  color: #000;
+  text-transform: uppercase;
+}
+
+.nav__item:first-child a {
+  color: #00acdc;
+}
+
+.nav__link::after {
   position: absolute;
-  display: block;
+  display: none;
   content: '';
 
   height: 4px;
@@ -45,25 +68,10 @@ ul li {
   bottom: 0;
 }
 
-.nav__item:first-child a {
-  color: #00acdc;
-}
-
-.nav__link {
-  position: relative;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 60px;
-
-  color: #000;
-  text-transform: uppercase;
+.nav__item:first-child a::after {
+  display: block;
 }
 
 .nav__link:hover {
   color: #00acdc;
-}
-
-.nav__item:hover::after {
-  display: block;
 }
