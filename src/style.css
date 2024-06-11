@@ -1,87 +1,72 @@
-html {
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-
-  --footer-height: 80px;
-  --header-height: 60px;
-
-  scroll-behavior: smooth;
+body {
+  margin: 0;
   background-color: #00acdc;
 }
 
-body {
-  margin: 0;
-}
-
-.title {
-  text-align: center;
-}
-
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--header-height); /* Використовуємо визначену змінну */
-  background-color: white;
-  padding: 0;
-  box-sizing: border-box;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.logo__img {
+.logo {
   display: block;
-  width: 40px;
   height: 40px;
-  margin-left: 50px;
-}
-
-.nav {
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
-  margin-right: 50px;
-}
-
-.nav__link {
-  margin-left: 20px;
-  display: inline-block;
-  color: black;
-  text-decoration: none;
-  position: relative; /* Для позиціонування псевдоелементу */
-  font-size: 12px;
+  width: 40px;
 }
 
 .nav__list {
   display: flex;
-  list-style: none;
   padding: 0;
-  height: 50px;
-  line-height: 50px;
+  margin: 0;
+  list-style: none;
 }
 
-a:hover {
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #000;
+  transition: color 0.3s;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
   color: #00acdc;
 }
 
-.nav__link::after {
-  content: '';
-  display: block;
-  width: 37px;
-  height: 4px;
-  background-color: #00acdc;
-  position: absolute;
-  top: 100%; /* Відображає псевдоелемент під посиланням */
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.nav__link.is-active {
+  color: #00acdc;
 }
 
-.nav__link:hover::after {
-  opacity: 1;
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+
+  border-radius: 2px;
+  background-color: #00acdc;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
 }
