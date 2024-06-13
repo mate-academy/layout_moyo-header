@@ -1,5 +1,7 @@
 :root {
   --primary-color: #00acdc;
+  --link-height: 60px;
+  --active-border-height: 4px;
 }
 
 * {
@@ -15,7 +17,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 50px;
+  padding: 0 50px;
 }
 
 .logo-link {
@@ -39,6 +41,8 @@ nav a {
   color: #000;
   text-decoration: none;
   font-family: Roboto, sans-serif;
+  height: var(--link-height);
+  align-items: center;
 }
 
 nav a:hover {
@@ -58,13 +62,9 @@ nav a.is-active::after {
   content: '';
   position: absolute;
   left: 0;
-  top: 33px;
+  top: calc(var(--link-height) - var(--active-border-height));
   width: 100%;
-  height: 4px;
+  height: var(--active-border-height);
   border-radius: 8px;
   background-color: var(--primary-color);
-}
-
-[data-qa='hover'] {
-  color: var(--primary-color);
 }
