@@ -1,6 +1,10 @@
 html {
   font-family: Roboto, Arial, sans-serif;
   font-size: 12px;
+  font-weight: 500;
+
+  --main-color: #000;
+  --highlight-color: #00acdc;
 }
 
 body {
@@ -10,68 +14,106 @@ body {
 
 .header {
   margin: 0;
+  padding: 0 50px;
   background-color: #fff;
   display: flex;
   flex-direction: row;
   place-content: center space-between;
+  align-items: center;
+
+  --logo-size: 40px;
+  --nav-list-gap: 20px;
+  --link-height: 60px;
+  --is-active-line-height: 4px;
+  --is-active-line-radius: 8px;
 }
 
-.logo_link {
-  margin: 10px 0 10px 40px;
-  display: inline;
+/* #region Logo */
+
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
+  height: var(--logo-size);
+  width: var(--logo-size);
 }
 
-.logo {
-  height: 40px;
-  width: 40px;
-}
+/* #endregion Logo */
 
-.nav {
-  margin-right: 50px;
-}
+/* #region Navigation */
 
-.nav_list {
-  display: inline;
+.nav__list {
+  display: inline-flex;
+  place-content: center center;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav_item {
-  margin-left: 20px;
+.nav__list__item {
+  margin-left: var(--nav-list-gap);
   display: inline;
 }
 
-.nav_link {
+.nav__list__item:first-child {
+  margin: 0;
+}
+
+.nav__list__item__link {
   position: relative;
-  height: 60px;
-  line-height: 60px;
+  height: var(--link-height);
+  line-height: var(--link-height);
   display: inline-block;
   text-transform: uppercase;
-}
-
-.nav_link:link {
-  color: #000;
   text-decoration: none;
+  text-align: center;
 }
 
-.nav_link:visited {
-  color: #000;
-  text-decoration: none;
+.nav__list__item__link:link {
+  color: var(--main-color);
 }
 
-.nav_link:hover {
-  color: #00ACDC;
-  text-decoration: none;
+.nav__list__item__link:visited {
+  color: var(--main-color);
 }
 
-.nav_link:active {
-  color: #00ACDC;
-  text-decoration: none;
+.nav__list__item__link:hover {
+  color: var(--highlight-color);
 }
 
-.nav_link::after {
+.nav__list__item__link:active {
+  color: var(--highlight-color);
+}
+
+.nav__list__item__link:active::after {
   position: absolute;
-  content: "";
-  height: 4px;
-  background: #000;
-  border-radius: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  height: var(--is-active-line-height);
+  background: var(--highlight-color);
+  border-radius: var(--is-active-line-radius);
 }
+
+/* #endregion Navigation */
+
+/* #region Active Emulation */
+
+/* TODO: remove before shipping */
+.is-active:link,
+.is-active:visited {
+  color: var(--highlight-color);
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  height: var(--is-active-line-height);
+  background: var(--highlight-color);
+  border-radius: var(--is-active-line-radius);
+}
+
+/* #endregion Active Emulation */
