@@ -9,7 +9,7 @@ body {
   margin: 0;
 }
 
-header {
+.header_bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,17 +20,20 @@ header {
   height: 40px;
 }
 
-nav {
+.navigation_bar {
   display: flex;
-  height: 60px;
   align-items: center;
 }
 
-ul {
-  padding-left: 0;
+.navigation_bar__list {
+  margin: 0;
+  padding: 0;
   display: flex;
   list-style: none;
-  gap: 20px;
+}
+
+.navigation_bar__link {
+  margin: 0 10px;
 }
 
 .link {
@@ -43,7 +46,14 @@ ul {
   text-transform: uppercase;
   align-items: center;
   justify-content: center;
-  text-align: center;
+}
+
+.navigation_bar__link:first-child {
+  margin-left: 0;
+}
+
+.navigation_bar__link:last-child {
+  margin-right: 0;
 }
 
 .link:hover {
