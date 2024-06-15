@@ -4,8 +4,11 @@ body {
   font-weight: 500;
 }
 
+html {
+  --link-color: #00acdc;
+}
+
 .header {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +25,7 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--link-color);
 }
 
 .nav__list {
@@ -39,8 +42,9 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--link-color);
   margin: 0;
+  position: relative;
 }
 
 .is-active::after {
@@ -48,8 +52,8 @@ body {
   display: block;
   position: absolute;
   bottom: 0;
-  background-color: #00acdc;
+  background-color: var(--link-color);
   height: 4px;
-  width: 38px;
+  width: 100%;
   border-radius: 8px;
 }
