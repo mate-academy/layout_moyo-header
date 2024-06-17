@@ -5,10 +5,10 @@
 }
 
 html {
+  font-family: Roboto, sans-serif;
+
   --nav-link-hover: #00acdc;
   --header-height: 60px;
-
-  font-family: Roboto, sans-serif;
 }
 
 body {
@@ -19,19 +19,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
+  background-color: #fff;
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
-  margin-left: 50px;
   display: block;
+  height: 40px;
+  width: 40px;
+  margin-left: 50px;
 }
 
 .nav {
-  height: var(--header-height);
   margin-right: 50px;
+  height: var(--header-height);
 }
 
 .nav__list {
@@ -45,11 +45,12 @@ body {
 
 .nav__link {
   line-height: var(--header-height);
-  text-transform: uppercase;
-  color: #000;
   font-size: 12px;
   font-weight: 500;
+  text-transform: uppercase;
   text-decoration: none;
+  color: #000;
+
   display: inline-block;
   position: relative;
 }
@@ -81,14 +82,13 @@ body {
   color: var(--nav-link-hover);
 }
 
-.is-active::after{
+.is-active::after {
   content: '';
   width: 100%;
   position: relative;
   display: block;
   top: -4px;
   height: 4px;
-  border-radius: 8px;
   background: var(--nav-link-hover);
-
+  border-radius: 8px;
 }
