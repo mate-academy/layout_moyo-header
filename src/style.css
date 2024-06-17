@@ -8,7 +8,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  background-color: gray;
 }
 
 .logo {
@@ -19,19 +18,29 @@ body {
 .list_items {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .item {
+  display: flex;
+  position: relative;
   margin-left: 20px;
-  height: 30px;
+  height: 60px;
+}
+
+.item:first-child {
+  margin-left: 0;
 }
 
 .link_item {
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
-  line-height: 30px;
   white-space: nowrap;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 22.5px 0;
 }
 
 .link_item:hover {
@@ -40,7 +49,6 @@ body {
 
 .is-active {
   color: #00acdc;
-  position: relative;
 }
 
 .is-active::after {
