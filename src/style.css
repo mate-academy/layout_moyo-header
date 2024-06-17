@@ -1,12 +1,18 @@
+html {
+  --link-color: #00acdc;
+}
+
 body {
   margin: 0;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
-  background-color: #A6F4DC;
+  background-color: #a6f4dc;
 }
+
 /* Налаштування властивостей контейнерів та відстаней між ними */
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -24,56 +30,55 @@ body {
   justify-content: start;
 }
 
-.nav_container>ul {
+.nav_container > ul {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   list-style: none;
   text-align: center;
-  line-height: 60px;
 }
-/* Налаштування властивостей посилань */
+
 a {
-  color: #000000;
+  color: #000;
   font-size: 12px;
-  padding:20px;
-  font-weight: 60px;
+  padding: 0;
+  margin-right: 20px;
   text-decoration: none;
   position: relative;
+  display: block;
 }
 
 a:hover {
-  color: #00ACDC;
+  color: var(--link-color);
 }
 
-.is-active::after,
-a:hover::after {
+.nav_container > ul > li > a {
+  height: 60px;
+  line-height: 60px;
+}
+
+.is-active::after {
   content: '';
   position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: var(--link-color);
+  border: 1px solid var(--link-color);
+  border-radius: 16%;
   left: 0;
   bottom: 0;
-  height: 4px;
-  width: 0;
-  background-color: #00ACDC;
-}
-
-a:hover::after {
-  width: 100%;
 }
 
 a.logo_link::after {
   display: none;
 }
 
-img, .logo_link {
+img,
+.logo_link {
   position: relative;
   padding: 0;
 }
 
-
-li:last-child {
-  padding-right: 50px;
+.nav_container > ul > li:last-of-type a {
+  margin-right: 50px;
 }
-
-
-
