@@ -1,3 +1,79 @@
 body {
   margin: 0;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #A6F4DC;
 }
+/* Налаштування властивостей контейнерів та відстаней між ними */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  max-height: 60px;
+}
+
+.logo_container {
+  margin: 0;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: start;
+}
+
+.nav_container>ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  line-height: 60px;
+}
+/* Налаштування властивостей посилань */
+a {
+  color: #000000;
+  font-size: 12px;
+  padding:20px;
+  font-weight: 60px;
+  text-decoration: none;
+  position: relative;
+}
+
+a:hover {
+  color: #00ACDC;
+}
+
+.is-active::after,
+a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 0;
+  background-color: #00ACDC;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a.logo_link::after {
+  display: none;
+}
+
+img, .logo_link {
+  position: relative;
+  padding: 0;
+}
+
+
+li:last-child {
+  padding-right: 50px;
+}
+
+
+
