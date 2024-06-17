@@ -1,0 +1,63 @@
+@charset "UTF-8";
+.header {
+  max-width: 100%;
+  width: 100%;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-menu__list {
+  display: flex;
+}
+.nav-menu__item {
+  margin: 0 10px;
+}
+.nav-menu__item:nth-child(1) {
+  margin-left: 0;
+}
+.nav-menu__item:last-child {
+  margin-right: 0;
+}
+.nav-menu__link {
+  text-align: center;
+}
+
+.is-active {
+  position: relative;
+}
+.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -18.5px;
+  width: 0;
+  height: 4px;
+  background-color: #00ACDC;
+  transition: width 0.3s ease;
+}
+.is-active:hover {
+  color: #00ACDC;
+}
+.is-active:hover::after {
+  width: 100%;
+}
+
+/*
+ Header height is set in 1 place (for the links)
+ Content is vertically centered (for any header height)
+ CSS is used to show all letters in Uppercase (don't type them in HTML)
+ Logo is an image wrapped with a link
+ CSS Variable is used for a blue color
+ Pseudo-element is used for a blue line below the active link
+ Code follows all the Code Style Rules ❗️
+
+ - [x]*/
+
+/*# sourceMappingURL=style.css.map */
