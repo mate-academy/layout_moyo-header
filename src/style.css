@@ -1,6 +1,13 @@
-body {
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
 
+body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -12,6 +19,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  margin: 0 50px;
 }
 
 .header__img {
@@ -25,12 +34,11 @@ body {
 }
 
 .nav__item {
-  height: 60px;
+  display: flex;
+  justify-content: center;
   margin: 0 10px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 
   text-align: center;
   list-style: none;
@@ -47,6 +55,10 @@ body {
 .nav__link {
   color: inherit;
   text-decoration: none;
+
+  height: 60px;
+  align-self: center;
+  padding-top: 22.5px;
 }
 
 .nav__link:hover {
@@ -54,17 +66,18 @@ body {
 }
 
 .is-active {
-  position: relative;
+  color: #00acdc;
 }
 
 .is-active::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -18.5px;
+  bottom: 0;
 
   width: 100%;
   height: 4px;
+  border-radius: 8px;
 
   background-color: #00acdc;
 }
