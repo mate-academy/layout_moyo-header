@@ -5,7 +5,8 @@ body {
 }
 
 html {
-  --link-color: #00acdc;
+  --link-color-hover: #00acdc;
+  --link-color: #000
 }
 
 .header {
@@ -20,12 +21,13 @@ html {
   display: block;
   text-decoration: none;
   line-height: 60px;
-  color: #000;
+  color: var(--link-color);
   margin-left: 20px;
+  text-transform: uppercase;
 }
 
 .nav__link:hover {
-  color: var(--link-color);
+  color: var(--link-color-hover);
 }
 
 .nav__list {
@@ -42,7 +44,7 @@ html {
 }
 
 .is-active {
-  color: var(--link-color);
+  color: var(--link-color-hover);
   margin: 0;
   position: relative;
 }
@@ -52,7 +54,7 @@ html {
   display: block;
   position: absolute;
   bottom: 0;
-  background-color: var(--link-color);
+  background-color: var(--link-color-hover);
   height: 4px;
   width: 100%;
   border-radius: 8px;
