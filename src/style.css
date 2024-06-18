@@ -36,7 +36,6 @@ section {
 body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  font-style: normal;
   font-size: 12px;
   line-height: 14px;
   color: var(--text-color-main);
@@ -45,8 +44,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  margin-top: 23px;
-  margin-bottom: 23px;
+  padding-right: 50px;
 }
 
 .header__logo {
@@ -61,7 +59,6 @@ body {
 
 .header__list {
   display: flex;
-  padding-right: 50px;
   list-style: none;
 }
 
@@ -70,14 +67,26 @@ body {
   margin-left: 20px;
 }
 
+.header__list-item:first-child {
+  margin-left: 0;
+}
+
 .header__list-link {
+  display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--text-color-main);
+  line-height: 60px;
+  height: 60px;
 }
 
 .header__list-link:hover {
   color: var(--text-color-hover);
+}
+
+.header__nav {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .is-active {
@@ -89,7 +98,7 @@ body {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: -18px;
+  bottom: 0;
   height: 4px;
   background-color: var(--text-color-hover);
   border-radius: 8px;
