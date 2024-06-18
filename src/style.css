@@ -1,3 +1,98 @@
-body {
+:root {
+  --primary-color: #00acdc;
+  --link-height: 60px;
+  --active-border-height: 4px;
+}
+
+html,
+body,
+header,
+a,
+img,
+nav,
+ul,
+li {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo-link {
+  line-height: 0;
+}
+
+.logo-link:hover {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+}
+
+ul {
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+li {
+  list-style-type: none;
+}
+
+li + li {
+  margin-left: 20px;
+}
+
+li:first-child {
+  margin-left: 0;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+.nav a {
+  display: inline-flex;
+  margin-right: 20px;
+  color: #000;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  height: var(--link-height);
+  align-items: center;
+}
+
+.nav a:hover {
+  color: var(--primary-color);
+}
+
+.nav a:last-of-type {
+  margin-right: 0;
+}
+
+.nav a.is-active {
+  position: relative;
+  color: var(--primary-color);
+}
+
+.nav a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(var(--link-height) - var(--active-border-height));
+  width: 100%;
+  height: var(--active-border-height);
+  border-radius: 8px;
+  background-color: var(--primary-color);
 }
