@@ -9,8 +9,11 @@ body,
 header,
 a,
 img,
-nav {
+nav,
+ul,
+li {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -18,7 +21,7 @@ body {
   font-family: Roboto, Arial, sans-serif;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,14 +36,34 @@ header {
   text-decoration: none;
 }
 
-nav {
+.nav {
+  display: flex;
+}
+
+ul {
   display: flex;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 12px;
 }
 
-nav a {
+li {
+  list-style-type: none;
+}
+
+li + li {
+  margin-left: 20px;
+}
+
+li:first-child {
+  margin-left: 0;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+.nav a {
   display: inline-flex;
   margin-right: 20px;
   color: #000;
@@ -50,20 +73,20 @@ nav a {
   align-items: center;
 }
 
-nav a:hover {
+.nav a:hover {
   color: var(--primary-color);
 }
 
-nav a:last-of-type {
+.nav a:last-of-type {
   margin-right: 0;
 }
 
-nav a.is-active {
+.nav a.is-active {
   position: relative;
   color: var(--primary-color);
 }
 
-nav a.is-active::after {
+.nav a.is-active::after {
   content: '';
   position: absolute;
   left: 0;
