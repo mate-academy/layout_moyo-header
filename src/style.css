@@ -1,3 +1,105 @@
-body {
+/* RESSET */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+ol,
+ul,
+li,
+footer,
+header,
+menu,
+nav,
+section {
   margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+:root {
+  --text-color-main: #000;
+  --text-color-hover: #00acdc;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--text-color-main);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+
+.header__logo {
+  margin-top: 10px;
+  padding-left: 50px;
+}
+
+.header__logo-link-img {
+  width: 40px;
+  height: 40px;
+}
+
+.header__list {
+  display: flex;
+  list-style: none;
+}
+
+.header__list-item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.header__list-item:first-child {
+  margin-left: 0;
+}
+
+.header__list-link {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color-main);
+  line-height: 60px;
+  height: 60px;
+}
+
+.header__list-link:hover {
+  color: var(--text-color-hover);
+}
+
+.header__nav {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.is-active {
+  color: var(--text-color-hover);
+}
+
+.is-active::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--text-color-hover);
+  border-radius: 8px;
 }
