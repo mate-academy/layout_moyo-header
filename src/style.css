@@ -1,11 +1,8 @@
 :root {
-  --black: #000;
-  --grey: #666;
-  --yellow: #f0f4e7;
-  --violet: #e3d9ed;
-  --white: #fff;
-  --blue: #00acdc;
-  --main: 12px;
+  --basic-fonts-color: #000;
+  --background-color: #fff;
+  --main-active-color: #00acdc;
+  --font-size: 12px;
   --line-height: 14px;
 }
 
@@ -13,9 +10,9 @@ html {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: var(--main);
-  color: var(--black);
-  background-color: var(--white);
+  font-size: var(--font-size);
+  color: var(--basic-fonts-color);
+  background-color: var(--background-color);
 }
 
 body {
@@ -34,7 +31,7 @@ a:visited {
   text-decoration: none;
 }
 
-.header__wraper {
+.header__wrapper {
   display: flex;
   padding: 0 50px;
   justify-content: space-between;
@@ -61,26 +58,26 @@ a:visited {
   transition: color 0.3s ease;
   height: 60px;
   font-weight: 500;
-  font-size: var(--main);
+  font-size: var(--font-size);
   line-height: 60px;
   text-transform: uppercase;
   text-align: center;
   align-items: center;
-  color: var(--black);
+  color: var(--basic-fonts-colorn);
 }
 
 .nav__link:hover,
 .nav__link:active {
-  color: var(--blue);
+  color: var(--main-active-color);
 }
 
 .nav__link:active {
-  box-shadow: 0 4px 0 var(--blue);
+  box-shadow: 0 4px 0 var(--main-active-color);
 }
 
 .is-active {
   position: relative;
-  color: var(--blue);
+  color: var(--main-active-color);
 }
 
 .is-active::after {
@@ -90,6 +87,6 @@ a:visited {
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: var(--blue);
+  background-color: var(--main-active-color);
   border-radius: 8px;
 }
