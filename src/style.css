@@ -1,3 +1,7 @@
+:root {
+  --blue-accent: #00acdc;
+}
+
 body {
   margin: 0;
 }
@@ -7,7 +11,6 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
-  width: 1100px;
 }
 
 .nav {
@@ -17,18 +20,11 @@ body {
   text-align: center;
 }
 
-img {
+.img {
   width: 40px;
   height: 40px;
   display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-@media screen and (max-width: 1024px) {
-  .header {
-    width: 924px;
-  }
+  margin: 10px 0;
 }
 
 .nav_link {
@@ -48,13 +44,13 @@ img {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue-accent);
   padding: 23px 0;
 }
 
 .is-active::after {
   content: '';
-  background-color: #00acdc;
+  background-color: var(--blue-accent);
   border-radius: 8px;
   width: 100%;
   height: 4px;
@@ -64,5 +60,5 @@ img {
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--blue-accent);
 }
