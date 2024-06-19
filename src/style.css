@@ -1,3 +1,57 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 body {
   margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  text-transform: uppercase;
+}
+
+.nav__bar {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list {
+  list-style-type: none;
+  font-size: 12px;
+  line-height: 60px;
+}
+
+.nav__list:not(:first-child) {
+  padding-left: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  position: relative;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.link:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: '';
+  height: 4px;
+  background-color: #00acdc;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
