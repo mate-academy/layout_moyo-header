@@ -5,6 +5,7 @@ html {
   line-height: 14px;
 
   --main-color: #00acdc;
+  --text-color: #000;
 }
 
 body {
@@ -13,8 +14,7 @@ body {
 }
 
 .header {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,17 +27,24 @@ body {
 
 .nav__list {
   display: flex;
-  gap: 20px;
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
 }
 
 .nav__link {
   display: flex;
   align-items: center;
   height: 60px;
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
   font-size: 12px;
   line-height: 14px;
