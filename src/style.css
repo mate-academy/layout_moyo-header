@@ -1,8 +1,11 @@
+:root {
+  --color: rgba(0, 172, 220, 1);
+}
+
 html {
-  /* stylelint-disable-next-line font-family-name-quotes */
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
   font-weight: 500;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
 }
 
 body {
@@ -12,7 +15,7 @@ body {
   box-sizing: border-box;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +39,7 @@ a {
   color: transparent;
 }
 
-.nav_lint {
+.nav_link {
   line-height: 14.06px;
   height: 60px;
   margin-left: 20px;
@@ -46,19 +49,19 @@ a {
   align-items: center;
 }
 
-.nav_lint:hover {
-  color: rgba(0, 172, 220, 1);
+.nav_link:hover {
+  color: var(--color);
 }
 
 .is-active {
-  color: rgba(0, 172, 220, 1);
   margin-left: 0;
+  color: var(--color);
 }
 
 .is-active::after {
   content: '';
   position: absolute;
-  background-color: rgba(0, 172, 220, 1);
+  background-color: var(--color);
   border-radius: 8px;
   height: 4px;
   bottom: 0;
