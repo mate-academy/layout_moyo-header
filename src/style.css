@@ -1,9 +1,11 @@
 :root {
   --blue-accent: #00acdc;
+  --black: #000;
 }
 
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
 
 .header {
@@ -11,13 +13,14 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
+  align-items: center;
 }
 
-.nav {
+.nav__list {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 23px 0;
 }
 
 .img {
@@ -27,25 +30,27 @@ body {
   margin: 10px 0;
 }
 
-.nav_link {
+.nav__link {
   text-decoration: none;
-  text-transform: uppercase;
-  font-family: Roboto, sans-serif;
-  color: black;
-  font-size: 12px;
-  font-weight: 500;
-  margin-right: 20px;
+  color: var(--black);
   position: relative;
   padding: 23px 0;
 }
 
-.nav_link:last-child {
+.nav__item {
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.nav__item:last-child {
   margin-right: 0;
 }
 
-.is-active {
+.is-active,
+.nav__link:hover {
   color: var(--blue-accent);
-  padding: 23px 0;
 }
 
 .is-active::after {
@@ -57,8 +62,4 @@ body {
   display: block;
   bottom: 0;
   position: absolute;
-}
-
-.nav_link:hover {
-  color: var(--blue-accent);
 }
