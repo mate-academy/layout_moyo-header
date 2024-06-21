@@ -3,12 +3,13 @@ html {
 }
 
 ul,
-li,
-body {
+li {
   margin: 0;
+  padding: 0;
 }
 
 body {
+  margin: 0;
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -18,8 +19,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
   padding: 0 50px;
+}
+
+.nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .logo-link {
@@ -31,8 +37,8 @@ body {
   list-style: none;
 }
 
-.nav__item {
-  margin-left: 20px;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
