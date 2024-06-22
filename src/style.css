@@ -1,3 +1,66 @@
+:root {
+  --active-menu: #00acdc;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+}
+
 body {
   margin: 0;
+}
+
+.logo-link,
+.logo-img {
+  display: block;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  column-gap: 20px;
+}
+
+.menu-item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: block;
+  position: relative;
+  align-items: center;
+  font-weight: 500;
+  line-height: 60px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--active-menu);
+  border-radius: 4px;
+}
+
+.is-active,
+.nav__link:hover {
+  color: var(--active-menu);
 }
