@@ -1,3 +1,116 @@
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: aliceblue;
+}
+
+header {
+  width: 100%;
+  background-color: #ffff;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: relative;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+  align-content: center;
+  margin-left: 30px;
+}
+
+nav {
+  height: 60px;
+  width: 1200px;
+  display: flex;
+  margin-left: 419px 0;
+
+  font-family: Roboto, sans-serif;
+}
+
+ul.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+ul.menu li {
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+  ul.menu li:not(:last-child) {
+    margin-right: 15px;
+    font-family: Roboto, sans-serif;
+  }
+}
+
+ul.menu li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  padding-bottom: 5px;
+  line-height: 60px;
+  transition: color 0.3s;
+  position: relative;
+  font-family: Roboto, sans-serif;
+}
+
+ul.menu li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 4px;
+  border-radius: 8px;
+  background: transparent;
+  position: absolute;
+  left: 0;
+  bottom: -17px;
+  font-family: Roboto, sans-serif;
+
+  transition:
+    width 0.3s,
+    background-color 0.3s;
+}
+
+ul.menu li a:hover::after,
+ul.menu li a.is-active::after {
+  width: 100%;
+  background-color: #00acdc;
+  font-family: Roboto, sans-serif;
+}
+
+.highlight {
+  color: #00acdc;
+  font-family: Roboto, sans-serif;
+}
+
+ul.menu li a.is-active {
+  color: #00acdc;
+  font-family: Roboto, sans-serif;
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 10px;
+  }
+  nav {
+    height: 50px;
+  }
+  ul.menu li a {
+    font-size: 14px;
+    line-height: 50px;
+  }
+  ul.menu li a.is-active::after {
+    bottom: -15px;
+  }
 }
