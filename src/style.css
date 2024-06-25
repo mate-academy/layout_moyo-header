@@ -1,3 +1,102 @@
+/* Reset browser default margins */
 body {
   margin: 0;
+  padding: 0;
+  font-size: 12px;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+/* CSS Variable for blue color */
+:root {
+  --blue-color: #007bff;
+}
+
+/* Logo styling */
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Maximum width */
+  margin: 0 auto; /* Center align */
+  background-color: #fff; /* Background color from design */
+  height: 80px; /* Default header height */
+  padding: 0 20px; /* Adjust according to the design */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Nav link styling */
+.nav-link {
+  text-decoration: none;
+  color: #000; /* Default link color */
+  text-transform: uppercase; /* Uppercase text using CSS */
+  margin: 0 20px;
+  line-height: 60px; /* Center the text vertically within the header */
+}
+
+.nav-list a {
+  text-decoration: none;
+}
+
+.nav-link:first-child {
+  margin-left: 0;
+}
+
+.nav-link:last-child {
+  margin-right: 30px;
+}
+
+/* Active link styling */
+.is-active {
+  border-bottom: 4px solid var(--blue-color); /* Adding blue line at the bottom */
+  position: relative; /* Necessary for the border position */
+}
+
+.is-active::after{
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: rgba(0, 172, 220, 1); /* Change to the desired hover color */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .nav-link {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 0 10px;
+  }
+
+  .nav-link {
+    margin: 0 5px;
+  }
 }
