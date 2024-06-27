@@ -1,3 +1,102 @@
-body {
+:root {
+  --background-color: rgba(0, 0, 0, 1);
+  --header-background-color: rgba(255, 255, 255, 1);
+  --hover-color: #00acdc;
+}
+
+/* Reset de margens padrão */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--header-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+header {
+  background-color: var(--header-background-color);
+  color: var(--background-color);
+  padding: 0; /* Espaçamento interno superior e inferior */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinha os itens verticalmente */
+  text-align: center;
+  width: 100%;
+  position: relative; /* Adicionado para posicionar corretamente o pseudo-elemento */
+  text-transform: uppercase; /* Converte o texto do header para maiúsculas */
+}
+
+header .logo_link {
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+header .logo_link img {
+  width: 40px;
+  height: 40px;
+}
+
+nav {
+  display: flex; /* container flexível */
+  align-items: center;
+  margin-right: 50px; /* margem direita de 50px de espaçamento */
+}
+
+nav ul {
+  list-style-type: none; /* Remove os estilos padrão da lista */
+  text-align: right; /* Centraliza os itens da lista */
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase; /* Converte o texto de nav ul para maiúsculas */
+}
+
+nav ul li {
+  display: inline-block; /* Exibe os itens da lista em linha */
+  position: relative;
+}
+
+nav ul li a {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--background-color);
+  text-decoration: none; /* Remove sublinhado padrão dos links */
+  text-align: center;
+  text-transform: uppercase; /* Converte o texto de nav ul li a para maiúsculas */
+  display: flex;
+  align-items: center;
+  height: 60px; /* Define a altura do link */
+}
+
+nav ul li a.is-active {
+  color: var(
+    --hover-color
+  ); /* Define a cor azul para links com a classe is-active */
+}
+
+nav ul li a:hover {
+  color: var(--hover-color); /* Altera a cor do texto ao passar o mouse */
+}
+
+nav ul li:first-child a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--hover-color);
+  display: inline-block;
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 16px; /* Aplica margem apenas à esquerda dos itens, exceto no último */
 }
