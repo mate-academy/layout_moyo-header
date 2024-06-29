@@ -4,9 +4,11 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
+  
+  --nav-color: #00acdc;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -19,13 +21,14 @@ header {
   margin: 10px 0 10px 50px;
 }
 
-.nav-list {
+.nav__list {
   display: flex;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-.list-item {
+.nav__link {
   position: relative;
   display: block;
   line-height: 60px;
@@ -33,16 +36,12 @@ header {
   color: black;
 }
 
-li {
+.nav__item {
   margin: 0 10px;
   position: relative;
 }
 
-ul {
-  list-style: none;
-}
-
-.container-nav {
+.nav {
   display: flex;
   align-items: center;
   margin-right: 50px;
@@ -54,24 +53,24 @@ ul {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--nav-color);
   bottom: 0;
   left: 0;
 }
 
-a:hover,
-a:focus {
-  color: #00acdc;
+.nav__link:hover,
+.nav__link:focus {
+  color: var(--nav-color);
 }
 
-li:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-li:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--nav-color);
 }
