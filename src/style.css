@@ -5,6 +5,7 @@ html {
   font-size: 12px;
 
   --header-height: 60px;
+  --hover-color: #00acdc;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
 }
 
 .header {
-  /* background-color: lightgrey; */
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
@@ -25,7 +25,6 @@ body {
 }
 
 .nav {
-  /* background-color: yellow; */
   height: var(--header-height);
   margin-right: 50px;
   display: flex;
@@ -33,11 +32,10 @@ body {
 }
 
 .nav__item {
-  /* background-color: green; */
   height: 100%;
   display: flex;
   list-style: none;
-  align-items: center;
+  padding-left: 0;
 }
 
 .nav__link {
@@ -49,28 +47,28 @@ body {
   margin-right: 20px;
 }
 
-a.nav__a {
+.nav__a {
   display: block;
   position: relative;
   height: 100%;
   line-height: var(--header-height);
 }
 
-a.is-active {
-  color: #00acdc;
+.is-active {
+  color: var(--hover-color);
 }
 
-a.is-active::after {
+.is-active::after {
   content: '';
   display: block;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--hover-color);
   border-radius: 4px;
 }
 
-[data-qa='hover']:hover {
-  color: #00acdc;
+.nav__a:hover {
+  color: var(--hover-color);
 }
