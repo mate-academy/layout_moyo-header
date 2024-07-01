@@ -14,7 +14,11 @@ body {
   margin: 0;
 }
 
-.wrap {
+.wrap{
+  width: 100%;
+}
+
+.container {
   background-color: rgba(255, 255, 255, 1);
   width: 1200px;
   margin: 0 auto;
@@ -34,10 +38,9 @@ body {
   height: 40px;
 }
 
-.nav-menu {
+.nav__menu_list {
   display: flex;
   padding-inline-start: 0;
-  gap: 20px;
 }
 
 .nav__items {
@@ -45,6 +48,11 @@ body {
   list-style: none;
   align-items: center;
   position: relative;
+  margin-right: 20px;
+}
+
+li:nth-of-type(8){
+  margin-right: 0;
 }
 
 .nav__link {
@@ -53,16 +61,22 @@ body {
   color: rgba(0, 0, 0, 1);
 }
 
-.nav__active {
+.nav__link:hover {
   color: rgba(0, 172, 220, 1);
 }
 
-.nav__current::before {
+.is-active{
+  color: rgb(0, 172, 220, 1);
+  position: relative;
+}
+
+.is-active::after {
   content: '';
   position: absolute;
   width: 37px;
   height: 4px;
   background-color: rgb(0, 172, 220, 1);
   border-radius: 8px;
+  right: 0;
   top: 33px;
 }
