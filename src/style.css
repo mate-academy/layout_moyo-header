@@ -2,48 +2,57 @@ body {
   margin: 0;
 }
 
-.container {
-  background-color: #fff;
+:root {
+  --color: #00acdc;
+  --list-style-type: none;
+  --margin: 0;
+  --padding: 0;
+}
+
+.header {
+  padding: 0 50px;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 50px;
 }
 
-.links {
+.nav__list {
   display: flex;
   flex-direction: row;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  color: #00acdc;
+  list-style-type: var(--list-style-type);
+  margin: var(--margin);
+  padding: var(--padding);
+  color: var(--color);
   justify-content: space-between;
 }
 
-a {
+.nav__link {
   text-decoration: none;
   color: #000;
   position: relative;
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
 }
 
-li {
+.nav__item {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 500;
   font-style: normal;
-  padding: 0;
+  padding: var(--padding);
   margin-right: 20px;
   position: relative;
 }
 
-li:last-child {
-  margin: 0;
+.nav__item:last-child {
+  margin: var(--margin);
 }
 
-a:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--color);
 }
 
 .is-active::after {
@@ -51,20 +60,14 @@ a:hover {
   position: absolute;
   height: 4px;
   left: 0;
-  background-color: #00acdc;
+  background-color: var(--color);
   width: 100%;
   bottom: 0%;
   border-radius: 8px;
 }
 
 .is-active {
-  color: #00acdc;
-}
-
-.link a {
-  display: inline-block;
-  height: 60px;
-  line-height: 60px;
+  color: var(--color);
 }
 
 .logo {
