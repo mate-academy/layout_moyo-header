@@ -1,12 +1,17 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
 
-body {
-  margin: 0;
+:root {
+  --blue-color: #00acdc;
+}
+
+html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   transition: all 300ms;
+}
 
-  --blue-color: #00acdc;
+body {
+  margin: 0;
 }
 
 .header {
@@ -15,7 +20,6 @@ body {
   padding: 0 50px;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
 }
 
 .nav__logo {
@@ -55,11 +59,11 @@ body {
   margin-right: 0;
 }
 
-.nav__link.is-active {
+.is-active {
   color: var(--blue-color);
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
