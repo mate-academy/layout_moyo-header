@@ -1,3 +1,88 @@
+:root {
+  --active-color: #00acdc;
+}
+
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  align-items: center;
+  background-color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  left: 50px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  margin: 0 50px 0 0;
+}
+
+.navList {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.navItem {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.06px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  position: relative;
+  margin: 0 10px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navList :first-child a {
+  margin: 0 10px 0 0;
+}
+
+.navList :last-child a {
+  margin: 0 0 0 10px;
+}
+
+.navItem:hover {
+  color: var(--active-color);
+}
+
+.is-active {
+  color: var(--active-color);
+}
+
+.is-active::after {
+  color: var(--active-color);
+  content: '';
+  width: 100%;
+  border-radius: 8px;
+  height: 4px;
+  background-color: var(--active-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
