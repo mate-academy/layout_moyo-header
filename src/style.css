@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-  background-color: yellow;
+  /* background-color: yellow; */
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -18,7 +18,7 @@ body {
 }
 
 .nav {
-  background-color: green;
+  /* background-color: green; */
   height: 60px;
   line-height: 60px;
 }
@@ -38,17 +38,39 @@ body {
 }
 
 .nav__links {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   color: #000;
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
+  text-wrap: nowrap;
 }
 
-[data-qa] {
+.is-active {
+  color: #00ACDC;
+  margin: 0;
+ }
+
+[data-qa="hover"]:hover{
   color: #00ACDC;
 }
 
-.item:hover{
-  text-decoration: solid #00ACDC;
-  border-radius: 180;
+.nav__list .is-active {
+  position: relative;
+}
+
+.is-active::after{
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #00ACDC;
+  border-radius: 8px;
+
+  /* display: block; */
 }
