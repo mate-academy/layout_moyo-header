@@ -1,11 +1,14 @@
 /* stylelint-disable selector-class-pattern */
+html {
+  --color-fonts: #00ACDC;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
 }
 
 .header {
-  /* background-color: yellow; */
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -18,7 +21,6 @@ body {
 }
 
 .nav {
-  /* background-color: green; */
   height: 60px;
   line-height: 60px;
 }
@@ -39,8 +41,6 @@ body {
 
 .nav__links {
   display: block;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   color: #000;
   text-decoration: none;
@@ -50,12 +50,12 @@ body {
 }
 
 .is-active {
-  color: #00ACDC;
+  color: var(--color-fonts);
   margin: 0;
  }
 
-[data-qa="hover"]:hover{
-  color: #00ACDC;
+ .nav__links:hover{
+  color: var(--color-fonts);
 }
 
 .nav__list .is-active {
@@ -69,8 +69,6 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #00ACDC;
+  background: var(--color-fonts);
   border-radius: 8px;
-
-  /* display: block; */
 }
