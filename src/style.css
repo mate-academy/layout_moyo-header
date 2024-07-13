@@ -1,3 +1,77 @@
 body {
   margin: 0;
 }
+
+:root {
+  --colorlink: rgba(0, 0, 0, 1);
+  --colorhover: rgba(0, 172, 220, 1);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header--logolink {
+  margin-left: 50px;
+  display: flex;
+}
+
+.header--navigation {
+  margin-right: 50px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.nav_list--link {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 10px;
+  height: 60px;
+  color: var(--colorlink);
+  text-decoration: none;
+}
+
+.nav_list--link:hover {
+  color: var(--colorhover);
+}
+
+.is-active {
+  position: relative;
+  color: var(--colorhover);
+}
+
+.is-active::after {
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--colorhover);
+  border-radius: 8px;
+  height: 4px;
+  position: absolute;
+}
+
+ul li:last-child > a {
+  margin: 0 0 0 10px;
+}
+
+ul li:first-child > a {
+  margin: 0 10px 0 0;
+}
