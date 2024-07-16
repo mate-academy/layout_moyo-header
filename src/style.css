@@ -1,9 +1,8 @@
-
 body {
   margin: 0 auto;
   max-width: 1200px;
   /* stylelint-disable-next-line font-family-name-quotes */
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 500;
 }
@@ -19,12 +18,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 60px;
 }
 
 .header-right {
   display: flex;
   gap: 20px;
   align-items: center;
+  padding-right: 50px;
 }
 
 .box {
@@ -33,15 +34,18 @@ body {
   align-items: center;
 }
 
-.current {
-  color: #00ACDC;
-  border-bottom: 3px solid  #00ACDC;
+a.box.is-active {
+  color: #00acdc;
+  border-bottom: 3px solid #00acdc;
   border-radius: 2px;
 }
 
 .box:hover {
-  cursor: pointer;
-  color: #00ACDC;
+  color: #00acdc;
 }
 
-
+a.box {
+  color: #000;
+  display: flex;
+  text-decoration: none;
+}
