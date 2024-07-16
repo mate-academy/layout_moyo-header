@@ -1,3 +1,89 @@
-body {
+html {
+  --header-height: 60px;
+  --active-color: #00acdc;
+}
+
+body,
+a,
+ul,
+li,
+img {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 50px;
+}
+
+.nav {
+  display: flex;
+  align-items: baseline;
+  font-size: 12px;
+}
+
+.nav_links {
+  display: flex;
+  list-style: none;
+}
+
+.nav_link a {
+  display: block;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: 500;
+  color: black;
+  text-transform: uppercase;
+}
+
+.is_active.underline {
+  text-decoration: none;
+  margin-right: 20px;
+  color: var(--active-color);
+}
+
+.is_active.underline::after {
+  content: '';
+  display: block;
+  background-color: var(--active-color);
+  height: 4px;
+  border-radius: 2px;
+  position: relative;
+  top: 19px;
+}
+
+.nav_link a:hover::after {
+  content: '';
+  display: block;
+  background-color: var(--active-color);
+  height: 4px;
+  border-radius: 2px;
+  position: relative;
+  top: 19px;
+}
+
+.nav_link a:hover {
+  color: var(--active-color);
+}
+
+@media (min-width: 1024px) {
+  .header {
+    width: 1024px;
+  }
+  .nav {
+    margin-left: 233px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    width: 1200px;
+  }
+  .nav {
+    margin-left: 419px;
+  }
 }
