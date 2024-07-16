@@ -3,27 +3,26 @@ html {
   --active-color: #00acdc;
 }
 
-body,
-a,
-ul,
-li,
-img {
+body {
   margin: 0;
-  padding: 0;
   font-family: Roboto, sans-serif;
 }
 
 .header {
+  padding-top: 10px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px 50px;
+  justify-content: space-between;
 }
 
 .nav {
-  display: flex;
-  align-items: baseline;
   font-size: 12px;
+  padding-right: 50px;
+}
+
+.logo_img {
+  padding-left: 50px;
 }
 
 .nav_links {
@@ -31,10 +30,14 @@ img {
   list-style: none;
 }
 
+.nav_link:nth-child(-n + 7) {
+  margin-right: 20px;
+}
+
 .nav_link a {
   display: block;
   text-decoration: none;
-  margin-right: 20px;
+  text-align: center;
   font-weight: 500;
   color: black;
   text-transform: uppercase;
@@ -42,7 +45,6 @@ img {
 
 .is_active.underline {
   text-decoration: none;
-  margin-right: 20px;
   color: var(--active-color);
 }
 
@@ -74,16 +76,10 @@ img {
   .header {
     width: 1024px;
   }
-  .nav {
-    margin-left: 233px;
-  }
 }
 
 @media (min-width: 1200px) {
   .header {
     width: 1200px;
-  }
-  .nav {
-    margin-left: 419px;
   }
 }
