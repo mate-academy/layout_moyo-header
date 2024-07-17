@@ -4,26 +4,20 @@ html {
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .header {
-  width: 100%;
-  box-sizing: border-box;
+  font-weight: 500;
   padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo_img {
-  display: block;
+.header__link {
   width: 40px;
   height: 40px;
-}
-
-.nav {
-  position: relative;
 }
 
 .nav__list {
@@ -34,11 +28,12 @@ body {
 }
 
 .nav__link {
-  font-weight: 500;
+  position: relative;
+  display: block;
   height: 60px;
   line-height: 60px;
+  letter-spacing: 0;
   font-size: 12px;
-  display: block;
   text-decoration: none;
   color: black;
   text-transform: uppercase;
@@ -50,29 +45,19 @@ body {
 
 .is-active {
   color: var(--active-color);
-  position: relative;
 }
 
 .nav__link:hover {
   color: var(--active-color);
 }
 
-.nav__link:hover::after {
-  content: '';
-  display: block;
-  position: relative;
-  bottom: 0;
-  background-color: var(--active-color);
-  height: 4px;
-  border-radius: 2px;
-}
-
 .is-active::after {
   content: '';
   display: block;
-  position: relative;
+  position: absolute;
+  width: 100%;
   bottom: 0;
   background-color: var(--active-color);
   height: 4px;
-  border-radius: 2px;
+  border-radius: 8px;
 }
