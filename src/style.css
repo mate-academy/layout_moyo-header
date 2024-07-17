@@ -1,3 +1,68 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+:root {
+  --blue-color: #00aaf0; /* Устанавливаем синий цвет как CSS-переменную */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; /* Настройте в соответствии с вашим дизайном */
+}
+
+.logo img {
+  height: 50px; /* Настройте в соответствии с вашим дизайном */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px; /* Настройте в соответствии с вашим дизайном */
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase; /* CSS для отображения букв в верхнем регистре */
+  line-height: 60px; /* Настройте в соответствии с вашим дизайном */
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--blue-color);
+}
+
+.nav-link.is-active {
+  color: var(--blue-color);
+}
+
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px; /* Настройте в соответствии с вашим дизайном */
+  height: 2px; /* Настройте в соответствии с вашим дизайном */
+  background-color: var(--blue-color);
 }
