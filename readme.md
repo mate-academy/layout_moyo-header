@@ -25,7 +25,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ## Checklist
 
-❗️ Replace `<Irina0401>` with your Github username and copy the links to `Pull Request` description:
+❗️ Replace `Irina0401` with your Github username and copy the links to `Pull Request` description:
 
 - [DEMO LINK](https://Irina0401.github.io/layout_moyo-header/)
 - [TEST REPORT LINK](https://Irina0401.github.io/layout_moyo-header/report/html_report/)
