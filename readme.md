@@ -32,7 +32,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
-- [x] Header height is set in 1 place (for the links)
+- [x] Header height is set in 1 place for the links
 - [x] Content is vertically centered (for any header height)
 - [x] CSS is used to show all letters in Uppercase (don't type them in HTML)
 - [x] Logo is an image wrapped with a link
