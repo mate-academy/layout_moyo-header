@@ -16,44 +16,38 @@ html {
   font-style: normal;
 }
 
-.container {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   padding: 0 50px;
   margin: 0 auto;
 }
 
-header {
-  width: 100%;
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo img {
+.logo-link {
+  display: block;
+  height: 40px;
   width: 40px;
-  aspect-ratio: 1/1;
 }
 
-nav .menu-list {
+.menu-list {
   display: flex;
 }
 
-nav .list-item {
+.list-item {
   color: black;
 }
 
-nav .list-item:not(:last-child) {
+.list-item:not(:last-child) {
   margin-right: 20px;
 }
 
-nav .list-item:hover {
+.list-item:hover {
   color: #00acdc;
 }
 
-nav .list-item .item-link {
+.item-link {
   position: relative;
   display: flex;
   align-items: center;
@@ -65,12 +59,12 @@ nav .list-item .item-link {
   font-weight: 500;
 }
 
-nav .list-item.is-active {
+.is-active {
   color: #00acdc;
 }
 
-nav .list-item.is-active .item-link::after {
-  content: "";
+.is-active::after {
+  content: '';
   position: absolute;
   width: 100%;
   height: 4px;
