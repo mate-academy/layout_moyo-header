@@ -3,22 +3,68 @@ body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 500;
+  text-transform: uppercase;
+
+  --link-hover: #00acdc;
 }
 
 .header {
   display: flex;
   align-items: center;
-  height: 60px;
   width: 100vw;
+  justify-content: space-between;
 }
 
-
+.logo__link {
+  margin-left: 50px;
+  height: 40px;
+  width: 40px;
+}
 
 .nav {
-  align-items: self-end;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50px;
+  height: 60px;
+  align-items: stretch;
 }
 
 .nav__link {
   text-decoration: none;
   color: #000;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.nav__link:hover {
+  color: var(--link-hover);
+}
+
+.nav__link:not(:first-child) {
+  margin-left: 20px;
+}
+
+.is-active::after {
+  content: '';
+  position: relative;
+  top: 21px;
+  background-color: var(--link-hover);
+  border: 0.01px transparent var(--link-hover);
+  border-radius: 8px;
+  width: 38px;
+  height: 4px;
+}
+
+.is-active {
+  color: var(--link-hover);
+  display: flex;
+  flex-direction: column;
+  place-content: center center;
+}
+
+.is-active p {
+  margin: 0;
+  position: relative;
+  top: 2px;
 }
