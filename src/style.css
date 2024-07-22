@@ -4,6 +4,8 @@
   font-family: ' Roboto ', sans-serif;
   font-weight: 500;
   font-style: normal;
+
+  --color-for-text: #00acdc;
 }
 
 .header {
@@ -11,15 +13,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
+  height: 60px;
+  line-height: 60px;
 }
 
 .img-logo {
-  padding: 10px 0;
+  display: block;
 }
 
 .ul-nav {
   display: flex;
-  padding: 0;
   gap: 20px;
 }
 
@@ -28,18 +31,19 @@
 }
 
 .a-link {
-  padding: 23px 0;
+  display: flex;
   font-size: 12px;
   text-decoration: none;
   color: black;
+  text-transform: uppercase;
 }
 
 .a-link:hover {
-  color: #00acdc;
+  color: var(--color-for-text);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color-for-text);
   position: relative;
   width: 100%;
 }
@@ -51,10 +55,10 @@
   height: 4px;
   border-radius: 8px;
   width: 100%;
-  background: #00acdc;
+  background: var(--color-for-text);
   bottom: 0;
 }
 
 [data-qa='hover']:hover {
-  color: #00acdc;
+  color: var(--color-for-text);
 }
