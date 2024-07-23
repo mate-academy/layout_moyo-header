@@ -32,8 +32,12 @@ body {
   margin-right: 0;
 }
 
+:root {
+  --primaty-color: #00acdc;
+}
+
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--primaty-color);
 }
 
 .nav__link.is-active::after {
@@ -44,10 +48,9 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--primaty-color);
 }
 
-a[data-qa='hover'],
 .nav__link {
   position: relative;
   display: flex;
@@ -61,7 +64,6 @@ a[data-qa='hover'],
   text-transform: uppercase;
 }
 
-a[data-qa='hover']:hover,
 .nav__link:hover {
   color: #00acdc;
 }
