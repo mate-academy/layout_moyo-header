@@ -1,3 +1,64 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  font-family: ' Roboto ', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  --color-for-text: #00acdc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 60px;
+  line-height: 60px;
+}
+
+.img-logo {
+  display: block;
+}
+
+.ul-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.li-item {
+  list-style: none;
+}
+
+.a-link {
+  display: flex;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+.a-link:hover {
+  color: var(--color-for-text);
+}
+
+.is-active {
+  color: var(--color-for-text);
+  position: relative;
+  width: 100%;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+  border-radius: 8px;
+  width: 100%;
+  background: var(--color-for-text);
+  bottom: 0;
+}
+
+[data-qa='hover']:hover {
+  color: var(--color-for-text);
 }
