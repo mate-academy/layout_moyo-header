@@ -18,13 +18,17 @@
   padding-right: 50px;
 }
 
-nav {
+.logo {
+  display: flex;
+}
+
+.nav {
   display: flex;
   height: 60px;
   align-items: center;
 }
 
-ul {
+.nav_list {
   display: flex;
   list-style: none;
   font-family: Roboto, sans-serif;
@@ -36,24 +40,28 @@ ul {
   gap: 20px;
 }
 
-img {
+.moyo-header-logo {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
 }
 
-a {
+.nav_link {
   display: flex;
   text-decoration: none;
   color: #000;
   line-height: 60px;
 }
 
-a[data-qa='hover']:hover {
+.nav_link:hover {
   color: var(--blue-color);
 }
 
-a.is-active {
+[data-qa='hover']:hover {
+  color: var(--blue-color);
+}
+
+.is-active {
   position: relative;
   color: var(--blue-color);
 }
@@ -62,11 +70,11 @@ a.is-active {
   position: absolute;
   display: block;
   content: '';
-  width: 37px;
+  width: 100%;
   height: 4px;
   flex-shrink: 0;
   border-radius: 8px;
   background: var(--blue-color);
   justify-content: center;
-  top: 56px;
+  bottom: 0;
 }
