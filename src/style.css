@@ -1,3 +1,63 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  font-family: ' Roboto ', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.header-link {
+  padding: 23px 0;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+.header-link:hover {
+  color: #00acdc;
+}
+
+.header-nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.list-item {
+  list-style: none;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+  width: 100%;
+}
+
+.is-active::after{
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #00ACDC;
+  border-radius: 8px;
+  bottom: 0;
+}
+
+[data-qa='hover']:hover {
+  color: #00acdc;
 }
