@@ -1,22 +1,28 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  margin: 0;
+}
+
 body {
   margin: 0;
 }
 
 :root {
-  font-family: Roboto, sans-serif;
-
   --header-height: 60px;
   --color: #00acdc;
 }
 
 .header {
-  width: 100%;
-  box-sizing: border-box;
   padding: 0 50px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
+  background-color: #fff;
   justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .nav_list {
@@ -27,11 +33,11 @@ body {
 }
 
 .nav_item {
-  list-style-type: none;
   margin-right: 20px;
-  align-items: center;
-  padding: 0;
-  display: flex;
+}
+
+.nav_item:last-child {
+  margin-right: 0;
 }
 
 .nav_link {
@@ -40,24 +46,25 @@ body {
   height: var(--header-height);
   display: flex;
   align-items: center;
-  font-size: 12px;
-  font-weight: 500;
   color: #000;
   position: relative;
+  justify-content: space-between;
 }
 
 .nav_logo {
   display: block;
+  width: 40px;
+  height: 40px;
 }
 
-.is-active::after {
-  display: block;
+.nav_link.is-active::after {
   content: '';
   width: 100%;
   background-color: var(--color);
-  border-radius: 2px;
+  border-radius: 8px;
   position: absolute;
   bottom: 0;
+  left: 0;
   height: 4px;
 }
 
@@ -65,10 +72,6 @@ body {
   color: var(--color);
 }
 
-.nav_item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.is-active {
+.nav_link.is-active {
   color: var(--color);
 }
