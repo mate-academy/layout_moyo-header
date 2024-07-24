@@ -10,52 +10,68 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
+  padding: 0 50px;
+  background-color: #fff;
 }
 
-.header-logo {
+.logo {
+  display: block;
   width: 40px;
   height: 40px;
 }
 
-.header-link {
-  padding: 23px 0;
-  font-size: 12px;
-  text-decoration: none;
-  color: black;
-  text-transform: uppercase;
+.logo-image {
+  width: 100%;
+  height: 100%;
 }
 
-.header-link:hover {
-  color: #00acdc;
+.nav {
+  display: block;
 }
 
-.header-nav-list {
+.nav-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav-link {
+  position: relative;
   display: flex;
   align-items: center;
+  height: 60px;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
 }
 
-.list-item {
-  list-style: none;
-  font-size: 12px;
-  margin-left: 20px;
+.nav-link:hover {
+  color: #00acdc;
 }
 
 .is-active {
   color: #00acdc;
-  position: relative;
-  width: 100%;
 }
 
-.is-active::after{
+.is-active::after {
   content: '';
-  display: block;
   position: absolute;
-  height: 4px;
-  width: 100%;
-  background: #00ACDC;
-  border-radius: 8px;
   bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #00acdc;
+  border-radius: 2px;
 }
 
 [data-qa='hover']:hover {
