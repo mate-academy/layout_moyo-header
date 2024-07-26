@@ -3,12 +3,15 @@
   padding: 0;
 }
 
+:root {
+  --primary-color: #00acdc;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  background-color: #fff;
 }
 
 .logo {
@@ -46,8 +49,7 @@
   display: flex;
   align-items: center;
   height: 60px;
-  /* stylelint-disable-next-line font-family-name-quotes */
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
@@ -58,11 +60,11 @@
 }
 
 .nav-link:hover {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .is-active::after {
@@ -72,10 +74,6 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: #00acdc;
+  background: var(--primary-color);
   border-radius: 2px;
-}
-
-[data-qa='hover']:hover {
-  color: #00acdc;
 }
