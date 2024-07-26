@@ -1,3 +1,71 @@
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  margin-left: 50px;
+  gap: 0;
+}
+
+.items {
+  display: flex;
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 22px;
+  margin-bottom: 23px;
+  height: 15px;
+  text-align: center;
+}
+
+.item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.lastItem {
+  margin-right: 50px;
+}
+
+.blueItem {
+  color: #00acdc;
+}
+
+.uppertext {
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+}
+
+
+
+.hover:hover {
+  color: #00acdc;
 }
