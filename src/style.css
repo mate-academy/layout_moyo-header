@@ -8,6 +8,7 @@ body {
 
 .header {
   display: flex;
+  padding: 0 50px;
   align-items: center;
   justify-content: space-between;
 }
@@ -18,9 +19,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 50px;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .link {
@@ -38,15 +36,15 @@ body {
   position: relative;
 }
 
-.first-link {
+.link:first-child {
   margin-left: 0;
-  color: var(--active-color);
 }
 
-.last-link {
+.link:last-child {
   margin-right: 0;
 }
 
+.is-active,
 [data-qa='hover']:hover {
   color: var(--active-color);
 }
@@ -64,5 +62,5 @@ body {
 
 .logo {
   height: 40px;
-  margin: 10 50;
+  margin: 10 0;
 }
