@@ -1,3 +1,93 @@
-body {
+  /* #region CSS Reset */
+html, body, div, span, h1, h2, h3, h4, h5, h6,
+a, em, img, footer, header {
   margin: 0;
+}
+
+  /* #endregion CSS Reset  */
+.roboto-regular {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-regular-italic {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+  /* #region Header */
+.header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+  background-color: #fff;
+}
+
+.header__logo_url {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.nav {
+  background-color: #fff;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin-right: 50px;
+}
+
+.nav__url {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 10px;
+}
+
+.nav__url:hover {
+  color: #00ACDC;
+}
+
+.is-active {
+  color: #00ACDC;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  background-color: #00ACDC;
+  height: 4px;
+  width: 37px;
+  border-radius: 8px;
+  position: relative;
+  bottom: 4px;
+}
+
+  /* #endregion Header */
+html {
+  background-color: #bbb;
 }
