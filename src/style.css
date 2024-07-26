@@ -32,7 +32,7 @@ body {
   margin: 0;
 }
 
-.nav__link {
+.link {
   text-decoration: none;
   color: black;
   font-size: 12px;
@@ -43,11 +43,23 @@ body {
   text-transform: uppercase;
 }
 
-nav ul li:not(:last-child) {
+nav:not(:last-child) {
   margin-right: 20px;
 }
 
-nav a:hover {
+ul:not(:last-child) {
+  margin-right: 20px;
+}
+
+li:not(:last-child) {
+  margin-right: 20px;
+}
+
+nav:hover {
+  color: var(--colorisacive);
+}
+
+a:hover {
   color: var(--colorisacive);
 }
 
@@ -55,7 +67,18 @@ nav a:hover {
   color: var(--colorisacive);
 }
 
-nav a.is-active::after {
+nav.is-active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--colorisacive);
+  border-radius: 8px;
+}
+
+a.is-active::after {
   content: '';
   display: block;
   position: absolute;
