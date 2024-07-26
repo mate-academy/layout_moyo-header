@@ -1,5 +1,12 @@
-body {
+:root {
+  --primary-color: #00acdc;
+}
+
+html {
   font-family: Roboto, sans-serif;
+}
+
+body {
   margin: 0;
 }
 
@@ -7,7 +14,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
   padding: 0 50px;
 }
 
@@ -32,15 +38,11 @@ body {
   margin-right: 0;
 }
 
-:root {
-  --primary-color: #00acdc;
-}
-
 .nav__link.is-active {
   color: var(--primary-color);
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -65,5 +67,5 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--primary-color);
 }
