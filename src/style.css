@@ -1,22 +1,13 @@
 body {
   margin: 0;
-  background-color: rgb(232, 229, 229);
   font-family: Roboto, sans-serif;
 }
 
 header {
   background-color: white;
-  height: 60px;
-  display: flex;
-}
-
-.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: o auto;
-  min-width: 1024px;
-  max-width: 1200px;
   padding: 0 50px;
 }
 
@@ -25,14 +16,17 @@ img {
 }
 
 .nav ul {
-  display: flex;
   margin: 0;
-  padding: 0 50px;
+  padding: 0;
+  display: flex;
 }
 
 .nav__link {
+  display: block;
   text-decoration: none;
   color: black;
+  line-height: 60px;
+  font-weight: 500;
 }
 
 li {
@@ -42,9 +36,13 @@ li {
   color: black;
   font-size: 12px;
   font-weight: 500;
-  padding-right: 20px;
+  margin-right: 20px;
   text-transform: uppercase;
   font-style: normal;
+}
+
+li:last-child {
+  margin-right: 0;
 }
 
 .is-active {
@@ -63,7 +61,7 @@ li {
   height: 4px;
   border-radius: 8px;
   position: absolute;
-  bottom: -22.5px;
+  bottom: 0;
   left: 0;
   right: 0;
 }
