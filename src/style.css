@@ -1,3 +1,8 @@
+html {
+  --main-color: #00acdc;
+  --typical-color: #000;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -23,7 +28,7 @@ body {
 .nav__link {
   display: block;
   text-decoration: none;
-  color: black;
+  color: var(--typical-color);
   line-height: 60px;
   font-weight: 500;
 }
@@ -32,7 +37,7 @@ body {
   display: inline-block;
   text-decoration: none;
   list-style-type: none;
-  color: black;
+  color: var(--typical-color);
   font-size: 12px;
   font-weight: 500;
   margin-right: 20px;
@@ -45,18 +50,18 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
   position: relative;
 }
 
-.nav__link[data-qa='hover']:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--main-color);
 }
 
 .is-active::after {
   content: '';
   display: block;
-  background-color: #00acdc;
+  background-color: var(--main-color);
   height: 4px;
   border-radius: 8px;
   position: absolute;
