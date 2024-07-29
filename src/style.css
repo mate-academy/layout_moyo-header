@@ -1,3 +1,70 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap';
+
+:root {
+  --navbar-text-color: #000;
+  --navbar-interaction-color: #00acdc;
+  --nav-link-height: 60px;
+}
+
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px;
+}
+
+.logo_link {
+  display: flex;
+  align-items: center;
+  height: var(--nav-link-height);
+}
+
+.navbar_list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list_element {
+  margin-left: 20px;
+}
+
+.list_element:first-child {
+  margin-left: 0;
+}
+
+.nav_link {
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: var(--nav-link-height);
+  color: var(--navbar-text-color);
+  position: relative;
+  display: inline-block;
+}
+
+.nav_link:hover {
+  color: var(--navbar-interaction-color);
+}
+
+.is-active {
+  color: var(--navbar-interaction-color);
+}
+
+.is-active::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--navbar-interaction-color);
 }
