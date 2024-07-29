@@ -3,8 +3,8 @@
   margin: 0;
 }
 
-body {
-  --using-color: #00acdc;
+:root {
+  --main-color: #00acdc;
 }
 
 html {
@@ -36,7 +36,7 @@ html {
 }
 
 .blueItem {
-  color: var(--using-color);
+  color: var(--main-color);
 }
 
 .nav__link {
@@ -47,7 +47,7 @@ html {
 }
 
 .is-active {
-  color: var(--using-color);
+  color: var(--main-color);
   position: relative;
 }
 
@@ -56,12 +56,13 @@ html {
   content: '';
   width: 100%;
   height: 4px;
-  background: var(--using-color);
+  background: var(--main-color);
   border-radius: 8px;
   position: absolute;
   bottom: 0;
 }
 
-.hover:hover {
-  color: var(--using-color);
+.nav__link:hover {
+  color: var(--main-color);
+  cursor: pointer;
 }
