@@ -1,7 +1,7 @@
 /* stylelint-disable-next-line import-notation */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-html {
+:root {
   font-family: Roboto, sans-serif;
 
   --is-active-color: #00acdc;
@@ -16,11 +16,10 @@ body {
   padding: 0 50px;
   justify-content: space-between;
   align-items: center;
-  background-color: fff;
 }
 
 .logo {
-  margin-top: 4px;
+  display: flex;
   height: 40px;
 }
 
@@ -64,6 +63,6 @@ body {
   bottom: 0;
 }
 
-[data-qa='hover']:hover {
+.nav__link:hover {
   color: var(--is-active-color);
 }
