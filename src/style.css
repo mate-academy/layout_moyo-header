@@ -4,19 +4,18 @@
   box-sizing: border-box;
 }
 
-html {
-  --color-link-hover: #00acdc;
+:root {
+  --main-color: #00acdc;
 }
 
-body {
+html {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
 }
 
 .header {
-  width: 1200px;
-  background-color: #fff;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,19 +37,19 @@ body {
   list-style: none;
 }
 
-.nav-items .nav__item {
-  margin-left: 20px; /* Adjust as needed */
+.nav__item {
+  margin-left: 20px;
 }
 
-.nav-items .nav__item:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-.nav-items .nav__item:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
-.nav-items .nav__item .nav__link {
+.nav__link {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
@@ -59,21 +58,21 @@ body {
   display: block;
 }
 
-.nav-items .nav__item .nav__link:hover {
-  color: var(--color-link-hover);
+.nav__link:hover {
+  color: var(--main-color);
 }
 
-.nav-items .nav__item .nav__link.is-active {
-  color: var(--color-link-hover);
+.is-active {
+  color: var(--main-color);
   height: 60px;
 }
 
-.nav-items .nav__item .nav__link.is-active::after {
+.is-active::after {
   content: '';
   display: block;
   width: 100%;
   height: 4px;
-  background-color: var(--color-link-hover);
+  background-color: var(--main-color);
   border-radius: 8px;
   position: absolute;
   bottom: 0;
