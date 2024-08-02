@@ -1,3 +1,81 @@
+:root {
+  --primary-color: #00acdc;
+}
+
 body {
+  background-color: #e0e0e0;
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 60px;
+  background-color: #fff;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.nav_item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  align-items: center;
+  height: 60px;
+  white-space: nowrap;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* Стилі для лінії під Apple */
+.nav__link.is-active::after {
+  content: '';
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+}
+
+/* Стилі при наведенні */
+.nav__link:hover,
+.nav__link.is-active {
+  color: var(--primary-color);
 }
