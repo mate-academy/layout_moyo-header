@@ -14,15 +14,24 @@ em,
 img,
 footer,
 header,
-nav {
+nav,
+ul,
+ol,
+li {
   margin: 0;
 }
 
 /* #endregion */
 
+/* #region Page  */
 .html {
   font-family: Roboto, sans-serif;
+
+  --header-height: 60px;
 }
+
+
+/* #endregion */
 
 /* #region Fonts  */
 .roboto-regular {
@@ -53,8 +62,12 @@ nav {
 
 /* #region Header */
 .header {
-  height: 60px;
+  height: var(--header-height);
   background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
 }
 
 .header__logo_url {
@@ -63,12 +76,9 @@ nav {
 }
 
 .nav {
-  height: 60px;
-  background-color: #fff;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px;
+  background-color: #fff;
+  height: var(--header-height);
 }
 
 .nav__list {
@@ -77,14 +87,13 @@ nav {
 }
 
 .nav__url {
-  display: inline-block;
+  display: block;
   color: #000;
   text-decoration: none;
   font-size: 12px;
   font-weight: 500;
-  text-align: left;
-  height: 60px;
-  line-height: 60px;
+  height: var(--header-height);
+  line-height: var(--header-height);
   margin: 0 10px;
 }
 
