@@ -1,74 +1,35 @@
-/* #region CSS Reset */
 html,
 body,
 div,
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 a,
-em,
 img,
-footer,
 header,
 nav,
 ul,
-ol,
 li {
   margin: 0;
-}
-
-/* #endregion */
-
-/* #region Page  */
-.html {
-  font-family: Roboto, sans-serif;
+  padding: 0;
 
   --header-height: 60px;
   --moyo-blue-color: #00acdc;
 }
 
-
-/* #endregion */
-
-/* #region Fonts  */
-.roboto-regular {
+.html {
   font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
-.roboto-bold {
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  font-style: normal;
+.main {
+  height: calc(100vh - var(--header-height));
+
+  background-color: #bbb;
 }
 
-.roboto-regular-italic {
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.roboto-bold-italic {
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-/* #endregion */
-
-/* #region Header */
 .header {
-  height: var(--header-height);
-  background-color: #fff;
   display: flex;
+  padding: 0 50px;
+
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
 }
 
 .header__logo_url {
@@ -78,7 +39,6 @@ li {
 
 .nav {
   display: flex;
-  background-color: #fff;
   height: var(--header-height);
 }
 
@@ -100,6 +60,14 @@ li {
   line-height: var(--header-height);
 }
 
+.nav__li:first-child a.nav__url {
+  margin-left: 0;
+}
+
+.nav__li:last-child a.nav__url {
+  margin-right: 0;
+}
+
 .nav__url:hover {
   color: var(--moyo-blue-color);
 }
@@ -111,15 +79,11 @@ li {
 .is-active::after {
   content: '';
   display: block;
+  position: relative;
+
   background-color: var(--moyo-blue-color);
   height: 4px;
-  width: 37px;
+  width: 100%;
   border-radius: 8px;
-  position: relative;
   bottom: 4px;
-}
-
-/* #endregion */
-html {
-  background-color: #bbb;
 }
