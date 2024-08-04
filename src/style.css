@@ -9,7 +9,7 @@
   --link-color: #00acdc;
 }
 
-body {
+html {
   font-family: var(--font-family);
 }
 
@@ -19,39 +19,45 @@ a {
   text-transform: uppercase;
 }
 
-.header-container {
+.header {
   display: flex;
   padding: 0 50px;
   align-items: center;
   justify-content: space-between;
 }
 
-.header-logo__link img {
+.logo__link img {
   display: block;
 }
 
-.header-nav__list {
+.nav__list {
   list-style: none;
   display: flex;
   align-items: center;
 }
 
-.header-nav__item {
+.nav__item {
   margin-right: 20px;
   position: relative;
 }
 
-.header-nav__item:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
-.header-nav__link {
+.nav__link {
   display: inline-block;
   height: 60px;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 60px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__link:hover {
+  transition: all 0.3s ease-in-out;
+  color: var(--link-color);
 }
 
 .is-active {
