@@ -27,17 +27,21 @@ body {
 
 .nav {
   display: flex;
-  width: 70%;
 }
 
 .nav__list {
   width: 100%;
   display: flex;
   list-style: none;
-  justify-content: space-between;
+
+  gap: 30px;
 
   text-transform: uppercase;
   cursor: pointer;
+
+  @media (max-width: 1024px) {
+    gap: 10px;
+  }
 }
 
 .nav__list-item {
