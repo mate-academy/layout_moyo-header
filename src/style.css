@@ -1,3 +1,72 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Use Roboto font */
+body {
+  font-family: Roboto, sans-serif;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px; /* Height of nav links */
+  background-color: white;
+  padding: 10px 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+header .logo img {
+  height: 40px;
+  width: 40px;
+}
+
+/* Navigation styling */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-left: 50px; /* Adjust according to the design */
+}
+
+nav ul li {
+  margin-left: 30px; /* Adjust spacing between list items */
+}
+
+nav ul li:first-child {
+  margin-left: 0; /* No margin before the first item */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* No margin after the last item */
+}
+
+nav ul li a {
+  font-size: 12px;
+  line-height: 14px; /* Use closest whole number for line-height */
+  text-align: left;
+  color: black; /* Default link color */
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+}
+
+nav ul li a.is-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: blue; /* Blue line color */
+  position: absolute;
+  bottom: -2px; /* Adjust according to the design */
+  left: 0;
+}
+
+nav ul li a:hover {
+  color: red; /* Change link color on hover */
 }
