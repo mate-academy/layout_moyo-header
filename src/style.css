@@ -1,3 +1,69 @@
+html {
+  --hovercolor: #00acdc;
+}
+
 body {
   margin: 0;
+  background-color: aliceblue;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background: #fff;
+}
+
+.nav__point {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.logo {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.apple {
+  margin-left: 0;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+}
+
+.is-active {
+  color: var(--hovercolor);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  width: 37px;
+  border-radius: 2px;
+  background-color: var(--hovercolor);
+}
+
+.nav__link:hover {
+  color: var(--hovercolor);
 }
