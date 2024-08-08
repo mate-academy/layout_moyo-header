@@ -7,7 +7,8 @@ body {
 
 .header {
   display: flex;
-  justify-content: flex-end;
+  box-shadow: 4px 10px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
   position: relative;
   height: 60px;
   align-items: center;
@@ -15,7 +16,7 @@ body {
 
 .logo {
   display: flex;
-  position: absolute;
+  margin-left: 50px;
   width: 40px;
   height: 40px;
   left: 50px;
@@ -49,18 +50,18 @@ body {
 
 .is-active {
   position: relative;
-  color: #00acdc;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.is-active {
   color: #00acdc;
 }
 
 .is-active::after {
-  position: absolute;
-  display: block;
-  bottom: 0;
   content: '';
+  position: absolute;
+  bottom: 0;
+  display: block;
   height: 4px;
   background-color: #00acdc;
   border-radius: 8px;
