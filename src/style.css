@@ -26,6 +26,10 @@ body {
   align-items: center;
 }
 
+.nav__item {
+  position: relative;
+}
+
 .nav__item:not(:first-child) {
   margin-left: 20px;
 }
@@ -41,15 +45,15 @@ body {
   color: #000;
 }
 
-.underscored {
-  position: relative;
+.nav__link:hover {
+  color: #00acdc;
 }
 
 .is-active {
   color: #00acdc;
 }
 
-.underscored::after {
+.is-active::after {
   position: absolute;
   content: '';
   height: 4px;
@@ -58,8 +62,4 @@ body {
   border-radius: 8px;
   bottom: -23px;
   left: 0;
-}
-
-.nav__link:hover {
-  color: #00acdc;
 }
