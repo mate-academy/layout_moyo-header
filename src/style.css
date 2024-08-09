@@ -1,29 +1,39 @@
+html {
+  --font-family: Roboto, sans-serif;
+  --font-weight: 500;
+  --font-size: 12px;
+  --main-color: #000;
+  --accent-color: #00acdc;
+  --nav-height: 60px;
+  --logo-size: 40px;
+}
+
 body {
   margin: 0;
 }
 
 .header {
   display: flex;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 12px;
-  text-transform: uppercase;
-  padding: 0 50px;
   justify-content: space-between;
   align-items: center;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  font-style: normal;
+  text-transform: uppercase;
+  padding: 0 50px;
 }
 
 .logo__link {
-  width: 40px;
-  height: 40px;
-  margin: auto 0;
+  width: var(--logo-size);
+  height: var(--logo-size);
 }
 
-.nav {
-  height: 60px;
+.nav__list {
   display: flex;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav__item {
@@ -34,23 +44,20 @@ body {
   margin-left: 20px;
 }
 
-.nav__list {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
 .nav__link {
+  display: block;
   text-decoration: none;
-  color: #000;
+  color: var(--main-color);
+  height: var(--nav-height);
+  line-height: var(--nav-height);
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--accent-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--accent-color);
 }
 
 .is-active::after {
@@ -58,8 +65,8 @@ body {
   content: '';
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--accent-color);
   border-radius: 8px;
-  bottom: -23px;
+  bottom: 0;
   left: 0;
 }
