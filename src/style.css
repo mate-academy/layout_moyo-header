@@ -1,3 +1,77 @@
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto/Roboto-Medium.ttf);
+}
+
+html {
+  --moyo-color: #00acdc;
+
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+}
+
+.ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  line-height: 60px;
+  cursor: pointer;
+  color: black;
+  text-transform: uppercase;
+}
+
+.link-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  margin-right: 20px;
+}
+
+.ul > :last-of-type:last-of-type {
+  margin: 0;
+}
+
+.link:hover {
+  color: var(--moyo-color);
+}
+
+.is-active {
+  color: var(--moyo-color);
+  position: relative;
+}
+
+.is-active::after {
+  display: block;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--moyo-color);
+  border-radius: 8px;
 }
