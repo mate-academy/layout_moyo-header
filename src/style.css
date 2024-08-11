@@ -4,7 +4,7 @@ html {
   font-weight: 500;
   font-size: 12px;
 
-  --colors: #00acdc;
+  --specific-color: #00acdc;
 }
 
 body {
@@ -24,7 +24,6 @@ body {
   display: block;
 }
 
-/* ul */
 .nav-list {
   display: flex;
   list-style: none;
@@ -32,7 +31,6 @@ body {
   margin: 0;
 }
 
-/* li */
 .nav-item {
   margin-left: 20px;
 }
@@ -41,7 +39,6 @@ body {
   margin-left: 0;
 }
 
-/* a */
 .nav-link {
   position: relative;
   display: flex;
@@ -55,11 +52,11 @@ body {
 }
 
 .nav-link:hover {
-  color: #00acdc;
+  color: var(--specific-color);
 }
 
 .is-active {
-  color: var(--colors);
+  color: var(--specific-color);
   align-items: center;
 }
 
@@ -69,6 +66,6 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  border-bottom: 4px solid var(--colors);
+  border-bottom: 4px solid var(--specific-color);
   border-radius: 8px;
 }
