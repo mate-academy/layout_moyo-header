@@ -9,6 +9,10 @@ body {
   padding: 0 50px;
 }
 
+.logo__link {
+  display: inline-flex;
+}
+
 .nav {
   --nav-link-color: #00acdc;
 }
@@ -42,6 +46,10 @@ body {
   align-content: center;
 }
 
+.nav__link.is-active {
+  color: var(--nav-link-color);
+}
+
 .nav__link.is-active::after {
   display: block;
   position: absolute;
@@ -55,9 +63,5 @@ body {
 }
 
 .nav__link:hover {
-  color: var(--nav-link-color);
-}
-
-.nav__link[data-qa='hover'] {
   color: var(--nav-link-color);
 }
