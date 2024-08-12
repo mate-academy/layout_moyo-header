@@ -5,6 +5,7 @@ html {
 /* Скидання стандартних відступів браузера */
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -19,8 +20,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px 50px;
   background: #fff;
-  padding: 0 50px;
 }
 
 /* Логотип як посилання */
@@ -53,10 +54,6 @@ nav {
   margin-right: 0;
 }
 
-.style-link li:not(:last-child) {
-  margin-right: 20px;
-}
-
 /* Стилі для навігаційних посилань */
 .nav-link {
   text-decoration: none;
@@ -85,11 +82,12 @@ nav {
   bottom: 0;
 }
 
+/* Стилі для навігаційних посилань при наведенні */
 .nav-link:hover {
   color: var(--blue-color);
 }
 
 /* Стилі для четвертого посилання (Laptops & Computers) */
-.nav-link[data-qa='hover']:hover {
+.nav-link[data-qa="hover"]:hover {
   color: var(--blue-color);
 }
