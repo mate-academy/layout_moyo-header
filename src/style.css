@@ -12,7 +12,6 @@ body {
   height: 60px;
   align-items: center;
   background-color: white;
-  position: relative;
 }
 
 .header_icon {
@@ -27,7 +26,6 @@ body {
   margin-right: 50px;
   height: 60px;
   align-items: center;
-  position: relative;
 }
 
 .nav_list {
@@ -49,23 +47,25 @@ body {
 .nav_link {
   text-decoration: none;
   color: black;
+  display: flex;
 }
 
-.nav_link:hover, .is-active {
-  color: #00ACDC;
+.nav_link:hover,
+.is-active {
+  color: #00acdc;
 }
 
 .is-active {
   position: relative;
 }
 
-.is-active::after{
-  content: "";
-  display: block;
+.is-active::after {
+  content: '';
+  display: flex;
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #00ACDC;
+  background-color: #00acdc;
   height: 4px;
   border-radius: 8px;
 }
