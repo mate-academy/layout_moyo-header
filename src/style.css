@@ -11,30 +11,31 @@ header {
   background-color: #FFFFFF;
 }
 
-img {
+.logo {
   display: flex;
   margin-left: 50px;
   width: 40px;
   height: 40px;
 }
 
-nav {
+.nav {
   display: flex;
   align-items: center;
   height: 60px;
 }
 
-ul {
+.nav-list {
   display: flex;
   margin-right: 30px;
   list-style-type: none;
 }
 
-li {
+.link-object {
   font-family: Roboto;
   font-weight: bold;
   font-size: 12px;
   margin-right: 20px;
+  text-transform:uppercase
 }
 
 a {
@@ -44,25 +45,23 @@ a:hover {
   color: grey;
 }
 
-.is-active {
+.speciallink{
   color: #00ACDC;
 }
 
 .is-active::after {
-  position: relative;
+  content: "";
+  display: flex;
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  top: 56px;
+  border-radius: 8px;
+  background-color: #00ACDC;
 }
 
 .defaultlink {
   color: #000000;
-}
-
-.blueobject {
-  width: 37px;
-  height: 4px;
-  position: absolute;
-  top: 56px;
-  border-radius: 8px;
-  background-color: #00ACDC;
 }
 
 
