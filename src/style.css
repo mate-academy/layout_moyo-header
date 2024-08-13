@@ -1,13 +1,14 @@
 :root {
-  --font: Roboto, sans-serif;
-  --main-color: #000;
+  --main-color: rgb(0, 0, 0);
   --color-links: rgb(0, 172, 220);
-  --size: 12px;
-  --bg-color: #fff;
-  --weight: 500;
+  --bg-color-primary: rgb(255, 255, 255);
+  --shadow-color: rgba(0, 0, 0, 0.05);
 }
 
 body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -16,7 +17,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px 0 var(--shadow-color);
 }
 
 .nav__list {
@@ -31,11 +32,8 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  font-family: var(--font);
   line-height: 60px;
   color: var(--main-color);
-  font-size: var(--size);
-  font-weight: var(--weight);
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -54,6 +52,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
   height: 4px;
   border-radius: 8px;
   background-color: var(--color-links);
