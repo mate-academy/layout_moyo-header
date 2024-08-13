@@ -4,6 +4,7 @@ html {
   --img-width: 40px;
   --img-height: 40px;
   --header-height: 60px;
+  --header-bar-height: 4px;
   --header-main-text-color: #000;
   --header-secondary-text-color: #00acdc;
 }
@@ -11,10 +12,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-}
-
-.nav_list {
-  margin: 0 20px 0 0;
 }
 
 .header {
@@ -34,56 +31,37 @@ body {
   width: var(--img-width);
 }
 
-.nav_links {
+.nav__list {
   display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.nav_link {
-  position: relative;
-  display: inline-block;
+.nav__link {
+  display: block;
   text-transform: uppercase;
+  text-decoration: none;
   height: var(--header-height);
   line-height: var(--header-height);
-  text-decoration: none;
   color: var(--header-main-text-color);
 }
 
-.nav_list:last-child {
-  margin: 0;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
-.nav_link:hover {
-  color: var(--header-secondary-text-color);
-  transition: all 0.2s;
-}
-
-.nav_link:focus {
-  color: var(--header-secondary-text-color);
-  transition: all 0.2s;
-}
-
-.nav_link::after {
-  content: '';
-  opacity: 0;
-  transition: all 0.2s;
-  position: absolute;
-  background-color: var(--header-secondary-text-color);
-  width: 100%;
-  height: 4px;
-  bottom: 0;
-  left: 0;
-  border-radius: 8px;
-}
-
-.nav_link:focus::after,
+.nav__link:hover,
 .is-active {
   color: var(--header-secondary-text-color);
-  opacity: 1;
 }
 
 .is-active::after {
-  opacity: 1;
+  content: '';
+  display: block;
+  position: relative;
+  bottom: var(--header-bar-height);
+  height: var(--header-bar-height);
+  background-color: var(--header-secondary-text-color);
+  border-radius: 8px;
 }
