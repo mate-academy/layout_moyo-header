@@ -17,6 +17,7 @@ body {
 .logo {
   width: 40px;
   height: 40px;
+  display: block;
 }
 
 .nav-list {
@@ -47,14 +48,14 @@ body {
 }
 
 .is-active::after {
-  display: block;
-  bottom: 0;
+  content: '';
+  background-color: var(--color-blue);
+  border-radius: 8px;
   height: 4px;
   width: 100%;
   position: absolute;
-  content: ' ';
-  border-radius: 8px;
-  background-color: #00acdc;
+  bottom: 0;
+  left: 0;
 }
 
 .nav-link:hover {
