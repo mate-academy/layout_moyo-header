@@ -4,16 +4,18 @@
   padding: 0;
 }
 
-body {
+:root{
+  --main-blue: #00acdc;
+}
+
+html {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
-
-  --header-height: 60px;
 }
 
-header {
+.header {
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
@@ -49,8 +51,8 @@ header {
 
 .header__nav-link {
   display: inline-block;
-  height: var(--header-height);
-  line-height: var(--header-height);
+  height: 60px;
+  line-height: 60px;
 
   color: #000;
   text-decoration: none;
@@ -59,7 +61,7 @@ header {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-blue);
 }
 
 .is-active::after {
@@ -69,10 +71,10 @@ header {
 
   content: '';
   height: 4px;
-  background-color: #00acdc;
+  background-color:  var(--main-blue);
   border-radius: 2px;
 }
 
 .header__nav-link:hover {
-  color: #00acdc;
+  color: var(--main-blue);
 }
