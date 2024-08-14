@@ -3,11 +3,10 @@ body {
   background-color: #50464634;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: auto;
   background-color: #fff;
 }
 
@@ -21,16 +20,16 @@ header {
 .nav {
   display: flex;
   align-items: center;
-  height: 60px;
 }
 
-.nav-list {
+.nav__list {
+  padding: 0;
   display: flex;
-  margin-right: 30px;
+  margin: 0 30px 0 0;
   list-style-type: none;
 }
 
-.link-object {
+.nav__item {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -46,7 +45,7 @@ a:hover {
   color: #00acdc;
 }
 
-.speciallink {
+.nav__link.is-active {
   color: #00acdc;
 }
 
@@ -61,7 +60,9 @@ a:hover {
   background-color: #00acdc;
 }
 
-.defaultlink {
+.nav__link {
+  display: flex;
+  align-items: center;
   height: 60px;
   color: #000;
 }
