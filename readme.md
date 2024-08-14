@@ -10,7 +10,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - reset browser default margins.
 - use [Roboto font](https://fonts.google.com/specimen/Roboto).
 - use semantic tags: `<header>`, `<img>`, `<nav>`, `<ul>`, `<li>` and `<a>`.
-- the header should stretch the full page width (don't use horizontal margin).
+- the headpwer should stretch the full page width (don't use horizontal margin).
 - the height should be set for nav links (not the header), take it from the design.
 - header content should be vertically centered.
 - Logo should also be a link with an image inside (from [src/images](src/images)). But it should not be a part of the `<nav>`.
@@ -27,8 +27,8 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://tank-igorevich.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://tank-igorevich.github.io/layout_moyo-header/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
