@@ -4,69 +4,104 @@
   box-sizing: border-box;
 }
 
+li {
+  margin-left: 20px;
+}
+
 /* Use Roboto font */
 body {
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
 /* Header styling */
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #fff;
+  justify-content: space-between;
   width: 100%;
-  height: 60px; /* Height of nav links */
-  background-color: white;
-  padding: 10px 50px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
 }
 
 /* Logo styling */
-header .logo img {
-  height: 40px;
+.logo img {
   width: 40px;
+  height: 40px;
+  display: block;
 }
 
 /* Navigation styling */
-nav ul {
+.nav-list {
   display: flex;
   list-style: none;
-  margin-left: 50px; /* Adjust according to the design */
 }
 
-nav ul li {
-  margin-left: 30px; /* Adjust spacing between list items */
+.nav-item {
+  display: flex;
+  justify-content: center; /* Центрування по горизонталі */
+  align-items: center; /* Центрування по вертикалі */
+  margin-left: 20px;
 }
 
-nav ul li:first-child {
-  margin-left: 0; /* No margin before the first item */
+.nav-item:first-child {
+  margin-left: 0;
 }
 
-nav ul li:last-child {
-  margin-right: 0; /* No margin after the last item */
+.nav-item:last-child {
+  display: flex;
+  justify-content: center; /* Центрування по горизонталі */
+  align-items: center; /* Центрування по вертикалі */
 }
 
-nav ul li a {
+.nav-link {
+  font-family: Roboto, sans-serif;
   font-size: 12px;
-  line-height: 14px; /* Use closest whole number for line-height */
-  text-align: left;
+  line-height: 60px; /* Додано: Ensuring the link height matches the header height */
   color: black; /* Default link color */
   text-decoration: none;
   position: relative;
-  padding: 5px;
+  display: inline-block; /* Додано: Ensure the links are treated as blocks */
+  text-align: left;
 }
 
-nav ul li a.is-active::after {
+.is-active::after {
   content: '';
   display: block;
   width: 100%;
-  height: 2px;
-  background-color: blue; /* Blue line color */
+  height: 4px;
+  background-color: #00acdc; /* Голуба лінія під активним посиланням */
   position: absolute;
-  bottom: -2px; /* Adjust according to the design */
   left: 0;
+  border-radius: 8px; /* Закруглені краї */
+  margin-bottom: 0;
+  margin-top: -4px;
 }
 
-nav ul li a:hover {
-  color: red; /* Change link color on hover */
+/* Style for blue text on hover for active link */
+.nav-link.is-active {
+  color: #00acdc; /* Change text color on hover */
+}
+
+.nav-link:hover {
+  color: #00acdc;
+}
+
+.nav-link laptops-link {
+  margin-top: 22.5px;
+  margin-bottom: 22.5px;
+  font-size: 12px;
+  line-height: 14.06px;
+  text-align: left center;
+  height: 15px;
+}
+
+.strip {
+  position: absolute;
+  bottom: 0; /* Полоска завжди буде внизу */
+  left: 10px; /* Відступ зліва (регулюйте відповідно до розміщення "APPLE") */
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  background: #00acdc;
 }
