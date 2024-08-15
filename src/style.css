@@ -4,34 +4,42 @@ html {
   font-weight: 500;
 }
 
-a {
+body {
+  margin: 0;
+
+  --link-color: #00acdc;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+
+  padding: 0;
+  margin: 0;
+  line-height: 60px;
+
+  color: #000;
   outline: none;
   text-decoration: none;
-  padding: 0;
+  text-transform: uppercase;
 }
 
 .logo {
   display: inline-block;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  --link-color: #00acdc;
-}
-
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
-}
 
-.list {
-  list-style: none;
+  padding: 0 50px;
 }
 
 li {
@@ -41,13 +49,6 @@ li {
 
 ul li:not(:last-child) {
   margin-right: 20px;
-}
-
-.link {
-  display: inline-block;
-  text-decoration: none;
-  line-height: 60px;
-  text-transform: uppercase;
 }
 
 .is-active {
