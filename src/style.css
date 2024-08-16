@@ -1,9 +1,13 @@
-body {
-  margin: 0;
-  padding: 0;
+html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
+
+  --header-color: #00acdc;
+}
+
+body {
+  margin: 0;
 }
 
 .logo {
@@ -33,7 +37,7 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--header-color);
 }
 
 .nav__item:not(:last-child) {
@@ -41,7 +45,7 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--header-color);
 }
 
 .is-active::after {
@@ -52,5 +56,5 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background: #00acdc;
+  background: var(--header-color);
 }
