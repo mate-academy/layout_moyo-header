@@ -7,22 +7,21 @@ body {
 }
 
 .logo {
-  margin: 10px 50px;
+  margin: 10px 0;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.nav {
-  padding-right: 50px;
+  padding: 0 50px;
 }
 
 .nav__list {
   display: flex;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav__link {
@@ -35,12 +34,6 @@ body {
 
 .is-active {
   color: #00acdc;
-  position: relative;
-}
-
-.nav__item {
-  display: inline-block;
-  list-style: none;
 }
 
 .nav__item:not(:last-child) {
@@ -52,10 +45,12 @@ body {
 }
 
 .is-active::after {
+  position: relative;
+  bottom: 4px;
   content: '';
   display: block;
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
+  background: #00acdc;
 }
