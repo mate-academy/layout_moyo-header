@@ -3,23 +3,20 @@ body {
   background-color: darkgray;
   margin: 0;
   padding: 0;
-
 }
 
 header {
   font-style: normal;
   height: 60px;
 
-
   background-color: white;
 
   display: flex;
   align-items: center;
 
-
   padding: 0 50px;
   list-style: none;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .img {
@@ -32,7 +29,6 @@ header {
 nav ul {
   display: flex;
   list-style: none;
-  gap: 30px;
 }
 
 .nav__link {
@@ -58,16 +54,20 @@ nav ul {
   display: flex;
 }
 
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
 .nav__link:hover {
-  color: #00ACDC; /* Change color on hover */
+  color: #00acdc;
 }
 
 .is-active {
-  color: #00ACDC;
+  color: #00acdc;
 }
 
 .is-active::after {
-  content: "";
+  content: '';
   background-color: #00acdc;
   width: 100%;
   height: 4px;
