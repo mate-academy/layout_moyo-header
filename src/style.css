@@ -1,3 +1,103 @@
+:root {
+  --main-color: #000;
+  --accent-color: #00acdc;
+  --main-font-style: 'Roboto', sans-serif;
+  --main-font-size: 16px;
+  --logo-width: 40px;
+  --logo-height: 40px;
+  --header-height: 60px;
+}
+
+html {
+  box-sizing: border-box;
+  color: var(--main-color);
+  font-family: var(--main-font-style);
+  font-size: var(--main-font-size);
+}
+
 body {
   margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoLink {
+  width: var(--logo-width);
+  height: var(--logo-height);
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.linksList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.linksListItem:not(:last-child) {
+  margin-right: 20px;
+}
+
+.linksListLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  color: inherit;
+  font-weight: 500;
+  font-size: calc(var(--main-font-size) - 4px);
+  line-height: 1.17;
+  text-transform: uppercase;
+
+  min-height: var(--header-height);
+
+  transition: color 0.3s;
+}
+
+.linksListLink.is-active,
+.linksListLink:hover {
+  color: var(--accent-color);
+}
+
+.linksListLink.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--accent-color);
 }
