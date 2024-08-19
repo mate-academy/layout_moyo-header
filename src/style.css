@@ -34,40 +34,36 @@ a {
   text-decoration: none;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 50px;
-}
-
-header .container {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
-.logoLink {
+.header__link {
+  display: inline-block;
   width: var(--logo-width);
   height: var(--logo-height);
 }
 
-.logo {
+.header__logo {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.linksList {
+.nav__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.linksListItem:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.linksListLink {
+.nav__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,12 +81,12 @@ header .container {
   transition: color 0.3s;
 }
 
-.linksListLink.is-active,
-.linksListLink:hover {
+.nav__link.is-active,
+.nav__link:hover {
   color: var(--accent-color);
 }
 
-.linksListLink.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
   left: 0;
