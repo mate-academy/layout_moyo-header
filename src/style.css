@@ -1,3 +1,60 @@
 body {
   margin: 0;
 }
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.logo img {
+  max-height: 40px; /* Встановіть відповідно до дизайну */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px; /* Встановіть відстань між елементами */
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black; /* Встановіть відповідно до дизайну */
+  font-weight: 500; /* Встановіть відповідно до дизайну */
+  text-transform: uppercase;
+  display: block;
+  height: 60px; /* Встановіть висоту відповідно до дизайну */
+  line-height: 60px; /* Вертикальне вирівнювання тексту */
+}
+
+nav a.is-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue-color);
+  position: relative;
+  top: 5px; /* Встановіть відповідно до дизайну */
+}
+
+nav a:hover {
+  color: var(--blue-color);
+}
+
+/* Визначення CSS-змінної для синього кольору */
+:root {
+  --blue-color: #0000FF; /* Змініть на фактичний синій колір з дизайну */
+}
