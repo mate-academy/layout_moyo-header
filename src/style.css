@@ -37,13 +37,17 @@ body {
   display: flex;
   list-style: none;
   padding: 0;
-  margin: 0 -20px 0 0;
+  margin: 0;
 }
 
 .nav__item {
   margin-right: 20px;
   display: flex;
   align-items: center;
+}
+
+.nav__item:last-child {
+  margin: 0;
 }
 
 .nav__link {
@@ -56,10 +60,7 @@ body {
   position: relative;
 }
 
-.nav__link:hover {
-  color: var(--active);
-}
-
+.nav__link:hover,
 .is-active {
   color: var(--active);
 }
