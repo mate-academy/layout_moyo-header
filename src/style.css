@@ -18,7 +18,6 @@ body {
 
 .logo_container {
   display: flex;
-  text-decoration: none;
 }
 
 .logo {
@@ -30,15 +29,11 @@ body {
   display: inline-block;
 }
 
-.container {
+.nav_list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.color_regular {
-  color: black;
 }
 
 .nav_link {
@@ -50,14 +45,15 @@ body {
   height: 60px;
   line-height: 60px;
   text-transform: uppercase;
+  color: black;
 }
 
-.nav_list {
+.nav_item {
   list-style: none;
   position: relative;
 }
 
-.nav_list:not(:first-child) {
+.nav_item:not(:first-child) {
   margin-left: 20px;
 }
 
@@ -65,7 +61,7 @@ body {
   color: #00acdc;
 }
 
-.nav_list a.is-active {
+.nav_item a.is-active {
   color: #00acdc;
   display: inline-block;
   height: 60px;
@@ -75,7 +71,7 @@ body {
   position: relative;
 }
 
-.nav_list a.is-active::after {
+.nav_item a.is-active::after {
   content: '';
   display: block;
   width: 100%;
