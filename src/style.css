@@ -9,36 +9,38 @@ body {
 }
 
 .header {
+  box-sizing: border-box;
   width: 100%;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo__img {
-  float: left;
-  margin: 10px 0 10px 50px;
-}
-
-.nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: block;
+  height: 40px;
+  width: 40px;
 }
 
 .nav__list {
+  display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .nav__item {
-  display: inline-block;
-  position: relative;
+  margin-right: 20px;
 }
 
-.nav a {
-  margin-right: 20px;
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+a {
   display: block;
   line-height: 60px;
-  text-align: center;
   text-decoration: none;
   font-weight: 500;
   font-size: 12px;
@@ -62,5 +64,7 @@ a:hover {
   height: 4px;
   background-color: var(--hover-color);
   border-radius: 8px;
-  width: 37px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
