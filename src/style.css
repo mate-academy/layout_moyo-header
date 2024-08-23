@@ -11,7 +11,6 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -29,7 +28,7 @@ body {
   height: var(--nav-hight);
 }
 
-.ul {
+.nav__list {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -38,11 +37,11 @@ body {
   padding: 0;
 }
 
-.ul .li {
+.nav__item {
   margin-left: 20px;
 }
 
-.ul .li a {
+.nav__link {
   display: flex;
   position: relative;
   align-items: center;
@@ -52,20 +51,20 @@ body {
   color: black;
 }
 
-.ul li:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-.ul .li a.is-active:first-child {
+.is-active {
   color: var(--nav-color);
 }
 
-.ul .li a:hover {
+.nav__link:hover {
   color: var(--nav-color);
   cursor: pointer;
 }
 
-.ul .li a.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
