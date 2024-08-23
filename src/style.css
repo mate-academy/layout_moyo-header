@@ -3,18 +3,18 @@ html {
 }
 
 * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, system-ui, sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: Roboto, system-ui;
-  font-weight: 500;
-  font-style: normal;
-}
-
 .header {
-  box-sizing: border-box;
   width: 100%;
   padding: 0 50px;
   display: flex;
@@ -27,12 +27,13 @@ body {
   display: flex;
   height: 40px;
   width: 40px;
-  border: 3px solid #00acdc;
 }
 
-.container {
+.nav-list {
   display: flex;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .box {
@@ -64,7 +65,6 @@ a:hover {
 .is-active::after {
   content: '';
   position: absolute;
-  display: flex;
   height: 4px;
   background-color: var(--hover-color);
   border-radius: 8px;
@@ -73,74 +73,3 @@ a:hover {
   left: 0;
 }
 
-.roboto-thin {
-  font-family: Roboto, system-ui;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.roboto-light {
-  font-family: Roboto, system-ui;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.roboto-regular {
-  font-family: Roboto, system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-medium {
-  font-family: Roboto, system-ui;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.roboto-bold {
-  font-family: Roboto, system-ui;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.roboto-black {
-  font-family: Roboto, system-ui;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.roboto-thin-italic {
-  font-family: Roboto, system-ui;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.roboto-light-italic {
-  font-family: Roboto, system-ui;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.roboto-regular-italic {
-  font-family: Roboto, system-ui;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.roboto-medium-italic {
-  font-family: Roboto, system-ui;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.roboto-bold-italic {
-  font-family: Roboto, system-ui;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.roboto-black-italic {
-  font-family: Roboto, system-ui;
-  font-weight: 900;
-  font-style: italic;
-}
