@@ -1,3 +1,92 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap';
+
 body {
   margin: 0;
+  font-family: ' Roboto ', sans-serif;
+}
+
+h1{
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  position: absolute;
+  left: 50px;
+  top: 52%;
+  transform: translateY(-50%);
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.menu {
+  flex-direction: row;
+  list-style: none;
+  margin: 0 50px 0 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu a {
+  display: block;
+  color: black;
+  text-align: right;
+  line-height: 55px;
+  position: relative;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.menu a[data-qa='hover'] {
+  color: #00acdc;
+}
+
+.menu a:hover {
+  color: #00acdc;
+}
+
+.menu a.is-active {
+  color: #00acdc;
+}
+
+.menu a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 11px;
+  width: 61%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .menu a{
+    font-size: 12px;
+  }
 }
