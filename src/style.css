@@ -29,43 +29,45 @@ html {
   flex-wrap: wrap;
   list-style: none;
   text-align: center;
-  line-height: 14.6px;
   color: black;
   padding: 0;
+  margin: 0;
 }
 
 .nav_item {
   margin-left: 20px;
+  position: relative;
 }
 
 .nav_link {
   text-transform: uppercase;
   display: block;
   position: relative;
-  align-items: center;
-  height: 60px;
-  line-height: 60px;
+  height: 14.6px;
+  line-height: 14.6px;
   text-decoration: none;
   color: black;
+  border-bottom: 2px solid transparent;
 }
 
 .nav_item:first-child {
   margin-left: 0;
 }
 
-.is-active{
+.is-active {
   color: var(--blue-color);
 }
 
 .nav_link:hover {
   color: var(--blue-color);
   cursor: default;
+  border-bottom: 2px solid var(--blue-color);
 }
 
 .is-active::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -150%;
   left: 0;
   width: 100%;
   height: 4px;
@@ -73,4 +75,6 @@ html {
   border-radius: 8px;
 }
 
-
+.laptops {
+  color: var(--blue-color);
+}
