@@ -1,94 +1,72 @@
+html {
+  font-family: 'Roboto ', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-
-  --blue-color: #00ACDC;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .header {
-  width: 100%;
-  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding: 0 50px;
+}
+
+.nav {
   display: flex;
   align-items: center;
-}
-
-.container {
-  border-bottom: 2px solid transparent;
-}
-
-.header:hover {
-  border-bottom: 2px solid #00ACDC;
-}
-
-ul li {
-  margin-right: 20px;
-}
-
-ul li:first-child {
-  margin-right: 50px;
-}
-
-ul {
   height: 60px;
+}
+
+.ul {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  flex-wrap: wrap;
   list-style: none;
+  line-height: 14.6px;
+  color: black;
   padding: 0;
-  margin: 0;
 }
 
-ul li a {
-  text-transform: uppercase;
-  text-decoration: none;
-  border-bottom: 2px solid white;
-  color: #000;
-  height: 15px;
-  line-height: 15px;
-  display: block;
+.ul .li {
+  margin-left: 20px;
+}
+
+.ul .li a {
+  display: flex;
   position: relative;
-  cursor: default;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+  color: black;
 }
 
-ul li a.is-active::after {
+.ul .li:first-child {
+  margin-left: 0;
+}
+
+.ul .li a.is-active:first-child {
+  color: var(--blue-color);
+}
+
+.ul .li a:hover {
+  color: var(--blue-color);
+  cursor: pointer;
+}
+
+.ul .li a.is-active::after {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -170%;
+  bottom: 0;
+  width: 100%;
   height: 4px;
-  border-bottom: 2px solid transparent;
-  border-radius: 8px;
-}
-
-ul li a.is-active::after,
-ul li a:hover::after {
   background-color: var(--blue-color);
-}
-
-.logo a {
-  display: block;
-  width: 40px;
-}
-
-.logo {
-  margin-right: auto;
-  padding-left: 50px;
-}
-
-ul li a:hover {
-  border-bottom: #00ACDC 2px solid;
-  cursor: default;
-}
-
-.is-active {
-  color: var(--blue-color);
-}
-
-.laptops {
-  color: var(--blue-color);
+  border-radius: 8px;
 }
