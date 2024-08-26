@@ -1,3 +1,80 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap';
+
 body {
   margin: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: azure;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo img {
+  margin: 10px 0 0 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.nav_list {
+  list-style: none;
+  margin: 22px 50px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav_list a {
+  display: block;
+  color: black;
+  text-align: right;
+  position: relative;
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+.nav_list a[data-qa='hover'] {
+  color: #00acdc;
+}
+
+.nav_list a:hover {
+  color: #00acdc;
+}
+
+.nav_list a.is-active {
+  color: #00acdc;
+}
+
+.nav_list a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -22px;
+  left: 9px;
+  width: 65%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .nav_list a {
+    font-size: 10px;
+  }
 }
