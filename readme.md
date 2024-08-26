@@ -28,7 +28,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
 - [DEMO LINK](https://IDWIL8.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<IDWIL8>.github.io/layout_moyo-header/report/html_report/)
+- [TEST REPORT LINK](https://IDWIL8.github.io/layout_moyo-header/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
