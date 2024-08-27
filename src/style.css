@@ -1,81 +1,79 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap';
 
+:root {
+  --blue: #00acdc;
+}
+
+html {
+  --hover-color: var(--blue);
+
+  font-family: Roboto, system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
 }
 
-html {
-  font-family: Roboto, sans-serif;
-}
-
 .header {
   width: 100%;
-  height: 60px;
-  background-color: azure;
+  padding: 0 50px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-a {
-  text-decoration: none;
-}
-
-.logo img {
-  margin: 10px 0 0 50px;
-  width: 40px;
+.logo__img {
+  display: flex;
   height: 40px;
+  width: 40px;
 }
 
-.nav {
+.nav-list {
   display: flex;
-  height: 100%;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.nav_list {
-  list-style: none;
-  margin: 22px 50px 0 0;
+  list-style-type: none;
+  margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: flex-end;
 }
 
-.nav_list a {
-  display: block;
-  color: black;
-  text-align: right;
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link.is-active {
+  color: var(--hover-color);
   position: relative;
-  padding: 0 10px;
-  font-size: 13px;
 }
 
-.nav_list a[data-qa='hover'] {
-  color: #00acdc;
-}
-
-.nav_list a:hover {
-  color: #00acdc;
-}
-
-.nav_list a.is-active {
-  color: #00acdc;
-}
-
-.nav_list a.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
-  bottom: -22px;
-  left: 10.5px;
-  width: 65%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--hover-color);
   border-radius: 8px;
-  z-index: 1;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
 
-@media (max-width: 1024px) {
-  .nav_list a {
-    font-size: 12px;
-  }
+.nav-link {
+  display: flex;
+  line-height: 60px;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.nav-link:hover {
+  color: var(--hover-color);
 }
