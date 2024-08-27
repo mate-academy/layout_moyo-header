@@ -22,16 +22,12 @@ body {
   display: block;
 }
 
-.nav ul {
+.nav__list {
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.nav a:first-child {
-  margin-left: 0;
 }
 
 .link {
@@ -48,6 +44,14 @@ body {
   text-decoration: none;
 }
 
+.link:hover {
+  color: var(--color-blue);
+}
+
+.nav__list li:first-child .link {
+  margin-left: 0;
+}
+
 .link.is-active {
   color: var(--color-blue);
 }
@@ -62,8 +66,4 @@ body {
   height: 4px;
   border-radius: 8px;
   background: var(--color-blue);
-}
-
-.link:hover {
-  color: var(--color-blue);
 }
