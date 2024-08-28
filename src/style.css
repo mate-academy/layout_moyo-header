@@ -17,16 +17,22 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 12px;
 }
 
 .header {
+  padding: 0 50px;
   display: flex;
   height: 60px;
   justify-content: space-between;
-  margin: 0 50px;
   align-items: center;
   position: relative;
+  gap: 419px;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    gap: 243px;
+  }
 }
 
 .logo {
@@ -65,19 +71,15 @@ ul li,
   color: var(--main-link-color);
 }
 
-.nav__link::after {
+.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: transparent;
   border-radius: 8px;
-  transition: 0.4s;
-}
 
-.is-active::after,
-.nav__link:hover::after {
+  /* transition: 0.4s; */
   background-color: var(--main-link-color);
 }
