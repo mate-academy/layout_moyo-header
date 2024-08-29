@@ -4,6 +4,7 @@ html {
 
 body {
   margin: 0;
+  --colorActiveLink: #00acdc;
 }
 
 .header {
@@ -53,6 +54,7 @@ body {
   display: flex;
   position: relative;
   align-items: center;
+  white-space: nowrap;
 }
 
 .nav_link:link {
@@ -60,24 +62,21 @@ body {
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--colorActiveLink);
 }
 
 .nav_link.is-active {
-  color: #00acdc;
+  color: var(--colorActiveLink);
 }
 
 .nav_link.is-active::after {
   content: '';
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--colorActiveLink);
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
 }
 
-.laptop {
-  white-space: nowrap;
-}
