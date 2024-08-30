@@ -1,3 +1,63 @@
+:root {
+  --moyo-blue: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.header {
+  max-width: 100vw;
+  padding: 0 50px;
+  font-weight: 500;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 40px;
+  padding: 10px 0;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  margin: 0 10px;
+  text-align: center;
+  justify-content: center;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav__link.last-nl {
+  margin: 0 0 0 10px;
+}
+
+.nav__link.first-nl {
+  margin: 0 10px 0 0;
+}
+
+.nav__link.is-active {
+  color: var(--moyo-blue);
+  justify-content: flex-end;
+}
+
+.nav__link.is-active::after {
+  content: '';
+  width: 100% - 4px;
+  margin-top: 19px;
+  border: 2px solid var(--moyo-blue);
+  border-radius: 2px;
+}
+
+.nav__link:hover {
+  color: var(--moyo-blue);
 }
