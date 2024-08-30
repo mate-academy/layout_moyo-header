@@ -1,3 +1,77 @@
-body {
+/* Reset de estilos padrão do navegador */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e0e0e0;
+}
+
+header {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px; /* Altura do cabeçalho definida pelos links de navegação */
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0000;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 80px; /* Alinhando verticalmente os links de acordo com a altura do cabeçalho */
+  display: block;
+  text-align: center;
+}
+
+nav ul li a:hover {
+  color: #0af;
+}
+
+/* Estilos para o link ativo */
+nav ul li a.is-active {
+  color: #0af;
+  position: relative;
+}
+
+nav ul li a.is-active::after {
+  content: '';
+  display: block;
+  width: 37px;
+  height: 4px;
+  background-color: #0af;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8%;
 }
