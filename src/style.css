@@ -1,3 +1,62 @@
 body {
   margin: 0;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+}
+
+.nav_link {
+  line-height: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.nav_link:hover {
+  color: #00acdc;
+}
+
+img {
+  position: absolute;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+}
+
+.container {
+  display: flex;
+  width: 1200px;
+  height: 60px;
+  justify-content: flex-end;
+
+  align-items: center;
+}
+
+.nav_link.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.nav_link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 37px; /* Довжина лінії */
+  height: 4px; /* Товщина лінії */
+  background-color: #00aeef; /* Колір лінії */
+  border-radius: 8px; /* Закруглення країв лінії */
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  margin: 13px;
 }
