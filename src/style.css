@@ -1,3 +1,75 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
+:root {
+  --is-active: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.header__link {
+  margin: 10px 0 10px 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  margin-right: 50px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 12px;
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+}
+
+.nav__link:visited {
+  color: #000;
+}
+
+.nav__link:hover {
+  color: var(--is-active);
+}
+
+.nav__link.is-active {
+  color: var(--is-active);
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--is-active);
 }
