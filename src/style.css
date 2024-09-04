@@ -1,105 +1,78 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-}
-
 body {
   margin: 0;
+  font-family: Roboto, system-ui;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+
+  --blue-color: #00acdc;
+  --header-height: 60px;
 }
 
 .header {
-  justify-content: space-between;
-  align-items: center;
   display: flex;
-  font-family: Roboto, sans-serif;
-  text-align: center;
-  margin: 0 auto;
-  max-width: 1024px;
-  padding: 0 20px;
-  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
-.header-item {
-  padding: 0;
-  margin-right: 241px;
-
-  margin-left: 50px;
-  display: flex;
+.header__logo {
+  width: 40px;
+  height: 40px;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
+.header__img {
+  display: inline-block;
+  height: 100%;
   width: 100%;
 }
 
-.nav ul {
+.menu {
   display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.nav__list {
-  height: 60px;
   align-items: center;
 }
 
-li {
-  opacity: 100;
-  color: white;
+.menu__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
-.nav__item {
+.menu__item {
+  list-style: none;
   margin-right: 20px;
 }
 
-.nav__item:last-child {
+.menu__item:last-child {
   margin-right: 0;
 }
 
-.nav__link {
-  font-size: 12px;
-  font-weight: 500;
+.menu__link {
+  display: block;
+  line-height: var(--header-height);
+  white-space: nowrap;
+  text-align: center;
   text-decoration: none;
-  color: black;
-  flex-basis: auto;
+  color: inherit;
+  text-transform: uppercase;
 }
 
-.nav__link:link {
-  color: white;
+.menu__link.is-active,
+.menu__link:hover {
+  color: var(--blue-color);
 }
 
-.nav__link:visited {
-  color: rgb(39, 38, 38);
-}
-
-.nav__link:hover {
-  color: #00acdc;
-}
-
-.nav__link[data-qa='hover'] {
-  display: inline-block;
+.menu__link.is-active {
   position: relative;
-  color: #00acdc;
 }
 
-.nav__item:first-child .nav__link {
-  position: relative;
-  color: #00acdc;
-  padding-bottom: 18.5px;
-}
-
-a.is-active:first-child::after {
+.menu__link.is-active::after {
   content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 8px;
-  width: 37px;
+  width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  border-radius: 8px;
+  background-color: var(--blue-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
