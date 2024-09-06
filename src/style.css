@@ -1,3 +1,42 @@
 body {
   margin: 0;
+
+  --custom-blue: #00AADC;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li {
+  text-transform: uppercase;
+}
+
+nav ul {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+}
+
+nav ul li a {
+  margin-right: 8px;
+  cursor: pointer;
+  padding: 0;
+}
+
+nav ul li a:hover {
+  color: var(--custom-blue);
+}
+
+.is-active::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid var(--custom-blue);
+  display: block;
 }
