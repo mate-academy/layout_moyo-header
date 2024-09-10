@@ -13,41 +13,63 @@ body {
   margin: 0;
 }
 
-header {
-  height: 60px;
+.header {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.imgContainer {
-  margin: 10px 0 10px 50px;
+.headerImgContainer {
+  margin-left: 50px;
 }
 
-ul {
+.navigation {
+  width: 60%;
+  height: 60px;
   display: flex;
-  justify-content: space-evenly;
-  margin-right: 50px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-li {
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.listItem {
   list-style: none;
-  height: 15px;
-  margin-left: 13px;
+  display: flex;
+  align-items: center;
 }
 
-a {
+.link {
   text-decoration: none;
   color: inherit;
 }
 
-a.is-active {
-  text-decoration: underline 4px;
-  text-underline-offset: 1.2rem;
+.link.is-active {
   color: var(--my-color);
+  width: 100%;
+  position: relative;
+  display: inline-block;
 }
 
-a:hover {
+.link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -23;
+  border-radius: 2px;
+  height: 4px;
+  width: 100%;
+  background-color: var(--my-color);
+  text-decoration: underline 4px;
+  text-underline-offset: 1.2rem;
+}
+
+.link:hover {
   color: var(--my-color);
 }
