@@ -1,7 +1,7 @@
 html {
   margin: 0;
-  font-family: Roboto, serif;
-
+  font-family: 'Roboto ', sans-serif;
+  font-size: 12px;
 
   --text-color: #00acdc;
 }
@@ -11,47 +11,59 @@ body {
 }
 
 .container {
-  position: relative;
   display: flex;
-
+  position: relative;
   align-items: center;
-  height: 60px;
-  border: 1px black solid;
   width: 1024px;
+  height: 60px;
+  justify-content: center;
+
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50px;
 }
 
 .nav {
-  font-size: 12px;
-  display: flex;
   position: absolute;
   right: 50px;
-
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
 }
 
-
-
 .ul__nav {
-  list-style-type: none;
+  list-style: none;
   display: flex;
-  justify-content: center;
+  margin: 0;
   padding: 0;
 }
 
+.li__nav {
+  display: flex;
+  margin-right: 20px;
 
-
-.nav__link {
-  text-transform: uppercase;
-
-  color: black;
-  text-decoration: none;
-
-  margin-left: 10px;
+  position: relative;
 }
 
+.nav__link {
+  display: flex;
+  height: 60px;
+  text-decoration: none;
+  align-items: center;
+  font-weight: 500;
+}
 
+.li__nav:last-of-type {
+  margin: 0;
+}
 
 .nav__link:link {
-  color: black;
+  color: #000;
 }
 
 .nav__link:visited {
@@ -60,29 +72,35 @@ body {
 
 .nav__link:hover {
   color: var(--text-color);
-  text-decoration: underline;
-  text-decoration-color: var(--text-color);
 }
 
 .nav__link:active {
+  color: blue;
+}
+
+.nav__link[data-qa='hover']:hover {
   color: var(--text-color);
 }
 
-.logo {
-  display: flex;
-  position: absolute;
-  left: 50px;
-  width: 40px;
-  height: 40px;
-}
-
-.is-active::after{
+.nav__link.is-active {
+  color: var(--text-color);
   position: relative;
-  bottom: 0;
-  color: var(--text-color);
-  height: 5px;
 }
 
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  right: 0;
+  left: 0;
+  background-color: #00acdc;
+  border-radius: 25%;
+}
 
-
-
+@media (width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
