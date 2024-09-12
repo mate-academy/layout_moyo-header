@@ -1,8 +1,7 @@
 * {
-  font-weight: 500;
   box-sizing: border-box;
-
   --hover-color: #00acdc;
+  font-weight: 500;
 }
 
 body {
@@ -15,25 +14,25 @@ html {
 }
 
 .header {
-  display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 0 50px;
+  display: flex;
 }
 
 .nav {
-  display: flex;
-  width: auto;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  width: auto;
+  display: flex;
 }
 
 .logo_link {
-  display: block;
-  height: 40px;
   width: 40px;
+  height: 40px;
+  display: block;
 }
 
 .nav_item {
@@ -42,20 +41,20 @@ html {
 }
 
 .nav_list {
-  display: flex;
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style-type: none;
+  display: flex;
 }
 
 .nav_link {
-  display: block;
-  font-size: 12px;
-  width: auto;
-  text-decoration: none;
   text-transform: uppercase;
   color: #000;
+  width: auto;
+  font-size: 12px;
   line-height: 60px;
+  text-decoration: none;
+  display: block;
 }
 
 .nav_item:last-child {
@@ -71,13 +70,15 @@ html {
   position: relative;
 }
 
-.is-active::after {
-  content: '';
-  position: absolute;
-  left: 0;
+.is-active:after {
+  content: "";
+  background-color: var(--hover-color);
+  border-radius: 8px;
   width: 100%;
   height: 4px;
+  position: absolute;
   bottom: 0;
-  border-radius: 8px;
-  background-color: var(--hover-color);
+  left: 0;
 }
+
+/*# sourceMappingURL=index.2cdaf7bc.css.map */
