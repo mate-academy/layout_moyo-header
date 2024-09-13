@@ -1,3 +1,7 @@
+:root {
+  --navigation-link-color: #00acdc;
+}
+
 body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -52,7 +56,7 @@ body {
 }
 
 .display-link:hover {
-  color: #00acdc;
+  color: var(--navigation-link-color);
 }
 
 .list li:last-child .display-link {
@@ -61,7 +65,7 @@ body {
 
 .display-link.is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--navigation-link-color);
 }
 
 .is-active::after {
@@ -72,6 +76,6 @@ body {
   width: 100%;
   transform: translateX(-50%);
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--navigation-link-color);
   border-radius: 10px;
 }
