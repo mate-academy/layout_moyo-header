@@ -5,75 +5,80 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
 }
 
 .header {
-  display: flex;
   background-color: #fff;
   justify-content: space-between;
   align-items: center;
+  display: flex;
 }
 
 .logo {
-  margin-left: 50px;
-  height: 40px;
   width: 40px;
+  height: 40px;
+  margin-left: 50px;
 }
 
-.logo__link {
+.logo_link {
   display: inline-block;
 }
 
-.logo__moyo {
-  height: 100%;
+.logo_moyo {
   width: 100%;
+  height: 100%;
   display: block;
 }
 
 .nav {
-  display: inline-block;
   margin-right: 50px;
+  display: inline-block;
 }
 
-.nav__list {
+.nav_list {
   margin: 0;
   padding: 0;
-  display: flex;
   list-style: none;
+  display: flex;
 }
 
-.nav__link {
-  text-decoration: none;
+.nav_link {
   color: #000;
-  display: inline-block;
-  line-height: 60px;
   text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.nav__item:not(:first-child) {
+.nav_item:not(:first-child) {
   margin-left: 20px;
 }
 
-.nav__item :hover {
+.nav_item :hover, .nav__link:hover {
   color: var(--second-color);
-  text-decoration: solid 2px black;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-decoration-thickness: 2px;
 }
 
 .is-active {
-  position: relative;
   color: var(--second-color);
+  position: relative;
 }
 
-.is-active::after {
-  content: '';
-  position: absolute;
-  height: 4px;
-  width: 100%;
+.is-active:after {
+  content: "";
   background-color: var(--second-color);
   border-radius: 8px;
+  width: 100%;
+  height: 4px;
+  position: absolute;
   bottom: 0;
   left: 0;
 }
+
+/*# sourceMappingURL=index.2cdaf7bc.css.map */
