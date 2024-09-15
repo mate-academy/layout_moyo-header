@@ -18,7 +18,6 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
-  margin: 10px 0;
   height: 60px;
   box-sizing: border-box;
 }
@@ -50,7 +49,7 @@ img {
   line-height: 60px;
 }
 
-li {
+.nav-item {
   display: inline-block;
   margin-left: 17px;
   text-align: center;
@@ -58,11 +57,11 @@ li {
   line-height: 60px;
 }
 
-li:first-child {
+.nav-item:first-child {
   margin-left: 0;
 }
 
-.nav a {
+.nav .nav__link {
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
@@ -70,11 +69,15 @@ li:first-child {
   color: black;
 }
 
+.nav__link:hover {
+  color: var(--link-color) !important;
+}
+
 .nav-item:nth-of-type(1) .nav__link {
   color: var(--link-color) !important;
 }
 
-a[data-qa='hover']:hover {
+.nav__link[data-qa='hover']:hover {
   color: var(--link-color);
 }
 
@@ -112,6 +115,6 @@ a[data-qa='hover']:hover {
   text-decoration-color: var(--link-color);
 }
 
-.nav-item.is-active.apple-active a {
+.nav-item.is-active.apple-active .nav__link {
   color: var(--link-color);
 }
