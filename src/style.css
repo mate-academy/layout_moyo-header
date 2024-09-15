@@ -1,3 +1,85 @@
+:root {
+  --moyo-blue: #00acdc;
+  --moyo-black: #000;
+}
+
+.roboto-medium {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+}
+
 body {
   margin: 0;
+  font-size: 1.2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  text-transform: uppercase;
+}
+
+.img {
+  display: flex;
+}
+
+.list {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-weight: 500;
+  padding: 0;
+}
+
+.list__item {
+  margin: 0 1rem;
+}
+
+.list__item:first-child {
+  margin-left: 0;
+}
+
+.list__item:last-child {
+  margin-right: 0;
+}
+
+.list__item-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--moyo-black);
+  height: 6rem;
+}
+
+.list__item-link:hover {
+  color: var(--moyo-blue);
+}
+
+.is-active {
+  color: var(--moyo-blue);
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  content: '';
+  height: 0.4rem;
+  width: 100%;
+  background-color: var(--moyo-blue);
+  border-radius: 0.8rem;
 }
