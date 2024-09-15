@@ -43,7 +43,7 @@ img {
   justify-content: flex-end;
 }
 
-ul.nav-list {
+.nav-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -70,48 +70,20 @@ li:first-child {
   color: black;
 }
 
+.nav-item:nth-of-type(1) .nav__link {
+  color: var(--link-color) !important;
+}
+
 a[data-qa='hover']:hover {
   color: var(--link-color);
 }
 
-a.is-active {
+.is-active {
   color: var(--link-color);
-}
-
-a.is-active::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--link-color);
-  border-radius: 2px;
-  transform: scaleX(1);
-  transition: transform 0.15s ease-in-out;
-}
-
-a.is-active:hover::after {
-  transform: scaleX(1);
-}
-
-li.is-active {
   position: relative;
 }
 
-li.is-active:link {
-  color: black;
-}
-
-li.is-active:visited {
-  color: grey;
-}
-
-li.is-active:hover {
-  text-decoration-color: var(--link-color);
-}
-
-/* li.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
   left: 0;
@@ -120,14 +92,26 @@ li.is-active:hover {
   height: 4px;
   background-color: var(--link-color);
   border-radius: 2px;
-  transform: scaleX(0);
+  transform: scaleX(1);
   transition: transform 0.15s ease-in-out;
-} */
+}
 
-li.is-active:hover::after {
+.is-active:hover::after {
   transform: scaleX(1);
 }
 
-li.nav-item.is-active.apple-active a {
+.is-active:link {
+  color: black;
+}
+
+.is-active:visited {
+  color: grey;
+}
+
+.is-active:hover {
+  text-decoration-color: var(--link-color);
+}
+
+.nav-item.is-active.apple-active a {
   color: var(--link-color);
 }
