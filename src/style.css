@@ -70,14 +70,10 @@ img {
 }
 
 .nav__link:hover {
-  color: var(--link-color) !important;
+  color: var(--link-color);
 }
 
-.nav-item:nth-of-type(1) .nav__link {
-  color: var(--link-color) !important;
-}
-
-.nav__link[data-qa='hover']:hover {
+.nav__link[href='#apple'] {
   color: var(--link-color);
 }
 
@@ -97,24 +93,4 @@ img {
   border-radius: 2px;
   transform: scaleX(1);
   transition: transform 0.15s ease-in-out;
-}
-
-.is-active:hover::after {
-  transform: scaleX(1);
-}
-
-.is-active:link {
-  color: black;
-}
-
-.is-active:visited {
-  color: grey;
-}
-
-.is-active:hover {
-  text-decoration-color: var(--link-color);
-}
-
-.nav-item.is-active.apple-active .nav__link {
-  color: var(--link-color);
 }
