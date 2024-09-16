@@ -17,11 +17,11 @@ body {
   background-color: white;
   padding: 0 50px;
   align-items: center;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   text-transform: uppercase;
 }
 
-nav a {
+.menu-item-link {
   text-decoration: none;
   color: black;
   font-size: 12px;
@@ -32,17 +32,17 @@ nav a {
   line-height: 60px;
 }
 
-nav a:hover {
+.menu-item-link:hover {
   color: var(--primary-color);
 }
 
-nav {
+.menu {
   display: flex;
   align-items: center;
   height: 60px;
 }
 
-nav ul {
+.menu-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -51,11 +51,11 @@ nav ul {
   align-items: center;
 }
 
-nav li {
+.menu-item {
   height: 100%;
 }
 
-nav li:not(:last-child) {
+.menu-item:not(:last-child) {
   margin-right: 20px;
 }
 
@@ -64,10 +64,10 @@ nav li:not(:last-child) {
 }
 
 .is-active::after {
-  content: ''; /* Псевдоелемент не додає текст */
-  display: block; /* Робимо псевдоелемент блоковим */
-  width: 100%; /* Ширина підкреслювання відповідає ширині посилання */
-  height: 4px; /* Товщина підкреслювання */
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
   border-radius: 8px;
   background-color: var(--primary-color);
   position: absolute;
