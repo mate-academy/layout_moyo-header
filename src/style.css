@@ -21,6 +21,8 @@ body {
   position: relative;
   padding: 0 50px;
   margin: 0 auto;
+
+  --nav-link-color: #00acdc;
 }
 
 .logo {
@@ -52,7 +54,7 @@ body {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--nav-link-color);
 }
 
 .is-active::after {
@@ -63,14 +65,14 @@ body {
   display: block;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--nav-link-color);
   border-radius: 2px;
 }
 
-.nav__item[data-qa='hover']:hover .nav__link {
-  color: #00acdc;
-}
-/* stylelint-disable-next-line rule-empty-line-before */
 .nav__item:not(:last-child) {
   margin-right: 20px;
+}
+
+.nav__link:hover {
+  color: var(--nav-link-color);
 }
