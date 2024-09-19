@@ -3,6 +3,10 @@ html {
   font-size: 12px;
 }
 
+:root {
+  --color: #00acdc;
+}
+
 body {
   margin: 0;
 }
@@ -12,7 +16,6 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
-  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -59,20 +62,20 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color);
 }
 
-.nav__link.is-active {
-  color: #00acdc;
+.is-active {
+  color: var(--color);
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--color);
   content: '';
 }
