@@ -1,48 +1,76 @@
-body {
-  font-family: Roboto, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+}
+
 header {
-  width: 100;
-  background-color: white;
-  padding: 20px;
+  background-color: #fff;
+  justify-content: space-between; /* Розподіляє елементи по сторонах */
+  align-items: center; /* Вирівнює елементи по вертикалі в центрі */
+  padding: 0 50px; /* Додаємо внутрішні відступи, якщо потрібно */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  box-sizing: border-box;
 }
 
-img {
+.nav__item {
+  margin-right: 20px; /* Відступи між посиланнями */
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.logo {
+  display: block;
   width: 40px;
-  height: 40;
+  height: 40px;
 }
 
-nav {
+.nav {
   display: flex;
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   display: flex;
 }
 
-li {
-  margin-right: 20px;
-}
-
-a {
+.nav__link {
+  display: block;
   text-decoration: none;
   color: black;
-  font-size: 18px;
+  font-size: 12px; /*  текст */
+  line-height: 60px; /* Вирівнюємо текст по вертикалі */
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-/* .a:visited {
+.nav__link:hover {
   color: #00acdc;
-} */
+  text-decoration: none;
+}
 
-a:hover {
+.is-active::after {
+  content: '';
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #00acdc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.is-active {
+  position: relative;
   color: #00acdc;
-  text-decoration: underline;
 }
