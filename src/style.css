@@ -1,20 +1,22 @@
+:root {
+  color: #00acdc;
+}
+
 html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
 }
 
 body {
-  --color: #00acdc;
-
+  color: var(--color);
   margin: 0;
-  padding: 0;
-  font-family: Roboto, sans-serif;
   box-sizing: border-box;
 }
 
-header {
+.header {
   width: 100%;
-  min-width: 1024px;
+  box-sizing: border-box;
+  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,6 +32,7 @@ header {
 .nav__link {
   display: inline-block;
   height: 60px;
+  line-height: 60px;
   text-decoration: none;
   color: black;
   position: relative;
@@ -37,28 +40,9 @@ header {
 
 .nav__item {
   display: flex;
-  height: 15px;
   text-transform: uppercase;
-  line-height: 15px;
   font-weight: 500;
   margin-right: 20px;
-}
-
-.menu {
-  height: 60px;
-  padding-right: 40px;
-  padding-left: 150px;
-  margin-left: 50px;
-  margin-top: 20px;
-}
-
-img {
-  padding-left: 50px;
-  margin-top: 10px;
-}
-
-.img {
-  flex: 1;
 }
 
 .is-active {
@@ -66,7 +50,7 @@ img {
   color: var(--color);
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   content: '';
   height: 4px;
   width: 100%;
@@ -74,7 +58,7 @@ img {
   border-radius: 8px;
   position: absolute;
   bottom: 0;
-  background-color: #00acdc;
+  background-color: var(--color);
 }
 
 .nav__link:hover {
@@ -82,3 +66,4 @@ img {
   text-decoration: underline;
   cursor: pointer;
 }
+
