@@ -4,13 +4,16 @@ html {
 
 body {
   margin: 0;
+
+  --header-height: 60px;
+  --font-size: 12px;
 }
 
 .header {
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: auto;
   max-width: 1200px;
   min-width: 1024px;
   align-items: center;
@@ -23,7 +26,8 @@ body {
 .logo {
   width: 40px;
   height: 40px;
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 50px;
 }
 
@@ -46,8 +50,11 @@ body {
 .link {
   text-decoration: none;
   color: black;
-  font-size: 12px;
+  font-size: var(--font-size);
   font-weight: 500;
+  text-transform: uppercase;
+  /* margin-top: calc((var(--header-height) - var(--font-size)) / 2);
+  margin-bottom: calc((var(--header-height) - var(--font-size)) / 2); */
 }
 
 .link:is(.link-blue) {
