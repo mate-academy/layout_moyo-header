@@ -1,11 +1,13 @@
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
-  font-family: Roboto, system-ui;
+  font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
@@ -13,6 +15,15 @@ html {
 
 body {
   margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .header {
@@ -24,38 +35,40 @@ body {
   color: #fff;
 }
 
-.image {
+.header__logo {
   display: block;
   line-height: 0;
 }
 
-.nav .list {
+.nav {
   display: flex;
-  list-style: none;
 }
 
-.list_item {
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
   margin-right: 20px;
 }
 
-.list_item:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-.list_item:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
-.link {
+.nav__link {
   display: inline-block;
-  text-decoration: none;
   color: #000;
   line-height: 60px;
   text-align: center;
   text-transform: uppercase;
 }
 
-.link:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
