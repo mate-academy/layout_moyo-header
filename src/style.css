@@ -7,8 +7,10 @@ body {
 }
 
  .header {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   max-width: 1200px;
   min-width: 1024px;
   align-items: center;
@@ -32,6 +34,7 @@ body {
 
  .nav {
   display: flex;
+  margin-right: 50px;
  }
 
  .nav-list {
@@ -42,8 +45,40 @@ body {
 
  .link {
   text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+ }
+
+ .link:is(.link-blue) {
+  color: #00ACDC;
+ }
+
+ .is-active {
+  position: relative;
+ }
+
+ .is-active::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 4px;
+  width: 37px;
+  background-color: #00ACDC;
+  border-radius: 8px;
+  bottom: -22.5px;
+ }
+
+  .link:hover {
+  text-decoration: underline;
+  text-decoration-color: #00ACDC;
+  text-decoration-thickness: 2px;
  }
 
  .list {
   list-style-type: none;
+ }
+
+ .list:not(.last-list) {
+  margin-right: 20px;
  }
