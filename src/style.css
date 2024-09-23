@@ -1,3 +1,89 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+
+:root {
+  --hover-color: #00acdc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 0;
+  box-sizing: border-box;
+  margin: 0;
+  height: 60px;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.nav__item {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 60px;
+  display: inline-block;
+  height: 60px;
+}
+
+.nav__link.is-active {
+  display: inline-block;
+  position: relative;
+  border-color: var(--hover-color);
+  color: var(--hover-color);
+}
+
+.nav__link.is-active::after {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 4px;
+  content: '';
+  background-color: var(--hover-color);
+  border-radius: 8px;
+  bottom: 4px;
+}
+
+.nav__link:hover {
+  color: var(--hover-color);
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
