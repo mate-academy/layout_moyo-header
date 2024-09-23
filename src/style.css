@@ -14,27 +14,35 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 1200px;
-  min-width: 1024px;
+  
+  /* max-width: 1200px;
+  min-width: 1024px; */
+
   width: 100%;
-  padding: 4.4px 50px;
   box-sizing: border-box;
   align-items: center;
   outline: none;
 }
 
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .header {
+    padding: 0 50px;
+  }
+}
+
 .header:hover {
-  outline: 3px solid #00acdc;
+  outline: 3px solid var(--link-color);
 }
 
 .logo {
   width: 40px;
   height: 40px;
+  padding: 10px 0;
   outline: none;
 }
 
 .logo:hover {
-  outline: 3px solid #00acdc;
+  outline: 3px solid var(--link-color);
 }
 
 .nav {
@@ -75,6 +83,7 @@ body {
 
 .is-active {
   position: relative;
+  padding-bottom: 22.5px;
 }
 
 .is-active::after {
@@ -82,14 +91,14 @@ body {
   content: '';
   display: block;
   height: 4px;
-  width: 37px;
-  background-color: #00acdc;
+  width: 100%;
+  background-color: var(--link-color);
   border-radius: 8px;
-  bottom: -22.5px;
+  bottom: 0;
 }
 
 .nav__link:hover {
   text-decoration: underline;
-  text-decoration-color: #00acdc;
+  text-decoration-color: var(--link-color);
   text-decoration-thickness: 2px;
 }
