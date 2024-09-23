@@ -1,3 +1,77 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap';
+
 body {
   margin: 0;
+  background-color: #e1e3e1;
+  font-family: Roboto, sans-serif, system-ui;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  align-items: center;
+}
+
+.moyo__logo {
+  height: 40px;
+  margin-left: 50px;
+  padding: 0;
+}
+
+nav {
+  width: auto;
+  margin-right: 50px;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__item {
+  align-items: center;
+  display: flex;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  padding-right: 20px;
+}
+
+.nav__item:last-child {
+  padding-right: 0;
+}
+
+.nav__button {
+  height: 60px;
+  line-height: 60px;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav__item:first-child .nav__button {
+  color: rgba(0, 172, 220, 1);
+}
+
+.is-active::after {
+  display: block;
+  content: '';
+  background-color: rgba(0, 172, 220, 1);
+  width: 37px;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+}
+
+[data-qa='hover']:hover {
+  color: rgba(0, 172, 220, 1);
 }
