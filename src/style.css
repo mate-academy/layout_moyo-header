@@ -3,10 +3,11 @@ body {
 }
 
 html {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
   /* stylelint-disable-next-line custom-property-empty-line-before */
-  --hover-color: #00acdc;
-  --active-color: #0d99ff;
+  --blue-color: #00acdc;
 }
 
 .header {
@@ -48,9 +49,6 @@ html {
   display: flex;
   align-items: center;
   height: 60px;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
@@ -61,11 +59,11 @@ html {
 /* Active, Hover  & psedo */
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active:hover {
@@ -80,5 +78,5 @@ html {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
