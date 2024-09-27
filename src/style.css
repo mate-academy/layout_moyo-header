@@ -1,3 +1,86 @@
+:root {
+  --blue: #00acdc;
+  --header-height: 60px;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: uppercase;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  height: var(--header-height);
+}
+
+.nav_list {
+  margin: 0;
+  height: var(--header-height);
+  line-height: var(--header-height);
+  padding: 0;
+}
+
+.nav_item {
+  display: inline-block;
+  height: var(--header-height);
+  line-height: var(--header-height);
+}
+
+.nav_link {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  height: var(--header-height);
+  line-height: var(--header-height);
+}
+
+.nav_link:hover {
+  color: var(--blue);
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 17px;
+}
+
+.is-active {
+  color: var(--blue);
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  background: var(--blue);
+  height: 4px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.header_link {
+  width: 40px;
+  height: 40px;
+  justify-content: flex-end;
 }
