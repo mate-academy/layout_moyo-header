@@ -1,3 +1,113 @@
+* {
+  /* Скидання параметрів браузера */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  /* материньска позиція і вирівнювання */
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+/* Логотип */
+.imgLogo {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  bottom: 10px;
+}
+
+.imgLogo img {
+  width: 40px;
+}
+
+nav {
+  /* навігаційні панелі */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fff;
+  height: 60px;
+  padding-right: 50px;
+  border: 1px white solid;
+}
+
+/* навігаційна панель 1 */
+
+.nav-1200 {
+  width: 1200px;
+}
+
+/* навігаційна панель 2 */
+
+.nav-1024 {
+  width: 1024px;
+}
+
+.listOfButtons {
+  display: flex;
+  list-style: none;
+}
+
+.button {
+  margin-right: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-top: 22px;
+  padding-bottom: 23px;
+  justify-content: center;
+}
+
+.listOfButtons li:last-child {
+  margin-right: 0;
+}
+
+.link_a {
+  /* посилання */
+  text-decoration: none;
+  justify-content: center;
+  color: #000;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-top: 22px;
+  padding-bottom: 23px;
+}
+
+.link_a:hover {
+  color: #00acdc;
+}
+
+.link_a:active {
+  color: #00acdc;
+  text-decoration: underline;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
