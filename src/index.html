@@ -12,11 +12,101 @@
     />
     <title>Moyo header</title>
     <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="./style.css"
     />
   </head>
   <body>
-    <h1>Moyo header</h1>
+    <header class="header">
+      <a
+        class="logo"
+        href="#"
+      >
+        <img
+          src="./images/logo.png"
+          alt="logo MOYO"
+        />
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <a
+            href="#apple"
+            class="nav-element is-active"
+          >
+            <li>Apple</li>
+          </a>
+          <a
+            href="#samsung"
+            class="nav-element"
+          >
+            <li>Samsung</li>
+          </a>
+          <a
+            href="#smartphones"
+            class="nav-element"
+          >
+            <li>Smartphones</li>
+          </a>
+          <a
+            href="#laptops-and-computers"
+            data-qa="hover"
+            class="nav-element"
+          >
+            <li>Laptops & Computers</li>
+          </a>
+          <a
+            href="#gadgets"
+            class="nav-element"
+          >
+            Gadgets
+          </a>
+          <a
+            href="#tablets"
+            class="nav-element"
+          >
+            <li>Tablets</li>
+          </a>
+          <a
+            href="#photo"
+            class="nav-element"
+          >
+            <li>Photo</li>
+          </a>
+          <a
+            href="#video"
+            class="nav-element"
+          >
+            <li>Video</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>
+
+<!--use semantic tags: <header>, <img>, <nav>, <ul>, <li> and <a>
+the header should stretch the full page width
+the height should be set for nav links (not the header), take it from the design.
+header content should be vertically centered.
+Logo should also be a link with an image inside (from src/images). But it should not be a part of the <nav>.
+❗️ the blue link with a line below should have a class is-active in addition to any other classes you add.
+❗️ add data-qa="hover" attribute to the 4th link for testing (Laptops & computers)
+link color should be changed on :hover
+Use the ::after and position it relative to a link with is-active class
+Don't use flex gap property for indents. It's not supported in tests, use margin instead.
+There should not be margins before the first and after the last list items
+Don't just copy all styles from Figma. Think, which of them are relevant. Uneven sizes (e.g. line-height: 14.6px) are definitely useless.
+Nav Links should not have any padding, but have text centered -->
