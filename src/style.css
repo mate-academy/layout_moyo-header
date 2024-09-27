@@ -15,6 +15,10 @@ body {
   width: 100%;
 }
 
+:root {
+  --blue-color: #00acdc;
+}
+
 .main-header {
   width: 100%;
   max-width: 1200px;
@@ -55,14 +59,15 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
+  text-transform: uppercase;
 }
 
 .nav-link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav-link.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav-link.is-active::after {
@@ -72,7 +77,7 @@ body {
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   border-radius: 8px;
 }
 
