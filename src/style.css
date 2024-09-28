@@ -11,22 +11,27 @@ body {
 }
 
 header {
-  /* материньска позиція і вирівнювання */
+  /* материнська позиція і вирівнювання */
   position: relative;
   display: flex;
   align-items: center;
+
   width: 100%;
   height: 60px;
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
-/* Логотип для першої панелі */
+.logo-container {
+  /* Логотип окремо від навігації */
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+
 .logo-1200 {
-  position: absolute;
-  left: 50px;
-  top: 10px;
-  bottom: 10px;
+  /* Логотип для першої панелі */
+  width: 40px;
 }
 
 .imgLogo img {
@@ -34,23 +39,23 @@ header {
 }
 
 nav {
-  /* навігаційні панелі */
+  /* Навігаційна панель */
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background-color: #fff;
   height: 60px;
-  padding-right: 30px;
-  width: 1200px;
+ 
+  margin-left: 420px;
+  white-space: nowrap;
 }
 
-/* навігаційна панель 1 */
-
-/* навігаційна панель 2 */
+/* навігаційна панель */
 
 .nav__list {
   display: flex;
   list-style: none;
+  padding-left: 0;
 }
 
 .nav__item {
@@ -61,9 +66,10 @@ nav {
   justify-content: center;
 }
 
-.nav__list:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
+
 
 .nav__link {
   /* посилання */
