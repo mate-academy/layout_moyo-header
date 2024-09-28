@@ -64,13 +64,14 @@ td {
 }
 
 :root {
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   box-sizing: border-box;
   font-size: 12px;
   font-weight: 500;
+  margin: 0;
 }
 
-body {
+.body {
   background-color: bisque;
 }
 
@@ -89,18 +90,14 @@ body {
   align-items: baseline;
 }
 
-ul {
+.list {
   display: flex;
   list-style-type: none;
 }
 
-li {
+.list_link {
   height: 60px;
   display: flex;
-}
-
-a {
-  text-decoration: none;
 }
 
 .nav_link {
@@ -108,6 +105,7 @@ a {
   color: black;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .is_active {
@@ -120,12 +118,12 @@ a {
   text-decoration-thickness: 2px;
 }
 
-.box1 {
+.nav_link1 {
   position: relative;
   top: 3px;
 }
 
-.box1::after {
+.nav_link1::after {
   position: relative;
   content: '';
   background-color: #00acdc;
