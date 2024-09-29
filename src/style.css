@@ -8,7 +8,7 @@ html {
   font-family: Roboto, sans-serif;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,28 +23,28 @@ header {
   width: 40px;
 }
 
-nav {
+.navi-bar {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-ul {
+.navi-menu {
   display: flex;
   list-style: none;
   margin: 0;
 }
 
-ul li {
+.navi-item {
   margin: 0;
   padding-left: 20px;
 }
 
-ul :first-child {
+.navi-item:first-child {
   padding: 0%;
 }
 
-ul li a {
+.navi-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,16 +59,16 @@ ul li a {
   font-weight: 500;
 }
 
-ul li a:hover {
+.navi-link:hover {
   color: #00acdc;
 }
 
-ul li a.is-active {
+.navi-link.is-active {
   position: relative;
   color: #00acdc;
 }
 
-ul li a.is-active::after {
+.navi-link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -79,6 +79,6 @@ ul li a.is-active::after {
   border-radius: 8px;
 }
 
-ul li a[data-qa='hover']:hover {
+.navi-link[data-qa='hover']:hover {
   color: #00acdc;
 }
