@@ -23,9 +23,9 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - Don't just copy all styles from Figma. Think, which of them are relevant. Uneven sizes (e.g. `line-height: 14.6px`) are definitely useless.
 - Nav Links should not have any padding, but have text centered
 
-## Checklist
+## Checklist 
 
-❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description: 
+❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
 - [DEMO LINK](https://petro-boiarenko.github.io/layout_moyo-header/)
 - [TEST REPORT LINK](https://petro-boiarenko.github.io/layout_moyo-header/report/html_report/)
