@@ -1,3 +1,70 @@
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+:root {
+  --first-color: #00acdc;
+}
+
+.header {
+  width: 100%;
+  max-width: 100%;
+  min-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.moyo-logo {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0; /* Немає вертикальних полів */
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  display: inline-block; /* Задає ширину по тексту */
+  line-height: 60px;
+  margin: 0; /* Немає відступів */
+  text-align: center; /* Вирівнювання тексту по центру */
+}
+
+.nav__link:hover {
+  color: var(--first-color); /* Зміна кольору на синій при наведенні */
+}
+
+.is-active {
+  color: var(--first-color); /* Колір активного посилання */
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Лінія приклеєна до нижнього краю посилання */
+  left: 0;
+  width: 100%; /* Ширина лінії дорівнює ширині тексту */
+  height: 4px; /* Висота лінії */
+  background-color: var(--first-color);
+  border-radius: 8px;
 }
