@@ -4,6 +4,7 @@ html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
+  font-style: normal;
   text-transform: uppercase;
 
   --my-color: #00acdc;
@@ -18,42 +19,44 @@ body {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .headerImgContainer {
-  margin-left: 50px;
+  height: 40px;
 }
 
 .navigation {
-  width: 60%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 635px;
+  margin-left: auto;
 }
 
 .list {
-  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0;
+  padding-left: 0;
 }
 
 .listItem {
   list-style: none;
-  display: flex;
   align-items: center;
 }
 
 .link {
+  display: flex;
   text-decoration: none;
   color: inherit;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .link.is-active {
   color: var(--my-color);
-  width: 100%;
-  position: relative;
-  display: inline-block;
 }
 
 .link.is-active::after {
@@ -61,13 +64,11 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -23;
-  border-radius: 2px;
+  bottom: 0;
   height: 4px;
-  width: 100%;
   background-color: var(--my-color);
-  text-decoration: underline 4px;
-  text-underline-offset: 1.2rem;
+  width: 100%;
+  border-radius: 2px;
 }
 
 .link:hover {
