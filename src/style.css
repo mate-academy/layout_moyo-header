@@ -1,3 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
 }
+
+header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.imagem {
+  padding: 10px 0; /* apenas pedding vertical */
+}
+
+.link.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.link:hover {
+  color: #00acdc;
+}
+
+/* já tentei mudar o font-weight para normal e bold, não passaram nos testes */
