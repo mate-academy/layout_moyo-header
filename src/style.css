@@ -6,6 +6,7 @@
 
 body {
   font-family: Roboto, sans-serif;
+  font-weight: 500;
 }
 
 header {
@@ -18,6 +19,8 @@ header {
 }
 
 nav ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
   display: flex;
 }
@@ -34,12 +37,14 @@ nav a {
   position: relative;
   text-decoration: none;
   color: #000;
-  font-family: Roboto, sans-serif;
   text-transform: uppercase;
-  padding: 5px 0;
-  display: inline-block;
-  font-size: 14px;
+  padding: 20px 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
   line-height: normal;
+  height: 60px;
 }
 
 .nav-links a {
@@ -52,54 +57,46 @@ nav a {
   color: #00acdc;
 }
 
+nav a[data-qa='laptops'] {
+  text-decoration: none;
+}
+
+nav a[data-qa='laptops']:hover {
+  text-decoration: none;
+}
+
 .logo img {
   max-height: 40px;
   width: auto;
-  display: block;
 }
 
 nav a.is-active {
   color: #00acdc;
+  position: relative;
+  padding-bottom: 20px;
 }
 
 nav a.is-active::after {
   content: '';
   position: absolute;
+  bottom: 0;
   left: 0;
-  bottom: -50%;
   width: 100%;
   height: 4px;
   background-color: var(--blue);
-  border-radius: 2px;
+  border-radius: 8px;
+}
+
+[data-qa='hover'] {
+  color: #00acdc;
+  text-decoration: none;
+}
+
+nav [data-qa='hover']:hover {
+  color: #00acdc;
+  text-decoration: none !important;
 }
 
 :root {
   --blue: #00acdc;
-}
-
-@media (max-width: 1200px) {
-  nav a {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 20px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin-bottom: 10px;
-  }
-
-  .logo img {
-    margin-bottom: 20px;
-  }
 }
