@@ -1,3 +1,102 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  padding: 20px 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: normal;
+  height: 60px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: #00acdc;
+}
+
+nav a[data-qa='laptops'] {
+  text-decoration: none;
+}
+
+nav a[data-qa='laptops']:hover {
+  text-decoration: none;
+}
+
+.logo img {
+  max-height: 40px;
+  width: auto;
+}
+
+nav a.is-active {
+  color: #00acdc;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue);
+  border-radius: 8px;
+}
+
+[data-qa='hover'] {
+  color: #00acdc;
+  text-decoration: none;
+}
+
+nav [data-qa='hover']:hover {
+  color: #00acdc;
+  text-decoration: none !important;
+}
+
+:root {
+  --blue: #00acdc;
 }
