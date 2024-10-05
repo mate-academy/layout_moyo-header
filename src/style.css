@@ -1,48 +1,59 @@
 body {
- margin: 0;
- background-color: rgb(154, 154, 154);
- font-family: "Roboto", sans-serif;
- font-weight: 500;
+  margin: 0;
+  background-color: rgb(154, 154, 154);
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
 }
-.nav{
-  font-size: 12px;
-  background: #FFFFFF;
-  height: 60px;
+
+.header {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.nav {
   display: flex;
-  justify-content: end;
+  background: #fff;
+  height: 60px;
+  justify-content: flex-end;
   align-items: center;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
-.nav__link{
-text-decoration: none;
-text-transform: uppercase;
-margin: 20px;
+.nav__link {
+  text-decoration: none;
+  padding: 20px;
 }
 
-.Ap{
- color: #00ACDC;
- position: relative;
+.is-active {
+  color: #00acdc;
+  position: relative;
+  padding: 22.5px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.Ap::after{
- content: '';
- display: block;
- background-color: #00ACDC;
- height: 4px;
- border-radius: 8px;
- right: 0;
- left: 0;
- position: absolute;
- bottom: -23px;
-}
-
-
-.img{
+.is-active::after {
+  content: '';
+  display: block;
+  background-color: #00acdc;
+  height: 4px;
+  border-radius: 8px;
+  right: 0;
+  left: 0;
   position: absolute;
-  left: 60px;
+  bottom: 0;
+}
+
+.img {
+  position: absolute;
+  left: 50px;
   top: 10px;
 }
 
-.LC:hover{
-  color:  #00ACDC;
+.l:hover {
+  color: #00acdc;
+  padding: 22.5px;
+  padding-left: 0;
+  padding-right: 0;
 }
