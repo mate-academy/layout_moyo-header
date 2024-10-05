@@ -12,11 +12,12 @@ body {
   margin: 0;
 }
 
-.nav {
+.header {
   display: flex;
-  justify-content: space-between;
   padding-left: 50px;
   padding-right: 50px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav__ul {
@@ -27,22 +28,28 @@ body {
 
 .logo {
   align-content: center;
+  text-decoration: none;
+  height: 40px;
+  width: 40px;
 }
 
 .nav__list {
   list-style-type: none;
   position: relative;
-  margin: 0 10px;
+  margin-right: 20px;
 }
 
 .nav__link {
   align-content: center;
   display: block;
-  text-decoration: none;
   color: black;
   text-transform: uppercase;
   font-size: 12px;
   height: 60px;
+}
+
+.last-link {
+  margin-right: 0;
 }
 
 .is-active {
@@ -52,7 +59,7 @@ body {
 .is-active::after {
   position: absolute;
   content: '';
-  background-color: #00acdc;
+  background-color: var(--main-color);
   bottom: 0;
   left: 0;
   height: 4px;
