@@ -1,3 +1,88 @@
+html {
+  /* stylelint-disable-next-line */
+  font-family:
+  Roboto, Arial,
+  Helvetica Neue,
+  Helvetica,
+  sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+
+  --active-link-color: #00acdc;
+  --header-height: 60px;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  display: inline-block;
+  line-height: 0;
+}
+
+.figure__logo-moyo {
+  margin: 0;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  height: var(--header-height);
+  line-height: var(--header-height);
+  padding: 0;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+a[href^='#'] {
+  color: black;
+}
+
+a.is-active::after {
+  content: '';
+  background: var(--active-link-color);
+  border-radius: 8px;
+  height: 4px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav__link:visited {
+  color: inherit;
+}
+
+.nav__link:hover {
+  color: var(--active-link-color);
+}
+
+a.nav__link.is-active {
+  color: var(--active-link-color);
 }
