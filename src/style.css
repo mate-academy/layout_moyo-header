@@ -1,3 +1,7 @@
+:root {
+  --hover-link-color: #00acdc;
+}
+
 body {
   font-family: Roboto, sans-serif;
   font-size: 12px;
@@ -6,7 +10,7 @@ body {
   margin: 0;
 }
 
-header {
+header.header {
   /* padding: 0 50px; */
   width: 100%;
   display: flex;
@@ -64,7 +68,7 @@ img.logo {
 }
 
 a.is-active {
-  color: #00acdc;
+  color: var(--hover-link-color);
   position: relative;
 }
 
@@ -72,7 +76,7 @@ a.is-active::after {
   content: '';
   height: 4px;
   width: 37px;
-  background: #00acdc;
+  background: var(--hover-link-color);
   border-radius: 8px;
   position: absolute;
   left: 0;
