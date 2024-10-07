@@ -1,118 +1,72 @@
-html {
-  font-family: ' Roboto ', sans-serif;
-}
-
 body {
   margin: 0;
-  box-sizing: border-box;
-  background-color: #e6e0e0;
-}
-
-header {
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  width: 1200px;
-  margin-left: 60px;
-}
-
-h1 {
-  margin-left: 60px;
-}
-
-.logo {
-  width: 40px;
-  height: 40px;
-  border: 3px solid #000;
-  color: #000;
-  text-decoration: none;
-}
-
-.nav__list {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  margin: 0;
   padding: 0;
+  font-family: Roboto, system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.6px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 15px;
+  background-color: #f8f8f8;
   align-items: center;
+  padding: 1.25rem;
 }
 
-.nav__link {
-  display: block;
-  padding: 23px 5px;
-  font-size: 18px;
-  color: #000;
+.nav_link {
+  display: flex;
+  padding: 25px;
   text-decoration: none;
-}
-
-.nav__link1 {
-  color: #00acdc;
-  display: block;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 23px 5px;
-}
-
-a {
-  text-decoration: none;
-}
-
-.nav_item1 {
-  width: 88px;
-  height: 15px;
-  top: 22px;
-  left: 644px;
-}
-
-.nav_item2 {
-  width: 88px;
-  height: 15px;
-  top: 22px;
-  left: 644px;
-}
-
-.nav_item4 {
-  width: 88px;
-  height: 15px;
-  top: 22px;
-  left: 644px;
-}
-
-.nav_item5 {
-  width: 88px;
-  height: 15px;
-  top: 22px;
-  left: 644px;
-}
-
-.nav_item6 {
-  width: 88px;
-  height: 15px;
-  top: 22px;
-  left: 644px;
-}
-
-.nav_item7 {
-  width: 88px;
-  height: 15px;
-  top: 22px;
-  left: 644px;
-}
-
-.is-active {
+  color: #333;
+  margin: 0 15px;
+  height: 50px;
+  align-items: center;
+  text-align: center;
   position: relative;
-  line-height: 12px;
-  color: #00acdc;
 }
 
-.is-active::after {
-  position: absolute;
-  content: '';
-  background: #00acdc;
-  height: 5px;
-  width: 100%;
-  border-radius: 20px;
-  border: 5px;
+.nav_list {
+  list-style: none;
+  margin: 0 auto;
 }
+
+/* Change link color on hover */
+.nav_link:hover {
+  color: #007bff;
+}
+
+.nav_link.is-active {
+  color: #00acdc;
+  line-height: 14.06px;
+  height: 15px;
+  top: 22.5px;
+  left: 0;
+}
+
+/* Logo style */
+.logo img {
+  display: block;
+  width: 40px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.nav_link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  right: 0;
+  height: 4px;
+  width: 37px;
+  background-color: #00acdc;
+}
+
+.nav_link.la[data-qa='hover']:hover {
+  color: #007bff;
+}
+
