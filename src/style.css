@@ -3,26 +3,28 @@ body {
 }
 
 header {
+  display: flex;
   width: 100%;
-  display: block;
-  margin: 10px 50px;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-left: 50px;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 .nav {
   display: flex;
-  align-items: center;
-  flex-direction: row;
   gap: 20px;
-  justify-content: flex-end;
-  height: 15px 0;
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
-  line-height: 14.06px;
-  text-align: left;
+  line-height: 60px;
   text-transform: uppercase;
   margin-right: 50px;
-  margin-top: -31px;
+
+  height: 60px;
 }
 
 a {
@@ -36,15 +38,17 @@ a {
 
 .is-active {
   position: relative;
-  margin-top: 23px;
+  align-self: flex-start;
+  color: #00acdc;
 }
 
 .is-active::after {
+  position: absolute;
+  bottom: 0;
   content: '';
   display: block;
   width: 37px;
   height: 4px;
-  margin-top: 18.5px;
   border-radius: 8px;
   background-color: #00acdc;
 }
