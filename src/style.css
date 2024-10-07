@@ -1,3 +1,7 @@
+:root {
+  --blue-color: #00A7E1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +16,6 @@ body {
 
 .header {
   width: 100%;
-  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,7 +29,6 @@ body {
 }
 
 .nav {
-  height: 100%;
   margin-right: 50px;
 }
 
@@ -45,11 +47,10 @@ body {
   position: relative;
   line-height: 60px;
   display: block;
-  height: 100%;
 }
 
 .nav__list.is-active a {
-  color: #00ACDC;
+  color: var(--blue-color);
 }
 
 .nav__list.is-active a::after {
@@ -64,5 +65,5 @@ body {
 }
 
 .nav__list a:hover {
-  color: #00ACDC;
+  color: var(--blue-color);
 }
