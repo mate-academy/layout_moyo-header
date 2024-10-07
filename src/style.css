@@ -1,3 +1,79 @@
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: Roboto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 100px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  color: #fff;
+  width: 100vw;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.logo a {
+  color: #5003f7;
+  text-decoration: none;
+  font-size: 24px;
+}
+/* stylelint-disable-next-line rule-empty-line-before */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  transition:
+    color 0.3s,
+    text-decoration 0.3s,
+    background-color 0.3s;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-links a:hover {
+  color: rgb(27, 126, 239);
+}
+
+.nav-links a:visited {
+  color: black;
+}
+
+.nav-links a.is-active {
+  /* stylelint-disable-next-line comment-empty-line-before */
+  /* Lighter color for active/hover */
+  color: rgb(27, 126, 239);
+  border-bottom: 3px solid rgb(27, 126, 239);
+  /* stylelint-disable-next-line comment-empty-line-before */
+  /* Darker green background on hover */
+  background-color: transparent;
+  border-radius: 4px;
+  /* stylelint-disable-next-line comment-empty-line-before */
+  /* Optional: rounded corners */
 }
