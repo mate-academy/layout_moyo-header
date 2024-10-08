@@ -1,3 +1,115 @@
+/* Configuração geral da fonte */
 body {
-  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+/* Estilização do cabeçalho */
+header {
+  display: flex;
+  align-items: center;
+  width: 1024px;
+  padding: 0 20px;
+  background-color: white;
+  height: 60px;
+  position: relative;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+/* Estilização da imagem do logo */
+.logo img {
+  width: 40px;
+  height: 40px;
+  position: relative; /* Para que as propriedades top e left tenham efeito */
+  top: 10px; /* Ajuste a posição do logo conforme necessário */
+  left: 50px; /* Ajuste a posição do logo conforme necessário */
+}
+
+/* Estilização da navegação */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilização dos itens da lista */
+nav ul li {
+  margin-right: 20px; /* Espaçamento entre os links */
+  position: relative;
+}
+
+/* Estilização dos links */
+nav ul li a {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+  position: relative; /* Permite que os filhos usem position absolute em relação a ele */
+  line-height: 14.06px;
+  text-align: center;
+  transition: color 0.3s ease;
+  font-size: 12px;
+}
+
+/* Tamanhos de fonte específicos para cada link */
+nav ul li a.apple {
+  font-weight: bold;
+  font-size: 12px; /* Tamanho específico do link da Apple */
+  position: relative;
+}
+
+nav ul li a.samsung {
+  font-weight: bold;
+  font-size: 12px; /* Tamanho específico do link da Samsung */
+}
+
+nav ul li a.smartphones {
+  font-weight: bold;
+  font-size: 12px; /* Tamanho específico do link de Smartphones */
+}
+
+nav ul li a.laptopsecomputers {
+  font-weight: bold;
+  font-size: 12px; /* Tamanho específico do link de Laptops e Computadores */
+  color: #00b5e2;
+}
+
+nav ul li a.gadgets {
+  font-weight: bold;
+  font-size: 12px; /* Tamanho específico do link de Gadgets */
+}
+
+nav ul li a.tablets {
+  font-weight: bold;
+  font-size: 12px; /* Tamanho específico do link de Tablets */
+}
+
+nav ul li a.photo {
+  font-weight: bold;
+  font-size: 12px; /* Tamanho específico do link de Photo */
+}
+
+nav ul li a.video {
+  font-weight: bold;
+  font-size: 12px; /* Tamanho específico do link de Video */
+}
+
+/* Estilo para hover */
+nav ul li a:hover {
+  color: #00b5e2; /* Cor ao passar o mouse */
+}
+
+/* Estilo para link ativo */
+nav ul li a.is-active {
+  color: #00b5e2; /* Cor do link ativo */
+}
+
+/* Estilização do retângulo */
+.rectangle {
+  position: absolute;
+  border-radius: 8px;
+  width: 37px;
+  height: 4px;
+  background-color: #00b5e2;
+  top: 20px; /* ajuste para ficar logo abaixo do texto "APPLE" */
+  left: 0; /* Alinhado ao início do link */
 }
