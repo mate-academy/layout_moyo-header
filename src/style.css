@@ -1,3 +1,91 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+
+  --blue-color: #00acdc;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+.navigation {
+  display: flex;
+  width: 100vw;
+  justify-content: flex-end;
+  flex-direction: row;
+  position: relative;
+  margin-right: 30px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: white;
+  font-weight: bold;
+  font-size: 12px;
+  min-width: 768px;
+}
+
+.nav_list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.nav_link {
+  text-decoration: none;
+  height: 60px;
+  display: block;
+  line-height: 60px;
+  color: black;
+  justify-content: center;
+  align-self: center;
+}
+
+.nav_item:nth-child(n + 2) {
+  margin-left: 20px;
+}
+
+.logo {
+  padding: 0;
+  display: flex;
+  margin: 10px 10px 10px 50px;
+  line-height: 60px;
+}
+
+.logo_link {
+  padding: 0;
+}
+
+.nav_link:hover {
+  text-decoration: underline 2px;
+  text-decoration-color: var(--blue-color);
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--blue-color);
+}
+
+.is-active {
+  line-height: 56px;
+  color: var(--blue-color);
+}
+
+.diff-color {
+  color: var(--blue-color);
 }
