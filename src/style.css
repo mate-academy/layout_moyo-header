@@ -8,16 +8,18 @@ body {
 
 @font-face {
   font-family: Roboto;
-  src: url(fonts/Roboto-Regular.ttf);
+  src: url(fonts/Roboto-Medium.ttf);
+}
+
+.wrapper {
+  margin: 0 50px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .navigation {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  flex-direction: row;
-  position: relative;
-  margin-right: 60px;
+  display: block;
 }
 
 .header {
@@ -26,8 +28,7 @@ body {
   justify-content: center;
   text-transform: uppercase;
   background-color: white;
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .nav_list {
@@ -42,48 +43,42 @@ body {
 .nav_link {
   text-decoration: none;
   height: 60px;
-  display: block;
   line-height: 60px;
+  display: block;
   color: black;
   justify-content: center;
   align-self: center;
+  letter-spacing: normal;
+  font-weight: 100;
 }
 
 .nav_item:nth-child(n + 2) {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
-.logo {
-  padding: 0;
-  display: flex;
-  margin: 10px 10px 10px 50px;
-  line-height: 60px;
-}
-
-.logo_link {
-  padding: 0;
+.navigation_logo {
+  align-self: center;
+  justify-content: center;
+  height: 40px;
+  display: block;
+  float: left;
 }
 
 .nav_link:hover {
-  text-decoration: underline 2px;
-  text-decoration-color: var(--blue-color);
+  color: var(--blue-color);
 }
 
 .is-active::after {
   content: '';
   display: block;
   position: relative;
-  width: 37px;
+  width: 36.6px;
   height: 4px;
   border-radius: 8px;
   background-color: var(--blue-color);
+  bottom: 4px;
 }
 
 .is-active {
-  line-height: 56px;
-  color: var(--blue-color);
-}
-
-.diff-color {
   color: var(--blue-color);
 }
