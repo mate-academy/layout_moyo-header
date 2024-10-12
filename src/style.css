@@ -4,14 +4,8 @@
   --accent-color: #00acdc;
   --bg-color: white;
   --text-color: black;
-  --roboto-font: 'Roboto', Arial, sans-serif;
+  --roboto-font: 'Roboto';
   --header-size: 60px;
-}
-
-html {
-  font-family: var(--roboto-font);
-  padding: 0;
-  margin: 0;
 }
 
 body {
@@ -20,7 +14,8 @@ body {
 }
 
 .header {
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   width: 100%;
   position: fixed;
 }
@@ -38,6 +33,9 @@ body {
   height: 40px;
 }
 
+.nav {
+  flex: 1;
+}
 
 .nav__item {
   list-style: none;
@@ -63,6 +61,7 @@ body {
   font-weight: 500;
   height: 60px;
   font-size: 12px;
+  font-family: var(--roboto-font), Arial, sans-serif;
   text-transform: uppercase;
   color: var(--text-color);
   line-height: var(--header-size);
