@@ -3,6 +3,8 @@
 body {
   margin: 0;
   background-color: #a19f9f;
+
+  --blue-color: #00acdc;
 }
 
 .header {
@@ -50,14 +52,13 @@ body {
 
 .is-active,
 .nav__link:hover {
-  /* box-sizing: border-box; */
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active::after {
   content: '';
   position: absolute;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   height: 4px;
   width: 100%;
   bottom: 0;
