@@ -4,7 +4,6 @@
   --accent-color: #00acdc;
   --bg-color: white;
   --text-color: black;
-  --roboto-font: 'Roboto';
   --header-size: 60px;
 }
 
@@ -14,10 +13,10 @@ body {
 }
 
 .header {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
   width: 100%;
   position: fixed;
+  font-family: Roboto, Arial, sans-serif;
 }
 
 .header__container {
@@ -33,12 +32,14 @@ body {
   height: 40px;
 }
 
-.nav {
-  flex: 1;
+.nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
 }
 
 .nav__item {
-  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -47,21 +48,14 @@ body {
   margin-left: 20px;
 }
 
-.nav__list {
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-
 .nav__link {
-  display: block;
   text-decoration: none;
   padding: 0;
   margin: 0;
+  display: block;
   font-weight: 500;
   height: 60px;
   font-size: 12px;
-  font-family: var(--roboto-font), Arial, sans-serif;
   text-transform: uppercase;
   color: var(--text-color);
   line-height: var(--header-size);
