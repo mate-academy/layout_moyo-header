@@ -1,15 +1,10 @@
-:root {
-  --main-color: #000;
-  --hover-color: #00acdc;
-}
-
 body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  color: var(--main-color);
+  box-sizing: border-box;
+
+  --hover-color: #00acdc;
 }
 
 .header {
@@ -22,11 +17,7 @@ body {
 .header-logo {
   width: 40px;
   height: 40px;
-  margin-right: 50px;
-}
-
-.nav {
-  justify-self: flex-end;
+  margin-right: 10px 0;
 }
 
 .menu {
@@ -34,24 +25,22 @@ body {
   padding: 0;
   display: flex;
   list-style-type: none;
+  justify-content: flex-start;
 }
 
-.menu-item {
-  position: relative;
-}
-
-.menu-item:not(:last-child) {
-  margin-right: 20px;
+.menu-item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .menu-link {
-  box-sizing: border-box;
-  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
   text-decoration: none;
-  color: inherit;
+  color: #000;
   line-height: 60px;
-  letter-spacing: 0;
   text-transform: uppercase;
+  display: block;
   position: relative;
 }
 
