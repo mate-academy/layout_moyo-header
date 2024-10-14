@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #00acdc;
+  --font-family: font-family: Roboto, Arial, sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -10,7 +15,6 @@ p,
 ul {
   margin: 0;
   padding: 0;
-  list-style: none;
   text-decoration: none;
 }
 
@@ -24,10 +28,11 @@ ul {
 
 .nav-list {
   display: flex;
+  list-style: none;
 }
 
 .nav_link {
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-family);
   font-size: 12px;
   text-transform: uppercase;
   color: #000;
@@ -40,12 +45,12 @@ ul {
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .is-active {
   text-decoration: none;
-  color: #00acdc;
+  color: var(--primary-color);
 
   position: relative;
 }
@@ -60,5 +65,5 @@ ul {
   bottom: -8px;
   left: 0;
   right: 0;
-  background-color: #00acdc;
+  background-color: var(--primary-color);
 }
