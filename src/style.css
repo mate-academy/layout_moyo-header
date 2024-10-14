@@ -1,3 +1,54 @@
 body {
   margin: 0;
 }
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header img{
+  margin: 10px 0;
+}
+
+.nav_list{
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav_item {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  height: 15px;
+  font-family: Roboto, sans-serif;
+}
+
+.nav_item:not(:last-child){
+  margin-right: 20px;
+}
+
+.nav_item:hover{
+  color: #00ACDC;
+}
+
+.is-active{
+  color: #00ACDC;
+}
+
+.is-active::after{
+  content: "";
+  position: relative;
+  display: block;
+ border: 2px solid #00ACDC;
+ border-radius: 8px;
+ top: 100%;
+}
+
+[data-qa='hover']{
+  color: #00ACDC;
+}
