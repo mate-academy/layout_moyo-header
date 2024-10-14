@@ -1,3 +1,74 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* stylelint-disable-next-line font-family-name-quotes */
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.img-link {
+  display: flex;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  line-height: 60px;
+}
+
+.nav-link:hover {
+  color: #00acdc;
+}
+
+/* .nav-link.is-active:active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  border-radius: 8px;
+} */
+
+.nav-link.is-active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
+
+.apple {
+  color: #00acdc;
+}
+
+.list-item:not(:last-child) {
+  margin-right: 20px;
 }
