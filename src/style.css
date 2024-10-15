@@ -1,8 +1,8 @@
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Roboto, serif;
+  font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
@@ -12,11 +12,7 @@
   height: 40px;
 }
 
-body {
-  margin: 0;
-}
-
-header {
+.header {
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
@@ -27,15 +23,18 @@ header {
   display: flex;
   list-style: none;
   height: 60px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav__menu li {
+.nav__item {
   display: flex;
-
+  margin: 0;
+  padding: 0;
   height: 100%;
 }
 
-.nav__menu li:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
@@ -43,6 +42,8 @@ header {
   text-transform: uppercase;
   text-decoration: none;
   color: black;
+  display: flex;
+  align-items: center;
 }
 
 .nav__menu-link.is-active::after {
@@ -65,9 +66,4 @@ header {
   color: #00acdc;
   position: relative;
   height: 100%;
-}
-
-.nav__menu li .nav__menu-link {
-  display: flex;
-  align-items: center;
 }
