@@ -1,3 +1,80 @@
+/* Reset margins and padding */
+html,
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure all elements inherit this reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: Roboto, serif;
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.img-wraper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+ul > li:nth-child(n+2) {
+  margin-left: 20px;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  line-height: 60px;
+}
+
+a:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.bottom-bar {
+  background-color: rgba(0, 172, 220, 1);
+  width: 0;
+  height: 4px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -4;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+li.is-active .bottom-bar {
+  width: 100%;
 }
