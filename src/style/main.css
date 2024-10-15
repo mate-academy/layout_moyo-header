@@ -1,13 +1,3 @@
-:root {
-  --color-links: #00acdc;
-}
-
-body {
-  font-family: Roboto, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 .header {
   padding: 0 50px;
   background-color: #fff;
@@ -18,6 +8,8 @@ body {
 
 .header__logo-link {
   display: flex;
+  width: 40px;
+  height: 40px;
 }
 
 .header__nav-list {
@@ -46,12 +38,12 @@ body {
   position: relative;
 }
 
-.is-active,
+.header .is-active,
 .header__nav-link:hover {
-  color: var(--color-links);
+  color: #00acdc;
 }
 
-.is-active::after {
+.header .is-active::after {
   content: '';
   width: 100%;
   height: 4px;
@@ -59,5 +51,11 @@ body {
   display: block;
   bottom: 0;
   position: absolute;
-  background-color: var(--color-links);
+  background-color: #00acdc;
+}
+
+.page__body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
