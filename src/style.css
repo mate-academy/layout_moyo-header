@@ -9,9 +9,12 @@ body,
   box-sizing: border-box;
 }
 
+html {
+  --font-color: #00acdc;
+}
+
 body {
-  /* stylelint-disable-next-line font-family-name-quotes */
-  font-family: 'Roboto', 'Arial', sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
@@ -44,19 +47,8 @@ body {
 }
 
 .nav-link:hover {
-  color: #00acdc;
+  color: var(--font-color);
 }
-
-/* .nav-link.is-active:active::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: '';
-  height: 4px;
-  width: 100%;
-  background-color: #00acdc;
-  border-radius: 8px;
-} */
 
 .is-active::after {
   position: absolute;
@@ -65,12 +57,12 @@ body {
   content: '';
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--font-color);
   border-radius: 8px;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--font-color);
 }
 
 .nav-item:not(:last-child) {
