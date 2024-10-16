@@ -1,17 +1,20 @@
+// #region header
 .header {
   padding: 0 50px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  &__logo-link {
-    display: flex;
-    width: 40px;
-    height: 40px;
-  }
+.logo__link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
 
-  &__nav-list {
+.nav {
+  &__list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,11 +23,11 @@
     list-style: none;
   }
 
-  &__nav-item:not(:last-child) {
+  &__item:not(:last-child) {
     margin-right: 20px;
   }
 
-  &__nav-link {
+  &__link {
     text-transform: uppercase;
     text-decoration: none;
     color: #000;
@@ -38,7 +41,7 @@
   }
 
   .is-active,
-  &__nav-link:hover {
+  &__link:hover {
     color: $color-links;
   }
 
@@ -53,3 +56,4 @@
     background-color: $color-links;
   }
 }
+// #endregion
