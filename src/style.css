@@ -1,3 +1,89 @@
+/* stylelint-disable font-family-name-quotes */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable-next-line import-notation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
   margin: 0;
+  font-family: 'Roboto', Arial, sans-serif, Helvetica;
+  color: black;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo--Moyo {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+.nav {
+  display: inline-block;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__link.is-active {
+  color: #00acdc;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
+}
+
+.nav [data-qa='hover']:hover {
+  color: #00acdc;
+}
+
+.nav .__list .__item .__link:hover {
+  color: #00acdc;
 }
