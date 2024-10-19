@@ -1,59 +1,64 @@
-html {
+body {
   margin: 0;
-  font-size: 12px;
   font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  text-transform: uppercase;
+
+  --hover-color: #00acdc;
 }
 
-.nav__list {
-  list-style: none;
+.header {
+  width: 100%;
+  height: 60px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.06px;
   display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
 }
 
 .nav_link {
-  line-height: 15px;
-  text-align: center;
-  font-weight: 500;
   text-decoration: none;
   color: #000;
-  margin: 13px;
+  text-transform: uppercase;
+  margin-right: 20px;
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--hover-color);
+}
+
+.nav {
+  position: absolute;
+  right: 50px;
 }
 
 .moyo {
   position: absolute;
   left: 50px;
-  width: 40px;
-  height: 40px;
   top: 10px;
 }
 
-.header {
-  display: flex;
-  width: 1200px;
-  height: 60px;
-  justify-content: flex-end;
-
-  align-items: center;
+.zero {
+  margin-right: 0;
 }
 
-.nav_link.is-active {
-  color: #00acdc;
+.is-active {
   position: relative;
+  color: var(--hover-color);
 }
 
-.nav_link.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
+  top: 34px;
   left: 0;
-  bottom: -20px;
-  width: 100%; /* Довжина лінії */
-  height: 4px; /* Товщина лінії */
-  background-color: #00aeef; /* Колір лінії */
-  border-radius: 8px; /* Закруглення країв лінії */
+  width: 100%;
+  height: 4px;
+  background-color: var(--hover-color);
+  border-radius: 8px;
 }
