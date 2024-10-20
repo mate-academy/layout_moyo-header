@@ -3,27 +3,54 @@
   --nav-hover: background: #00acdc;
 }
 
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+li,
+a {
   font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--nav-text);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: var(--nav-hover);
 }
 
 .header {
   width: 100vw;
-  border: 5px solid gray;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
 }
 
 .nav {
-  height: 60px;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 li {
-  display: inline;
+  display: inline-block;
+  padding: 0 20px;
   text-transform: uppercase;
 }
 
-a {
-  text-decoration: none;
-  color: var(--nav-text);
+.logo {
+  padding: 10px;
 }
