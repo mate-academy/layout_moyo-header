@@ -18,7 +18,7 @@ body {
   margin: 0;
 }
 
-.menu-list {
+.menu {
   margin: 0;
   padding: 0;
   display: flex;
@@ -26,18 +26,14 @@ body {
   list-style-type: none;
 }
 
-.menu-list li  {
+.menu__list {
   display: flex;
   height: 60px;
   position: relative;
   margin-right: 20px;
 }
 
-.menu-list li:last-child {
-  margin-right: 0;
-}
-
-.menu-item {
+.menu__item {
   display: inline-block;
   color: #000;
   flex-direction: row;
@@ -49,7 +45,11 @@ body {
   text-transform: uppercase;
 }
 
-a.is-active::after {
+.menu__list:last-child {
+  margin-right: 0;
+}
+
+.menu__item.is-active::after {
   content: '';
   position: absolute;
   height: 4px;
@@ -61,7 +61,7 @@ a.is-active::after {
   border-radius: 8px;
 }
 
-a.is-active {
+.menu__item.is-active {
   color: var(--blue-color);
 }
 
@@ -71,6 +71,6 @@ a.is-active {
   width: 40px;
 }
 
-.menu-item:hover {
+.menu__item:hover {
   color: var(--blue-color);
 }
