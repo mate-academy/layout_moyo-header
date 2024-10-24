@@ -1,3 +1,88 @@
+* {
+  margin: 0; /* Скидання стандартних відступів */
+  padding: 0; /* Скидання стандартних відступів */
+  box-sizing: border-box; /* Включає padding та border в ширину та висоту */
+}
+
 body {
-  margin: 0;
+  font-family: Roboto, sans-serif; /* Використання шрифту Roboto */
+  background-color: #858585; /* Колір фону */
+}
+
+.header {
+  display: flex;
+  align-items: center; /* Вертикальне центровання */
+  justify-content: space-between; /* Розташування логотипу та навігації */
+  background-color: #fff; /* Колір фону заголовка */
+  height: 60px; /* Висота заголовка */
+  padding: 0 50px; /* Відступи з боків для заголовка */
+}
+
+.logo img {
+  height: 40px; /* Висота логотипу */
+  margin-top: 10px;
+}
+
+nav {
+  display: flex; /* Гнучке розташування для навігації */
+}
+
+nav ul {
+  display: flex; /* Горизонтальне розташування списку */
+}
+
+.nav__item {
+  list-style: none; /* Прибирає маркери списку */
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.nav__link {
+  word-spacing: nowrap; /* Видалення переносу слів для лаптопів і тдю */
+  text-transform: uppercase; /* Великі літери для тексту */
+  color: black; /* Колір тексту */
+  text-decoration: none; /* Без підкреслення */
+  display: flex; /* Використовує flexbox для центровання тексту */
+  align-items: center; /* Центрує текст вертикально */
+  position: relative;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.nav__link1 {
+  word-spacing: nowrap; /* Видалення переносу слів для лаптопів і тдю */
+  text-transform: uppercase; /* Великі літери для тексту */
+  color: #00acdc; /* Колір тексту */
+  text-decoration: none; /* Без підкреслення */
+  display: flex; /* Використовує flexbox для центровання тексту */
+  align-items: center; /* Центрує текст вертикально */
+  height: 14px; /* Висота лінків */
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: #00acdc; /* Зміна кольору при наведенні */
+}
+
+.is-active::after {
+  /* Псевдоелемент для активного лінка */
+  border-radius: 8px;
+  content: ''; /* Псевдоелемент */
+  display: block; /* Відображення псевдоелемента */
+  height: 4px; /* Висота лінії */
+  width: 100%; /* Ширина лінії під активним лінком */
+  background-color: #00acdc; /* Колір лінії */
+  position: absolute; /* Змінено на absolute */
+  bottom: -30px; /* Розташування під лінком */
+  left: 0; /* Вирівнювання по горизонталі */
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    margin-right: 150px; /* Зменшення відстані між логотипом і навігацією */
+  }
 }
