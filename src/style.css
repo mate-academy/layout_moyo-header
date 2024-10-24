@@ -1,3 +1,116 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte Roboto */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Cabeçalho */
+header {
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #00a1e5;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Centraliza horizontalmente o container */
+  padding: 10px 0;
+}
+
+/* Logotipo */
+.logo img {
+  max-width: 50px;
+}
+
+/* Navegação */
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+  margin-right: 0;
+  /* Remove a margem após o último item */
+}
+
+.navbar ul li:first-child {
+  margin-left: 0;
+  /* Remove a margem antes do primeiro item */
+}
+
+.navbar ul li a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  line-height: 50px;
+  /* Altura dos links de navegação */
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Estilo do link ativo */
+.navbar ul li a.is-active {
+  color: #00a1e5;
+}
+
+/* Linha azul abaixo do link ativo */
+.navbar ul li a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: #00a1e5;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Linha azul ao passar o mouse */
+.navbar ul li a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: #00a1e5;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Transição ao passar o mouse (a linha azul aparece e se move) */
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: #00a1e5;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar ul li a:hover {
+  color: #00a1e5;
+  /* Cor azul ao passar o mouse */
 }
