@@ -23,7 +23,7 @@ body {
 }
 
 .nav {
-  display: inline;
+  display: flex;
   text-decoration: none;
   white-space: nowrap;
   margin-right: 50px;
@@ -56,18 +56,19 @@ li {
   justify-content: left;
 }
 
-nav :hover {
+nav a:hover {
   color: #04637e;
 }
-
-.iphone::after {
+/* stylelint-disable-next-line rule-empty-line-before */
+.is-active::after {
   content: '';
   height: 3px;
   display: block;
   background-color: #00acdc;
   border-radius: 8px;
   bottom: 0;
-  width: 70%;
+  width: 75%;
   margin-top: 20px;
   margin-left: 10px;
+  position: relative;
 }
