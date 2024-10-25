@@ -3,15 +3,18 @@ body {
   font-weight: 500;
   font-size: 12px;
   font-style: normal;
-}
-
-* {
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
+
+  --nav-list-color: #00acdc;
 }
 
-:root {
-  --nav-bar-color: #00acdc;
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -34,7 +37,6 @@ body {
 }
 
 .nav_list li a {
-  text-transform: uppercase;
   display: block;
   line-height: 60px;
 }
@@ -44,7 +46,7 @@ body {
 }
 
 .nav_list ul li:nth-child(4) a:hover {
-  color: var(--nav-bar-color);
+  color: var(--nav-list-color);
 }
 
 .nav_link {
@@ -55,7 +57,7 @@ body {
 .nav_list .is-active {
   display: block;
   position: relative;
-  color: var(--nav-bar-color);
+  color: var(--nav-list-color);
   line-height: 60px;
 }
 
@@ -67,5 +69,5 @@ body {
   bottom: 0;
   content: '';
   height: 4px;
-  background-color: var(--nav-bar-color);
+  background-color: var(--nav-list-color);
 }
