@@ -6,9 +6,11 @@ li {
   font-family: Roboto, sans-serif;
   margin: 0;
   list-style: none;
+
+  --color-link: #00acdc;
 }
 
-.MOYO {
+.moyo {
   display: block;
   cursor: pointer;
 }
@@ -53,16 +55,16 @@ ol {
 }
 
 .item:hover {
-  color: #00acdc;
+  color: var(--color-link);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color-link);
   position: relative;
 }
 
 .is-active::after {
-  background-color: #00acdc;
+  background-color: var(--color-link);
   content: '';
   border-radius: 8px;
   bottom: 0;
