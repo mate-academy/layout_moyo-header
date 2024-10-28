@@ -1,3 +1,87 @@
-body {
+body,
+p,
+h1,
+ul {
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  width: 100vw;
+
+  --main-lc: #00acdc;
+}
+
+/* .roboto-medium {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+} */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-left: 50px;
+}
+
+.logo img {
+  display: block;
+}
+
+.nav {
+  margin-right: 50px;
+  display: flex;
+}
+
+.nav_list {
+  list-style: none;
+}
+
+.nav_item {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 22.5px 8px;
+  align-self: center;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  height: 60px;
+  position: relative;
+}
+
+.nav_link[data-qa='hover']:hover {
+  color: var(--main-lc);
+}
+
+.nav_link.is-active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: var(--main-lc);
+  height: 4px;
+  width: 100%;
+  bottom: -23px;
+  left: 0;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.nav_link.is-active:active {
+  color: var(--main-lc);
 }
