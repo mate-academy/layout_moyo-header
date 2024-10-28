@@ -1,3 +1,7 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
 }
@@ -16,6 +20,7 @@ body {
 .nav__list {
   display: flex;
   margin: 0;
+  text-decoration: none;
 }
 
 .nav__link {
@@ -29,24 +34,24 @@ body {
 .nav__item {
   display: flex;
   /* stylelint-disable-next-line font-family-name-quotes */
-  font-family: 'Roboto', serif;
+  font-family: 'Roboto', sans-serif;
   color: black;
   height: 60px;
   font-weight: 500;
   font-size: 12px;
-  text-decoration: none;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   justify-content: center;
   align-items: center;
 }
 
 .nav__item:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
   position: relative;
 }
 
@@ -58,5 +63,5 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
