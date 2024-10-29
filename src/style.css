@@ -1,8 +1,14 @@
 body,
 p,
-h1,
+h1 {
+  margin: 0;
+}
+
 ul {
   margin: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-inline-start: 0;
 }
 
 * {
@@ -12,17 +18,13 @@ ul {
 html {
   font-family: Roboto, Arial, sans-serif;
   font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
   line-height: 15px;
   width: 100vw;
 
   --main-lc: #00acdc;
 }
-
-/* .roboto-medium {
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-} */
 
 .header {
   display: flex;
@@ -48,13 +50,18 @@ html {
 
 .nav_list {
   list-style: none;
+  display: inline-block;
 }
 
 .nav_item {
   display: inline-block;
   text-transform: uppercase;
-  padding: 22.5px 8px;
+  padding-left: 17px;
   align-self: center;
+}
+
+.nav_item:first-child {
+  padding-left: 0;
 }
 
 .nav_link {
@@ -63,9 +70,15 @@ html {
   text-align: center;
   height: 60px;
   position: relative;
+  display: block;
+  padding: 22.5px 0;
 }
 
 .nav_link[data-qa='hover']:hover {
+  color: var(--main-lc);
+}
+
+.nav_link.is-active {
   color: var(--main-lc);
 }
 
@@ -76,12 +89,7 @@ html {
   background-color: var(--main-lc);
   height: 4px;
   width: 100%;
-  bottom: -23px;
+  bottom: 0;
   left: 0;
   border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.nav_link.is-active:active {
-  color: var(--main-lc);
 }
