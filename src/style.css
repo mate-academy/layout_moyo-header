@@ -1,82 +1,95 @@
 :root {
-  --nav-text: #000;
-  --nav-hover: #00acdc;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  --link-on: #00acdc;
+  --link-off: black;
 }
 
 body {
+  margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  font-size: 12px;
-}
-
-li,
-a {
-  text-decoration: none;
-  color: var(--nav-text);
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.nav__links {
-  transition: all 0.3s ease 0s;
-  display: flex;
-  list-style: none;
-}
-
-.nav__links li a:hover {
-  color: var(--nav-hover);
 }
 
 .header {
-  width: 100vw;
   display: flex;
+  height: 60px;
   justify-content: space-between;
-  align-items: center;
   padding: 0 50px;
 }
 
-.nav {
+.header__logo {
+  align-self: center;
+  display: flex;
+  margin-left: 0;
+}
+
+.navigation {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
 }
 
-li {
-  position: relative;
+.nav_list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  padding-inline-start: 0;
+}
+
+.nav_item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav_link:link {
+  color: var(--link-off);
+  text-decoration: none;
+  font-size: 12px;
   text-transform: uppercase;
-  padding: 0 10px;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin-left: 20px;
 }
 
-li:first-of-type {
-  padding-left: 0;
+.nav_link:visited {
+  color: var(--link-off);
 }
 
-li:last-of-type {
-  padding-right: 0;
+.nav_link:hover {
+  color: var(--link-on);
 }
 
-.logo {
-  padding: 10px 0;
+.nav_link:active {
+  color: var(--link-on);
+  position: relative;
 }
 
-.is-active::after {
+.is-active:link {
+  color: var(--link-on);
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin-left: 0;
+  position: relative;
+}
+
+.is-active:visited {
+  color: var(--link-on);
+}
+
+.is-active::after,
+.nav_link:active::after {
   content: '';
   display: block;
-  height: 4px;
-  background-color: var(--nav-hover);
-  border-radius: 20%;
+  border-bottom: 4px solid var(--link-on);
   position: absolute;
-  bottom: -22px;
-  right: 10px;
+  border-radius: 2px;
   left: 0;
-}
-
-a.is-active {
-  color: var(--nav-hover);
+  right: 0;
+  bottom: 0;
 }
