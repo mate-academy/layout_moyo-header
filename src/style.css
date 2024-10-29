@@ -1,3 +1,7 @@
+:root {
+  --primary-blue: #00aaff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -25,16 +29,19 @@
 
 .nav-menu ul {
   display: flex;
-  gap: 30px;
   list-style-type: none;
   margin-top: 10px;
+}
+
+.nav-menu li {
+  margin-right: 30px;
 }
 
 .nav-menu a {
   text-decoration: none;
   color: #000;
   font-weight: 700;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   padding: 5px;
   position: relative;
@@ -43,20 +50,20 @@
 }
 
 .nav-menu a:hover {
-  color: #00aaff;
+  color: var(--primary-blue);
 }
 
-.nav-menu a.active {
-  color: #00aaff;
+.nav-menu a.is-active {
+  color: var(--primary-blue);
 }
 
-.nav-menu a.active::after {
-  content: "";
+.nav-menu a.is-active::after {
+  content: '';
   position: absolute;
   bottom: -10px;
   left: 0;
   right: 0;
   height: 3px;
-  background-color: #00aaff;
+  background-color: var(--primary-blue);
   border-radius: 2px;
 }
