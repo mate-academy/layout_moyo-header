@@ -1,6 +1,5 @@
 .roboto-regular {
   font-family: Roboto, serif;
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -8,10 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  background: gray;
 }
 
 body {
@@ -28,7 +23,6 @@ body {
   padding: 0 20px;
 }
 
-/* Logo styling */
 .moyoLogo {
   display: flex;
   justify-content: center;
@@ -56,6 +50,7 @@ body {
 
 .nav-links li + li {
   margin-left: 20px;
+  line-height: 60px;
 }
 
 .nav-item {
@@ -66,7 +61,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .nav-item:hover {
@@ -74,17 +68,18 @@ body {
 }
 
 .is-active {
-  position: relative;
   display: flex;
   color: rgba(0, 172, 220, 1);
   align-items: center;
+  justify-content: center;
   background: white;
+  line-height: 60px;
 }
 
 a.is-active {
-  height: 15px;
   display: flex;
   align-items: center;
+  background-color: #fff;
 }
 
 .is-active::after {
@@ -95,18 +90,17 @@ a.is-active {
   position: absolute;
   bottom: 0;
   left: 0;
-  top: 33px;
   border-radius: 8px;
 }
 
 @media (max-width: 1200px) {
   html {
-    width: 1200px;
+    width: 100%;
   }
 }
 
 @media (max-width: 1024px) {
   html {
-    width: 1024px;
+    width: 100%;
   }
 }
