@@ -1,13 +1,13 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
-}
-
-.header {
-  width: 100%;
 }
 
 .container {
@@ -51,20 +51,20 @@ li:last-child {
 .nav-links {
   display: flex;
   align-items: center;
-  flex-grow: 1;
   position: relative;
   height: 60px;
   color: #000;
   text-decoration: none;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .nav-links:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav-links.is-active::after {
@@ -74,5 +74,5 @@ li:last-child {
   height: 4px;
   top: 56px;
   border-radius: 10px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
