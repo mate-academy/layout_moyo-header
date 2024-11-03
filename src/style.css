@@ -1,3 +1,92 @@
+/* CSS Variable for the blue color */
+:root {
+  --blue-color: #00ACDC;
+}
+
+/* Reset browser margins */
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  width: 100%;
+}
+
+/* Logo */
+.logo img {
+  width: auto;
+  height: 40px;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Link styles */
+nav a {
+  text-decoration: none;
+  color: #000;
+  margin: 0 20px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 400;
+  height: 40px; /* Specific height for nav links as per requirement */
+  display: flex;
+  align-items: center; /* Center vertically within the link height */
+}
+
+/* Default blue color for "Laptops & Computers" */
+.default-blue {
+  color: var(--blue-color);
+}
+
+/* Active link with underline */
+nav .is-active {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: var(--blue-color);
+}
+
+/* Hover effect for links */
+nav a:hover {
+  color: var(--blue-color);
+}
+
+nav a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: var(--blue-color);
+}
+
+/* No margin for first and last items */
+nav ul li:first-child a {
+  margin-left: 0;
+}
+
+nav ul li:last-child a {
+  margin-right: 0;
 }
