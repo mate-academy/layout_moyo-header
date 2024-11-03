@@ -1,4 +1,9 @@
-/* Reseta margens do navegador */
+/* CSS Variable for the blue color */
+:root {
+  --blue-color: #00ACDC;
+}
+
+/* Reset browser margins */
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
@@ -6,12 +11,13 @@ body {
   color: #000;
 }
 
-/* Estilos para o cabeçalho */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
+  width: 100%;
 }
 
 /* Logo */
@@ -20,11 +26,7 @@ header {
   height: 40px;
 }
 
-/* Estilos para a navegação */
-nav {
-  display: flex;
-}
-
+/* Navigation */
 nav ul {
   display: flex;
   list-style-type: none;
@@ -32,25 +34,27 @@ nav ul {
   margin: 0;
 }
 
-/* Estilos para os links */
+/* Link styles */
 nav a {
   text-decoration: none;
   color: #000;
   margin: 0 20px;
   position: relative;
   text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
+  font-weight: 400;
+  height: 40px; /* Specific height for nav links as per requirement */
+  display: flex;
+  align-items: center; /* Center vertically within the link height */
 }
 
-/* Cor azul para o link "Laptops & Computers" */
+/* Default blue color for "Laptops & Computers" */
 .default-blue {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
-/* Linha azul e cor para o link ativo */
+/* Active link with underline */
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active::after {
@@ -60,12 +64,12 @@ nav a {
   right: 0;
   bottom: -5px;
   height: 2px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
 
-/* Linha e cor azul ao passar o mouse */
+/* Hover effect for links */
 nav a:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 nav a:hover::after {
@@ -75,10 +79,10 @@ nav a:hover::after {
   right: 0;
   bottom: -5px;
   height: 2px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
 
-/* Remove margens do primeiro e último item */
+/* No margin for first and last items */
 nav ul li:first-child a {
   margin-left: 0;
 }
