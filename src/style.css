@@ -1,3 +1,50 @@
 body {
   margin: 0;
+  background-color: #1a1a1a;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 0 20px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.06px;
+}
+
+.menu a.active {
+  color: #0af;
+  position: relative;
+}
+
+.menu a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 37px;
+  height: 4px;
+  background-color: #0af;
+  border-radius: 8px;
 }
