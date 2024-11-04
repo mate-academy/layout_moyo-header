@@ -1,15 +1,18 @@
+:root {
+  --nav-color: #00acdc;
+}
+
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
 }
 
+
 .header {
   display: flex;
   align-items: center;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+  padding: 0 50px;
 }
 
 .logo {
@@ -23,7 +26,8 @@ body {
 
 .nav_list {
   display: flex;
-  font-size: 18px;
+  font-size: 16px;
+  text-transform: uppercase;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -36,14 +40,13 @@ body {
   line-height: 60px;
 }
 
-
 .nav_link:active {
-  text-decoration: underline solid #00acdc 4px;
+  text-decoration: underline solid var(--nav-color) 4px;
   text-underline-offset: 15px;
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--nav-color);
 }
 
 .firstItem {
