@@ -1,17 +1,17 @@
 body {
   margin: 0;
   background-color: #1a1a1a;
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif; /* Убраны кавычки вокруг "Roboto" */
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 1200px;
+  max-width: 1200px;
   height: 60px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #fff; /* Сокращена длина кода цвета */
   padding: 0 20px;
 }
 
@@ -25,26 +25,28 @@ body {
   gap: 20px;
 }
 
-.menu a {
+.menu__link {
   text-decoration: none;
-  color: black;
+  color: #000; /* Сокращена длина кода цвета */
   font-size: 12px;
   font-weight: 500;
-  line-height: 14.06px;
+  line-height: 60px; /* Выровнено по высоте заголовка */
+  padding: 0 5px; /* Подкорректирован паддинг для выравнивания */
 }
 
-.menu a.active {
-  color: #0af;
+.menu__link.is-active {
+  color: #00acdc;
   position: relative;
 }
 
-.menu a.active::after {
+.menu__link.is-active::after {
   content: '';
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -4px;
   width: 37px;
   height: 4px;
-  background-color: #0af;
+  background-color: #00acdc;
   border-radius: 8px;
 }
