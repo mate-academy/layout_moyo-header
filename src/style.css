@@ -1,16 +1,13 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 12px;
-  font-weight: 500;
-  font-family: Roboto, sans-serif;
-  text-transform: uppercase;
+:root {
+  --color-blue: #00acdc;
 }
 
 body {
   margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  box-sizing: border-box;
+  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
 }
 
 .header {
@@ -26,8 +23,7 @@ body {
   display: block;
   height: 40px;
   width: 40px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .nav__list {
@@ -48,11 +44,12 @@ body {
   line-height: 60px;
   align-items: center;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--color-blue);
 }
 
 .nav__item:first-child {
@@ -60,7 +57,7 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color-blue);
 }
 
 .is-active::after {
@@ -72,5 +69,5 @@ body {
   right: 0;
   bottom: 0;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--color-blue);
 }
