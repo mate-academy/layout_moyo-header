@@ -12,13 +12,12 @@ body {
 }
 
 .header {
-  position: relative;
-  padding: 10px 50px;
+  padding: 0 50px;
   background-color: #fff;
 
   display: flex;
   justify-content: space-between;
-  max-height: 60px;
+  align-items: center;
 }
 
 .header-logo__link {
@@ -31,10 +30,6 @@ body {
   height: 100%;
 }
 
-.nav {
-  margin: auto 0;
-}
-
 .nav__list {
   padding: 0;
   margin: auto;
@@ -45,22 +40,21 @@ body {
   align-items: center;
 }
 
-.nav__item {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 12px;
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
-}
-
 .nav__link {
+  display: block;
+
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
   text-decoration: none;
   color: #000;
   line-height: 14px;
-  height: 50px;
+
+  padding: 23px 0;
 }
 
 .nav__link:hover {
@@ -72,6 +66,7 @@ body {
 }
 
 .is-active {
+  position: relative;
   color: var(--active-color);
 }
 
