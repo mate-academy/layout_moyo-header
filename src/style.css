@@ -1,3 +1,73 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 70px;
+}
+
+nav a {
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 2px;
+  line-height: 15px;
+}
+
+nav a.is-active {
+  color: #00acdc;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #00acdc;
+}
+
+nav a:hover {
+  color: #00acdc;
 }
