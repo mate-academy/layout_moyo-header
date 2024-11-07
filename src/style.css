@@ -1,39 +1,40 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto font', sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
-  font-style: normal;
+  font-size: 12px;
+  line-height: 14px;
 }
 
-.header {
-  height: 60px;
-}
-
-.nav {
+.header__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-transform: uppercase;
+  position: relative;
   margin: 0 50px;
 }
 
-.nav__logo {
-  margin-top: 10px;
+.nav {
+  text-transform: uppercase;
+}
+
+.logo {
+  margin: 10px 0;
 }
 
 .nav__list {
   display: flex;
   flex-direction: row;
-  align-items: center;
   list-style-type: none;
 }
 
 .nav__item {
-  padding-right: 20px;
+  padding: 0 20px;
 }
 
 .nav__link {
+  height: 60px;
   text-decoration: none;
   color: var(--nav-main-color);
 }
@@ -43,23 +44,21 @@ body {
   color: var(--active-link-color);
 }
 
+.is-active {
+  color: var(--active-link-color);
+  position: relative;
+}
+
 .is-active::after {
   color: var(--active-link-color);
-  display: block;
   content: '';
   width: 37px;
+  left: 0;
+  top: 100%;
   height: 4px;
   border-radius: 8px;
   background: var(--active-link-color);
   position: absolute;
-  bottom: 0;
-}
-
-.under-line {
-  border-bottom: 4px solid var(--active-link-color);
-  width: fit-content;
-  border-radius: 8px;
-  padding: 19px;
 }
 
 :root {
