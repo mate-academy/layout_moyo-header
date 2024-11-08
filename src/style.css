@@ -1,25 +1,23 @@
-html {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
   font-family: Roboto, sans-serif;
 }
 
 header {
   width: 100%;
   background-color: #f8f8f8;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  height: 60px;
 }
 
-.logo img {
-  height: 40px;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
   display: block;
 }
 
@@ -29,7 +27,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 20px;
+  margin: 0 15px;
 }
 
 nav ul li:last-child {
@@ -42,31 +40,29 @@ nav ul li:first-child {
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: #000;
   display: block;
+  text-transform: uppercase;
   text-align: center;
   line-height: 60px;
-}
-
-nav a:hover {
-  color: #007bff;
-}
-
-is-active {
-  color: #007bff;
   position: relative;
 }
 
-is-active::after {
+nav a:hover {
+  color: var(--blue);
+}
+
+.is-active::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  display: block;
+  bottom: -2px;
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #007bff;
+  background-color: var(--blue);
 }
 
-[data-qa='hover']:hover {
-  color: #007bff;
+:root {
+  --blue: #007bff;
 }
