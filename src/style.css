@@ -41,28 +41,22 @@ body {
 }
 
 .menu__link {
-  color: #000;
+  display: inline-block;
+  line-height: var(--header-height);
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.menu__item:focus,
-.menu__link:active,
 .menu__link:visited {
   color: #000;
 }
 
-.menu__item a {
-  display: inline-block;
-  line-height: var(--header-height);
-}
-
-.menu__item a:hover {
+.menu__link:hover {
   color: var(--link-color);
 }
 
 a.is-active {
-  color: var(--link-color);
+  color: var(--link-color) !important;
 }
 
 a.is-active::after {
