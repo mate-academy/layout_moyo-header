@@ -1,9 +1,9 @@
 body {
   margin: 0;
+  background-color: darkblue;
   font-family: Roboto, serif;
   font-weight: 500;
   font-style: normal;
-  background-color: darkblue;
 }
 
 header {
@@ -18,24 +18,19 @@ header {
   display: flex;
 }
 
-img {
-  display: block;
-}
-
-nav {
-  display: flex;
+.nav {
+  display: inline-block;
 }
 
 .nav-list {
+  margin: 0;
+  padding: 0;
   display: flex;
   list-style-type: none;
   text-transform: uppercase;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-link {
-  display: flex;
   font-size: 12px;
   line-height: 60px;
   text-decoration: none;
@@ -43,29 +38,24 @@ nav {
   margin-left: 20px;
   white-space: nowrap;
   position: relative;
-  align-items: center;
 }
 
-.nav-list li:first-child .nav-link {
-  margin-left: 0;
-}
-
-:hover {
-  color: #00acdc;
+.nav-link.is-active::after {
+  content: '';
+  display: flex;
+  position: absolute;
+  background-color: #00acdc;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  left: 0;
+  transform: translateY(-100%);
 }
 
 .is-active {
   color: #00acdc;
 }
 
-.nav-link.is-active::after {
-  content: '';
-  background-color: #00acdc;
-  border-radius: 8px;
-  display: block;
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+:hover {
+  color: #00acdc;
 }
