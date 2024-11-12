@@ -1,3 +1,73 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-color: rgba(0, 172, 220, 1);
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  width: 100%;
+  padding: 10px 50px;
+  height: 60px;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+}
+
+.nav-list li {
+  margin-left: 20px;
+}
+
+.nav-list li:first-child {
+  margin-left: 0;
+}
+
+.nav-list li:last-child {
+  margin-right: 0;
+}
+
+.nav-list a {
+  /* margin: 0 10px; */
+  color: black;
+  text-decoration: none;
+  height: 40px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.nav-list a:hover {
+  color: var(--blue-color);
+}
+
+.nav-list a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -30.5px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--blue-color);
+  transition:
+    width 0.3s,
+    left 0.3s;
 }
