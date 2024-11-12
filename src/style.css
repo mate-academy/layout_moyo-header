@@ -1,11 +1,3 @@
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-
 body {
   margin: 0;
   background-color: darkblue;
@@ -16,18 +8,23 @@ body {
 
 header {
   background-color: white;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  display: flex;
+}
+
+.nav {
+  display: inline-block;
 }
 
 .nav-list {
+  margin: 0;
+  padding: 0;
   display: flex;
   list-style-type: none;
   text-transform: uppercase;
@@ -35,14 +32,30 @@ header {
 
 .nav-link {
   font-size: 12px;
-  height: 60px;
+  line-height: 60px;
   text-decoration: none;
   color: #000;
   margin-left: 20px;
   white-space: nowrap;
+  position: relative;
+}
+
+.nav-link.is-active::after {
+  content: '';
+  display: flex;
+  position: absolute;
+  background-color: #00acdc;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  left: 0;
+  transform: translateY(-100%);
 }
 
 .is-active {
-  color: #00ACDC;
-  ;
+  color: #00acdc;
+}
+
+:hover {
+  color: #00acdc;
 }
