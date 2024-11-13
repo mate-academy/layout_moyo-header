@@ -16,12 +16,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
   flex-wrap: nowrap;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .logo {
-  margin: auto 50px;
+  margin: auto;
 }
 
 nav {
@@ -29,13 +30,14 @@ nav {
   height: 100%;
   align-items: center;
   flex-wrap: nowrap;
-  margin: auto 50px;
+  float: right;
 }
 
 .links-list {
   list-style-type: none;
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .nav-link {
@@ -44,19 +46,32 @@ nav {
   color: black;
   position: relative;
   align-items: center;
-  margin: 0 10px;
+  justify-content: center;
   flex-wrap: nowrap;
+  height: 100%;
+}
+
+.links-list li {
+  margin-right: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.links-list li:last-child {
+  margin-right: 0;
 }
 
 .is-active::after {
   content: '';
   position: absolute;
-  top: calc(var(--header-height) / 2);
   left: 0;
   width: 100%;
   height: 4px;
   background-color: var(--color-links);
   border-radius: 8px;
+  display: flex;
+  align-self: flex-end;
 }
 
 .is-active {
@@ -65,4 +80,8 @@ nav {
 
 .nav-link:hover {
   color: var(--color-links);
+}
+
+.logo_href {
+  height: 40px;
 }
