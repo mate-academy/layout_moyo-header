@@ -1,12 +1,18 @@
-body {
-  margin: 0;
+:root {
+  --header-color: #00acdc;
+}
+
+html {
   font-family: Roboto, serif;
   font-weight: 500;
   font-style: normal;
-  background-color: darkblue;
 }
 
-header {
+body {
+  margin: 0;
+}
+
+.header {
   background-color: white;
   padding: 0 50px;
   display: flex;
@@ -47,7 +53,7 @@ nav {
 }
 
 .nav-link:hover {
-  color: #00acdc;
+  color: var(--header-color);
 }
 
 .nav-list li:first-child .nav-link {
@@ -55,12 +61,12 @@ nav {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--header-color);
 }
 
 .nav-link.is-active::after {
   content: '';
-  background-color: #00acdc;
+  background-color: var(--header-color);
   border-radius: 8px;
   display: block;
   height: 4px;
