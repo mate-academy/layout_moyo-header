@@ -1,3 +1,88 @@
+:root {
+  --main-color: #00acdc;
+}
+
 body {
   margin: 0;
+  box-sizing: border-box;
+}
+
+.header__container {
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  max-width: 1200px;
+  background-color: #ffff;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-width: 40px;
+  width: 100%;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 60px;
+  text-transform: uppercase;
+  height: 60px;
+}
+
+.nav__item {
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  position: relative;
+  height: 60px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.nav__link {
+  box-sizing: border-box;
+  border-bottom: 4px solid transparent;
+  transition:
+    color 0.5s,
+    border-color 0.5s;
+}
+
+.nav__link:hover {
+  color: var(--main-color);
+  border-bottom: 4px solid var(--main-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--main-color);
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 4px solid var(--main-color);
+  height: 100%;
+  width: 100%;
+}
+
+.nav__link:nth-child(4) {
+  color: var(--main-color);
 }
