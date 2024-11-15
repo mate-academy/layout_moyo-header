@@ -1,7 +1,11 @@
 @media (max-width: 1024px) {
   .header {
-    width: 1024px;
+    min-width: 1024px;
   }
+}
+
+html {
+  --blue-color: #00acdc;
 }
 
 body {
@@ -12,20 +16,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
-img {
+.logo {
   display: block;
   width: 40px;
   height: 40px;
-  padding-left: 50px;
 }
 
 .nav__list {
   display: flex;
   margin: 0;
   padding: 0;
-  padding-right: 50px;
 }
 
 .nav__item {
@@ -36,7 +39,7 @@ img {
 
 .nav__link {
   color: #000;
-  font-family: Roboto, serif;
+  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 60px;
@@ -49,17 +52,17 @@ img {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active::after {
   content: '';
   display: block;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   width: 37px;
   height: 4px;
   border-radius: 8px;
