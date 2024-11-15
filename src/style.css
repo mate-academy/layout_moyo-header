@@ -1,7 +1,30 @@
-* {
+:root {
+  --primary-color: #00acdc;
+}
+
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+a,
+img,
+table,
+th,
+td {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 body {
@@ -10,7 +33,6 @@ body {
 
 .header {
   display: flex;
-  width: 100%;
   padding: 0 50px;
   justify-content: space-between;
   align-items: center;
@@ -51,11 +73,11 @@ body {
 }
 
 [data-qa='hover']:hover {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .is-active::after {
@@ -64,7 +86,7 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--primary-color);
   bottom: 0;
   left: 0;
 }
