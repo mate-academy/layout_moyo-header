@@ -1,14 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --primary-blue: #00acdc;
+  --font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-family);
   font-size: 12px;
   font-weight: 500;
+  padding: 0;
+  box-sizing: border-box;
+
 }
 
 .header {
@@ -25,7 +27,7 @@ body {
   width: 40px;
 }
 
-ul {
+.nav__list {
   list-style: none;
   display: flex;
 }
@@ -37,6 +39,7 @@ ul {
   position: relative;
   height: 60px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .is-active {
@@ -44,7 +47,7 @@ ul {
 }
 
 .is-active::after {
-  background-color: #00acdc;
+  background-color: var(--primary-blue);
   height: 4px;
   width: 100%;
   content: '';
@@ -56,5 +59,5 @@ ul {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--primary-blue);
 }
