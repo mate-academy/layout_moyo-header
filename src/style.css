@@ -1,3 +1,70 @@
+:root {
+  --primary-color: #00acdc;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
 body {
+  /* stylelint-disable-next-line font-family-name-quotes */
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
   margin: 0;
+}
+
+.navList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.link {
+  display: flex;
+}
+
+.link:not(:first-child) {
+  margin-left: 20px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.nav--link {
+  line-height: 60px;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+.is-active {
+  color: var(--primary-color);
+}
+
+.link:hover a {
+  color: var(--primary-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  top: 56px;
+  left: 0;
+  right: 0;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  bottom: 0;
+  background-color: var(--primary-color);
+  border-radius: 8px;
 }
