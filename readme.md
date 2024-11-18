@@ -1,5 +1,11 @@
 # Moyo header
+<<<<<<< HEAD
 Create HTML page with the header using `flexbox` based on the [Figma Mockup](https://www.figma.com/file/1sog2rmfyCjnVxkeZ3ptnc/MOYO-%2F-Header?node-id=0%3A1&mode=dev).
+=======
+Replace `<your_account>` with your Github username and copy the links to Pull Request description:
+- [DEMO LINK](https://Tarasov123555.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://Tarasov123555.github.io/layout_moyo-header/report/html_report/)
+>>>>>>> 73a72795196f5eb2838f5b90c8d8aba6e12621c0
 
 The page should match the design Pixel Perfect: all the sizes, colors and distanced MUST be the same as on the design.
 
