@@ -13,14 +13,21 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-img {
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+a.img {
   display: block;
   position: relative;
   width: 40px;
   height: 40px;
   top: 10px;
-
-  /* left: 50px; */
 }
 
 a.blue {
@@ -29,16 +36,7 @@ a.blue {
 
 .container {
   display: flex;
-}
-
-header {
-  display: flex;
-
-  /* align-items: center; */
-  justify-content: space-between;
-  padding: 0 50px;
-  width: 100%;
-  margin-bottom: 20px;
+  font-size: 12px;
 }
 
 .header {
@@ -47,8 +45,6 @@ header {
 
 .nav__list {
   display: flex;
-
-  /* height: 60px; */
   align-items: center;
   margin: 20px;
   margin-top: 0;
@@ -88,10 +84,9 @@ a.is-active::after {
   content: '';
   position: relative;
   display: block;
-  bottom: 0; /* Лінія точно на нижньому краю навігації */
-  left: 0;
+  top: 12px;
   width: 100%; /* Ширина лінії дорівнює ширині тексту */
-  background-color: #00acdc;
+  background-color: var(--main-color);
   border-radius: 8px;
   height: 4px;
 }
