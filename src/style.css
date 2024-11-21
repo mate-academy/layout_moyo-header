@@ -9,56 +9,57 @@ body {
 }
 
 .container {
-  margin: 0;
-  height: 60px;
-  border: 1px solid rgb(175, 174, 174);
-  background-color: #fff;
   display: flex;
   align-items: center;
-  text-align: center;
   justify-content: space-between;
   padding: 0 50px;
 }
 
-.nav--link.is-active {
-  color: #00acdc;
-  position: relative;
-}
-
-.logo {
+.nav-list {
+  display: flex;
+  margin: 0;
   padding: 0;
-  height: 40px;
-  width: 419px;
-  margin-top: 0;
-}
-
-.link {
-  text-align: center;
-  height: 18px;
-  color: #00acdc;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.nav--link.is-active::after {
-  text-align: center;
-  content: '';
-  display: block;
-  height: 4px;
-  background: #00acdc;
-  border-radius: 8px;
-  margin-top: 18px;
+  list-style: none;
 }
 
 .nav--link {
   font-size: 12px;
-  margin-left: 20px;
   color: #000;
   text-decoration: none;
   display: block;
-  height: 18px;
+  line-height: 60px;
 }
 
 .nav--link:hover {
   color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  height: 4px;
+  background: #00acdc;
+  width: 100%;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+}
+
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.link {
+  margin-left: 20px;
+}
+
+.link:first-child {
+  margin-left: 0;
 }
