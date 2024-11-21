@@ -1,3 +1,97 @@
-body {
+* {
   margin: 0;
+}
+
+:root {
+  --active-color: #00acdc;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #e5e5e5;
+}
+
+header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.logo,
+nav {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+nav a {
+  position: relative;
+  max-width: 1200px;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 60px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin-right: 20px;
+  list-style: none;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+.logo a {
+  height: 40px;
+}
+
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #00acdc;
+  margin: 0;
+  border-radius: 2px;
+}
+
+nav a.is-active {
+  color: var(--active-color);
+}
+
+nav a:hover {
+  color: var(--active-color);
+}
+
+.logo img {
+  max-height: 40px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
