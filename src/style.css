@@ -1,5 +1,6 @@
 html {
   --p-header: 50px;
+  --active-color: #00acdc;
 }
 
 body,
@@ -11,6 +12,7 @@ a {
   margin: 0;
   padding: 0;
   color: #000;
+  text-decoration: none;
 }
 
 .header {
@@ -21,28 +23,32 @@ a {
   width: calc(100% - (var(--p-header) * 2));
 }
 
-.nav-menu {
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__menu {
   display: flex;
   list-style: none;
 }
 
-.nav-menu-item:not(:last-child) {
+.nav__menu__item:not(:last-child) {
   margin-right: 20px;
   position: relative;
 }
 
-.nav-menu-item a {
+.nav__menu__item a {
   display: flex;
   align-items: center;
   height: 60px;
   font-weight: 500;
-  text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 .is-active::after {
@@ -51,10 +57,10 @@ a {
   bottom: 0;
   left: 0;
   width: 37px;
-  border-bottom: 4px solid #00acdc;
+  border-bottom: 4px solid var(--active-color);
   border-radius: 8px;
 }
 
-.nav-menu-item a:hover {
-  color: #00acdc;
+.nav__menu__item a:hover {
+  color: var(--active-color);
 }
