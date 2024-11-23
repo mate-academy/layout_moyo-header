@@ -1,7 +1,3 @@
-* {
-  margin: 0;
-}
-
 :root {
   --active-color: #00acdc;
 }
@@ -9,24 +5,25 @@
 body {
   font-family: Roboto, sans-serif;
   background-color: #e5e5e5;
+  margin: 0;
 }
 
-header {
+.header {
   background: #fff;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 0 50px;
+  height: 60px;
   box-sizing: border-box;
 }
 
-.logo,
-nav {
+.nav {
   display: flex;
   align-items: center;
-  height: 60px;
 }
 
-nav a {
+.nav-link {
   position: relative;
   max-width: 1200px;
   display: flex;
@@ -41,7 +38,7 @@ nav a {
   color: #000;
 }
 
-nav ul {
+.nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -49,20 +46,22 @@ nav ul {
   justify-content: space-between;
 }
 
-nav ul li {
+.nav-item {
   margin-right: 20px;
   list-style: none;
 }
 
-nav ul li:last-child {
+.nav-item:last-child {
   margin-right: 0;
 }
 
-.logo a {
+.header-logo {
   height: 40px;
+  display: flex;
+  align-items: center;
 }
 
-nav a.is-active::after {
+.nav-link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -73,16 +72,19 @@ nav a.is-active::after {
   border-radius: 2px;
 }
 
-nav a.is-active {
+.nav-link.is-active {
   color: var(--active-color);
 }
 
-nav a:hover {
+.nav-link:hover {
   color: var(--active-color);
 }
 
-.logo img {
+.header-logo-img {
   max-height: 40px;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .visually-hidden {
