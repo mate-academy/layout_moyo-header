@@ -1,3 +1,7 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -30,6 +34,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   flex-wrap: nowrap;
+  text-transform: uppercase;
 }
 
 .nav-list {
@@ -57,11 +62,11 @@ body {
 }
 
 .menu-item:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .menu-item.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .menu-item.is-active::after {
@@ -71,7 +76,7 @@ body {
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   border-radius: 8px;
 }
 
@@ -80,5 +85,5 @@ body {
 }
 
 .nav-list li:last-child .menu-item {
-  margin-right: 0; 
+  margin-right: 0;
 }
