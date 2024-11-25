@@ -8,25 +8,72 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f8f8f8;
+  background-color: #FFF;
+  position: relative;
+  width: 1200px;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo img {
   height: 40px;
+  position: absolute;
+  left: 50px;
+  top: 10px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  position: absolute;
+  left: 509px;
+  top: 22.5px;
+}
+
+nav ul li {
+  position: relative;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #333;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
 }
 
 nav ul li a.is-active {
   font-weight: bold;
   color: #007BFF;
+}
+
+nav ul li a.apple {
+  color: #00ACDC;
+}
+
+nav ul li a.laptops {
+  font-weight: 500;
+  color: #00ACDC;
+}
+
+nav ul li a.smartphones,
+nav ul li a.gadgets,
+nav ul li a.tablets,
+nav ul li a.photo,
+nav ul li a.video {
+  font-weight: 500;
+  color: #000;
+}
+
+nav ul li.active-indicator {
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  left: 0;
+  top: 56px;
+  background: #00ACDC;
+  border-radius: 8px;
 }
