@@ -1,3 +1,87 @@
 body {
   margin: 0;
+  padding-top: 0;
+  font-family: Roboto, sans-serif;
+}
+
+:root {
+  --blue-color: #00acdc;
+}
+
+.is-active {
+  font-weight: 500;
+  color: var(--blue-color);
+  position: relative;
+  font-size: 12px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+}
+
+.nav_link {
+  position: relative;
+  font-weight: 500;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  height: 60px;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+.nav_item {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.nav_item:last-child {
+  margin: 0;
+}
+
+.nav_item:first-child {
+  margin: 0;
+}
+
+.nav_link:hover {
+  color: var(--blue-color);
+  text-decoration: none;
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-left: 0;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
 }
