@@ -3,39 +3,42 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: #FFF;
   position: relative;
-  width: 1200px;
-  height: 60px;
+  width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.logo img {
+.header-logo img {
   height: 40px;
   position: absolute;
   left: 50px;
   top: 10px;
 }
 
-nav ul {
+.header-nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
   position: absolute;
   left: 509px;
   top: 22.5px;
 }
 
-nav ul li {
+.header-nav ul li {
+  margin-right: 20px;
   position: relative;
 }
 
-nav ul li a {
+.header-nav ul li:last-child {
+  margin-right: 0;
+}
+
+.header-nav ul li a {
   text-decoration: none;
   color: #333;
   font-family: Roboto, sans-serif;
@@ -45,35 +48,38 @@ nav ul li a {
   text-transform: uppercase;
 }
 
-nav ul li a.is-active {
+.header-nav ul li a.is-active {
   font-weight: bold;
   color: #007BFF;
 }
 
-nav ul li a.apple {
+.header-nav ul li a.apple {
   color: #00ACDC;
 }
 
-nav ul li a.laptops {
+.header-nav ul li a.laptops {
   font-weight: 500;
   color: #00ACDC;
 }
 
-nav ul li a.smartphones,
-nav ul li a.gadgets,
-nav ul li a.tablets,
-nav ul li a.photo,
-nav ul li a.video {
+.header-nav ul li a.smartphones,
+.header-nav ul li a.gadgets,
+.header-nav ul li a.tablets,
+.header-nav ul li a.photo,
+.header-nav ul li a.video {
   font-weight: 500;
   color: #000;
 }
 
-nav ul li.active-indicator {
-  position: absolute;
+.header-nav ul li a.is-active::after {
+  content: '';
+  display: block;
   width: 37px;
   height: 4px;
-  left: 0;
-  top: 56px;
   background: #00ACDC;
   border-radius: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
 }
