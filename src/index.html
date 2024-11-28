@@ -12,11 +12,111 @@
     />
     <title>Moyo header</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
-      href="./style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
     />
   </head>
   <body>
-    <h1>Moyo header</h1>
+    <header>
+      <a
+        href="#"
+        class="logo"
+      >
+        <img
+          src="./images/logo.png"
+          alt="logo"
+        />
+      </a>
+
+      <nav class="nav">
+        <ul class="list">
+          <li class="list-item">
+            <a
+              href="#apple"
+              class="link is-active"
+            >
+              Apple
+            </a>
+          </li>
+          <li class="list-item">
+            <a
+              href="#samsung"
+              class="link"
+            >
+              Samsung
+            </a>
+          </li>
+          <li class="list-item">
+            <a
+              href="#smartphones"
+              class="link"
+            >
+              Smartphones
+            </a>
+          </li>
+          <li class="list-item">
+            <a
+              href="#laptopscomputers"
+              class="link"
+              data-qa="hover"
+            >
+              Laptops & Computers
+            </a>
+          </li>
+          <li class="list-item">
+            <a
+              href="#gadgets"
+              class="link"
+            >
+              Gadgets
+            </a>
+          </li>
+          <li class="list-item">
+            <a
+              href="#tablets"
+              class="link"
+            >
+              Tablets
+            </a>
+          </li>
+          <li class="list-item">
+            <a
+              href="#photo"
+              class="link"
+            >
+              Photo
+            </a>
+          </li>
+          <li class="list-item">
+            <a
+              href="#video"
+              class="link"
+            >
+              Video
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <script>
+      const navLinks = document.querySelectorAll('.list .link');
+
+      function removeActiveClass() {
+        navLinks.forEach((link) => link.classList.remove('is-active'));
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+
+          removeActiveClass();
+          link.classList.add('is-active');
+        });
+      });
+    </script>
   </body>
 </html>
