@@ -1,3 +1,97 @@
-body {
+html {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-blue-active: #00acdc;
+}
+
+ul {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: inherit;
+  margin: 0;
+  background-color: #c9c8c8;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* Стили для Хедера */
+.head {
+  padding-left: 50px;
+  padding-right: 50px;
+  font-weight: 500;
+  background: #fff;
+}
+
+.head__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .head__item1 {
+}
+
+.head-logo-link {
+}
+
+.head__item2 {
+}
+
+.head-nav {
+} */
+
+.head-nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #000;
+  transition: all 0.3s;
+}
+
+.head-nav-list a {
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+}
+
+/* стиль для активной ссылки */
+.is-active {
+  position: relative;
+  color: var(--color-blue-active);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  background: var(--color-blue-active);
+}
+
+a[data-qa='hover']:hover {
+  color: var(--color-blue-active);
 }
