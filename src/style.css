@@ -1,6 +1,8 @@
 body {
   font-family: Roboto, serif, sans-serif;
   margin: 0;
+
+  --active-link-color: #00acdc;
 }
 
 .nav-list {
@@ -40,18 +42,18 @@ li.nav__item:last-child {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--active-link-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--active-link-color);
 }
 
 .is-active::after {
   content: '';
   height: 4px;
   width: 100%;
-  background: #00acdc;
+  background: var(--active-link-color);
   bottom: 0;
   left: 0;
   position: absolute;
