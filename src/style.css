@@ -1,85 +1,70 @@
+html {
+  --nav-hover-color: #00acdc;
+  --nav-color: black;
+  --header-bg-color: #fff;
+}
+
 body {
-  /* stylelint-disable-next-line font-family-name-quotes */
-  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .header {
-  display: flex;
+  background-color: var(--header-bg-color);
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #FFF;
-  position: relative;
-  width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.header-logo img {
-  height: 40px;
-  position: absolute;
-  left: 50px;
-  top: 10px;
-}
-
-.header-nav ul {
-  list-style: none;
+  padding: 0 50px;
   display: flex;
-  position: absolute;
-  left: 509px;
-  top: 22.5px;
 }
 
-.header-nav ul li {
+.header-link {
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  height: 60px;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-item:not(:last-child) {
   margin-right: 20px;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  color: var(--nav-color);
+  justify-content: center;
+  align-items: center;
+  line-height: 60px;
+  text-decoration: none;
+  display: flex;
   position: relative;
 }
 
-.header-nav ul li:last-child {
-  margin-right: 0;
+.nav-link:hover,
+.nav-link.working {
+  color: var(--nav-hover-color);
 }
 
-.header-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-}
-
-.header-nav ul li a.is-active {
-  font-weight: bold;
-  color: #007BFF;
-}
-
-.header-nav ul li a.apple {
-  color: #00ACDC;
-}
-
-.header-nav ul li a.laptops {
-  font-weight: 500;
-  color: #00ACDC;
-}
-
-.header-nav ul li a.smartphones,
-.header-nav ul li a.gadgets,
-.header-nav ul li a.tablets,
-.header-nav ul li a.photo,
-.header-nav ul li a.video {
-  font-weight: 500;
-  color: #000;
-}
-
-.header-nav ul li a.is-active::after {
+.nav-link.working::after {
   content: '';
-  display: block;
-  width: 37px;
-  height: 4px;
-  background: #00ACDC;
+  background-color: var(--nav-hover-color);
   border-radius: 8px;
+  height: 4px;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
