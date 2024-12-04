@@ -1,10 +1,15 @@
+:root {
+  --main-color: #00acdc;
+}
+
 body {
   margin: 0;
   display: flex;
   justify-content: center;
+  font-family: Roboto, sans-serif;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
@@ -22,7 +27,6 @@ header {
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: center;
 }
 
 .nav__item {
@@ -35,18 +39,16 @@ header {
   margin-left: 0;
 }
 
-a {
-  display: block;
-  align-items: center;
-  line-height: 60px;
-}
-
 .logo {
+  align-items: center;
   display: flex;
 }
 
 .nav__link {
-  font-family: Roboto, serif;
+  align-items: center;
+  line-height: 60px;
+  display: block;
+
   font-weight: 500;
   text-decoration: none;
   color: #000;
@@ -55,11 +57,11 @@ a {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active::after {
@@ -70,5 +72,5 @@ a {
   bottom: 0;
   position: absolute;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--main-color);
 }
