@@ -10,8 +10,9 @@ body {
 }
 
 header {
-  /* position: relative; */
+  position: relative;
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
@@ -26,40 +27,35 @@ header {
 .logo {
   display: block;
   margin: auto;
-  justify-content: space-around;
 }
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   margin-right: 50px;
-  width: max-content;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav__item {
-  list-style: none;
-  display: inline-flex;
-  width: max-content;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
+.nav__item:last-child {
+  margin-right: 0;
+}
+
 .link {
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--main-color);
   line-height: 60px;
   font-size: 12px;
-  align-content: space-around;
-  align-items: center;
   display: inline-block;
-  width: max-content;
 }
 
 .link:hover {
@@ -82,6 +78,6 @@ header {
   right: 0;
   bottom: 0;
   height: 4px;
-  border-radius: 8px;
+  border-radius: 4px;
   background-color: var(--link-color);
 }
