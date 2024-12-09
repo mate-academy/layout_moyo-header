@@ -4,7 +4,7 @@ body {
   --active-link-color: #00acdc;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,30 +18,36 @@ header {
 }
 
 .nav__list {
-  flex-wrap: nowrap;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
+.nav__item {
+  margin-right: 20px;
+}
+
 .nav__link {
+  position: relative;
   display: flex;
   height: 60px;
   align-items: center;
+  justify-content: center;
   font-family: Roboto, sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500px;
   font-size: 12px;
   color: #000;
-  margin-left: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .is-active {
-  position: relative;
   color: var(--active-link-color);
-  margin: 0;
 }
 
 :hover {
@@ -49,10 +55,12 @@ header {
 }
 
 .is-active::after {
+  display: block;
   content: '';
   height: 4px;
   position: absolute;
   width: 100%;
+  left: 0;
   bottom: 0;
   background-color: var(--active-link-color);
   border-radius: 8px;
