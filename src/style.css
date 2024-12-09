@@ -24,12 +24,7 @@ body {
   display: flex;
 }
 
-.nav__item {
-  margin-right: 20px;
-}
-
 .nav__link {
-  position: relative;
   display: flex;
   height: 60px;
   align-items: center;
@@ -40,14 +35,13 @@ body {
   font-weight: 500px;
   font-size: 12px;
   color: #000;
-}
-
-.nav__item:last-child {
-  margin-right: 0;
+  margin-left: 20px;
 }
 
 .is-active {
+  position: relative;
   color: var(--active-link-color);
+  margin: 0;
 }
 
 :hover {
@@ -55,12 +49,10 @@ body {
 }
 
 .is-active::after {
-  display: block;
   content: '';
   height: 4px;
   position: absolute;
   width: 100%;
-  left: 0;
   bottom: 0;
   background-color: var(--active-link-color);
   border-radius: 8px;
