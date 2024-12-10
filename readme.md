@@ -18,7 +18,8 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - ❗️ add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)
 - link color should be changed on `:hover`
 - Use the `::after` and position it relative to a link with `is-active` class
-- Don't use flex `gap` property for indents. It's not supported in tests, use `margin` instead.
+- Don't use flex `gap` property for indents. It's not supported in tests, use `margin`
+.
 - There should not be margins before the first and after the last list items
 - Don't just copy all styles from Figma. Think, which of them are relevant. Uneven sizes (e.g. `line-height: 14.6px`) are definitely useless.
 - Nav Links should not have any padding, but have text centered
@@ -27,8 +28,8 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://VM93.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://VM93.github.io/layout_moyo-header/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
