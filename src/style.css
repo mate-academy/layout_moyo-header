@@ -1,8 +1,8 @@
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 :root {
   --main-color: #00acdc;
@@ -11,6 +11,8 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif, Arial, Helvetica;
+  display: flex;
+  font-size: 12px;
 }
 
 .header {
@@ -28,26 +30,14 @@ body {
   display: block;
   width: 40px;
   height: 40px;
+  margin-top: 10px;
 
   /* position: relative; */
-
-  /* top: 10px; */
-}
-
-a.blue {
-  color: var(--main-color);
-}
-
-.container {
-  display: flex;
-  font-size: 12px;
 }
 
 .nav__list {
   display: flex;
   align-items: center;
-  margin: 20px;
-  margin-top: 0;
   list-style: none;
   justify-content: center;
 }
@@ -56,24 +46,29 @@ a.blue {
   text-transform: uppercase;
   justify-content: center;
   margin-right: 20px;
-  padding-bottom: 23px;
   font-size: 12px;
   font-weight: 500;
+  height: 15px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
   display: block;
   text-decoration: none;
-  padding: 22px 0 0;
   font-size: 12px;
   height: 15px;
   color: #000;
   justify-content: center;
   align-items: center;
 
-  /* height: 100%; */
-
   /* display: flex; */
+}
+
+a.is-active {
+  color: var(--main-color);
 }
 
 .nav__list :hover {
@@ -84,7 +79,7 @@ a.is-active::after {
   content: '';
   position: relative;
   display: block;
-  top: 12px;
+  bottom: -17px;
   width: 100%; /* Ширина лінії дорівнює ширині тексту */
   background-color: var(--main-color);
   border-radius: 8px;
