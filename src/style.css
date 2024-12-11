@@ -1,3 +1,82 @@
-body {
+body,
+html {
   margin: 0;
+  padding: 0;
+  font-family: 'Roboto font', sans-serif;
+}
+
+.heading {
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+.logo {
+  margin: 0 40px;
+  width: 40px;
+  height: 40px;
+  left: 50px;
+}
+
+nav {
+  flex-grow: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav__list li {
+  margin: 0 15px;
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0 60px;
+  padding: 0;
+  justify-content: flex-end;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.nav__link {
+  width: 1200px;
+  height: 60px;
+  left: -600px;
+  line-height: 70px;
+  text-align: left;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  position: relative;
+  color: #00acdc;
+  text-decoration: none;
+}
+
+.is-active::after {
+  width: 45px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+  position: absolute;
+  content: '';
+  left: -1px;
+  bottom: -15px;
+}
+
+[data-qa='hover'] {
+  color: #00acdc;
 }
