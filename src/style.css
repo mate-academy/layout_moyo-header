@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding: 0;
 }
 
 .logo img {
@@ -10,17 +9,18 @@ body {
   margin-bottom: 10px;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
   font-weight: 500;
-  min-width: 1024px;
+  width: 1024px;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0, 5);
   font-family: Roboto, sans-serif;
-  margin-right: 0;
+  margin-right: 0 50px;
+  box-sizing: border-box;
 }
 
 .nav__list {
@@ -59,11 +59,11 @@ header {
   margin-right: 0;
 }
 
-[data-qa='hover'].nav__link:hover {
+.nav__link:hover {
   color: #00acdc;
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
