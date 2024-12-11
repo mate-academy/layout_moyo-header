@@ -1,67 +1,79 @@
-:root {
-  --blue-color: #00acdc;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-}
-
 body {
   margin: 0;
 }
 
 .header {
-  width: 100%;
-  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+
+  padding: 0 50px;
+
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.menu {
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.logo__image {
+  height: 100%;
+  width: 100%;
+}
+
+.nav__list {
   display: flex;
-  gap: 20px;
-  list-style-type: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.menu-item a {
-  text-transform: uppercase;
-  height: 60px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  position: relative;
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
+
+  height: 60px;
+
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+
+  transition: color 0.3s;
 }
 
-.menu-item .is-active {
+.nav__link:hover {
   color: #00acdc;
 }
 
-.is-active::after {
-  content: '';
-  display: block;
-  height: 4px;
-  width: 100%;
-  border-radius: 2px;
-  background-color: var(--blue-color);
+.nav__link.is-active {
+  color: #00acdc;
+}
+
+.nav__link.is-active::after {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-}
+  right: 0;
 
-a:hover {
-  color: var(--blue-color);
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
 }
