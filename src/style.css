@@ -2,18 +2,16 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-.heading {
+  font-family: 'Roboto ', sans-serif;
   text-align: center;
 }
 
-header {
+.header {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #f8f8f8;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -22,19 +20,19 @@ header {
   height: 40px;
 }
 
-nav {
+.nav {
   flex-grow: 1;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-.nav__list li {
+.nav__item {
   margin: 0 15px;
 }
 
 .nav__list {
   list-style: none;
-  margin: 0 60px;
+  margin: 0;
   padding: 0;
   justify-content: flex-end;
   display: flex;
@@ -44,7 +42,7 @@ nav {
 }
 
 .nav__link {
-  line-height: 60px;
+  line-height: 14px;
   text-align: left;
   color: black;
   text-transform: uppercase;
@@ -63,16 +61,12 @@ nav {
 }
 
 .is-active::after {
-  width: 45px;
+  width: 43px;
   height: 4px;
   border-radius: 8px;
   background-color: #00acdc;
   position: absolute;
   content: '';
-  left: -1px;
+  left: 1px;
   bottom: -15px;
-}
-
-[data-qa='hover'] {
-  color: #00acdc;
 }
