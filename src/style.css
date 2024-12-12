@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, serif;
@@ -21,6 +25,11 @@ body {
   margin: 0 auto;
 }
 
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
 .nav__list {
   display: flex;
   list-style: none;
@@ -36,19 +45,17 @@ body {
   height: 60px;
   position: relative;
   text-decoration: none;
-  text-transform: uppercase;
   color: black;
   font-size: 12px;
   font-weight: 500;
-  line-height: 16px;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active::after {
@@ -59,5 +66,5 @@ body {
   height: 4px;
   border-radius: 8px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
