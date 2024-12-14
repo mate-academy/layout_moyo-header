@@ -13,6 +13,7 @@ html {
   padding: 0 50px;
   box-sizing: border-box;
   height: 60px;
+  justify-content: space-between;
 }
 
 .logo {
@@ -27,13 +28,16 @@ html {
 }
 
 .nav {
-  flex-grow: 1;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .nav__item {
-  margin: 0 15px;
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__list {
@@ -41,18 +45,22 @@ html {
   margin: 0;
   padding: 0;
   display: flex;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   align-items: center;
+  margin-right: 20px;
 }
 
 .nav__link {
-  line-height: 14px;
+  line-height: 15px;
   text-align: center;
   color: black;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .nav__link:hover {
@@ -68,10 +76,11 @@ html {
 .is-active::after {
   width: 43px;
   height: 4px;
-  border-radius: 8px;
+  border-radius: 8px 0 0;
   background-color: #00acdc;
   position: absolute;
   content: '';
-  left: 1px;
+  left: -1px;
   bottom: -15px;
+  top: 60px;
 }
