@@ -1,3 +1,96 @@
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image {
+  padding: 10px 0;
+  margin: 0 50px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.box1 {
+  margin-left: auto;
+  color: #00acdc;
+  font-size: 16px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.box2 {
+  font-size: 16px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.box3 {
+  font-size: 16px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.box4 {
+  font-size: 16px;
+  padding: 0 10px;
+  color: #00acdc;
+  cursor: pointer;
+}
+
+.box4[data-qa='hover']:hover {
+  color: #0077b6;
+}
+
+.box4.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #00acdc;
+}
+
+.box5 {
+  font-size: 16px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.box6 {
+  font-size: 16px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.box7 {
+  font-size: 16px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.box8 {
+  font-size: 16px;
+  padding: 0 10px;
+  margin: 0 50px 0 0;
+  cursor: pointer;
+}
+
+.box1:hover,
+.box2:hover,
+.box3:hover,
+.box4:hover,
+.box5:hover,
+.box6:hover,
+.box7:hover,
+.box8:hover {
+  border-bottom: 3px solid #00acdc;
 }
