@@ -18,7 +18,6 @@ body {
 .header__logo {
   align-self: center;
   display: flex;
-  margin-left: 0;
 }
 
 .navigation {
@@ -29,20 +28,14 @@ body {
 .nav_list {
   display: flex;
   list-style: none;
-  justify-content: space-between;
-  height: 100%;
-  align-items: center;
-  padding-inline-start: 0;
   margin: 0;
 }
 
 .nav_item {
   display: flex;
-  align-items: center;
-  height: 60px;
 }
 
-.nav_link:link {
+.nav_link {
   color: var(--link-off);
   text-decoration: none;
   font-size: 12px;
@@ -66,23 +59,13 @@ body {
   position: relative;
 }
 
-.is-active:link {
+.is-active {
   color: var(--link-on);
-  text-decoration: none;
-  font-size: 12px;
-  text-transform: uppercase;
-  align-items: center;
-  display: flex;
   margin-left: 0;
   position: relative;
 }
 
-.is-active:visited {
-  color: var(--link-on);
-}
-
-.is-active::after,
-.nav_link:active::after {
+.is-active::after {
   content: '';
   display: block;
   border-bottom: 4px solid var(--link-on);
