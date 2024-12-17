@@ -4,6 +4,8 @@ body {
   font-size: 12px;
   line-height: 14px;
   margin: 0;
+
+  --text-color-second: #00acdc;
 }
 
 header {
@@ -12,6 +14,8 @@ header {
   justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
+  text-transform: uppercase;
+  height: 60px;
 }
 
 .nav__list {
@@ -40,12 +44,12 @@ header {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--text-color-second);
   text-decoration: none;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--text-color-second);
   position: relative;
 }
 
@@ -53,7 +57,7 @@ header {
   content: '';
   position: absolute;
   display: block;
-  background-color: #00acdc;
+  background-color: var(--text-color-second);
   text-align: center;
   height: 4px;
   width: 100%;
