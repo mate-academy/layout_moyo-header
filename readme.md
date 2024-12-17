@@ -7,15 +7,15 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ## Requirements:
 
-- reset browser default margins.
-- use [Roboto font](https://fonts.google.com/specimen/Roboto).
-- use semantic tags: `<header>`, `<img>`, `<nav>`, `<ul>`, `<li>` and `<a>`.
-- the header should stretch the full page width (don't use horizontal margin).
-- the height should be set for nav links (not the header), take it from the design.
+-DONE reset browser default margins.
+-DONE use [Roboto font](https://fonts.google.com/specimen/Roboto).
+-DONE use semantic tags: `<header>`, `<img>`, `<nav>`, `<ul>`, `<li>` and `<a>`.
+-DONE the header should stretch the full page width (don't use horizontal margin).
+- DONE the height should be set for nav links (not the header), take it from the design.
 - header content should be vertically centered.
 - Logo should also be a link with an image inside (from [src/images](src/images)). But it should not be a part of the `<nav>`.
-- ❗️ the blue link with a line below should have a class `is-active` in addition to any other classes you add.
-- ❗️ add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)
+- DONE ❗️ the blue link with a line below should have a class `is-active` in addition to any other classes you add.
+- DONE ❗️ add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)
 - link color should be changed on `:hover`
 - Use the `::after` and position it relative to a link with `is-active` class
 - Don't use flex `gap` property for indents. It's not supported in tests, use `margin` instead.
@@ -27,8 +27,8 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ❗️ Replace `<your_account>` with your Github username and copy the links to `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://aleksandra-golebiewska.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://aleksandra-golebiewska.github.io/layout_moyo-header/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
