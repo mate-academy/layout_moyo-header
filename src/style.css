@@ -1,14 +1,16 @@
+:root {
+  --primary-color: #00acdc;
+}
 html {
-  font-family: Roboto, serif;
-  font-size: 12px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
   font-weight: 500;
 }
-body,
-nav,
-ul {
+* {
   margin: 0;
   padding: 0;
 }
+
 .header {
   padding: 0 50px;
   display: flex;
@@ -29,7 +31,7 @@ ul {
 .list__item:not(:first-child) {
   margin-left: 20px;
 }
-.link {
+.list__link {
   display: block;
   height: 60px;
   line-height: 60px;
@@ -37,17 +39,17 @@ ul {
   color: #000;
 }
 .link:hover {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 .is-active {
-  color: #00acdc;
+  color: var(--primary-color);
   position: relative;
 }
 .is-active::after {
   content: '';
   width: 37px;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--primary-color);
   position: absolute;
   bottom: 0;
   left: 0;
