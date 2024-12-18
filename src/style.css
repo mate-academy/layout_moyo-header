@@ -1,3 +1,199 @@
-body {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Roboto, serif;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+
+  --link-color: #00acdc;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  display: flex;
+}
+
+li {
+  position: relative;
+  margin: 0 10px;
+}
+
+ul li:first-child {
+  margin-left: 0;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  height: 60px;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: var(--link-color);
+}
+
+a.is-active {
+  color: var(--link-color);
+}
+
+a.is-active::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: var(--link-color);
+  position: absolute;
+  border-radius: 4px;
+  bottom: 0;
+  left: 0;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
