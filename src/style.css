@@ -1,57 +1,60 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .link {
-  font-size: 12px;
-  font-weight: 100;
-  font-family: Roboto, Helvetica, sans-serif;
+  display: flex;
   color: black;
   text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+  height: 100%;
+  white-space: nowrap;
 }
 
-a.is-active {
-  position: relative;
-  color: #00acdc;
+a.link.is-active {
+  color: var(--blue-color) !important;
   text-decoration: none;
-  margin-bottom: 18px;
+  background-image: url(./images/Rectangle\ 2.svg);
+  background-repeat: no-repeat;
+
+  background-position: bottom center;
+  background-size: contain;
 }
 
-a.is-active::after {
-  content: '';
-  position: absolute;
-  bottom: -18px;
-  border-radius: 8px;
-  left: 0;
-  width: 37px;
-  height: 4px;
-  background-color: #00acdc;
-}
-
-a:hover {
-  color: #00acdc;
-  text-decoration: none;
+a.link.is-active:hover,
+a.link.hover:hover {
+  color: var(--blue-color) !important;
 }
 
 .img {
   display: block;
-  padding: 10 50;
+  padding: 10px 0;
   width: 40px;
   height: 40px;
 }
 
 .nav-bar {
   display: flex;
-  justify-content: center;
-  margin: auto;
-  text-align: center;
+  align-items: center;
   gap: 20px;
+  height: 60px;
 }
 
 .navigation {
   display: flex;
+  justify-content: space-between;
   gap: 419px;
   background-color: #fff;
+  padding: 0 50px;
 
   @media screen and (max-width: 1024px) {
     gap: 243px;
