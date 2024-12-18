@@ -1,3 +1,78 @@
+:root {
+  --blue-color: rgba(0, 172, 220, 1); /* CSS-змінна для синього кольору */
+}
+
 body {
+  padding: 0;
+  box-sizing: border-box;
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  text-align: center;
+  position: relative;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  height: 60px; /* Висота посилання */
+  line-height: 60px; /* Вирівнювання тексту вертикально */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  margin-right: 40px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-left: 50px;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 10px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -22px; /* Лінія точно внизу посилання */
+  left: 0;
+  width: 100%;
+  height: 4px; /* Висота лінії */
+  background-color: var(--blue-color); /* Колір лінії */
+  border-radius: 2px; /* Згладжені краї */
+}
+
+.box:hover {
+  color: var(--blue-color); /* Зміна кольору тексту на hover */
+}
+
+[data-qa='hover']:hover {
+  color: var(--blue-color); /* Зміна кольору тексту для data-qa */
 }
