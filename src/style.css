@@ -1,3 +1,55 @@
 body {
   margin: 0;
 }
+
+html {
+  font-family: "Roboto";
+  --active-color: #00ACDC;
+}
+
+.header {
+  display: flexbox;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.logo {
+  margin-left: 50px;
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+
+}
+
+.nav {
+  height: 60px;
+  align-items: flex-end;
+  margin-right:50px;
+}
+
+.is-active {
+  color: var(--active-color);
+}
+
+.highlight {
+  color: var(--active-color);
+}
+
+.link {
+  font-size: 12px;
+  align-content: center;
+  text-transform: uppercase;
+  color:black;
+}
+
+.link:hover {
+  color:purple;
+  text-decoration: underline;
+}
+
+.is-active::after {
+  background-color: var(--active-color);
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+}
