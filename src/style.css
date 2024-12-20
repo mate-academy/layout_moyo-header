@@ -5,12 +5,13 @@
 html {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 0.75rem;
-  font-weight: 500;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05)
 }
 
 .header {
@@ -31,9 +32,14 @@ html {
 }
 
 .list__item {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
   text-transform: uppercase;
-  position: relative;
-  height: 100%;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
 }
 
 .list__item:not(:first-child) {
@@ -46,7 +52,7 @@ html {
   line-height: 60px;
   text-decoration: none;
   color: #000;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .link:hover {
@@ -60,6 +66,7 @@ html {
 .is-active {
   color: var(--primary-color);
   position: relative;
+  font-weight: 500;
 }
 
 .is-active::after {
