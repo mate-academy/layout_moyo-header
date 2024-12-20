@@ -15,16 +15,16 @@ body {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
 }
 
-nav ul li {
-  margin-left: 20px;
-}
-
-.logo img {
-  width: 40px;
-  height: 40px;
-  padding-top: 10px;
+li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
 }
 
 .panel a {
@@ -35,6 +35,23 @@ nav ul li {
   line-height: 60px;
   text-align: center;
   color: #000;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: inherit;
+  background-color: transparent;
+}
+
+li a:last-child {
+  padding-left: 0;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
 }
 
 .panel a.is-active {
@@ -51,13 +68,6 @@ nav ul li {
   height: 4px;
   background-color: #00acdc;
   border-radius: 8px;
-}
-
-a:link,
-a:visited,
-a:active {
-  color: inherit;
-  background-color: transparent;
 }
 
 .panel a:hover {
