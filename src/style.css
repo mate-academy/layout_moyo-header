@@ -57,7 +57,7 @@ body {
     font-size: 12px;
     font-weight: 500;
     line-height: 14.06px;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Ensures uppercase letters */
     position: relative;
 }
 
@@ -73,4 +73,21 @@ body {
     width: 100%;
     height: 2px;
     background-color: var(--blue-color); /* Using CSS variable */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 10px; /* For vertical list */
+    }
 }
