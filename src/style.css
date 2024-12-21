@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Roboto;
+  src: url(href='https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'rel='stylesheet');
+}
+
 html {
   margin: 0 auto;
   padding: 0;
@@ -5,7 +10,7 @@ html {
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, serif;
   background-color: #f5f5f5;
   margin: 0;
 }
@@ -14,21 +19,20 @@ body {
   --blue-color: rgba(0, 172, 220, 1);
 }
 
-/* Header Styles */
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .logo img {
   display: block;
   height: 40px;
+  margin-left: 50px;
 }
 
-/* Navigation Styles */
 .navigation {
   display: flex;
   align-items: center;
@@ -41,24 +45,34 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
+  white-space: nowrap;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-list li:not(:last-child) {
-  margin-right: 40px; /* Adjust spacing between links */
-  text-align: center;
+  margin-right: 20px;
+}
+
+.nav-list li:last-child {
+  margin-right: 50px;
 }
 
 .nav-link {
   text-decoration: none;
-  color: black;
-  font-size: 12px; /* Adjust according to design */
-  line-height: 15px; /* Match the header height */
+  color: rgba(0, 0, 0, 1);
+  font-size: 12px;
+  line-height: 60px;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
-  position: relative; /* For the ::after pseudo-element */
-  transition: color 0.3s ease;
+  position: relative;
+  align-self: auto;
 }
 
 .nav-link:hover {
@@ -70,11 +84,11 @@ body {
 }
 
 .nav-link.is-active::after {
-  width: 35.4px;
-  height: 2.4px;
-  border: 1px solid var(--blue-color);
+  width: 37px;
+  height: 4px;
+  border: 0 solid var(--blue-color);
   background-color: var(--blue-color);
-  top: 30px;
+  bottom: 0;
   left: 0;
   right: 0;
   border-radius: 8px;
