@@ -1,6 +1,6 @@
 @font-face {
   font-family: Roboto;
-  src: url(href='https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'rel='stylesheet');
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'rel='stylesheet');
 }
 
 html {
@@ -36,16 +36,20 @@ body {
 .navigation {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  margin-right: 50px;
 }
 
 .nav-list {
-  /* height: 60px; */
   display: flex;
   list-style: none;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 0 auto;
   white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  gap: 20px;
 }
 
 li {
@@ -53,17 +57,13 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.nav-list li:not(:last-child) {
-  margin-right: 20px;
-}
-
-.nav-list li:last-child {
-  margin-right: 50px;
+  width: auto;
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
   font-size: 12px;
@@ -73,7 +73,6 @@ li {
   text-transform: uppercase;
   text-align: center;
   position: relative;
-  align-self: auto;
 }
 
 .nav-link:hover {
@@ -85,13 +84,12 @@ li {
 }
 
 .nav-link.is-active::after {
-  width: 37px;
+  width: 100%;
   height: 4px;
-  border: 0 solid var(--blue-color);
+  border: 0;
   background-color: var(--blue-color);
   bottom: 0;
   left: 0;
-  right: 0;
   border-radius: 8px;
   position: absolute;
   content: '';
