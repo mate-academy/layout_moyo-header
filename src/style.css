@@ -4,6 +4,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -14,8 +15,6 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  flex-wrap: wrap;
-  gap: 60px;
   max-width: 1200px;
 }
 
@@ -26,8 +25,6 @@ body {
 
 .nav__list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -35,6 +32,13 @@ body {
   text-transform: uppercase;
   list-style: none;
   height: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  padding: 0;
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -73,9 +77,10 @@ a.is-active:hover {
 }
 
 .nav__link:nth-child(4) {
-  color: #00acdc;
+  color: var(--header-color);
 }
 
 .nav__link:last-child {
   margin: 0;
+  padding: 0;
 }
