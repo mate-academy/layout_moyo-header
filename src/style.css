@@ -1,6 +1,8 @@
 body {
   margin: 0;
   background-color: #e4e4e4;
+
+  --blue-color: #00acdc;
 }
 
 .header {
@@ -21,11 +23,14 @@ body {
 
 .list {
   display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 .list-item {
   list-style: none;
   margin: 0 10px;
+
 }
 
 .list-item:first-child {
@@ -37,6 +42,9 @@ body {
 }
 
 .list a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 12px;
   text-decoration: none;
@@ -47,21 +55,22 @@ body {
 
 .list a:hover {
   text-decoration: underline;
-  text-decoration-color: #00acdc;
+  text-decoration-color: var(--blue-color);
   text-decoration-thickness: 2px;
 }
 
 .list .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
-.rectangle {
+.list .is-active::after {
   position: absolute;
-  width: 40px;
+  content: "";
+  width: 36px;
   height: 4px;
-  left: 40px;
-  top: 56px;
-  background: #00acdc;
+  left: 0;
+  bottom: 0;
+  background: var(--blue-color);
   border-radius: 8px;
 }
 
@@ -69,6 +78,7 @@ body {
   width: 40px;
   height: 40px;
   display: flex;
+  margin-right: 50px;
 }
 
 .logo-link {
