@@ -1,8 +1,10 @@
-* {
-  font-family: Roboto, serif;
-  font-weight: 500;
-  font-style: normal;
-  size: 12px;
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+
+  --main-color: #00acdc;
 }
 
 body {
@@ -10,37 +12,56 @@ body {
 }
 
 .header {
-
-  width: auto;
-  height: 60px;
   display: flex;
   align-items: center;
-  border: 5px solid black;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
-img{
-  margin-left: 50px;
+.logo {
+  height: 40px;
+  width: 40px;
 }
 
-.nav-link {
-  display: inline-block;
-  margin: 10px;
-
-  size: 12px;
-  height: 15px;
+.nav_list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.nav-link::after {
+.nav_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav_link {
   position: relative;
-
-}
-
-.header-nav {
   display: flex;
   align-items: center;
+  height: 60px;
 
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
-.nav-4 :hover {
-  color: blueviolet;
+.nav_link--active {
+  color: var(--main-color);
+}
+
+.nav_link--active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--main-color);
+}
+
+.nav_link:hover {
+  color: var(--main-color);
 }
