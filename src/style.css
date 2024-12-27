@@ -1,3 +1,9 @@
+html {
+  --headercolor-background-color: rgba(255, 255, 255, 1);
+  --hovercolor-color: #00acdc;
+  --defaultcolor-color: rgba(0, 0, 0, 1);
+}
+
 body {
   margin: 0;
 }
@@ -9,7 +15,7 @@ body {
 
   padding: 0 50px;
 
-  background: #fff;
+  background: var(--headercolor-background-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -53,20 +59,20 @@ body {
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000;
+  color: var(--defaultcolor-color);
 
   transition: color 0.3s;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--hovercolor-color);
 }
 
-.nav__link.is-active {
-  color: #00acdc;
+.is-active {
+  color: var(--hovercolor-color);
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -74,5 +80,5 @@ body {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--hovercolor-color);
 }
