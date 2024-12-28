@@ -1,3 +1,94 @@
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, serif;
+}
+
+.roboto-regular {
+  font-family: Roboto, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: Roboto, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  flex-direction: row;
+  max-height: 60px;
+}
+
+.logo img {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
+}
+
+a {
+  text-transform: uppercase;
+}
+
+.nav-list {
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 0 10px;
+}
+
+.nav-list li:first-child {
+  margin-left: 0;
+}
+
+.nav-list li:last-child {
+  margin-right: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 12px;
+  position: relative;
+  display: inline-block;
+  line-height: 60px;
+}
+
+.nav-list a.is-active {
+  color: #00acdc;
+}
+
+.nav-list a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
+
+.nav-list a:hover {
+  color: #00acdc;
 }
