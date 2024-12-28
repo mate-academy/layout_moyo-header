@@ -9,24 +9,19 @@ html {
 }
 
 .header {
-  display: flexbox;
+  display: flex;
+  background-color: burlywood;
+  align-items: center;
+  height: 40px;
   justify-content: space-between;
-  background-color: white;
+  padding-right: 50px;
 }
 
 .logo {
   margin-left: 50px;
-  height: 40px;
   width: 40px;
-  margin-top: 10px;
-  display: inline-block;
-}
-
-.nav {
-  display: inline-block;
   height: 40px;
-  align-items: flex-end;
-  margin-right: 50px;
+  margin-top: 40px;
 }
 
 a.is-active {
@@ -37,15 +32,15 @@ a.is-active {
   color: var(--active-color);
 }
 
-a > .link {
+.link {
   font-size: 12px;
   text-decoration: none;
   list-style: none;
-  align-content: center;
   text-transform: uppercase;
   color: black;
-  display: inline-block;
+  margin: 10px;
   padding: 0;
+  display: inline-block;
 }
 
 .link:hover {
@@ -55,7 +50,9 @@ a > .link {
 
 .is-active::after {
   background-color: var(--active-color);
-  width: 37px;
-  height: 4px;
-  border-radius: 8px;
+  width: 10px;
+  padding: 2px;
+  height: 1px;
+  border-radius: 4px;
+  display: inline-block;
 }
