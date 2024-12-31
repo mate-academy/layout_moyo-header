@@ -1,11 +1,20 @@
-html {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
   font-family: Roboto, serif;
   font-size: 12px;
   font-weight: 500;
   font-style: normal;
+}
+
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
 }
 
 .menu {
@@ -18,7 +27,7 @@ html {
 
 .nav {
   display: flex;
-  height: fit-content;
+  height: 100%;
 }
 
 .link {
@@ -36,6 +45,10 @@ html {
   margin-left: 0;
 }
 
+.link:hover {
+  color: #00acdc;
+}
+
 .is-active {
   color: #00acdc;
 }
@@ -49,11 +62,5 @@ html {
   position: absolute;
   left: 0;
   bottom: 0;
-
-  /* opacity: 0; */
   transition: all 0.2s;
-}
-
-.link:hover {
-  color: #00acdc;
 }
