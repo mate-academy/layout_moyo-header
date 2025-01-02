@@ -7,7 +7,7 @@
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: Roboto, serif;
+  font-family: Roboto, sans-serif;
 }
 
 .main__block__menu {
@@ -19,14 +19,14 @@ body {
   align-items: center;
 }
 
-ul {
+.ul__in__nav {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-a {
+.link__default {
   display: flex;
   text-transform: uppercase;
   color: #000;
@@ -36,7 +36,11 @@ a {
   line-height: 60px;
 }
 
-li {
+.menu__item:first-of-type .link__default {
+  color: var(--color);
+}
+
+.menu__item {
   margin-left: 20px;
 }
 
@@ -53,6 +57,16 @@ li:first-child {
   font-weight: 500;
   line-height: 60px;
 } */
+
+[data-qa='hover'] {
+  display: flex;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 60px;
+}
 
 [data-qa='hover']:hover {
   color: var(--color);
