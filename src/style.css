@@ -1,3 +1,61 @@
 body {
+  --link-color: #000;
+  --active-link-color: #00acdc;
+
   margin: 0;
+}
+
+.header {
+  width: auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__img {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 60px;
+  text-transform: uppercase;
+  font-family: Roboto, serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--active-link-color);
+}
+
+.is-active {
+  color: var(--active-link-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--active-link-color);
 }
