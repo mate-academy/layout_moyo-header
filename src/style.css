@@ -21,7 +21,7 @@ html {
 
   /* Header start */
 
-  active-color {
+  :root {
     --main-color: #00acdc;
   }
 
@@ -29,13 +29,11 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
     padding: 0;
     width: 100%;
   }
 
   .nav {
-    width: 1200px;
     height: 60px;
     position: relative;
   }
@@ -58,7 +56,6 @@ html {
     align-items: flex-end;
     color: black;
     list-style-type: none;
-    padding-left: 420px;
   }
 
   .nav__link {
@@ -70,12 +67,12 @@ html {
   }
 
   [data-qa='hover'] {
-    color: #00acdc;
+    color: var(--main-color);
   }
 
   .nav__link:hover,
   .nav__link:focus {
-    color: #00acdc;
+    color: var(--main-color);
   }
 
   .nav__link.is-active {
@@ -87,7 +84,7 @@ html {
     display: block;
     width: 100%;
     height: 4px;
-    background-color: #00acdc;
+    background-color: var(--main-color);
     position: absolute;
     border-radius: 8px;
     bottom: -30px;
