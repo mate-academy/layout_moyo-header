@@ -2,6 +2,7 @@
 
 :root {
   --header-height: 60px;
+  --link-highlight-color: #00acdc;
 }
 
 html {
@@ -32,8 +33,6 @@ html {
 .nav {
   margin-right: 50px;
   font-weight: 500;
-
-  /* text-transform: uppercase; */
 }
 
 .nav__list {
@@ -57,7 +56,7 @@ html {
 
 .nav__link.is-active,
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--link-highlight-color);
 }
 
 .nav__link.is-active::after {
@@ -67,6 +66,6 @@ html {
   top: calc(var(--header-height) - 4px);
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--link-highlight-color);
   border-radius: 8px;
 }
