@@ -1,16 +1,19 @@
 body {
-  --link-color: #000;
-  --active-link-color: #00acdc;
+  --primary-link-color: #000;
+  --highlight-link-color: #00acdc;
 
   margin: 0;
 }
 
 .header {
-  width: auto;
-  padding: 0 50px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo__link {
+  margin-left: 50px;
 }
 
 .logo__img {
@@ -19,12 +22,15 @@ body {
   height: 40px;
 }
 
+.nav {
+  margin-right: 50px;
+}
+
 .nav__list {
   display: flex;
   align-items: center;
   padding: 0;
   margin: 0;
-  gap: 20px;
   list-style: none;
 }
 
@@ -37,16 +43,20 @@ body {
   font-family: Roboto, serif;
   font-size: 12px;
   font-weight: 500;
-  color: var(--link-color);
+  color: var(--primary-link-color);
   text-decoration: none;
 }
 
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
 .nav__link:hover {
-  color: var(--active-link-color);
+  color: var(--highlight-link-color);
 }
 
 .is-active {
-  color: var(--active-link-color);
+  color: var(--highlight-link-color);
 }
 
 .is-active::after {
@@ -57,5 +67,5 @@ body {
   left: 0;
   height: 4px;
   border-radius: 8px;
-  background-color: var(--active-link-color);
+  background-color: var(--highlight-link-color);
 }
