@@ -20,7 +20,7 @@ body {
 }
 
 .nav {
-  margin: 0 50px;
+  margin-right: 50px;
 }
 
 .nav__list {
@@ -28,7 +28,6 @@ body {
   padding: 0;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
 }
 
 .nav__items {
@@ -37,28 +36,39 @@ body {
 }
 
 .nav__link {
-  padding: 22.9px 0;
+  padding: 22.8px 0;
   display: block;
   font-size: 12px;
   color: #000;
   text-transform: uppercase;
   text-decoration: none;
+  margin: 0 20px 0 0;
+}
+
+.nav__items:last-child .nav__link:last-child {
+  margin: 0;
 }
 
 .is-active {
   color: #00acdc;
   position: relative;
+  box-sizing: border-box;
 }
 
 .is-active::after {
   content: '';
-  display: flex;
+  display: block;
+  box-sizing: border-box;
   position: absolute;
   height: 4px;
   border-radius: 8px;
   background-color: #00acdc;
-  width: 37px;
-  bottom: 1px;
+  width: 36.6px;
+  top: 55.73px;
+}
+
+.is-active:hover::after {
+  outline: 1px solid #007ddc;
 }
 
 [data-qa='hover']:hover {
