@@ -31,18 +31,28 @@ body {
 }
 
 .nav__items {
-  display: block;
+  display: flex;
   list-style: none;
+  box-sizing: border-box;
 }
 
 .nav__link {
   padding: 22.8px 0;
-  display: block;
+  position: relative;
+  display: flex;
   font-size: 12px;
   color: #000;
   text-transform: uppercase;
   text-decoration: none;
   margin: 0 20px 0 0;
+  max-height: 60px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav__link:hover{
+  color: #00acdc;
+
 }
 
 .nav__items:last-child .nav__link:last-child {
@@ -51,20 +61,19 @@ body {
 
 .is-active {
   color: #00acdc;
-  position: relative;
-  box-sizing: border-box;
+  border-bottom: 0 solid #00acdc;
 }
 
 .is-active::after {
   content: '';
-  display: block;
-  box-sizing: border-box;
   position: absolute;
-  height: 4px;
-  border-radius: 8px;
+  height: 4.1px;
   background-color: #00acdc;
-  width: 36.6px;
-  top: 55.73px;
+  border-radius: 20px;
+  width: 36.4px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .is-active:hover::after {
