@@ -45,14 +45,22 @@ body {
   text-decoration: none;
 }
 
-/* :not(.nav__items:last-child .nav__link:last-child) {
-  margin-right: 20px;
-} */
-
 .is-active {
   color: #00acdc;
+  position: relative;
 }
 
-[data-qa='hover'] {
+.is-active::after {
+  content: '';
+  display: flex;
+  position: absolute;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+  width: 37px;
+  bottom: 1px;
+}
+
+[data-qa='hover']:hover {
   color: #00acdc;
 }
