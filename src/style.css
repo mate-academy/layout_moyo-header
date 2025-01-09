@@ -38,13 +38,14 @@ a.is-active {
   display: inline-block;
 }
 
-.link:hover {
+a:hover {
   text-decoration: underline;
-  text-decoration-color: var(--active-color);
+  color: blue;
 }
 
 .navbar {
   list-style: none;
+  justify-items: center;
 }
 
 .route {
@@ -52,9 +53,19 @@ a.is-active {
 }
 
 .is-active::after {
+  content: '';
+  display: block;
   width: 40px;
-  height: 3px;
+  height: 2px;
   background-color: var(--active-color);
   border-radius: 2px;
-  position: relative;
+  position: 10px relative;
+}
+
+.nav {
+  justify-content: space-between;
+}
+
+.mid {
+  margin-left: 20px;
 }
