@@ -1,3 +1,7 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +9,10 @@
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   background-color: #fff;
   color: #000;
 }
@@ -21,10 +28,10 @@ body {
   background-color: #fff;
 }
 
-.logo {
+.header__logo .logo {
+  display: block;
   height: 40px;
   width: 40px;
-  display: block;
 }
 
 .nav_list {
@@ -43,6 +50,7 @@ body {
 }
 
 .nav_link {
+  text-transform: uppercase;
   display: block;
   text-decoration: none;
   line-height: 60px;
@@ -52,7 +60,7 @@ body {
 
 .nav_link.is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav_link.is-active::after {
@@ -61,7 +69,7 @@ body {
   width: 100%;
   height: 4px;
   content: '';
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   border-radius: 8px;
   bottom: 0;
   left: 0;
@@ -72,6 +80,5 @@ body {
 }
 
 .nav_link[data-qa='hover']:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
-
