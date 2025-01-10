@@ -10,16 +10,17 @@ body {
   font-size: 12px;
 }
 
-.container {
+.header {
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 50px;
 }
 
 .head-navigation {
   display: flex;
-  height: 50px;
   align-items: center;
 }
 
@@ -36,7 +37,9 @@ body {
   text-decoration: none;
   color: black;
   text-align: center;
-  height: 15px;
+  height: 60px;
+  display: inline-block;
+  line-height: 60px;
 }
 
 .is-active {
@@ -44,9 +47,8 @@ body {
   position: relative;
 }
 
-.item-link:hover{
+.item-link[data-qa='hover']:hover {
   color: var(--link-color);
-  text-decoration: underline #008eb6 2px;
 }
 
 .is-active::after {
@@ -57,12 +59,7 @@ body {
   bottom: 0;
   height: 4px;
   left: 0;
-  border-radius: 8px;
-  top: 33.5px;
-}
-
-.header {
-  width: 100%;
+  border-radius: 10px;
 }
 
 .image {
