@@ -1,19 +1,27 @@
-/* Скидання стандартних стилів браузера */
-body {
-  margin: 0;
+/* CSS-змінні */
+:root {
+  --primary-blue: #00acdc; /* Змінна для синього кольору */
+  --text-color: #000;
+  --font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; /* Резервні шрифти */
 }
 
-/* Стилі заголовка */
+/* Скидання стилів */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 0 50px;
-  background-color: #fff; /* Приклад кольору фону */
+
+  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Стилі логотипу */
 .logo {
   display: block;
   height: 40px;
@@ -42,34 +50,39 @@ body {
 
 .nav__link {
   position: relative;
+
   display: flex;
   align-items: center;
+
   height: 60px;
-  font-family: Roboto, sans-serif;
+
+  font-family: var(--font-family);
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000;
+  color: var(--text-color);
+
   transition: color 0.3s;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--primary-blue);
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--primary-blue);
 }
 
 .nav__link.is-active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--primary-blue);
 }
