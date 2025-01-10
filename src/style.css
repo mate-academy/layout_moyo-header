@@ -1,14 +1,14 @@
 /* CSS-змінні */
 :root {
   --primary-blue: #00acdc; /* Змінна для синього кольору */
-  --text-color: #000;
+  --text-color: #1a1a1a; /* Контрастний колір тексту */
   --font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Резервні шрифти */
 }
 
 /* Скидання стилів */
 body {
   margin: 0;
-  font-family: var(--font-family);
+  font-family: var(--font-family), sans-serif; /* Додано загальний резервний шрифт */
 }
 
 .header {
@@ -48,6 +48,10 @@ body {
   margin-left: 0;
 }
 
+.nav__item:last-child {
+  margin-right: 0; /* Запобігання зайвому відступу */
+}
+
 .nav__link {
   position: relative;
 
@@ -69,6 +73,11 @@ body {
 
 .nav__link:hover {
   color: var(--primary-blue);
+}
+
+.nav__link:focus {
+  outline: 2px solid var(--primary-blue); /* Покращення доступності */
+  outline-offset: 2px;
 }
 
 .nav__link.is-active {
