@@ -1,3 +1,71 @@
+:root {
+  --active-color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+}
+
+.header__logo {
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  line-height: 60px;
+  height: 60px;
+  font-size: 12px;
+  margin-right: 20px;
+  color: #000;
+}
+
+.nav__link-last {
+  margin-right: 0;
+}
+
+.nav__link:hover {
+  color: var(--active-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--active-color);
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  background-color: var(--active-color);
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
 }
