@@ -1,113 +1,81 @@
-:root {
-  --high-light-color: #00acdc;
-}
-
-body {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-ul {
-  height: 60px;
+body * {
   margin: 0;
   padding: 0;
 }
 
-li {
-  flex-direction: column;
-  display: flex;
+body {
+  font-family: Roboto, sans-serif;
 }
 
-.header {
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 50px;
+header {
+  width: 100vw;
+  background: white;
+  height: 60px;
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  padding-left: 40px;
 }
 
 .logo {
-  margin: 10px 0;
-}
-
-.nav__list {
-  gap: 20px;
-  display: flex;
-}
-
-.nav__item {
-  color: #000;
-  text-transform: uppercase;
-  white-space: nowrap;
-  padding: 22.5px 0 18.5px;
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  text-decoration: none;
-}
-
-.bottom_line {
-  background-color: var(--high-light-color);
-  border-radius: 8px;
-  height: 4px;
-}
-
-.nav__item:hover,
-.is-active {
-  color: var(--high-light-color);
-}
-/*# sourceMappingURL=index.396c5535.css.map */
-
-header {
-  background-color: #333;
-  height: 80px; /* Adjust as needed */
+  width: 40px;
+  height: 40px;
+  margin: 10px;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px; /* Adjust as needed */
-}
+  margin-left: auto;
+  right: 40px;
+  margin-right: 50px;
 
-.logo img {
-  height: 40px; /* Adjust as needed */
+  position: relative;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px; /* Adjust as needed */
-  margin: 0;
+  line-height: 15px;
 }
 
 nav ul li {
-  margin: 0;
+  margin-right: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: white;
-  text-align: center;
-  transition: color 0.3s;
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 60px;
+  display: flex;
 }
 
-nav ul li a:hover {
-  color: #1e90ff;
-}
-
-.is-active {
+nav ul li a.is-active {
+  color: #00acdc;
   position: relative;
 }
 
-.is-active::after {
+nav ul li a.is-active::after {
   content: '';
+  width: 37px;
+  height: 4px;
+  background-color: #00acdc;
   position: absolute;
-  bottom: -10px; /* Adjust as needed */
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #1e90ff;
+  border-radius: 50px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover {
+  color: #00acdc;
 }
