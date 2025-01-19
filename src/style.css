@@ -1,87 +1,82 @@
-:root {
-  --main-color: #00acdc;
+body {
+  margin: 0;
+
+  --header-height: 60px;
+  --nav-item-color: #000;
+  --nav-item-color-hover: #00acdc;
 }
 
-*,
-*::before,
-*::after {
-  padding: 0;
+ul {
   margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
   box-sizing: border-box;
 }
 
-.wrapper {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 40px 50;
-  background-color: #fff;
-  margin: 0 auto;
-  align-items: center;
+.header__logo-wrapper {
+  height: 40px;
 }
 
-.logo__link {
-  display: flex;
-  align-self: center;
+.header__logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
 }
 
-.menu__list {
-  font-weight: 500;
-  margin: 0;
+.nav__list {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  list-style: none;
 }
 
-.menu__item {
+.nav__list-item:nth-child(n + 2) {
+  margin-left: 20px;
+}
+
+.nav__list-link {
+  position: relative;
   display: inline-block;
-  padding: 10px;
-}
-
-.menu__link {
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: Roboto, sans-serif;
+  color: var(--nav-item-color);
+  font-family: Roboto, serif;
+  font-weight: 500;
   font-size: 12px;
-  color: #000;
-  padding: 10px 0;
-  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  height: var(--header-height);
+  line-height: var(--header-height);
+  transition: 0.2s;
 }
 
-.menu__link::after {
-  content: '';
-  position: absolute;
-  background-color: var(--main-color);
-  height: 5px;
-  width: 0;
-  left: 0;
-  bottom: -10px;
+.is-active:link {
+  color: var(--nav-item-color-hover);
 }
 
-.menu__link:hover::after {
-  width: 100%;
-  border-radius: 5px;
+.nav__list-link:visited {
+  color: var(--nav-item-color-hover);
 }
 
-.menu__link:hover {
-  color: var(--main-color);
+.nav__list-link:hover {
+  color: var(--nav-item-color-hover);
 }
 
-.is-active {
-  color: var(--main-color);
-  position: relative;
-}
-
+.nav__list-link:active::after,
 .is-active::after {
-  content: '';
+  content: ' ';
   position: absolute;
-  background-color: var(--main-color);
-  height: 5px;
   width: 100%;
-  left: 0;
-  bottom: -10px;
-  border-radius: 5px;
+  bottom: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--nav-item-color-hover);
 }
