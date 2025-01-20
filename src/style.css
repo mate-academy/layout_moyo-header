@@ -1,6 +1,8 @@
 body {
+  --active-font-color: #00acdc;
+
   margin: 0;
-  font-family: Roboto, serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif, serif;
   font-size: 12px;
   font-weight: 500;
 }
@@ -41,7 +43,7 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--active-font-color);
 }
 
 .nav__element {
@@ -54,7 +56,7 @@ body {
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--active-font-color);
 }
 
 .is-active::after {
@@ -62,7 +64,7 @@ body {
   height: 4px;
   width: 100%;
   content: '';
-  background: #00acdc;
+  background: var(--active-font-color);
   top: 56px;
   border-radius: 8px;
 }
