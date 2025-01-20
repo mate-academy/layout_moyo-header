@@ -1,12 +1,12 @@
 html {
-  --active-color: #00ACDC;
+  --active-color: #00acdc;
   --nav-link-height: 60px;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .header {
@@ -16,11 +16,11 @@ body {
   padding: 0 50px;
 }
 
-.logo {}
-
-.logo__img {}
-
-.main-nav {}
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
 
 .main-nav__list {
   display: flex;
@@ -49,14 +49,12 @@ body {
 }
 
 .main-nav__link:link {
-  color: #000000;
+  color: #000;
   text-transform: uppercase;
 }
 
-.main-nav__link:active {}
-
 .main-nav__link:visited {
-  color: #000000;
+  color: #000;
 }
 
 .main-nav__link:hover {
@@ -68,7 +66,7 @@ body {
 }
 
 .main-nav__link.is-active::before {
-  content: " ";
+  content: ' ';
   height: 4px;
   background-color: var(--active-color);
   display: block;
