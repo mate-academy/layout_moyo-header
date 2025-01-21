@@ -1,22 +1,18 @@
-body {
+.body {
   margin: 0;
-  display: flex;
-  width: 1024px;
-  height: 60px;
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url(https://fonts.google.com/specimen/Roboto);
 }
 
 .header {
   display: flex;
-  flex-direction: row;
-  font-family: system-ui, Roboto, sans-serif;
+  min-width: 1024px;
+  max-width: 1200px;
+  justify-content: space-between;
+  font-family: Roboto, serif;
   font-size: 12px;
+  line-height: 14px;
   background-color: #fff;
-  width: 1024px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .image {
@@ -26,33 +22,35 @@ body {
   height: 40px;
   width: 40px;
   margin-top: 10px;
-  margin-left: 50px;
 }
 
 .nav {
   display: flex;
-  justify-content: end;
-  width: 939px;
-  margin-right: 40px;
 }
 
 .nav__list {
   display: flex;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__item {
   display: block;
-  padding: 10px;
+}
+
+.nav__item:nth-child(n + 2) {
+  margin-left: 20px;
 }
 
 .nav__link {
-  height: 40px;
   display: flex;
-  align-content: center;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav__link:hover {
@@ -72,4 +70,5 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  border-radius: 8px;
 }
