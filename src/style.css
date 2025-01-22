@@ -1,5 +1,5 @@
 :root {
-  --blue-color: #00acdc; /* Объявление переменной для синего цвета */
+  --blue-color: #00acdc;
 }
 
 body {
@@ -10,13 +10,15 @@ body {
   margin: 0;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
   padding: 0 50px;
-  background-color: #fff;
+}
+
+.header__link {
+  height: 60px;
 }
 
 img {
@@ -39,16 +41,16 @@ img {
   color: var(--blue-color);
 }
 
-.nav_link.is-active {
+.is-active {
   color: var(--blue-color);
   position: relative;
 }
 
-.nav_link.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
-  width: 37px;
+  width: 100%;
   height: 4px;
   left: 0;
   border-radius: 8px;
