@@ -1,3 +1,99 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+
+  --blue: #00acdc;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+  margin-left: 50px;
+  margin-top: 13px;
+}
+
+.header {
+  background-color: #fff;
+  max-width: 1200px;
+  height: 60px; /* Altura padrão */
+  margin: 0 auto;
+  display: flex;
+  padding: 0; /* Remove margens extras */
+  align-items: center; /* Alinhamento vertical */
+  justify-content: space-between;
+  overflow: hidden; /* Garante que elementos extras não "vazem" */
+  padding-right: 50px;
+}
+
+.nav {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav ul {
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.nav ul li {
+  list-style: none;
+  position: relative;
+  display: flex;
+}
+
+.nav ul li a {
+  width: auto;
+  height: 60px;
+  position: relative;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  vertical-align: middle;
+  margin-left: 20px; /* Espaço entre os links */
+  color: #000;
+
+  /* Espaçamento interno vertical */
+}
+
+.nav ul li:first-child a {
+  margin-left: 0;
+}
+
+.nav ul li a:active,
+.nav ul li a:hover {
+  color: var(--blue);
+}
+
+.nav ul li a.is-active {
+  color: var(--blue);
+}
+
+nav ul li a.is-active::after {
+  content: ' ';
+  position: absolute;
+  background-color: var(--blue);
+  width: 100%;
+  height: 4px;
+  left: 0;
+  border-radius: 3px;
+  bottom: 0;
+}
+
+.link {
+  margin: auto;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 60px; /* Define a altura */
 }
