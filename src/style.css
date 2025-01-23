@@ -30,17 +30,17 @@ header {
   list-style-type: none;
 }
 
-.nav__link {
+.nav__item {
   display: flex;
   height: 60px;
   align-items: center;
 }
 
-.nav__link + .nav__link {
+.nav__item + .nav__item {
   margin-left: 20px;
 }
 
-.nav__link a {
+.nav__link {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
@@ -48,16 +48,16 @@ header {
   font-size: 12px;
 }
 
-.nav__link a:hover {
+.nav__link:hover {
   color: var(--active-button-color);
 }
 
-.nav__link a.is-active {
+.is-active {
   position: relative;
   color: var(--active-button-color);
 }
 
-.nav__link a.is-active::after {
+.is-active::after {
   content: '';
   background-color: var(--active-button-color);
   height: 4px;
