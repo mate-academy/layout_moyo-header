@@ -3,12 +3,19 @@ body {
   font-family: Roboto, serif;
   font-size: 12px;
   font-weight: 500;
+
+  --blue: #00acdc;
+}
+
+.container {
+  max-width: 1025px;
+  margin: 0 auto;
 }
 
 .header {
-  margin: 0 50px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .nav-img {
@@ -46,11 +53,11 @@ body {
 }
 
 .nav-link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue);
   position: relative;
 }
 
@@ -59,7 +66,7 @@ body {
   content: '';
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--blue);
   border-radius: 8px;
   right: 0;
   margin-top: 56px;
