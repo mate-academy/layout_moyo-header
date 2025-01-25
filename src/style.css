@@ -7,10 +7,6 @@ body {
   --link-color: #00acdc;
 }
 
-html {
-  font-size: 16px;
-}
-
 a {
   text-decoration: none;
   cursor: pointer;
@@ -18,8 +14,7 @@ a {
 }
 
 .header {
-  display: flex;
-  height: 60px;
+  margin: 0;
 }
 
 .container {
@@ -27,14 +22,8 @@ a {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  width: 1200px;
-  height: 60px;
-  padding: 0 60px;
-}
-
-.nav {
-  display: flex;
-  justify-content: center;
+  max-width: 1200px;
+  padding: 0 50px;
 }
 
 .logo {
@@ -44,22 +33,31 @@ a {
 
 .nav__links {
   display: flex;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
 }
 
 .nav__link-item {
+  display: flex;
   list-style: none;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  font-weight: 500;
-  line-height: 14px;
-  text-align: center;
-  margin-right: 16px;
+  height: 60px;
+  margin-right: 20px;
 }
 
 .nav__link-item:last-of-type {
   margin-right: 0;
+}
+
+.nav__link-item:first-of-type {
+  margin-left: 0;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 60px;
 }
 
 .nav__link:hover,
@@ -70,11 +68,16 @@ a {
 
 .is-active {
   position: relative;
+  color: var(--link-color);
 }
 
 .is-active::after {
-  content: url(./images/Rectangle.png);
+  content: '';
   position: absolute;
-  bottom: -24px;
-  display: block;
+  bottom: 0;
+  left: 0;
+  background-color: var(--link-color);
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
 }
