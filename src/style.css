@@ -1,3 +1,86 @@
-body {
+html,
+body,
+ul,
+li {
   margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-color: #00acdc;
+  --black-color: #000;
+  --font-family: 'Roboto', sans-serif;
+  --font-size-small: 12px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  max-width: 1200px;
+  height: 60px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: var(--font-size-small);
+  color: var(--black-color);
+  transition: all 0.3s linear;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  line-height: 14px;
+  margin-left: 16px;
+}
+
+.link:hover {
+  color: var(--blue-color);
+}
+
+.link-list li:first-child .link {
+  margin-left: 0;
+}
+
+.link-wrapper {
+  font-size: 12px;
+}
+
+.is-active {
+  position: relative;
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--blue-color);
+  left: 0;
+  bottom: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
 }
