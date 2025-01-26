@@ -1,5 +1,7 @@
 html {
   font-family: Roboto, sans-serif;
+
+  --blue: #00acdc;
 }
 
 body {
@@ -9,17 +11,18 @@ body {
 .logo {
   width: 40px;
   height: 40px;
-  padding-top: 10px;
 }
 
 .header {
   background-color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
   min-width: 1024px;
   max-width: 1200px;
   padding: 0 50px;
+  width: 100%;
 }
 
 .nav_list {
@@ -47,19 +50,19 @@ body {
 
 .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active::after {
   position: absolute;
   content: '';
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue);
   width: 100%;
   top: 56px;
   border-radius: 8px;
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
