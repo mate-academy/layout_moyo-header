@@ -4,7 +4,7 @@ module.exports = {
     "stylelint-scss"
   ],
 
-    "rules": {
+  rules: {
       "media-feature-range-notation": null
     }
 
