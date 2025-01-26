@@ -12,6 +12,7 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 0 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
 .header__logo {
@@ -47,6 +48,7 @@ body {
   color: #000;
   text-transform: uppercase;
   transition: color 0.2s ease-in;
+  position: relative;
 }
 
 .nav__link:hover {
@@ -56,14 +58,16 @@ body {
 .is-active {
   display: flex;
   color: var(--color-active);
-  position: relative;
 }
 
 .is-active::after {
   content: '';
   position: absolute;
-  border-bottom: var(--color-active) 4px solid;
-  border-radius: 8px;
-  width: 100%;
   bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-active);
+
+  height: 4px;
+  border-radius: 2px;
 }
