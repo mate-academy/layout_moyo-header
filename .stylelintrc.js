@@ -3,5 +3,10 @@ module.exports = {
   plugins: [
     "stylelint-scss"
   ],
-  rules: {}
+
+  rules: {
+      "media-feature-range-notation": null
+    }
+
+
 };

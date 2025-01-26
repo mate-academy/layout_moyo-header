@@ -1,3 +1,88 @@
 body {
   margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  text-align: center;
+
+  --header-height: 60px;
+  --page-color: #fff;
+  --text-color: #000;
+  --blue-color: #00acdc;
+  --font-size: 12px;
+}
+
+@media (min-width: 1200px) {
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+  }
+}
+
+.header {
+  display: flex;
+  background-color: var(--page-color);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+}
+
+.logo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: var(--header-height);
+  margin-left: 50px;
+}
+
+.nav__link {
+  display: block;
+  position: relative;
+  font-size: var(--font-size);
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 20px;
+  height: var(--header-height);
+  line-height: var(--header-height);
+  background-color: var(--page-color);
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+[data-qa='hover'] {
+  color: var(--blue-color);
+}
+
+.is-active {
+  color: var(--blue-color);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 50px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-color);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--blue-color);
 }
