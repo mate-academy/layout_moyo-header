@@ -2,6 +2,13 @@ body {
   margin: 0;
 }
 
+html {
+  --static-text-color: #000;
+  --active-text-color: #00acdc;
+  --spacing: 20px;
+
+}
+
 .header {
   align-items: center;
   display: flex;
@@ -25,7 +32,7 @@ body {
 }
 
 .nav_item {
-  margin-right: 20px;
+  margin-right: var(--spacing);
 }
 
 .nav_item:last-child {
@@ -42,7 +49,7 @@ body {
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000;
+  color: var(--static-text-color);
 }
 
 .header_logo {
@@ -52,7 +59,7 @@ body {
 }
 
 .nav_link.is-active {
-  color: #00acdc;
+  color: var(--active-text-color);
 }
 
 .nav_link.is-active::after {
@@ -63,9 +70,9 @@ body {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--active-text-color);
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--active-text-color);
 }
