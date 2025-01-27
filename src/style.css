@@ -1,90 +1,68 @@
 html {
-  scroll-behavior: smooth;
-  font-size: 12px;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
-  max-height: 60px;
 }
 
 header {
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
   justify-content: space-between;
-  width: 100%;
-  height: 60px;
+  flex-direction: row;
   align-items: center;
-}
-
-nav {
-  padding-right: 50px;
-  align-items: center;
-  line-height: 60px;
-}
-
-.nav__links__list {
-  display: inline-flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  max-height: 60px;
+  padding-inline: 50px;
 }
 
 .logo-link {
-  padding-left: 50px;
+  max-height: 40px;
+  height: auto;
+  width: auto;
+}
+
+.nav__links__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
   margin: 0;
-  max-height: 60px;
+  padding: 0;
 }
 
-.logo {
-  position: relative;
-  bottom: -10px;
-}
-
-a {
-  color: black;
+.link-item {
+  display: inline-block;
+  color: #000;
   text-decoration: none;
-  font-family: Roboto, sans-serif;
-  margin-left: 20px;
-  text-align: center;
   text-transform: uppercase;
   line-height: 60px;
+  max-height: 60px;
+  margin-left: 20px;
 }
 
-a:visited {
-  color: black;
-  text-decoration: none;
-  font-family: Roboto, sans-serif;
-  line-height: 60px;
+.link-item:visited {
+  color: #000;
 }
 
-a:hover {
-  color: blue;
-  font-family: Roboto, sans-serif;
-  text-decoration: none;
-  line-height: 60px;
+.link-item:hover {
+  color: #00acdc;
 }
 
-a.is-active {
-  color: blue;
-  text-decoration: none;
-  font-family: Roboto, sans-serif;
-  text-align: center;
+.link-item.is-active {
+  color: #00acdc;
   margin: 0;
-  line-height: 60px;
 }
 
 .is-active::after {
   content: '';
   display: block;
   height: 4px;
-  width: auto;
+  width: 100%;
   border-radius: 8px;
-  background-color: blue;
+  background-color: #00acdc;
   align-self: center;
   position: relative;
   bottom: 4px;
