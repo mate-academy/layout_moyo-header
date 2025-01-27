@@ -4,13 +4,13 @@ html {
   --background-header-color: #fff;
   --link-text-color: #000;
   --link-text-color-hover: #00acdc;
-}
 
-body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
 
+body {
   font-family: Roboto, sans-serif;
 }
 
@@ -87,19 +87,6 @@ body {
   color: var(--link-text-color-hover);
 }
 
-.nav__link.is-active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-
-  width: 100%;
-  height: 4px;
-
-  background-color: var(--link-text-color-hover);
-
-  border-radius: 8px;
-}
-
 .nav__link::after {
   content: '';
   position: absolute;
@@ -114,9 +101,12 @@ body {
   opacity: 0;
 }
 
-.nav__link:hover::after,
 .nav__link.is-active::after {
   opacity: 1;
+}
+
+.nav__link:hover::after {
+  opacity: 0;
 }
 
 [data-qa='hover'] {
