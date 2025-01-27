@@ -6,6 +6,7 @@
 
 body {
   font-family: Roboto, sans-serif;
+  font-weight: 500;
   margin: 0;
 
   --color: #000;
@@ -13,7 +14,9 @@ body {
 }
 
 header {
-  width: 100%;
+  width: 1200px;
+  height: 60px;
+  position: relative;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -27,6 +30,7 @@ header {
 
 .logo img {
   height: 40px;
+  width: 40px;
   display: block;
 }
 
@@ -38,23 +42,18 @@ header {
 .nav-links {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-link {
   margin-left: 20px;
 }
 
-.nav-link:first-child {
-  margin-left: 0;
-}
-
 .item {
+  font-size: 12px;
   text-decoration: none;
   color: var(--color);
-  height: 50px;
-  line-height: 50px;
+  height: 60px;
+  line-height: 60px;
   display: inline-block;
   position: relative;
   text-transform: uppercase;
@@ -64,12 +63,9 @@ header {
   color: var(--active-color);
 }
 
-[data-qa='hover'] {
-  color: var(--active-color);
-}
-
 .is-active {
   color: var(--active-color);
+  position: relative;
 }
 
 .is-active::after {
@@ -78,21 +74,22 @@ header {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 38px;
   height: 4px;
   background-color: var(--active-color);
   border-radius: 8px;
-  translate: translateX(0);
 }
 
 @media (max-width: 1200px) {
-  .navbar {
-    margin-left: 419px;
+  header {
+    width: 1200px;
+    height: 60px;
   }
 }
 
 @media (max-width: 1024px) {
-  .navbar {
-    margin-left: 243px;
+  header {
+    width: 1024px;
+    height: 60px;
   }
 }
