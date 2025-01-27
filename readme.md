@@ -4,7 +4,7 @@ Create HTML page with the header using `flexbox` based on the [Figma Mockup](htt
 
 The page should match the design Pixel Perfect: all the sizes, colors and distanced MUST be the same as on the design.
 
-> Here are the [Layout Tasks Instructions](nm)
+> Here are the [Layout Tasks Instructions](https://mate-academy.github.io/layout_task-guideline)
 
 ## Requirements:
 
