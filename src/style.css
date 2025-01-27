@@ -1,3 +1,92 @@
+/* stylelint-disable-next-line import-notation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, serif;
+  font-weight: 500;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-link {
+  height: 40px;
+}
+
+.header {
+  background-color: white;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-link {
+  line-height: 60px;
+  color: black;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
+}
+
+.nav-item:first-child a {
+  color: var(--blue);
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-item a:hover {
+  color: var(--blue);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #00acdc;
+  border-radius: 8px;
 }
