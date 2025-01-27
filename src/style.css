@@ -3,7 +3,7 @@ html {
 
   --nav-container-height: 60px;
   --nav-link-height: 15px;
-  --nav-item-hover-color: #00acdc;
+  --nav-link-active-color: #00acdc;
 }
 
 body {
@@ -12,7 +12,6 @@ body {
 }
 
 .header {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,13 +19,13 @@ body {
   padding: 0 50px;
 }
 
-.nav-logo {
+.header-logo-img {
   display: block;
 }
 
 .nav-list {
-  padding: 0;
   display: flex;
+  padding: 0;
 }
 
 .nav-item {
@@ -49,24 +48,24 @@ body {
   text-transform: uppercase;
 }
 
-.nav-link::after {
+.nav-link:hover {
+  color: var(--nav-link-active-color);
+}
+
+.is-active {
+  color: var(--nav-link-active-color);
+}
+
+.is-active::after {
   content: '';
   position: absolute;
-  bottom: calc(50% - var(--nav-link-height));
+  bottom: 0;
   display: block;
   height: 4px;
   width: 100%;
-  background-color: var(--nav-item-hover-color);
+  background-color: var(--nav-link-active-color);
   border-radius: 8px;
-  transform: scaleX(0);
+  transform: scaleX(1);
   transform-origin: center;
   transition: transform 0.3s ease;
-}
-
-.nav-link:hover::after {
-  transform: scaleX(1);
-}
-
-.nav-link:hover {
-  color: var(--nav-item-hover-color);
 }
