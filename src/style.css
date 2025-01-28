@@ -1,7 +1,8 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
+
 html {
   font-family: Roboto, sans-serif;
-  font-optical-sizing: auto;
-  font-size: 12;
+  font-size: 12px;
   font-weight: 500;
 
   --nav-item-color-regular: #000;
@@ -17,52 +18,52 @@ body {
   background-color: black;
 }
 
-header {
+.header {
   background-color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
 }
 
 .logo {
-  margin: auto 10px;
-  margin-left: 50px;
-}
-
-ul {
-  list-style: none;
-  float: right;
+  display: flex;
+  margin: auto 0;
 }
 
 .nav-links {
   display: flex;
   flex-direction: row;
-  margin-right: 50px;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  float: right;
 }
 
-.nav-link {
+.nav-item {
   margin: 0 10px;
   position: relative;
 }
 
-.nav-link:first-child {
+.nav-item:first-child {
   margin-left: 0;
 }
 
-.nav-link:last-child {
+.nav-item:last-child {
   margin-right: 0;
 }
 
-.link {
+.nav-link {
+  height: 60px;
   line-height: 60px;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--nav-item-color-regular);
 }
 
-.link:hover,
-.link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--nav-item-color-selected);
 }
 
