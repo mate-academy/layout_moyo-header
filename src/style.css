@@ -1,4 +1,9 @@
-/* Resetando margens e preenchimentos padrão */
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap';
+
+:root {
+  --blue-color: #00acdc: ;
+}
+
 html {
   font-family: Roboto, sans-serif;
   background-color: #f5f5f5; /* Cor de fundo */
@@ -29,7 +34,6 @@ body {
 .logo__image {
   height: 100%;
   width: 100%;
-  position: absolute;
 }
 
 .nav__list {
@@ -70,14 +74,14 @@ nav ul li a {
 
 nav ul li a:hover,
 .nav_link.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 nav a[data-qa='hover']:hover::before {
   position: relative;
 }
 
-.nav-link.is-active::after {
+.nav__link.is-active::after {
   left: 0;
   right: 0;
   bottom: 0;
@@ -86,5 +90,5 @@ nav a[data-qa='hover']:hover::before {
   height: 4px;
   border-radius: 8px;
   position: absolute;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
