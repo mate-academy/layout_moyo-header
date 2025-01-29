@@ -1,5 +1,11 @@
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 /* stylelint-disable-next-line import-notation */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+  --blue-color: #00acdc;
+  --black-color: #000;
+}
 
 body {
   margin: 0;
@@ -18,19 +24,21 @@ a {
   text-decoration: none;
 }
 
-img {
-  object-fit: contain;
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
-}
-
-.header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .menu-link {
@@ -38,14 +46,13 @@ img {
   height: 60px;
   text-align: center;
   line-height: 60px;
-  color: #000;
-  transition: color 0.3s ease;
+  color: var(--black-color);
   font-size: 12px;
   text-transform: uppercase;
 }
 
 .menu-link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .menu-item:not(:last-child) {
@@ -57,7 +64,7 @@ img {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
   position: relative;
 }
 
@@ -66,7 +73,7 @@ img {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   height: 4px;
   width: 100%;
   border-radius: 8px;
