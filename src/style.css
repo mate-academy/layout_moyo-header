@@ -1,3 +1,74 @@
-body {
+/* Reset settings */
+* {
+  padding: 0;
   margin: 0;
+  border: 0;
+}
+
+body {
+  font-family: Roboto, serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #fff;
+}
+
+/* Standart settings */
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 50px;
+  align-items: center;
+}
+
+.header__nav {
+  display: flex;
+  position: relative;
+  height: 60px;
+}
+
+.header__link {
+  margin-left: 20px;
+  font-size: 12px;
+  height: 60px;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+
+.header__link:first-child {
+  margin-left: 0;
+}
+
+.blue-link {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  align-items: center;
+}
+
+.header__link:hover {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  background-color: #00acdc;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
 }
