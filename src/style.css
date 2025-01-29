@@ -1,3 +1,73 @@
+/* stylelint-disable-next-line import-notation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
   margin: 0;
+  font-family: Roboto, serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  object-fit: contain;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-link {
+  display: inline-block;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #000;
+  transition: color 0.3s ease;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.menu-link:hover {
+  color: #00acdc;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.menu {
+  display: flex;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #00acdc;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
 }
