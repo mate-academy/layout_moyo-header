@@ -3,53 +3,66 @@ body {
   padding: 0;
   font-family: Roboto, serif;
   font-size: 12px;
-  font-weight: 500;
 }
 
-header {
+.header {
   height: 60px;
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
+  align-items: center;
 }
 
-img {
-  margin-top: 10px;
+.header__nav {
+  height: 100%;
+  position: relative;
 }
 
-ul {
+.logo {
   display: flex;
+  align-items: center;
 }
 
-li {
-  text-transform: uppercase;
+.nav__links {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+.nav__item {
   list-style: none;
-  text-decoration: none;
+  display: flex;
+  height: 100%;
   margin-left: 20px;
-  margin-top: 10px;
 }
 
-.top {
-  padding-top: 60px;
+.nav__item:first-child {
+  margin-left: 0;
 }
 
-.negativo {
-  margin-left: -40px;
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.is-active {
+.is-active,
+.nav__link:hover {
   color: #00acdc;
 }
 
-.link:hover {
-  color: #00acdc;
-}
-
-hr {
-  margin-top: 20px;
-  width: 37px;
+.is-active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   height: 4px;
   border-radius: 8px;
   background-color: #00acdc;
-  border: none;
 }
