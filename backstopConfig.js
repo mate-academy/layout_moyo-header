@@ -49,6 +49,7 @@ const config = {
       ...basic,
       label: 'Link with class_is-active',
       selectors: ['a.is-active'],
+      misMatchThreshold: 1.2,
     },
   ],
 };
