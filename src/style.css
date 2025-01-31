@@ -1,9 +1,3 @@
-html {
-  --text-color: #00acdc;
-  --logo-size: 40px;
-  --color: #000;
-}
-
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -19,8 +13,8 @@ body {
 
 .logo {
   text-decoration: none;
-  height: var(--logo-size);
-  width: var(--logo-size);
+  height: 40px;
+  width: 40px;
 }
 
 .nav_list {
@@ -37,7 +31,7 @@ body {
   height: 60px;
   text-decoration: none;
   font-weight: 500;
-  color: var(--color);
+  color: black;
   position: relative;
 }
 
@@ -47,10 +41,10 @@ body {
 
 .is-active,
 .nav_link:hover {
-  color: var(--text-color);
+  color: #00acdc;
 }
 
-a.is-active::after {
+.nav_link.is-active::after {
   content: '';
   display: flex;
   position: absolute;
@@ -58,5 +52,5 @@ a.is-active::after {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background-color: var(--text-color);
+  background-color: #00acdc;
 }
