@@ -33,18 +33,18 @@ html {
   align-items: center;
 }
 
-ul {
+.nav_list {
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-li {
+.selectors {
   list-style: none;
   margin-right: 20px;
 }
 
-a {
+.text {
   position: relative;
   text-decoration: none;
   color: black;
@@ -54,15 +54,15 @@ a {
   display: inline-block;
 }
 
-a:hover {
+text:hover {
   color: var(--blue-color);
 }
 
-a.active {
+text.active {
   color: blue;
 }
 
-.is-active a::after {
+.is-active text::after {
   content: '';
   display: block;
   width: 0%;
@@ -75,7 +75,7 @@ a.active {
   transition: width 0.3s ease-in-out;
 }
 
-.is-active a:hover::after,
-.is-active a.active::after {
+.is-active text:hover::after,
+.is-active text.active::after {
   width: 100%;
 }
