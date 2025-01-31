@@ -1,3 +1,99 @@
+/* font-family: "Roboto", serif; */
+:root {
+  /* ============================ font family; ============================ */
+
+  --ff-roboto: 'Roboto', serif;
+
+  /* ================npm t============ color ============================ */
+  --color-active: #00acdc;
+}
+
+/* ============================ default style ============================ */
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ============================ header style ============================ */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: relative;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.menu {
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  font-family: var(--ff-roboto);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: stretch;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.menu-item:hover {
+  color: var(--color-active);
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+}
+
+.is-active {
+  color: var(--color-active);
+}
+
+.is-active::before {
+  content: '';
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--color-active);
+  position: absolute;
+  bottom: 0;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+/* ============================ end header style ============================ */
