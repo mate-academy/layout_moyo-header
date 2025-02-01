@@ -8,10 +8,7 @@ body {
 
 html {
   font-family: Roboto, sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal;
-  font-variation-settings: 'wdth' 100;
   text-transform: uppercase;
 }
 
@@ -39,12 +36,12 @@ html {
   padding: 0;
 }
 
-.selectors {
+.nav_item {
   list-style: none;
   margin-right: 20px;
 }
 
-.selectors:last-child {
+.nav_item:last-child {
   margin-right: 0;
 }
 
@@ -67,7 +64,7 @@ html {
   color: var(--blue-color);
 }
 
-.is-active.nav_link::after {
+.is-active::after {
   content: '';
   display: block;
   width: 100%;
@@ -78,9 +75,4 @@ html {
   bottom: 0;
   left: 0;
   transition: width 0.3s ease-in-out;
-}
-
-.is-active .nav_link::after,
-.is-active .nav_link.active::after {
-  width: 100%;
 }
