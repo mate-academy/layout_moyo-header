@@ -1,3 +1,91 @@
+html {
+  font-family: Roboto, serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.header {
+  position: relative;
+  padding: 0 50px;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moyo-logo {
+  display: block;
+  height: 40px;
+}
+
+.nav {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+.nav-list {
+  font-size: 12px;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin: 0 0 0 20px;
+  list-style: none;
+  display: flex;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 0;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  display: flex;
+  font-weight: 500;
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-link:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  background-color: #00acdc;
+  border-radius: 8px;
+  width: 100%;
+  height: 4px;
+  display: block;
+  position: absolute;
+  bottom: 0;
 }
