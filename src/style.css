@@ -1,3 +1,70 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+img {
+  height: 40px;
+  width: 40px;
+}
+
+.nav {
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  display: flex;
+  margin-left: 20px;
+}
+
+.nav__list :first-child {
+  margin-left: 0;
+}
+
+.nav__list .nav__item {
+  display: inline-block;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 60px;
+  color: black;
+}
+
+.nav__link.is-active {
+  color: #00acdc;
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #00acdc;
+}
+
+.nav__item :hover {
+  color: #00acdc;
 }
