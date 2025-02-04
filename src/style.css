@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
 
 html {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  --link-color: blue;
+  font-family: Roboto, sans-serif;
+
+  --link-color: #00acdc;
 }
 
 body {
@@ -16,44 +17,48 @@ body {
   background-color: white;
   padding: 0 50px;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .img {
-  position: absolute;
-  margin: 10px 0;
+  height: 40px;
 }
 
 .ul {
   display: flex;
-  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
 
 .li {
   list-style: none;
-  margin-left: 20px;
+  margin-right: 20px;
   position: relative;
 }
 
-.first-li {
-  margin-left: 0;
+.last-li {
+  margin-right: 0;
 }
 
 .nav__links {
   display: flex;
   align-items: center;
-  height: 60px;
   text-decoration: none;
   color: black;
+  height: 60px;
   padding: 0;
   text-transform: uppercase;
   white-space: nowrap;
+  font-size: 12px;
 }
 
 .nav__links:hover {
-  color:var(--link-color);
+  color: var(--link-color);
 }
 
-.is-active:active::after {
+.is-active::after {
   content: '';
   height: 4px;
   position: absolute;
@@ -64,6 +69,6 @@ body {
   left: 0;
 }
 
-.is-active[data-qa="hover"] {
+.is-active {
   color: var(--link-color);
 }
