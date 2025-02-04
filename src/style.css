@@ -1,3 +1,105 @@
-body {
+/* Reset default margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
   margin: 0;
+}
+
+@font-face {
+  font-family: 'latoregular';
+  src:
+    url('./assets/fonts/lato-regular-webfont.woff2') format('woff2'),
+    url('./assets/fonts/lato-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'latobold';
+  src:
+    url('./assets/fonts/lato-bold-webfont.woff2') format('woff2'),
+    url('./assets/fonts/lato-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+.ReactModal__Body--open .header {
+  display: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header Styles */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Space logo and nav */
+  align-items: center; /* Vertically center content */
+  padding: 20px 40px; /* Consistent padding */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.logo-link {
+  display: block; /* Make the logo a block element for proper sizing */
+}
+
+.logo {
+  height: 40px; /* Set logo height */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin: 0 20px; /* Space between list items */
+}
+
+nav li:first-child {
+  margin-left: 0; /* Remove margin from the first item */
+}
+
+nav li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+nav a {
+  text-decoration: none;
+  color: #000; /* Default link color */
+  height: 44px; /* Set nav link height */
+  line-height: 44px; /* Vertically center text within link */
+  display: inline-block; /* Needed for vertical alignment and pseudo element */
+  padding: 0 10px; /* Add some horizontal padding around text */
+  text-align: center;
+}
+
+nav a:hover {
+  color: #007bff; /* Blue on hover */
+}
+
+nav a.is-active {
+  color: #007bff; /* Blue for active link */
+}
+
+nav a.is-active::after {
+  content: '';
+  display: block;
+  width: calc(100% + 20px); /* Full width + padding */
+  height: 2px;
+  background-color: #007bff;
+  position: relative;
+  bottom: -2px; /* Position just below the text */
+  left: -10px; /* Adjust for padding */
 }
