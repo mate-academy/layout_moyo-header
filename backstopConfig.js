@@ -32,11 +32,15 @@ const config = {
       ...basic,
       label: 'Header tag',
       selectors: ['header'],
+      hideSelectors: ['.dynamic-content'],
+      removeSelectors: ['.dynamic-content'],
     },
     {
       ...basic,
       label: 'Nav tag',
       selectors: ['nav'],
+      hideSelectors: ['.dynamic-content'],
+      removeSelectors: ['.dynamic-content'],
     },
     {
       ...basic,
@@ -44,11 +48,15 @@ const config = {
       selectors: ['[data-qa="hover"]'],
       hoverSelector: '[data-qa="hover"]',
       postInteractionWait: 1000,
+      hideSelectors: ['.dynamic-content'],
+      removeSelectors: ['.dynamic-content'],
     },
     {
       ...basic,
       label: 'Link with class_is-active',
       selectors: ['a.is-active'],
+      hideSelectors: ['.dynamic-content'],
+      removeSelectors: ['.dynamic-content'],
     },
   ],
 };
