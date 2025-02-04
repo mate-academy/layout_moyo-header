@@ -12,32 +12,8 @@ li {
   margin: 0;
 }
 
-@font-face {
-  font-family: 'latoregular';
-  src:
-    url('./assets/fonts/lato-regular-webfont.woff2') format('woff2'),
-    url('./assets/fonts/lato-regular-webfont.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'latobold';
-  src:
-    url('./assets/fonts/lato-bold-webfont.woff2') format('woff2'),
-    url('./assets/fonts/lato-bold-webfont.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-
-.ReactModal__Body--open {
-  overflow: hidden;
-}
-.ReactModal__Body--open .header {
-  display: none;
-}
-
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif; /* Removed quotes */
 }
 
 /* Header Styles */
@@ -102,4 +78,33 @@ nav a.is-active::after {
   position: relative;
   bottom: -2px; /* Position just below the text */
   left: -10px; /* Adjust for padding */
+}
+
+/* Empty line before the following at-rule */
+
+@font-face { /* Removed quotes from font-family */
+    font-family: latoregular;
+    src: url('./fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('./fonts/lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Empty line before the following at-rule */
+
+@font-face { /* Removed quotes from font-family */
+    font-family: latobold;
+    src: url('./fonts/lato-bold-webfont.woff2') format('woff2'),
+         url('./fonts/lato-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Empty line before this rule */
+
+.some-other-class {
+  /* ... styles ... */
 }
