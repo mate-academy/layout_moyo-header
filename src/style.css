@@ -1,3 +1,7 @@
+*{
+  --acent-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -30,15 +34,12 @@ img {
 
 .nav__item {
   display: flex;
+  display: inline-block;
   margin-left: 20px;
 }
 
-.nav__list :first-child {
+.nav__list>.nav__item:first-child {
   margin-left: 0;
-}
-
-.nav__list .nav__item {
-  display: inline-block;
 }
 
 .nav__link {
@@ -51,7 +52,7 @@ img {
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--acent-color);
 }
 
 .nav__link.is-active::after {
@@ -62,9 +63,9 @@ img {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--acent-color);
 }
 
 .nav__item :hover {
-  color: #00acdc;
+  color: var(--acent-color);
 }
