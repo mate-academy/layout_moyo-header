@@ -2,12 +2,15 @@
   --margin: 0;
   --padding: 0;
   --box-sizing: border-box;
-  --color: blue;
+  --color-blue: blue;
+  --body-background-color: aliceblue;
+  --header-background-color: #fff;
 }
 
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  background-color: var(--body-background-color);
 }
 
 body,
@@ -29,6 +32,7 @@ header {
   align-items: center;
   width: 100%;
   padding: 0 20px;
+  background-color: var(--header-background-color);
 }
 
 .logo img {
@@ -55,7 +59,7 @@ nav ul li:last-child {
 }
 
 .nav-link:hover {
-  color: var(--color);
+  color: var(--color-blue);
 }
 
 .is-active {
@@ -67,7 +71,7 @@ nav ul li:last-child {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: var(--color);
+  background-color: var(--color-blue);
   position: absolute;
   bottom: -2px;
   left: 0;

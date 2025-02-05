@@ -7,10 +7,10 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ## Requirements:
 
-- reset browser default margins
-- use [Roboto font](https://fonts.google.com/specimen/Roboto): select ONLY **roman** style, **medium (500)** weight and **normal** width for embedding
-- use semantic tags: `<header>`, `<img>`, `<nav>`, `<ul>`, `<li>` and `<a>`
-- the header should stretch the full page width (don't use a horizontal margin)
+~~- reset browser default margins~~
+~~- use [Roboto font](https://fonts.google.com/specimen/Roboto): select ONLY **roman** style, **medium (500)** weight and **normal** width for embedding~~
+~~- use semantic tags: `<header>`, `<img>`, `<nav>`, `<ul>`, `<li>` and `<a>`~~
+~~- the header should stretch the full page width (don't use a horizontal margin)~~
 - the height should be set for nav links (not the header), take it from the design
 - header content should be vertically centered
 - the logo should also be a link with an image inside (from [src/images](src/images)). But it should not be a part of the `<nav>`
