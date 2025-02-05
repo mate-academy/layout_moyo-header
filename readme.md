@@ -11,12 +11,12 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 ~~- use [Roboto font](https://fonts.google.com/specimen/Roboto): select ONLY **roman** style, **medium (500)** weight and **normal** width for embedding~~
 ~~- use semantic tags: `<header>`, `<img>`, `<nav>`, `<ul>`, `<li>` and `<a>`~~
 ~~- the header should stretch the full page width (don't use a horizontal margin)~~
-- the height should be set for nav links (not the header), take it from the design
+~~- the height should be set for nav links (not the header), take it from the design~~
 - header content should be vertically centered
-- the logo should also be a link with an image inside (from [src/images](src/images)). But it should not be a part of the `<nav>`
+~~- the logo should also be a link with an image inside (from [src/images](src/images)). But it should not be a part of the `<nav>`~~
 - ❗️ the blue link with a line below should have a class `is-active` in addition to any other classes you add
-- ❗️ add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)
-- link color should be changed on `:hover`
+ ❗️ add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)~~
+~~- link color should be changed on `:hover`~~~~
 - use the `::after` and position it relative to a link with `is-active` class
 - don't use the flex `gap` property for indents. It's not supported in tests, use `margin` instead
 - there should not be margins before the first and after the last list items
