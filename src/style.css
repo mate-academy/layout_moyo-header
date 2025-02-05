@@ -1,3 +1,93 @@
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
+  /* stylelint-disable-next-line font-family-name-quotes */
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.06px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+img {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.logo {
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.menu {
+  margin-right: 50px;
+}
+
+.menu-list {
+  display: flex;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-item {
+  display: flex;
+  height: 60px;
+  line-height: 60px;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.is-active1 {
+  color: #00acdc;
+  text-decoration: #000;
+  position: relative;
+}
+
+.menu-item:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+  width: 100%;
+  height: 1px;
+  background-color: #00acdc;
+  border-radius: 8px;
+  color: #00acdc;
+}
+
+.is-active4:hover {
+  color: #00acdc;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+.element::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  top: 50px;
+  margin-left: 20px;
+  background-color: #00acdc;
+  color: #00acdc;
+  border-radius: 8px;
 }
