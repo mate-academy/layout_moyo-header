@@ -16,7 +16,6 @@
 
 header {
   width: 100%;
-  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,8 +29,13 @@ header a {
   font-weight: 500;
   font-size: 12px;
   color: black;
+  position: relative;
   display: inline-block;
   transition: color 0.3s ease-in-out;
+}
+
+header .logo-link {
+  display: inline-block;
 }
 
 header img {
@@ -48,29 +52,24 @@ header nav {
 header nav ul {
   display: flex;
   list-style: none;
-  gap: 20px;
   margin-right: auto;
   padding-left: 0;
 }
 
 header nav ul li {
   position: relative;
+  margin-right: 24px;
+}
+
+header nav ul li a {
+  display: flex;
+  align-items: center;
+  height: 60px;
 }
 
 /* Linha azul abaixo do link ativo */
 header nav ul li a.is-active {
   position: relative;
-}
-
-header nav ul li a.is-active::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -5px;
-  width: 100%;
-  height: 3px;
-  background-color: var(--blue-color);
-  transform: translateX(-50%);
 }
 
 /* Efeito de hover */
@@ -95,20 +94,23 @@ header nav ul li a:active {
   color: var(--blue-color);
 }
 
+/* Adicionando data-qa para testes */
+header nav ul li:nth-child() a[data-qa='hover'] {
+  color: var(--blue-color);
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
 /* Ajuste para espaçamento correto */
 /* stylelint-disable-next-line no-descending-specificity */
 header nav ul li a[data-qa='hover'] {
   margin-left: 0;
   margin-right: 0;
-  gap: 20px;
 }
 
 /* Responsividade */
 @media (max-width: 1024px) {
-  header {
-    height: 60px;
-  }
-
   header img {
     height: 40px;
     width: 40px;
