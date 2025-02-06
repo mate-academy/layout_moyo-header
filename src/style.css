@@ -1,3 +1,138 @@
-body {
+/* Importação da fonte */
+/* stylelint-disable-next-line import-notation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+  --blue-color: #007bff;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* stylelint-disable-next-line font-family-name-quotes */
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0 20px;
+}
+
+header a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  color: black;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+header img {
+  height: 40px;
+  width: 40px;
+  margin: 10px 0 10px 30px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin-right: auto;
+  padding-left: 0;
+}
+
+header nav ul li {
+  position: relative;
+}
+
+/* Linha azul abaixo do link ativo */
+header nav ul li a.is-active {
+  position: relative;
+}
+
+header nav ul li a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--blue-color);
+  transform: translateX(-50%);
+}
+
+/* Efeito de hover */
+header nav ul li a:hover {
+  color: var(--blue-color);
+}
+
+header nav ul li a:hover::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--blue-color);
+  transform: translateX(-50%);
+}
+
+/* Quando o link estiver clicado */
+header nav ul li a:focus,
+header nav ul li a:active {
+  color: var(--blue-color);
+}
+
+/* Ajuste para espaçamento correto */
+/* stylelint-disable-next-line no-descending-specificity */
+header nav ul li a[data-qa='hover'] {
+  margin-left: 0;
+  margin-right: 0;
+  gap: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  header {
+    height: 60px;
+  }
+
+  header img {
+    height: 40px;
+    width: 40px;
+  }
+
+  header nav ul {
+    margin: 14.5px 30px 15.5px 0;
+  }
+
+  header nav ul li a {
+    font-size: 12px;
+    padding-bottom: 3px;
+    font-weight: 500;
+  }
+
+  header nav ul li a.is-active::after {
+    bottom: -5px;
+  }
+
+  header nav ul li a:hover::after {
+    bottom: -5px;
+  }
+
+  header nav ul li:nth-child(4) a[data-qa='hover'] {
+    color: var(--blue-color);
+  }
 }
