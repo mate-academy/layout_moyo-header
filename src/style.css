@@ -1,3 +1,112 @@
+/* Reset browser default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Use Roboto font globally */
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+/* CSS variable for blue color */
+:root {
+  --blue-color: blue; /* Replace with the exact color from the Figma design */
+}
+
+/* Full-width header */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5; /* Adjust as per design */
+  padding: 0 20px; /* Adjust horizontal padding as per design */
+}
+
+/* Logo styling */
+.logo img {
+  height: 50px; /* Adjust height from the design */
+  display: block;
+}
+
+/* Navigation menu */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 20px; /* Adjust spacing between items */
+}
+
+nav ul li:first-child {
+  margin-left: 0; /* No margin before the first item */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* No margin after the last item */
+}
+
+/* Navigation links */
+nav ul li a {
+  text-decoration: none;
+  color: #000; /* Default link color */
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  line-height: 50px; /* Set height for the links */
+  font-weight: 400;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+  color: var(--blue-color);
+}
+
+/* Active link styling */
+nav ul li a.is-active {
+  color: var(--blue-color);
+  position: relative;
+}
+
+/* Pseudo-element for active link underline */
+nav ul li a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue-color);
+}
+
+/* Responsive adjustments if necessary */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+.roboto-thin {
+  font-family: Roboto, serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: Roboto, serif;
+  font-weight: 400;
+  font-style: normal;
 }
