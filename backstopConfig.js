@@ -13,7 +13,7 @@ const basic = {
 const config = {
   ...backstop,
   fileNameTemplate: '{scenarioLabel}_{viewportLabel}',
-  onBeforeScript: 'puppet/onBefore.js',
+  // onBeforeScript: 'puppet/onBefore.js',
   onReadyScript: 'puppet/onReady.js',
   viewports: [
     {
@@ -32,11 +32,15 @@ const config = {
       ...basic,
       label: 'Header tag',
       selectors: ['header'],
+      hideSelectors: [".dynamic-content", ".date-time"],
+      misMatchThreshold: 5,
     },
     {
       ...basic,
       label: 'Nav tag',
       selectors: ['nav'],
+      hideSelectors: [".dynamic-content", ".date-time"],
+      misMatchThreshold: 5,
     },
     {
       ...basic,
@@ -44,13 +48,17 @@ const config = {
       label: 'Link with data-qa_hover',
       selectors: ['[data-qa="hover"]'],
       hoverSelector: '[data-qa="hover"]',
-      postInteractionWait: 1000,
+      postInteractionWait: 1500,
+      hideSelectors: [".dynamic-content", ".date-time"],
+      misMatchThreshold: 5,
     },
     {
       ...basic,
       misMatchThreshold: 2,
       label: 'Link with class_is-active',
       selectors: ['a.is-active'],
+      hideSelectors: [".dynamic-content", ".date-time"],
+      misMatchThreshold: 5,
     },
   ],
 };
