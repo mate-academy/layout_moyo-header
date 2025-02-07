@@ -1,120 +1,73 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Roboto, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-}
-
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 60px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-  transition: border 0.3s ease;
   background: rgba(255, 255, 255, 1);
-
-}
-
-/* Рамка навколо хедера при наведенні */
-.header:hover {
-  border: 2px solid #00acdc;
-}
-
-/* Рамка при натисканні на хедер */
-.header:active {
-  border: 2px solid #00acdc;
-}
-
-.logo {
-  margin-left: 50px;
 }
 
 .logo img {
   width: 40px;
   height: 40px;
   display: block;
-  transition: border 0.3s ease;
-}
-
-/* Рамка навколо логотипа при наведенні */
-.logo:hover {
-  border: 2px solid #00acdc;
-}
-
-/* Тонша рамка навколо логотипа при натисканні */
-.logo:active {
-  border: 1px solid #00acdc;
-}
-
-.nav {
-  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .nav__list {
   display: flex;
   list-style: none;
+  align-items: center;
 }
 
 .nav__list li {
+  height: 100%;
+  display: flex;
+  align-items: center;
   margin-right: 20px;
 }
 
 .nav__list li:last-child {
-  margin-right: 0;
+  margin-right: 50px;
 }
 
 .nav__link {
-  position: relative;
+  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
+  display: flex;
+  position: relative;
   color: black;
   text-decoration: none;
-  transition:
-    color 0.3s ease,
-    border 0.3s ease;
+
+  justify-content: center; /* Вирівнюємо текст по центру */
+
+  line-height: 60px; /* Вирівнюємо текст вертикально */
 }
 
 .nav__link:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.nav__link.is-active {
   color: #00acdc;
 }
 
-/* Підкреслення при наведенні */
-.nav__link:hover::after {
+.nav__link.is-active::after {
+  display: block;
   content: '';
   position: absolute;
   width: 100%;
-  height: 2px;
-  background-color: #00acdc;
-  bottom: -2px;
-  left: 0;
-}
-
-/* Рамка при натисканні */
-.nav__link:active {
-  border: 2px solid #00acdc;
-  padding: 2px;
-  background: rgba(0, 172, 220, 1);
-
-}
-
-/* Спеціальний стиль для Apple (підкреслення-плашка) */
-.nav__link.is-active::after {
-  content: '';
-  position: absolute;
-  width: 37px;
   height: 4px;
   background: rgba(0, 172, 220, 1);
   border-radius: 8px;
-  bottom: -22px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
 }
