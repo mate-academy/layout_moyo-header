@@ -1,13 +1,13 @@
-/* stylelint-disable font-family-name-quotes */
-/* stylelint-disable rule-empty-line-before */
 html {
-  font-family: 'Roboto', sans-serif;
-  /* stylelint-disable-next-line custom-property-empty-line-before */
+  font-family: Roboto, sans-serif;
+
   --main-nav-color: #00acdc;
 }
+
 body {
   margin: 0;
 }
+
 .header {
   padding: 0 50px;
   height: 60px;
@@ -16,18 +16,17 @@ body {
   align-items: center;
   text-transform: uppercase;
 }
+
 a.logo {
   display: flex;
 }
-.nav {
-  /* display: flex; */
-  /* stylelint-disable-next-line comment-empty-line-before */
-  /* justify-content: center; */
-}
+
 .nav__list {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  list-style: none;
+  padding: 0;
 }
 
 .nav__link {
@@ -38,25 +37,23 @@ a.logo {
   font-size: 12px;
   line-height: 60px;
   font-weight: 500;
-}
-li:not(:first-child) {
-  margin-left: 20px;
-}
-ul {
-  list-style: none;
-  padding: 0;
-}
-a {
   text-decoration: none;
   color: black;
 }
-a:active {
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link:active {
   color: blue;
   text-decoration: underline;
 }
-a:hover {
+
+.nav__link:hover {
   color: var(--main-nav-color);
 }
+
 .is-active {
   position: relative;
   height: 60px;
@@ -73,6 +70,7 @@ a:hover {
   background: var(--main-nav-color);
   border-radius: 2px;
 }
-a[data-qa='hover'] {
+
+.nav__link[data-qa='hover'] {
   cursor: pointer;
 }
