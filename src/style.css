@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-transform: uppercase;
 }
 
 body {
@@ -48,6 +47,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .highlight {
@@ -68,13 +68,17 @@ body {
   height: 4px;
   background-color: #00acdc;
   bottom: 0;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
-.main-menu ul li a:hover::after {
+.main-menu ul li a:hover {
+  color: #00acdc;
+}
+
+.main-menu ul li:hover::after {
   content: ' ';
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   width: 100%;
   height: 1px;
