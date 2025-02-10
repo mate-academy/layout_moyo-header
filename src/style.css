@@ -9,6 +9,8 @@ html {
   font-weight: 500;
   font-style: normal;
   font-variation-settings: 'wdth' 100;
+  
+  --blue: #00acdc;
 }
 
 .header {
@@ -43,22 +45,23 @@ h1 {
 }
 
 .nav__link {
+  height: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
   display: inline-block;
   text-decoration: none;
   font-size: 12px;
-  height: 60px;
-  line-height: 60px;
   color: #000;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active {
   position: relative;
   display: inline-block;
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active::after {
@@ -68,7 +71,7 @@ h1 {
   bottom: 0;
   width: 100%;
   height: 4px;
-  background: #00acdc;
+  background: var(--blue);
   border-radius: 8px;
 }
 
