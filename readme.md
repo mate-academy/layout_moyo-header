@@ -8,7 +8,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 ## Requirements:
 
 - reset browser default margins
-- use [Roboto font](https://fonts.google.com/specimen/Roboto): select ONLY **roman** style, **medium (500)** weight and **normal** width for embedding
+- use [Roboto font](https://fonts.google.com/specimen/Roboto): select ONLY **roman** style, **medium (500)** weight and **normal** width for embedding. **THIS STEP IS IMPORTANT, OR YOUR AUTO TEST MAY FAIL. Take a look at the image at the end of the Readme.**
 - use semantic tags: `<header>`, `<img>`, `<nav>`, `<ul>`, `<li>` and `<a>`
 - the header should stretch the full page width (don't use a horizontal margin)
 - the height should be set for nav links (not the header), take it from the design
@@ -39,3 +39,5 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [ ] **CSS Variable** is used for a blue color
 - [ ] Pseudo-element is used for a blue line below the active link
 - [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
+- [ ] The Google Fonts Configuration follows requirements. 
+![alt text](./assets/image.png)
