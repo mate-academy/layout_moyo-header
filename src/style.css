@@ -1,3 +1,95 @@
+:root {
+  --blue-color: #007bff;
+  --header-height: 60px;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #fff;
+  padding: 0 20px;
+  height: var(--header-height);
+}
+
+header .logo-link img {
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  height: var(--header-height);
+  line-height: var(--header-height);
+  position: relative;
+}
+
+nav a.is-active {
+  color: var(--blue-color);
+}
+
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue-color);
+}
+
+nav a:hover {
+  color: var(--blue-color);
+}
+
+nav a[data-qa='hover']:hover {
+  color: var(--blue-color);
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 1200px) {
+  header {
+    padding: 0 40px;
+  }
+
+  nav ul li {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 0 10px;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
 }
