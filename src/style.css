@@ -1,7 +1,9 @@
-* {
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  --color-nav: #00acdc;
 }
 
 body {
@@ -31,14 +33,23 @@ body {
 .menu {
   display: flex;
   flex-grow: 1;
-  justify-content: flex-end; /* Центруємо меню */
+  justify-content: flex-end;
   align-items: center;
 }
 
 .menu ul {
   display: flex;
   list-style: none;
-  gap: 25px; /* Відстань між елементами */
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
 }
 
 .menu a {
@@ -51,13 +62,8 @@ body {
   padding: 10px 5px;
 }
 
-.menu li {
-  display: flex;
-  align-items: center;
-}
-
 .menu .blue {
-  color: #00acdc;
+  color: var(--color-nav);
 }
 
 .menu .is-active::after {
@@ -65,7 +71,7 @@ body {
   position: absolute;
   left: 50%;
   bottom: -4px;
-  width: 18px; /* Зробити підкреслення компактним */
+  width: 37px;
   height: 4px;
   border-radius: 8px;
   background-color: #00acdc;
@@ -73,12 +79,14 @@ body {
 }
 
 .menu a:hover {
-  color: #00acdc;
+  color: var(--color-nav);
 }
 
-/* Адаптація для 1024px */
 @media (max-width: 1024px) {
-  .menu ul {
-    gap: 15px;
+  .menu li {
+    margin-right: 15px;
+  }
+  .menu li:last-child {
+    margin-right: 0;
   }
 }
