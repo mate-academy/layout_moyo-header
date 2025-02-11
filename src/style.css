@@ -1,3 +1,84 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 15px 50px;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end; /* Центруємо меню */
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 25px; /* Відстань між елементами */
+}
+
+.menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  padding: 10px 5px;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+}
+
+.menu .blue {
+  color: #00acdc;
+}
+
+.menu .is-active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 18px; /* Зробити підкреслення компактним */
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+  transform: translateX(-50%);
+}
+
+.menu a:hover {
+  color: #00acdc;
+}
+
+/* Адаптація для 1024px */
+@media (max-width: 1024px) {
+  .menu ul {
+    gap: 15px;
+  }
 }
