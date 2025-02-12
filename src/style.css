@@ -1,7 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 
   --color-nav: #00acdc;
 }
@@ -10,6 +13,7 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
+  margin: 0;
 }
 
 .header {
@@ -17,13 +21,18 @@ body {
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  padding: 15px 50px;
-  background-color: white;
+  height: 60px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+  margin-top: 5px;
 }
 
 .logo img {
@@ -32,7 +41,6 @@ body {
 
 .menu {
   display: flex;
-  flex-grow: 1;
   justify-content: flex-end;
   align-items: center;
 }
@@ -40,26 +48,28 @@ body {
 .menu ul {
   display: flex;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .menu li {
   display: flex;
   align-items: center;
-  margin-right: 25px;
 }
 
-.menu li:last-child {
-  margin-right: 0;
+.menu li:not(:last-child) {
+  margin-right: 20px;
 }
 
 .menu a {
   text-transform: uppercase;
   text-decoration: none;
   color: black;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   position: relative;
-  padding: 10px 5px;
+  height: 60px;
+  line-height: 60px;
 }
 
 .menu .blue {
@@ -70,8 +80,8 @@ body {
   content: '';
   position: absolute;
   left: 50%;
-  bottom: -4px;
-  width: 37px;
+  bottom: -0.2px;
+  width: 35px;
   height: 4px;
   border-radius: 8px;
   background-color: #00acdc;
@@ -80,13 +90,4 @@ body {
 
 .menu a:hover {
   color: var(--color-nav);
-}
-
-@media (max-width: 1024px) {
-  .menu li {
-    margin-right: 15px;
-  }
-  .menu li:last-child {
-    margin-right: 0;
-  }
 }
