@@ -1,3 +1,83 @@
-body {
+/* Ok, here is the CSS: */
+
+html {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, serif;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 50px;
+}
+
+.logo {
+  max-width: 40px;
+  min-height: 40px;
+}
+
+.logo__link {
+  display: flex;
+  text-decoration: none;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav__link.is-active {
+  text-decoration: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 60px;
+  display: flex;
+}
+
+nav ul li a.is-active {
+  color: #00acdc;
+  position: relative;
+}
+
+nav ul li a.is-active::after {
+  content: '';
+  width: 37px;
+  height: 4px;
+  background-color: #00acdc;
+  position: absolute;
+  border-radius: 50px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover {
+  color: #00acdc;
 }
