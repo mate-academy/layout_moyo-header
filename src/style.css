@@ -1,3 +1,121 @@
 body {
   margin: 0;
 }
+
+header {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  min-width: 1024px;
+  width: 100%;
+  align-items: center;
+}
+
+a.logo {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0 10px 50px;
+}
+
+.nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul.nav_list {
+  display: inline-flex;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style: none;
+  margin: 0 50px 0 0;
+  padding: 0;
+  width: 641px;
+}
+
+li[class$='_item'] {
+  font-variation-settings: 'wdth' 100;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  letter-spacing: 0%;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  font-variation-settings: 'wdth' 100;
+  height: 60px;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: Roboto, serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+a:hover {
+  /* text-decoration: underline 3%;
+  text-underline-offset: -1px; */
+  text-decoration-color: #00acdc;
+  color: #00acdc;
+}
+
+a.is-active {
+  color: #00acdc;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  text-decoration: none;
+}
+
+a.is-active:hover {
+  /* text-decoration: underline 3%;
+  text-underline-offset: -1px; */
+  text-decoration-color: #00acdc;
+}
+
+a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
+
+.apple_item {
+  width: 37px;
+}
+
+.samsung_item {
+  width: 58px;
+}
+
+.smartphones_item {
+  width: 88px;
+}
+
+.lapCom_item {
+  width: 138px;
+}
+
+.gadgets_item {
+  width: 54px;
+}
+
+.tablets_item {
+  width: 51px;
+}
+
+.photo_item {
+  width: 40px;
+}
+
+.video_item {
+  width: 35px;
+}
