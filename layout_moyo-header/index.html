@@ -36,7 +36,8 @@
             height: auto;
         }
         .nav {
-            display: flex;
+            display: flex !important;
+            visibility: visible !important;
         }
         .nav ul {
             display: flex;
@@ -58,7 +59,9 @@
         }
         .nav ul li .is-active {
             position: relative;
-            color: #007BFF;
+            color: #007BFF !important;
+            display: flex !important;
+            visibility: visible !important;
         }
         .nav ul li .is-active::after {
             content: '';
@@ -74,9 +77,6 @@
 <body>
     <div class="container">
         <header class="header">
-            <div class="logo">
-                <a href="#"><img src="src/images/logo.png" alt="Moyo Logo"></a>
-            </div>
             <nav class="nav">
                 <ul>
                     <li><a href="#">Home</a></li>
