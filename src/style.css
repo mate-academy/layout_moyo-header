@@ -1,3 +1,7 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
 }
@@ -23,15 +27,15 @@ header {
   list-style: none;
 }
 
-li[class$='_item'] {
+.nav_item {
   margin-left: 20px;
 }
 
-li[class$='_item']:first-child {
+.nav_item:first-child {
   margin-left: 0;
 }
 
-a {
+.nav_link {
   position: relative;
   display: flex;
   align-items: center;
@@ -45,12 +49,12 @@ a {
   color: #000;
 }
 
-a:hover {
-  color: #00acdc;
+.nav_link:hover {
+  color: var(--blue-color);
 }
 
 a.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 a.is-active::after {
@@ -61,5 +65,5 @@ a.is-active::after {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
