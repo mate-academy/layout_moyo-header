@@ -8,33 +8,34 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+:root {
+  --blue-color: #00acdc;
+}
+
 .header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  height: 60px;
+  justify-content: space-between;
+  padding: 0 170px;
 }
 
 .logo img {
-  padding-top: 5px;
-  margin-left: 50px;
+  height: auto;
+  width: 40px;
 }
 
 .nav {
-  width: 37;
-  height: 15;
-  top: 22.5px;
-  margin-left: 398px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-list {
   display: flex;
   list-style: none;
-  white-space: nowrap;
 }
 
 .nav-item {
-  margin: 0 11px;
+  margin-right: 19px;
   position: relative;
   font-size: 12px;
 }
@@ -46,17 +47,18 @@ body {
   display: block;
   text-align: center;
   position: relative;
+  line-height: 60px;
+  padding-bottom: 8px;
 }
 
 .nav-item::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 4px;
-  top: 33px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   transition: width 0.3s ease;
   border-radius: 8px;
 }
@@ -66,19 +68,33 @@ body {
 }
 
 .link:hover {
+  color: var(--blue-color);
+}
+
+.link.is-active {
+  width: 100%;
   color: #00acdc;
+}
+
+.link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc; /* Синий цвет для линии */
+  border-radius: 8px;
 }
 
 [data-qa='hover']:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
-@media (max-width: 1024px) {
-  /* .header {
-    padding: 0 20px;
-  } */
+.nav-item:first-child {
+  margin-left: 0;
+}
 
-  .nav-list {
-    margin-right: 600px;
-  }
+.nav-item:last-child {
+  margin-right: 0;
 }
