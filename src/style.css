@@ -1,3 +1,78 @@
+:root {
+  --additional-color: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.navigation {
+  font-family: Roboto, sans-serif;
+  display: block;
+}
+
+.navigation-list {
+  display: flex;
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block: 0;
+}
+
+.nav-item {
+  display: list-item;
+  margin: 0 0 0 20px;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
+}
+
+.nav-button {
+  line-height: 60px;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav-button:hover {
+  color: var(--additional-color);
+}
+
+.apple {
+  color: var(--additional-color);
+}
+
+.is-active {
+  position: relative;
+}
+
+.is-active::after {
+  background: var(--additional-color);
+  content: '';
+  z-index: 1;
+  border-radius: 8px;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
