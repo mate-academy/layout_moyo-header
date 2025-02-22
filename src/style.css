@@ -4,6 +4,8 @@ html {
   font-weight: 500;
   font-style: normal;
   font-variation-settings: 'wdth' 100;
+
+  --blue-color: #00acdc;
 }
 
 body {
@@ -42,24 +44,23 @@ ul {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav__link:hover {
   text-decoration: none;
-  line-height: 60px;
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active::after {
-  color: #00acdc;
+  color: var(--blue-color);
   content: '';
   position: absolute;
   left: 50%;
   bottom: 0;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   border-radius: 8px;
   transform: translateX(-50%);
 }
