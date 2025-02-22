@@ -11,11 +11,8 @@ body {
 }
 
 .header {
-  padding: 0 50px;
-}
-
-.nav {
   display: flex;
+  padding: 0 50px;
   justify-content: space-between;
 }
 
@@ -24,12 +21,14 @@ body {
   text-decoration: none;
   line-height: 60px;
   color: #000;
+  font-size: 12px;
 }
 
 ul {
   display: flex;
   list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -43,24 +42,32 @@ ul {
 }
 
 .is-active {
-  color: #00aeef;
+  color: #00acdc;
 }
 
 .nav__link:hover {
   text-decoration: none;
   line-height: 60px;
-  color: #00aeef;
+  color: #00acdc;
 }
 
-.is-active:hover::after {
-  color: #00aeef;
+.is-active::after {
+  color: #00acdc;
   content: '';
   position: absolute;
   left: 50%;
-  bottom: 0%;
+  bottom: 0;
   width: 100%;
   height: 4px;
-  background-color: #00aeef;
+  background-color: #00acdc;
   border-radius: 8px;
   transform: translateX(-50%);
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
