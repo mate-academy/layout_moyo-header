@@ -37,3 +37,30 @@ ul {
   margin: 10px 0;
   height: 40px;
 }
+
+.nav__item{
+  position: relative;
+}
+
+.is-active {
+  color: #00AEEF;
+}
+
+.nav__link:hover {
+  text-decoration: none;
+  line-height: 60px;
+  color: #00AEEF;
+}
+
+.nav__item:has(.is-active:hover)::after {
+  color: #00AEEF;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  width: 100%;
+  height: 4px;
+  background-color: #00AEEF;
+  border-radius: 8px;
+  transform: translateX(-50%);
+}
