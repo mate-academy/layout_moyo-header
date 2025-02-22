@@ -1,3 +1,70 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+nav {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+ul {
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.logo {
+  height: 40px;
+  margin: 10px 0 10px 50px;
+}
+
+nav a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  line-height: 60px;
+}
+
+nav a:hover {
+  color: #00acdc;
+}
+
+nav a.is-active {
+  position: relative;
+  color: #00acdc; /* make sure you have a semicolon here */
+}
+
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; /* sits at the bottom edge of the link’s box */
+  height: 4px;
+  background-color: #00acdc;
+}
+
+.hover {
+  color: #00acdc;
+}
+
+nav ul li + li {
+  margin-left: 20px;
 }
