@@ -1,6 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
+:root {
+  --color-blue: #00acdc;
 }
 
 html {
@@ -23,18 +22,20 @@ body {
   padding: 10px 0;
 }
 
-.header__nav-list {
+.nav__list {
   display: flex;
   list-style-type: none;
   height: 100%;
   align-items: stretch;
+  margin: 0;
+  padding: 0;
 }
 
-.header__nav-item + .header__nav-item {
+.nav__item + .nav__item {
   margin-left: 20px;
 }
 
-.header__nav-link {
+.nav__link {
   position: relative;
   color: #000;
   font-weight: 500;
@@ -46,13 +47,13 @@ body {
   align-items: center;
 }
 
-.header__nav-link.is-active,
-.header__nav-link:hover {
-  color: #00acdc;
+.nav__link.is-active,
+.nav__link:hover {
+  color: var(--color-blue);
 }
 
-.header__nav-link.is-active::after {
-  background: #00acdc;
+.nav__link.is-active::after {
+  background: var(--color-blue);
   display: block;
   content: '';
   position: absolute;
