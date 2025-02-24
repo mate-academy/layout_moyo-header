@@ -17,7 +17,6 @@
   "keywords": [],
   "author": "Mate Academy",
   "license": "GPL-3.0",
-  "dependencies": {},
   "devDependencies": {
     "@linthtml/linthtml": "^0.9.6",
     "@mate-academy/backstop-config": "latest",
@@ -28,7 +27,7 @@
     "backstopjs": "6.3.23",
     "jest": "^29.7.0",
     "parcel": "^2.12.0",
-    "prettier": "^3.3.2",
+    "prettier": "^3.5.2",
     "stylelint": "^16.7.0",
     "stylelint-scss": "^6.4.1"
   },
@@ -38,5 +37,36 @@
       "javascript": false,
       "bem": false
     }
+  },
+  "backstop": {
+    "id": "backstop_default",
+    "viewports": [
+      {
+        "label": "desktop",
+        "width": 1200,
+        "height": 800
+      }
+    ],
+    "scenarios": [
+      {
+        "label": "Link with class is-active",
+        "url": "http://localhost:3000",
+        "selectors": ["document"],
+        "misMatchThreshold": 3.0
+      }
+    ],
+    "paths": {
+      "bitmaps_reference": "backstop_data/bitmaps_reference",
+      "bitmaps_test": "backstop_data/bitmaps_test",
+      "engine_scripts": "backstop_data/engine_scripts",
+      "html_report": "backstop_data/html_report",
+      "ci_report": "backstop_data/ci_report"
+    },
+    "report": ["browser"],
+    "engine": "puppeteer",
+    "asyncCaptureLimit": 5,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
   }
 }
