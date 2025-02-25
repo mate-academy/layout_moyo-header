@@ -1,3 +1,71 @@
+:root {
+  --primary-blue: #00acdc;
+}
+
 body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  height: 60px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nav-link a {
+  color: black;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+.nav-link a:hover {
+  color: var(--primary-blue);
+}
+
+a.is-active {
+  position: relative;
+  display: block;
+}
+
+a.is-active::after {
+  content: '';
+  position: absolute;
+  background-color: var(--primary-blue);
+  height: 2px;
+  width: auto;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
