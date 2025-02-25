@@ -19,10 +19,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
 }
 
 .nav {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,8 +32,10 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  padding: 0;
+  width: 100%;
+  height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -42,6 +44,7 @@ body {
 
 .logo-link {
   margin-right: auto;
+  margin-top: 5px;
 }
 
 .link {
@@ -50,22 +53,32 @@ body {
   margin-left: 20px;
 }
 
+.nav-links .link:first-child {
+  margin-left: 0;
+}
+
 .link a {
+  display: flex;
+  align-items: center; /* Wyśrodkowanie pionowe */
+  justify-content: center; /* Wyśrodkowanie poziome (opcjonalnie) */
+  height: 60px; /* Ustalona wysokość */
   color: black;
-  position: relative;
   text-decoration: none;
+  box-sizing: border-box;
+  padding: 0; /* Usuń padding */
 }
 
-.is-active a {
+a.is-active {
   color: var(--blue-color);
+  position: relative;
 }
 
-.is-active a::after {
+a.is-active::after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
-  top: 26px;
+  top: calc(77% + 10px);
   height: 4px;
   background-color: var(--blue-color);
   border-radius: 8px;
