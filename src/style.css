@@ -7,36 +7,44 @@ body {
 }
 
 header {
-  display: flex;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  align-content: center;
 }
 
 .logo {
-  display: block;
+  display: inline-flex;
+  justify-self: flex-start;
+  align-content: center;
   position: relative;
   height: 40px;
   width: 40px;
   left: 50px;
+  bottom: 1px;
+}
+
+.navigation {
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
 }
 
 nav {
-  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  align-content: center;
+  position: relative;
+  right: 50px;
 }
 
 ul {
+  position: relative;
   padding: 0;
   margin: 0;
-  position: relative;
+  width: 100%;
   list-style-type: none;
   display: flex;
-  align-self: center;
-  justify-content: center;
-  align-items: center;
-  right: 50px;
 }
 
 li {
@@ -45,8 +53,6 @@ li {
   flex-direction: column;
   height: 60px;
   text-align: center;
-  justify-content: center;
-  align-self: center;
 }
 
 a {
@@ -54,34 +60,50 @@ a {
   text-transform: uppercase;
   height: 100%;
   align-content: center;
+  color: black;
 }
 
 .roboto-life {
   font-family: Roboto, serif;
   font-size: 12px;
   font-weight: 500;
-  width: normal;
+  font-variation-settings: 'wdth' 100;
 }
 
 .is-active {
-  position: relative;
-  top: 4px;
   color: var(--coolblue);
+  display: block;
+  text-justify: center;
+  text-align: center;
+  position: relative;
+  align-self: center;
+  box-sizing: border-box;
+  height: 64px;
+  overflow: visible;
 }
 
 .is-active::after {
+  overflow: visible;
   border-radius: 8px;
   content: '';
   display: block;
   position: relative;
-  top: 21px;
-
+  justify-content: flex-end;
+  align-self: flex-end;
   height: 4px;
   width: 100%;
+  top: 20px;
   background-color: var(--coolblue);
+  float: inline-end;
 }
 
 .first {
+  display: flex;
+  height: 64px;
+  text-align: center;
+  text-justify: center;
+  align-items: center;
+  justify-self: center;
   margin-left: 0;
 }
 
@@ -89,6 +111,6 @@ a {
   margin-right: 0;
 }
 
-.test {
+.test:hover {
   color: var(--coolblue);
 }
