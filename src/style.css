@@ -1,3 +1,94 @@
+:root {
+  --coolblue: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  left: 50px;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  right: 50px;
+}
+
+li {
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+}
+
+a {
+  text-transform: uppercase;
+  height: 100%;
+  align-content: center;
+}
+
+.roboto-life {
+  font-family: Roboto, serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: bold;
+}
+
+.is-active {
+  position: relative;
+  top: 2px;
+  color: var(--coolblue);
+}
+
+.is-active::after {
+  border-radius: 8px;
+  content: "";
+  display: block;
+  position: relative;
+  top: 16px;
+
+
+  height: 4px;
+  width: 100%;
+  background-color: var(--coolblue);
+}
+
+.first {
+  margin-left: 0;
+}
+
+.last {
+  margin-right: 0;
+}
+
+.test {
+  color: var(--coolblue);
 }
