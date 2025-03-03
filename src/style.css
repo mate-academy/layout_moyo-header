@@ -1,15 +1,12 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 html {
   font-family: Roboto, Arial, sans-serif;
-  font-size: 14px;
 
-  --nav-height: 40px;
-  --header-active-color: #00acdc;
+  --blue-color: #00acdc;
+  --black-color: #000;
 }
 
 body {
@@ -17,31 +14,55 @@ body {
 }
 
 .header {
-  margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 0 50px;
 }
 
-.logo {
+.logo__img {
+  display: block;
   height: 40px;
   width: 40px;
 }
 
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
+}
+
 .nav__link {
-  height: var(--nav-height);
-  line-height: var(--nav-height);
-  color: #000;
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 60px;
   text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black-color);
+  transition: color 0.3s ease;
 }
 
 .nav__link:hover {
-
+  color: var(--blue-color);
 }
 
-.nav__link:active {
-  color: var(--header-active-color);
-  transition: color 0.3s, background-color 0.3s;
-  border: 4px;
+.is-active {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
 }
