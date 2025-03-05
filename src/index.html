@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      content="width=device-width, initial-scale=1.0"
     />
     <meta
       http-equiv="X-UA-Compatible"
       content="ie=edge"
     />
 
-    <!-- Google Fonts: Roboto, Medium(500), normal width -->
+    <!-- Google Fonts: Roboto (roman, medium 500, normal width) + fallback -->
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
@@ -29,16 +29,16 @@
     <title>Moyo Header</title>
     <link
       rel="stylesheet"
-      href="./style.css"
+      href="style.css"
     />
   </head>
   <body>
     <header>
-      <div class="container">
-        <!-- Logo (link z obrazkiem) - poza <nav> -->
+      <div class="header-container">
+        <!-- Logo (link z obrazkiem) -->
         <a
           href="#"
-          class="logo"
+          class="header-logo"
         >
           <img
             src="./images/logo.png"
@@ -47,26 +47,80 @@
         </a>
 
         <!-- Nawigacja -->
-        <nav>
-          <ul>
-            <!-- Pisz normalnie (Apple, Samsung...) i użyj CSS do uppercase -->
-            <li><a href="#">Apple</a></li>
-            <li><a href="#">Samsung</a></li>
-            <li><a href="#">Smartphones</a></li>
-            <!-- 4-ty link ma klasę is-active + data-qa="hover" -->
-            <li>
+        <nav class="header-nav">
+          <ul class="nav-list">
+            <li class="nav-list-item">
               <a
                 href="#"
-                class="is-active"
-                data-qa="hover"
+                class="nav-link"
               >
-                Laptops & computers
+                Apple
               </a>
             </li>
-            <li><a href="#">Gadgets</a></li>
-            <li><a href="#">Tablets</a></li>
-            <li><a href="#">Photo</a></li>
-            <li><a href="#">Video</a></li>
+
+            <li class="nav-list-item">
+              <a
+                href="#"
+                class="nav-link"
+              >
+                Samsung
+              </a>
+            </li>
+
+            <li class="nav-list-item">
+              <a
+                href="#"
+                class="nav-link"
+              >
+                Smartphones
+              </a>
+            </li>
+
+            <li class="nav-list-item">
+              <a
+                href="#"
+                class="nav-link is-active"
+                data-qa="hover"
+              >
+                Laptops &amp; Computers
+              </a>
+            </li>
+
+            <li class="nav-list-item">
+              <a
+                href="#"
+                class="nav-link"
+              >
+                Gadgets
+              </a>
+            </li>
+
+            <li class="nav-list-item">
+              <a
+                href="#"
+                class="nav-link"
+              >
+                Tablets
+              </a>
+            </li>
+
+            <li class="nav-list-item">
+              <a
+                href="#"
+                class="nav-link"
+              >
+                Photo
+              </a>
+            </li>
+
+            <li class="nav-list-item">
+              <a
+                href="#"
+                class="nav-link"
+              >
+                Video
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
