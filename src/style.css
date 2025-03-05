@@ -1,3 +1,6 @@
+/* ==========================
+   1. Reset + box-sizing
+========================== */
 
 html,
 body {
@@ -5,13 +8,14 @@ body {
   padding: 0;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 
+/* ==========================
+   2. Global styles
+========================== */
 
 body {
   font-family: Roboto, Arial, sans-serif;
@@ -20,23 +24,28 @@ body {
 }
 
 
+/* ==========================
+   3. Variables
+========================== */
+
 :root {
   --blue: #2196f3;
 }
 
 
+/* ==========================
+   4. Header
+========================== */
 
 header {
   width: 100%;
   background-color: #fff;
 }
 
-
 .header-container {
   width: 100%;
   max-width: 1200px;
-  height: 60px;
-
+  height: 60px; /* Wysokość linków => vertical center */
   margin: 0 auto;
   padding: 0 50px;
   display: flex;
@@ -44,7 +53,11 @@ header {
   justify-content: space-between;
 }
 
-/* Logo */
+
+/* ==========================
+   5. Logo
+========================== */
+
 .header-logo {
   width: 40px;
   height: 40px;
@@ -56,13 +69,10 @@ header {
   object-fit: contain;
 }
 
-/* ==========================
-      4. Navigation
-      ========================== */
 
-/* Kontener nawigacji (.header-nav) -
-      sam .header-container steruje flexem,
-      więc tu nie musisz nic robić. */
+/* ==========================
+   6. Navigation
+========================== */
 
 .nav-list {
   list-style: none;
@@ -75,7 +85,6 @@ header {
   margin: 0 15px;
 }
 
-/* Brak marginesu przed pierwszym i po ostatnim */
 .nav-list-item:first-child {
   margin-left: 0;
 }
@@ -84,34 +93,32 @@ header {
   margin-right: 0;
 }
 
-/* Linki w menu */
+
+/* ==========================
+   7. Nav links
+========================== */
+
 .nav-link {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 60px;
-
   text-decoration: none;
   color: black;
   text-transform: uppercase;
-
   font-size: 15px;
   position: relative;
-
   transition: color 0.3s ease-in-out;
 }
 
-/* Hover */
 .nav-link:hover {
   color: var(--blue);
 }
 
-/* Aktywny link */
 .nav-link.is-active {
   color: var(--blue);
 }
 
-/* Niebieska linia pod aktywnym linkiem */
 .nav-link.is-active::after {
   content: "";
   position: absolute;
