@@ -1,112 +1,92 @@
-/* Resetowanie domyślnych stylów przeglądarki */
-* {
+/* 1) Minimal reset */
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Główne tło strony */
 body {
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 500;
   background-color: #f5f5f5;
 }
 
-/* Zmienna dla niebieskiego koloru */
-:root {
-  --blue: #2196f3;
-}
-
-/* HEADER */
-header {
+/* 2) Header => Tło białe, 100% szerokości */
+.page-header {
   width: 100%;
   background-color: #fff;
 }
 
-/* Kontener dla nagłówka */
+/* 3) .container => stała szerokość 1200px,
+   wyśrodkowana, 50px padding z lewej i prawej,
+   flex => space-between => logo left, nav right
+*/
 .container {
-  width: 100%;
-  max-width: 1200px;
+  width: 1200px;
+  /* stała szerokość => niereponsywnie */
   height: 60px;
   margin: 0 auto;
+  /* centrowanie kontenera w oknie */
   padding: 0 50px;
+  /* 50px lewy i prawy odstęp */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* rozsuwa pierwszy element (logo) do lewej,
+     drugi (nav) do prawej */
 }
 
-/* LOGO */
-.logo {
-  width: 40px;
-  height: 40px;
-}
-
+/* 4) Logo => 50px od lewej mamy w .container (padding-left:50px).
+   Wysokość 40px -> z definicji. */
 .logo img {
-  width: 100%;
-  height: 100%;
+  height: 40px;
   object-fit: contain;
 }
 
-/* MENU */
-nav {
-  display: flex;
-}
-
+/* 5) Nawigacja => .nav-list => flex, 20px between li */
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 15px;
+  margin: 0;
   padding: 0;
 }
 
-/* Styl dla elementów nawigacji */
-.nav-list-item {
-  margin: 0;
-  display: flex;
-  align-items: center;
+/* margines 20px między sąsiadującymi li */
+.nav-list li+li {
+  margin-left: 20px;
 }
 
-/* Styl dla linków */
+/* 6) Link => 60px, uppercase, hover => underline */
 .nav-link {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
-  font-size: 14px;
-  height: 60px;
-  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  transition: color 0.3s ease-in-out;
+  height: 60px;
+  transition: color 0.3s;
+  font-size: 12px;
 }
 
-/* Marginesy pierwszego i ostatniego elementu */
-.nav-list-item:first-child {
-  margin-left: 0;
-}
-
-.nav-list-item:last-child {
-  margin-right: 0;
-}
-
-/* Hover efekt */
+/* hover => standard underline w #2196f3, tekst zostaje czarny */
 .nav-link:hover {
-  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-color: #2196f3;
+  text-decoration-thickness: 1.5px;
+  color: black;
 }
 
-/* Aktywny link */
-.nav-link.is-active {
-  color: var(--blue);
-}
-
-/* Pseudo-element dla podkreślenia aktywnego linku */
+/* .is-active => usun pseudo-element */
 .nav-link.is-active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background-color: var(--blue);
+  content: none;
+}
+
+.nav-link--laptops {
+  color: #2196f3;
+}
+
+.nav-link--apple {
+  color: #2196f3;
 }

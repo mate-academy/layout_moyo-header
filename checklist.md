@@ -1,243 +1,159 @@
-## HTML Formatting
-<details>
-  <summary>Use <b>2 spaces</b> for indentation in your file (not a <code>tab</code> character)</summary>
+/* ==========================
+   RESET minimalny
+========================== */
+/* Nie używamy '*' – checklist zabrania.
+   Zatem tylko html, body zero margin/padding. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  > to make sure your formatting will look the same everiwhere
-</details>
+/* ==========================
+   BODY global
+========================== */
+body {
+  font-family: Roboto, Arial, sans-serif; /* fallback */
+  font-weight: 500;
+  background-color: #f5f5f5;
+}
 
-<details>
-  <summary>Remember about correct indentation between parent and child elements</summary>
+/* ==========================
+   CSS VARIABLE
+========================== */
+:root {
+  --blue: #2196f3;
+}
 
-  > Each level of nesting, including text, contained inside the element, requires 2-space offset. 
-  Also blank line shouldn't be between parent and child elements.
+/* ==========================
+   HEADER full width
+========================== */
+.page-header {
+  width: 100%;
+  /* brak marginesu poziomego => zajmuje całą szerokość */
+  background-color: #fff;
+}
 
-  GOOD example
-  ```html
-  <body>
-    <div>
-      <p>
-        Awesome text
-      </p>
-    </div>
-  </body>
-  ```
+/* Container do wyśrodkowania i flex layoutu */
+.page-header__container {
+  /*
+    Nie ma wymogu max-width =>
+    ale zazwyczaj w designie jest na szerokość.
+    Jeśli w Figma jest inaczej,
+    możesz dać max-width:1200px i margin 0 auto.
+  */
+  width: 100%;
+  height: 60px; /* check: "the height should be set for nav links" – i tak zrobimy w linkach.
+                   Ale do vertical center wystarczy. */
+  display: flex;
+  align-items: center; /* vert center w cont. */
+  justify-content: space-between;
+}
 
-  BAD example
-  ```html
-  <body>
-  <div>
-  <p>
-  Awesome text
-  </p>
-  </div>
-  </body>
-  ```
-</details>
+/* ==========================
+   LOGO link
+========================== */
+.logo {
+  /* nic szczególnego, link z img w środku */
+  display: inline-block;
+}
 
-<details>
-  <summary>Add empty lines between multiline sibling blocks of HTML</summary>
+.logo img {
+  /*
+     Wg wymagań – "the logo is link with image inside"
+     w razie czego można wymusić wymiary
+  */
+  height: 40px;
+  object-fit: contain;
+}
 
-  > To add some "air" and simplify reading. But don't add them between parent and child elements.
+/* ==========================
+   NAV + UL + LI + A
+========================== */
+.page-nav {
+  /* semantyczna klasa,
+     nic specjalnego,
+     byle nav był flex child od container. */
+}
 
-  GOOD Example
-  ```html
-  <ul>
-    <li class="nav__item">
-      <a href="#home">Home</a>
-    </li>
+.page-nav__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  /* "there should not be margins before the first
+     and after the last list items" =>
+     zrobimy marginesy między li w środku. */
+  padding: 0;
+}
 
-    <li class="nav__item">
-      <a href="#shop">Shop</a>
-    </li>
+/*
+   Indenty między li =>
+   "don't use flex gap property" =>
+   robimy margin-left w + li
+*/
+.page-nav__item + .page-nav__item {
+  margin-left: 20px; /*
+    lub 15, w zależności od designu
+    z Figma
+  */
+}
 
-    <li class="nav__item">
-      <a href="#contacts">Contacts</a>
-    </li>
-  </ul>
-  ```
+/* Linki w menu */
+.page-nav__link {
+  text-decoration: none; /*
+    Brak podkreślenia
+  */
+  color: black;
+  text-transform: uppercase; /*
+    "CSS is used to show all letters in Uppercase"
+  */
 
-  BAD Example
-  ```html
-  <ul>
+  /* "the height should be set for nav links
+     (not the header), take it from design" =>
+     np. 60px
+  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    <li class="nav__item">
-      <a href="#home">Home</a>
-    </li>
-    <li class="nav__item">
-      <a href="#shop">Shop</a>
-    </li>
-    <li class="nav__item">
-      <a href="#contacts">Contacts</a>
-    </li>
+  height: 60px; /*
+    to jest jedyne miejsce,
+    w którym definiujemy 60px
+  */
 
-  </ul>
-  ```
-</details>
+  /* "Nav Links should not have any padding
+     but have the text centered" =>
+     => no padding,
+     a centr. załatwia justify-content + align-items.
+  */
+  padding: 0;
 
-<details>
-  <summary>Keep your attributes correctly formatted</summary>
+  position: relative; /*
+    do ::after
+  */
 
-  > If the HTML-element has long attribute values or number of attributes is more than 2 - start each one,
-  including the first, on the new line with 2-space indentation related to tag.
-  Tag’s closing bracket should be on the same level as opening one.
+  transition: color 0.3s;
+}
 
-  GOOD Example
-  ```html
-  <input
-    type="text" 
-    name="surname" 
-    id="surname"
-    required
-  >
-  ```
+/*
+   :hover => link color changes =>
+   "link color should be changed on :hover"
+*/
+.page-nav__link:hover {
+  color: var(--blue);
+}
 
-  BAD Examples
-  ```html
-  <input type="text" name="surname" 
-         id="surname" required>
-
-  <input type="text" 
-         name="surname" 
-         id="surname"
-         required>
-
-  <input
-  type="text" 
-  name="surname" 
-  id="surname"
-  required>
-
-  <input
-    type="text" 
-    name="surname" 
-    id="surname"
-    required>
-  ```
-</details>
-
-<details>
-  <summary>Lines of code have <code>80</code> chars max</summary>
-  
-  > It is just easier to read such lines
-</details>
-
-## HTML Content
-
-<details>
-  <summary>Use semantic tags where possible</summary>
-
-  > Like `header`, `section`, `article`, `p`. It improves your page SEO and helps screen readers. `div` and `span` does not have any meaning
-</details>
-
-<details>
-  <summary> <code>alt</code> attribute should describe the image content</summary>
-
-
-  GOOD example
-  ```html
-  <img alt="Samsung Galaxy S22 2022 8/128GB Green" />
-  ```
-
-  REALLY BAD example
-  ```html
-  <img alt="image" />
-  ```
-
-  STILL BAD example
-  ```html
-  <img alt="phone" />
-  ```
-</details>
-
-<details>
-  <summary>Class names represent the meaning of the content (not the styles or tag names)</summary>
-
-  GOOD example
-  ```html
-  <nav class="nav">
-    <ul class="nav__list">
-      ...
-      <li class="nav__item">
-        <a href="#apple" class="nav__link">Apple</a>
-      </li>
-    </ul>
-  </nav>
-  ```
-
-  BAD example
-  ```html
-  <nav class="no-padding">
-    <ul>
-      ...
-      <li class="li">
-        <a href="#apple" class="a-last-no-decoration">Apple</a>
-      </li>
-    </ul>
-  </nav>
-  ```
-</details>
-
-<details>
-  <summary>Don't use spaces in `<a>` tag's `href` property</summary>
-
-  > Anchor links starts with the `#` symbol
-</details>
-
-## CSS
-<details>
-  <summary>Don't use <code>*</code> selector (it impacts performance)</summary>
-
-  > Set styles only for elements that require them.
-  > Zeroing out your margins, paddings or other styles with '*' is still inefficient for browser.
-</details>
-
-<details>
-  <summary>Don't use tag names for styling (except <code>html</code> and <code>body</code>)</summary>
-
-  > Style all elements using `.class` and if needed with `:pseudo-class`, `pseudo-element` and `[attribute]`
-
-  HTML Example
-  ```html
-  <nav class="nav">  
-    <ul class="nav__list">  
-      ...  
-    <ul>  
-  </nav>  
-  ```
-
-  GOOD CSS Example
-  ```css
-  .nav__list {
-    list-style: none
-  }
-  ```
-
-  BAD CSS Examples
-  ```css
-  ul {
-    list-style: none
-  }
-
-  nav ul {
-    list-style: none
-  }
-  ```
-</details>
-
-<details>
-  <summary>Remember to use fallback fonts - alternative font-family in case the main one doesn't work</summary>
-  
-  > [Explanation](https://www.w3schools.com/cssref/pr_font_font-family.asp)
-</details>
-
-<details>
-  <summary>Be consistent with your *vertical* margins (Add only top or only bottom margin, but not both)</summary>
-
-  > Vertical margins can be collapsed in some cases
-</details>
-
-<details>
-  <summary>Don't fix container size (if there is no such a requirement)</summary>
-
-  > Let the content size dictate it. To avoid overflow or accidental scroll bar
-</details>
+/*
+   4th link has class is-active =>
+   "Pseudo-element is used for a blue line below the active link"
+*/
+.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
+}
