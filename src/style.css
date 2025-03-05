@@ -1,3 +1,106 @@
-body {
+/* 1) Reset przeglądarki */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2) Opcjonalnie kolor tła całej strony (dostosuj do designu, jeśli inny) */
+body {
+  background-color: #f5f5f5;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+/* 3) Zmienna dla niebieskiego koloru (wymóg użycia CSS Variable) */
+:root {
+  --blue: #2196f3;
+}
+
+/* 4) Header – pełna szerokość (bez marginesów poziomych) */
+header {
+  width: 100%;
+  background-color: #fff; /* Jeśli design wymaga innego koloru, zmień */
+}
+
+/* 5) Kontener, który rozciąga się na całą szerokość,
+      a wewnątrz ma 50px odstępu z lewej i prawej */
+.container {
+  width: 100%;
+  height: 60px;            /* Wysokość ustawiona na podstawie wysokości linków */
+  display: flex;
+  align-items: center;     /* Wyśrodkowanie pionowe */
+  justify-content: space-between; /* Logo po lewej, menu po prawej */
+  padding: 0 50px;         /* 50px z lewej i prawej */
+  box-sizing: border-box;  /* Padding wlicza się w width */
+
+  /* border: 2px solid red;  ← Odkomentuj, by zobaczyć obszar kontenera */
+}
+
+/* 6) Logo 40x40 (link z obrazkiem, poza nav) */
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Lub cover, zależnie od wymagań */
+}
+
+/* 7) Nawigacja (ul) */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+/* 8) Marginesy między elementami (bez gap) */
+nav ul li {
+  margin: 0 15px;
+}
+
+/* 9) Brak marginesu przed pierwszym i po ostatnim <li> */
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+/* 10) Linki: uppercase w CSS, brak paddingu, wysokość = 60px (jak w designie),
+       centrowanie tekstu pionowo i poziomo */
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;   /* Nie wpisuj wielkich liter w HTML */
+  font-size: 15px;            /* Dostosuj do designu */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;               /* Wysokość z designu, "header height is set for nav links" */
+  position: relative;         /* Dla pseudo-elementu is-active::after */
+  transition: color 0.3s ease-in-out;
+}
+
+/* 11) Hover linku (zmiana koloru) */
+nav ul li a:hover {
+  color: var(--blue);
+}
+
+/* 12) Aktywny link (is-active) */
+nav ul li a.is-active {
+  color: var(--blue);
+}
+
+/* 13) Pseudo-element dla linii pod aktywnym linkiem */
+nav ul li a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;              /* Linia przy dolnej krawędzi linku */
+  width: 100%;
+  height: 2px;            /* Grubość linii */
+  background-color: var(--blue);
 }

@@ -10,13 +10,66 @@
       http-equiv="X-UA-Compatible"
       content="ie=edge"
     />
-    <title>Moyo header</title>
+
+    <!-- Google Fonts: Roboto, Medium(500), normal width -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Moyo Header</title>
     <link
       rel="stylesheet"
       href="./style.css"
     />
   </head>
   <body>
-    <h1>Moyo header</h1>
+    <header>
+      <div class="container">
+        <!-- Logo (link z obrazkiem) - poza <nav> -->
+        <a
+          href="#"
+          class="logo"
+        >
+          <img
+            src="./images/logo.png"
+            alt="Moyo Logo"
+          />
+        </a>
+
+        <!-- Nawigacja -->
+        <nav>
+          <ul>
+            <!-- Pisz normalnie (Apple, Samsung...) i użyj CSS do uppercase -->
+            <li><a href="#">Apple</a></li>
+            <li><a href="#">Samsung</a></li>
+            <li><a href="#">Smartphones</a></li>
+            <!-- 4-ty link ma klasę is-active + data-qa="hover" -->
+            <li>
+              <a
+                href="#"
+                class="is-active"
+                data-qa="hover"
+              >
+                Laptops & computers
+              </a>
+            </li>
+            <li><a href="#">Gadgets</a></li>
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Photo</a></li>
+            <li><a href="#">Video</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   </body>
 </html>
