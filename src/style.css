@@ -37,14 +37,14 @@ body {
    4. Header
 ========================== */
 
-/* Header na całą szerokość, bez marginesów poziomych */
+/* Header na pełną szerokość */
 header {
   width: 100%;
   background-color: #fff;
 }
 
-/* Kontener max 1200px, padding 0 50px,
-   flex do wyśrodkowania elementów */
+/* Kontener: domyślnie max-width 1200px,
+   padding 0 50px, flex do wyśrodkowania elementów */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -78,7 +78,9 @@ header {
 ========================== */
 
 .header-nav {
-  /* Nie trzeba display: flex; bo .container nim zarządza */
+  /* nie musimy dawać display: flex,
+     bo .container i tak jest flex i
+     .nav-list też jest flex */
 }
 
 .nav-list {
@@ -109,7 +111,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;  /* Wysokość z designu */
+  height: 60px; /* Wysokość linków */
   text-decoration: none;
   color: black;
   text-transform: uppercase; /* Duże litery w CSS */
@@ -134,4 +136,23 @@ header {
   width: 100%;
   height: 2px;
   background-color: var(--blue);
+}
+
+
+/* ==========================
+   8. Media query for 1024px
+========================== */
+
+@media (max-width: 1024px) {
+  /* Przy szerokości <= 1024px
+     zmniejszamy max-width kontenera do 1024px */
+  .container {
+    max-width: 1024px;
+  }
+
+  /* Ewentualnie możesz zmienić font-size,
+     odstępy itp. jeśli Figma tak mówi */
+  .nav-link {
+    font-size: 14px; /* Przykład – jeśli w Figma tak jest */
+  }
 }
