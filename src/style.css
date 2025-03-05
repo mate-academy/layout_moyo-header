@@ -1,8 +1,18 @@
 :root {
-  --blue-color: rgba(0, 172, 220 / 100%);
+  --blue-color: rgba(0 172 220 / 100%);
 }
 
-body {
+/* i don't know is it working for some elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html,
+header {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -10,47 +20,77 @@ body {
   font-variation-settings: 'wdth' 10;
   margin: 0;
   padding: 0;
-  background-color: gray;
 }
 
-.header {
+.header-icon .header-link {
+  width: 40px;
+  height: 40px;
+}
+
+header {
+  box-sizing: border-box;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.menu {
   display: flex;
+  background-color: white;
   align-items: center;
   justify-content: space-between;
-  width: 1200px;
-  text-transform: uppercase;
-  border: 1px solid;
+  margin: 0 50px;
 }
 
-nav {
-  width: 100%;
-  background-color: blueviolet;
-}
-
-.nav-links {
-  background-color: blue;
+.navbar {
   display: flex;
   list-style: none;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  border: 1px solid;
 }
 
-
-.link {
-  text-decoration: none;
-  color: black;
-  line-height: 60px;
-}
-
-
-li {
+.nav {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
-.header-link {
-  height: 40px;
-  width: 40px;
+.nav-item {
+  margin-right: 20px;
+}
+
+/* height doesn't work for the nav-link element if it's not block element */
+
+.nav-link {
+  display: block;
+  line-height: 60px;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--blue-color);
+}
+
+/* navbar it is parent element and the nav-item is child element */
+
+.navbar .nav-item:last-child {
+  margin-right: 0;
+}
+
+.navbar .nav-item:first-child {
+  margin-left: 0;
+}
+
+.is-active {
+  color: var(--blue-color);
+  position: relative;
+}
+
+.is-active::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: '';
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  height: 4px;
+  background-color: var(--blue-color);
+  bottom: 0;
 }
