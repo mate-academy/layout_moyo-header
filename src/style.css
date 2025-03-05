@@ -1,54 +1,33 @@
-/* ==========================
-   1. Reset + box-sizing
-========================== */
-
-html,
-body {
+/* Resetowanie domyślnych stylów przeglądarki */
+* {
   margin: 0;
   padding: 0;
-}
-
-*, *::before, *::after {
   box-sizing: border-box;
 }
 
-
-/* ==========================
-   2. Global styles
-========================== */
-
+/* Główne tło strony */
 body {
-  font-family: Roboto, Arial, sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   background-color: #f5f5f5;
 }
 
-
-/* ==========================
-   3. Variables
-========================== */
-
+/* Zmienna dla niebieskiego koloru */
 :root {
   --blue: #2196f3;
 }
 
-
-/* ==========================
-   4. Header
-========================== */
-
-/* Header na pełną szerokość */
+/* HEADER */
 header {
   width: 100%;
   background-color: #fff;
 }
 
-/* Kontener: domyślnie max-width 1200px,
-   padding 0 50px, flex do wyśrodkowania elementów */
+/* Kontener dla nagłówka */
 .container {
   width: 100%;
   max-width: 1200px;
-  height: 60px; /* Wysokość linków => vertical center */
+  height: 60px;
   margin: 0 auto;
   padding: 0 50px;
   display: flex;
@@ -56,11 +35,7 @@ header {
   justify-content: space-between;
 }
 
-
-/* ==========================
-   5. Logo
-========================== */
-
+/* LOGO */
 .logo {
   width: 40px;
   height: 40px;
@@ -72,62 +47,56 @@ header {
   object-fit: contain;
 }
 
-
-/* ==========================
-   6. Navigation
-========================== */
-
-.header-nav {
-  /* nie musimy dawać display: flex,
-     bo .container i tak jest flex i
-     .nav-list też jest flex */
+/* MENU */
+nav {
+  display: flex;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
+  gap: 15px;
 }
 
+/* Styl dla elementów nawigacji */
 .nav-list-item {
-  margin: 0 15px;
+  margin: 0;
 }
 
-.nav-list-item:first-child {
-  margin-left: 0;
-}
-
-.nav-list-item:last-child {
-  margin-right: 0;
-}
-
-
-/* ==========================
-   7. Nav links
-========================== */
-
+/* Styl dla linków */
 .nav-link {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 12px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px; /* Wysokość linków */
-  text-decoration: none;
-  color: black;
-  text-transform: uppercase; /* Duże litery w CSS */
-  font-size: 15px;
   position: relative;
   transition: color 0.3s ease-in-out;
 }
 
+/* Marginesy pierwszego i ostatniego elementu */
+.nav-list-item:first-child {
+  margin-left: 50px;
+}
+
+.nav-list-item:last-child {
+  margin-right: 50px;
+}
+
+/* Hover efekt */
 .nav-link:hover {
   color: var(--blue);
 }
 
+/* Aktywny link */
 .nav-link.is-active {
   color: var(--blue);
 }
 
+/* Pseudo-element dla podkreślenia aktywnego linku */
 .nav-link.is-active::after {
   content: "";
   position: absolute;
@@ -136,23 +105,4 @@ header {
   width: 100%;
   height: 2px;
   background-color: var(--blue);
-}
-
-
-/* ==========================
-   8. Media query for 1024px
-========================== */
-
-@media (max-width: 1024px) {
-  /* Przy szerokości <= 1024px
-     zmniejszamy max-width kontenera do 1024px */
-  .container {
-    max-width: 1024px;
-  }
-
-  /* Ewentualnie możesz zmienić font-size,
-     odstępy itp. jeśli Figma tak mówi */
-  .nav-link {
-    font-size: 14px; /* Przykład – jeśli w Figma tak jest */
-  }
 }
