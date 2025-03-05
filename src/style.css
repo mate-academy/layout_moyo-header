@@ -21,6 +21,11 @@ body {
 header {
   width: 100%;
   background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 /* Kontener dla nagłówka */
@@ -29,7 +34,7 @@ header {
   max-width: 1200px;
   height: 60px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,7 +60,7 @@ nav {
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 /* Styl dla elementów nawigacji */
@@ -68,22 +73,14 @@ nav {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 0 15px;
   transition: color 0.3s ease-in-out;
-}
-
-/* Marginesy pierwszego i ostatniego elementu */
-.nav-list-item:first-child {
-  margin-left: 50px;
-}
-
-.nav-list-item:last-child {
-  margin-right: 50px;
 }
 
 /* Hover efekt */
@@ -101,8 +98,24 @@ nav {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -2px;
   width: 100%;
   height: 2px;
   background-color: var(--blue);
+}
+
+/* Stylizacja menu w trybie responsywnym */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .nav-list {
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 0 10px;
+  }
 }
