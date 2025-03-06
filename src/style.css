@@ -1,5 +1,5 @@
 :root {
-  --blue-color: #00acdc; /* Użycie zmiennej dla koloru niebieskiego */
+  --blue-color: #00ACDC; /* Poprawiony kolor zgodny z Figmą */
 }
 
 /* Reset */
@@ -19,6 +19,7 @@ body {
 /* Header: full width, white bg */
 .page-header {
   width: 100%;
+  height: 60px; /* Upewnienie się, że nagłówek ma odpowiednią wysokość */
   background-color: #fff;
 }
 
@@ -33,18 +34,29 @@ body {
 }
 
 /* Logo */
-.logo img {
-  height: 40px;
-  object-fit: contain;
+.logo {
   padding-left: 50px;
 }
 
+.logo img {
+  height: 40px;
+  object-fit: contain;
+}
+
 /* Nawigacja */
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .nav-list {
   list-style: none;
   display: flex;
   margin: 0;
   padding-right: 50px;
+  height: 100%;
+  align-items: center;
 }
 
 .nav-list li + li {
@@ -76,6 +88,10 @@ body {
 /* Aktywny link i podświetlony */
 .nav-link.is-active,
 .nav-link[data-qa="hover"] {
+  color: var(--blue-color) !important;
+}
+
+.nav-link[data-qa="hover"]:not(:hover) {
   color: var(--blue-color) !important;
 }
 
