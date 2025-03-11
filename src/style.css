@@ -1,8 +1,17 @@
-* {
+:root {
+  --link-color: #00acdc;
+}
+
+body {
   margin: 0;
 }
 
+ul {
+  display: flex;
+}
+
 li {
+  text-transform: uppercase;
   display: flex;
   font-size: 12px;
   font-family: Roboto, sans-serif;
@@ -44,13 +53,13 @@ nav {
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--link-color);
 }
 
 .is-active {
   display: inline-block;
   position: relative;
-  color: #00acdc;
+  color: var(--link-color);
 }
 
 .is-active::after {
@@ -61,7 +70,7 @@ nav {
   top: 56px;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--link-color);
   border-radius: 4px;
 }
 
