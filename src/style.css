@@ -6,6 +6,10 @@ body {
   font-style: normal;
 }
 
+:root {
+  --blue-color: #00acdc;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -25,12 +29,12 @@ body {
 
 .nav__items {
   margin: 0 20px;
+  text-transform: uppercase;
 }
 
 .nav__link {
   text-decoration: none;
   color: #000;
-  text-transform: uppercase;
 }
 
 .nav__link:hover {
@@ -39,7 +43,7 @@ body {
 
 .nav__link.is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav__link.is-active::after {
@@ -50,5 +54,5 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
