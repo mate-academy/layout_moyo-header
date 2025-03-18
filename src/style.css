@@ -38,6 +38,60 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  align-items: center;
+  height: 60px;
+  margin: 10px 50px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__items {
+  margin: 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+}
+
+.nav__link.is-active {
+  position: relative;
+  color: var(--blue-color);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: -18.5px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--blue-color);
 }
 
 nav ul li {
