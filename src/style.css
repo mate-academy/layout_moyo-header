@@ -3,9 +3,11 @@ html {
 }
 
 body {
-  margin: 0 auto;
+  --color: var(--font-color, rgba(0, 172, 220, 1));
+  --background-color: var(--main-color, rgba(0, 172, 220, 1));
 
-  font-family: Roboto, sans-serif;
+  margin: 0 auto;
+  font-family: Roboto, Verdana, sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -20,6 +22,7 @@ body {
   padding: 0 50px;
   align-items: center;
   background-color: rgba(255, 255, 255, 1);
+  line-height: 60px;
 }
 
 .logo {
@@ -31,10 +34,13 @@ body {
   text-align: center;
 }
 
+.nav__link {
+  text-transform: uppercase;
+}
+
 .nav__items {
   display: flex;
   list-style: none;
-  text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
   position: relative;
@@ -48,18 +54,17 @@ body {
 
 a {
   text-decoration: none;
-  line-height: 60px;
   color: rgba(0, 0, 0, 1);
   text-align: center;
   display: flex;
 }
 
 .nav__link:hover {
-  color: rgba(0, 172, 220, 1);
+  color: var(--color);
 }
 
 a.is-active {
-  color: rgba(0, 172, 220, 1);
+  color: var(--color);
 }
 
 a.is-active::after {
@@ -70,5 +75,5 @@ a.is-active::after {
   width: 37px;
   height: 4px;
   border-radius: 8px;
-  background-color: rgba(0, 172, 220, 1);
+  background-color: var(--background-color);
 }
