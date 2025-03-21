@@ -41,3 +41,5 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
 - [ ] The Google Fonts Configuration follows requirements.
 ![alt text](./assets/image.png)
+
+test
