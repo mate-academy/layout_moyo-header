@@ -8,7 +8,7 @@
 <details>
   <summary>Remember about correct indentation between parent and child elements</summary>
 
-  > Each level of nesting, including text, contained inside the element, requires 2-space offset. 
+  > Each level of nesting, including text, contained inside the element, requires 2-space offset.
   Also blank line shouldn't be between parent and child elements.
 
   GOOD example
@@ -84,8 +84,8 @@
   GOOD Example
   ```html
   <input
-    type="text" 
-    name="surname" 
+    type="text"
+    name="surname"
     id="surname"
     required
   >
@@ -93,23 +93,23 @@
 
   BAD Examples
   ```html
-  <input type="text" name="surname" 
+  <input type="text" name="surname"
          id="surname" required>
 
-  <input type="text" 
-         name="surname" 
+  <input type="text"
+         name="surname"
          id="surname"
          required>
 
   <input
-  type="text" 
-  name="surname" 
+  type="text"
+  name="surname"
   id="surname"
   required>
 
   <input
-    type="text" 
-    name="surname" 
+    type="text"
+    name="surname"
     id="surname"
     required>
   ```
@@ -117,7 +117,7 @@
 
 <details>
   <summary>Lines of code have <code>80</code> chars max</summary>
-  
+
   > It is just easier to read such lines
 </details>
 
@@ -198,11 +198,11 @@
 
   HTML Example
   ```html
-  <nav class="nav">  
-    <ul class="nav__list">  
-      ...  
-    <ul>  
-  </nav>  
+  <nav class="nav">
+    <ul class="nav__list">
+      ...
+    <ul>
+  </nav>
   ```
 
   GOOD CSS Example
@@ -226,7 +226,7 @@
 
 <details>
   <summary>Remember to use fallback fonts - alternative font-family in case the main one doesn't work</summary>
-  
+
   > [Explanation](https://www.w3schools.com/cssref/pr_font_font-family.asp)
 </details>
 
