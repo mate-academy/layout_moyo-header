@@ -24,10 +24,11 @@ header {
 .header-container {
   display: flex;
   align-items: center; /* Vertically centering content */
+  justify-content: space-between; /* Distribute items evenly */
   max-width: 1200px;
-  height: 60px; /* Setting the height based on design */
+  height: 60px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 50px;
 }
 
 /* Logo styling */
@@ -48,25 +49,20 @@ nav ul {
   list-style: none;
 }
 
-/* Set margins for list items instead of using flex gap */
+/* Set margins for list items */
 nav li {
-  margin: 0 12px;
+  margin-left: 20px;
 }
 
-/* Removing margin from the first and last elements */
 nav li:first-child {
   margin-left: 0;
-}
-
-nav li:last-child {
-  margin-right: 0;
 }
 
 nav a {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.5px;
   line-height: 60px;
@@ -96,7 +92,6 @@ nav li a.is-active::after {
   background-color: var(--blue-color);
 }
 
-/* Laptops & Computers link special styling */
 nav li:nth-child(4) a {
   color: var(--blue-color);
 }
