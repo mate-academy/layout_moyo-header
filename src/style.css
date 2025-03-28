@@ -7,15 +7,22 @@ body {
   margin: 0;
   font-family: var(--roboto);
   font-size: 12px;
-  font-weight: medium;
+  font-weight: 500;
   width: 100%;
 }
 
 .cabecalho {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding-inline: 50px;
   align-items: center;
   width: auto;
+}
+
+.cabecalho__logotipo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav__lista {
@@ -42,6 +49,7 @@ body {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .is-active {
@@ -59,18 +67,6 @@ body {
   margin-top: 18.5px;
 }
 
-.nav__lista__item__link:hover {
+[data-qa='hover']:hover {
   color: var(--azul);
-}
-
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .cabecalho__logotipo {
-    margin-right:;
-  }
-}
-
-@media (min-width: 1200px) {
-  .cabecalho__logotipo {
-    margin-right:;
-  }
 }
