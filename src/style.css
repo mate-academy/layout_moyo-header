@@ -1,3 +1,126 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+/* Variables */
+:root {
+  --blue: #00acdc; /* або візьми точний колір із Figma */
+  --header-height: 80px;
+}
+
+/* Header container */
+.header {
+  width: 100%; /* Розтягує заголовок на всю ширину вікна браузера */
+  margin: 0; /* Видаляє зовнішні відступи */
+  padding: 0; /* Видаляє внутрішні відступи */
+}
+
+.container {
+  height: var(--header-height);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Logo */
+.header__logo {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+  left: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+/* Navigation */
+nav {
+  margin-left: auto;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 0; /* Скидаємо всі відступи для пунктів списку */
+}
+
+.nav-list li + li {
+  margin-left: 20px;
+}
+
+.nav-list li:first-child {
+  margin-left: 0; /* Забираємо відступ перед першим пунктом */
+}
+
+.nav-list li:last-child {
+  margin-right: 0; /* Забираємо відступ після останнього пункту */
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  display: block;
+  align-items: center;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  font-size: 12px;
+}
+
+.nav-item:hover {
+  color: var(--blue);
+}
+
+.is-active {
+  position: relative; /* Потрібно для позиціонування псевдоелемента */
+}
+
+.is-active::after {
+  content: ''; /* Порожній контент для псевдоелемента */
+  position: absolute;
+  bottom: -4px; /* Розташування лінії трохи нижче тексту */
+  left: 0;
+  width: 100%; /* Лінія займає всю ширину посилання */
+  height: 4px; /* Товщина лінії */
+  background-color: var(--blue); /* Колір лінії */
+  border-radius: 8px; /* Округлені краї лінії */
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  width: 0; /* Початкова ширина рисочки — 0 */
+  height: 4px;
+  background-color: var(--blue);
+  border-radius: 8px; /* Округлені краї рисочки */
+  transition: width 0.3s ease; /* Анімація для плавного ефекту */
+}
+
+.nav-list a:hover::after {
+  content: ''; /* Порожній контент для псевдоелемента */
+  position: absolute;
+  bottom: -18px; /* Розташування рисочки внизу посилання */
+  left: 0;
+  width: 100%; /* Рисочка займає всю ширину посилання */
+  height: 4px; /* Товщина рисочки */
+  background-color: var(--blue); /* Колір рисочки */
+  transition: width 0.3s ease; /* Анімація появи рисочки */
+  border-radius: 8px;
 }
