@@ -1,3 +1,90 @@
 body {
   margin: 0;
+  padding: 0;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  width: 100vw; /* Розтягує заголовок на всю ширину вікна браузера */
+  margin: 0; /* Видаляє будь-які зовнішні відступи */
+  padding: 0; /* Видаляє внутрішні відступи, якщо є */
+  box-sizing: border-box; /* Враховує padding і border у ширині */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Максимальна ширина контейнера */
+  height: 60px;
+  margin: 0 auto; /* Центрує контейнер по горизонталі */
+  padding: 0, 10px; /* Внутрішні відступи контейнера */
+  box-sizing: border-box;
+}
+
+.header__logo {
+  width: 40;
+  height: 40;
+  top: 10px;
+  left: 50px;
+  position: absolute;
+}
+
+.nav-list {
+  list-style: none; /* Прибирає точки перед пунктами списку */
+  display: flex; /* Робить список горизонтальним */
+  margin: 23px 0; /* Відступи зверху і знизу */
+  padding: 0; /* Прибирає внутрішні відступи */
+  margin-right: 50px;
+}
+
+.nav-link {
+  text-decoration: none; /* Прибирає підкреслення тексту */
+  color: #000; /* Встановлює чорний колір тексту */
+  padding: 20px 10px; /* Відступи всередині посилань */
+  text-transform: uppercase; /* Робить текст у верхньому регістрі */
+}
+
+.nav-link--apple {
+  color: #00acdc; /* Колір тексту для Apple */
+  position: relative; /* Потрібно для позиціонування псевдоелемента */
+}
+
+.nav-link--apple::after {
+  content: ''; /* Порожній контент для псевдоелемента */
+  position: absolute;
+  bottom: -1px; /* Відступ чорточки від тексту */
+  left: 50%;
+  width: 37px; /* Чорточка займає всю ширину посилання */
+  height: 4px; /* Товщина чорточки */
+  background: #00acdc; /* Чорний колір чорточки */
+  border-radius: 8px; /* Округлені краї чорточки */
+}
+
+.is-active {
+  color: #00acdc; /* Синій колір тексту для активного посилання */
+  position: relative; /* Потрібно для позиціонування псевдоелемента */
+}
+
+.is-active::after {
+  content: ''; /* Порожній контент для псевдоелемента */
+  position: absolute;
+  bottom: -1px; /* Розташування лінії трохи нижче тексту */
+  transform: translateX(-50%); /* Центрує лінію під текстом */
+  width: 37px; /* Лінія займає всю ширину посилання */
+  height: 4px; /* Товщина лінії */
+  background-color: #00acdc; /* Синій колір лінії */
+  border-radius: 8px; /* Округлені краї лінії */
+}
+
+.nav-link:hover {
+  color: #00acdc; /* Колір тексту при наведенні */
 }
