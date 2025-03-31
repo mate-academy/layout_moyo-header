@@ -1,126 +1,90 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
   font-family: Roboto, sans-serif;
 }
 
-/* Variables */
-:root {
-  --blue: #00acdc; /* або візьми точний колір із Figma */
-  --header-height: 80px;
-}
-
-/* Header container */
 .header {
-  width: 100%; /* Розтягує заголовок на всю ширину вікна браузера */
-  margin: 0; /* Видаляє зовнішні відступи */
-  padding: 0; /* Видаляє внутрішні відступи */
+  width: 100vw; /* Розтягує заголовок на всю ширину вікна браузера */
+  margin: 0; /* Видаляє будь-які зовнішні відступи */
+  padding: 0; /* Видаляє внутрішні відступи, якщо є */
+  box-sizing: border-box; /* Враховує padding і border у ширині */
 }
 
 .container {
-  height: var(--header-height);
-  margin: 0 auto;
   display: flex;
   align-items: center;
-  padding: 0 24px;
   justify-content: space-between;
-  background-color: rgb(255, 255, 255);
+  width: 100%; /* Максимальна ширина контейнера */
+  height: 60px;
+  margin: 0 auto; /* Центрує контейнер по горизонталі */
+  padding: 0, 10px; /* Внутрішні відступи контейнера */
+  box-sizing: border-box;
 }
 
-/* Logo */
 .header__logo {
-  width: 40px;
-  height: 40px;
-  margin: 10px 0;
+  width: 40;
+  height: 40;
+  top: 10px;
   left: 50px;
-  display: flex;
-  position: relative;
-  align-items: center;
-}
-
-/* Navigation */
-nav {
-  margin-left: auto;
+  position: absolute;
 }
 
 .nav-list {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none; /* Прибирає точки перед пунктами списку */
+  display: flex; /* Робить список горизонтальним */
+  margin: 23px 0; /* Відступи зверху і знизу */
+  padding: 0; /* Прибирає внутрішні відступи */
+  margin-right: 50px;
 }
 
-.nav-list li {
-  margin: 0; /* Скидаємо всі відступи для пунктів списку */
+.nav-link {
+  text-decoration: none; /* Прибирає підкреслення тексту */
+  color: #000; /* Встановлює чорний колір тексту */
+  padding: 20px 10px; /* Відступи всередині посилань */
+  text-transform: uppercase; /* Робить текст у верхньому регістрі */
 }
 
-.nav-list li + li {
-  margin-left: 20px;
+.nav-link--apple {
+  color: #00acdc; /* Колір тексту для Apple */
+  position: relative; /* Потрібно для позиціонування псевдоелемента */
 }
 
-.nav-list li:first-child {
-  margin-left: 0; /* Забираємо відступ перед першим пунктом */
-}
-
-.nav-list li:last-child {
-  margin-right: 0; /* Забираємо відступ після останнього пункту */
-}
-
-.nav-item {
-  text-decoration: none;
-  color: #000;
-  text-transform: uppercase;
-  display: block;
-  align-items: center;
-  height: 40px;
-  line-height: 40px;
-  position: relative;
-  font-size: 12px;
-}
-
-.nav-item:hover {
-  color: var(--blue);
+.nav-link--apple::after {
+  content: ''; /* Порожній контент для псевдоелемента */
+  position: absolute;
+  bottom: -1px; /* Відступ чорточки від тексту */
+  left: 50%;
+  width: 37px; /* Чорточка займає всю ширину посилання */
+  height: 4px; /* Товщина чорточки */
+  background: #00acdc; /* Чорний колір чорточки */
+  border-radius: 8px; /* Округлені краї чорточки */
 }
 
 .is-active {
+  color: #00acdc; /* Синій колір тексту для активного посилання */
   position: relative; /* Потрібно для позиціонування псевдоелемента */
 }
 
 .is-active::after {
   content: ''; /* Порожній контент для псевдоелемента */
   position: absolute;
-  bottom: -4px; /* Розташування лінії трохи нижче тексту */
-  left: 0;
-  width: 100%; /* Лінія займає всю ширину посилання */
+  bottom: -1px; /* Розташування лінії трохи нижче тексту */
+  transform: translateX(-50%); /* Центрує лінію під текстом */
+  width: 37px; /* Лінія займає всю ширину посилання */
   height: 4px; /* Товщина лінії */
-  background-color: var(--blue); /* Колір лінії */
+  background-color: #00acdc; /* Синій колір лінії */
   border-radius: 8px; /* Округлені краї лінії */
 }
 
-.nav-list a::after {
-  content: '';
-  position: absolute;
-  bottom: -18px;
-  left: 0;
-  width: 0; /* Початкова ширина рисочки — 0 */
-  height: 4px;
-  background-color: var(--blue);
-  border-radius: 8px; /* Округлені краї рисочки */
-  transition: width 0.3s ease; /* Анімація для плавного ефекту */
-}
-
-.nav-list a:hover::after {
-  content: ''; /* Порожній контент для псевдоелемента */
-  position: absolute;
-  bottom: -18px; /* Розташування рисочки внизу посилання */
-  left: 0;
-  width: 100%; /* Рисочка займає всю ширину посилання */
-  height: 4px; /* Товщина рисочки */
-  background-color: var(--blue); /* Колір рисочки */
-  transition: width 0.3s ease; /* Анімація появи рисочки */
-  border-radius: 8px;
+.nav-link:hover {
+  color: #00acdc; /* Колір тексту при наведенні */
 }
