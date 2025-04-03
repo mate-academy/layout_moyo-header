@@ -1,3 +1,79 @@
+:root {
+  /* colors */
+  --text-color: #000;
+  --hover: #00acdc;
+
+  /* fonts */
+  --font-uppercase: 'Bebas Neue Pro';
+  --font-lowercase: 'Poppins', sans-serif;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+  font-size: 12px;
+}
+
 body {
+  padding: 0;
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.header__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.nav__link:hover {
+  color: var(--hover);
+}
+
+.nav__link.is-active {
+  color: var(--hover);
+}
+
+.is-active::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: var(--hover);
+  border-radius: 8px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
