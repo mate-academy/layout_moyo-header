@@ -8,18 +8,17 @@
   --font-lowercase: 'Poppins', sans-serif;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-
 html {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-variation-settings: 'wdth' 100;
   font-size: 12px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
 }
 
 .header {
@@ -38,11 +37,16 @@ html {
 .nav__list {
   display: flex;
   list-style: none;
-  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 .nav__item {
   position: relative;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link {
