@@ -1,3 +1,7 @@
+:root {
+  --main-color: #00acdc;
+}
+
 body {
   margin: 0;
 }
@@ -19,11 +23,6 @@ body {
   width: 40px;
   margin: 10px 0;
 }
-
-/* .nav {
-  height: 60px;
-  line-height: 60px;
-} */
 
 .list_nav {
   display: flex;
@@ -57,11 +56,11 @@ body {
 }
 
 .is-active:first-child {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
-li:hover a:first-child {
-  color: #00acdc;
+.li:hover .link:first-child {
+  color: var(--main-color);
 }
 
 .is-active::after {
@@ -70,7 +69,7 @@ li:hover a:first-child {
   content: '';
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--main-color);
   display: block;
   border-radius: 8px;
 }
