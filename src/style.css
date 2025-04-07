@@ -1,60 +1,61 @@
-html {
-  /* stylelint-disable-next-line font-family-name-quotes */
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  background-color: lightgray;
+:root {
+  --primary-color: #00acdc;
 }
 
 body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
   margin: 0;
 }
 
 .header {
   display: flex;
-  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
-img {
+.logo {
+  display: inline-block;
   width: 40px;
   height: 40px;
-  margin: 20px 50px;
 }
 
-.nav {
+.nav__list {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 20px;
+  position: relative;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
 }
 
 .nav__link {
-  margin-right: 50px;
-}
-
-.nav__link:link {
-  color: black;
+  display: block;
+  align-content: center;
+  box-sizing: border-box;
+  height: 60px;
+  line-height: 60px;
+  font-size: 12px;
+  padding: 0;
+  color: #000;
   text-decoration: none;
 }
 
-.nav__link:visited {
-  color: purple;
-}
-
 .nav__link:hover {
-  color: #00ACDC;
-  text-decoration: underline;
+  color: var(--primary-color);
 }
 
-.nav__link:active {
-  color: #00ACDC;
-}
-
-img::after {
-  justify-content: flex-end;
-}
-
-.nav__link-underline {
-  color: black;
+.is-active {
+  color: var(--primary-color);
 }
 
 .is-active::after {
@@ -67,5 +68,5 @@ img::after {
   height: 4px;
   border-radius: 8px;
 
-  background-color: #00ACDC;
+  background-color: var(--primary-color);
 }
