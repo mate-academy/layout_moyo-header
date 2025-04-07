@@ -15,14 +15,18 @@ body {
 
 header {
   display: flex;
-  align-items: center; /* Centraliza verticalmente */
+  align-items: center;
   width: 100%;
   height: 60px;
+  justify-content: center;
+  padding-right: 50px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
 img {
-  height: 40px; /* Ajuste de tamanho conforme o mockup */
+  height: 40px;
+  width: auto;
+  padding-left: 30px;
 }
 
 a {
@@ -42,7 +46,6 @@ a {
 header > a {
   display: flex;
   align-items: center;
-  padding-left: 50px;
   height: 60px;
 }
 
@@ -95,17 +98,6 @@ a:hover::after {
 
 a.is-active {
   color: var(--blue);
-}
-
-.is-active::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--blue);
-  border-radius: 8px;
 }
 
 a.is-active::after {
