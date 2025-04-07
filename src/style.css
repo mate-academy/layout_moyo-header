@@ -1,58 +1,114 @@
-body {
-  margin: 0;
-}
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --blue: #00acdc;
+  --underline-offset: -6px;
 }
 
-:root {
-  --blue: #0f62fe; /* ou o tom azul do design */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
 }
 
 header {
-  align-items: center;
-  justify-content: center;
   display: flex;
+  align-items: center; /* Centraliza verticalmente */
   width: 100%;
   height: 60px;
-  flex-shrink: 0;
-  background: #fff;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
+
 img {
-  position: absolute;
-  padding: 4px;
-  top: 10px;
-  left: 30px;
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-}
-nav ul {
-  display: flex;
-  padding: 0;
-  margin: 0;
+  margin-left: 50px;
+  height: 40px; /* Ajuste de tamanho conforme o mockup */
 }
 
-
-li {
-  list-style-type: none;
-  color: #00acdc;
-  font-family: Roboto;
+a {
+  height: 60px; /* Altura do link define altura do header */
+  line-height: 60px; /* Alinha o texto verticalmente */
   font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
   text-transform: uppercase;
-}
-li a {
-  margin-left: 22px;
-  color: black;
+  position: relative;
+  display: flex;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  color: #000;
   text-decoration: none;
 }
 
+header > a {
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  height: 60px;
+}
 
+header img {
+  height: 40px;
+  width: auto;
+}
 
+nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+
+li {
+  display: flex;
+  height: 100%;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+li:first-child a {
+  margin-left: 0;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: var(--underline-offset);
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--blue);
+  border-radius: 8px;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a.is-active {
+  color: var(--blue);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px; /* Usa a variável --bottom, que já está correta */
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue);
+  border-radius: 8px;
+}
+
+a.is-active::after {
+  width: 100%;
+}
