@@ -13,7 +13,7 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   width: 100%;
@@ -23,14 +23,15 @@ header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
-img {
+.img {
   height: 40px;
   width: auto;
   padding-left: 30px;
 }
 
-a {
-  height: 60px; /* Altura do link define altura do header */
+.link,
+.is-active {
+  height: 60px; /* Altura do link define altura do .header */
   line-height: 60px; /* Alinha o texto verticalmente */
   font-size: 12px;
   text-transform: uppercase;
@@ -43,44 +44,44 @@ a {
   text-decoration: none;
 }
 
-header > a {
+.header > a {
   display: flex;
   align-items: center;
   height: 60px;
 }
 
-header img {
+.header img {
   height: 40px;
   width: auto;
 }
 
-nav {
+.nav {
   display: flex;
   align-items: center;
   margin-left: auto;
   height: 100%;
 }
 
-ul {
+.nav_list {
   list-style: none;
   display: flex;
   height: 100%;
 }
 
-li {
+.nav_item {
   display: flex;
   height: 100%;
 }
 
-a:hover {
+.link:hover {
   color: var(--blue);
 }
 
-li:first-child a {
+.nav_item:first-child a {
   margin-left: 0;
 }
 
-a::after {
+.link::after {
   content: '';
   position: absolute;
   bottom: var(--underline-offset);
@@ -92,15 +93,15 @@ a::after {
   transition: width 0.3s ease;
 }
 
-a:hover::after {
+.link:hover::after {
   width: 100%;
 }
 
-a.is-active {
+.is-active {
   color: var(--blue);
 }
 
-a.is-active::after {
+.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
