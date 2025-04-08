@@ -1,12 +1,11 @@
 :root {
   --blue: #00acdc;
-  --underline-offset: -6px;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -18,82 +17,62 @@ body {
   align-items: center;
   width: 100%;
   height: 60px;
-  justify-content: center;
-  padding-right: 50px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 }
 
-.img {
-  height: 40px;
-  width: auto;
-  padding-left: 30px;
-}
-
-.link,
-.is-active {
-  height: 60px; /* Altura do link define altura do .header */
-  line-height: 60px; /* Alinha o texto verticalmente */
-  font-size: 12px;
-  text-transform: uppercase;
-  position: relative;
-  display: flex;
-  margin-left: 20px;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-  text-decoration: none;
-}
-
-.header > a {
+.logo-link {
   display: flex;
   align-items: center;
-  height: 60px;
+  margin-left: 50px; /* confere no Figma o valor exato */
 }
 
-.header img {
+.logo {
   height: 40px;
-  width: auto;
+  width: 40px; /* confere a altura exata no Figma */
 }
 
 .nav {
+  margin-left: auto;
+  margin-right: 50px; /* ou o valor exato que aparece no Figma */
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list li + li {
+  margin-left: 20px; /* margem entre os links */
+}
+
+.nav-link {
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
-  margin-left: auto;
-  height: 100%;
+  justify-content: center;
+  height: 60px;
+  position: relative;
 }
 
-.nav_list {
-  list-style: none;
-  display: flex;
-  height: 100%;
-}
-
-.nav_item {
-  display: flex;
-  height: 100%;
-}
-
-.link:hover {
+.nav-link:hover {
   color: var(--blue);
 }
 
-.nav_item:first-child a {
-  margin-left: 0;
-}
-
-.link::after {
+.nav-link::after {
   content: '';
   position: absolute;
-  bottom: var(--underline-offset);
+  bottom: 0;
   left: 0;
-  width: 0%;
   height: 3px;
+  width: 0;
   background-color: var(--blue);
-  border-radius: 8px;
   transition: width 0.3s ease;
+  border-radius: 8px;
 }
 
-.link:hover::after {
+.nav-link:hover::after {
   width: 100%;
 }
 
@@ -106,8 +85,16 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  height: 3px;
   width: 100%;
-  height: 4px;
   background-color: var(--blue);
   border-radius: 8px;
+}
+
+.nav-link[data-qa='hover']:hover {
+  color: var(--blue);
+}
+
+.nav-link[data-qa='hover']::after {
+  display: none; /* remove underline se tiver */
 }
