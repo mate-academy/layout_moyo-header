@@ -1,6 +1,7 @@
 body {
   font-family: Roboto, sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 html,
@@ -16,25 +17,18 @@ header {
   width: 100%;
   background-color: #fff;
   display: flex;
-  justify-content: space-between; /* <-- Додати це */
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
 }
-
-roboto-uniquifier {
-  font-family: Roboto, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
-
 
 .logo {
   display: block;
 }
 
 nav ul {
+  flex-wrap: wrap;
+  max-width: 100%;
   list-style: none;
   display: flex;
   padding: 0;
@@ -64,10 +58,10 @@ nav ul li:last-child {
 }
 
 nav a {
+  padding: 0 16px;
   text-align: center;
   text-decoration: none;
   color: #000;
-  min-width: 60%;
   height: 60px;
   line-height: 60px;
   display: inline-flex;
@@ -76,11 +70,15 @@ nav a {
   position: relative;
   text-transform: uppercase;
   cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
   color: #007bff;
-  padding-inline: 50px;
+  transform: scale(1.05);
 }
 
 nav a.is-active::after {
