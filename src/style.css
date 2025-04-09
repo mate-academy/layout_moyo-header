@@ -1,16 +1,21 @@
-body {
-  font-family: Roboto, sans-serif;
+:root {
+  --blue: #007bff;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-optical-sizing: auto;
+  overflow-x: hidden;
 }
 
 header {
@@ -26,35 +31,22 @@ header {
   display: block;
 }
 
-nav ul {
-  flex-wrap: wrap;
-  max-width: 100%;
-  list-style: none;
+nav {
+  flex: 1;
   display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 nav ul li + li {
   margin-left: 32px;
-}
-
-nav ul li:first-child a::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--blue);
-}
-
-nav ul li:first-child {
-  margin-left: 0;
-}
-
-nav ul li:last-child {
-  margin-right: 0;
 }
 
 nav a {
@@ -77,8 +69,12 @@ nav a {
 }
 
 nav a:hover {
-  color: #007bff;
+  color: var(--blue);
   transform: scale(1.05);
+}
+
+nav a.is-active {
+  color: var(--blue);
 }
 
 nav a.is-active::after {
@@ -90,17 +86,4 @@ nav a.is-active::after {
   height: 4px;
   background-color: var(--blue);
   border-radius: 8px;
-}
-
-.nav-link {
-  font-size: 12px;
-  font-weight: 500;
-}
-
-nav a.is-active {
-  color: var(--blue);
-}
-
-:root {
-  --blue: #007bff;
 }
