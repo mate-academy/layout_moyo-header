@@ -1,6 +1,6 @@
 module.exports = async (page, scenario, vp) => {
-  console.log('SCENARIO > ' + scenario.label);
-  await require('./clickAndHoverHelper')(page, scenario);
+  console.log('onReady: ' + scenario.label);
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
   // add more ready handlers here...
 };
