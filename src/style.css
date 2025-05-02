@@ -1,3 +1,117 @@
+html {
+  --active-color: #00acdc;
+}
+
 body {
+  background-color: rgb(229, 229, 229);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+blockquote,
+pre,
+figure,
+hr,
+dl,
+dd,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+select {
   margin: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 100%;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: underline var(--active-color);
+  text-decoration-thickness: 0.7px;
+  color: var(--active-color);
+}
+
+.header_logo {
+  margin-right: auto;
+  margin-left: 50px;
+  width: 40px;
+  height: 40px;
+  order: -1;
+}
+
+ul {
+  display: flex;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  padding-right: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: inset 0 0 0 0.2px var(--active-color);
+}
+
+.container:hover {
+  box-shadow: inset 0 0 0 0.5px var(--active-color);
+}
+
+.box {
+  margin-right: 20px;
+  list-style: none;
+}
+
+.box:last-child {
+  margin-right: 0 px;
+}
+
+a .is-active {
+  color: var(--active-color);
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--active-color);
+  position: absolute;
+  bottom: 0;
+}
+
+@media all and (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
 }
