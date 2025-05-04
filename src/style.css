@@ -53,7 +53,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline var(--active-color);
+  text-decoration: none;
   text-decoration-thickness: 0.7px;
   color: var(--active-color);
 }
@@ -66,7 +66,8 @@ a:hover {
   order: -1;
 }
 
-ul {
+nav ul {
+  padding-inline-start: 0;
   display: flex;
   position: relative;
 }
@@ -79,11 +80,6 @@ ul {
   justify-content: space-between;
   align-items: center;
   background: #fff;
-  box-shadow: inset 0 0 0 0.2px var(--active-color);
-}
-
-.container:hover {
-  box-shadow: inset 0 0 0 0.5px var(--active-color);
 }
 
 .box {
@@ -92,14 +88,14 @@ ul {
 }
 
 .box:last-child {
-  margin-right: 0 px;
+  margin-right: 0;
 }
 
-a .is-active {
+a.is-active {
   color: var(--active-color);
 }
 
-.is-active::after {
+a.is-active::after {
   content: '';
   display: block;
   width: 37px;
@@ -114,4 +110,8 @@ a .is-active {
   .container {
     max-width: 1024px;
   }
+}
+
+.blue {
+  color: var(--active-color);
 }
