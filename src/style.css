@@ -1,7 +1,11 @@
-body {
-  margin: 0;
+html * {
+  box-sizing: border-box;
   padding: 0;
-  font-family: Roboto, system-ui;
+  margin: 0;
+}
+
+body * {
+  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
 }
@@ -9,6 +13,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  max-width: 100vw;
   width: 100%;
   margin: 0;
   padding: 0 50px;
@@ -16,7 +21,7 @@ body {
 }
 
 .logo__link {
-  height: 40px;
+  display: flex;
 }
 
 .nav {
@@ -30,6 +35,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0;
+  margin: 0;
 }
 
 .nav__link {
@@ -39,6 +45,10 @@ body {
   font-weight: medium;
   height: 60px;
   line-height: 60px;
+}
+
+.nav__link:hover {
+  color: #00acdc;
 }
 
 .nav__item {
@@ -55,8 +65,9 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  color: #00acdc;
+  background-color: #00acdc;
   height: 4px;
+  width: 100%;
   border-radius: 8px;
 }
 
