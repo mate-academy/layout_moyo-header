@@ -1,3 +1,90 @@
-body {
+/* 1) RESET */
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2) DESIGN TOKENS – fill these with the exact Figma values */
+:root {
+  /* from Figma: the exact height of each nav link container */
+  --header-height: 60px;
+  /* space between each list item */
+  --nav-item-gap: 20px;
+  /* overall font sizing & tracking */
+  --font-size: 12px;
+  --letter-spacing: 0.03em;
+  /* logo dimensions */
+  --logo-width: 40px;
+  /* colors */
+  --moyo-blue: #007aff;
+  --text-default: #333333;
+  /* underline thickness for active link */
+  --underline-height: 2px;       /* ← e.g. 2px */
+}
+
+/* 3) BASE TEXT */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+}
+
+/* 4) HEADER LAYOUT */
+header {
+  display: flex;
+  align-items: center;           /* vertical centering */
+  width: 100%;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+/* 5) LOGO */
+.logo img {
+  display: block;
+  width: var(--logo-width);
+}
+
+/* 6) NAV LIST */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-left: auto;             /* push nav to right of logo */
+}
+
+/* 7) SPACING BETWEEN ITEMS – no gap, use margin */
+nav li + li {
+  margin-left: var(--nav-item-gap);
+}
+
+/* 8) NAV LINKS */
+nav a {
+  display: inline-flex;
+  align-items: center;
+  height: var(--header-height);
+  text-transform: uppercase;     /* uppercase via CSS */
+  color: var(--text-default);
+  text-decoration: none;
+  position: relative;            /* for ::after underline */
+  transition: color 0.2s;
+}
+
+/* 9) HOVER STATE */
+nav a:hover {
+  color: var(--moyo-blue);
+}
+
+/* 10) ACTIVE UNDERLINE */
+nav a.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--underline-height);
+  background: var(--moyo-blue);
 }
