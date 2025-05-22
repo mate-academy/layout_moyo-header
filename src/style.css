@@ -1,3 +1,89 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 60px;
+  line-height: 60px;
+  background-color: #fff;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  margin: 0 50px 0 0;
+}
+
+.logo_nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50px;
+  width: 40px;
+  height: 40px;
+  align-self: center;
+}
+
+ul.nav_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin-left: -10px;
+  margin-right: -10px;
+  text-transform: uppercase;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin: 0 10px;
+}
+
+a[data-qa='hover'] {
+  position: relative;
+  color: #00acdc;
+  text-decoration: none;
+}
+
+a.is-active {
+  position: relative;
+  color: #00acdc;
+  text-decoration: none;
+}
+
+.castome_underline:link,
+.castome_underline:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.castome_underline:hover,
+.castome_underline:active {
+  color: #00acdc;
+  text-decoration: none;
+}
+
+a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  border-radius: 2px;
+  text-decoration: none;
 }
