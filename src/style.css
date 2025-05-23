@@ -1,6 +1,5 @@
-
 :root {
-  --blue: #005eff;
+  --blue: #00acdc;
 }
 
 /* #region base */
@@ -15,7 +14,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 50px;
   width: 100%;
 }
 
@@ -26,19 +25,23 @@ header {
 nav ul {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 nav li:not(:last-child) {
-  margin-right: 24px;
+  margin-left: 20px;
 }
 
 nav a {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   color: black;
-  height: 64px;
-  line-height: 64px;
+  line-height: 60px;
   position: relative;
 }
 
@@ -56,7 +59,7 @@ nav a.is-active::after {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 2px;
+  height: 4px;
   background-color: var(--blue);
 }
 
