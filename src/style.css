@@ -1,3 +1,109 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  width: 100%;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  height: 72px;
+}
+
+.logo-link {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.logo {
+  height: 32px;
+}
+
+.main-nav {
+  flex-grow: 1;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 24px;
+}
+
+.nav-list li:not(:last-child) {
+  margin-right: 0;
+}
+
+.nav-list li:first-child {
+  margin-left: 0;
+}
+
+.nav-list li:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+/* Hover */
+.nav-link:hover {
+  color: #007bff;
+}
+
+/* Active */
+.nav-link.is-active {
+  position: relative;
+  color: #007bff;
+}
+
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  .nav-link {
+    height: auto;
+    padding: 8px 0;
+  }
 }
