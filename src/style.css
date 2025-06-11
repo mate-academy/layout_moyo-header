@@ -1,3 +1,76 @@
+:root {
+  --moyo-blue: #00acdc;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+  line-height: 100%;
+  background-color: #ddd;
+}
+
 body {
   margin: 0;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #fff;
+  align-items: center;
+}
+
+.logo {
+  margin: 0 50px;
+}
+
+.nav {
+  margin-right: 50px;
+  align-items: center;
+  display: flex;
+  height: 60px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav__link {
+  display: inline-block;
+  padding: 0;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  color: var(--moyo-blue);
+  cursor: pointer;
+}
+
+.nav__list li:not(:first-child) .nav__link {
+  margin-left: 20px;
+}
+
+.is-active {
+  position: relative;
+  color: var(--moyo-blue);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 4px;
+  background-color: var(--moyo-blue);
+  border-radius: 8px;
 }
