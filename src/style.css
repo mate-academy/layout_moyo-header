@@ -1,3 +1,76 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+  font-family: Roboto, sans-serif;
+}
+
+/* Variables */
+:root {
+  --blue-color: #00acdc;
+}
+
+/* Header */
+header {
+  padding-right: 50px;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+}
+
+/* Logo */
+.logo-link img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* Nav */
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list li:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* Links */
+.nav-list a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+}
+
+.nav-list a.is-active {
+  color: var(--blue-color);
+}
+
+.nav-list a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
+}
+
+.nav-list a[data-qa='hover']:hover {
+  color: var(--blue-color);
 }
