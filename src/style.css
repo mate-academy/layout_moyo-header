@@ -1,6 +1,7 @@
 html {
   --text-main-color: #000;
   --text-accent-color: #00acdc;
+  --main-background-color: #fff;
 }
 
 body {
@@ -28,7 +29,7 @@ header {
   display: flex;
   width: 100%;
   padding: 0;
-  background-color: pink;
+  background-color: var(--main-background-color);
   line-height: 60px;
 }
 
@@ -52,6 +53,7 @@ header {
 }
 
 .nav__item {
+  position: relative;
   margin-right: 20px;
   height: 100%;
 }
@@ -66,14 +68,38 @@ header {
   color: var(--text-main-color);
 }
 
-.nav__link:hover {
+.nav__link.accent {
+  color: var(--text-accent-color);
+}
+
+.nav__link.is-active {
+  cursor: pointer;
+  color: var(--text-accent-color);
+}
+
+.nav__link.is-active::after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--text-accent-color);
+  border-radius: 8px;
+}
+
+/* .nav__link:hover {
   cursor: pointer;
   color: var(--text-accent-color);
 }
 
 .nav__link:hover::after {
+  position: absolute;
   content: '';
   display: block;
-  color: var(--text-accent-color);
-  border: 2px solid var(--text-accent-color);
-}
+  height: 3px;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--text-accent-color);
+  border-radius: 8px;
+} */
