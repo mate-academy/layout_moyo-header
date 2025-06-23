@@ -1,3 +1,83 @@
-body {
+/* stylelint-disable import-notation */
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable font-family-name-quotes */
+
+:root {
+  --blue: #00acdc;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 50px;
+  height: 60px;
+}
+header img {
+  display: block;
+  height: 100%;
+}
+nav {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+nav a {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+ul li + li {
+  margin-left: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li a:hover {
+  color: var(--blue);
+}
+
+nav a[data-qa='hover']:hover {
+  color: var(--blue);
+}
+
+.is-active {
+  color: var(--blue);
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue);
+  border-radius: 4px;
 }
