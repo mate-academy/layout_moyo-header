@@ -1,3 +1,86 @@
+:root {
+  --defaul-color: #000;
+  --hover-color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+/* Reset default margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stretch full width */
+.header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+/* Logo image */
+.logo img {
+  display: block;
+  height: 40px;
+}
+
+/* Navigation list */
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav__list li {
+  margin: 0 10px;
+}
+
+.nav__list li:first-child {
+  margin-left: 0;
+}
+
+.nav__list li:last-child {
+  margin-right: 0;
+}
+
+.nav__list a {
+  text-decoration: none;
+  color: var(--default-color);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.nav__list a.is-active,
+.nav__list a:hover {
+  color: var(--hover-color);
+}
+
+.nav__list a.is-active {
+  position: relative;
+}
+
+.nav__list a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--hover-color);
 }
