@@ -1,3 +1,53 @@
+:root {
+  --main-color: #00acdc;
+}
+
 body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
   margin: 0;
+}
+
+.header {
+  display: flex;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+  padding-left: 50px;
+}
+
+ul.header-bar {
+  display: flex;
+  list-style-type: none;
+  margin-top: 22.5px;
+  padding-left: 509px;
+  gap: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+ul.header-bar li {
+  position: relative;
+}
+
+ul.header-bar li.active::after {
+  content: '';
+  width: 37px;
+  height: 4px;
+  left: 0;
+  bottom: -18px;
+  border-radius: 8px;
+  position: absolute;
+  background-color: var(--main-color);
+}
+
+ul.header-bar li:hover {
+  color: var(--main-color);
+  cursor: pointer;
 }
