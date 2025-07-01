@@ -2,6 +2,7 @@ html {
   font-family: Roboto, sans-serif;
   background-color: gainsboro;
   font-size: 12px;
+  font-weight: 500;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   align-items: center;
   padding: 0 40px 0 50px;
 }
@@ -20,7 +20,6 @@ body {
 .logo__img {
   width: 40px;
   height: 40px;
-  display: block;
 }
 
 .nav__list {
@@ -29,10 +28,6 @@ body {
   text-transform: uppercase;
   padding: 0;
   margin: 0;
-}
-
-.is-active {
-  position: relative;
 }
 
 .is-active::after {
@@ -48,7 +43,6 @@ body {
 
 .nav {
   align-items: center;
-  margin: 0;
 }
 
 .nav__item {
@@ -57,33 +51,18 @@ body {
   display: flex;
 }
 
-/* .nav__list:first-child::before {
-  content: '';
-  margin: 0;
-}
-
-.nav__list:last-child::after {
-  content: '';
-  margin: 0;
-} */
-
-.nav__link.is-active {
-  color: #00acdc;
-}
-
 .nav__link {
   display: flex;
   text-decoration: none;
   color: black;
-  margin: 0;
-  padding:;
   height: 60px;
   align-items: center;
 }
 
-/* .nav__link.is-active {
-  margin: auto;
-} */
+.is-active {
+  color: #00acdc;
+  position: relative;
+}
 
 .nav__link:hover {
   color: #00acdc;
