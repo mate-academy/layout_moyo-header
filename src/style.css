@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+:root {
+  --color-blue: #00acdc;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -53,15 +57,14 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
-
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--color-blue);
 }
 
 .nav_link.is-active {
-  color: #00acdc;
+  color: var(--color-blue);
 }
 
 .nav_link.is-active::after {
@@ -73,5 +76,5 @@ body {
 
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--color-blue);
 }
