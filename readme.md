@@ -22,13 +22,13 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - there should not be margins before the first and after the last list items
 - don't just copy all styles from Figma. Think, which of them are relevant. Uneven sizes (e.g. `line-height: 14.6px`) are definitely useless
 - Nav Links should not have any padding but have the text centered
-
+ 
 ## Checklist
 
 ❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://Michael-Weckop.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://Michael-Weckop.github.io/layout_moyo-header/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
@@ -39,5 +39,5 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [ ] **CSS Variable** is used for a blue color
 - [ ] Pseudo-element is used for a blue line below the active link
 - [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
-- [ ] The Google Fonts Configuration follows requirements. 
+- [ ] The Google Fonts Configuration follows requirements.
 ![alt text](./assets/image.png)
