@@ -1,62 +1,65 @@
-/*
-html {
-    front-family: 'Times New Roman', Times, serif;
-    font-weight: 500;
-    width: normal;
-  } */
-
 body {
   margin: 0;
 }
 
-.roboto-<uniquifier > {
-  font-family: Roboto, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings: 'wdth' 100;
-}
-
 .header {
   display: flex;
-  padding: 10px 50px;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 50px; /* improve */
+  position: relative;
+}
+
+.nav {
+  /* background-color: wheat;
+  display: inline-block;
+ */
+}
+
+.nav__list {
+  list-style: none;
+  display: flex; /* ставить в ряд посилання */
+  justify-content: flex-end; /* кидає в право */
+  margin: 0; /* забрав зовнішні відступи списку */
+  padding: 0;
+}
+
+.nav__item {
+  position: relative; /* не факт */
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px; /* не точні розміри */
 }
 
 .link {
-  text-decoration: none;
   color: black;
-  margin: 0;
-  padding: 0;
+  text-decoration: none;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 100%;
   letter-spacing: 0%;
   text-transform: uppercase;
-  position: relative;
 }
 
-.nav__list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav__item:not(:last-child) {
-  margin-right: 20px;
+.logo_im {
+  /* position: absolute; дає можливість змінювати позицію лого */
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  top: 10px;
+  left: 50px;
 }
 
 a.is-active::after {
+  position: absolute; /* ai */
   content: '';
   display: block;
   width: 100%;
   height: 4px;
   background-color: #00acdc;
   border-radius: 8px;
-  position: absolute;
   bottom: 0;
   left: 0;
 }
