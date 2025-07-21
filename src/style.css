@@ -1,3 +1,83 @@
 body {
   margin: 0;
 }
+
+:root {
+  --blue: rgba(0, 172, 220, 1);
+}
+
+.header {
+  background-color: #fff;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.logo {
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  margin-right: 50px;
+}
+
+.product__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  position: relative;
+  height: 60px;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__link:hover {
+  color: var(--blue);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--blue);
+  border-radius: 8px;
+}
+
+.nav__link.is-active::after {
+  height: 4px;
+}
+
+.nav__link.is-active {
+  color: var(--blue);
+}
