@@ -1,19 +1,31 @@
-body {
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 50px; /* improve */
-  position: relative;
+  padding: 0 50px; /* не факт */
+  margin: 0;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .nav {
-  /* background-color: wheat;
-  display: inline-block;
- */
+  display: flex;
+}
+
+.logo {
+  display: flex;
 }
 
 .nav__list {
@@ -22,10 +34,11 @@ body {
   justify-content: flex-end; /* кидає в право */
   margin: 0; /* забрав зовнішні відступи списку */
   padding: 0;
+  align-items: center;
 }
 
 .nav__item {
-  position: relative; /* не факт */
+  text-align: center; /* не факт */
 }
 
 .nav__item:not(:last-child) {
@@ -37,29 +50,44 @@ body {
   text-decoration: none;
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 100%;
+  font-size: 12px; /* змінив */
+  line-height: 60px;
   letter-spacing: 0%;
   text-transform: uppercase;
+  height: 60px;
+  position: relative; /* 1 */
+  display: flex; /* 2 */
 }
 
 .logo_im {
-  /* position: absolute; дає можливість змінювати позицію лого */
   width: 40px;
   height: 40px;
   opacity: 1;
-  top: 10px;
+
   left: 50px;
 }
 
-a.is-active::after {
+.is-active::after {
   position: absolute; /* ai */
   content: '';
   display: block;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue);
   border-radius: 8px;
   bottom: 0;
   left: 0;
+}
+
+.is-active {
+  color: var(--blue);
+  position: relative;
+}
+
+.link:hover {
+  color: var(--blue);
+}
+
+:root {
+  --blue: #00acdc;
 }
