@@ -11,7 +11,6 @@ body {
 }
 
 header {
-  background-color: #fff;
   width: 100%;
 }
 
@@ -23,12 +22,10 @@ header {
   margin: 0 auto;
 }
 
-.logo{
-  display: inline-block;
+.logo {
+  display: block; /* evita espaçamento embaixo da imagem */
   width: 40px;
   height: 40px;
-  left: 50px;
-  top: 10px;
 }
 
 nav {
@@ -42,7 +39,7 @@ nav {
   list-style: none;
 }
 
-.nav__list li{
+.nav__list li {
   margin-left: 20px;
 }
 
@@ -67,21 +64,17 @@ nav {
 }
 
 .nav__link:hover {
-  color: #00ACDC;
-}
-
-a[data-qa="hover"] {
-  color: #00ACDC;
+  color: #00acdc;
 }
 
 .nav__link.is-active {
-  color: #00ACDC;
+  color: #00acdc;
 }
 
 .nav__link.is-active::after {
   content: '';
   position: absolute;
-  background-color: #00ACDC;
+  background-color: #00acdc;
   bottom: 0;
   left: 0;
   width: 100%;
