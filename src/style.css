@@ -1,3 +1,73 @@
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  text-align: center;
+  padding: 0;
+}
+
+.item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.nav__a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.nav__a:hover {
+  color: var(--blue);
+}
+
+.is-active::before {
+  margin: 0;
+}
+
+.is-active {
+  color: var(--blue);
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  background-color: var(--blue);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
 }
