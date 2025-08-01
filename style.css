@@ -8,6 +8,12 @@
     "wdth" 100;
 }
 
+:root {
+  --blue: #00ACDC;
+}
+
+
+
 li {
   list-style: none;
 }
@@ -23,10 +29,12 @@ header {
 nav {
   display: flex;
   align-items: center;
-  height: 60px;
+
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -34,9 +42,13 @@ ul {
 }
 
 .link {
+  display: flex;
+  align-items: center;
+  height: 60px;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
+}:not(:last-child) {
   margin-right: 20px;
 }
 
@@ -46,7 +58,17 @@ ul {
 
 
 a.is-active {
-  color: #00ACDC;
+  color: var(--blue); /* используй CSS-переменную */
+  position: relative;
+}
+a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--blue);
 }
 
 
