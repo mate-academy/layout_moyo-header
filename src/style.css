@@ -1,3 +1,78 @@
+html {
+  --text-color: #000;
+  --text-color-hover: #00acdc;
+}
+
 body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding-inline: 50px;
+}
+
+.a__logo {
+  /* margin: auto 0; */
+}
+
+.moyo__logo {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* .nav {
+
+} */
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  line-height: 60px;
+}
+
+.list__items:not(:last-child) {
+  margin-right: 20px;
+}
+
+.links {
+  display: block;
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.links:hover {
+  color: var(--text-color-hover);
+}
+
+.list__items:active::after {
+  content: '';
+  display: block;
+  position: relative;
+  border: 2px solid var(--text-color-hover);
+  border-radius: 8px;
+  bottom: 4px;
+}
+
+.is-active {
+  color: var(--text-color-hover);
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  position: relative;
+  border: 2px solid var(--text-color-hover);
+  border-radius: 8px;
+  bottom: 4px;
 }
