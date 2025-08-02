@@ -21,7 +21,7 @@ body {
   height: 60px;
 }
 
-a {
+.logo {
   height: 40px;
   width: 40px;
   left: 50px;
@@ -29,11 +29,12 @@ a {
 
 .nav {
   align-items: center;
+  height: 60px;
+  color: #fff;
 }
 
 .nav__ul {
   display: flex;
-  height: 15px;
   align-items: center;
 }
 
@@ -52,15 +53,15 @@ a {
 .nav__li a {
   text-decoration: none;
   text-align: center;
+  color: #000;
 }
 
-.nav__li:hover {
+.nav__li a:hover {
   text-decoration: underline 2px solid var(--color);
 }
 
-.nav__li a:active {
-  color: inherit;
-  height: inherit;
+.is-active {
+  color: var(--color) !important;
 }
 
 .is-active::after {
@@ -68,14 +69,13 @@ a {
   position: relative;
   display: block;
   left: 0;
-  bottom: -20px;
+  bottom: -15px;
   height: 4px;
   color: var(--color);
   background-color: var(--color);
   border-radius: 8px;
 }
 
-[data-qa='hover'] {
-  content: '';
+a[data-qa='hover'] {
   color: var(--color);
 }
