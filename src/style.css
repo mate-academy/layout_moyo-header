@@ -13,11 +13,12 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  height: 72px; /* ajuste com base no Figma */
+  height: 72px;
   width: 100%;
-  padding-left: 50px; /* conforme seu Figma */
+  padding: 0 80px; /* aumente para alinhar com o Figma */
+  box-sizing: border-box;
 }
+
 
 
 .logo {
@@ -26,19 +27,20 @@ header {
   margin-right: 32px;
 }
 
-
 .logo img {
   width: 40px;
   height: 40px;
-  margin-top: 10px; /* conforme o Figma */
+  margin-top: 10px;
 }
+
 
 
 .nav-list {
   display: flex;
   list-style: none;
-  margin-left: 50px; /* para manter distância do logo */
+  margin-left: auto;
 }
+
 
 
 .nav-list li + li {
@@ -46,20 +48,23 @@ header {
 }
 
 
+
 .nav-link {
   font-size: 14px;
-  line-height: 72px; /* mesmo que altura do header */
+  line-height: 72px;
   text-decoration: none;
   text-align: center;
   color: #1E1E1E;
   position: relative;
   display: block;
+  margin: 0 16px; /* controle de espaçamento entre links */
+  transition: color 0.3s;
 }
-
 
 .nav-link:hover {
   color: #007AFF;
 }
+
 
 .nav-link.is-active {
   color: #007AFF;
@@ -69,10 +74,9 @@ header {
 .nav-link.is-active::after {
   content: "";
   position: absolute;
-  bottom: 12px; /* ajuste fino da linha azul */
+  bottom: 12px; /* reposicionado com base no Figma */
   left: 0;
   right: 0;
   height: 2px;
   background-color: #007AFF;
 }
-
