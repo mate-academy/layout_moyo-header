@@ -1,3 +1,80 @@
-body {
+/* Reset browser defaults */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500; /* Medium 500 */
+}
+
+/* Full-width header */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 80px;
+}
+
+/* Logo */
+.logo-link {
+  display: block;
+  margin-right: 40px;
+}
+/* stylelint-disable-next-line rule-empty-line-before */
+.logo-link img {
+  display: block;
+  max-height: 40px;
+}
+
+/* Nav styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li + li {
+  margin-left: 24px;
+}
+
+/* Link styles */
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  line-height: 80px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+/* Hover effect */
+nav a:hover {
+  color: #00aef0;
+}
+
+/* Active link */
+nav a.is-active {
+  color: #00aef0;
+}
+
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #00aef0;
+  border-radius: 2px;
 }
