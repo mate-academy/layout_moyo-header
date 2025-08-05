@@ -2,7 +2,9 @@
   --blue: #00acdc;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -48,13 +50,14 @@ body {
   height: 60px;
   line-height: 60px;
   position: relative;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
   color: var(--blue);
 }
 
-.is-active {
+.nav-link.is-active {
   color: var(--blue);
 }
 
