@@ -13,7 +13,7 @@ body {
   --blue: #0057ff;
 }
 
-.header {
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,13 +21,7 @@ body {
   padding: 0 20px;
 }
 
-.logo {
-  height: 40px;
-  display: flex;
-  align-items: center;
-}
-
-.logo__image {
+.logo img {
   height: 40px;
 }
 
@@ -36,11 +30,11 @@ body {
   list-style: none;
 }
 
-.nav-list__item:not(:first-child) {
+.nav-list li:not(:first-child) {
   margin-left: 20px;
 }
 
-.nav-list__link {
+.nav-list a {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
@@ -50,16 +44,16 @@ body {
   position: relative;
 }
 
-.nav-list__link:hover {
+.nav-list a:hover {
   color: var(--blue);
 }
 
-.nav-list__link.is-active {
+a.is-active {
   color: var(--blue);
   font-weight: 500;
 }
 
-.nav-list__link.is-active::after {
+a.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
