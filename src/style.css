@@ -1,3 +1,70 @@
+/* Reset default margins and ensure box-sizing is consistent */
+* {
+  box-sizing: border-box;
+}
+
 body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
   margin: 0;
+}
+
+.header {
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.nav_list {
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  list-style: none;
+  display: flex;
+}
+
+.nav_list li {
+  margin-right: 20px;
+}
+
+.nav_list li:last-child {
+  margin-right: 0;
+}
+
+.nav_list a {
+  color: #000;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav_list a:hover,
+.nav_list a.is-active {
+  color: #00acdc;
+}
+
+.nav_list a.is-active::after {
+  content: '';
+  background-color: #00acdc;
+  border-radius: 8px;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
