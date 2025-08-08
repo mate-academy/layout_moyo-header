@@ -1,3 +1,66 @@
-body {
+/* ✅ Reset marginesów */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ✅ Ustaw font Roboto */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ✅ CSS zmienna dla niebieskiego koloru */
+:root {
+  --blue: #0057ff;
+}
+
+/* ✅ Styl nagłówka */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* ✅ Logo jako link z obrazkiem */
+.logo img {
+  height: 40px;
+}
+
+/* ✅ Nawigacja */
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list li:not(:first-child) {
+  margin-left: 20px; /* zamiast gap */
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  display: inline-block;
+  height: 40px; /* wysokość z Figma */
+  line-height: 40px; /* centrowanie tekstu */
+  position: relative;
+}
+
+/* ✅ Hover efekt */
+.nav-list a:hover {
+  color: var(--blue);
+}
+
+/* ✅ Pseudo-element dla aktywnego linku */
+.nav-list .is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
 }
