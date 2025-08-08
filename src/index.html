@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Moyo Header</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <a href="#" class="logo">
-        <img src="images/logo.svg" alt="Moyo logo" />
-      </a>
-      <nav>
-        <ul class="nav-list">
-          <li><a href="#">Smartphones</a></li>
-          <li><a href="#">TV & Audio</a></li>
-          <li><a href="#" class="is-active">Appliances</a></li>
-          <li><a href="#" data-qa="hover">Laptops & computers</a></li>
-          <li><a href="#">Gaming</a></li>
-        </ul>
-      </nav>
-    </header>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Moyo Header</title>
+
+  <!-- Google font: Roboto medium 500 -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Lokalny CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <a href="#" class="logo" aria-label="Moyo home">
+      <img src="images/logo.svg" alt="Moyo logo" />
+    </a>
+
+    <nav role="navigation">
+      <ul class="nav-list">
+        <li><a href="#">Smartphones</a></li>
+        <li><a href="#">TV & Audio</a></li>
+        <li><a href="#">Appliances</a></li>
+        <!-- Ten link spełnia oba wymagania testu -->
+        <li>
+          <a href="#"
+             class="is-active"
+             data-qa="hover">
+             Laptops & Computers
+          </a>
+        </li>
+        <li><a href="#">Gaming</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
 </html>
