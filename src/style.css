@@ -1,6 +1,17 @@
+/* CSS variables for theme colors */
+:root {
+  --accent-color: #00acdc;
+}
+
 /* Reset default margins and ensure box-sizing is consistent */
-* {
+html {
   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -19,11 +30,20 @@ body {
 }
 
 .logo {
-  align-self: center;
   width: 40px;
   height: 40px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.logo__link {
+  display: block;
+}
+
+.logo__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .nav_list {
@@ -35,15 +55,15 @@ body {
   display: flex;
 }
 
-.nav_list li {
+.nav_list__item {
   margin-right: 20px;
 }
 
-.nav_list li:last-child {
+.nav_list__item:last-child {
   margin-right: 0;
 }
 
-.nav_list a {
+.nav_list__link {
   color: #000;
   height: 60px;
   line-height: 60px;
@@ -53,14 +73,14 @@ body {
   transition: color 0.3s ease;
 }
 
-.nav_list a:hover,
-.nav_list a.is-active {
-  color: #00acdc;
+.nav_list__link:hover,
+.nav_list__link.is-active {
+  color: var(--accent-color);
 }
 
-.nav_list a.is-active::after {
+.nav_list__link.is-active::after {
   content: '';
-  background-color: #00acdc;
+  background-color: var(--accent-color);
   border-radius: 8px;
   width: 100%;
   height: 4px;
