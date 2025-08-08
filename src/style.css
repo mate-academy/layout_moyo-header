@@ -1,16 +1,16 @@
-body,
-ul {
+/* Reset i box-sizing */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 :root {
-  --blue: #0057ff;
+  --blue: #0057ff; /* Kolor z figmy */
 }
 
 header {
@@ -18,11 +18,11 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0 20px;
 }
 
 .logo img {
-  height: 40px;
+  display: block;
+  height: 40px; /* dostosuj do figmy */
 }
 
 .nav-list {
@@ -31,7 +31,7 @@ header {
 }
 
 .nav-list li:not(:first-child) {
-  margin-left: 20px;
+  margin-left: 20px; /* odległość między linkami */
 }
 
 .nav-list a {
@@ -39,8 +39,8 @@ header {
   color: black;
   text-transform: uppercase;
   display: inline-block;
-  height: 40px;
-  line-height: 40px;
+  height: 40px; /* wysokość linku z figmy */
+  line-height: 40px; /* wycentrowanie w pionie */
   position: relative;
 }
 
@@ -50,13 +50,12 @@ header {
 
 a.is-active {
   color: var(--blue);
-  font-weight: 500;
 }
 
 a.is-active::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 0; /* linia pod tekstem */
   left: 0;
   width: 100%;
   height: 2px;
