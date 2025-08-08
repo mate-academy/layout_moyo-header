@@ -1,38 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Moyo Header</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Moyo header</title>
 
-  <!-- Google font: Roboto medium 500 -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!-- ✅ Roboto font - tylko roman, medium (500), normal -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Lokalny CSS -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <a href="#" class="logo" aria-label="Moyo home">
-      <img src="images/logo.svg" alt="Moyo logo" />
-    </a>
-
-    <nav role="navigation">
-      <ul class="nav-list">
-        <li><a href="#">Smartphones</a></li>
-        <li><a href="#">TV & Audio</a></li>
-        <li><a href="#">Appliances</a></li>
-        <!-- Ten link spełnia oba wymagania testu -->
-        <li>
-          <a href="#"
-             class="is-active"
-             data-qa="hover">
-             Laptops & Computers
-          </a>
-        </li>
-        <li><a href="#">Gaming</a></li>
-      </ul>
-    </nav>
-  </header>
-</body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- ✅ Semantyczny nagłówek z logo poza nawigacją -->
+    <header class="header">
+      <a href="#" class="header__logo">
+        <img src="./src/images/logo.png" alt="MOYO Logo" />
+      </a>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li><a href="#">Phones</a></li>
+          <li><a href="#">Tablets</a></li>
+          <li><a href="#" class="is-active">Accessories</a></li>
+          <li><a href="#" data-qa="hover">Laptops & Computers</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>
