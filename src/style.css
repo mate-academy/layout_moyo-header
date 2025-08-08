@@ -1,62 +1,75 @@
-/* Reset i box-sizing */
+/* reset i box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* bez cudzysłowów — linter tego wymaga */
 body {
-   font-family: Roboto, sans-serif;}
-
-:root {
-  --blue: #0057ff; /* Kolor z figmy */
+  font-family: Roboto, sans-serif;
 }
 
+:root {
+  --blue: #0057ff;
+}
+
+/* header - pełna szerokość, bez poziomych paddingów/marginesów */
 header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 
+/* logo */
 .logo img {
   display: block;
-  height: 40px; /* dostosuj do figmy */
+  height: 40px; /* dopasuj do figmy jeśli trzeba */
 }
 
+/* nav jako flex (nie używamy gap) */
 .nav-list {
   display: flex;
   list-style: none;
+  align-items: center;
 }
 
-.nav-list li:not(:first-child) {
-  margin-left: 20px; /* odległość między linkami */
+/* odstępy między elementami - margin, nie gap */
+.nav-list li + li {
+  margin-left: 20px;
 }
 
+/* linki - wysokość ustawiona TU (wymóg README) */
 .nav-list a {
-  text-decoration: none;
-  color: black;
-  text-transform: uppercase;
   display: inline-block;
-  height: 40px; /* wysokość linku z figmy */
-  line-height: 40px; /* wycentrowanie w pionie */
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  height: 40px;      /* wysokość linków - ustawiona w 1 miejscu */
+  line-height: 40px; /* wertykalne centrowanie */
   position: relative;
+  font-weight: 500;
+  font-size: 14px;   /* dopasuj do figmy jeśli trzeba */
 }
 
+/* hover color */
 .nav-list a:hover {
   color: var(--blue);
 }
 
-a.is-active {
+/* active link */
+.nav-list a.is-active {
   color: var(--blue);
 }
 
-a.is-active::after {
-  content: '';
+/* linia pod aktywnym linkiem - pseudo-element */
+.nav-list a.is-active::after {
+  content: "";
   position: absolute;
-  bottom: 0; /* linia pod tekstem */
   left: 0;
+  bottom: 0;           /* linia przy dolnej krawędzi linku */
   width: 100%;
   height: 2px;
-  background-color: var(--blue);
+  background: var(--blue);
 }
