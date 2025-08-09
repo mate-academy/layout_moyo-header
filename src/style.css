@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --primary-color: #00acdc;
 }
@@ -14,11 +10,11 @@ body {
   font-weight: 500;
   font-style: normal;
   text-align: center;
-  text-transform: uppercase;
 }
 
-header {
+.moyo-header {
   width: 100%;
+  text-transform: uppercase;
 }
 
 .container {
@@ -53,30 +49,30 @@ header {
 .moyo-header__nav a {
   display: flex;
   align-items: center;
-  height: 60px;
   color: #000;
+  height: 60px;
   margin-left: 20px;
   line-height: 100%;
   font-size: 12px;
   text-decoration: none;
 }
 
-.moyo-header__nav .digist_1,
-.moyo-header__nav .digist_8 {
+.moyo-header__nav a:hover {
+  color: var(--primary-color);
+}
+
+.moyo-header__nav li:first-child a,
+.moyo-header__nav li:last-child a {
   margin: 0;
 }
 
-.moyo-header__nav .digist_7 {
+.moyo-header__nav-list li:nth-child(7) a {
   margin-right: 20px;
 }
 
-.moyo-header__nav a[data-qa='hover']:hover {
-  color: var(--primary-color);
-}
-
 .moyo-header__nav .is-active {
-  color: var(--primary-color);
   position: relative;
+  color: var(--primary-color);
 }
 
 .moyo-header__nav .is-active::after {
