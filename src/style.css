@@ -1,19 +1,16 @@
 html {
+  font-weight: 500;
   font-family: Roboto, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
   font-style: normal;
-  font-variation-settings: 'wdth' 100;
 }
+
 
 body {
   margin: 0;
-  background-color: gray;
 }
 
 .header {
   display: flex;
-  background-color: aqua;
 }
 
 .container {
@@ -25,10 +22,10 @@ body {
 }
 
 img {
-  width: 40px;
-  height: 40px;
-  cursor: default;
-  margin-left: 50px;
+  width: 40;
+  height: 40;
+  top: 10px;
+  left: 50px;
 }
 
 .nav__list {
@@ -37,11 +34,15 @@ img {
   display: flex;
 }
 
-.nav__item:hover {
-  cursor: default;
-  color: black;
+.nav__item::after {
+  color: blue;
 }
 
 .nav__item:not(:first-child) {
   margin-left: 20px;
+}
+
+a:hover {
+  color: black;
+  cursor: default;
 }
