@@ -1,3 +1,93 @@
-body {
+/* Скидання відступів і меж за замовчуванням */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+/* CSS змінна для синього кольору */
+:root {
+  --blue-color: #0084ff;
+}
+
+header {
+  display: flex;
+  align-items: center; /* вертикальне центрування */
+  width: 100%;
+  padding: 0 20px; /* відступи збоку, можна уточнити */
+  background-color: #fff;
+}
+
+/* Логотип */
+.logo-link img {
+  display: block;
+  width: 85px; /* Поставити точний розмір згідно макету */
+  height: auto;
+  /* Логотип не у flex nav */
+}
+
+/* Навігація */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-left: 30px; /* Відступ між логотипом і навігацією */
+}
+
+/* Лі без відступів по краях */
+nav ul li:not(:last-child) {
+  margin-right: 30px; /* Відступ між пунктами меню */
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000; /* базовий колір */
+  text-transform: uppercase;
+  line-height: 24px; /* задаємо висоту рядка для центрування */
+  display: inline-block;
+  height: 40px; /* Висота навігаційних посилань - із макету */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* немає padding, текст по центру */
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Hover - зміна кольору посилань */
+nav a:hover {
+  color: var(--blue-color);
+  cursor: pointer;
+}
+
+/* Активний лінк */
+nav a.is-active {
+  color: var(--blue-color);
+  position: relative;
+}
+
+/* Лінія під активним лінком */
+nav a.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px; /* підлаштуй по макету */
+  left: 0;
+  right: 0;
+  height: 2px; /* товщина лінії */
+  background-color: var(--blue-color);
+  border-radius: 1px;
+}
+
+/* Атрибут data-qa="hover" для 4-го посилання - ніякого особливого стилю поки */
