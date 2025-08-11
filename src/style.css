@@ -11,6 +11,7 @@ body {
 
 .header {
   display: flex;
+  width: 100%
 }
 
 .container {
@@ -22,27 +23,41 @@ body {
 }
 
 img {
-  width: 40;
-  height: 40;
-  top: 10px;
-  left: 50px;
+  width: 40px;
+  height: 40px;
+  cursor: default;
 }
 
 .nav__list {
   justify-content: flex-end;
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.nav__item::after {
-  color: blue;
+.nav__item {
+  color: black;
+  cursor: default;
 }
 
 .nav__item:not(:first-child) {
   margin-left: 20px;
+
 }
 
-a:hover {
-  color: black;
-  cursor: default;
+.nav__item:hover{
+  color: blue
 }
+
+.is-active {
+  color: #00ACDC;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
