@@ -9,6 +9,10 @@ body {
   font-variation-settings: 'wdth' 100;
 }
 
+:root {
+  --blue: #00acdc;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -25,7 +29,6 @@ body {
 
 .nav__list {
   display: flex;
-  gap: 20px;
   margin: 0;
   list-style: none;
   padding: 0;
@@ -42,11 +45,11 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .nav__link.is-active::after {
@@ -56,6 +59,10 @@ body {
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--blue);
   border-radius: 5px;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
