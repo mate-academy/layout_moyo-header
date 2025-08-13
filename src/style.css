@@ -1,3 +1,89 @@
-body {
+/* Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+/* CSS variable for blue */
+:root {
+  --c-primary-blue: #0c47d4;
+}
+
+/* Header styles */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+/* Logo */
+.header__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__logo img {
+  height: 40px;
+  display: block;
+}
+
+/* Navigation */
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  list-style: none;
+}
+
+/* Margin between links (no gap) */
+.header__list li + li {
+  margin-left: 24px;
+}
+
+/* Nav links */
+.header__list a {
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  height: 48px; /* Height set in one place */
+  line-height: 48px; /* Vertical centering */
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.2s;
+}
+
+/* Hover effect */
+.header__list a:hover {
+  color: #0940ad;
+}
+
+/* Active link */
+.header__list .is-active {
+  color: var(--c-primary-blue);
+}
+
+/* Blue line under active link */
+.header__list .is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background-color: var(--c-primary-blue);
 }
