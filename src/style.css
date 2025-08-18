@@ -15,6 +15,7 @@ body {
 }
 
 .logo {
+  display: block;
   height: 40px;
   width: 40px;
 }
@@ -26,12 +27,9 @@ body {
   padding: 0;
 }
 
-.nav_list:first-child {
-  margin-left: 0;
-}
-
 .nav_link {
   line-height: 60px;
+  display: block;
   position: relative;
   text-decoration: none;
   color: black;
@@ -49,12 +47,13 @@ body {
 
 .is-active {
   color: var(--blue);
+  position: relative;
 }
 
 .is-active::after {
   content: '';
   display: flex;
-  bottom: -23px;
+  bottom: 0;
   left: 0;
   position: absolute;
   width: 100%;
