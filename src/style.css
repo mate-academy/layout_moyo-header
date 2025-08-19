@@ -1,3 +1,95 @@
+:root {
+  --blue-color: #00acdc;
+  --black-color: #000;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.logo-link {
+  margin-right: 419px;
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.main-nav {
+  flex-grow: 1;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 37px;
+}
+
+.nav-link {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: var(--black-color);
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--blue-color);
+}
+
+.nav-link.is-active {
+  color: var(--blue-color);
+}
+
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .header-content {
+    padding: 0 50px;
+  }
+
+  .logo-link {
+    margin-right: 243px;
+  }
+
+  .nav-item:not(:last-child) {
+    margin-right: 20px;
+  }
 }
