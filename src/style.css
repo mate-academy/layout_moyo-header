@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
 }
 
 .header {
@@ -25,21 +25,26 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  line-height: 60px;
 }
 
 .nav_link {
-  line-height: 60px;
+  height: 60px;
+  text-align: center;
+  padding: 0;
   display: block;
   position: relative;
   text-decoration: none;
   color: black;
-}
-
-.nav_item {
   text-transform: uppercase;
   font-size: 12px;
+
+}
+
+.nav_item:not(:first-child) {
   margin-left: 20px;
 }
+
 
 .nav_link:hover {
   color: var(--blue);
