@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-family: Roboto, Arial, sans-serif;
+
+  --blue: #00acdc;
 }
 
 .header {
@@ -27,6 +29,7 @@ body {
 .header__nav__link {
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 60px;
   color: black;
@@ -40,7 +43,7 @@ body {
 }
 
 .header__nav__link.is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .header__nav__link.is-active::after {
@@ -51,9 +54,9 @@ body {
   right: 0;
   border-radius: 8px;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue);
 }
 
 .header__nav__link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
