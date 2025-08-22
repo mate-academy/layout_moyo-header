@@ -15,8 +15,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
-  height: 60px;
 }
 
 .logo {
@@ -26,11 +24,12 @@ body {
 }
 
 .nav {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.nav_list {
+.nav__list {
   height: 100%;
   display: flex;
   list-style: none;
@@ -39,11 +38,11 @@ body {
   align-items: center;
 }
 
-.nav_item:not(:first-child) {
+.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
-.nav_link {
+.nav__link {
   display: block;
   position: relative;
   line-height: 60px;
@@ -54,7 +53,7 @@ body {
   text-align: center;
 }
 
-.nav_link:hover {
+.nav__link:hover {
   text-decoration: none;
   text-decoration-color: var(--blue);
   color: var(--blue);
@@ -70,8 +69,4 @@ body {
   background-color: var(--blue);
   bottom: 0;
   left: 0;
-}
-
-.active {
-  color: var(--blue);
 }
