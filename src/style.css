@@ -6,19 +6,18 @@ body {
   margin: 0;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-img {
+.logo {
   width: 40px;
   height: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.container {
+:root {
+  --blue: #00acdc;
+}
+
+.Head {
   max-width: 1200px;
   max-height: 60px;
   display: flex;
@@ -32,6 +31,8 @@ img {
 }
 
 .nav__links {
+  margin: 0;
+  padding: 0;
   display: flex;
   list-style: none;
 }
@@ -41,7 +42,7 @@ img {
 }
 
 .nav__A.is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .nav__A.is-active::after {
@@ -49,7 +50,7 @@ img {
   position: absolute;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--blue);
   bottom: 0;
   left: 0;
 }
@@ -66,9 +67,14 @@ img {
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+
+  /*
   padding-top: 23px;
+  */
 }
 
 .nav__A:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
