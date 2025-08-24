@@ -1,5 +1,9 @@
+:root {
+  --active-blue: #00acdc;
+}
+
 html {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 12px;
   box-sizing: border-box;
 }
@@ -7,8 +11,6 @@ html {
 body {
   margin: 0;
   background-color: #746969;
-
-  --hover-color: #00acdc;
 }
 
 .header {
@@ -25,7 +27,6 @@ body {
 .nav__list {
   display: flex;
   list-style: none;
-  text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
@@ -40,6 +41,7 @@ body {
 }
 
 .nav__link {
+  text-transform: uppercase;
   display: block;
   height: 15px;
   line-height: 15px;
@@ -50,7 +52,11 @@ body {
 }
 
 .nav__link:hover {
-  color: var(--hover-color);
+  color: var(--active-blue);
+}
+
+.nav__item {
+  margin-right: 0;
 }
 
 .nav__item:not(:first-child) {
@@ -58,7 +64,7 @@ body {
 }
 
 .is-active {
-  color: var(--hover-color);
+  color: var(--active-blue);
   position: relative;
 }
 
@@ -67,7 +73,7 @@ body {
   display: block;
   height: 4px;
   width: 100%;
-  background-color: var(--hover-color);
+  background-color: var(--active-blue);
   border-radius: 2px;
   position: absolute;
   bottom: 0;
