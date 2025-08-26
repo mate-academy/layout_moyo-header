@@ -10,18 +10,18 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - reset browser default margins
 - use [Roboto font](https://fonts.google.com/specimen/Roboto): select ONLY **roman** style, **medium (500)** weight and **normal** width for embedding. **THIS STEP IS IMPORTANT, OR YOUR AUTO TEST MAY FAIL. Take a look at the image at the end of the Readme.**
 - use semantic tags: `<header>`, `<img>`, `<nav>`, `<ul>`, `<li>` and `<a>`
-- the header should stretch the full page width (don't use a horizontal margin)
-- the height should be set for nav links (not the header), take it from the design
-- header content should be vertically centered
-- the logo should also be a link with an image inside (from [src/images](src/images)). But it should not be a part of the `<nav>`
-- ❗️ the blue link with a line below should have a class `is-active` in addition to any other classes you add
-- ❗️ add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)
-- link color should be changed on `:hover`
-- use the `::after` and position it relative to a link with `is-active` class
-- don't use the flex `gap` property for indents. It's not supported in tests, use `margin` instead
-- there should not be margins before the first and after the last list items
-- don't just copy all styles from Figma. Think, which of them are relevant. Uneven sizes (e.g. `line-height: 14.6px`) are definitely useless
-- Nav Links should not have any padding but have the text centered
+- the header should stretch the full page width (don't use a horizontal margin) - [x]
+- the height should be set for nav links (not the header), take it from the design -[x]
+- header content should be vertically centered [x]
+- the logo should also be a link with an image inside (from [src/images](src/images)). But it should not be a part of the `<nav>` -[x]
+- ❗️ the blue link with a line below should have a class `is-active` in addition to any other classes you add -[x]
+- ❗️ add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`) -[x]
+- link color should be changed on `:hover` -[x]
+- use the `::after` and position it relative to a link with `is-active` class -[x]
+- don't use the flex `gap` property for indents. It's not supported in tests, use `margin` instead -[x]
+- there should not be margins before the first and after the last list items -[x]
+- don't just copy all styles from Figma. Think, which of them are relevant. Uneven sizes (e.g. `line-height: 14.6px`) are definitely useless -[x]
+- Nav Links should not have any padding but have the text centered -[x]
 
 ## Checklist
 
