@@ -23,6 +23,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - don't just copy all styles from Figma. Think, which of them are relevant. Uneven sizes (e.g. `line-height: 14.6px`) are definitely useless
 - Nav Links should not have any padding but have the text centered
 
+
 ## Checklist
 
 ❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
