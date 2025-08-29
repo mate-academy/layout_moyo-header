@@ -1,5 +1,5 @@
 @media (min-width: 1024px) {
-  header {
+  .header {
     min-width: 1024px;
     width: 100%;
   }
@@ -20,7 +20,7 @@ body {
   font-weight: 500;
 }
 
-header {
+.header {
   padding-left: 50px;
   padding-right: 50px;
   width: 100%;
@@ -30,7 +30,7 @@ header {
   justify-content: space-between;
 }
 
-header a {
+.header .nav__link {
   position: relative;
   color: white;
   display: flex;
@@ -38,14 +38,14 @@ header a {
   text-decoration: none;
 }
 
-a img {
+.home img {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
   height: 40px;
 }
 
-ul {
+.nav__list {
   list-style: none;
   display: flex;
   justify-content: flex-end;
@@ -61,24 +61,24 @@ ul {
 /* li {
   padding-top: 23px;
   padding-bottom: 22px;
-} */
+  } */
 
-ul li:not(:last-child) {
+.nav__list .nav__item:not(:last-child) {
   padding-right: 20px;
 }
 
-li a {
+.nav__item .nav__link {
   color: black;
   font-size: 12px;
   text-transform: uppercase;
   height: 60px;
 }
 
-li a:hover {
+.nav__item .nav__link:hover {
   color: var(--blue);
 }
 
-.is-active {
+.nav__item .is-active {
   color: var(--blue);
   position: relative;
 }
