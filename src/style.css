@@ -36,6 +36,7 @@ body {
 }
 
 .item {
+  position: relative; /* added for absolute positioning of underline */
   text-decoration: none;
   font-size: 12px;
   font-weight: 500;
@@ -52,13 +53,13 @@ body {
 
 .is-active::after {
   content: '';
-  position: relative;
-  display: block;
+  position: absolute; /* changed from relative to absolute */
+  bottom: 0; /* align underline to bottom */
+  left: 0;
   height: 4px;
   border-radius: 8px;
   width: 100%;
   background-color: var(--link-color);
-  top: -3px;
 }
 
 .nav__item {
