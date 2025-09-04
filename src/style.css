@@ -1,3 +1,85 @@
+:root {
+  --active-color: #00acdc;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+}
+
+.imgLogo-link {
+  margin-left: 50px;
+}
+
+.imgLogo {
+  display: block;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  margin-right: 50px;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 60px;
+}
+
+.nav__item + .nav__item {
+  margin-left: 20px;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  line-height: 60px;
+}
+
+.nav__link:hover {
+  color: var(--active-color);
+}
+
+.is-active::after {
+  content: '';
+  background-color: var(--active-color);
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+
+.is-active {
+  color: var(--active-color);
 }
