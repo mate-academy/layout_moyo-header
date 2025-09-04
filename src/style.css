@@ -6,13 +6,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  background-color: gray;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,31 +26,31 @@ header {
   display: block;
 }
 
-nav {
+.nav {
   margin: 0;
   padding: 0;
   font-size: 12px;
   margin-right: 50px;
 }
 
-nav ul {
+.nav__list {
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-ul li {
+.nav__item {
   margin: 0;
   padding: 0;
   list-style: none;
   height: 60px;
 }
 
-ul li + li {
+.nav__item + .nav__item {
   margin-left: 20px;
 }
 
-ul li a {
+.nav__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,11 +61,11 @@ ul li a {
   line-height: 60px;
 }
 
-a:hover {
+.nav__link:hover {
   color: var(--active-color);
 }
 
-a::after {
+.is-active::after {
   content: '';
   background-color: var(--active-color);
   height: 4px;
@@ -79,13 +77,9 @@ a::after {
   transform: translateX(-50%);
   display: block;
   transition: opacity 0.2s;
-  opacity: 0;
+  opacity: 1;
 }
 
 .is-active {
   color: var(--active-color);
-}
-
-.is-active::after {
-  opacity: 1;
 }
