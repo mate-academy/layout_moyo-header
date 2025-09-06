@@ -5,7 +5,7 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, sans-serif, Arial;
   font-size: 12px;
   font-weight: 500;
 }
@@ -16,16 +16,6 @@ body {
   justify-content: space-between;
   height: 60px;
   padding: 0 50px;
-}
-
-a {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #000;
-}
-
-a:hover {
-  color: var(--blue);
 }
 
 .link-logo {
@@ -42,51 +32,47 @@ a:hover {
 
 .nav {
   margin-left: auto;
-  height: 100%;
   display: flex;
   align-items: center;
 }
 
-.list {
+.nav__list {
   display: flex;
   padding: 0;
   margin: 0;
-  height: 100%;
   align-items: center;
 }
 
-.list-item {
+.nav__item {
   list-style: none;
-  height: 100%;
   display: flex;
   align-items: center;
 }
 
-.list-item:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.list-item:first-child {
-  margin-left: 0;
-}
-
-.list-item:last-child {
-  margin-right: 0;
-}
-
-.list-item a {
-  height: 100%;
+.nav__link {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 60px;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
 }
 
-.is-active {
+.nav__link:hover {
+  color: var(--blue);
+}
+
+.nav__link.is-active {
   position: relative;
   color: var(--blue);
 }
 
-.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
