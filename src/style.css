@@ -9,8 +9,6 @@ body {
 
 
   --font-size: 12px;
-  --link-padding: 16px 8px;
-  --header-height: 60px;
   --link-color: #00ACDC;}
 
 .header {
@@ -28,7 +26,7 @@ body {
 .logo {
   height: 40px;
   width: 40px;
-  display: inline-block;
+  display: flex;
 
 }
 
@@ -40,30 +38,37 @@ body {
   justify-content: center;
 }
 
+.nav {
+  display: flex;
+}
+
 .nav--list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  height: 100%;
+
 }
 
 .nav--item {
-  display: inline-block;
-  position: relative;
-  height: 100%;
+  display: flex;
 }
 
 .nav--link {
+  position: relative;
   font-size: var(--font-size);
   text-decoration: none;
   color: black;
   text-transform: uppercase;
   box-sizing: border-box;
   transform: uppercase;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
 }
 
-.is-active .nav--link {
+.is-active{
   color: var(--link-color);
 }
 
@@ -72,9 +77,9 @@ body {
   background-color: var(--link-color);
   position: absolute;
   height: 4px;
-  width : calc(100% - 16px);
-  bottom: -4px;
-  left: 8px;
+  width : 100%;
+  bottom: 0;
+  left: 0;
   border-radius: 8px;
 }
 
