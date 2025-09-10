@@ -1,3 +1,99 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgb(243, 241, 241);
+}
+
+.header_logo_link {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.nav_list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav_item {
+  margin: 0 10px;
+}
+
+.nav_item:first-child {
+  margin-left: 0;
+}
+
+.nav_item:last-child {
+  margin-right: 0;
+}
+
+.nav_list a {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.nav_list a:hover,
+.nav_list a[data-qa='hover'] {
+  color: var(--blue);
+}
+
+.nav_list a:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--blue);
+}
+
+.nav_list a.is-active {
+  color: var(--blue);
+}
+
+.nav_list a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--blue);
 }
