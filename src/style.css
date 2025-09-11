@@ -2,10 +2,20 @@
   --blue: #00acdc;
 }
 
-*,
-*::before,
-*::after {
+html {
   box-sizing: border-box;
+}
+
+body,
+.site__header,
+.logo,
+.logo__img,
+.nav__list,
+.nav__item,
+.nav__link,
+.nav__link:hover,
+.nav__link.is-active::after {
+  box-sizing: inherit;
 }
 
 html,
@@ -29,11 +39,6 @@ body {
   color: #000;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
 .site__header {
   display: flex;
   align-items: center;
@@ -50,6 +55,8 @@ img {
 }
 
 .logo__img {
+  display: block;
+  max-width: 100%;
   width: 40px;
   height: 40px;
 }
