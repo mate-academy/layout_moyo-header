@@ -1,3 +1,78 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500; /* medium */
+  font-style: normal; /* roman */
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  --blue: #00acdc;
+}
+
+header {
+  background-color: pink;
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+
+  /* background: #FFFFFF; */
+}
+
+.logo {
+  display: block;
+  margin-top: 0;
+  margin-left: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+nav {
+  margin-right: 50px;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000; /* обычный цвет текста */
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+nav a.is-active {
+  position: relative;
+  color: var(--blue);
+}
+
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
+}
+
+nav ul {
+  height: 60px;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* выравнивание по правому краю */
+  align-items: center;
+}
+
+nav li + li {
+  margin-left: 20px; /* промежутки между ссылками (без gap) */
 }
