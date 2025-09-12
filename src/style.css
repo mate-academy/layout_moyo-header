@@ -6,11 +6,11 @@ body {
   --active-link-color: #00acdc;
 }
 
-nav {
+.main-nav {
   margin-right: 50px;
 }
 
-.nav--ul {
+.nav__list {
   list-style-type: none;
   display: flex;
   margin: 0;
@@ -20,16 +20,22 @@ nav {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.header--logo {
+.header__logo {
   display: block;
   width: 40px;
   height: 40px;
-  margin: 10px 50px;
+  margin: 0 50px;
 }
 
-.nav--link {
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__link {
+  position: relative;
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
@@ -37,31 +43,30 @@ header {
   line-height: var(--header-height);
   height: var(--header-height);
   display: block;
+  text-align: center;
 }
 
-a.is-active::after {
+.nav__link.is-active::after {
   height: 4px;
   background-color: var(--active-link-color);
   border-radius: 8px;
   width: 100%;
   display: block;
   content: '';
-  position: relative;
-  bottom: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .is-active {
   color: var(--active-link-color);
 }
 
-.nav--link:hover {
+.nav__link:hover {
   color: var(--active-link-color);
 }
 
-.nav--li {
-  margin-left: 20px;
-}
-
-.nav--ul > :first-child {
+.nav__list > :first-child {
   margin-left: 0;
 }
