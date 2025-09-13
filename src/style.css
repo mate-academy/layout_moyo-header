@@ -1,17 +1,27 @@
-html * {
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --color-blue: #00acdc;
+}
+
+html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-body * {
-  font-family: Roboto, sans-serif;
+body {
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
   font-size: 12px;
   font-weight: 500;
 }
 
 .header {
-  max-width: 100vw;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -30,10 +40,9 @@ body * {
 
 .nav__list {
   display: flex;
-  list-style: none;
-  text-transform: uppercase;
   justify-content: space-between;
   align-items: center;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -44,10 +53,11 @@ body * {
   display: block;
   height: 60px;
   line-height: 60px;
+  text-transform: uppercase;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--color-blue);
 }
 
 .nav__item {
@@ -55,7 +65,7 @@ body * {
 }
 
 .nav__item:not(:last-child) {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .is-active::after {
@@ -64,13 +74,13 @@ body * {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: #00acdc;
+  background-color: var(--color-blue);
   height: 4px;
   width: 100%;
   border-radius: 8px;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--color-blue);
   position: relative;
 }
