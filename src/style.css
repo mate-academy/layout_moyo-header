@@ -1,16 +1,15 @@
-* {
-  margin: 0;
-  padding: 0;
+html {
   box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500; /* medium */
   font-style: normal; /* roman */
   font-size: 12px;
   line-height: 14px;
-  text-transform: uppercase;
 
   --blue: #00acdc;
 }
@@ -20,7 +19,6 @@ header {
   display: flex;
   align-items: center; /* vertical centering */
   justify-content: space-between;
-  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 
@@ -35,27 +33,30 @@ header {
   height: 40px;
 }
 
-nav {
+.nav {
   margin-right: 50px;
 }
 
-nav a {
+.nav__link {
+  height: 60px;
   display: flex;
   align-items: center;
+  text-transform: uppercase;
   text-decoration: none;
   color: #000; /* обычный цвет текста */
+  margin-left: 20px;
 }
 
-nav a:hover {
+a:hover {
   color: var(--blue);
 }
 
-nav a.is-active {
+a.is-active {
   position: relative;
   color: var(--blue);
 }
 
-nav a.is-active::after {
+a.is-active::after {
   content: '';
   position: absolute;
   bottom: -25px;
@@ -65,14 +66,9 @@ nav a.is-active::after {
   background-color: var(--blue);
 }
 
-nav ul {
-  height: 60px;
+.nav__list {
   list-style: none;
   display: flex;
   justify-content: flex-end; /* выравнивание по правому краю */
   align-items: center;
-}
-
-nav li + li {
-  margin-left: 20px; /* промежутки между ссылками (без gap) */
 }
