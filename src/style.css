@@ -1,3 +1,7 @@
+:root {
+  --blue: #00acdc;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -10,16 +14,15 @@ body {
   font-style: normal; /* roman */
   font-size: 12px;
   line-height: 14px;
-
-  --blue: #00acdc;
 }
 
-header {
+.header {
   background-color: pink;
   display: flex;
   align-items: center; /* vertical centering */
   justify-content: space-between;
-  margin: 0 auto;
+
+  /* margin: 0 auto; */
   width: 100%;
 
   /* background: #FFFFFF; */
@@ -41,22 +44,26 @@ header {
   height: 60px;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   text-decoration: none;
   color: #000; /* обычный цвет текста */
+}
+
+.nav__item + .nav__item {
   margin-left: 20px;
 }
 
-a:hover {
+.nav__link:hover {
   color: var(--blue);
 }
 
-a.is-active {
+.nav__link.is-active {
   position: relative;
   color: var(--blue);
 }
 
-a.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: -25px;
