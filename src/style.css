@@ -8,7 +8,7 @@ body {
 }
 
 html {
-  font-family: Roboto, Arial, serif;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
 }
@@ -48,13 +48,14 @@ ul {
   justify-content: center;
   align-items: center;
   position: relative;
+  text-transform: uppercase;
 }
 
 .is-active {
   color: var(--blue);
 }
 
-.is-active::after {
+.nav__link__item.is-active::after {
   content: '';
   display: block;
   background-color: var(--blue);
@@ -66,18 +67,22 @@ ul {
   bottom: 0;
 }
 
-a:first-child {
+.nav__link__item:first-child {
   margin-left: 0;
 }
 
-a:last-child {
+.nav__link__item:last-child {
   margin-right: 0;
 }
 
-a:hover {
+.nav__link__item:hover {
   color: var(--blue);
 }
 
 .nav__link:not(:last-child) {
   margin-right: 20px;
+}
+
+.nav__link__item.is-active {
+  position: relative;
 }
