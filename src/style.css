@@ -1,71 +1,74 @@
-  html {
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 50px;
-  }
-
-  img {
-    display: block;
-    align-items: center;
-  }
-
-  nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    font-size: 12px;
-    position: relative;
-  }
-
-a {
-    color: black;
-    text-decoration: none;
-    height: 60px;
-    line-height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-transform: uppercase;
-  }
-
-  li + li {
-    margin-left: 20px;
-  }
-
-.is-active::after {
-    content: '';
-    display: block;
-    background-color: #00ACDC;
-    height: 4px;
-    width: 100%;
-    border-radius: 12px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+:root {
+  --color-blue: #00acdc;
 }
 
-:hover {
-  color: #00ACDC;
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo {
+  display: block;
+}
+
+.nav_list .nav_item {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_list_item {
+  font-size: 12px;
+  position: relative;
+}
+
+.nav_link {
+  color: black;
+  text-decoration: none;
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.nav_list_item + .nav_list_item {
+  margin-left: 20px;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  background-color: var(--color-blue);
+  height: 4px;
+  width: 100%;
+  border-radius: 12px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.nav_link:hover {
+  color: var(--color-blue);
 }
 
 .is-active {
   position: relative;
-  color: #00ACDC;
+  color: var(--color-blue);
 }
