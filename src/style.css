@@ -1,3 +1,104 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #00acdc; /* змінна для синього кольору */
+  --pad: 50px; /* відступ лого від краю контейнера */
+  --nav-height: 60px; /* висота лінків (1 місце) */
+  --underline-h: 4px; /* товщина лінії */
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Заголовок */
+.header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 0 50px;
+  height: 60px; /* висота хедера з макета */
+  position: relative;
+}
+
+.header-container {
+  width: 1200px; /* як у макеті */
+  height: 60px; /* як у макеті */
+  margin: 0 auto; /* центр по екрану */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 32px; /* тільки між пунктами */
+}
+
+.nav-link {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px; /* вирівняли текст */
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  font-family: Roboto, sans-serif;
+}
+
+.nav-link[data-qa='hover']:hover {
+  color: var(--blue);
+}
+
+.nav-link.is-active {
+  color: var(--blue);
+}
+
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 37px;
+  height: 4px;
+  background: var(--blue);
+  border-radius: 8px;
+}
+
+@media (max-width: 1200px) {
+  .header__wrap {
+    width: calc(100% - (var(--pad) * 2));
+    max-width: 100%;
+  }
+  .nav-item:not(:last-child) {
+    margin-right: 20px;
+  }
+  .nav-link {
+    font-size: 12px;
+  }
 }
