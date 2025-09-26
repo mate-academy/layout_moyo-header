@@ -1,23 +1,33 @@
-* {
-  margin: 0;
-  padding: 0;
+html {
   box-sizing: border-box;
 }
 
-:root {
-  --blue: #00acdc; /* змінна для синього кольору */
-  --pad: 50px; /* відступ лого від краю контейнера */
-  --nav-height: 60px; /* висота лінків (1 місце) */
-  --underline-h: 4px; /* товщина лінії */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
+  margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-/* Заголовок */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:root {
+  --blue: #00acdc;
+  --pad: 50px;
+  --nav-height: 60px;
+  --underline-h: 4px;
+}
+
 .header {
   background: #fff;
   display: flex;
@@ -25,15 +35,15 @@ body {
   justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
-  padding: 0 50px;
-  height: 60px; /* висота хедера з макета */
+  padding: 0 var(--pad);
   position: relative;
+  height: 60px;
 }
 
 .header-container {
-  width: 1200px; /* як у макеті */
-  height: 60px; /* як у макеті */
-  margin: 0 auto; /* центр по екрану */
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,20 +57,17 @@ body {
 }
 
 .nav-menu {
-  list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-item:not(:last-child) {
-  margin-right: 32px; /* тільки між пунктами */
+  margin-right: 32px;
 }
 
 .nav-link {
   display: inline-block;
-  height: 60px;
-  line-height: 60px; /* вирівняли текст */
+  height: var(--nav-height);
+  line-height: var(--nav-height);
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
@@ -68,9 +75,10 @@ body {
   text-decoration: none;
   position: relative;
   font-family: Roboto, sans-serif;
+  transition: color 0.3s ease;
 }
 
-.nav-link[data-qa='hover']:hover {
+.nav-link:hover {
   color: var(--blue);
 }
 
@@ -85,7 +93,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 37px;
-  height: 4px;
+  height: var(--underline-h);
   background: var(--blue);
   border-radius: 8px;
 }
@@ -95,9 +103,11 @@ body {
     width: calc(100% - (var(--pad) * 2));
     max-width: 100%;
   }
+
   .nav-item:not(:last-child) {
     margin-right: 20px;
   }
+
   .nav-link {
     font-size: 12px;
   }
