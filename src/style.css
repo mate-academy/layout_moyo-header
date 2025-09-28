@@ -1,9 +1,5 @@
-.roboto-header {
-  font-family: Roboto, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings: 'wdth' 100;
+:root {
+  --blue-color: #00acdc;
 }
 
 body {
@@ -13,31 +9,30 @@ body {
 .moyo-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
-  height: 56px;
+  padding: 0 50px;
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.header__logo {
+  margin-right: auto;
+  min-width: fit-content;
+  padding-right: 24px;
+}
+
+.header__logo img {
+  height: 40px;
+  display: block;
 }
 
 .navigation {
+  height: 60px;
+  flex: 0 1 auto;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
-  height: 56px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navigation__logo {
-  margin-right: 48px; /* Increased margin */
-  flex-shrink: 0; /* Prevent logo from shrinking */
-}
-
-.navigation__logo img {
-  height: 40px;
+  position: relative;
 }
 
 .navigation__links {
@@ -45,19 +40,58 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 60px;
+  align-items: center;
+}
+
+.navigation__link {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #000;
+}
+
+.navigation__link:not(:last-child) {
+  margin-right: 20px;
+}
+
+.navigation__link a {
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .is-active {
-  margin: 0 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  position: relative;
 }
 
 .is-active a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  color: var(--blue-color);
 }
 
-.is-active a:hover {
-  text-decoration: underline;
-  color: #007bff;
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 37px;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 2px;
 }
