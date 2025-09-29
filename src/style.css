@@ -1,5 +1,5 @@
 /* reset */
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,7 +19,6 @@ html {
 
 .header {
   background-color: #fff;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,6 +38,9 @@ html {
 .nav__list {
   display: flex;
   flex-direction: row;
+  line-height: 60px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__listItem {
@@ -47,7 +49,7 @@ html {
 
 .nav__link {
   text-decoration: none;
-  line-height: 60px;
+  height: 60px;
   color: #000;
   position: relative;
   display: inline-block;
@@ -55,9 +57,8 @@ html {
 
 .nav__list li {
   margin-left: 20px;
-  height: 60px;
-  font-weight: 500;
   align-items: center;
+  font-weight: 500;
 }
 
 .nav__list li:first-child {
@@ -69,7 +70,7 @@ html {
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav__link.is-active::after {
