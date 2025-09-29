@@ -1,5 +1,6 @@
 :root {
   --blue-color: #00acdc;
+  --header-height: 60px;
 }
 
 body {
@@ -22,13 +23,13 @@ body {
   padding-right: 24px;
 }
 
-.header__logo img {
+.header__logo-img {
   height: 40px;
   display: block;
 }
 
 .navigation {
-  height: 60px;
+  height: var(--header-height);
   flex: 0 1 auto;
   display: flex;
   align-items: center;
@@ -40,7 +41,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  height: 60px;
+  height: var(--header-height);
   align-items: center;
 }
 
@@ -49,6 +50,7 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 1;
+  justify-content: center;
   text-transform: uppercase;
   letter-spacing: normal;
   height: 100%;
@@ -80,16 +82,19 @@ body {
   position: relative;
 }
 
-.is-active a {
+.is-active:hover {
   color: var(--blue-color);
 }
 
 .is-active::after {
+  display: block;
   content: '';
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  margin-bottom: -5px;
+  top: 19px;
   width: 37px;
   height: 4px;
   background-color: var(--blue-color);
