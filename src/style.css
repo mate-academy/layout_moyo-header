@@ -1,16 +1,14 @@
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --blue: #00acdc;
   --black: #000;
+  --header-height: 60px;
 }
 
 html {
-  font-family: Roboto, Arial, serif;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
+  box-sizing: border-box;
 }
 
 .header {
@@ -21,7 +19,7 @@ html {
 }
 
 .header__logo {
-  height: 60px;
+  height: var(--header-height);
   display: flex;
   align-items: center;
 }
@@ -39,7 +37,7 @@ html {
 .nav__link__item {
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: var(--header-height);
   text-decoration: none;
   display: flex;
   font-size: 12px;
