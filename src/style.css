@@ -1,8 +1,26 @@
-/* ✅ Скидання стилів */
-* {
+/* ✅ Змінна кольору в :root */
+:root {
+  --color-blue: rgba(0, 172, 220, 1);
+}
+
+/* ✅ Базове скидання */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+ul,
+li,
+nav,
+header {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 /* ✅ Базові стилі */
@@ -10,37 +28,17 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
-
-  /* font-size: 10px; */
-  background: rgba(255, 255, 255, 1);
+  background: #fff;
 }
 
 /* ✅ Header */
 .main-header.container {
   width: 100%;
-
-  /* height: 60px; */
-
-  /* max-width: 1200px; */
-  box-sizing: border-box;
+  display: flex;
   justify-content: space-between;
-
-  /* margin: 0 auto; */
-  padding: 0 50px;
-  display: flex;
   align-items: center;
+  padding: 0 50px;
 }
-
-/* ✅ Контейнер
- .container {
-  width: 100%;
-  box-sizing: border-box;
-  justify-content: flex-end;
-  margin: 0 auto;
-  padding: 0 50px;
-  display: flex;
-  align-items: center;
-} */
 
 /* ✅ Логотип */
 .logo {
@@ -53,36 +51,39 @@ body {
 }
 
 /* ✅ Навігація */
-
 .main-nav {
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
 
-.main-nav ul {
+/* ✅ Список навігації */
+.main-nav__list {
   list-style: none;
   display: flex;
   padding: 0;
+  margin: 0;
 }
 
-.main-nav ul li {
-  justify-content: space-between;
+/* ✅ Пункти навігації */
+.main-nav__item {
   margin-left: 20px;
-  padding: 0;
   flex-shrink: 0;
+  display: flex;
 }
 
-.main-nav li:first-child {
+/* ✅ Перший пункт без лівого відступу */
+.main-nav__item:first-child {
   margin-left: 0;
 }
 
-.main-nav li:last-child {
+/* ✅ Останній пункт без правого відступу */
+.main-nav__item:last-child {
   margin-right: 0;
 }
 
 /* ✅ Посилання */
-.main-nav a {
+.main-nav__link {
   font-family: Roboto, sans-serif;
   display: flex;
   align-items: center;
@@ -92,56 +93,53 @@ body {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
-  color: rgba(0, 0, 0, 1); /* базовий колір з Figma */
+  color: #000;
   text-decoration: none;
-}
-
-/* 🔹 Активне посилання */
-.main-nav a.is-active {
-  color: rgba(0, 172, 220, 1);
   position: relative;
 }
 
-.main-nav a.is-active::after {
+.main-nav__link:hover {
+  color: var(--color-blue);
+}
+
+/* ✅ Активне посилання */
+.main-nav__link.is-active {
+  color: var(--color-blue);
+}
+
+.main-nav__link.is-active::after {
   content: '';
   position: absolute;
   top: 56px;
+  left: 0;
   width: 100%;
   height: 4px;
-  background: rgba(0, 172, 220, 1);
+  background: var(--color-blue);
   border-radius: 8px;
 }
 
-/* 🔹 Hover-ефект */
-.main-nav a[data-qa='hover']:hover {
-  color: rgba(0, 172, 220, 1);
+/* ✅ Hover-ефект */
+.main-nav__link[data-qa='hover']:hover {
+  color: var(--color-blue);
 }
 
-/* .main-nav a[data-qa='hover']:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 4px;
-  background: rgba(0, 172, 220, 1);
-} */
-
-/* ✅ Адаптація для макету 1024px */
+/* ✅ Адаптив */
 @media (max-width: 1024px) {
   .main-header.container {
     max-width: 1024px;
     padding: 0 50px;
     justify-content: flex-start;
-
-    /* justify-content: space-between; залишаємо, як є */
   }
 
-  .main-nav ul {
-    margin-left: 243px; /* ✅ Задаємо точний відступ від логотипу */
+  .main-nav__list {
+    margin-left: 243px;
   }
 
-  .main-nav ul li {
-    margin-left: 20px; /* Відступ між елементами меню (залишаємо, як є) */
+  .main-nav__item {
+    margin-left: 20px;
+  }
+
+  .main-nav__item:first-child {
+    margin-left: 0;
   }
 }
