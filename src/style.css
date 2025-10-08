@@ -10,14 +10,12 @@ body {
   font-weight: 500;
 }
 
-
-.roboto{
+.roboto {
   font-family: Roboto, sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: 'wdth' 100;
 }
 
 :root {
@@ -54,12 +52,15 @@ body {
 }
 
 .menu__list {
-  list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
+  list-style: none;
+  margin-block-start: 1em;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
   align-items: center;
   justify-content: flex-start;
+  margin: 0; /* прибирає стандартний зовнішній відступ */
+  padding: 0;
 }
 
 .menu__item {
@@ -79,8 +80,14 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 60px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  transition: color 0.3s;
 }
 
 .menu__link:hover {
@@ -102,12 +109,4 @@ body {
   border-radius: 8px;
   z-index: 2;
   pointer-events: none;
-}
-
-.ull {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  padding-inline-start: 40px;
-  unicode-bidi: isolate;
 }
