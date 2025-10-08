@@ -8,20 +8,17 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-header {
+.header {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 10px 40px;
+  padding-inline: 50px;
   background-color: #fff;
+  justify-content: space-between;
 }
 
 .logo {
-  height: 40px;
-  padding-left: 10px;
-  display: flex;
-  align-items: center;
-  margin-right: 250px;
+  display: block;
 }
 
 .nav-list {
@@ -40,10 +37,11 @@ header {
   font-weight: 500;
   position: relative;
   display: flex;
+  text-align: center;
   align-items: center;
-  justify-content: center;
-  height: 40px;
-  line-height: 40px;
+  justify-content: end;
+  letter-spacing: 0;
+  line-height: 60px;
   transition: color 0.3s;
 }
 
@@ -58,8 +56,7 @@ header {
 .nav-link.is-active::after {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: -2px;
+  bottom: 0;
   width: 100%;
   height: 4px;
   background-color: #00acdc;
@@ -67,5 +64,5 @@ header {
 }
 
 .nav-list li:not(:last-child) {
-  margin-right: 15px;
+  margin-right: 20px;
 }
