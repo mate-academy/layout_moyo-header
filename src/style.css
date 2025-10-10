@@ -1,9 +1,11 @@
-*,
-*::before,
-*::after {
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 :root {
@@ -14,7 +16,7 @@ body {
   margin: 0;
 }
 
-header {
+.site-header {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -27,13 +29,14 @@ header {
   box-shadow: 0 2px 4px 0 #0000000d;
 }
 
-nav ul {
+.nav-list {
   display: flex;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-nav a {
+.nav-link {
   color: black;
   display: inline-block;
   line-height: 60px;
@@ -42,20 +45,20 @@ nav a {
   letter-spacing: 0;
 }
 
-nav a:visited {
+.nav-link:visited {
   color: black;
 }
 
-nav li + li {
+.nav-item + .nav-item {
   margin-left: 20px;
 }
 
-nav a.is-active {
+.nav-link.is-active {
   position: relative;
   color: var(--blue);
 }
 
-nav a.is-active::after {
+.nav-link.is-active::after {
   content: '';
   position: absolute;
   height: 4px;
@@ -67,7 +70,7 @@ nav a.is-active::after {
   bottom: 0;
 }
 
-nav a:hover {
+.nav-link:hover {
   position: relative;
   color: var(--blue);
 }
