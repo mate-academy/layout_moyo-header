@@ -1,21 +1,19 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
 
-* {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
 }
 
-a {
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
+:root {
+  --blue: #00acdc;
 }
 
 header {
@@ -29,6 +27,9 @@ header {
 .header-list {
   list-style-type: none;
   display: flex;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .link {
@@ -42,6 +43,10 @@ header {
   align-self: center;
 }
 
+.link:hover {
+  color: var(--blue);
+}
+
 .header-list li {
   margin-right: 20px;
 }
@@ -52,7 +57,7 @@ header {
 
 .hover-link:hover,
 .is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .is-active {
@@ -68,7 +73,7 @@ header {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background: #00acdc;
+  background: var(--blue);
 }
 
 .logo {
