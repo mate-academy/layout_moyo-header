@@ -3,11 +3,16 @@ html {
   background-color: #999;
 }
 
+:root {
+  --moyo-color: #00acdc;
+  --link-hight: 60px;
+}
+
 body {
   margin: 0;
 }
 
-header {
+.site-header {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
@@ -17,7 +22,6 @@ header {
 
 .logo {
   display: flex;
-  bottom: 10px;
   align-items: center;
 }
 
@@ -28,23 +32,20 @@ header {
   padding: 0;
 }
 
-.nav__item {
-  position: relative;
-  padding: 0;
-}
-
 .nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
 .nav__link {
   display: block;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
   color: #000;
   text-align: center;
-  line-height: 60px;
+  height: var(--link-hight);
+  line-height: var(--link-hight);
 }
 
 /* .nav__link:visited {
@@ -52,20 +53,20 @@ header {
 } */
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--moyo-color);
 }
 
-.nav__item .is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--moyo-color);
   bottom: 0;
   left: 0;
   border-radius: 20px;
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--moyo-color);
 }
