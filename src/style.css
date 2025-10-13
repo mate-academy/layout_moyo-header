@@ -34,26 +34,11 @@ body {
   align-items: center;
   position: relative;
   list-style-type: none;
-  height: 60px;
 }
 
 .nav__item {
   display: flex;
   align-items: center;
-  color: #000;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  height: 100%;
-  line-height: 15px;
-  letter-spacing: 0%;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.nav__item:hover {
-  color: var(--active-color);
 }
 
 .nav__item + .nav__item {
@@ -61,11 +46,30 @@ body {
 }
 
 .nav__link {
-  color: var(--active-color);
   position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 15px;
+  font-size: 12px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
 }
 
-.is-active::after {
+.nav__link:hover {
+  color: var(--active-color);
+}
+
+.nav__link.is-active {
+  color: var(--active-color);
+}
+
+.nav__link.is-active::after {
   display: flex;
   position: absolute;
   content: '';
