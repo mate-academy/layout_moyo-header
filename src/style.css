@@ -1,20 +1,30 @@
-* {
-  margin: 0;
+html {
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
-  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+}
 
+body {
+  margin: 0;
+}
+
+:root {
   --hover-color: #00acdc;
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 50px;
   font-size: 12px;
+  padding: 0 50px;
+}
+
+.nav__menu {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -23,32 +33,34 @@
   height: 40px;
 }
 
-.main-nav {
+.main__nav {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  padding-left: 0;
   margin: 0;
 }
 
-.nav-item {
+.nav__item {
   list-style: none;
 }
 
-.nav-item:not(:first-child) {
+.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
-.nav-item :hover {
-  color: var(--hover-color);
-}
-
-.nav-link {
+.nav__link {
   display: flex;
   height: 60px;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: black;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  color: var(--hover-color);
 }
 
 .is-active {
