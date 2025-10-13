@@ -8,62 +8,59 @@ body {
   text-transform: uppercase;
 }
 
-header {
+.site-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 60px;
+  padding: 0 50px;
 }
 
 .logo-img {
   position: relative;
-  width: 40;
-  height: 40;
+  width: 40px;
+  height: 40px;
   opacity: 1;
-  top: 10px;
-  left: 50px;
 }
 
-nav {
+.site-nav {
   position: relative;
   box-sizing: border-box;
-  right: 50px;
 }
 
-.item-conteiner {
+.nav__list {
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
   position: relative;
   list-style-type: none;
-  height: 100%;
+  height: 60px;
 }
 
-.item {
+.nav__item {
   display: flex;
   align-items: center;
   color: #000;
-  font-family: Roboto, 'Times New Roman', Times, serif;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
   height: 100%;
   line-height: 15px;
   letter-spacing: 0%;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.item:hover {
+.nav__item:hover {
   color: var(--active-color);
 }
 
-.item:not(:last-child, :first-child) {
-  margin: 0 10px;
+.nav__item + .nav__item {
+  margin-left: 20px;
 }
 
-.is-active {
-  margin-right: 10px;
+.nav__link {
   color: var(--active-color);
   position: relative;
 }
@@ -78,9 +75,4 @@ nav {
   height: 4px;
   opacity: 1;
   border-radius: 8px;
-}
-
-.item:last-child {
-  margin-left: 10px;
-  right: 50px;
 }
