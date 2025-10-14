@@ -1,5 +1,5 @@
-
-body, html {
+body,
+html {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -8,6 +8,8 @@ body, html {
 
 .logo {
   display: block;
+  height: 40px;
+  width: 40px;
 }
 
 .header {
@@ -16,9 +18,8 @@ body, html {
   align-items: center;
   padding-inline: 50px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 100%;
-  margin: 0, 10px;
+  outline: none;
 }
 
 .nav {
@@ -27,7 +28,7 @@ body, html {
   justify-content: space-between;
   text-decoration: none;
   color: #333;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -40,24 +41,28 @@ body, html {
   padding: 0;
 }
 
-
-.nav_ul li:not(:last-child){
-  margin-right: 30px;
+.nav_ul li:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav_li {
-   display: inline-block;
-   line-height: 60px;
-   text-decoration: none;
-   text-transform: uppercase;
-   color: #000;
-   position: relative;
+  display: inline-block;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  position: relative;
 }
 
-.nav-li.is-active::after {
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 4px;
   background-color: #00acdc;
@@ -68,19 +73,10 @@ body, html {
   color: black;
 }
 
-.nav_li:visited {
-  color: black;
-}
-
 .nav_li:hover {
-  background: #00acdc;
-
-  border-bottom: 3px solid #00a8e8;
-  padding-bottom: 7px;
+  color: #00acdc;
 }
 
 .nav_li:active {
-  background: #00acdc;
+  color: #00acdc;
 }
-
-
