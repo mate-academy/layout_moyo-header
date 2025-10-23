@@ -1,23 +1,23 @@
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
+/* App shell (scoped globals) */
+.app {
   margin: 0;
+  min-height: 100vh;
+
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
+  text-transform: uppercase;
 
   --primary-color: #00acdc;
+
+  /* If you relied on border-box globally, keep it here and set it on key components below */
+  box-sizing: border-box;
 }
 
-header {
+/* Header */
+.site-header {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -25,28 +25,44 @@ header {
   padding: 0 50px;
 }
 
-.logo img {
+/* Logo */
+.logo-link {
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 0; /* keeps the img snug */
+}
+
+.logo-image {
+  box-sizing: border-box;
   height: 40px;
   width: 40px;
   display: block;
 }
 
-nav ul {
+/* Nav */
+.site-nav {
+  box-sizing: border-box;
+}
+
+.site-nav__list {
+  box-sizing: border-box;
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-nav li {
+.site-nav__item {
+  box-sizing: border-box;
   margin-right: 20px;
 }
 
-nav li:last-child {
+.site-nav__item:last-child {
   margin-right: 0;
 }
 
-nav a {
+.site-nav__link {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,22 +72,23 @@ nav a {
   text-decoration: none;
 }
 
-a:visited,
-a:active {
+/* Link states scoped to class */
+.site-nav__link:visited,
+.site-nav__link:active {
   color: inherit;
   text-decoration: none;
 }
 
-nav a:hover {
+.site-nav__link:hover {
   color: var(--primary-color);
 }
 
-nav a.is-active {
+.site-nav__link.is-active {
   position: relative;
   color: var(--primary-color);
 }
 
-nav a.is-active::after {
+.site-nav__link.is-active::after {
   content: '';
   position: absolute;
   left: 0;
