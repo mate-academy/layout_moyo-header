@@ -1,62 +1,91 @@
-@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap";
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;&display=swap';
 
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
 }
 
-.container{
-  max-width: 1200px;
-  margin: 0 auto;
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
 }
 
-.menu ul{
-  display: flex;
-  gap: 10px;
-}
-
-li{
-  margin: 0;
-  padding: 0;
+.menu ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex: 1;
 }
 
-li > a{
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
+.menu ul li {
+  margin-right: 30px;
+}
 
-  position: relative;
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
   display: inline-block;
   text-decoration: none;
-  color: inherit;
+  position: relative;
+  color: #000;
+  font-size: 12px;
   padding-bottom: 5px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-li > a::after{
+.fourth-child {
+  font-weight: 500;
+  color: #007acc;
+}
+
+nav ul li a:hover {
+  color: #007acc;
+}
+
+nav ul li a.is-active {
+  color: #007acc;
+}
+
+nav ul li a.is-active::after {
   content: '';
   position: absolute;
-  top: 40px;
+  bottom: 50;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #007acc;
+  border-radius: 10px;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  top: 35;
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
-  background-color: #00ACDC; /* ou a cor que você quiser */
+  height: 4px;
+  border-radius: 10px;
+  background-color: #007acc;
   transition: width 0.3s ease;
 }
 
-li a:hover::after{
+nav ul li a:hover::after {
   width: 100%;
 }
 
-li a:hover{
-  color: #00ACDC;
+.logo {
+  display: inline-block;
 }
 
-li:nth-child(4){
-  color: #00ACDC;
+.logo img {
+  display: block;
+  height: 40px;
+  width: auto;
 }
