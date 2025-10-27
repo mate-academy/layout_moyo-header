@@ -4,3 +4,59 @@ body {
   font-family: Roboto, sans-serif;
   margin: 0;
 }
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+
+.menu ul{
+  display: flex;
+  gap: 10px;
+}
+
+li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li > a{
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 5px;
+}
+
+li > a::after{
+  content: '';
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00ACDC; /* ou a cor que você quiser */
+  transition: width 0.3s ease;
+}
+
+li a:hover::after{
+  width: 100%;
+}
+
+li a:hover{
+  color: #00ACDC;
+}
+
+li:nth-child(4){
+  color: #00ACDC;
+}
