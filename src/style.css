@@ -1,3 +1,7 @@
+:root {
+  --main-color: #00acdc;
+}
+
 body,
 html {
   margin: 0;
@@ -15,10 +19,15 @@ html {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.header__logo {
+/* .header__logo {
   padding: 10px 0;
+} */
+
+.header__logo {
+  height: 40px;
 }
 
 .header__list {
@@ -35,6 +44,7 @@ html {
 .header__list-link {
   font-weight: 500;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
   color: #000;
@@ -45,15 +55,15 @@ html {
 }
 
 /* .header__list-link[data-qa='hover'] {
-  color: #00acdc;
+  color: var(--main-color);
 } */
 
 .header__list-link:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
 }
 
 .is-active::after {
@@ -61,7 +71,7 @@ html {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: #00acdc;
+  background: var(--main-color);
   width: 100%;
   height: 4px;
   border-radius: 8px;
