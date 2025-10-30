@@ -32,10 +32,6 @@ body {
   padding: 0;
 }
 
-li:not(:last-child) {
-  margin-right: 15px;
-}
-
 .nav__link {
   display: inline-flex;
   align-items: center;
@@ -48,15 +44,23 @@ li:not(:last-child) {
   text-transform: uppercase;
 }
 
-nav a:hover {
-  --active-color: rgba(0, 172, 220, 1);
+.nav__link:not(:last-child) {
+  margin-right: 15px;
 }
 
-a.is-active {
+:root {
+  --active-color: rgba(0, 172, 220, 0.7);
+}
+
+.nav__link:hover {
   color: var(--active-color);
 }
 
-a.is-active::after {
+.is-active {
+  color: var(--active-color);
+}
+
+.is-active::after {
   content: '';
   position: absolute;
   bottom: -2px;
