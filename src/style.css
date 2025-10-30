@@ -1,4 +1,4 @@
-header {
+.header {
   width: 100%;
   background-color: #f8f9fa;
 }
@@ -19,13 +19,13 @@ body {
   align-items: center;
 }
 
-img {
+.logo {
   display: block;
   height: auto;
   object-fit: contain;
 }
 
-ul {
+.nav__list {
   display: flex;
   list-style: none;
   margin: 0;
@@ -36,23 +36,24 @@ li:not(:last-child) {
   margin-right: 15px;
 }
 
-nav a {
+.nav__link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 40px; /* zgodnie z designem */
+  height: 40px;
   font-size: 16px;
   text-decoration: none;
   color: #333;
   position: relative;
+  text-transform: uppercase;
 }
 
 nav a:hover {
-  color: rgba(0, 172, 220, 1);
+  --active-color: rgba(0, 172, 220, 1);
 }
 
 a.is-active {
-  color: rgba(0, 172, 220, 1);
+  color: var(--active-color);
 }
 
 a.is-active::after {
