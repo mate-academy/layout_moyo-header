@@ -1,15 +1,17 @@
 body {
+  margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  margin: 0;
 }
 
 header {
-  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 0 50px;
+
+  background-color: #fff;
 }
 
 .logo {
@@ -18,9 +20,12 @@ header {
 
 ul {
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 li {
+  position: relative;
   display: flex;
   align-items: center;
   list-style: none;
@@ -33,19 +38,32 @@ nav li:not(:first-child) {
 li a {
   display: flex;
   align-items: center;
+
+  height: 60px;
+
   font-size: 12px;
   line-height: 100%;
-  text-decoration: none;
   color: black;
-  height: 15px;
-}
-
-li a.light-blue {
-  color: #00acdc;
+  text-decoration: none;
 }
 
 li a:hover {
-  text-decoration: underline;
-  text-decoration-color: blue;
-  text-underline-offset: 0.05em;
+  color: #00acdc;
+}
+
+.is_active {
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+
+  background-color: #00acdc;
 }
