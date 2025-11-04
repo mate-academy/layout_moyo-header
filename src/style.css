@@ -7,16 +7,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 50px;
   align-items: center;
 }
 
-nav a {
+.nav__link {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
@@ -24,9 +25,10 @@ nav a {
   height: 60px;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-nav ul {
+.nav__list {
   display: flex;
   list-style: none;
   margin: 0;
@@ -34,7 +36,7 @@ nav ul {
 }
 
 li:not(:last-child) {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .is-active::after {
@@ -45,7 +47,6 @@ li:not(:last-child) {
   background-color: var(--blue);
   border-radius: 8px;
   bottom: 0;
-  z-index: 1;
 }
 
 .is-active {
