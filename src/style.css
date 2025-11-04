@@ -4,6 +4,7 @@ body {
   font-weight: 500;
   font-style: normal;
   font-variation-settings: 'wdth' 100;
+  font-size: 12px;
 }
 
 nav {
@@ -24,20 +25,26 @@ header {
   box-sizing: border-box;
 }
 
-ul {
+nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 li {
   margin-right: 20px;
 }
 
-a {
+nav a {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
 }
 
 li:first-child {
@@ -48,11 +55,7 @@ li:last-child {
   margin-right: 0;
 }
 
-a[data-qa='hover'] {
-  color: #00acdc;
-}
-
-a[data-qa='active'] {
+.is-active {
   color: #00acdc;
 }
 
@@ -67,17 +70,6 @@ a.is-active::after {
   width: 100%;
   height: 4px;
   border-radius: 8px;
-  bottom: -25px;
-  left: 0;
-}
-
-a[data-qa='active']::after {
-  content: '';
-  position: absolute;
-  background-color: #00acdc;
-  width: 100%;
-  height: 4px;
-  border-radius: 8px;
-  bottom: -25px;
+  bottom: 0;
   left: 0;
 }
