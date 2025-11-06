@@ -1,17 +1,23 @@
+:root {
+  --color-text: #000;
+  --color-hover: #00acdc;
+  --color-background: #fff;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   padding: 0 50px;
 
-  background-color: #fff;
+  background-color: var(--color-background);
 }
 
 .logo {
@@ -19,43 +25,45 @@ header {
   height: 40px;
 }
 
-ul {
+.list {
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-li {
+.list-item {
   position: relative;
   display: flex;
   align-items: center;
   list-style: none;
 }
 
-nav li:not(:first-child) {
+.navigation .list-item:not(:first-child) {
   margin-left: 20px;
 }
 
-li a {
+.list-item .link {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   height: 60px;
 
   font-size: 12px;
   line-height: 100%;
-  color: black;
+  color: var(--color-text);
   text-decoration: none;
   letter-spacing: 0%;
+  text-transform: uppercase;
 }
 
-li a:hover {
-  color: #00acdc;
+.list-item .link:hover {
+  color: var(--color-hover);
 }
 
-.is-active {
+.list-item .is-active {
   position: relative;
-  color: #00acdc;
+  color: var(--color-hover);
 }
 
 .is-active::after {
@@ -68,5 +76,5 @@ li a:hover {
   height: 4px;
   border-radius: 8px;
 
-  background-color: #00acdc;
+  background-color: var(--color-hover);
 }
