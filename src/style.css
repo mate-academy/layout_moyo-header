@@ -5,7 +5,6 @@
   --color-text: #000;
   --color-background: #fff;
   --color-shadow: rgba(0, 0, 0, 0.05);
-  --color-hover: #f60;
 
   /* Typography */
   --font-family: 'Roboto', sans-serif;
@@ -15,20 +14,15 @@
   --letter-spacing: 0;
 
   /* Header Dimensions */
-  --header-height: 60px;
   --header-padding-x: 50px;
   --logo-width: 40px;
 
   /* Active Line Dimensions */
-  --active-line-width: 37px;
   --active-line-height: 4px;
   --active-line-radius: 8px;
 
   /* Navigation Spacing */
-  --nav-margin-left: 418px;
-  --indent-1: 23px;
-  --indent-2: 18px;
-  --indent-3: 20px;
+  --link-margin-left: 20px;
 }
 
 /* --- 2. Reset and Body --- */
@@ -41,15 +35,12 @@
 body {
   font-family: var(--font-family);
   color: var(--color-text);
-  background-color: #f0f0f0;
 }
 
 /* --- 3. Header Styling --- */
 header {
+  justify-content: space-between;
   width: 100%;
-  height: var(--header-height);
-  background-color: var(--color-background);
-  box-shadow: 0 1px 2px var(--color-shadow);
   padding: 0 var(--header-padding-x);
   display: flex;
   align-items: center;
@@ -66,9 +57,7 @@ header > a img {
   height: var(--logo-width);
 }
 
-nav {
-  margin-left: var(--nav-margin-left);
-}
+/* nav container intentionally left unstyled */
 
 nav ul {
   list-style: none;
@@ -82,13 +71,13 @@ nav li {
 
 /* ДОДАЙТЕ ЦЕ ДЛЯ ВІДСТУПІВ МІЖ ЕЛЕМЕНТАМИ */
 nav li:not(:first-child) {
-  margin-left: var(--indent-3);
+  margin-left: var(--link-margin-left);
 }
 
 nav a {
   font-weight: var(--font-weight);
   font-size: var(--font-size);
-  line-height: var(--line-height);
+  line-height: 60px;
   letter-spacing: var(--letter-spacing);
   text-decoration: none;
   color: var(--color-text);
@@ -97,15 +86,19 @@ nav a {
   display: block;
 }
 
+nav a.is-active {
+  color: var(--color-active);
+}
+
 /* Active link indicator */
 nav a.is-active::after {
   content: '';
   position: absolute;
-  bottom: -8px; /* Або bottom: 0; якщо лінія має бути на краю (перевірте Figma) */
+  bottom: 0; /* Або bottom: 0; якщо лінія має бути на краю (перевірте Figma) */
 
   /* ✅ ПРАВИЛЬНО (ЦЕНТРУЄ ЛІНІЮ) */
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
 
   width: var(--active-line-width);
   height: var(--active-line-height);
@@ -115,6 +108,6 @@ nav a.is-active::after {
 
 /* Hover effect */
 nav a:hover {
-  color: var(--color-hover);
+  color: var(--color-active);
   transition: color 0.3s ease;
 }
