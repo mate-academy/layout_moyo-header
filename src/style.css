@@ -1,3 +1,120 @@
-body {
+/* --- 1. CSS Variables --- */
+:root {
+  /* Colors */
+  --color-active: #00acdc;
+  --color-text: #000;
+  --color-background: #fff;
+  --color-shadow: rgba(0, 0, 0, 0.05);
+  --color-hover: #f60;
+
+  /* Typography */
+  --font-family: 'Roboto', sans-serif;
+  --font-weight: 500;
+  --font-size: 12px;
+  --line-height: 1;
+  --letter-spacing: 0;
+
+  /* Header Dimensions */
+  --header-height: 60px;
+  --header-padding-x: 50px;
+  --logo-width: 40px;
+
+  /* Active Line Dimensions */
+  --active-line-width: 37px;
+  --active-line-height: 4px;
+  --active-line-radius: 8px;
+
+  /* Navigation Spacing */
+  --nav-margin-left: 418px;
+  --indent-1: 23px;
+  --indent-2: 18px;
+  --indent-3: 20px;
+}
+
+/* --- 2. Reset and Body --- */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background-color: #f0f0f0;
+}
+
+/* --- 3. Header Styling --- */
+header {
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--color-background);
+  box-shadow: 0 1px 2px var(--color-shadow);
+  padding: 0 var(--header-padding-x);
+  display: flex;
+  align-items: center;
+}
+
+/* --- 4. Logo and Navigation --- */
+header > a {
+  display: block;
+}
+
+header > a img {
+  display: block;
+  width: var(--logo-width);
+  height: var(--logo-width);
+}
+
+nav {
+  margin-left: var(--nav-margin-left);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  display: block;
+}
+
+/* ДОДАЙТЕ ЦЕ ДЛЯ ВІДСТУПІВ МІЖ ЕЛЕМЕНТАМИ */
+nav li:not(:first-child) {
+  margin-left: var(--indent-3);
+}
+
+nav a {
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  text-decoration: none;
+  color: var(--color-text);
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+}
+
+/* Active link indicator */
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; /* Або bottom: 0; якщо лінія має бути на краю (перевірте Figma) */
+
+  /* ✅ ПРАВИЛЬНО (ЦЕНТРУЄ ЛІНІЮ) */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: var(--active-line-width);
+  height: var(--active-line-height);
+  background-color: var(--color-active);
+  border-radius: var(--active-line-radius);
+}
+
+/* Hover effect */
+nav a:hover {
+  color: var(--color-hover);
+  transition: color 0.3s ease;
 }
