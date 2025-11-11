@@ -10,7 +10,7 @@ report({
         "label": "Header tag",
         "requireSameDimensions": false,
         "misMatchThreshold": 1,
-        "url": "http://localhost:3001/index.html",
+        "url": "http://localhost:5500/index.html",
         "referenceUrl": "https://mate-academy.github.io/layout_solutions/moyo-header/",
         "expect": 0,
         "viewportLabel": "1024px",
