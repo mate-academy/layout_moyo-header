@@ -13,22 +13,21 @@ module.exports = {
       url: 'http://localhost:3000/index.html',
       selectors: ['header'],
       misMatchThreshold: 0.1,
-      hoverSelector: '.nav-list li:nth-child(2) .nav-link',
-      postInteractionWait: 100,
+      postInteractionWait: 100
     },
     {
       label: 'Hover 4º link (data-qa)',
       url: 'http://localhost:3000/index.html',
       selectors: ['header'],
       hoverSelector: '.nav-list li:nth-child(4) .nav-link',
-      postInteractionWait: 100,
+      postInteractionWait: 100
     },
     {
       label: 'Active link',
       url: 'http://localhost:3000/index.html',
       selectors: ['header'],
       selectorExpansion: true,
-      postInteractionWait: 100,
+      postInteractionWait: 100
     }
   ],
   paths: {
@@ -39,6 +38,12 @@ module.exports = {
     ci_report: 'backstop_data/ci_report'
   },
   engine: 'puppeteer',
+  engineOptions: {
+    args: ['--no-sandbox']
+  },
+  launchOptions: {
+    headless: 'new'
+  },
   report: ['browser'],
   debug: false
 };

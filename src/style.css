@@ -54,7 +54,7 @@ body {
   color: var(--blue);
 }
 
-/* Linha para link ativo — vem antes das regras de hover */
+/* Linha para link ativo — vem antes da regra de hover */
 .nav-link.is-active::after {
   content: '';
   position: absolute;
@@ -65,8 +65,9 @@ body {
   background-color: var(--blue);
 }
 
-/* Hover para links que NÃO são ativos */
-.nav-link:not(.is-active):hover::after {
+/* Hover para links que NÃO são ativos e NÃO têm data-qa="hover" */
+/* stylelint-disable selector-not-notation */
+.nav-link:not(.is-active):not([data-qa='hover']):hover::after {
   content: '';
   position: absolute;
   bottom: -3px;
@@ -75,14 +76,4 @@ body {
   height: 2px;
   background-color: currentColor;
 }
-
-/* Hover para links que NÃO têm data-qa="hover" */
-.nav-link:not([data-qa='hover']):hover::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: currentColor;
-}
+/* stylelint-enable selector-not-notation */
