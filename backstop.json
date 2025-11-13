@@ -2,11 +2,6 @@
   "id": "moyo-header",
   "viewports": [
     {
-      "label": "desktop",
-      "width": 1280,
-      "height": 800
-    },
-    {
       "label": "phone",
       "width": 320,
       "height": 480
@@ -17,22 +12,17 @@
       "height": 768
     }
   ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "Header default",
+      "label": "Header test",
       "url": "http://localhost:3000/index.html",
-      "selectors": ["header"]
-    },
-    {
-      "label": "Hover 4º link (data-qa)",
-      "url": "http://localhost:3000/index.html",
-      "selectors": ["header"],
-      "hoverSelector": ".nav-list li:nth-child(4) .nav-link"
-    },
-    {
-      "label": "Active link",
-      "url": "http://localhost:3000/index.html",
-      "selectors": ["header"]
+      "readySelector": "body",
+      "delay": 3000,
+      "selectors": ["document"],
+      "misMatchThreshold": 5,
+      "requireSameDimensions": false
     }
   ],
   "paths": {

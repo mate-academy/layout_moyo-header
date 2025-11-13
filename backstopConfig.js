@@ -1,49 +1,58 @@
-module.exports = {
-  id: 'moyo-header',
+'use strict';
+// https://github.com/garris/BackstopJS#advanced-scenarios
+
+const backstop = require('@mate-academy/backstop-config');
+const { basicScenario } = backstop;
+
+const basic = {
+  ...basicScenario,
+  label: 'Elementary test',
+  referenceUrl: basicScenario.referenceUrl + '/moyo-header/',
+};
+
+const config = {
+  ...backstop,
+  fileNameTemplate: '{scenarioLabel}_{viewportLabel}',
+  onBeforeScript: 'puppet/onBefore.js',
+  onReadyScript: 'puppet/onReady.js',
   viewports: [
     {
-      label: 'desktop',
-      width: 1280,
-      height: 800
-    }
+      name: '1024px',
+      width: 1024,
+      height: 768,
+    },
+    {
+      name: '1200px',
+      width: 1200,
+      height: 768,
+    },
   ],
   scenarios: [
     {
-      label: 'Header default',
-      url: 'http://localhost:3000/index.html',
+      ...basic,
+      label: 'Header tag',
       selectors: ['header'],
-      misMatchThreshold: 0.1,
-      postInteractionWait: 100
     },
     {
-      label: 'Hover 4º link (data-qa)',
-      url: 'http://localhost:3000/index.html',
-      selectors: ['header'],
-      hoverSelector: '.nav-list li:nth-child(4) .nav-link',
-      postInteractionWait: 100
+      ...basic,
+      label: 'Nav tag',
+      selectors: ['nav'],
     },
     {
-      label: 'Active link',
-      url: 'http://localhost:3000/index.html',
-      selectors: ['header'],
-      selectorExpansion: true,
-      postInteractionWait: 100
-    }
+      ...basic,
+      misMatchThreshold: 2,
+      label: 'Link with data-qa_hover',
+      selectors: ['[data-qa="hover"]'],
+      hoverSelector: '[data-qa="hover"]',
+      postInteractionWait: 1000,
+    },
+    {
+      ...basic,
+      misMatchThreshold: 2,
+      label: 'Link with class_is-active',
+      selectors: ['a.is-active'],
+    },
   ],
-  paths: {
-    bitmaps_reference: 'backstop_data/bitmaps_reference',
-    bitmaps_test: 'backstop_data/bitmaps_test',
-    engine_scripts: 'backstop_data/engine_scripts',
-    html_report: 'backstop_data/html_report',
-    ci_report: 'backstop_data/ci_report'
-  },
-  engine: 'puppeteer',
-  engineOptions: {
-    args: ['--no-sandbox']
-  },
-  launchOptions: {
-    headless: 'new'
-  },
-  report: ['browser'],
-  debug: false
 };
+
+module.exports = config;
