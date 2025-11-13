@@ -1,8 +1,9 @@
 :root {
-  --blue: #00a2ff;
-  --nav-height: 48px;
+  --nav-height: 40px;
+  --blue: #007bff;
 }
 
+/* Reset global */
 * {
   margin: 0;
   padding: 0;
@@ -10,80 +11,78 @@
 }
 
 body {
+  margin: 0;
   font-family: Roboto, sans-serif;
-  background-color: #fff;
-  color: #1a1a1a;
 }
 
-header {
-  width: 100%;
-  background-color: #fff;
-}
-
+/* Container do header */
 .header-container {
-  width: 1020px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
-  padding-left: 50px;
+  justify-content: space-between;
+  padding: 16px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.logo-link {
+/* Lista de navegação */
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+/* Espaçamento entre itens sem usar gap */
+.nav-list li + li {
+  margin-left: 24px;
+}
+
+/* Links de navegação */
+.nav-link {
+  position: relative;
+  height: var(--nav-height);
   display: inline-flex;
   align-items: center;
-}
-
-nav {
-  margin-left: 22px;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-
-.nav-list li + li {
-  margin-left: 28px;
-}
-
-.nav-link {
-  height: var(--nav-height);
-  display: flex;
-  align-items: center;
   justify-content: center;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 14px;
-  color: #1a1a1a;
   text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-/* Hover cor */
+/* Hover: muda cor do texto */
 .nav-link:hover {
   color: var(--blue);
 }
 
-/* Sublinhado ativo — ajustado para pixel-perfect */
+/* Linha para link ativo — vem antes das regras de hover */
 .nav-link.is-active::after {
   content: '';
   position: absolute;
+  bottom: -3px;
   left: 0;
-  bottom: -4px; /* valor ajustado via DevTools */
   width: 100%;
   height: 2px;
   background-color: var(--blue);
 }
 
-/* Sublinhado no hover (exceto ativo e data-qa="hover") */
-.nav-link:not(.is-active, [data-qa='hover']):hover::after {
+/* Hover para links que NÃO são ativos */
+.nav-link:not(.is-active):hover::after {
   content: '';
   position: absolute;
+  bottom: -3px;
   left: 0;
-  bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--blue);
+  background-color: currentColor;
+}
+
+/* Hover para links que NÃO têm data-qa="hover" */
+.nav-link:not([data-qa='hover']):hover::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
 }

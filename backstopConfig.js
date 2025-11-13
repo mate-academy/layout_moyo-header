@@ -1,63 +1,44 @@
-'use strict';
-// https://github.com/garris/BackstopJS#advanced-scenarios
-
-const backstop = require('@mate-academy/backstop-config');
-const { basicScenario } = backstop;
-
-const baseUrl = 'http://localhost:3000/index.html';
-const referenceBase = basicScenario.referenceUrl + '/moyo-header/';
-
-const baseScenario = {
-  ...basicScenario,
-  referenceUrl: referenceBase,
-  url: baseUrl,
-  readySelector: 'body',
-  delay: 1000,
-  misMatchThreshold: 2,
-  requireSameDimensions: false
-};
-
-const config = {
-  ...backstop,
-  fileNameTemplate: '{scenarioLabel}_{viewportLabel}',
-  onBeforeScript: 'puppet/onBefore.js',
-  onReadyScript: 'puppet/onReady.js',
+module.exports = {
+  id: 'moyo-header',
   viewports: [
     {
-      label: '1024px',
-      width: 1024,
-      height: 768
-    },
-    {
-      label: '1200px',
-      width: 1200,
-      height: 768
+      label: 'desktop',
+      width: 1280,
+      height: 800
     }
   ],
   scenarios: [
     {
-      ...baseScenario,
-      label: 'Header tag',
-      selectors: ['header']
+      label: 'Header default',
+      url: 'http://localhost:3000/index.html',
+      selectors: ['header'],
+      misMatchThreshold: 0.1,
+      hoverSelector: '.nav-list li:nth-child(2) .nav-link',
+      postInteractionWait: 100,
     },
     {
-      ...baseScenario,
-      label: 'Nav tag',
-      selectors: ['nav']
+      label: 'Hover 4º link (data-qa)',
+      url: 'http://localhost:3000/index.html',
+      selectors: ['header'],
+      hoverSelector: '.nav-list li:nth-child(4) .nav-link',
+      postInteractionWait: 100,
     },
     {
-      ...baseScenario,
-      label: 'Link with data-qa_hover',
-      selectors: ['[data-qa="hover"]'],
-      hoverSelector: '[data-qa="hover"]',
-      postInteractionWait: 1000
-    },
-    {
-      ...baseScenario,
-      label: 'Link with class_is-active',
-      selectors: ['a.is-active']
+      label: 'Active link',
+      url: 'http://localhost:3000/index.html',
+      selectors: ['header'],
+      selectorExpansion: true,
+      postInteractionWait: 100,
     }
-  ]
+  ],
+  paths: {
+    bitmaps_reference: 'backstop_data/bitmaps_reference',
+    bitmaps_test: 'backstop_data/bitmaps_test',
+    engine_scripts: 'backstop_data/engine_scripts',
+    html_report: 'backstop_data/html_report',
+    ci_report: 'backstop_data/ci_report'
+  },
+  engine: 'puppeteer',
+  report: ['browser'],
+  debug: false
 };
-
-module.exports = config;
