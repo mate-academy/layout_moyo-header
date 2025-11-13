@@ -1,85 +1,85 @@
-:root {
-  --primary-color: #00acdc;
-  --black: #000;
-  --white: #fff;
-}
-
-.body {
+html {
   margin: 0;
   padding: 0;
-  font-family: ' Roboto ', sans-serif;
-  background-color: var(--white);
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .header {
-  width: 100%;
-  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 1200px;
+  height: 60px;
   padding-left: 50px;
+  padding-right: 50px;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo__img {
   width: 40px;
   height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .nav {
-  margin-left: 459px;
+  display: flex;
+  align-items: center;
+  margin-left: 416px;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    width: 1024px;
+    height: 60px;
+  }
+  .nav {
+    margin-left: 243px;
+  }
 }
 
 .nav__list {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  white-space: nowrap;
+  margin-right: 50px;
 }
 
-.nav__item:not(:last-child) {
-  margin-right: 45px;
+.nav__item + .nav__item {
+  margin-left: 20px;
 }
 
 .nav__link {
-  text-decoration: none;
-  color: var(--black);
-  font-size: 12px;
+  display: flex;
   line-height: 100%;
   text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
+}
+
+.nav__link:hover {
+  color: #00acdc;
 }
 
 .nav__link.is-active {
-  color: var(--primary-color);
+  color: #00acdc;
 }
 
 .nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 37px;
+  left: 0;
+  right: 0;
   height: 4px;
-  background-color: var(--primary-color);
+  background-color: #00acdc;
+  margin-bottom: -18.5px;
+  width: 100%;
   border-radius: 8px;
-}
-
-.nav__link:hover {
-  color: var(--primary-color);
-}
-
-@media (max-width: 1024px) {
-  .nav {
-    margin-left: 283px;
-  }
 }
