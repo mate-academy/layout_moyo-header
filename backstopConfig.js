@@ -4,11 +4,13 @@
 const backstop = require('@mate-academy/backstop-config');
 const { basicScenario } = backstop;
 
-const basic = {
+const baseUrl = 'http://localhost:3000/index.html';
+const referenceBase = basicScenario.referenceUrl + '/moyo-header/';
+
+const baseScenario = {
   ...basicScenario,
-  label: 'Elementary test',
-  referenceUrl: basicScenario.referenceUrl + '/moyo-header/',
-  url: 'http://localhost:3000/index.html',
+  referenceUrl: referenceBase,
+  url: baseUrl,
   readySelector: 'body',
   delay: 1000,
   misMatchThreshold: 2,
@@ -34,24 +36,24 @@ const config = {
   ],
   scenarios: [
     {
-      ...basic,
+      ...baseScenario,
       label: 'Header tag',
       selectors: ['header']
     },
     {
-      ...basic,
+      ...baseScenario,
       label: 'Nav tag',
       selectors: ['nav']
     },
     {
-      ...basic,
+      ...baseScenario,
       label: 'Link with data-qa_hover',
       selectors: ['[data-qa="hover"]'],
       hoverSelector: '[data-qa="hover"]',
       postInteractionWait: 1000
     },
     {
-      ...basic,
+      ...baseScenario,
       label: 'Link with class_is-active',
       selectors: ['a.is-active']
     }
