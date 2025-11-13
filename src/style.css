@@ -1,3 +1,89 @@
-body {
+:root {
+  --blue: #00a2ff;
+  --nav-height: 48px;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+header {
+  width: 100%;
+  background-color: #fff;
+}
+
+.header-container {
+  width: 1020px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+nav {
+  margin-left: 22px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li + li {
+  margin-left: 28px;
+}
+
+.nav-link {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  color: #1a1a1a;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover cor */
+.nav-link:hover {
+  color: var(--blue);
+}
+
+/* Sublinhado ativo — ajustado para pixel-perfect */
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* valor ajustado via DevTools */
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
+}
+
+/* Sublinhado no hover (exceto ativo e data-qa="hover") */
+.nav-link:not(.is-active, [data-qa='hover']):hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
 }
