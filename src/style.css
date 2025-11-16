@@ -1,10 +1,15 @@
+:root {
+  --blue: #00acdc;
+  --black: #000;
+}
+
 html {
   font-family: Roboto, sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: 'wdth' 100;
+  font-size: 12px;
 }
 
 body {
@@ -23,6 +28,67 @@ header {
   margin-left: 50px;
 }
 
+.wraper {
+  padding-right: 50px;
+}
 
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
+.nav__link {
+  height: 60px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.nav__link:hover {
+  color: var(--blue);
+}
+
+.nav__link.is-active {
+  position: relative;
+  color: var(--blue);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--blue);
+  border-radius: 8px;
+}
+
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  /* margin-right: 50px; */
+  margin: 0;
+}
+
+.nav__item:first-child {
+  margin: 0;
+  margin-right: 20px;
+}
+
+a[data-qa='hover']:hover {
+  color: var(--blue);
+}
+
+a[data-qa='hover']:focus-visible {
+  color: var(--blue);
+}
