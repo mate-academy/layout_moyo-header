@@ -8,9 +8,10 @@ body {
 .header__container {
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 50px;
   width: 100%;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .header__logo-link{
@@ -19,16 +20,37 @@ body {
   margin-right: 50px;
 }
 
+.header__logo-img{
+  height: 40px;
+  width: 40px;
+}
+
+.nav_list{
+  display: flex;
+  align-items: center;
+}
 
 .nav_link{
   color: #000;
   line-height: 100%;
   text-transform: uppercase;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  top: 23px;
+  text-decoration: none;
+  padding: 0;
+  position: relative;
+}
+
+nav ul {
   height: var(--link-height);
+  display: flex;
+  align-items: center;
+}
+
+.ul{
+display: flex;
+text-decoration: none;
 }
 
 nav ul li {
@@ -40,11 +62,11 @@ nav li:last-child {
 }
 
 .nav_link:hover{
-   color: var(--blue);
+  color: var(--blue);
 }
 
 .is-active{
-  color: #00ACDC;
+  color: var(--blue);
   position: relative;
 
 }
@@ -54,24 +76,14 @@ nav li:last-child {
   position: absolute;
   left: 0;
   right: 0;
+  bottom: 0;
   height: 2px;
   background: var(--blue);
-  bottom: -Xpx;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 :root {
-    --main-blue: #0057FF;
+    --blue: #0057FF;
     --link-height: 48px;
     --spacing: 30px;
-}
-
-.li{
-  margin-right: var(--spacing);
 }
 
