@@ -12,12 +12,11 @@ body {
 
 .header {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
-  width: 1200px;
-  height: 60px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -46,12 +45,22 @@ body {
 .nav__list {
   display: flex;
   list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
   white-space: nowrap;
-  margin-right: 50px;
 }
 
 .nav__item + .nav__item {
   margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
