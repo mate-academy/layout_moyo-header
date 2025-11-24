@@ -1,19 +1,17 @@
-@font-face {
-  font-family: Roboto;
-  src: url(fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
-}
-
-* {
-  box-sizing: border-box;
+:root {
+  --primary-color: #00acdc;
 }
 
 html {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
   font-size: 12px;
   line-height: 14px;
 }
 
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   background: #e5e5e5;
@@ -44,7 +42,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 23px 0;
+  height: 60px;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
@@ -57,7 +55,7 @@ body {
 
 .nav__link:hover,
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .is-active::after {
@@ -66,7 +64,7 @@ body {
   height: 4px;
   width: 100%;
   bottom: 0;
-  background-color: #00acdc;
+  background-color: var(--primary-color);
   border-radius: 8px;
 }
 
