@@ -45,8 +45,16 @@ body {
 }
 
 .nav_item {
-  margin-left: 25px;
+  margin-left: 20px;
   position: relative;
+}
+
+.nav_item:first-child {
+  margin-left: 0;
+}
+
+.nav_item:last-child {
+  margin-right: 0;
 }
 
 .nav_link {
@@ -57,6 +65,8 @@ body {
   position: relative;
   color: black;
   height: 60px;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .nav_link:hover {
@@ -69,7 +79,7 @@ body {
 
 .nav_link.is-active::after {
   background-color: var(--blue);
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   bottom: 0;
