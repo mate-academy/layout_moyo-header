@@ -7,7 +7,8 @@ const { basicScenario } = backstop;
 const basic = {
   ...basicScenario,
   label: 'Elementary test',
-  referenceUrl: basicScenario.referenceUrl + '/moyo-header/',
+  url: 'http://localhost:5173/index.html',
+  referenceUrl: 'http://localhost:5173/index.html',
 };
 
 const config = {
