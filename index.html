@@ -1,22 +1,37 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="ie=edge"
-    />
-    <title>Moyo header</title>
-    <link
-      rel="stylesheet"
-      href="src/style.css"
-    />
-  </head>
-  <body>
-    <h1>Moyo header</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moyo Header</title>
+  <!-- Правильне підключення Roboto 500 (один тег link) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <a href="/" class="header__logo" aria-label="Moyo">
+        <img src="./images/logo.png" alt="Moyo">
+      </a>
+
+      <nav class="header__nav" aria-label="Main navigation">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#home" class="header__link">Home</a>
+          </li>
+          <li class="header__item">
+            <a href="#shop" class="header__link">Shop</a>
+          </li>
+          <li class="header__item">
+            <a href="#about" class="header__link">About</a>
+          </li>
+          <li class="header__item">
+            <a href="#contact" class="header__link is-active" data-qa="hover">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</body>
 </html>

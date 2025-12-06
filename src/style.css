@@ -1,3 +1,75 @@
+:root {
+  --primary-blue: #0078d7; /* точний синій з макета */
+  --nav-spacing: 24px;     /* заміни на spacing з Figma (20–30px) */
+  --link-height: 40px;     /* заміни на height з Figma (40–48px) */
+  --active-line: 2px;      /* товщина синьої лінії (::after) */
+}
+
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  width: 100%;
+}
+
+.header__container {
+  max-width: 1440px; /* вибери одне значення; заміни на 1200px, якщо так у макеті */
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Логотип: стилі на img, не як текст лінка */
+.header__logo img {
+  height: var(--link-height);
+  display: block;
+}
+
+.header__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Відступи між пунктами — без gap; тільки між сусідами */
+.headeritem + .headeritem {
+  margin-left: var(--nav-spacing);
+}
+
+/* Лінки: висота, центрування, uppercase; без padding */
+.header__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--link-height);
+  text-decoration: none;
+  color: #212121;
+  text-transform: uppercase;
+  font-weight: 500; /* локально, не в body */
+}
+
+/* Hover тільки на <a>; колір через змінну */
+.header__link:hover {
+  color: var(--primary-blue);
+}
+
+/* Активний стан: синя лінія через ::after; клас на <a> */
+.header__link.is-active {
+  position: relative;
+}
+
+.header__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0; /* якщо треба опустити — постав -1px після звірки з макетом */
+  width: 100%;
+  height: var(--active-line);
+  background: var(--primary-blue);
 }
