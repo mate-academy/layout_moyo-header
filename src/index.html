@@ -1,22 +1,49 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="ie=edge"
-    />
-    <title>Moyo header</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moyo — Header</title>
+
+    <!-- Google Fonts: Roboto 500 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"
+    crossorigin="anonymous" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
-      href="./style.css"
     />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1>Moyo header</h1>
+    <header class="header">
+      <div class="header__inner">
+        <!-- Логотип -->
+        <a class="logo" href="/"
+        aria-label="Moyo home">
+          <img src="src/images/logo.svg" alt="Moyo logo" />
+        </a>
+
+        <!-- Навігація -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Smartphones</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Tablets</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#"
+              data-qa="hover">Laptops &amp; Computers</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link is-active" href="#">Accessories</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   </body>
 </html>

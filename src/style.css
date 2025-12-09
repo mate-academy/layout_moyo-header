@@ -1,3 +1,83 @@
-body {
+/* Скидання стилів браузера */
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Шрифт Roboto 500 */
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  background-color: #fff; /* або колір з Figma */
+  border-bottom: 1px solid #e5e5e5; /* опціонально для лінії під header */
+}
+
+.header__inner {
+  max-width: 1200px; /* або ширина контейнера з Figma */
+  margin: 0 auto;
+  display: flex;
+  align-items: center; /* вертикальне центрування */
+  justify-content: space-between;
+  height: 60px; /* висота навігації з Figma */
+  padding: 0 20px; /* внутрішні відступи */
+}
+
+/* ЛОГО */
+.logo img {
+  display: block;
+  height: 40px; /* від Figma */
+  width: auto;
+}
+
+/* NAVIGATION */
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.nav__item {
+  /* Відступи між пунктами */
+  margin-right: 30px; /* окрім останнього */
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #000; /* чорний або колір з Figma */
+  text-transform: uppercase;
+  font-size: 14px; /* або з Figma */
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  transition: color 0.2s;
+}
+
+/* Hover */
+.nav__link:hover {
+  color: #0073e6; /* синій з Figma */
+}
+
+/* Активне посилання */
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* підкреслення під текстом */
+  width: 100%;
+  height: 2px;
+  background-color: #0073e6; /* синя лінія */
 }
