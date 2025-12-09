@@ -1,3 +1,99 @@
+:root {
+  --text-color: #000;
+  --animated-text-color: #00acdc;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
+.header {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-left: 50px;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-right: 50px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.logo-link {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.link {
+  box-sizing: border-box;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.links {
+  margin-right: 20px;
+}
+
+.links:last-child {
+  margin: 0;
+}
+
+.is-active {
+  margin: 0;
+  color: var(--animated-text-color);
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: var(--animated-text-color);
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.link:hover {
+  color: var(--animated-text-color);
 }
