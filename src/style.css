@@ -1,5 +1,6 @@
 :root {
   --link-height: 60px;
+  --blue-color: #00acdc;
 }
 
 html,
@@ -13,12 +14,12 @@ body {
 .header {
   background-color: #fff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0 50px;
 }
 
-.logo {
+.brand-logo {
   display: block;
 }
 
@@ -27,7 +28,6 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  height: var(--link-height);
 }
 
 .nav-item + .nav-item {
@@ -40,19 +40,20 @@ body {
   justify-content: center;
   text-decoration: none;
   color: #000;
-  height: 100%;
   position: relative;
+  text-transform: uppercase;
+  height: var(--link-height);
 }
 
 .nav-link:hover,
 .nav-link.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
-.is-active::after {
+a.is-active::after {
   content: '';
   position: absolute;
-  background: #00acdc;
+  background: var(--blue-color);
   inset: auto 0 0;
   height: 4px;
   border-radius: 8px 8px 0 0;
