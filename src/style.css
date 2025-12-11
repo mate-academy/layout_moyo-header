@@ -1,3 +1,77 @@
+/* styles go here */
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
   margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.link-logo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.image-logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  line-height: 60px;
+  font-size: 12px;
+}
+
+/* відступи у всіх посиланнях окрім першого */
+.nav-links li:not(:first-child) {
+  margin-left: 20px;
+}
+
+.link:hover {
+  color: var(--blue-color);
+}
+
+.link.is-active {
+  position: relative;
+  color: var(--blue-color);
+}
+
+.link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--blue-color);
 }
