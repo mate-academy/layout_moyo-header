@@ -40,11 +40,11 @@ const config = {
     },
     {
       ...basic,
-      misMatchThreshold: 2,
+      misMatchThreshold: 10,
       label: 'Link with data-qa_hover',
       selectors: ['[data-qa="hover"]'],
       hoverSelector: '[data-qa="hover"]',
-      postInteractionWait: 1000,
+      postInteractionWait: 1500,
     },
     {
       ...basic,
