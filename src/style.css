@@ -2,32 +2,33 @@ body {
   margin: 0;
 }
 
+:root {
+  --accent-color: #00acdc;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
 }
 
 .nav_list {
   display: flex;
-  align-items: center;
-
-  height: 60px;
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
-.nav_list li:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
 .nav_link {
   position: relative;
 
-  padding-bottom: 8px;
+  align-items: center;
+
+  height: 60px;
 
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -40,7 +41,7 @@ body {
   content: '';
 
   position: absolute;
-  bottom: 0;
+  bottom: -8px;
   left: 0;
 
   width: 100%;
@@ -48,9 +49,7 @@ body {
   border-radius: 8px;
 
   opacity: 0;
-  background-color: #00acdc;
-
-  transition: opacity 0.3s;
+  background-color: var(--accent-color);
 }
 
 /* 2. При наведенні мишкою -> показуємо смужку */
