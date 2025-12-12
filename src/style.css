@@ -1,3 +1,85 @@
+:root {
+  --accent-color: #00acdc;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 50px;
+  align-items: center;
+}
+
+.logo__link {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 20px; /* замість margin-right */
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: var(--accent-color);
+}
+
+.nav__item {
+  text-align: center;
+}
+
+.is-active {
+  color: var(--accent-color);
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  transform: scaleX(1);
+  transform-origin: center;
 }
