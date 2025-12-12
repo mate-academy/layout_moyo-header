@@ -6,10 +6,16 @@ body {
   --accent-color: #00acdc;
 }
 
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
 .nav_list {
@@ -24,6 +30,7 @@ body {
 }
 
 .nav_link {
+  display: flex;
   position: relative;
 
   align-items: center;
@@ -35,13 +42,15 @@ body {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
 }
 
 .nav_link::after {
   content: '';
 
   position: absolute;
-  bottom: -8px;
+  bottom: 0;
   left: 0;
 
   width: 100%;
@@ -57,7 +66,7 @@ body {
 }
 
 .nav_link:hover::after {
-  opacity: 1;
+  opacity: 0;
 }
 
 .nav_link.is-active {
