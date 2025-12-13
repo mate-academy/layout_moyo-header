@@ -1,3 +1,78 @@
+:root {
+  --color-primary: #00acdc;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+}
+
 body {
+  width: 100%;
   margin: 0;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 60px;
+}
+
+.nav {
+  line-height: 60px;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Ensure any <a> inside nav list is uppercase (use CSS, not HTML) */
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.is-active {
+  position: relative;
+  color: var(--color-primary);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-primary);
+  display: block;
+  border-radius: 8px;
 }
