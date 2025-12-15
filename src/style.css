@@ -1,3 +1,85 @@
+:root {
+  --color-blue: #00acdc;
+  --color-black: #000;
+  --header-height: 60px;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  height: var(--header-height);
+  padding: 0 50px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul a {
+  position: relative;
+  display: block;
+  line-height: var(--header-height);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-black);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+nav ul a:hover {
+  color: var(--color-blue);
+}
+
+nav ul a.is-active {
+  color: var(--color-blue);
+}
+
+nav ul a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 37px;
+  height: 4px;
+  background-color: var(--color-blue);
+  border-radius: 2px;
 }
