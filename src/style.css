@@ -1,3 +1,78 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500&display=swap';
+
 body {
   margin: 0;
+
+  --turquoise: #00acdc;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.header-logo-link {
+  padding: 10px 0;
+}
+
+.header-img-logo {
+  display: block;
+}
+
+.header-nav-list {
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+}
+
+.header-nav-list > :nth-child(n + 2) {
+  margin-left: 20px;
+}
+
+.header-nav-item {
+  list-style-type: none;
+}
+
+.header-nav-link {
+  line-height: 59.5px;
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-family:
+    Roboto,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Arial,
+    sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 4px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  background-color: var(--turquoise);
+  border-radius: 8px;
+}
+
+.header-nav-link[class*='is-act'] {
+  color: var(--turquoise);
+}
+
+.header-nav-link:hover {
+  color: var(--turquoise);
 }
