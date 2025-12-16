@@ -1,3 +1,64 @@
+html {
+  --hover-link-color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.header {
+  font-size: 12px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.menu__link {
+  text-decoration: none;
+  border: 0;
+  color: black;
+  transition: color 0.15s linear;
+  text-transform: uppercase;
+  height: 15px;
+}
+
+.menu__link:hover {
+  color: var(--hover-link-color);
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+
+.menu__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.is-active {
+  position: relative;
+}
+
+.is-active::after {
+  display: block;
+  content: '';
+  position: absolute;
+  background-color: var(--hover-link-color);
+  height: 2px;
+  width: 100%;
 }
