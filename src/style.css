@@ -24,30 +24,32 @@ body {
   height: 40px;
 }
 
-nav {
+.navigation {
   padding: 0;
 }
 
 .nav_list {
   display: flex;
   justify-content: flex-end;
-  height: 60px;
   margin: 0;
   padding: 0;
   align-items: center;
 }
 
-li {
+.element {
   display: flex;
 }
 
 .nav_link {
-  margin-left: 20px;
   font-size: 12px;
   text-transform: uppercase;
   line-height: 60px;
   text-decoration: none;
   color: black;
+}
+
+.element:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav_link:hover {
@@ -56,7 +58,6 @@ li {
 }
 
 .is-active {
-  margin: 0;
   color: var(--blue);
   position: relative;
 }
