@@ -1,3 +1,88 @@
+:root {
+  --blue-color: #00acdc
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header {
+  width: 100%;
+}
+
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
+.header-logo {
+  display: block;
+  max-width: 100%;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.nav-item:not(:last-child) {
+  text-align: center;
+  margin-right: 20px;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link.is-active::after {
+  position: absolute;
+  display: block;
+  content: '';
+  background-color: var(--blue-color);
+  height: 4px;
+  border-radius: 5px;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav-link.is-active {
+  color: var(--blue-color);
+}
+
+.nav-link:hover {
+  color: var(--blue-color);
+  text-decoration: none;
 }
