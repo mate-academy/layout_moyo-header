@@ -3,7 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: lightgrey;
-  font-family: 'Roboto';
+  font-family: Roboto, sans-serif;
 }
 
 .header {
@@ -15,7 +15,6 @@ body {
   background-color: #fff;
 }
 
-
 .logo img {
   width: 40px;
   height: 40px;
@@ -26,62 +25,61 @@ body {
   display: flex;
   gap: 20px;
 }
-.nav-bar, .nav-ul {
+
+.nav-bar,
+.nav-ul {
   display: flex;
-  height: 100%;         
+  height: 100%;
 }
 
 .li-item {
-  height: 100%;          
+  height: 100%;
   display: flex;
+  list-style: none;
 }
 
 .nav-ul a {
-  display: inline-block; 
+  display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
-  font-weight: 500;
-  position: relative;       
+  font-weight: 700;
+  position: relative;
 }
-.nav-ul a::after {
+
+.nav-ul a.is-active {
+  color: #00acdc;
+}
+
+.nav-ul a.is-active::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 6px;              
+  bottom: 6px;
   width: 100%;
   height: 4px;
-  background-color: #00ACDC;
+  background-color: #00acdc;
   border-radius: 8px;
-  opacity: 0;              
-  transition: opacity 0.2s; 
+  opacity: 0;
+  transition: opacity 0.2s;
 }
 
-
 .nav-ul a:hover {
-  color: #00ACDC;
+  color: #00acdc;
 }
 
 .nav-ul a:hover::after {
-  opacity: 1;            
+  opacity: 1;
 }
 
 .nav-ul a.active {
-  color: #00ACDC;
+  color: #00acdc;
 }
 
 .nav-ul a.active::after {
-  
   opacity: 1;
 }
-.nav-ul a:visited{
-  color: #00ACDC;
-}
 
-
-
-
-
-li {
-  list-style: none;
+.nav-ul a:visited {
+  color: #00acdc;
 }
