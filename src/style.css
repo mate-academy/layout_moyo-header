@@ -1,3 +1,92 @@
+:root {
+  --color: #00acdc;
+}
+
+html {
+  font-size: 12px;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  background-color: #ffff;
+  margin-right: 50;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.nav__link {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  color: black;
+  line-height: 15px;
+  margin: 0 10px;
+  text-transform: uppercase;
+  padding: 0;
+  align-content: center;
+  height: 60px;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: var(--color);
+}
+
+.nav__link[data-qa='hover'] {
+  color: var(--color);
+}
+
+.is-active {
+  color: var(--color);
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  background-color: var(--color);
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+}
+
+.nav__link:first-child {
+  margin-left: 0;
+}
+
+.nav__link:last-child {
+  margin-right: 0;
 }
