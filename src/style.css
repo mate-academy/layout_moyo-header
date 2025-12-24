@@ -1,3 +1,7 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, Arial, sans-serif;
@@ -7,10 +11,6 @@ body {
   text-transform: uppercase;
 }
 
-:root {
-  --blue-color: #00acdc;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -18,28 +18,28 @@ body {
   padding: 0 50px;
 }
 
-.logo img {
+.logo__image {
   display: block;
   height: 40px;
 }
 
 .nav-list {
-  list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
+  list-style: none;
 }
 
-.nav-list li:not(:last-child) {
+.nav-item:not(:last-child) {
   margin-right: 20px;
 }
 
 .nav-link {
   position: relative;
-  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 60px;
   font-size: 12px;
   color: #000;
   text-decoration: none;
@@ -56,13 +56,13 @@ body {
 .nav-link.is-active::after {
   content: '';
   position: absolute;
+  bottom: 0;
+  left: 50%;
 
   width: 37px;
   height: 4px;
-  background-color: var(--blue-color);
-  border-radius: 8px;
 
-  bottom: 0;
-  left: 50%;
   margin-left: -18.5px;
+  border-radius: 8px;
+  background-color: var(--blue-color);
 }
