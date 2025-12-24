@@ -1,3 +1,92 @@
-body {
-  margin: 0;
+:root {
+  --moyo-color: #00acdc;
 }
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo_i {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav_link {
+  position: relative;
+
+  display: block;
+
+  height: 60px;
+
+  line-height: 60px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav_link:hover {
+  color: var(--moyo-color);
+}
+
+.nav_link.is-active {
+  position: relative;
+  color: var(--moyo-color);
+}
+
+.nav_link.is-active::after {
+  content: '';
+
+  position: absolute;
+  top: 56px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+
+  background-color: var(--moyo-color);
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* .nav_item {
+  display: inline;
+  list-style: none;
+} */
