@@ -1,3 +1,90 @@
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
+  background-color: #838383;
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0 50px;
+}
+
+.logo-link {
+  display: flex;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  height: 60px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link:hover {
+  color: var(--blue);
+}
+
+/* .nav__link:active {
+  color: #008ab4;
+} */
+
+.nav__link.is-active {
+  color: var(--blue);
+  position: relative;
+}
+
+.nav__link.is-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 4px;
+  background-color: var(--blue);
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
 }
