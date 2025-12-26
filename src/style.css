@@ -1,3 +1,111 @@
+html {
+  box-sizing: border-box;
+}
+
+.roboto-font {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
+}
+
+:root {
+  --header-bg: #fff;
+  --text: #000;
+  --active: #00acdc;
+  --underline-h: 4px;
+  --underline-w: 37px;
+  --nav-height: 60px;
+  --container-pad: 50px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--header-bg);
+  align-items: center;
+  justify-content: flex-start;
+  padding-inline: var(--container-pad);
+  box-sizing: inherit;
+}
+
+.logo {
+  text-decoration: none;
+  line-height: 0;
+  box-sizing: inherit;
+}
+
+.moyologo {
+  display: block;
+}
+
+.header .menu {
+  height: var(--nav-height);
+  margin-left: auto;
+  line-height: var(--nav-height);
+  font-size: 12px;
+  display: block;
+  text-transform: uppercase;
+  box-sizing: inherit;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  float: right;
+  height: var(--nav-height);
+  box-sizing: inherit;
+}
+
+.menu-item + .menu-item {
+  margin-left: 20px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  white-space: nowrap;
+  height: var(--nav-height);
+  align-items: stretch;
+  display: flex; /* 👈 flex dentro do link */
+  justify-content: center; /* opcional: centralizar horizontal */
+}
+
+.menu-link.is-active {
+  color: var(--active);
+  height: var(--nav-height);
+}
+
+.menu-link:hover {
+  color: var(--active);
+  height: var(--nav-height);
+}
+
+.menu-link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: var(--underline-w);
+  height: var(--underline-h);
+  background: var(--active);
+  border-radius: 8px;
 }
