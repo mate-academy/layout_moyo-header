@@ -1,3 +1,87 @@
+:root {
+  --text-hover-color: #00acdc;
+  --text-color: #000;
+}
+
 body {
   margin: 0;
+
+  font-family: Roboto, sans-serif;
+}
+
+.moyoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+
+  background-color: #fff;
+}
+
+.moyoHeader__logo {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.moyoHeader__img {
+  display: block;
+}
+
+.moyoHeader__nav {
+  margin: 0;
+  padding: 0;
+}
+
+.moyoHeader__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.moyoHeader__item {
+  position: relative;
+}
+
+.moyoHeader__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.moyoHeader__link {
+  position: relative;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.moyoHeader__link:hover {
+  color: var(--text-hover-color);
+}
+
+.moyoHeader__link:focus {
+  color: var(--text-hover-color);
+}
+
+.is-active {
+  color: var(--text-hover-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--text-hover-color);
 }
