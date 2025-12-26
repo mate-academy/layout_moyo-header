@@ -1,3 +1,82 @@
+:root {
+  --main-text-color: #000;
+  --accent-color: #00acdc;
+  --font-family: 'Roboto', sans-serif;
+}
+
 body {
-  margin: 0;
+  font-family: var(--font-family);
+  color: var(--main-text-color);
+  font-weight: 500;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.navigation {
+  width: 100%;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.nav__list li {
+  margin: 0 10px;
+}
+
+.nav__list li:first-child {
+  margin-left: 0;
+}
+
+.nav__list li:last-child {
+  margin-right: 0;
+}
+
+.nav__list a {
+  text-decoration: none;
+  color: var(--main-text-color);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nav__list a:hover {
+  color: var(--accent-color);
+}
+
+.is-active {
+  color: var(--accent-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 8px;
+  width: 100%;
+  background-color: var(--accent-color);
 }
