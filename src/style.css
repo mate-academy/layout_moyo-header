@@ -1,3 +1,61 @@
+/* stylelint-disable-next-line import-notation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+  --color-blue: #64c6ff;
+}
+
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* alterado de space-between para center */
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+
+}
+
+.nav-item {
+  display: inline-flex;
+  margin: 0 12px;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-item a:hover {
+  color: var(--color-blue);
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  position: relative;
+  bottom: -6px;
+  width: 100%;
+  height: 6px;
+  border-radius: 10px;
+  background-color: var(--color-blue);
 }
