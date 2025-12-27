@@ -1,3 +1,104 @@
+:root {
+  --blue-color: rgba(0, 172, 220, 1);
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+
+.logo__img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 10px 0;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item + .nav__item {
+  margin-left: 15px;
+}
+
+.nav__link {
+  text-decoration: none;
+  height: 60px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+}
+
+.nav__item--apple .nav__link,
+.nav__item--laptops-computers .nav__link {
+  color: var(--blue-color);
+}
+
+.nav__item.is-active .nav__link {
+  color: var(--blue-color);
+}
+
+.nav__item.is-active .nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
+}
+
+/* --- 1024 --- */
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 10px 30px;
+  }
+
+  .nav__item + .nav__item {
+    margin-left: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav__item + .nav__item {
+    margin-left: 10px;
+  }
+
+  .nav__link {
+    font-size: 14px;
+  }
 }
