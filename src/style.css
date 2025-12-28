@@ -1,3 +1,89 @@
+:root {
+  --color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 50px;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* links */
+
+a {
+  margin: 0;
+  padding: 0;
+}
+
+.list-link {
+  height: 60px;
+  display: block;
+  text-align: center;
+  line-height: 60px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.list-link:hover {
+  color: var(--color);
+}
+
+.list-link:active {
+  border-bottom: 4px solid var(--color);
+  color: var(--color);
+}
+
+/* list */
+
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.video {
+  padding-right: 0;
+}
+
+/* Apple active link */
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color);
+}
+
+.is-active.apple {
+  color: var(--color);
 }
