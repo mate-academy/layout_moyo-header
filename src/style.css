@@ -1,3 +1,88 @@
+/* stylelint-disable-next-line import-notation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --blue-color: #007bff;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 50px;
+}
+
+.header .logo {
+  height: 40px;
+  width: 40px;
+  margin-top: 3px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav .nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.header .nav .nav__list .nav-item {
+  display: flex;
+}
+
+.header .nav .nav__list .nav-item .nav__link {
+  text-transform: uppercase;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+  display: flex;
+  color: black;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.header .nav .nav__list .nav-item .nav__link.is-active {
+  position: relative;
+  color: #00acdc;
+  margin: 0;
+}
+
+.header .nav .nav__list .nav-item .nav__link[data-qa='hover']:hover {
+  color: #00acdc;
+}
+
+.header .nav .nav__list .nav-item .nav__link.is-active::after {
+  content: '';
+  background-color: #00acdc;
+  border-radius: 8px;
+  width: 105%; /* Ajuste conforme necessário */
+  height: 4px;
+  position: absolute;
+  bottom: 0; /* Ajuste para alinhar melhor */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 1024px) {
+  .header .nav {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header .nav .nav__list .nav-item .nav__link {
+    margin-left: 20px;
+  }
 }
