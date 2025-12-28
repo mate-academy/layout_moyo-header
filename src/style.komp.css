@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+:root {
+  --moyo-blue: #17b3fc;
+  --nav-link-height: 80px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  height: var(--nav-link-height); /* Użycie wysokości linków */
+}
+
+.header__logo {
+  height: 40px;
+  display: block;
+  margin-left: 50px;
+  width: auto;
+}
+
+.nav {
+  margin-right: 10px;
+}
+
+.linki {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Zerowanie marginesów listy */
+  padding: 0;
+  list-style: none;
+  margin-right: 50px;
+  width: auto;
+
+  /* BRAK KOREKT POZYCYJNYCH top/left! */
+}
+
+.nav__link {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: var(--nav-link-height);
+  height: var(--nav-link-height);
+  position: relative; /* Wymagane dla pseudoelementu ::after */
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Podkreślenie jest widoczne */
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background-color: var(--moyo-blue);
+}
+
+.nav__link.is-active {
+  color: var(--moyo-blue);
+}
+
+/* Właściwa reguła dla aktywności i najazdu */
+.nav__link.is-active::after,
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.nav__link:hover {
+  color: var(--moyo-blue);
+}
