@@ -1,3 +1,95 @@
+:root {
+  --link-on: #00acdc;
+  --link-off: black;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header__logo {
+  align-self: center;
+  display: flex;
+  margin-left: 0;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  padding-inline-start: 0;
+}
+
+.nav_item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav_link:link {
+  color: var(--link-off);
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin-left: 20px;
+}
+
+.nav_link:visited {
+  color: var(--link-off);
+}
+
+.nav_link:hover {
+  color: var(--link-on);
+}
+
+.nav_link:active {
+  color: var(--link-on);
+  position: relative;
+}
+
+.is-active:link {
+  color: var(--link-on);
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin-left: 0;
+  position: relative;
+}
+
+.is-active:visited {
+  color: var(--link-on);
+}
+
+.is-active::after,
+.nav_link:active::after {
+  content: '';
+  display: block;
+  border-bottom: 4px solid var(--link-on);
+  position: absolute;
+  border-radius: 2px;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
