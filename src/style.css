@@ -1,3 +1,84 @@
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+
+  /* Змінні кольорів */
+  --bg-main-color: #fff;
+  --a-primary-color: #000;
+  --a-secondary-color: #00acdc;
+}
+
+/* 2. Основна структура */
+.header {
+  width: 100%;
+  background-color: var(--bg-main-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 3. Логотип */
+.header__logo-img {
+  display: block; /* Прибираємо ті самі 4 пікселі знизу */
+  max-width: 100%;
+}
+
+/* 4. Навігація */
+.nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.nav__item {
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--a-primary-color);
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--a-secondary-color);
+}
+
+/* 5. Активне посилання та лінія */
+.is-active {
+  color: var(--a-secondary-color);
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--a-secondary-color);
 }
