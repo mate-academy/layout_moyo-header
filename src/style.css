@@ -1,3 +1,92 @@
 body {
   margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+  background-color: gray;
+
+
+  --font-size: 12px;
+  --link-color: #00ACDC;}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
 }
+
+.logo {
+  height: 40px;
+  width: 40px;
+  display: flex;
+
+}
+
+.logo__link {
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+}
+
+.nav__item {
+  display: flex;
+}
+
+.nav__link {
+  position: relative;
+  font-size: var(--font-size);
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-active{
+  color: var(--link-color);
+}
+
+.is-active::after {
+  content: '';
+  background-color: var(--link-color);
+  position: absolute;
+  height: 4px;
+  width : 100%;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+}
+
+.nav__link:hover {
+  color: var(--link-color);
+}
+
+.nav__item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
