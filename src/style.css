@@ -10,18 +10,17 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-header {
+.header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
-  height: var(--header-height);
   padding: 0 50px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-nav {
+.nav {
   display: flex;
   align-items: center;
 }
@@ -31,12 +30,12 @@ nav {
   align-items: center;
 }
 
-.logo img {
+.logo__image {
   display: block;
   height: 40px;
 }
 
-nav ul {
+.nav__list {
   display: flex;
   align-items: center;
   list-style: none;
@@ -44,15 +43,15 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
+.nav__item {
   margin-left: 20px;
 }
 
-nav ul li:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-nav ul a {
+.nav__link {
   position: relative;
   display: block;
   line-height: var(--header-height);
@@ -64,15 +63,15 @@ nav ul a {
   transition: color 0.3s;
 }
 
-nav ul a:hover {
+.nav__link:hover {
   color: var(--color-blue);
 }
 
-nav ul a.is-active {
+.nav__link.is-active {
   color: var(--color-blue);
 }
 
-nav ul a.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
