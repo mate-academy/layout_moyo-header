@@ -3,11 +3,14 @@
   --color-text: #000;
 }
 
-.page {
+/* Reset exigido pelos testes */
+body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  font-weight: 500;
 }
 
+/* Header */
 .header {
   width: 100%;
   background-color: #fff;
@@ -23,11 +26,13 @@
   justify-content: space-between;
 }
 
+/* Logo */
 .header-logo {
   display: block;
   height: 32px;
 }
 
+/* Navegação */
 .nav {
   display: flex;
 }
@@ -48,11 +53,14 @@
   margin-right: 0;
 }
 
+/* Links */
 .nav-link {
   position: relative;
 
   display: flex;
   align-items: center;
+  justify-content: center;
+
   height: 64px;
 
   text-decoration: none;
@@ -60,14 +68,17 @@
   text-transform: uppercase;
 }
 
+/* Hover */
 .nav-link:hover {
   color: var(--color-blue);
 }
 
+/* Link ativo */
 .nav-link.is-active {
   color: var(--color-blue);
 }
 
+/* Linha azul do link ativo */
 .nav-link.is-active::after {
   content: '';
   position: absolute;
