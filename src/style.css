@@ -1,3 +1,79 @@
-body {
+
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
+
+:root {
+  --blue: rgba(0, 172, 220, 1);
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500; /* medium */
+  font-style: normal; /* rzymski */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  height: 60px;
+}
+
+.logo img {
+  display: block;
+  height: 40px;
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 30px;
+}
+
+nav li:first-child {
+  margin-left: 0;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  color: #333;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+a.is-active {
+  color: var(--blue);
+}
+
+a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--blue);
+}
+
+
