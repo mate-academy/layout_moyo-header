@@ -1,19 +1,28 @@
+:root {
+  --color: #00acdc;
+}
+
 body {
   font-family: Roboto, sans-serif;
   font-size: 12px;
+  text-transform: uppercase;
   margin: 0;
-
-  --color: #00acdc;
 }
 
 .moyo-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 50px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 50px;
 }
 
 .moyo-header__logo {
+  display: block;
+}
+
+.moyo-header__nav {
   display: block;
 }
 
@@ -28,10 +37,11 @@ body {
   margin-left: 20px;
 }
 
-.moyo-header__nav-link.is-active {
+.moyo-header__nav-link {
+  display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
-  text-transform: uppercase;
   position: relative;
   height: 60px;
   line-height: 60px;
@@ -46,15 +56,10 @@ body {
   background-color: var(--color);
   position: absolute;
   left: 0;
-  bottom: -22px;
-  opacity: 0;
-  pointer-events: none;
+  bottom: 0;
 }
 
-.is-active:hover::after {
-  opacity: 1;
-}
-
-.is-active:hover {
+.moyo-header__nav-link:hover,
+.moyo-header__nav-link.is-active {
   color: var(--color);
 }
