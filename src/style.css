@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,32 +8,50 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-header {
+.header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
 }
 
+
 .logo img {
   display: block;
+  height: 40px;
 }
 
-nav ul {
+
+.nav__list {
   display: flex;
+  gap: 20px;
   list-style: none;
-  margin-left: 40px;
 }
 
-
-nav a.element {
-  display: block;
+.nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 5px;
   text-decoration: none;
-  color: #000;
-  text-align: center;
-  line-height: 1;
+  color: #333;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
 }
 
-nav a.is-active {
+.nav__link.is-active {
   color: #0a58ca;
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #0a58ca;
 }
