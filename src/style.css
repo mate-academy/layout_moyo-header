@@ -1,3 +1,83 @@
+:root {
+  --blue: rgba(0, 172, 220, 1);
+}
+
 body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;  /* container w środku */
+  align-items: center;
+  width: 100%;              /* full-width header */
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* Aktywny link */
+.nav__link.is-active {
+  color: var(--blue);
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;               /* brak paddingu = brak odstępów po bokach */
+}
+
+.nav__list li:not(:last-child) {
+  margin-right: 20px;       /* odstępy tylko między linkami */
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;       /* wyśrodkowanie pionowe */
+  justify-content: center;   /* wyśrodkowanie poziome */
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  height: 40px;             /* wysokość linków */
+  line-height: 40px;        /* pionowe wyrównanie tekstu */
+  color: black;             /* domyślny kolor linku */
+  position: relative;
+  cursor: pointer;
+  padding: 0;               /* brak paddingu w linkach */
+}
+
+/* Pseudo-element ::after dla aktywnego linku */
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;               /* szerokość linii dopasowana do tekstu */
+  height: 4px;
+  border-radius: 8px;
+  background: var(--blue);
+}
+
+/* Hover - zmiana koloru tekstu */
+.nav__link:hover {
+  color: var(--blue);
+}
+
+.container {
+  display: flex;
+  align-items: center;      /* wyśrodkowanie pionowe */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;        /* ograniczenie szerokości */
+  margin: 0 auto;
+  padding: 0 16px;          /* odstęp od krawędzi ekranu */
 }
