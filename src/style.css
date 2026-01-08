@@ -11,9 +11,9 @@ body {
 
 .header {
   display: flex;
-  justify-content: center;  /* container w środku */
+  justify-content: center;
   align-items: center;
-  width: 100%;              /* full-width header */
+  width: 100%;
 }
 
 .logo img {
@@ -22,7 +22,6 @@ body {
   display: block;
 }
 
-/* Aktywny link */
 .nav__link.is-active {
   color: var(--blue);
 }
@@ -31,37 +30,37 @@ body {
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 0;               /* brak paddingu = brak odstępów po bokach */
+  padding: 0;
 }
 
 .nav__list li:not(:last-child) {
-  margin-right: 20px;       /* odstępy tylko między linkami */
+  margin-right: 20px;
 }
 
 .nav__link {
   display: flex;
-  align-items: center;       /* wyśrodkowanie pionowe */
-  justify-content: center;   /* wyśrodkowanie poziome */
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 12px;
-  height: 40px;             /* wysokość linków */
-  line-height: 40px;        /* pionowe wyrównanie tekstu */
-  color: black;             /* domyślny kolor linku */
+  height: 40px;
+  line-height: 40px;
+  color: black;
   position: relative;
   cursor: pointer;
-  padding: 0;               /* brak paddingu w linkach */
+  padding: 0;
 }
 
-/* Pseudo-element ::after dla aktywnego linku */
+
 .nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 37px;               /* szerokość linii dopasowana do tekstu */
+  width: 37px;
   height: 4px;
   border-radius: 8px;
   background: var(--blue);
@@ -69,7 +68,6 @@ body {
 
 
 
-/* Hover - zmiana koloru tekstu */
 .nav__link:hover {
   color: var(--blue);
 }
@@ -80,10 +78,10 @@ body {
 
 .container {
   display: flex;
-  align-items: center;      /* wyśrodkowanie pionowe */
+  align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;        /* ograniczenie szerokości */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;          /* odstęp od krawędzi ekranu */
+  padding: 0 16px;
 }
