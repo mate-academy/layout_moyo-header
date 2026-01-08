@@ -1,11 +1,7 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 
 :root {
-  --blue: #0aacdc;
+  --blue: rgba(0, 172, 220, 1);
 }
 
 body {
@@ -19,7 +15,6 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px 50px;
 }
 
 .logo img {
@@ -28,16 +23,26 @@ body {
   display: block;
 }
 
+.nav__link.is-active {
+  color: rgba(0, 172, 220, 1);
+}
+
+.nav__link.is-active2 {
+  color: rgba(0, 172, 220, 1);
+}
+
 .nav__list {
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
+
 
 .nav__list li:not(:last-child) {
   margin-right: 20px;
 }
+
 
 .nav__link {
   display: flex;
@@ -48,7 +53,7 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: #333;
+  color: black;
   position: relative;
   cursor: pointer;
 }
@@ -61,9 +66,21 @@ body {
   width: 37px;       /* dopasowane do Figma dla aktywnego linku */
   height: 4px;
   border-radius: 8px;
-  background: var(--blue);
 }
 
 .nav__link:hover {
-  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
 }
+
+.container {
+  display: flex;
+  align-items: center; /* <- wyrównanie pionowe */
+  justify-content: space-between; /* logo po lewej, nav po prawej */
+  height: 100%;
+  max-width: 1200px;   /* opcjonalnie ograniczamy szerokość kontenera */
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+
