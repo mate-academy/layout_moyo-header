@@ -13,7 +13,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - the header should stretch the full page width (don't use a horizontal margin)
 - the height should be set for nav links (not the header), take it from the design
 - header content should be vertically centered
-- the logo should also be a link with an image inside (from [src/images](src/images)). But it should not be a part of the `<nav>`
+- the logo should also be a link with an image inside (from [src/images](src/images)npm ). But it should not be a part of the `<nav>`
 - ❗️ the blue link with a line below should have a class `is-active` in addition to any other classes you add
 - ❗️ add `data-qa="hover"` attribute to the 4th link for testing (`Laptops & computers`)
 - link color should be changed on `:hover`
@@ -27,8 +27,9 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://eg3844540-svg.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://github.com/eg3844540-svg/layout_moyo-header/blob/main/report/html_report/index.html)
+
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
@@ -39,5 +40,5 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [ ] **CSS Variable** is used for a blue color
 - [ ] Pseudo-element is used for a blue line below the active link
 - [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
-- [ ] The Google Fonts Configuration follows requirements. 
+- [ ] The Google Fonts Configuration follows requirements.
 ![alt text](./assets/image.png)

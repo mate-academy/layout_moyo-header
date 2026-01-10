@@ -1,3 +1,81 @@
+:root {
+  --color-blue: #0a4fd8;
+  --color-black: #000;
+}
+
+/* Reset exigido */
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+/* Header ocupa toda largura */
+.header {
+  background-color: #fff;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: block;
+  height: 32px;
+}
+
+/* Navegação */
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 32px;
+}
+
+/* Links */
+.nav-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 64px;
+
+  text-decoration: none;
+  color: var(--color-black);
+  text-transform: uppercase;
+}
+
+/* Hover */
+.nav-link:hover {
+  color: var(--color-blue);
+}
+
+/* Active link */
+.nav-link.is-active {
+  color: var(--color-blue);
+}
+
+/* Linha azul abaixo do link ativo */
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-blue);
 }
