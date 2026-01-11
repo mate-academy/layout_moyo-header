@@ -1,3 +1,98 @@
+:root {
+  /* Define the blue color here. Adjust hex code to match Figma exactly */
+  --accent-color: #00acdc;
+  --text-color: #000;
+}
+
+/* Requirement: Reset browser default margins */
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+  /* Add padding if the design requires it, e.g., padding: 0 20px; */
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+
+  /* Add margin-right to separate logo from nav if needed */
+
+  margin-left: 50px;
+}
+
+.logo {
+  display: block;
+  height: 40px;
+
+  /* Set width/height based on design, e.g.: */
+
+  /* width: 100px; */
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-right: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nav__item {
+  /* Requirement: Don't use flex gap. Use margin instead. */
+
+  /* Requirement: No margin after the last item is handled by :not(:last-child) */
+  margin-right: 20px; /* Adjust distance to match design */
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--text-color);
+  text-transform: uppercase;
+  position: relative;
+
+  /* Requirement: Height set on nav links, content centered */
+  height: 60px; /* Example height - Check Figma for exact value */
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+/* Requirement: Link color changed on :hover */
+.nav__link:hover {
+  color: var(--accent-color);
+}
+
+/* Requirement: Active state styling */
+.nav__link.is-active {
+  color: var(--accent-color);
+}
+
+/* Requirement: Blue line using ::after positioned relative to the link */
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+  width: 100%;
+  height: 4px; /* Line thickness */
+  background-color: var(--accent-color);
 }
