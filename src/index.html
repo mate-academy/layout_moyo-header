@@ -1,22 +1,121 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline';"
+    />
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      content="width=device-width,
+      initial-scale=1.0,
+      maximum-scale=1.0,
+      minimum-scale=1.0,
+      user-scalable=no"
     />
     <meta
       http-equiv="X-UA-Compatible"
       content="ie=edge"
     />
     <title>Moyo header</title>
+
+    <!-- ✅ Підключення Roboto 500 regular -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ Підключення стилів -->
     <link
       rel="stylesheet"
       href="./style.css"
     />
   </head>
   <body>
-    <h1>Moyo header</h1>
+    <!-- ✅ Семантичний header -->
+    <header class="main-header container">
+      <!-- ✅ Логотип як посилання з зображенням -->
+      <a
+        href="/"
+        class="logo"
+      >
+        <img
+          src="images/logo.png"
+          alt="MOYO logo"
+        />
+      </a>
+
+      <!-- ✅ Семантична навігація -->
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a
+              href="/apple"
+              class="main-nav__link is-active"
+            >
+              Apple
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a
+              href="/samsung"
+              class="main-nav__link"
+            >
+              Samsung
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a
+              href="/smartphones"
+              class="main-nav__link"
+            >
+              Smartphones
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a
+              href="/laptops-computers"
+              class="main-nav__link"
+              data-qa="hover"
+            >
+              Laptops & Computers
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a
+              href="/gadgets"
+              class="main-nav__link"
+            >
+              Gadgets
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a
+              href="/tablets"
+              class="main-nav__link"
+            >
+              Tablets
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a
+              href="/photo"
+              class="main-nav__link"
+            >
+              Photo
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a
+              href="/video"
+              class="main-nav__link"
+            >
+              Video
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>

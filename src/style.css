@@ -1,3 +1,145 @@
-body {
+/* ✅ Змінна кольору в :root */
+:root {
+  --color-blue: rgba(0, 172, 220, 1);
+}
+
+/* ✅ Базове скидання */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+ul,
+li,
+nav,
+header {
   margin: 0;
+  padding: 0;
+}
+
+/* ✅ Базові стилі */
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background: #fff;
+}
+
+/* ✅ Header */
+.main-header.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+/* ✅ Логотип */
+.logo {
+  display: block;
+}
+
+.logo img {
+  display: block;
+  height: 100%;
+}
+
+/* ✅ Навігація */
+.main-nav {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ✅ Список навігації */
+.main-nav__list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+/* ✅ Пункти навігації */
+.main-nav__item {
+  margin-left: 20px;
+  flex-shrink: 0;
+  display: flex;
+}
+
+/* ✅ Перший пункт без лівого відступу */
+.main-nav__item:first-child {
+  margin-left: 0;
+}
+
+/* ✅ Останній пункт без правого відступу */
+.main-nav__item:last-child {
+  margin-right: 0;
+}
+
+/* ✅ Посилання */
+.main-nav__link {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  line-height: 15px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+
+.main-nav__link:hover {
+  color: var(--color-blue);
+}
+
+/* ✅ Активне посилання */
+.main-nav__link.is-active {
+  color: var(--color-blue);
+}
+
+.main-nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--color-blue);
+  border-radius: 8px;
+}
+
+/* ✅ Hover-ефект */
+.main-nav__link[data-qa='hover']:hover {
+  color: var(--color-blue);
+}
+
+/* ✅ Адаптив */
+@media (max-width: 1024px) {
+  .main-header.container {
+    max-width: 1024px;
+    padding: 0 50px;
+    justify-content: flex-start;
+  }
+
+  .main-nav__list {
+    margin-left: 243px;
+  }
+
+  .main-nav__item {
+    margin-left: 20px;
+  }
+
+  .main-nav__item:first-child {
+    margin-left: 0;
+  }
 }
