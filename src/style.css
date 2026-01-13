@@ -1,3 +1,7 @@
+:root {
+  --blue: #00acdc;
+}
+
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
@@ -5,10 +9,16 @@ body {
 }
 
 .header {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
   max-width: 1200px;
   height: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -45,8 +55,8 @@ body {
 }
 
 .link.is-active,
-.link[data-qa='hover']:hover {
-  color: #00acdc;
+.link:hover {
+  color: var(--blue);
 }
 
 .link.is-active::after {
@@ -58,4 +68,3 @@ body {
   width: 100%;
   background-color: #00acdc;
 }
-
