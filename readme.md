@@ -8,7 +8,7 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 ## Requirements:
 
 - reset browser default margins
-- use [Roboto font](https://fonts.google.com/specimen/Roboto): select ONLY **roman** style, **medium (500)** weight and **normal** width for embedding. **THIS STEP IS IMPORTANT, OR YOUR AUTO TEST MAY FAIL. Take a look at the image at the end of the Readme.**
+- use [Roboto font](https://fonts.google.com/specivb hy7[men/Roboto): select ONLY **roman** style, **medium (500)** weight and **normal** width for embedding. **THIS STEP IS IMPORTANT, OR YOUR AUTO TEST MAY FAIL. Take a look at the image at the end of the Readme.**
 - use semantic tags: `<header>`, `<img>`, `<nav>`, `<ul>`, `<li>` and `<a>`
 - the header should stretch the full page width (don't use a horizontal margin)
 - the height should be set for nav links (not the header), take it from the design
@@ -27,17 +27,17 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 
 ❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+- [DEMO LINK](https://katrysyar.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://katrysyar.github.io/layout_moyo-header/report/html_report/)
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
 
-- [ ] Header height is set in 1 place (for the links)
-- [ ] Content is vertically centered (for any header height)
-- [ ] CSS is used to show all letters in Uppercase (don't type them in HTML)
-- [ ] Logo is an image wrapped with a link
-- [ ] **CSS Variable** is used for a blue color
-- [ ] Pseudo-element is used for a blue line below the active link
-- [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
-- [ ] The Google Fonts Configuration follows requirements. 
+- [x] Header height is set in 1 place (for the links)
+- [x] Content is vertically centered (for any header height)
+- [x] CSS is used to show all letters in Uppercase (don't type them in HTML)
+- [x] Logo is an image wrapped with a link
+- [x] **CSS Variable** is used for a blue color
+- [x] Pseudo-element is used for a blue line below the active link
+- [x] Code follows all the [Code Style Rules ❗️](./checklist.md)
+- [x] The Google Fonts Configuration follows requirements.
 ![alt text](./assets/image.png)
