@@ -1,20 +1,22 @@
 html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
+
+  --main-color: #00acdc;
 }
 
 body {
   margin: 0;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
 }
 
-.a__logo {
+.header__logo {
   display: block;
   height: 40px;
   width: 40px;
@@ -40,13 +42,14 @@ header {
   display: block;
   height: 60px;
   line-height: 60px;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--main-color);
   position: relative;
 }
 
@@ -57,10 +60,10 @@ header {
   right: 0;
   bottom: 0;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--main-color);
   border-radius: 8px;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--main-color);
 }
