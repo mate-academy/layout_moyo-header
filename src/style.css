@@ -1,3 +1,95 @@
-body {
+:root {
+  --blue: #00acdc;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: auto;
+  background-color: #fff;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 50px;
+}
+
+.logo {
+  height: 40px;
+  display: block;
+}
+
+.main-nav {
+  display: flex;
+  position: relative;
+  margin-left: auto;
+}
+
+.right-padding {
+  flex-shrink: 0;
+  width: 50px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.nav-link.is-active {
+  position: relative;
+  color: var(--blue);
+}
+
+.nav-link:visited {
+  color: var(--blue);
+}
+
+.nav-link:hover {
+  color: var(--blue);
+}
+
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--blue);
 }
