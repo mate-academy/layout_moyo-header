@@ -1,3 +1,98 @@
+/* Шрифта на всю страницу */
+html {
+  font-family: Roboto, sans-serif;
+
+  --header-color: #00acdc;
+}
+
+/* Обнуление зазоров и подложки */
 body {
   margin: 0;
+  padding: 0;
+}
+
+/* Настройка расположение объектоа в шапке */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 50px;
+}
+
+/* Параметры расположения навигационного списка */
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+/* Параметры навигационных ссылок */
+.nav__link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 60px;
+  height: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+}
+
+/* Окрашивание шрифтов при взаимодействии с навигационными ссылками */
+.nav__link:hover {
+  color: var(--header-color);
+}
+
+/* Параметр для активной ссылки */
+.is-active {
+  color: var(--header-color);
+  position: relative;
+}
+
+/* Параметр для линии активной ссылки */
+.is-active::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--header-color);
+  border-radius: 8px;
+}
+
+/* Параметры для логотипа */
+.logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  .logo img {
+    height: 40px;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .nav__item a {
+    font-size: 12px;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
 }
