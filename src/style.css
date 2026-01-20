@@ -1,3 +1,72 @@
+:root {
+  --active-color: #00acdc;
+  --primire-color: #000;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  padding: 0 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-img {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+}
+
+.nav_list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.list_item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: var(--primire-color);
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.link:hover {
+  color: var(--active-color);
+}
+
+.link.is-active {
+  position: relative;
+  color: var(--active-color);
+}
+
+.link.is-active::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--active-color);
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
 }
