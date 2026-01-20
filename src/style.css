@@ -1,3 +1,70 @@
+* {
+  box-sizing: border-box;
+
+  --text-color: #00acdc;
+}
+
 body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: grey;
   margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 1024px;
+  background: #fff;
+  padding: 0 50px;
+}
+
+.logo__link {
+  display: flex;
+  align-items: center;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_item:not(:last-child) {
+  margin: 0 20px 0 0;
+}
+
+.gadgets {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.apple {
+  color: var(--text-color);
+}
+
+.gadgets:hover {
+  color: var(--text-color);
+}
+
+.apple::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--text-color);
 }
