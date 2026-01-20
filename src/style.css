@@ -1,3 +1,99 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 50px;
+  width: 100%;
+}
+
+.site-logo {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.logo-row {
+  display: flex;
+}
+
+.logo-blue,
+.logo-black {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+
+.logo-black {
+  background-color: #000;
+}
+
+.logo-blue {
+  background-color: #00bdf2;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 24px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #000;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  position: relative;
+}
+
+.nav-item a.is-active {
+  color: #00bdf2;
+}
+
+.nav-item a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00bdf2;
+}
+
+.nav-item a:hover,
+.nav-item a[data-qa='hover'] {
+  color: #00bdf2;
 }
