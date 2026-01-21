@@ -1,3 +1,113 @@
-body {
+:root {
+  --blue: #00acdc;
+  --underline-offset: -6px;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  padding-right: 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.img {
+  height: 40px;
+  width: auto;
+  padding-left: 30px;
+}
+
+.link,
+.is-active {
+  height: 60px; /* Altura do link define altura do .header */
+  line-height: 60px; /* Alinha o texto verticalmente */
+  font-size: 12px;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+}
+
+.header > a {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.header img {
+  height: 40px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  height: 100%;
+}
+
+.nav_list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+
+.nav_item {
+  display: flex;
+  height: 100%;
+}
+
+.link:hover {
+  color: var(--blue);
+}
+
+.nav_item:first-child a {
+  margin-left: 0;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: var(--underline-offset);
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--blue);
+  border-radius: 8px;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.is-active {
+  color: var(--blue);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue);
+  border-radius: 8px;
 }
