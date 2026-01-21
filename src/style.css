@@ -1,3 +1,123 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  background: rgba(255, 255, 255, 1);
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-link .logo {
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .nav_item {
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.navbar .nav_item:first-child {
+  margin-left: 0;
+}
+
+.navbar .nav_item:last-child {
+  margin-right: 0;
+}
+
+.navbar .nav_item .nav_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 60px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.navbar .nav_item .nav_link[data-qa='hover']:hover {
+  color: rgba(0, 172, 220, 1);
+}
+
+.navbar .nav_item .is-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 60px;
+  color: rgba(0, 172, 220, 1);
+}
+
+.navbar .nav_item .is-active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  border-radius: 8px;
+  background-color: rgba(0, 172, 220, 1);
+}
+
+.navbar .nav_item :hover {
+  color: rgba(0, 172, 220, 1);
 }
