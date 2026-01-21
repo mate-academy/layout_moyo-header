@@ -1,3 +1,98 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-link:hover {
+  color: var(--blue-color);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.logo {
+  height: 40px;
+  vertical-align: middle;
+  padding-left: 50px;
+}
+
+.navigation {
+  margin-left: auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+}
+
+.list-item {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.list-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.list-item:first-child {
+  margin-left: 0;
+}
+
+.list-item:last-child {
+  margin-right: 0;
+}
+
+.list-item a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-active {
+  position: relative;
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
 }
