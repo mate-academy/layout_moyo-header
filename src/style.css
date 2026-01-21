@@ -1,3 +1,68 @@
-body {
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
+
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo__link img {
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.list__link {
+  margin-left: 20px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.list__link__content {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  height: 60px;
+  line-height: 60px;
+  font-size: 12px;
+}
+
+a[data-qa='hover']:hover {
+  color: #00acdc;
+}
+
+.list__link:first-of-type {
+  margin: 0;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  bottom: 0;
+  border-radius: 8px;
 }
