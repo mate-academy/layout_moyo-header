@@ -1,3 +1,108 @@
-body {
+/* stylelint-disable font-family-name-quotes */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+header {
+  width: 100%;
+  background: white;
+  padding: 0 10px;
+}
+
+.container {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.logo img {
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.nav {
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 22.5px 0;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+}
+
+.nav__list li + li {
+  margin-left: 20px;
+}
+
+.nav__list a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  text-align: center;
+  transition: color 0.3s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav__list a[data-qa='hover']:hover {
+  color: #00acdc;
+}
+
+.nav__list a.is-active {
+  color: #00acdc;
+}
+
+.nav__list a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 30px;
+  height: 4px;
+  width: 100%;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
+
+.nav__list a.item-blue {
+  color: #00acdc;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+
+  .nav {
+    padding: 22.5px 0;
+  }
+
+  .nav__list {
+    font-size: 12px;
+  }
+
+  .nav__list a.is-active::after {
+    top: 30px;
+  }
 }
