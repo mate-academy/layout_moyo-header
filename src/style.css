@@ -1,3 +1,100 @@
+html {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0 auto;
+  padding: 0 auto;
+
+  --main-color: #00acdc;
+}
+
 body {
   margin: 0;
+  background-color: #aaa7a7;
+}
+
+.header {
+  text-transform: uppercase;
+  display: flex;
+  background-color: #fff;
+  font-size: 12px;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+  margin-left: 0;
+  padding: 0;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.nav-item {
+  list-style: none;
+  margin-right: 0;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  height: 60px;
+  line-height: 60px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.is-active {
+  position: relative;
+  color: var(--main-color);
+  display: flex;
+  align-items: stretch;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--main-color);
+  align-self: flex-end;
+}
+
+nav a:hover {
+  color: var(--main-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.logo-image {
+  display: flex;
+  align-self: flex-end;
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 40px;
 }
