@@ -1,3 +1,92 @@
 body {
+  --blue-color: #00acdc;
+
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.moyo-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  justify-content: space-between;
+  text-align: center;
+  padding-left: 50px;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  height: auto;
+}
+
+/*
+.moyo-nav {
+  display: flex;
+  list-style: none;
+  padding-right: 50px;
+  margin: 0;
+}
+*/
+
+.box-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  justify-content: end;
+  padding: 0;
+  padding-right: 50px;
+}
+
+.Items-nav {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  padding: 0 10px;
+
+  /* margin: 0 10px; */
+  text-align: center;
+}
+
+.box-nav a:hover {
+  color: var(--blue-color);
+}
+
+.box-nav li:first-child a {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.box-nav li:last-child a {
+  margin-right: 0;
+  padding-right: 50px;
+}
+
+.box-nav a.is-active {
+  position: relative;
+  padding: 0;
+  margin-right: 10px;
+  color: var(--blue-color);
+}
+
+.box-nav a.is-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 15px;
+  text-align: center;
 }
