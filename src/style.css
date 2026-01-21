@@ -1,3 +1,77 @@
+:root {
+  --blue-color: #00acdc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.logo,
+nav,
+a {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+li + li {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  white-space: nowrap;
+}
+
+a:hover {
+  color: var(--blue-color);
+}
+
+.is-active {
+  color: var(--blue-color);
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Se coloca al pie del enlace */
+  left: 50%; /* Comienza en el centro del enlace */
+  transform: translateX(-50%); /* Lo centra horizontalmente */
+  width: 37px; /* Ancho según Figma */
+  height: 4px; /* Alto según Figma */
+  background-color: var(--blue-color);
+  border-radius: 8px; /* Redondeo según Figma */
 }
