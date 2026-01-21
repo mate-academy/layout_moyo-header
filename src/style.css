@@ -1,3 +1,116 @@
+:root {
+  --coolblue: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+header {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+.logo {
+  display: inline-flex;
+  justify-self: flex-start;
+  align-content: center;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  left: 50px;
+  bottom: 1px;
+}
+
+.navigation {
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+nav {
+  display: flex;
+  align-content: center;
+  position: relative;
+  right: 50px;
+}
+
+ul {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+}
+
+li {
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 100%;
+  align-content: center;
+  color: black;
+}
+
+.roboto-life {
+  font-family: Roboto, serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-variation-settings: 'wdth' 100;
+}
+
+.is-active {
+  color: var(--coolblue);
+  display: block;
+  text-justify: center;
+  text-align: center;
+  position: relative;
+  align-self: center;
+  box-sizing: border-box;
+  height: 64px;
+  overflow: visible;
+}
+
+.is-active::after {
+  overflow: visible;
+  border-radius: 8px;
+  content: '';
+  display: block;
+  position: relative;
+  justify-content: flex-end;
+  align-self: flex-end;
+  height: 4px;
+  width: 100%;
+  top: 20px;
+  background-color: var(--coolblue);
+  float: inline-end;
+}
+
+.first {
+  display: flex;
+  height: 64px;
+  text-align: center;
+  text-justify: center;
+  align-items: center;
+  justify-self: center;
+  margin-left: 0;
+}
+
+.last {
+  margin-right: 0;
+}
+
+.test:hover {
+  color: var(--coolblue);
 }
