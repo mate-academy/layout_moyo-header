@@ -1,3 +1,91 @@
+html {
+  --link-active: #00acdc;
+}
+
+.roboto-medium {
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.nav {
+  align-items: center;
+}
+
+.nav,
+.nav__list,
+.nav__link {
+  display: flex;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  position: relative;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav__link:hover {
+  color: var(--link-active);
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.logo__link {
+  display: flex;
+  align-items: center;
+}
+
+.is-active {
+  color: var(--link-active);
+}
+
+.is-active::after {
+  content: '';
+  background-color: var(--link-active);
+  height: 4px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header__container {
+  display: flex;
+  padding: 0 50px;
+  width: 100%;
+  justify-content: space-between;
 }
