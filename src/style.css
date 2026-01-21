@@ -1,3 +1,89 @@
+/* stylelint-disable scss/operator-no-newline-after */
+
+html {
+  font-family: Roboto, serif;
+  font-weight: 500;
+  font-size: 12px;
+
+  --width-nav-apple: 56.55px;
+  --width-nav-samsung: 77.53px;
+  --width-nav-smartphones: 107.28px;
+  --width-nav-laptops-and-computers: 157.23px;
+  --width-nav-gadgets: 73.53px;
+  --width-nav-tablets: 70.16px;
+  --width-nav-photo: 59.58px;
+  --width-nav-video: 54.03px;
+  --width-nav-right-margin: 50px;
+  --width-nav-link-margin: 10px;
+  --height-link: 60px;
+  --radius-underline: 4px;
+  --color-link: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  display: block;
+  padding-top: 10px;
+  padding-left: 50px;
+  flex-grow: 1;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  float: left;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  height: var(--height-link);
+  display: block;
+  align-content: center;
+  margin: 0 var(--width-nav-link-margin);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.link.first {
+  margin: 0 var(--width-nav-link-margin) 0 0;
+}
+
+.link.last {
+  margin: 0 0 0 var(--width-nav-link-margin);
+}
+
+.link:hover,
+.is-active {
+  color: var(--color-link);
+}
+
+.right-margin {
+  display: block;
+  width: var(--width-nav-right-margin);
+  margin: 0;
+  padding: 0;
+}
+
+.is-active::after {
+  content: '';
+  border-style: solid;
+  border-radius: var(--radius-underline);
+  border-width: calc(var(--radius-underline) / 2);
+  position: absolute;
+  top: calc(var(--height-link) - var(--radius-underline));
+  left: 0;
+  width: calc(100% - var(--radius-underline));
 }
