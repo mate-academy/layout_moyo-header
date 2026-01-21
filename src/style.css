@@ -1,3 +1,73 @@
-body {
+:root{
+  --blue:#00ACDC;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+header.cabecalho{
+  width: 100%;
+  height: 60px;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 16px 32px;
+  left: 0;
+}
+
+.cabecalho img {
+
+  height: 40px;
+  left: 50px;
+  top: 10px;
+}
+
+
+nav.container ul{
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  list-style: none;
+  color: black;
+}
+li:not(:first-child) {
+  margin-left: 32px;
+}
+nav.container a{
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  height: 40px;
+  line-height: 40px;
+
+}
+nav.container a:hover{
+  text-decoration: underline var(--blue);
+}
+[data-qa="hover"]{
+  color: var(--blue);
+}
+.is-active {
+  position: relative;
+}
+
+
+.is-active::after {
+  top: 30px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue);
+  content: "";
+  border-radius: 10px;
 }
