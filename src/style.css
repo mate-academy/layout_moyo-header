@@ -1,3 +1,89 @@
+:root {
+  --color-1: #00acdc;
+}
+
 body {
+  padding: 0;
+  box-sizing: border-box;
   margin: 0;
+  font-family: Roboto, sans-serif;
+  color: black;
+}
+
+.nav-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background: white;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-area .logo {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  display: block;
+}
+
+.nav-area .logo img {
+  width: 100%;
+}
+
+.nav-area ul {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+
+  /*
+  gap: 20px;
+  */
+}
+
+.nav-area ul li {
+  height: 60px;
+  display: block;
+}
+
+.nav-area a {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  height: 60px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.nav-area .is-active {
+  position: relative;
+  color: var(--color-1);
+}
+
+.nav-area .is-active::before {
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 20px;
+  background-color: var(--color-1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-area a:hover {
+  color: var(--color-1);
+}
+
+@media (max-width: 760px) {
+  .nav-area .logo {
+    display: none;
+  }
 }
