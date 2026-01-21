@@ -1,3 +1,83 @@
 body {
+  --blue-color: #00acdc;
+
   margin: 0;
+}
+
+.textFont {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
+.menu {
+  padding-inline: 50px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.nav-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+  margin: 0;
+}
+
+.box {
+  margin-left: 20px;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 100%;
+  height: 60px;
+  letter-spacing: 0;
+  color: #000;
+}
+
+li:first-child a {
+  margin-left: 0;
+}
+
+.special-color {
+  color: var(--blue-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--blue-color);
+}
+
+.box:hover {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  content: '';
+  bottom: 0;
+  border-radius: 8px;
+  background-color: var(--blue-color);
+  overflow: hidden;
 }
