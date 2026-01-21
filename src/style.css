@@ -1,3 +1,135 @@
-body {
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
+
+:root {
+  --blue-color: #00acdc;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px #0000000d;
+  justify-content: space-between;
+}
+
+.logo-link {
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-link img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.logo-link:hover {
+  box-shadow: inset 0 0 0 2px var(--blue-color);
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.nav-list .nav-item:nth-child(2) {
+  /* SAMSUNG */
+  margin-left: 20px;
+}
+
+.nav-list .nav-item:nth-child(3) {
+  /* SMARTPHONES */
+  margin-left: 20px;
+}
+
+.nav-list .nav-item:nth-child(4) {
+  /* LAPTOPS & COMPUTERS */
+  margin-left: 20px;
+}
+
+.nav-list .nav-item:nth-child(5) {
+  /* GADGETS */
+  margin-left: 20px;
+}
+
+.nav-list .nav-item:nth-child(6) {
+  /* TABLETS */
+  margin-left: 20px;
+}
+
+.nav-list .nav-item:nth-child(7) {
+  /* PHOTO */
+  margin-left: 20px;
+}
+
+.nav-list .nav-item:nth-child(8) {
+  /* VIDEO */
+  margin-left: 20px;
+}
+
+.nav-link {
+  white-space: nowrap;
+  color: #000;
+  line-height: 60px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+/* ДОДАНО: Зміна кольору тексту на синій при наведенні */
+.nav-link:hover {
+  color: var(--blue-color);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Колір для активного APPLE та LAPTOPS & COMPUTERS */
+.nav-list .nav-item:nth-child(1) .nav-link {
+  color: var(--blue-color);
+}
+
+/* ПОСТІЙНА АКТИВНА ЛІНІЯ ПІД APPLE (::before) */
+.nav-link.is-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--blue-color);
+  border-radius: 8px;
+
+  /* Обчислене значення bottom, щоб низ лінії був на 60px від верху хедера */
+  bottom: 0;
+}
+
+/* При наведенні на активний елемент, його ::after (hover) буде поверх ::before (active) */
+.nav-link.is-active:hover::after {
+  width: 100%; /* Залишаємо 100% ширини для hover-ефекту над активною лінією */
 }
