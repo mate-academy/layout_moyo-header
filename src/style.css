@@ -1,3 +1,72 @@
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+}
+
+a:hover {
+   color: var(--blue);
+}
+
+.is-active {
+  color: var(--blue);
+  position: relative; /* Establishes positioning context for ::after */
+}
+
+.is-active::after {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute; /* Positions relative to the .is-active link */
+  display: block; /* Allows setting width, height */
+  width: 100%; /* Example styling: full width of the link */
+  height: 2px; /* Example styling: a thin line */
+  background-color: var(--blue); /* Example styling: color of the line */
+  bottom: -5px; /* Example positioning: 5px below the link */
+  left: 0; /* Example positioning: aligned to the left edge */
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
 }
