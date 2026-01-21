@@ -1,3 +1,91 @@
-body {
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+a,
+header,
+nav,
+ul {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+header,
+nav {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --main-blue: #00acdc;
+}
+
+.header {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header .nav .nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header .nav .nav__list .nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header .nav .nav__list .nav__item .nav__link {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 12px;
+  line-height: 14.6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s ease-in-out;
+  position: relative;
+  height: 60px;
+}
+
+.header .nav .nav__list .nav__item .nav__link.is-active {
+  color: var(--main-blue);
+}
+
+.header .nav .nav__list .nav__item .nav__link.is-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--main-blue);
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.header .nav .nav__list .nav__item .nav__link:hover {
+  color: var(--main-blue);
 }
