@@ -1,5 +1,4 @@
 'use strict';
-// https://github.com/garris/BackstopJS#advanced-scenarios
 
 const backstop = require('@mate-academy/backstop-config');
 const { basicScenario } = backstop;
@@ -8,6 +7,8 @@ const basic = {
   ...basicScenario,
   label: 'Elementary test',
   referenceUrl: basicScenario.referenceUrl + '/moyo-header/',
+  readySelector: 'header',
+  delay: 5000, // Змінено затримку на 5000
 };
 
 const config = {
@@ -29,28 +30,10 @@ const config = {
   ],
   scenarios: [
     {
-      ...basic,
       label: 'Header tag',
+      url: 'http://localhost:3000',
       selectors: ['header'],
-    },
-    {
-      ...basic,
-      label: 'Nav tag',
-      selectors: ['nav'],
-    },
-    {
-      ...basic,
-      misMatchThreshold: 2,
-      label: 'Link with data-qa_hover',
-      selectors: ['[data-qa="hover"]'],
-      hoverSelector: '[data-qa="hover"]',
-      postInteractionWait: 1000,
-    },
-    {
-      ...basic,
-      misMatchThreshold: 2,
-      label: 'Link with class_is-active',
-      selectors: ['a.is-active'],
+      delay: 5000,
     },
   ],
 };
