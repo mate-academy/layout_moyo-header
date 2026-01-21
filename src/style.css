@@ -1,3 +1,100 @@
-body {
+/* 1. Reset básico e fonte Roboto */
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  background-color: #fff;
+  color: #333;
+}
+
+:root {
+  --blue: #237cff;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+  align-items: center;
+  padding: 0 16px; /* Ajuste para dispositivos menores */
+  background: #fff;
+  min-height: 80px;
+
+}
+
+.header__logo-link {
+  width: 300px;
+  margin-left: 50px;
+  margin-right: auto; /* Alinha o logo à esquerda */
+}
+
+.nav {
+  flex: 1;
+  margin-left: 400px;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+  list-style: none;
+}
+
+.nav__item {
+  margin: 8px; /* Espaçamento entre os itens */
+}
+
+.nav__link {
+  position: relative;
+  text-transform: uppercase;
+  color: #222;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.2s;
+}
+
+.nav__link::after {
+  content: ' ';
+  width: 0;
+  height: 4px;
+  background-color: #237cff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav__link:hover::after {
+  color: var(--blue);
+  width: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+.nav__link.is-active {
+  color: var(--blue);
+}
+
+.nav__link[data-qa="hover"]:hover {
+    color: var(--blue);
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Muda a direção para coluna em telas menores */
+    align-items: flex-start; /* Alinha itens à esquerda */
+  }
+
+  .nav__list {
+    flex-direction: column; /* Muda a direção da lista para coluna */
+    width: 100%; /* Ocupa toda a largura */
+  }
+
+  .nav__item {
+    margin: 4px 0; /* Ajusta o espaçamento entre os itens */
+  }
 }
