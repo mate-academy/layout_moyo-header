@@ -1,3 +1,83 @@
+:root {
+  --cor-azul: #00acdc;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #fff; /* ou remova */
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.logo_img {
+  margin-left: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  box-sizing: border-box;
+  margin-right: 40px;
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_link {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s;
+  color: #000;
+  margin: 0;
+}
+
+.nav_link:hover {
+  color: var(--cor-azul); /* Troca a cor do link ao passar o mouse */
+}
+
+.nav_list li + li .nav_link {
+  margin-left: 20px;
+}
+
+.nav_list li:last-child .nav_link {
+  margin-right: 0; /* remove depois do último */
+}
+
+/* Link ativo */
+.is-active {
+  color: var(--cor-azul);
+}
+
+/* Linha azul para o link ativo */
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--cor-azul);
+  border-radius: 2px;
 }
