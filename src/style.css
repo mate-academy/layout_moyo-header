@@ -1,3 +1,78 @@
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.nav__link__item {
+  text-decoration: none;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-transform: uppercase;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__link {
+  margin: 0 10px;
+  position: relative;
+  font-size: 12px;
+}
+
+.is-active {
+  color: var(--blue);
+}
+
+.nav__link__item.is-active::after {
+  content: '';
+  background-color: var(--blue);
+  height: 4px;
+  width: 100%;
+  border-radius: 12px;
+  position: absolute;
+  bottom: 0;
+}
+
+.nav__link:first-child {
+  margin-left: 0;
+}
+
+.nav__link:last-child {
+  margin-right: 0;
+}
+
+.nav__link__item:hover {
+  color: var(--blue);
 }
