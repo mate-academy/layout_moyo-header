@@ -1,0 +1,64 @@
+:root {
+  --blue-color: #0057ff; /* Dopasuj do koloru z Figma */
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.logo img {
+  display: block;
+  height: 40px; /* Dopasuj do Figma */
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 32px; /* Odstęp między linkami */
+}
+
+.nav__link {
+  display: block;
+  height: 48px;
+  line-height: 48px;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+}
+
+.nav__link.is-active {
+  color: var(--blue-color);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue-color);
+}
