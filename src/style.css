@@ -1,3 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  /* stylelint-disable-next-line font-family-name-quotes */
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
+:root {
+  --blue-color: #00acdc;
+  --nav-height: 60px;
+  --container-width: 1024px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 48px;
+  height: var(--nav-height);
+}
+
+.logo img {
+  display: block;
+}
+
+nav .nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-list li:first-child {
+  margin-left: 0;
+}
+
+.nav-list a.is-active {
+  color: var(--blue-color); /* підсвічування тексту */
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  line-height: var(--nav-height);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav-list a:hover {
+  color: var(--blue-color);
+}
+
+.nav-list a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
 }
