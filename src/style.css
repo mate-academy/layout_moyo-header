@@ -1,3 +1,87 @@
-body {
+/* ------------resetcss------------- */
+
+.reset *,
+.reset *::before,
+.reset *::after {
   margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------------- */
+
+:root {
+  --hover-color: #00acdc;
+}
+
+.header__content {
+  padding-right: 50px;
+  padding-left: 50px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+.menu__item {
+  display: flex;
+}
+
+.menu__list {
+  list-style: none;
+  padding-right: 20px;
+}
+
+.menu__list:last-child {
+  padding-right: 0;
+}
+
+.menu__link {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 60px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu__link[data-qa='hover']:hover {
+  color: var(--hover-color);
+}
+
+.menu__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--hover-color);
+}
+
+.is-active {
+  color: var(--hover-color);
+}
+
+.header__logo {
+  color: inherit;
+  text-decoration: none;
 }
