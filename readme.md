@@ -1,11 +1,15 @@
 # Moyo header
 Create an HTML page with the header using `flexbox` based on the [Figma Mockup](https://www.figma.com/file/1sog2rmfyCjnVxkeZ3ptnc/MOYO-%2F-Header?node-id=0%3A1&mode=dev).
 
+
 The page should match the design Pixel Perfect: all the sizes, colors and distances MUST be the same as on the design.
+
 
 > Here are the [Layout Tasks Instructions](https://mate-academy.github.io/layout_task-guideline)
 
+
 ## Requirements:
+
 
 - reset browser default margins
 - use [Roboto font](https://fonts.google.com/specimen/Roboto): select ONLY **roman** style, **medium (500)** weight and **normal** width for embedding. **THIS STEP IS IMPORTANT, OR YOUR AUTO TEST MAY FAIL. Take a look at the image at the end of the Readme.**
@@ -23,14 +27,19 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - don't just copy all styles from Figma. Think, which of them are relevant. Uneven sizes (e.g. `line-height: 14.6px`) are definitely useless
 - Nav Links should not have any padding but have the text centered
 
+
 ## Checklist
+
 
 ❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
 
-- [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
-- [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
+
+- [DEMO LINK](https://ThandekaZulu.github.io/layout_moyo-header/)
+- [TEST REPORT LINK](https://ThandekaZulu.github.io/layout_moyo-header/report/html_report/)
+
 
 ❗️ Copy this `Checklist` to the `Pull Request` description after links, and put `- [x]` before each point after you checked it.
+
 
 - [ ] Header height is set in 1 place (for the links)
 - [ ] Content is vertically centered (for any header height)
@@ -39,5 +48,5 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [ ] **CSS Variable** is used for a blue color
 - [ ] Pseudo-element is used for a blue line below the active link
 - [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
-- [ ] The Google Fonts Configuration follows requirements. 
+- [ ] The Google Fonts Configuration follows requirements.
 ![alt text](./assets/image.png)
