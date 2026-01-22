@@ -1,3 +1,80 @@
+:root {
+  --blue-color: rgb(37, 173, 236);
+}
+
 body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
+  font-size: 12px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0 15px;
+}
+
+.nav-list li {
+  margin: 10px; /* Убираем отступы у первого и последнего элементов */
+}
+
+.nav-link {
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  display: inline-flex; /* Используйте inline-flex для уменьшения растяжения */
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  margin: 0 2px; /* Уменьшаем отступы между ссылками */
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--blue-color);
+}
+
+/* Стили для активной ссылки */
+.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 1px; /* Подправляем позицию подчёркивания */
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 15%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 15px; /* Добавляет отступы внутри шапки */
+}
+
+.headerlogo {
+  display: flex;
+  align-items: center;
+}
+
+.headerlogo-container {
+  width: 40px;
+  height: 40px;
+  overflow: hidden; /* скрывает часть изображения, выходящую за пределы */
+  margin-left: 30px;
+}
+
+.headerlogo-container img {
+  width: 100%; /* растягивает изображение по ширине */
+  height: 100%; /* растягивает изображение по высоте */
+  object-fit: contain; /* сохранит пропорции, не обрезая изображение */
+}
+
+.two {
+  color: var(--blue-color);
 }
