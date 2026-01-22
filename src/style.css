@@ -1,3 +1,94 @@
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-transform: uppercase;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 50px;
+  width: 100vw;
+}
+
+.logo_link {
+  align-items: center;
+  height: 40px;
+  width: 40px;
+}
+
+.nav {
+  height: 60px;
+  align-items: center;
+}
+
+.nav_list {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.nav_item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav_link {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  line-height: 60px;
+  font-size: 12px;
+}
+
+.nav_link:hover {
+  text-decoration: none;
+  text-decoration-color: var(--blue);
+  color: var(--blue);
+}
+
+.nav_link.is-active {
+  position: relative;
+  color: var(--blue);
+}
+
+.nav_link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 8px;
+  background: var(--blue);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
 }
