@@ -1,3 +1,91 @@
+html {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+  font-size: 12px;
+}
+
+.header {
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+.logo__link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.logo__link .logo__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item {
+  margin: 0 10px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  line-height: 1;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+}
+
+.nav__link.is-active {
+  position: relative;
+  color: var(--blue-color);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--blue-color);
+  border-radius: 8px;
 }
