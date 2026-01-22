@@ -1,0 +1,91 @@
+:root {
+  --blue: #00acdc;
+  --black: #000;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  background: var(--white);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* з референсу: лівий/правий відступ ~50px */
+  padding: 0 50px;
+
+  background: var(--white);
+}
+
+.header__logo-link {
+  display: block;
+}
+
+.header__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item {
+  margin: 0;
+}
+
+/* проміжки між пунктами рівно 20px */
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* висота задана ТІЛЬКИ тут (чекліст) */
+  height: 60px;
+
+  padding: 0;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px; /* 100% у Figma */
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+  color: var(--black);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav__link:hover {
+  color: var(--blue);
+}
+
+.nav__link.is-active {
+  color: var(--blue);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 4px;
+  background: var(--blue);
+  border-radius: 2px;
+}
