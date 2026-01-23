@@ -1,3 +1,77 @@
-body {
+:root {
+  --blue: #00acdc;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.navegation {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.ulList {
+  display: flex;
+  align-items: center;
+}
+
+.ulList li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.ulList li:last-child {
+  margin-right: 0;
+}
+
+a {
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+
+  font-size: 11px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  width: 0;
+  height: 4px;
+  background-color: var(--blue);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+.is-active {
+  color: var(--blue);
+}
+
+.is-active::after {
+  width: 100%;
 }
