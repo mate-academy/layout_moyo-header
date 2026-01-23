@@ -18,33 +18,43 @@ body {
   padding: 0 50px;
 }
 
-.moyo-header__logo img {
+.moyo-header__logo-img {
   display: block;
   width: 40px;
   height: 40px;
 }
 
-.moyo-header__nav {
+.moyo-header__nav ul {
   display: flex;
   font-size: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .moyo-header__nav-link {
   text-decoration: none;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
   height: var(--header-height);
   color: #000;
-  text-transform: uppercase;
 }
 
-.moyo-header__nav-link:last-child {
+.moyo-header__nav li {
+  margin-right: 20px;
+}
+
+.moyo-header__nav li:last-child {
   margin-right: 0;
 }
 
 .moyo-header__nav-link[data-qa='hover']:hover {
+  color: var(--blue);
+}
+
+.moyo-header__nav-link:hover {
   color: var(--blue);
 }
 
