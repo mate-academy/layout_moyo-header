@@ -1,3 +1,90 @@
+html {
+  box-sizing: border-box;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+}
+
+:root {
+  --header-color: #fff;
+  --text-color: #000;
+  --color-blue: #00acdc;
+  --font-size: 12px;
+  --height: 60px;
+}
+
 body {
   margin: 0;
+}
+
+header {
+  padding-inline: 50px;
+  background-color: var(--header-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  justify-content: center;
+  margin-left: auto;
+  display: flex;
+}
+
+.logo {
+  display: block;
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.is-active {
+  color: var(--color-blue);
+}
+
+.nav_item + .nav_item {
+  margin-left: 20px;
+}
+
+.nav_list {
+  margin: 0;
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.nav_link {
+  display: flex;
+  position: relative;
+  height: var(--height);
+  text-decoration: none;
+  color: var(--text-color);
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: var(--font-size);
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.nav_link:hover {
+  color: var(--color-blue);
+}
+
+.nav_link.is-active {
+  position: relative;
+  color: var(--color-blue);
+}
+
+.nav_link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: var(--color-blue);
 }
