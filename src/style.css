@@ -16,6 +16,7 @@ body {
 }
 
 .header {
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   padding-inline: 50px;
@@ -36,7 +37,7 @@ body {
   display: flex;
 }
 
-.nav__item {
+.nav__item + .nav__item {
   margin-left: 20px;
 }
 
@@ -49,7 +50,6 @@ body {
 }
 
 .is-active {
-  margin-left: -20px;
   color: var(--blue);
   position: relative;
 }
@@ -65,7 +65,7 @@ body {
   border-radius: 4px;
 }
 
-a:hover {
+.nav__link:hover {
   text-decoration: underline;
   text-decoration-color: var(--blue);
 }
