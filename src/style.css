@@ -1,15 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-html,
-body,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --primary-blue: #00acdc;
   --color-black: #000;
@@ -23,6 +11,13 @@ html {
   font-weight: 500;
   font-style: normal;
   color: var(--color-black);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -35,9 +30,7 @@ html {
 .header__logo {
   width: 40px;
   height: 40px;
-  display: block;
   align-items: center;
-  margin: 10px 0 10px 50px;
 }
 
 .logo {
@@ -48,6 +41,8 @@ html {
   list-style: none;
   display: flex;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .header__item + .header__item {
@@ -72,7 +67,6 @@ html {
 
 .header__link.is-active {
   color: var(--primary-blue);
-  position: relative;
 }
 
 .header__link.is-active::after {
