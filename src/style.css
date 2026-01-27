@@ -28,8 +28,16 @@ body {
   display: flex;
 }
 
-.nav_list > li {
+.nav_item {
   display: block;
+}
+
+.nav_item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .nav_link {
@@ -42,14 +50,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.nav_item:not(:first-child) {
-  margin-left: 10px;
-}
-
-.nav_item:not(:last-child) {
-  margin-right: 10px;
 }
 
 .nav_link.is-active {
