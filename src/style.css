@@ -2,25 +2,29 @@
   --blue: #00acdc;
   --nav-height: 56px;
 }
+
 body {
   margin: 0;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   background-color: #f5f7f9;
 }
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-weight: 500;
-  padding:0 40px;
+  padding: 0 40px;
   min-height: var(--nav-height);
   background-color: #fff;
 }
+
 .logo_image {
   display: block;
   width: 40px;
   height: 40px;
 }
+
 .nav_list {
   display: flex;
   list-style: none;
@@ -50,9 +54,11 @@ body {
 .nav_link:hover {
   color: var(--blue);
 }
+
 .nav_link.is-active {
   color: var(--blue);
 }
+
 .nav_link::after {
   content: '';
   position: absolute;
@@ -64,20 +70,26 @@ body {
   border-radius: 8px;
   opacity: 0;
   transform-origin: center;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
   transform: translateX(-50%) scaleX(0);
 }
-.nav_link:focus-visible{
+
+.nav_link:focus-visible {
   color: var(--blue);
 }
-.nav_link:focus-visible::after{
+
+.nav_link:focus-visible::after {
   transform: translateX(-50%) scaleX(1);
   opacity: 1;
 }
+
 .nav_link:hover::after {
   transform: translateX(-50%) scaleX(1);
   opacity: 1;
 }
+
 .nav_link.is-active::after {
   transform: translateX(-50%) scaleX(1);
   opacity: 1;
