@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -6,70 +6,66 @@
 }
 
 :root {
-  --blue: #007bff;
+  --blue: #007bff; /* ajuste conforme design */
+  --text-color: #333;
 }
 
 body {
   font-family: Roboto, sans-serif;
-  font-weight: 500;
 }
 
-.header {
+/* Header */
+.site-header {
   width: 100%;
+  background-color: #fff;
+}
+
+.container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px 40px;
 }
 
-.logo img {
-  display: block;
+/* Logo */
+.logo svg {
   height: 40px;
 }
 
-.nav_list {
-  list-style: none;
+/* Navegação */
+.nav-list {
   display: flex;
+  list-style: none;
 }
 
-.nav_list li {
-  margin: 0 20px;
+.nav-item + .nav-item {
+  margin-left: 40px; /* usar margin, não gap */
 }
 
-.nav_list li:first-child {
-  margin-left: 0;
-}
-
-.nav_list li:last-child {
-  margin-right: 0;
-}
-
-.nav_link {
-  display: inline-block;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
+.nav-link {
+  text-transform: uppercase;
   text-decoration: none;
-  color: #000;
-  text-transform: uppercase; /* todas letras em maiúsculas via CSS */
+  color: var(--text-color);
+  position: relative;
+  padding: 8px 0;
 }
 
 /* Hover */
-.nav_link:hover {
+.nav-link:hover {
   color: var(--blue);
 }
 
-/* Ativo com underline azul via pseudo-elemento */
-.nav_link.is-active {
+/* Link ativo */
+.nav-link.is-active {
   color: var(--blue);
-  position: relative;
 }
 
-.nav_link.is-active::after {
+.nav-link.is-active::after {
   content: '';
   position: absolute;
+  bottom: -4px;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
   height: 2px;
   background-color: var(--blue);
 }
