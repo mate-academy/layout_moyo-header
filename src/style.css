@@ -30,7 +30,6 @@ header {
 
 .nav__item {
   display: inline-block;
-  padding: 12px;
 }
 
 .nav__link {
@@ -44,4 +43,29 @@ header {
   display: flex;
   align-items: center;
   position: relative;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  background-color: #00acdc;
+  text-align: center;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+}
+
+.nav__link:hover {
+  color: #00acdc;
+}
+
+.logo {
+  align-items: center;
 }
