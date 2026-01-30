@@ -1,3 +1,87 @@
-body {
+/* ===== RESET BROWSER DEFAULT MARGINS ===== */
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== ROBOTO ONLY (roman 500) ===== */
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* ===== HEADER (full width, NO horizontal margin) ===== */
+.header {
+  width: 100%;
+  padding: 0 50px; /* allowed (padding, not margin) */
+  display: flex;
+  align-items: center; /* vertically center header content */
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e6e9; /* matches screenshot */
+  background: #fff;
+}
+
+/* ===== LOGO (link with img inside, outside nav) ===== */
+.logo__img {
+  display: block;
+}
+
+/* ===== NAV LIST ===== */
+.nav__list {
+  list-style: none;
+  display: flex;
+}
+
+/* Indents using margin (NO gap). No outer margins. */
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0; /* no margin after last */
+}
+
+/* ===== NAV LINKS ===== */
+.nav__link {
+  position: relative; /* needed for ::after */
+  height: 60px; /* height set on links (NOT header) */
+  display: flex;
+  align-items: center; /* center text vertically */
+  justify-content: center; /* center text horizontally */
+  padding: 0; /* IMPORTANT: no padding */
+
+  text-decoration: none;
+  color: #000;
+
+  /* Relevant, clean typography only */
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1; /* no weird decimals */
+}
+
+/* Hover color */
+.nav__link:hover {
+  color: #00acdc;
+}
+
+/* Active link color */
+.nav__link.is-active {
+  color: #00acdc;
+}
+
+/* Active underline via ::after (relative to the active link) */
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* equals text width since no padding */
+  height: 4px; /* matches screenshot thickness */
+  background-color: #00acdc;
+  border-radius: 2px;
 }
