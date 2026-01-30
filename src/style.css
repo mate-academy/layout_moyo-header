@@ -1,4 +1,3 @@
-/* ===== RESET BROWSER DEFAULT MARGINS ===== */
 *,
 *::before,
 *::after {
@@ -7,81 +6,71 @@
   box-sizing: border-box;
 }
 
-/* ===== ROBOTO ONLY (roman 500) ===== */
 body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-/* ===== HEADER (full width, NO horizontal margin) ===== */
 .header {
   width: 100%;
-  padding: 0 50px; /* allowed (padding, not margin) */
+  padding: 0 50px;
   display: flex;
-  align-items: center; /* vertically center header content */
-  justify-content: space-between;
-  border-bottom: 1px solid #e2e6e9; /* matches screenshot */
-  background: #fff;
+  align-items: center;
+  border-bottom: 1px solid #e2e6e9;
+  background-color: #fff;
 }
 
-/* ===== LOGO (link with img inside, outside nav) ===== */
+.navbar {
+  margin-left: auto;
+}
+
 .logo__img {
   display: block;
 }
 
-/* ===== NAV LIST ===== */
 .nav__list {
   list-style: none;
   display: flex;
 }
 
-/* Indents using margin (NO gap). No outer margins. */
 .nav__item {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
-.nav__item:last-child {
-  margin-right: 0; /* no margin after last */
+.nav__item:first-child {
+  margin-left: 0;
 }
 
-/* ===== NAV LINKS ===== */
 .nav__link {
-  position: relative; /* needed for ::after */
-  height: 60px; /* height set on links (NOT header) */
-  display: flex;
-  align-items: center; /* center text vertically */
-  justify-content: center; /* center text horizontally */
-  padding: 0; /* IMPORTANT: no padding */
+  position: relative;
+  display: block;
+
+  height: 60px;
+  line-height: 60px;
+  padding: 0;
 
   text-decoration: none;
   color: #000;
 
-  /* Relevant, clean typography only */
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1; /* no weird decimals */
 }
 
-/* Hover color */
 .nav__link:hover {
   color: #00acdc;
 }
 
-/* Active link color */
 .nav__link.is-active {
   color: #00acdc;
 }
 
-/* Active underline via ::after (relative to the active link) */
 .nav__link.is-active::after {
   content: '';
   position: absolute;
   left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%; /* equals text width since no padding */
-  height: 4px; /* matches screenshot thickness */
+  height: 4px;
   background-color: #00acdc;
-  border-radius: 2px;
 }
