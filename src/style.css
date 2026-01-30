@@ -1,3 +1,87 @@
-body {
+/* Reset browser default margins */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Header stretches full width: no horizontal margin */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center; /* header content vertically centered */
+  justify-content: space-between;
+  padding: 0 24px; /* padding is OK; the rule forbids horizontal margin */
+}
+
+/* Logo link */
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header__logo-img {
+  display: block; /* prevents inline image baseline gap */
+  height: 24px; /* adjust to design if needed */
+  width: auto;
+}
+
+/* Nav list */
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* NO gap; use margin instead.
+   And no margins before first / after last item */
+.nav__item {
+  margin-right: 24px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+/* Links: no padding; text centered; height set here (NOT on header) */
+.nav__link {
+  position: relative; /* needed for ::after underline */
+  display: flex; /* centers text without padding */
+  align-items: center;
+  justify-content: center;
+
+  height: 64px; /* take this from design */
+  line-height: 1; /* avoid weird decimals like 14.6px */
+
+  text-decoration: none;
+  color: #000; /* base color */
+  white-space: nowrap;
+}
+
+/* Hover color change */
+.nav__link:hover {
+  color: #1b5cff; /* pick the design blue */
+}
+
+/* Active state: must include class is-active */
+.nav__link.is-active {
+  color: #1b5cff;
+}
+
+/* Underline using ::after relative to is-active link */
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px; /* take from design */
+  height: 2px;
+  background: currentColor;
 }
