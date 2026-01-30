@@ -1,91 +1,87 @@
-:root {
-  --color-blue: #00acdc;
-  --color-border: #e2e6e9;
-}
-
-/* Reset browser default margins */
-* {
-  box-sizing: border-box;
+/* ===== RESET BROWSER DEFAULT MARGINS ===== */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* ===== ROBOTO ONLY (roman 500) ===== */
 body {
-  font-family: Roboto, 'Times New Roman', Times, serif;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
+/* ===== HEADER (full width, NO horizontal margin) ===== */
 .header {
   width: 100%;
-  padding: 0 50px; /* IMPORTANT: matches reference */
-
+  padding: 0 50px; /* allowed (padding, not margin) */
   display: flex;
-  justify-content: space-between; /* IMPORTANT: no margin-left auto tricks */
-  align-items: center;
-
-  background-color: #fff;
-  border-bottom: 1px solid var(--color-border);
+  align-items: center; /* vertically center header content */
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e6e9; /* matches screenshot */
+  background: #fff;
 }
 
-/* Logo is an image wrapped with a link */
-.logo {
-  display: block;
-}
-
+/* ===== LOGO (link with img inside, outside nav) ===== */
 .logo__img {
   display: block;
-  width: 40px;
-  height: 40px;
 }
 
+/* ===== NAV LIST ===== */
 .nav__list {
   list-style: none;
   display: flex;
 }
 
-/* no margins before first and after last */
+/* Indents using margin (NO gap). No outer margins. */
 .nav__item {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.nav__item:first-child {
-  margin-left: 0;
+.nav__item:last-child {
+  margin-right: 0; /* no margin after last */
 }
 
+/* ===== NAV LINKS ===== */
 .nav__link {
-  position: relative;
+  position: relative; /* needed for ::after */
+  height: 60px; /* height set on links (NOT header) */
+  display: flex;
+  align-items: center; /* center text vertically */
+  justify-content: center; /* center text horizontally */
+  padding: 0; /* IMPORTANT: no padding */
 
-  display: block;
-  height: 60px; /* header height set in ONE place */
-  line-height: 60px; /* vertically centered for any header height */
-
-  padding: 0; /* no padding */
   text-decoration: none;
-
-  font-size: 12px;
-  letter-spacing: 0.01em;
-  text-transform: uppercase; /* don't type uppercase in HTML */
   color: #000;
-  white-space: nowrap;
+
+  /* Relevant, clean typography only */
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1; /* no weird decimals */
 }
 
+/* Hover color */
 .nav__link:hover {
-  color: var(--color-blue);
+  color: #00acdc;
 }
 
+/* Active link color */
 .nav__link.is-active {
-  color: var(--color-blue);
+  color: #00acdc;
 }
 
+/* Active underline via ::after (relative to the active link) */
 .nav__link.is-active::after {
   content: '';
   position: absolute;
   left: 0;
-  right: 0;
   bottom: 0;
-
-  height: 4px;
-  background-color: var(--color-blue);
-  border-radius: 8px; /* matches the pill line in the design */
+  width: 100%; /* equals text width since no padding */
+  height: 4px; /* matches screenshot thickness */
+  background-color: #00acdc;
+  border-radius: 2px;
 }
