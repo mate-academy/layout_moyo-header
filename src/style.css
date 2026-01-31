@@ -1,4 +1,6 @@
-
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: Roboto, sans-serif;
@@ -8,12 +10,16 @@ body {
 }
 
 header {
+  padding: 0;
+  background-color: white;
+}
+
+.header__inner {
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: white;
-  padding: 0;
 }
 
 .list__items {
@@ -22,6 +28,7 @@ header {
   padding: 0;
   margin: 0;
   justify-content: flex-end;
+  align-items: center;
 }
 
 /* .nav__item {
@@ -45,10 +52,12 @@ header {
   position: relative;
 }
 
-:root { --blue: #00acdc; }
+:root {
+  --blue: #00acdc;
+}
 
 .is-active {
-  color: var(--blue)
+  color: var(--blue);
 }
 
 .is-active::after {
