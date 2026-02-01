@@ -28,21 +28,20 @@ body {
 .nav__links {
   list-style: none;
   display: flex;
-  gap: 20px;
   font-size: 12px;
   padding: 0;
   margin: 0;
 }
 
-.nav__links li {
+.nav__links .list {
   margin: 0;
 }
 
-.nav__links li:last-child {
-  margin-right: 0;
+.nav__links li:not(:last-child) {
+  margin-right: 20px;
 }
 
-.nav__links a {
+.nav__links .nav__link {
   height: 60px;
   display: flex;
   align-items: center;
@@ -53,21 +52,21 @@ body {
   position: relative;
 }
 
-.nav__links a:hover {
+.nav__links .nav__link:hover {
   color: var(--color-blue);
 }
 
-.nav__links a:focus-visible {
+.nav__links .nav__link:focus-visible {
   outline: 2px solid var(--color-blue);
   outline-offset: 4px;
   border-radius: 6px;
 }
 
-.nav__links a.is-active {
+.nav__links .nav__link.is-active {
   color: var(--color-blue);
 }
 
-.nav__links a.is-active::after {
+.nav__links .nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
