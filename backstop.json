@@ -1,0 +1,47 @@
+{
+  "id": "backstop_header",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Header - estado normal",
+      "url": "file:///C:/Users/Usuário/Desktop/layout_moyo-header/src/index.html",
+      "delay": 300,
+      "selectors": ["header"],
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Header - estado hover",
+      "url": "file:///C:/Users/Usuário/Desktop/layout_moyo-header/src/index.html",
+      "delay": 300,
+      "hoverSelector": "[data-qa='hover']",
+      "selectors": ["header"],
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "html_report": "backstop_data/html_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false
+}
