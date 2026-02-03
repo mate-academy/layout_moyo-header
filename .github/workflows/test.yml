@@ -20,7 +20,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: npm test
+    - name: Backstop reference
+      run: npx backstop reference --config=backstop.config.js
+    - name: Backstop test
+      run: npx backstop test --config=backstop.config.js
     - name: Upload HTML report(backstop data)
       if: ${{ always() }}
       uses: actions/upload-artifact@v4
