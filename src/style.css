@@ -1,3 +1,78 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+html {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  padding: 20px 60px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+@media screen and (max-width: 1025px) {
+  ul {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1027px) and (max-width: 1200px) {
+  ul {
+    font-size: 16px;
+  }
+}
+
+li a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+li.active a {
+  color: #00a8e8;
+}
+
+li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 0;
+  height: 4px;
+  background-color: #00a8e8;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+/* o traço */
+li.active a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  width: 90%;
+  height: 4px;
+  background-color: #00a8e8;
+  border-radius: 4px;
 }
