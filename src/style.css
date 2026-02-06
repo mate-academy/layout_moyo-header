@@ -1,3 +1,73 @@
+:root {
+  --primary-color: #00acdc;
+}
+
 body {
+  box-sizing: border-box;
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  padding: 0 50px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.image-logo {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav-list {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.header-nav-list .header-nav-item + .header-nav-item {
+  margin-left: 20px;
+}
+
+.header-nav-item .item-text {
+  color: #000;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.header-nav .item-text.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+}
+
+.header-nav .item-text.is-active,
+.header-nav .item-text:hover {
+  color: var(--primary-color);
 }
