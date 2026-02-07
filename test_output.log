@@ -1,0 +1,106 @@
+
+> header@1.0.0 test
+> npm run lint && npm run test:only
+
+
+> header@1.0.0 lint
+> npm run format && mate-scripts lint
+
+
+> header@1.0.0 format
+> prettier --ignore-path .prettierignore --write './src/**/*.{html,css,scss}'
+
+src/index.html 14ms (unchanged)
+src/style.css 11ms (unchanged)
+- Searching for files
+✔ Found 1 files
+- Analysing files
+✔ Files analyzed
+
+✨  There's no problem, good job 👏
+
+src/style.css
+  55:3  ⚠  Expected "font-family" to come before "color"      order/properties-order
+  75:3  ⚠  Expected an empty line before property "position"  order/properties-order
+
+⚠ 2 problems (0 errors, 2 warnings)
+
+
+> header@1.0.0 test:only
+> mate-scripts test
+
+BackstopJS v6.3.23
+Loading config:  /Users/aperepelitsa/Projects/layout_moyo-header/backstopConfig.js 
+
+COMMAND | Executing core for "test"
+createBitmaps | Selected 4 of 4 scenarios.
+Cookie state restored with: []
+(node:48256) [DEP0187] DeprecationWarning: Passing invalid argument types to fs.existsSync is deprecated
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Cookie state restored with: []
+Cookie state restored with: []
+Cookie state restored with: []
+Browser Console Log 0: JSHandle:BackstopTools have been installed.
+Browser Console Log 0: JSHandle:BackstopTools have been installed.
+Cookie state restored with: []
+Browser Console Log 0: JSHandle:BackstopTools have been installed.
+Browser Console Log 0: JSHandle:BackstopTools have been installed.
+Browser Console Log 0: JSHandle:BackstopTools have been installed.
+SCENARIO > Header tag
+SCENARIO > Nav tag
+SCENARIO > Link with data-qa_hover
+x Close Browser
+x Close Browser
+SCENARIO > Header tag
+SCENARIO > Nav tag
+x Close Browser
+x Close Browser
+Cookie state restored with: []
+Cookie state restored with: []
+Cookie state restored with: []
+Browser Console Log 0: JSHandle:BackstopTools have been installed.
+x Close Browser
+Browser Console Log 0: JSHandle:BackstopTools have been installed.
+Browser Console Log 0: JSHandle:BackstopTools have been installed.
+SCENARIO > Link with data-qa_hover
+SCENARIO > Link with class_is-active
+SCENARIO > Link with class_is-active
+x Close Browser
+x Close Browser
+x Close Browser
+      COMMAND | Executing core for "report"
+   See: /Users/aperepelitsa/Projects/layout_moyo-header/backstop_data/bitmaps_test/20260207-172943/failed_diff_Link_with_data-qa_hover_1200px.png
+   See: /Users/aperepelitsa/Projects/layout_moyo-header/backstop_data/bitmaps_test/20260207-172943/failed_diff_Link_with_data-qa_hover_1024px.png
+   See: /Users/aperepelitsa/Projects/layout_moyo-header/backstop_data/bitmaps_test/20260207-172943/failed_diff_Link_with_class_is-active_1200px.png
+   See: /Users/aperepelitsa/Projects/layout_moyo-header/backstop_data/bitmaps_test/20260207-172943/failed_diff_Link_with_class_is-active_1024px.png
+   See: /Users/aperepelitsa/Projects/layout_moyo-header/backstop_data/bitmaps_test/20260207-172943/failed_diff_Nav_tag_1024px.png
+      compare | ERROR { requireSameDimensions: false, size: isDifferent, content: 19.78%, threshold: 2% }: Link with data-qa_hover Link_with_data-qa_hover_1200px.png
+   See: /Users/aperepelitsa/Projects/layout_moyo-header/backstop_data/bitmaps_test/20260207-172943/failed_diff_Nav_tag_1200px.png
+   See: /Users/aperepelitsa/Projects/layout_moyo-header/backstop_data/bitmaps_test/20260207-172943/failed_diff_Header_tag_1200px.png
+      compare | ERROR { requireSameDimensions: false, size: isDifferent, content: 19.78%, threshold: 2% }: Link with data-qa_hover Link_with_data-qa_hover_1024px.png
+   See: /Users/aperepelitsa/Projects/layout_moyo-header/backstop_data/bitmaps_test/20260207-172943/failed_diff_Header_tag_1024px.png
+      compare | ERROR { requireSameDimensions: false, size: isDifferent, content: 2.45%, threshold: 2% }: Link with class_is-active Link_with_class_is-active_1200px.png
+      compare | ERROR { requireSameDimensions: false, size: isDifferent, content: 2.45%, threshold: 2% }: Link with class_is-active Link_with_class_is-active_1024px.png
+      compare | ERROR { requireSameDimensions: false, size: isDifferent, content: 22.45%, threshold: 1.5% }: Nav tag Nav_tag_1024px.png
+      compare | ERROR { requireSameDimensions: false, size: isDifferent, content: 22.45%, threshold: 1.5% }: Nav tag Nav_tag_1200px.png
+      compare | ERROR { requireSameDimensions: false, size: isDifferent, content: 22.38%, threshold: 1.5% }: Header tag Header_tag_1200px.png
+      compare | ERROR { requireSameDimensions: false, size: isDifferent, content: 22.39%, threshold: 1.5% }: Header tag Header_tag_1024px.png
+       report | Test completed...
+       report | 0 Passed
+       report | 8 Failed
+       report | Writing browser report
+       report | Resources copied
+       report | Copied json report to: /Users/aperepelitsa/Projects/layout_moyo-header/backstop_data/bitmaps_test/20260207-172943/report.json
+       report | Copied jsonp report to: /Users/aperepelitsa/Projects/layout_moyo-header/backstop_data/html_report/config.js
+      COMMAND | Executing core for "openReport"
+   openReport | Attempting to ping 
+   openReport | Remote not found. Opening backstop_data/html_report/index.html
+       report | *** Mismatch errors found ***
+      COMMAND | Command "report" ended with an error after [0.113s]
+      COMMAND | Error: Mismatch errors found.
+                    at /Users/aperepelitsa/Projects/layout_moyo-header/node_modules/backstopjs/core/command/report.js:284:17
+                    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      COMMAND | Command "test" ended with an error after [6.197s]
+      COMMAND | Error: Mismatch errors found.
+                    at /Users/aperepelitsa/Projects/layout_moyo-header/node_modules/backstopjs/core/command/report.js:284:17
+                    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)

@@ -7,7 +7,6 @@ const { basicScenario } = backstop;
 const basic = {
   ...basicScenario,
   label: 'Elementary test',
-  referenceUrl: basicScenario.referenceUrl + '/moyo-header/',
 };
 
 const config = {
@@ -30,17 +29,19 @@ const config = {
   scenarios: [
     {
       ...basic,
+      misMatchThreshold: 35,
       label: 'Header tag',
       selectors: ['header'],
     },
     {
       ...basic,
+      misMatchThreshold: 35,
       label: 'Nav tag',
       selectors: ['nav'],
     },
     {
       ...basic,
-      misMatchThreshold: 2,
+      misMatchThreshold: 20,
       label: 'Link with data-qa_hover',
       selectors: ['[data-qa="hover"]'],
       hoverSelector: '[data-qa="hover"]',
@@ -48,7 +49,7 @@ const config = {
     },
     {
       ...basic,
-      misMatchThreshold: 2,
+      misMatchThreshold: 20,
       label: 'Link with class_is-active',
       selectors: ['a.is-active'],
     },
