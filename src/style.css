@@ -6,23 +6,11 @@
 
 /* --------------------reset-------------------- */
 
-* {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  display: block;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  display: block;
 }
 
 /* ---------------------BODY------------------- */
@@ -34,7 +22,7 @@ body {
 
 /* ---------------------container------------------- */
 
-[class*='__container'] {
+[class*="__container"] {
   margin: 0 auto;
   padding: 0 50px;
 }
@@ -47,6 +35,10 @@ body {
   align-items: center;
 }
 
+.header__logo {
+  display: block;
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -55,14 +47,20 @@ body {
   font-size: 12px;
 }
 
+.menu__item {
+  list-style: none;
+}
+
 .menu__item:not(:last-child) {
   margin-right: 20px;
 }
 
 .menu__link {
+  text-decoration: none;
   height: 60px;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #000;
   text-transform: uppercase;
   transition: color 0.3s ease;
@@ -79,7 +77,7 @@ body {
 }
 
 .is-active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
