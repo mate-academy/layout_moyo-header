@@ -1,3 +1,8 @@
+:root {
+  --main-height: 60px;
+  --accent: #00acdc;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -36,10 +41,8 @@ li {
   display: flex;
   text-decoration: none;
   text-align: center;
-  line-height: 1rem;
   text-transform: uppercase;
   color: #000;
-  height: 60px;
   justify-content: center;
   align-items: center;
 }
@@ -48,17 +51,16 @@ li {
   display: flex;
   text-decoration: none;
   text-align: center;
-  line-height: 1rem;
   text-transform: uppercase;
   color: #000;
-  height: 60px;
+  height: var(--main-height);
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .is-active {
-  position: relative;
-  color: #00acdc;
+  color: var(--accent);
 }
 
 .is-active::after {
@@ -66,18 +68,14 @@ li {
   position: absolute;
   width: 36px;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--accent);
   bottom: 0;
 }
 
 .nav__links:hover {
   text-decoration: underline;
-  text-decoration-color: #00acdc;
+  text-decoration-color: var(--accent);
 }
-
-/* nav {
-  background-color: bisque;
-} */
 
 li:first-child {
   margin-left: 0;
@@ -85,5 +83,5 @@ li:first-child {
 
 [data-qa='hover']:hover {
   text-decoration: none;
-  color: #00acdc;
+  color: var(--accent);
 }
