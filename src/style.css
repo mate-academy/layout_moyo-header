@@ -1,9 +1,15 @@
-@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500&display=swap';
-
-/* @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'; */
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
 
 html {
+  box-sizing: border-box;
+
   --color-blue: rgba(0, 172, 220, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -15,7 +21,7 @@ body {
   font-style: normal;
 }
 
-.header {
+.site-header {
   width: 100%;
   background-color: #fff;
 }
@@ -49,7 +55,7 @@ body {
   .list-item:last-child {
     margin-right: 0;
   }
-  .item {
+  .nav__link {
     position: relative;
     display: flex;
     align-items: center;
