@@ -1,10 +1,12 @@
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-variation-settings: 'wdth' 100;
 }
 
 .header {
@@ -64,11 +66,11 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .nav__link.is-active::after {
@@ -80,13 +82,10 @@ body {
 
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--blue);
 }
 
-.li:hover {
+.nav__item:hover {
   cursor: pointer;
-  border-bottom: 5px solid #34acdc;
-  & a {
-    color: #34acdc;
-  }
+  border-bottom: 5px solid var(--blue);
 }
