@@ -1,19 +1,17 @@
 :root {
-  --blue: #00acdc; /* cor azul usada em hover e link ativo */
+  --blue: #00acdc;
 }
 
 html {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+
 }
 
 body {
@@ -23,7 +21,7 @@ body {
   font-size: 12px;
 }
 
-/* Header */
+
 
 header {
   display: flex;
@@ -35,26 +33,24 @@ header {
   width: 100%;
 }
 
-/* sem height aqui */
 
-.logo img {
-  display: block;
-  height: 40px;
-  width: 40px;
-}
 
-/* Logo */
+
+
 
 .logo {
-  margin: 0; /* sem margem extra */
+  margin: 0;
   align-items: center;
   margin-top: 0;
   margin-left: 50px;
+  height: 40px;
+  width: 40px;
 
-  /* border: 2px solid green; */
+
+
 }
 
-/* Nav */
+
 
 .nav {
   display: flex;
@@ -75,6 +71,7 @@ header {
   margin-right: 20px;
 }
 
+
 .nav__link {
   display: inline-flex;
   align-items: center;
@@ -84,19 +81,23 @@ header {
   position: relative;
   text-decoration: none;
   color: #000;
+    justify-content: center;
 }
 
-/* Hover azul */
+
+
 .nav__link:hover {
   color: var(--blue);
 }
 
-/* Link ativo */
+
+
 .nav__link.is-active {
   color: var(--blue);
 }
 
-/* Barra azul do link ativo */
+
+
 .nav__link.is-active::after {
   content: '';
   position: absolute;
