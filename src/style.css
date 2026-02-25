@@ -10,64 +10,53 @@ body {
   --blue: #00acdc;
 }
 
-ul {
+.nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
 }
 
-nav ul {
-  display: flex;
-}
-
-nav {
-  position: relative;
-  z-index: 2;
-}
-
-li + li {
+.nav__item + .nav__item {
   margin-left: 20px;
 }
 
-img {
+.img {
   display: block;
 }
 
-nav a {
+.nav__link {
   text-decoration: none;
   color: black;
   height: 60px;
   display: inline-flex;
   align-items: center;
   padding: 0;
-}
-
-nav a:hover {
-  color: var(--blue);
-}
-
-.nav-link[data-qa='hover']:hover {
-  color: var(--blue);
-}
-
-.nav-link.is-active {
-  color: var(--blue);
-  position: relative;
-}
-
-.nav-link {
   position: relative;
   text-transform: uppercase;
 }
 
-.nav-link.is-active::after {
+.nav__link:hover {
+  color: var(--blue);
+}
+
+.nav__link[data-qa='hover']:hover {
+  color: var(--blue);
+}
+
+.nav__link.is-active {
+  color: var(--blue);
+  position: relative;
+}
+
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   left: 0;
