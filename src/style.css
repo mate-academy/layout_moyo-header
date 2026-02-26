@@ -1,85 +1,94 @@
 html {
-  box-sizing: border-box;
-}
-
-:root {
-  --nav-height: 55px;
-  --blue: #00acdc;
+  font-family: Roboto, Arial, sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto' Arial, sans-serif;
-  font-weight: 500;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+  --header-color: #fff;
+  --text-color: #000;
+  --selected-color: #00acdc;
+  --header-font-size: 12px;
+  --header-height: 60px;
 }
 
-header {
-  height: var(--nav-height);
-  background-color: #fff;
-}
-
-.container {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 0 16px;
+.header {
+  background-color: var(--header-color);
   display: flex;
   align-items: center;
-}
-
-.logo img {
-  display: block;
-  height: 40px;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
 .logo {
-  margin-right: 40px;
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin: 0;
+}
+
+.image {
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+  height: 40px;
+  width: 40px;
+}
+
+.nav {
+  display: inline-block;
+  margin: 0;
 }
 
 .nav__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
+  padding: 0;
+  list-style: none;
 }
 
 .nav__link {
-  position: relative;
-  display: flex;
   align-items: center;
-  padding: 0;
-  height: var(--nav-height);
-  text-transform: uppercase;
+  display: inline-flex;
+  position: relative;
+  height: var(--header-height);
+  color: var(--text-color);
   text-decoration: none;
-  color: #333;
-
-  font-weight: 500;
-  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: var(--header-font-size);
 }
 
 .nav__link:hover {
-  color: var(--blue);
+  color: var(--selected-color);
 }
 
 .nav__link.is-active {
-  color: var(--blue);
-  position: relative;
+  color: var(--selected-color);
+}
+
+.is-active {
+  color: var(--selected-color);
 }
 
 .nav__link.is-active::after {
   content: '';
   position: absolute;
   left: 0;
-  right: 0;
   bottom: 0;
   height: 4px;
-  background: var(--blue);
+  width: 100%;
+  background-color: var(--selected-color);
+  border-radius: 8px;
 }
 
-.nav__item:not(:last-child) {
-  margin-right: 28px;
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
-.nav {
-  margin-left: auto;
+:root {
+  --nav-height: 55px;
+  --blue: #00acdc;
 }
