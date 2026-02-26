@@ -1,0 +1,76 @@
+:root {
+  --blue-color: #00ACDC;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+header {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  text-transform: uppercase;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-left: 24px;
+}
+
+li:first-child {
+  margin-left: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+
+  height: 80px;            /* HEADER HEIGHT defined here */
+  display: flex;
+  align-items: center;
+}
+
+nav a:hover {
+  color: var(--blue-color);
+}
+
+a.is-active {
+  position: relative;
+  color: var(--blue-color);
+}
+
+a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-color);
+}
