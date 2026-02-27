@@ -39,44 +39,43 @@ ul {
 
 .header__li {
   display: flex;
-  padding: 22px 0;
-}
-
-.header__li:first-child {
-  margin-left: 0;
 }
 
 .header__items {
   margin-left: 20px;
 }
 
+.header__items:first-child {
+  margin-left: 0;
+}
+
 .nav__link {
-  position: relative;
   display: flex;
   align-items: center;
   font-size: 12px;
   font-weight: 500;
+  height: 60px;
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
   transition: color 0.3s;
+  position: relative;
 }
 
 .is-active {
-  position: relative;
   color: var(--blue);
 }
 
 .is-active::after {
   content: '';
   position: absolute;
-  height: 4px;
-  width: 100%;
-  background-color: var(--blue);
-  border-radius: 8px;
-  bottom: -18px;
+  bottom: 0;
   left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--blue);
 }
 
 .nav__link:hover {
