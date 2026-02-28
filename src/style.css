@@ -1,8 +1,8 @@
 /* Reset básico */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
 }
 
 :root {
@@ -43,11 +43,13 @@ nav li + li {
 }
 
 .nav-link {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--text-color);
   position: relative;
+
   padding: 8px 0;
+
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 /* Hover */
@@ -62,10 +64,13 @@ nav li + li {
 
 .nav-link.is-active::after {
   content: '';
+
   position: absolute;
   bottom: -4px;
   left: 0;
+
   width: 100%;
   height: 2px;
+
   background-color: var(--blue);
 }
