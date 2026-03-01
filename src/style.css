@@ -1,3 +1,70 @@
-body {
+:root {
+  --blue: #00acdc;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 40px; /* ajuste aqui */
+}
+
+.logo img {
+  height: 40px;
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 40px; /* ajuste aqui */
+}
+
+.nav__link {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  height: 60px;
+  line-height: 60px; /* centraliza vertical */
+  display: flex;
+  align-items: center;
+  position: relative;
+  white-space: nowrap;
+  padding: 0 5px; /* ajuste interno */
+}
+
+.nav__link:hover {
+  color: var(--blue);
+}
+
+.nav__link.is-active {
+  color: var(--blue);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--blue);
+  border-radius: 0;
 }
