@@ -23,35 +23,31 @@ body {
 }
 
 .logo {
-  display: block;
-  height: 40px;
-  width: 40px;
-  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .image {
   display: block;
-  object-fit: cover;
-  max-width: 100%;
+  object-fit: contain;
   height: 40px;
-  width: 40px;
-}
-
-.nav {
-  display: inline-block;
-  margin: 0;
+  width: auto;
 }
 
 .nav__list {
-  margin: 0 auto;
   display: flex;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
 .nav__link {
+  display: flex;
   align-items: center;
-  display: inline-flex;
   position: relative;
   height: var(--header-height);
   color: var(--text-color);
@@ -59,17 +55,13 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
   font-size: var(--header-font-size);
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.nav__link:hover {
-  color: var(--selected-color);
-}
-
-.nav__link:active {
-  color: var(--selected-color);
-}
-
-.is-active {
+.nav__link:hover,
+.nav__link:active,
+.nav__link.is-active {
   color: var(--selected-color);
 }
 
@@ -81,9 +73,4 @@ body {
   height: 4px;
   width: 100%;
   background-color: var(--selected-color);
-  border-radius: 8px;
-}
-
-.nav__item:not(:first-child) {
-  margin-left: 20px;
 }
