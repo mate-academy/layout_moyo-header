@@ -1,16 +1,17 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500&display=swap';
 
-* {
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --color: #00acdc;
 }
 
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Roboto, sans-serif;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,33 +20,33 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-header > a {
+.logo {
   display: block;
   height: 40px;
   width: 40px;
 }
 
-header > a img {
+.logo__image {
   height: 100%;
   width: 100%;
 }
 
-nav ul {
+.nav__list {
   display: flex;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-nav ul li {
+.nav__item {
   margin-left: 20px;
 }
 
-nav ul li:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-nav ul li a {
+.nav__link {
   position: relative;
   display: flex;
   align-items: center;
@@ -60,15 +61,15 @@ nav ul li a {
   transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--color);
 }
 
-nav ul li a.is-active {
-  color: #00acdc;
+.nav__link.is-active {
+  color: var(--color);
 }
 
-nav ul li a.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -76,5 +77,5 @@ nav ul li a.is-active::after {
   right: 0;
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--color);
 }
