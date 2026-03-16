@@ -1,5 +1,7 @@
 body {
   margin: 0;
+
+  --primary-color: #00acdc;
 }
 
 .header__container {
@@ -18,10 +20,13 @@ body {
 .header__menu {
   display: flex;
   align-items: flex-end;
-  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.header__menu-item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .header__menu-link {
@@ -41,7 +46,7 @@ body {
 
 .header__menu-link:hover,
 .header__menu-link.is-active {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .header__menu-link.is-active::after {
@@ -49,7 +54,7 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--primary-color);
   position: absolute;
   left: 0;
   bottom: 0;
