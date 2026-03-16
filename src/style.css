@@ -1,7 +1,9 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: Roboto, sans-serif;
 }
 
@@ -11,7 +13,7 @@ body {
   justify-content: space-between;
 
   padding: 0 50px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1);
 }
 
 .logo_image {
@@ -47,22 +49,21 @@ body {
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav_link.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav_link.is-active::after {
   content: '';
-  display: flex;
+  display: block;
   position: absolute;
   bottom: 0;
   right: 0;
   width: 100%;
   height: 4px;
   border-radius: 5px;
-  background-color: #00acdc;
-  justify-content: center;
+  background-color: var(--blue-color);
 }
