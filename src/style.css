@@ -30,12 +30,6 @@ body {
   background: #fff;
 }
 
-.nav__list {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
 .logo {
   width: 2.5rem;
   height: 2.5rem;
@@ -47,12 +41,22 @@ body {
   object-fit: cover;
 }
 
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list > .nav__item:not(:last-child) {
+  margin-right: 1.25rem;
+}
+
 .nav__link {
   height: 3.75rem;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   position: relative;
+  transition: color 0.3s;
 }
 
 .nav__link:hover {
