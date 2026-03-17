@@ -1,3 +1,80 @@
+/* stylelint-disable order/properties-order */
+html {
+  --main-color: #00acdc;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  padding-inline: 50px;
+}
+
+.logo {
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.list {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.link {
+  justify-content: center;
+  height: 60px;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.link:hover {
+  color: var(--main-color);
+}
+
+.is-active {
+  color: var(--main-color);
+  text-decoration: none;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list:not(:last-child) {
+  margin-right: 20px;
+}
+
+.link.is-active::after {
+  position: absolute;
+  content: '';
+  height: 4px;
+  left: 0;
+  right: 0;
+  border-radius: 8px;
+  background-color: var(--main-color);
+  top: calc(100% - 4px);
 }
