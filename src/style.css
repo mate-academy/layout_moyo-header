@@ -1,3 +1,91 @@
 body {
+  margin: 0; /* Reset browser default margins/ Скинути поля браузера за замовчуванням */
+  font-family: Roboto, sans-serif; /* Roboto (ONLY 500 weight) */
+  font-weight: 500; /* Roboto (ONLY 500 weight) */
+  font-style: normal;
+  font-size: 12px;
+}
+
+html {
+  --header-height: 60px;
+  --text-blue: #00acdc;
+  --text-black: #000;
+}
+
+.header {
+  padding: 0 50px; /* Header full width / Шапка на всю ширину */
+  display: flex; /* header content should be vertically centered/ вміст заголовка має бути вертикально центрований */
+  align-items: center; /* header content should be vertically centered/ вміст заголовка має бути вертикально центрований */
+  justify-content: space-between;
+  height: var(--header-height);
+}
+
+.logo .logo-image {
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+.nav-item:not(:first-child) {
+  margin-left: 20px; /* Не використовуйте властивість flex gap для відступів. Вона не підтримується в тестах, використовуйте замість неї margin */
+} /* не повинно бути відступів перед першим та після останнього елемента списку */
+
+.is-active {
+  color: var(--text-blue);
+}
+
+.nav-link {
+  display: flex; /* header content should be vertically centered/ вміст заголовка має бути вертикально центрований */
+  align-items: center; /* header content should be vertically centered/ вміст заголовка має бути вертикально центрований */
+  justify-content: center;
+  height: var(
+    --header-height
+  ); /* the height should be set for nav links (not the header), take it from the design */
+
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-black);
+}
+
+.nav-link:hover {
+  color: var(--text-blue); /* link color should be changed on :hover */
+}
+
+.nav-link.is-active {
+  position: relative;
+  color: var(
+    --text-blue
+  ); /* the blue link with a line below should have a class is-active in addition to any other classes you add */
+}
+
+.nav-link.is-active::after {
+  content: ''; /* використовуйте ::after та розташуйте його відносно посилання за допомогою класу is-active */
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Притискаємо до низу посилання */
+  width: 100%; /* Тепер 100% — це ширина тексту посилання */
+  height: 4px;
+  background-color: var(--text-blue);
+  border-radius: 8px;
+}
+
+@media (max-width: 1200px) {
+  [data-qa='hover']:hover {
+    color: var(
+      --text-blue
+    ); /* add data-qa="hover" attribute to the 4th link for testing (Laptops & computers) */
+  }
+}
+
+@media (max-width: 1024px) {
+  [data-qa='hover']:hover {
+    color: var(
+      --text-blue
+    ); /* add data-qa="hover" attribute to the 4th link for testing (Laptops & computers) */
+  }
 }
