@@ -21,42 +21,62 @@ html {
   align-items: center;
   justify-content: space-between;
   font-weight: 500;
-  height: 60px;
   background-color: var(--white);
   padding: 0 50px;
+  height: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 424px;
 }
 
 .nav-list {
   display: flex;
+  align-items: center;
   list-style: none;
-  gap: 20px;
   margin: 0;
-  padding-left: 509;
+  line-height: 1;
+}
+
+.item + .item {
+  margin-left: 20px;
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  line-height: 1;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--black);
-  position: relative;
 }
 
 .nav-link:hover {
   color: var(--blue);
 }
 
-.item {
-  margin-right: 16px;
+.is-active {
+  color: var(--blue);
 }
 
 .is-active::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -10px;
-  height: 4px;
+  bottom: 0;
+  height: 3px;
   width: 100%;
   background: var(--blue);
   display: block;
-  border-radius: 8px;
+  border-radius: 2px;
+}
+
+@media (max-width: 1199px) {
+  .logo {
+    margin-right: 248px;
+  }
 }
