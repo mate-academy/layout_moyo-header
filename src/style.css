@@ -1,17 +1,17 @@
 :root {
   --moyo-blue: #00acdc;
-  --header-height: 60px;
+  --nav-link-height: 60px;
 }
 
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  font-style: bold;
 }
 
-header {
+.header-container {
   padding: 0 40px;
+  border-bottom: 1px solid #eee;
 }
 
 .header__inner {
@@ -21,7 +21,6 @@ header {
   max-width: 1200px;
   min-width: 1024px;
   margin: 0 auto;
-  height: var(--header-height);
 }
 
 .nav__list {
@@ -29,12 +28,16 @@ header {
   margin: 0;
   padding: 0;
   display: flex;
-  margin-left: 200px;
+  margin-left: auto;
+}
+
+.nav__item {
+  margin-left: 22px;
 }
 
 .nav__link {
   padding: 0;
-  height: var(--header-height);
+  height: var(--nav-link-height);
   display: inline-flex;
   align-items: center;
   text-transform: uppercase;
@@ -61,7 +64,7 @@ header {
   right: 0;
   height: 2px;
   background: var(--moyo-blue);
-  bottom: -6px;
+  bottom: 0;
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.15s ease;
@@ -69,6 +72,11 @@ header {
 
 .nav__link:hover::after {
   opacity: 1;
+  transform: scaleX(1);
+}
+
+.nav__link:hover::after,
+.nav__link.is-active::after {
   transform: scaleX(1);
 }
 
