@@ -1,3 +1,85 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #00acdc;
+  --secondary-color: #fff;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 424px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  background-color: var(--secondary-color);
+  padding: 0 50px;
+}
+
+.nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  line-height: 1;
+}
+
+.nav-item + .nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.is-active {
+  color: var(--primary-color);
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+@media (max-width: 1199px) {
+  .logo {
+    margin-right: 248px;
+  }
 }
