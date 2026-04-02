@@ -1,3 +1,64 @@
+html {
+  --secondary-color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav__link {
+  color: #000;
+  text-transform: uppercase;
+  line-height: 60px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.is-active {
+  color: var(--secondary-color);
+  position: relative;
+}
+
+.nav__link:hover {
+  color: var(--secondary-color);
+}
+
+.is-active::after {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  content: '';
+  height: 4px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.header > .logo {
+  height: 40px;
 }
