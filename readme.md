@@ -26,7 +26,6 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 ## Checklist
 
 ❗️ Replace `<your_account>` with your GitHub username and copy the links to the `Pull Request` description:
-
 - [DEMO LINK](https://<your_account>.github.io/layout_moyo-header/)
 - [TEST REPORT LINK](https://<your_account>.github.io/layout_moyo-header/report/html_report/)
 
@@ -39,5 +38,5 @@ The page should match the design Pixel Perfect: all the sizes, colors and distan
 - [ ] **CSS Variable** is used for a blue color
 - [ ] Pseudo-element is used for a blue line below the active link
 - [ ] Code follows all the [Code Style Rules ❗️](./checklist.md)
-- [ ] The Google Fonts Configuration follows requirements. 
+- [ ] The Google Fonts Configuration follows requirements.
 ![alt text](./assets/image.png)
