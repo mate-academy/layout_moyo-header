@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
   --color: #00acdc;
 }
@@ -12,13 +6,13 @@ body {
   margin: 0;
   font-family: roboto, sans-serif;
   font-size: 12px;
+  box-sizing: border-box;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding: 0 50px;
 }
 
@@ -38,9 +32,8 @@ body {
   list-style: none;
 }
 
-.listElement {
+.nav_item {
   margin-left: 20px;
-  position: relative;
 }
 
 .apple {
@@ -54,13 +47,14 @@ body {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
+  position: relative;
 }
 
-.apple > a {
+.is-active {
   color: var(--color);
 }
 
-.listElement > a:hover {
+.link:hover {
   color: var(--color);
 }
 
