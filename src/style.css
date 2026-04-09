@@ -1,3 +1,72 @@
+html {
+  font-family:
+    Roboto,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+
+  --link-color: #00acdc;
+  --link-height: 60px;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  display: flex;
+  margin: 0;
+}
+
+.nav__link {
+  height: var(--link-height);
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item + .nav__item {
+  margin-left: 20px;
+}
+
+.logo__img {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav__link:hover {
+  color: var(--link-color);
+}
+
+.nav__link.is-active {
+  position: relative;
+  color: var(--link-color);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  bottom: 0;
+  background-color: var(--link-color);
 }
