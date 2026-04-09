@@ -1,3 +1,72 @@
+html {
+  --color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: roboto, sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_item {
+  margin-left: 20px;
+}
+
+.apple {
+  margin-left: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.is-active {
+  color: var(--color);
+}
+
+.link:hover {
+  color: var(--color);
+}
+
+.link.is-active::after {
+  color: var(--color);
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: var(--color);
+  position: absolute;
+  bottom: 0;
 }
