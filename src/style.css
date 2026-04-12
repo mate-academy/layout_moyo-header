@@ -39,8 +39,29 @@ header {
 }
 
 .nav__link {
+  --color-link-accent: #00ACDC;
+  
+  position: relative;
   display: flex;
   height: 60px;
   align-items: center;
   text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav__link:hover,
+.nav__link.is-active {
+  color: var(--color-link-accent);
+}
+
+.nav__link.is-active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-link-accent);
+  border-radius: 8px;
 }
