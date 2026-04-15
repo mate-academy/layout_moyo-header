@@ -10,23 +10,17 @@ body {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 60px;
   padding: 0 50px;
   box-sizing: border-box;
 }
 
-.header__logo {
-  display: flex;
-  align-items: center;
-}
-
 .header__logo img {
   height: 40px;
+  display: block;
 }
 
 .nav {
-  display: flex;
+  margin-left: auto;
 }
 
 .nav__list {
@@ -36,27 +30,30 @@ body {
   padding: 0;
 }
 
-.nav__item {
-  margin: 0;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
   display: flex;
   align-items: center;
   height: 60px;
-  padding: 0 20px;
+
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
   color: #000;
+
   position: relative;
 }
 
+/* hover */
 .nav__link:hover {
   color: var(--blue);
 }
 
+/* active */
 .is-active {
   color: var(--blue);
 }
