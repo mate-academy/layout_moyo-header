@@ -11,9 +11,7 @@
 
 body {
   margin: 0;
-
   font-family: Roboto, sans-serif;
-  font-variation-settings: 'wdth' 100;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -24,14 +22,12 @@ body {
   justify-content: space-between;
 
   box-sizing: border-box;
-  max-width: 1200px;
-  height: var(--header-height);
   padding: 10px 50px;
 
   color: var(--header-color);
 }
 
-.logo img {
+.logo__img {
   display: block;
   width: var(--logo-width);
   height: var(--logo-height);
@@ -43,12 +39,16 @@ body {
 
 .nav__list {
   display: flex;
-  gap: 20px;
   list-style: none;
 }
 
 .nav__item {
   display: block;
+  height: var(--header-height);
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -62,10 +62,6 @@ body {
 }
 
 .nav__link.is-active {
-  color: var(--blue-color);
-}
-
-.nav__link.is-marked {
   color: var(--blue-color);
 }
 
