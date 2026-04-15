@@ -1,3 +1,95 @@
+:root {
+  --header-height: 60px;
+  --blue-color: #00ACDC;
+  --black-color: #000;
+  --header-color: #fff;
+  --font-size: 12px;
+  --logo-height: 40px;
+  --logo-width: 40px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 50px;
+
+  color: var(--header-color);
+}
+
+.logo__img {
+  display: block;
+  width: var(--logo-width);
+  height: var(--logo-height);
+}
+
+.nav__bar {
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item {
+  display: block;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: var(--header-height);
+  margin: 0;
+  padding: 0;
+
+  font-size: var(--font-size);
+  color: var(--black-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link.is-active {
+  color: var(--blue-color);
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+}
+
+.nav__link.is-active::after {
+  content: '';
+
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+
+  height: 4px;
+  border-radius: 8px;
+
+  background: var(--blue-color);
 }
