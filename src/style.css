@@ -1,3 +1,83 @@
+:root {
+  --font-size: 12px;
+  --border-coolor: #fff;
+  --used-color: #00acdc;
+  --width-logo: 40px;
+  --height-logo: 40px;
+  --height-row: 60px;
+  --norm-color: #000;
+}
+
 body {
   margin: 0;
+}
+
+.head_site {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background-color: var(--border-coolor);
+}
+
+.Logo {
+  display: block;
+  height: var(--height-logo);
+  width: var(--width-logo);
+}
+
+.Logo__img {
+  height: 100%;
+  width: 100%;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--height-row);
+  white-space: nowrap;
+
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: var(--font-size);
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: var(--norm-color);
+}
+
+.nav__link.is-active {
+  color: var(--used-color);
+}
+
+.nav__link:hover {
+  color: var(--used-color);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--used-color);
 }
