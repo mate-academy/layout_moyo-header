@@ -10,20 +10,25 @@ body {
 .header {
   display: flex;
   align-items: center;
+  height: 60 px;
   justify-content: space-between;
   padding: 0 50px;
 }
 
 .header__logo img {
+  margin-right: 50px;
   height: 40px;
 }
 
 .nav__list {
   display: flex;
   list-style: none;
-  gap: 20px;
   margin: 0;
   padding: 0;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
@@ -32,7 +37,6 @@ body {
   height: 60px;
   text-decoration: none;
   color: #060b35;
-
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -52,6 +56,6 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 4px;
   background-color: var(--blue);
 }
