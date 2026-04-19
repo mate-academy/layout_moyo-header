@@ -1,5 +1,5 @@
 'use strict';
-// https://github.com/garris/BackstopJS#advanced-scenarios
+//https://github.com/garris/BackstopJS#advanced-scenarios
 
 const backstop = require('@mate-academy/backstop-config');
 const { basicScenario } = backstop;
@@ -52,7 +52,8 @@ const config = {
       label: 'Link with class_is-active',
       selectors: ['a.is-active'],
     },
-  ],
+  ]
 };
 
 module.exports = config;
+  
