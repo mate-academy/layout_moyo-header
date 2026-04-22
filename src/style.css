@@ -58,6 +58,10 @@ header .container {
   text-decoration: none;
 }
 
+:root {
+  --blue: #00acdc;
+}
+
 .menu a.is-active::after {
   content: '';
   position: absolute;
@@ -65,15 +69,16 @@ header .container {
   bottom: -15px;
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
+  color: var(--blue);
+  background-color: var(--blue);
   border-radius: 2px;
 }
 
 .menu a:hover {
-  color: #00acdc;
+  color: var(--blue);
   text-decoration: underline;
 }
 
 .menu a.is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
