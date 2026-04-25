@@ -11,8 +11,10 @@ body {
 
 .header {
   display: flex;
+  box-sizing: border-box;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
+  padding-inline: 50px;
 }
 
 .menu {
@@ -20,7 +22,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  width: 1024px;
+  width: 100%;
 }
 
 .nav__list {
@@ -52,7 +54,6 @@ body {
   color: black;
   font-weight: 500;
   box-sizing: border-box;
-  padding: 0 10px;
 }
 
 .nav__link.is-active {
@@ -71,4 +72,8 @@ body {
 
 .nav__link:hover {
   color: var(--blue-color);
+}
+
+.nav__item:not(:last-child) .nav__link {
+  margin-right: 20px;
 }
