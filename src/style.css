@@ -1,7 +1,10 @@
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   font-size: 12px;
+
+  --active-color: #00acdc;
 }
 
 .roboto-font {
@@ -52,17 +55,17 @@ nav li:last-child {
 }
 
 nav li a:hover {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 nav li a.is-active {
-  color: #00acdc;
+  color: var(--active-color);
 }
 
 nav li a.is-active::after {
   content: '';
   display: block;
-  background: #00acdc;
+  background: var(--active-color);
   height: 4px;
   border-radius: 8px;
   bottom: 0;
