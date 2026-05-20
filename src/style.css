@@ -1,3 +1,70 @@
+:root{
+  --blue-color: #00acdc;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  position: relative; /* LINE ABOVE TEXT - forces the object to be positioned from the parent and not the entire page */
+  display: flex;
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+  height: 60px; /* LINE ABOVE TEXT - set up height of the link. */
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header__logo {
+  width: 40px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.is-active {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  /* LINE ABOVE TEXT - attach pseudo element */
+  display: block; /* LINE ABOVE TEXT - moves line abowe the text (to width and height work well) */
+  content: ''; /* LINE ABOVE TEXT - required line for ::after */
+  position: absolute; /* LINE ABOVE TEXT - Breaks the line out of the normal flow of the page (to use left right top and bottom */
+  left: 0; /* LINE ABOVE TEXT - Snaps the line to the left edge of the link. */
+  height: 4px; /* line thickness */
+  width: 100%; /* line width */
+  bottom: 0; /* LINE ABOVE TEXT - Snaps the line to the bottom edge of the link. */
+  background-color: var(--blue-color);
+
+  border-radius: 2px;
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
 }
