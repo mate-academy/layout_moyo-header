@@ -1,3 +1,89 @@
+:root {
+  --moyo-color: #00acdc;
+}
+
 body {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
   margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+.site-header {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+}
+
+.logo_link {
+  display: flex;
+  align-items: center;
+}
+
+.logo_img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  max-width: 1340px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-inline: 50px;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+.nav_link:hover {
+  color: var(--moyo-color);
+}
+
+.nav_link.is-active {
+  color: var(--moyo-color);
+}
+
+.nav_link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 4px;
+  background: var(--moyo-color);
 }
