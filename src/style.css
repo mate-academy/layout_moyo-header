@@ -1,7 +1,17 @@
-* {
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+ul {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 :root {
@@ -28,13 +38,13 @@ body {
 
 .logo__image {
   display: block;
-  height: 40px;
   width: 40px;
+  height: 40px;
 }
 
 .nav__list {
-  list-style: none;
   display: flex;
+  list-style: none;
 }
 
 .nav__item {
@@ -49,16 +59,16 @@ body {
   position: relative;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   height: 60px;
 
-  text-decoration: none;
-  text-transform: uppercase;
+  color: #000;
   font-size: 12px;
   line-height: 14px;
-  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
 
   transition: color 0.3s;
 }
@@ -75,8 +85,8 @@ body {
   content: '';
 
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 0;
 
   width: 100%;
   height: 4px;
