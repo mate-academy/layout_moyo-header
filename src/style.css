@@ -1,3 +1,7 @@
+:root {
+   --blue-color: #00acdc;
+}
+
 body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -16,13 +20,12 @@ body {
 
 .nav__list {
   display: flex;
-  padding: 0;
+  
   margin-block: 0;
 }
 
 .nav__item {
   display: flex;
-  text-transform: uppercase;
   margin-left: 20px;
   list-style: none;
   align-items: center;
@@ -37,23 +40,22 @@ body {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .nav__link:hover {
-  color: #00acdc;
-  text-decoration: underline;
-  text-decoration-color: #00acdc;
+  color: var(--blue-color);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
   position: relative;
 }
 
 .is-active::after {
   content: '';
   position: absolute;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   bottom: 0;
   left: 0;
   right: 0;
