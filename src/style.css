@@ -1,3 +1,86 @@
+/* Сброс стандартных отступов */
+:root {
+  --main-color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.navigation {
+  height: 100%;
+}
+
+.nav-list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  position: relative;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 14px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--main-color);
+}
+
+.is-active {
+  color: var(--main-color);
+}
+
+.is-active::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background-color: var(--main-color);
+  border-radius: 8px;
 }
