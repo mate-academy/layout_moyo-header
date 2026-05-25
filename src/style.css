@@ -1,83 +1,66 @@
-body {
-  margin: 0;
-  background-color: #f2f2f2;
-}
-
 :root {
-  --blue: #00ACDC;
+  --color-blue: #00acdc;
 }
 
-header {
-
-  --header-vertical-padding: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--header-vertical-padding) 40px;
-  background-color: #fff;
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.nav_item {
-  margin-left: 32px;
-}
-
-.nav_item:first-child {
-  margin-left: 0;
-}
-
-.nav_item a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
+body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  line-height: 15px;
-  text-decoration: none;
-  color: inherit;
+  font-size: 12px;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin-block:0;
+}
+
+.nav__item {
+  display: flex;
   text-transform: uppercase;
-}
-
-a:hover {
-  color: var(--blue);
-}
-
-.logo {
-  display: inline-flex;
+  margin-right: 20px;
+  list-style: none;
   align-items: center;
 }
 
-.logo img {
-
-  display: block;
+.nav__item:last-child {
+margin-right: 0;
 }
 
-.laptops-computers a[data-qa="hover"] {
-  color: var(--blue);
+.nav__link {
+display:inline-block;
+  line-height: 60px;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  color: var(--color-blue);
 }
 
 .is-active {
+  color: var(--color-blue);
   position: relative;
-  color: var(--blue);
 }
 
 .is-active::after {
   content: '';
   position: absolute;
+  background-color: var(--color-blue);
+  bottom: 0;
   left: 0;
-  bottom: calc(-1 * var(--header-vertical-padding));
-  width: 100%;
+  right: 0;
   height: 4px;
   border-radius: 8px;
-  background-color: var(--blue);
+  display: block;
 }
-
