@@ -7,10 +7,13 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .nav-list {
   display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -19,9 +22,9 @@ body {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 50px;
-  margin-top: 10px;
+  justify-content: space-between;
+  height: 60px;
 }
 
 :root {
@@ -44,7 +47,8 @@ body {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
-  line-height: normal;
+  font-size: 12px;
+  letter-spacing: 0;
 }
 
 .nav-link:hover {
@@ -61,15 +65,18 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-
   width: 100%;
   height: 4px;
-
   background-color: var(--blue-color);
   border-radius: 8px;
 }
 
-.logo img {
+.logo {
   height: 40px;
+  width: 40px;
+  display: flex;
+}
+
+.header > a {
   display: flex;
 }
