@@ -1,3 +1,50 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+
+  --linkscolor: #00ACDC;
+}
+
 body {
   margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  height: 60px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  padding-left: 50px;
+}
+
+.nav__menu {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding-right: 50px;
+  gap: 20px;
+  height: 60px;
+}
+
+.nav__link {
+  text-decoration: none;
+  line-height: 60px;
+  color: #000;
+}
+
+.nav__link:hover {
+  color: var(--linkscolor);
+}
+
+.is-active::after {
+  content: '';
+  color: var(--linkscolor);
+  border-bottom: 4px solid var(--linkscolor);
 }
