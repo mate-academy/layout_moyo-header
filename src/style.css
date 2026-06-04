@@ -13,7 +13,7 @@ body {
   background-color: #f5f5f5;
 }
 
-/* O header cria a faixa branca fluida de ponta a ponta na tela */
+/* O header cria a faixa branca fluida */
 .header {
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@ body {
   width: 100%;
 }
 
-/* O container limita a largura máxima em 1200px e centraliza o conteúdo */
+/* O container ocupa 100% até o limite de 1200px, alinhando as pontas perfeitamente */
 .header__container {
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@ body {
   width: 100%;
   max-width: 1200px;
   height: 60px;
-  padding: 0 24px; /* Respeita o recuo lateral exigido no Figma */
+  padding: 0 24px; /* Respiro de segurança para a tela de 1024px */
 }
 
 .logo-link {
@@ -51,6 +51,7 @@ body {
   align-items: center;
 }
 
+/* O espaçamento de 12px fica nas laterais do item da lista */
 .nav__item {
   margin: 0 12px;
 }
@@ -63,10 +64,10 @@ body {
   margin-right: 0;
 }
 
+/* O link ocupa exatamente a largura do texto, fazendo o ::after ter o tamanho perfeito */
 .nav__link {
   display: flex;
   align-items: center;
-  justify-content: center;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
@@ -82,19 +83,18 @@ body {
   color: var(--color-acent);
 }
 
-/* Linha azul inferior com tamanho fixado e centralizado conforme o Figma */
+/* A linha agora ocupa 100% da largura do texto correspondente (ex: 37px para Apple) */
 .nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 37px; /* Largura exata medida no Figma (image_323080.png) */
+  left: 0;
+  right: 0;
   height: 4px;
   background-color: var(--color-acent);
 }
 
-/* Hover e seletor do robô de testes */
+/* Hover e seletor de testes automatizados */
 .nav__link:hover,
 .nav__link[data-qa="hover"] {
   color: var(--color-acent);
