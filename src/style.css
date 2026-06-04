@@ -9,19 +9,19 @@
 }
 
 body {
-  font-family: Roboto, sans-serif; /* Corrigido: sem aspas */
+  font-family: Roboto, sans-serif;
   background-color: #f5f5f5;
 }
 
-/* O header cria a faixa branca de ponta a ponta na tela */
+/* O header cria a faixa branca fluida de ponta a ponta na tela */
 .header {
   display: flex;
   justify-content: center;
-  background-color: #fff; /* Corrigido: formato curto */
+  background-color: #fff;
   width: 100%;
 }
 
-/* O container limita a largura máxima e distribui os elementos como no Figma */
+/* O container limita a largura máxima em 1200px e centraliza o conteúdo */
 .header__container {
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@ body {
   width: 100%;
   max-width: 1200px;
   height: 60px;
-  padding: 0 24px;
+  padding: 0 24px; /* Respeita o recuo lateral exigido no Figma */
 }
 
 .logo-link {
@@ -66,9 +66,10 @@ body {
 .nav__link {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000; /* Corrigido: formato curto */
+  color: #000;
   font-size: 12px;
   font-weight: 500;
   height: 60px;
@@ -76,17 +77,19 @@ body {
   transition: color 0.2s ease;
 }
 
-/* Linha azul indicando página ativa */
+/* Estado Ativo */
 .nav__link.is-active {
   color: var(--color-acent);
 }
 
+/* Linha azul inferior com tamanho fixado e centralizado conforme o Figma */
 .nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 37px; /* Largura exata medida no Figma (image_323080.png) */
   height: 4px;
   background-color: var(--color-acent);
 }
