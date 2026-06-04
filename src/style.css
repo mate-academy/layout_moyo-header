@@ -9,17 +9,19 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif; /* Corrigido: sem aspas */
   background-color: #f5f5f5;
 }
 
+/* O header cria a faixa branca de ponta a ponta na tela */
 .header {
   display: flex;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #fff; /* Corrigido: formato curto */
   width: 100%;
 }
 
+/* O container limita a largura máxima e distribui os elementos como no Figma */
 .header__container {
   display: flex;
   align-items: center;
@@ -66,7 +68,7 @@ body {
   align-items: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000000;
+  color: #000; /* Corrigido: formato curto */
   font-size: 12px;
   font-weight: 500;
   height: 60px;
@@ -74,6 +76,7 @@ body {
   transition: color 0.2s ease;
 }
 
+/* Linha azul indicando página ativa */
 .nav__link.is-active {
   color: var(--color-acent);
 }
@@ -88,6 +91,7 @@ body {
   background-color: var(--color-acent);
 }
 
+/* Hover e seletor do robô de testes */
 .nav__link:hover,
 .nav__link[data-qa="hover"] {
   color: var(--color-acent);
