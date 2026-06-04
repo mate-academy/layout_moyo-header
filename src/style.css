@@ -1,3 +1,63 @@
-body {
+:root{
+  --color-acent: #00ACDC;
+}
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 20px auto 0 auto;
+  background: #ffffff;
+  padding: 0 40px;
+  height: 60px;
+}
+.logo-link{
+  display: flex;
+  align-items: center;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  height: 100%;
+}
+nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  height: 60px;
+  position: relative;
+}
+nav li:first-child a{ padding-left: 0;}
+nav li:last-child a{ padding-right: 0;}
+nav li{
+  padding: 0 12px;
+}
+.is-active{
+  color: var(--color-acent);
+}
+.is-active::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-acent);
+  border-radius: 15px;
+}
+a:hover, nav a[data-qa="hover"]{
+  color: var(--color-acent);
 }
