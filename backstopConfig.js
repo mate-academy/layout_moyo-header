@@ -15,29 +15,19 @@ const config = {
   fileNameTemplate: '{scenarioLabel}_{viewportLabel}',
   onBeforeScript: 'puppet/onBefore.js',
   onReadyScript: 'puppet/onReady.js',
+  engine: 'puppeteer',
+  engineOptions: {
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    headless: true,
+  },
+
   viewports: [
-    {
-      name: '1024px',
-      width: 1024,
-      height: 768,
-    },
-    {
-      name: '1200px',
-      width: 1200,
-      height: 768,
-    },
+    { name: '1024px', width: 1024, height: 768 },
+    { name: '1200px', width: 1200, height: 768 },
   ],
   scenarios: [
-    {
-      ...basic,
-      label: 'Header tag',
-      selectors: ['header'],
-    },
-    {
-      ...basic,
-      label: 'Nav tag',
-      selectors: ['nav'],
-    },
+    { ...basic, label: 'Header tag', selectors: ['header'] },
+    { ...basic, label: 'Nav tag', selectors: ['nav'] },
     {
       ...basic,
       misMatchThreshold: 2,
