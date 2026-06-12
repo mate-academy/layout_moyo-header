@@ -1,3 +1,50 @@
+:root{
+  --primary-color: #000000;
+  --secundary-color: #00ACDC;
+}
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  margin: 10px 50px;
+  height: 40px;
+  width: 40px;
+}
+
+.nav__list{
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+
+.nav__item{
+  padding: 24px 50px;
+}
+
+.nav__link{
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.nav__link:hover{
+  color: var(--secundary-color);
+}
+
+.nav__link--is-active:active{
+  padding-bottom: 24px;
+  color: var(--secundary-color);
+  border-bottom: 3px solid var(--secundary-color);
 }
