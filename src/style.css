@@ -1,3 +1,70 @@
+:root {
+  --accent-color: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  min-width: 1024px;
+}
+
+.logo {
+  font-size: 0;
+}
+
+.nav-list {
+  display: flex;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  line-height: 60px;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-link:hover,
+.is-active {
+  color: var(--accent-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--accent-color);
+  height: 4px;
+  border-radius: 8px;
 }
