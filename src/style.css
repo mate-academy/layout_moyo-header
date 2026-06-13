@@ -1,3 +1,96 @@
+html::before,
+html::after,
+body::before,
+body::after,
+a::before,
+a::after,
+li::before,
+li::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  font-family: Roboto, sans-serif;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: inline-block;
+  text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+}
+
+.nav__link:hover,
+.is-active {
+  color: var(--main-color);
+}
+
+.is-active::after {
+  content: '';
+  position: relative;
+  height: 4px;
+  border-radius: 8px;
+  background: var(--main-color);
+  display: block;
+  bottom: 4px;
+}
+
+.nav__link:focus {
+  outline: 2px solid var(--main-color);
+}
+
+@media (max-width: 1200px) {
+  .nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    max-width: 40px; /* Adjust as needed */
+    height: auto;
+  }
 }
