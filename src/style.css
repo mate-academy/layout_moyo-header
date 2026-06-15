@@ -1,3 +1,74 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap';
+
 body {
+  --brand-blue: #00acdc;
+
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  padding: 0;
+}
+
+.logo-img {
+  max-width: 100%;
+  display: block;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 50px;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-item {
+  list-style-type: none;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header-link {
+  display: block;
+  line-height: 60px;
+  height: 60px;
+  position: relative;
+  font-size: 12px;
+  letter-spacing: 0%;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header-item:hover > a {
+  color: var(--brand-blue);
+}
+
+.header-link.is-active {
+  color: var(--brand-blue);
+}
+
+.header-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--brand-blue);
+  height: 4px;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
