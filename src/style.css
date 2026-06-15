@@ -1,3 +1,131 @@
-body {
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('Roboto-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-between;
+  padding-inline: 50px;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  column-gap: 20px;
+}
+
+.header-link {
+  display: block;
+  line-height: 60px;
+  height: 60px;
+  position: relative;
+  font-size: 12px;
+  letter-spacing: 0%;
+}
+
+.header-item:hover > a {
+  color: #00acdc;
+}
+
+.header-link.active {
+  color: #00acdc;
+}
+
+.header-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #00acdc;
+  height: 4px;
+  border-radius: 8px;
 }
