@@ -1,3 +1,84 @@
+@media (min-width: 1200px) {
+  .logo {
+    margin: 0 419px 0 50px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .logo {
+    margin: 0 243px 0 50px;
+  }
+}
+
+html {
+  --active-color: #00acdc;
+  --nav-height: 60px;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: var(--nav-height);
+  margin: 0;
+}
+
+img {
+  height: 40px;
+  width: 40px;
+}
+
+.nav-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  align-content: center;
+  display: block;
+  text-decoration: none;
+  color: black;
+  height: var(--nav-height);
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-link:hover {
+  color: var(--active-color);
+}
+
+.is-active {
+  position: relative;
+  height: 100%;
+  color: var(--active-color);
+}
+
+.is-active::after {
+  content: '';
+  width: 100%;
+  background: var(--active-color);
+  position: absolute;
+  left: 0;
+  height: 4px;
+  bottom: 0;
+  align-self: flex-end;
+  border-radius: 8px;
 }
