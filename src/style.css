@@ -1,3 +1,91 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;&display=swap';
+
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex: 1;
+}
+
+.menu ul li {
+  margin-right: 30px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  color: #000;
+  font-size: 12px;
+  padding-bottom: 5px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.fourth-child {
+  font-weight: 500;
+  color: #007acc;
+}
+
+nav ul li a:hover {
+  color: #007acc;
+}
+
+nav ul li a.is-active {
+  color: #007acc;
+}
+
+nav ul li a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 50;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #007acc;
+  border-radius: 10px;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  top: 35;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #007acc;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  display: block;
+  height: 40px;
+  width: auto;
 }
