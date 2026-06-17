@@ -1,3 +1,70 @@
+/* stylelint-disable-next-line import-notation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+:root {
+  --is-active-color: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+.container {
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  height: 40px;
+}
+
+.nav {
+  line-height: 60px;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  display: flex;
+}
+
+.is-active {
+  color: var(--is-active-color);
+  position: relative;
+  text-decoration: none;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
+  background-color: var(--is-active-color);
+  left: 0;
+  bottom: 0;
+}
+
+.nav__link:hover {
+  color: var(--is-active-color);
 }
