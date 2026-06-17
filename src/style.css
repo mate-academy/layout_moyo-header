@@ -1,3 +1,70 @@
-body {
+:root {
+  --blue: #00acdc;
+}
+
+* {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 50px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 40;
+  height: 40;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+li:not(:last-child) {
+  margin-inline-end: 20px;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+a.is-active {
+  color: var(--blue);
+}
+
+a.is-active::after {
+  content: '';
+  position: relative;
+  background-color: var(--blue);
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  margin-top: 56px;
+  margin-left: -37px;
+}
+
+a:hover {
+  color: var(--blue);
 }
