@@ -1,3 +1,105 @@
-body {
+/* змінна для кольору */
+:root {
+  --blue: #00acdc;
+}
+
+/* Скидання */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* Меню */
+.nav__list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+/* Посилання */
+.nav__link {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+  position: relative;
+  letter-spacing: 0;
+  transition: color 0.2s ease;
+}
+
+/* Спан всередині посилання */
+.nav__link span {
+  position: relative;
+  display: inline-block;
+}
+
+/* APPLE синім */
+.nav__link.is-active {
+  color: var(--blue);
+}
+
+/* тонка лінія при наведенні */
+.nav__link:hover span::after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
+}
+
+/* LAPTOPS & COMPUTERS стає синім при наведенні */
+.nav__link.is__blue:hover {
+  color: var(--blue);
+}
+
+/* Лінія під APPLE */
+.nav__link.is-active span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -23px;
+  width: 37px;
+  height: 4px;
+  background-color: var(--blue);
+  border-radius: 8px;
 }
