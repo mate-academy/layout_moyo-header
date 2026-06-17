@@ -1,3 +1,121 @@
-body {
+:root {
+  --font-sans: 'Roboto', Arial, sans-serif;
+  --blue: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 500; /* Roboto Medium */
+  font-size: 12px;
+  line-height: 100%;
+  background-color: white;
+}
+
+.header {
+  width: 1200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.container {
+  width: 100%; /* рабочее пространство */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; /* вертикальное выравнивание лого и ссылок */
+  justify-content: flex-start; /* ссылки идут после логотипа */
+  padding: 0 50px;
+}
+
+.logo {
+  margin-right: 419px;
+  width: 40px;
+  height: 40px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 2px;
+}
+
+.nav-list li {
+  margin-left: 3px;
+}
+
+.nav-list li + li {
+  margin-left: 20px;
+}
+
+.nav-list a {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
+  height: 60px; /* ровно как у хедера */
+  display: flex;
+  letter-spacing: 0.02px;
+  white-space: nowrap;
+  align-items: center; /* центрирует текст по вертикали */
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  padding: 0; /* больше ничего не добавляем */
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--blue);
+  border-radius: 8px;
+  transition: width 0.3s;
+}
+
+.nav-list a:hover::after {
+  width: 100%; /* подчеркивание при ховере */
+}
+
+.nav-list a.is-active::after {
+  width: 100%; /* подчеркивание только у активного */
+}
+
+.nav-list a:hover,
+.nav-list a.is-active {
+  color: var(--blue);
+}
+
+@media (max-width: 1024px) {
+  .header {
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    margin-right: 243px; /* новый отступ от логотипа до Apple */
+  }
+
+  .nav-list li + li {
+    margin-left: 20px;
+  }
 }
