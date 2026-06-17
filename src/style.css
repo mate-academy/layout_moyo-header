@@ -1,3 +1,104 @@
 body {
+  --header-height: 60px;
+
   margin: 0;
+  background-color: #00000029;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.06px;
+}
+
+header {
+  background-color: #fff;
+  width: 100vw;
+  height: var(--header-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent;
+}
+
+.img_link {
+  padding-left: 50px;
+}
+
+.nav_list {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0 50px 0 0;
+  align-items: center;
+}
+
+/* .nav_first_item{
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+} */
+
+/* .nav_1{
+  margin-bottom: 20px;
+} */
+
+.nav_items {
+  margin-right: 20px;
+}
+
+.nav_items:last-child {
+  margin-right: 0;
+}
+
+.nav_links {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+.nav_link_1,
+.nav_link_4 {
+  color: #00acdc;
+}
+
+.nav_links:hover {
+  border-bottom: 2px solid #00acdc;
+}
+
+is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background-color: #00acdc; /* Цвет линии */
+  border-radius: 2px;
+}
+
+.img_link:hover img {
+  border-color: #00acdc;
+  border-width: 2px;
+}
+
+[data-qa='hover']:hover {
+  text-decoration: none;
+}
+
+.nav_link_1 {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid #00acdc;
 }
