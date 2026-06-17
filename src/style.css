@@ -1,3 +1,83 @@
-body {
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+
+  --nav-item-color-regular: #000;
+  --nav-item-color-selected: #00acdc;
+}
+
+* {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  display: flex;
+  margin: auto 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  float: right;
+}
+
+.nav-item {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--nav-item-color-regular);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--nav-item-color-selected);
+}
+
+.is-active {
+  color: var(--nav-item-color-selected);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 55px;
+  border: 3px solid var(--nav-item-color-selected);
+  border-radius: 8px;
 }
