@@ -1,3 +1,72 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #0d6efd; /* Ajuste para a cor do Figma se for diferente */
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px; /* ajuste se necessário */
+}
+
+.logo img {
+  display: block;
+}
+
+/* Lista horizontal sem espaços laterais */
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px; /* ajuste conforme o Figma */
+}
+
+.nav-list li:first-child {
+  margin-left: 0;
+}
+
+.nav-list li:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  line-height: 56px; /* valor real do Figma */
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+}
+
+/* Hover */
+.nav-link:hover {
+  color: var(--blue);
+}
+
+/* Link ativo */
+.nav-link.is-active {
+  color: var(--blue);
+}
+
+/* Sub-linha azul com ::after */
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--blue);
 }
