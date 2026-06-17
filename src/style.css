@@ -1,3 +1,95 @@
-body {
+:root {
+  --text-color: #00acdc;
+}
+
+html,
+body,
+header,
+nav,
+ul,
+li,
+a,
+img {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo-link {
+  display: inline-block;
+}
+
+.header-logo-img {
+  display: block;
+  margin: 10px 0 10px 50px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-right: 50px;
+  margin-left: auto;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  list-style-type: none;
+}
+
+.menu-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.menu-link {
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.menu-link:hover {
+  color: var(--text-color);
+}
+
+.menu-link.is-active {
+  color: var(--text-color);
+}
+
+.menu-link.is-active::after {
+  content: '';
+  width: 100%;
+  background-color: var(--text-color);
+  height: 4px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
