@@ -1,3 +1,120 @@
+:root {
+  --blue-color: #00acdc; /* Azul Figma */
+  --black-color: #000; /* Shorthand hex */
+  --white-color: #fff; /* Shorthand hex */
+}
+
+html {
+  box-sizing: border-box; /* Reset sem * */
+}
+
 body {
+  margin: 0; /* Seu original + reset padding */
+  padding: 0;
+  font-family: Roboto, sans-serif; /* Sem quotes, fallback */
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%; /* 12px */
+  letter-spacing: 0%;
+  background-color: var(--white-color);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: var(--white-color);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05); /* Figma shadow */
+  padding: 0 50px; /* Logo left 50px */
+}
+
+/* Logo */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-link img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Nav */
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul.nav-list {
+  display: flex;
+  list-style: none;
+  height: 60px; /* Figma altura */
+  align-items: center;
   margin: 0;
+  padding: 0;
+  margin-left: 400px; /* Para Apple left ~509px (ajuste teste) */
+}
+
+nav ul li {
+  margin: 0 20px; /* Para diffs lefts (ex. 57px Samsung) */
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+/* Links */
+nav ul li a.nav-link {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+nav ul li a.nav-link:hover {
+  color: var(--blue-color);
+}
+
+nav ul li a.is-active {
+  color: var(--blue-color);
+}
+
+nav ul li a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; /* Para top 56px */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* ~37px Apple */
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
+}
+
+/* 1024px */
+@media (max-width: 1024px) {
+  header {
+    padding: 0 50px;
+  }
+
+  nav ul.nav-list {
+    margin-left: 200px; /* Para Apple left 333px */
+  }
+
+  nav ul li {
+    margin: 0 15px;
+  }
 }
