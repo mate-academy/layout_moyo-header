@@ -1,0 +1,54 @@
+{
+  "id": "moyo-header",
+  "viewports": [
+    { "name": "1024px", "width": 1024, "height": 768 },
+    { "name": "1200px", "width": 1200, "height": 768 }
+  ],
+  "scenarios": [
+    {
+      "label": "Header tag",
+      "selectors": ["header"],
+      "url": "http://127.0.0.1:5500/src/index.html"
+
+    },
+    {
+      "label": "Nav tag",
+      "selectors": ["nav"],
+      "url": "http://127.0.0.1:5500/src/index.html"
+
+    },
+    {
+      "label": "Link with data-qa_hover",
+      "selectors": ["[data-qa=\"hover\"]"],
+      "hoverSelector": "[data-qa=\"hover\"]",
+      "postInteractionWait": 1000,
+      "misMatchThreshold": 2,
+      "url": "http://127.0.0.1:5500/src/index.html"
+
+    },
+    {
+      "label": "Link with class_is-active",
+      "selectors": ["a.is-active"],
+      "misMatchThreshold": 2,
+      "url": "http://127.0.0.1:5500/src/index.html"
+
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
+

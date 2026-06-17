@@ -1,3 +1,92 @@
-body {
+/* === Global Reset === */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #005EFF;
+}
+
+body {
+  margin: 0; /* Reset browser's default margin */
+  font-family: Roboto, sans-serif;
+}
+
+/* === Header === */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+header a img {
+  height: 40px;
+}
+
+/* === Navigation === */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav li:not(:last-child) {
+  margin-right: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 48px;
+  display: inline-block;
+  position: relative;
+}
+
+nav a:hover,
+nav a.is-active {
+  color: var(--blue);
+}
+
+nav a.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
+}
+
+/* === Stars Block === */
+.stars {
+  display: flex;
+  margin: 0; /* Ensure no vertical spacing between blocks */
+}
+
+.stars__star {
+  width: 24px; /* Replace with Figma size */
+  height: 24px; /* Replace with Figma size */
+  background-image: url('../images/star-grey.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 8px; /* Replace with Figma spacing */
+}
+
+.stars__star:last-child {
+  margin-right: 0;
+}
+
+/* Modifiers: Activate N stars */
+.stars--1 .stars__star:nth-child(-n+1),
+.stars--2 .stars__star:nth-child(-n+2),
+.stars--3 .stars__star:nth-child(-n+3),
+.stars--4 .stars__star:nth-child(-n+4),
+.stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url('../images/star-yellow.svg');
 }
