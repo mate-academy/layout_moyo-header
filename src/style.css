@@ -1,3 +1,53 @@
 body {
   margin: 0;
 }
+
+header {
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo {
+  padding-top: 10px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 60px;
+  text-transform: uppercase;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+[data-qa='hover']:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  position: relative;
+  align-self: flex-start;
+  color: #00acdc;
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  display: block;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
+}
