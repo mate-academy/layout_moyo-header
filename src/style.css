@@ -1,3 +1,66 @@
-body {
+:root {
+  --blue: #00acdc;
+}
+
+.page__body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  height: 60px;
+  line-height: 60px;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.nav__link:first-child {
+  margin-left: 0;
+}
+
+.other__link {
+  display: block;
+  height: 60px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.is-active,
+.other__link:hover {
+  color: var(--blue);
+}
+
+.is-active::after {
+  content: '';
+  position: relative;
+  display: block;
+  bottom: 4px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--blue);
 }
