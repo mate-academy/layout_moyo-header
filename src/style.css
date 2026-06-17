@@ -1,3 +1,73 @@
-body {
+*{
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+header {
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  width: 100%;
+  /* No margin horizontal para que ocupe todo el ancho */
+}
+
+/* Logo con margen a la derecha para separar del nav */
+.logo {
+  display: inline-block;
+  margin-right: 24px; /* ejemplo, puedes ajustar */
+}
+
+/* Navegación */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+/* Links dentro de li */
+nav ul li:not(:last-child) {
+  margin-right: 24px; /* separar enlaces, sin gap */
+}
+
+/* Quitar margen antes del primer y después del último */
+nav ul li:first-child {
+  margin-left: 0;
+}
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+/* Estilos del enlace */
+nav a {
+  display: inline-block;
+  text-align: center;
+  height: 40px; /* ejemplo: altura de los links (tomar del diseño) */
+  line-height: 40px; /* centra el texto verticalmente */
+  color: black; /* color base */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hover color */
+nav a:hover {
+  color: blue;
+}
+
+/* is-active con línea azul abajo */
+nav a.is-active {
+  position: relative;
+  color: blue;
+}
+
+nav a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: blue;
+}
+
