@@ -1,3 +1,78 @@
+@import '/src/colors.css';
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--text-color-basic);
+  height: 60px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 60px;
+}
+
+.logo {
+  margin-top: 10px;
+}
+
+.logotype {
+  width: 40px;
+  height: 40px;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.item:first-child {
+  margin-left: 0;
+}
+
+.link {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color-basic);
+  line-height: 60px;
+  height: 60px;
+}
+
+.link:hover {
+  color: var(--text-color-hover);
+}
+
+.navigation {
+  margin-bottom: 0;
+  margin-top: 0;
+  height: 60px;
+}
+
+.is-active {
+  color: var(--text-color-hover);
+}
+
+.is-active::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--text-color-hover);
+  border-radius: 8px;
 }
