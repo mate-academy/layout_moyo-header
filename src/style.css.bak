@@ -1,0 +1,216 @@
+/* --- 1. CSS Variables --- */
+:root {
+  /* Colors */
+  --color-active: #00ACDC;
+  --color-text: #000000;
+  --color-background: #FFFFFF;
+  --color-shadow: rgba(0, 0, 0, 0.05);
+  --color-hover: #ff6600; /* Умовний колір (замініть, якщо є в Figma) */
+
+  /* Типографіка (з Figma) */
+  --font-family: 'Roboto', sans-serif;
+  --font-weight: 500;
+  --font-size: 12px;
+  --line-height: 1; /* 100% line height */
+  --letter-spacing: 0;
+  
+  /* Розміри Хедера (з Figma) */
+  --header-height: 60px;
+  --header-padding-x: 50px; /* Логотип має Left: 50px */
+  --logo-width: 40px;
+  
+  /* Розміри Активної Лінії (з Figma: Rectangle 2) */
+  --active-line-width: 37px;
+  --active-line-height: 4px;
+  --active-line-radius: 8px;
+
+  /* Розрахункові Відступи (з Figma) */
+  --nav-margin-left: 418px; /* (Apple Left 508px) - (Logo Left 50px + Logo Width 40px) */
+  /* Відступи між посиланнями (на основі Figma). */
+  --indent-1: 23px; /* 568 - (508+37) */
+  --indent-2: 18px; /* 644 - (568+58) */
+  --indent-3: 20px; /* 752 - (644+88) - це домінуючий відступ */
+}
+
+/* --- 2. Скидання стилів та Тіло --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background-color: #f0f0f0; /* Тимчасовий фон для видимості хедера */
+}
+
+/* --- 3. Стилізація HEADER (з Figma) --- */
+header {
+  /* Розміри та Фон */
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--color-background);
+  box-shadow: 0 1px 2px var(--color-shadow);
+  padding: 0 var(--header-padding-x);
+  
+  /* Flexbox для вирівнювання */
+  display: flex;
+  align-items: center;
+}
+  height: var(--header-height);
+  background-color: var(--color-background);
+  box-shadow: 0 1px 2px var(--color-shadow);
+  padding: 0 var(--header-padding-x);
+  
+  /* Flexbox для вирівнювання */
+  display: flex;
+  align-items: center;
+}
+
+/* Логотип */
+header a:first-child {
+  display: block;
+}
+
+header a:first-child img {
+  display: block;
+  width: var(--logo-width);
+  height: var(--logo-width);
+}
+
+/* Навігація */
+nav {
+  margin-left: var(--nav-margin-left);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--indent-3);
+}
+
+nav a {
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  text-decoration: none;
+  color: var(--color-text);
+  text-transform: capitalize;
+  position: relative;
+  display: block;
+}
+
+/* Активне посилання */
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: var(--active-line-width);
+  height: var(--active-line-height);
+  background-color: var(--color-active);
+  border-radius: var(--active-line-radius);
+}
+
+/* Ефект при наведенні */
+nav a:hover {
+  color: var(--color-hover);
+  transition: color 0.3s ease;
+}
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--color-background);
+  
+  /* Тінь (з Figma: Rectangle) */
+  box-shadow: 0 4px 2px var(--color-shadow);
+  
+  /* Flexbox для вирівнювання */
+  display: flex;
+  align-items: center; /* header content should be vertically centered */
+  
+  /* Горизонтальні відступи для контенту (з Figma: Logo Left 50px) */
+  padding: 0 var(--header-padding-x);
+}
+
+/* --- 4. Стилізація Логотипу та Навігації --- */
+header > a {
+  /* Забезпечуємо, що логотип має правильний розмір */
+  width: var(--logo-width);
+  height: var(--logo-width);
+  /* flex-shrink: 0; (запобігає стисканню логотипу) */
+}
+
+nav {
+  /* Встановлюємо точний відступ зліва від логотипу згідно з Figma */
+  margin-left: var(--nav-margin-left);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Вирівнюємо посилання по центру */
+  height: var(--header-height); /* Навігація має висоту хедера */
+}
+
+/* --- 5. Стилізація Посилань (з Figma) --- */
+nav a {
+  /* Типографіка (з Figma) */
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase; /* CSS is used to show all letters in Uppercase */
+  
+  color: var(--color-text);
+  text-decoration: none;
+  
+  /* Nav Links should not have any padding but have the text centered */
+  /* Ми центруємо їх за допомогою flex у батьківських <ul> та <li> */
+  display: flex;
+  align-items: center;
+  height: 100%; /* Посилання займає всю висоту */
+  
+  position: relative; /* Для позиціонування ::after */
+}
+
+/* don't use the flex gap property... use margin instead */
+/* Застосовуємо точні відступи з Figma */
+nav li:nth-child(2) { margin-left: var(--indent-1); }
+nav li:nth-child(3) { margin-left: var(--indent-2); }
+nav li:nth-child(4) { margin-left: var(--indent-3); }
+nav li:nth-child(5) { margin-left: var(--indent-3); }
+nav li:nth-child(6) { margin-left: var(--indent-3); }
+nav li:nth-child(7) { margin-left: var(--indent-3); }
+nav li:nth-child(8) { margin-left: var(--indent-3); }
+
+/* link color should be changed on :hover */
+nav a:hover {
+  color: var(--color-hover);
+}
+
+/* --- 6. Стилізація Активного Елемента (з Figma) --- */
+nav a.is-active {
+  color: var(--color-active);
+}
+
+/* Pseudo-element is used for a blue line... */
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  
+  /* Розміри та стиль лінії (з Figma: Rectangle 2) */
+  width: var(--active-line-width);
+  height: var(--active-line-height);
+  background-color: var(--color-active);
+  border-radius: var(--active-line-radius);
+  
+  /* Позиціонування: */
+  /* 1. Центруємо лінію по горизонталі */
+  left: 50%;
+  transform: translateX(-50%);
+  /* 2. Ставимо внизу (Top: 56px при висоті 60px = 4px від низу) */
+  bottom: 0; 
+}
