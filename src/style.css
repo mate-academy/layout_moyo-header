@@ -1,3 +1,140 @@
-body {
+/* Reset */
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background: #f9f9f9;
+}
+
+/* Header */
+header {
+  background-color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Container central */
+.header-container {
+  width: 1200px;
+  height: 60px;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.header-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+/* Destaque APPLE */
+.nav-links li.highlight a {
+  color: #00ACDC;
+}
+
+.nav-links li.highlight .underline {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #00ACDC;
+  color: white;
+  font-size: 12px;
+  padding: 3px 24px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+
+/* Media query para telas menores */
+@media (max-width: 900px) {
+  .header-container {
+    padding: 0 20px;
+  }
+
+  /* Faz a nav quebrar e diminuir gap */
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap; /* permite quebra de linha */
+    justify-content: center;
+  }
+
+  /* Reduz fonte e padding dos links */
+  .nav-links a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  /* Muda container para coluna */
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  /* Logo maior e com margem abaixo */
+  .header-logo img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  /* Navegação vertical */
+  nav {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
 }
