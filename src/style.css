@@ -1,3 +1,95 @@
+/* Reset default margins */
+html,
 body {
   margin: 0;
+}
+
+/* Define CSS variable for blue color */
+:root {
+  --blue-color: #00acdc;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px; /* Updated to 60px as specified */
+  padding: 0 50px; /* Updated to 50px on left and right */
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex; /* Use flex to center the image */
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Set exact width to match the image */
+  height: 40px; /* Set exact height to match the image */
+  line-height: 0; /* Remove any line-height influence */
+}
+
+.logo-image {
+  width: 40px; /* Ensure the image is exactly 40x40 */
+  height: 40px;
+}
+
+/* Navigation styles */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 20px; /* Already set to 20px as specified */
+}
+
+/* Remove margin from the last item */
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px; /* Updated to match header height for vertical centering */
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: var(--blue-color);
+}
+
+/* Active link styles */
+.nav-link.is-active {
+  color: var(--blue-color);
+}
+
+/* Blue underline for active link using ::after */
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Position at the bottom of the link */
+  left: 0; /* Align with the left edge of the link */
+  width: 37px; /* Updated to 37px as specified */
+  height: 4px; /* Updated to 4px as specified */
+  background-color: var(--blue-color);
+  border-radius: 8px; /* Updated to 8px as specified */
 }
