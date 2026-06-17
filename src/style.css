@@ -1,3 +1,70 @@
+:root {
+  --color-primary: #00acdc;
+}
+
+/* #region Header with Logo */
+
 body {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.header {
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo__img {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  text-transform: uppercase;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
   margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__link {
+  padding: 0;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--color-primary);
+}
+
+.nav__link.is-active {
+  position: relative;
+  color: var(--color-primary);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--color-primary);
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
