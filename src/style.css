@@ -1,3 +1,80 @@
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
+/* stylelint-disable-next-line import-notation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+  --blue-color: #00acdc;
+  --black-color: #000;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.nav__link {
+  display: inline-block;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: var(--black-color);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.is-active {
+  color: var(--blue-color);
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--blue-color);
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
 }
