@@ -1,3 +1,79 @@
+:root {
+  --second-color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-left: 50px;
+}
+
+.logo_link {
+  display: inline-block;
+}
+
+.logo_moyo {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.nav_main {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.nav_list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+.nav_item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav_item :hover {
+  color: var(--second-color);
+  text-decoration: solid 2px black;
+}
+
+.is-active {
+  position: relative;
+  color: var(--second-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--second-color);
+  border-radius: 8px;
+  bottom: 0;
+  left: 0;
 }
