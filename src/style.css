@@ -1,3 +1,75 @@
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+}
+
+:root {
+  --sky-color: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  line-height: 60px;
+}
+
+ul,
+.header,
+.nav__link {
+  display: flex;
+}
+
+.header {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+/* Nav */
+.nav {
+  text-transform: uppercase;
+}
+
+.nav__item {
+  position: relative;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  height: 100%;
+  color: #000;
+}
+
+.nav__link:hover {
+  color: var(--sky-color);
+}
+
+/* Nav active */
+.is-active {
+  color: var(--sky-color);
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--sky-color);
+  position: absolute;
+  bottom: 0;
+  border-radius: 8px;
 }
