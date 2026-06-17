@@ -1,3 +1,67 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+
+  --hover-color: #00ACDC;
+}
+
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.nav-link {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-list-item {
+  margin-right: 20px;
+}
+
+li:last-of-type {
+  margin-right: 0;
+}
+
+.nav-link:hover {
+  color: var(--hover-color);
+}
+
+.nav-list {
+  display: flex;
+  margin: 0;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+}
+
+.logo-link {
+  height: 40px;
+  width: 40px;
+}
+
+.is-active::after {
+  width: 100%;
+  display: block;
+  content: "";
+  background-color: var(--hover-color);
+  height: 4px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+}
+
+.is-active {
+  color: var(--hover-color);
 }
