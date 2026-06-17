@@ -1,3 +1,103 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variável para a cor azul */
+:root {
+  --blue: #0d6efd;
+}
+
+/* Estilo global */
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+/* Cabeçalho principal */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 60px;
+  width: 100%;
+}
+
+/* Logo container centralizada */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  left: 50px;
+}
+
+/* Lista de navegação */
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+
+/* Itens da navegação */
+.nav-list li {
+  margin: 0 12px;
+}
+
+.nav-list li:first-child {
+  margin-left: 0;
+}
+
+.nav-list li:last-child {
+  margin-right: 0;
+}
+
+/* Links de navegação */
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  line-height: 48px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover */
+.nav-list a:hover {
+  color: #00acdc;
+}
+
+/* Link ativo */
+.nav-list a.is-active {
+  color: #00acdc;
+}
+
+.nav-list a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #00acdc;
 }
