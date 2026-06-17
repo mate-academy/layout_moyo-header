@@ -1,3 +1,89 @@
+html {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  padding: 0 50px;
+  align-content: center;
+  background-color: white;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 40px;
+}
+
+.logo-link {
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.link {
+  font-size: 12px;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.nav-links .link:first-child {
+  margin-left: 0;
+}
+
+.link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  color: black;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+a.is-active {
+  color: var(--blue-color);
+  position: relative;
+}
+
+a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(77% + 10px);
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  color: var(--blue-color);
 }
