@@ -1,3 +1,118 @@
+:root {
+  --link-color: #000;
+  --focus-color: #00acdc;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.nav {
+  display: flex;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-link {
+  display: block;
+  text-decoration: none;
+  color: var(--link-color);
+  text-align: left;
+  padding: 23px 0;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--focus-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--focus-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--focus-color);
+  border-radius: 8px;
 }
