@@ -1,3 +1,65 @@
-body {
+:root {
+  --blue-color: #00acdc; /* Определение переменной для синего цвета */
+}
+
+html {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+}
+
+.nav_list li {
+  display: block;
+  margin-left: 20px;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  padding: 23 0;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: var(--blue-color);
+}
+
+.is-active {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -23px;
+  display: block;
+  background-color: var(--blue-color);
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+header img {
+  display: block;
 }
