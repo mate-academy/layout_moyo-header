@@ -1,3 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.navi-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navi-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.navi-item {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.navi-item:first-child {
+  padding: 0%;
+}
+
+.navi-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  height: 100%;
+  line-height: 60px;
+  padding: 0;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.navi-link:hover {
+  color: #00acdc;
+}
+
+.navi-link.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.navi-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #00acdc;
+  border-radius: 8px;
+}
+
+.navi-link[data-qa='hover']:hover {
+  color: #00acdc;
 }
