@@ -1,3 +1,75 @@
+/* font-family: "Roboto", serif; */
+:root {
+  /* ============================ font family; ============================ */
+
+  --ff-roboto: 'Roboto', serif;
+
+  /* ================npm t============ color ============================ */
+  --color-active: #00acdc;
+}
+
+/* ============================ default style ============================ */
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ============================ header style ============================ */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: relative;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.menu_link {
+  font: 500 12px/60px var(--ff-roboto);
+  text-transform: uppercase;
+}
+
+.menu_link:not(:last-child) {
+  margin-right: 20px;
+}
+
+.is-active {
+  color: var(--color-active);
+  position: relative;
+}
+
+.is-active::before {
+  content: '';
+  position: absolute;
+  background-color: var(--color-active);
+  width: 37px;
+  height: 4px;
+  bottom: 0;
+}
+
+.menu_link:hover {
+  color: var(--color-active);
+}
+
+/* ============================ end header style ============================ */
