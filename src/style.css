@@ -1,3 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+ul,
 body {
+  margin: 0; /* Обнулення стилів */
+  padding: 0; /* Обнулення стилів */
+}
+
+body {
+  font-family: Roboto, serif;
   margin: 0;
+  background-color: black;
+  font-weight: 500;
+}
+
+header {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center; /* Картинка по центру по вертикалі */
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+nav {
+  display: flex;
+  height: 60px; /* Висота header */
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li + li {
+  margin-left: 20px; /* Відступ лише між сусідніми елементами */
+}
+
+a {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  text-decoration: none; /* Видаляємо підкреслення */
+  color: #000; /* Колір тексту */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+/* Стан при наведенні */
+a:hover {
+  color: #00acdc;
+}
+
+/* Для активного посилання */
+a.is-active {
+  position: relative;
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  background: #00acdc;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
 }
