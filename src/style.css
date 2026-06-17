@@ -1,3 +1,91 @@
+:root {
+  --primary-color: #000;
+  --hover-color: #00acdc;
+  --header-background-color: #fff;
+}
+
+html {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 500;
+}
+
 body {
   margin: 0;
+  padding: 0;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo .logo-img {
+  width: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav__list {
+  margin: 0;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list-link {
+  color: #000;
+  text-transform: uppercase;
+  display: block;
+  line-height: 60px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav__item-list {
+  margin-right: 20px;
+}
+
+.nav__item-list:last-child {
+  margin-right: 0;
+}
+
+.nav__list-link:hover {
+  color: var(--hover-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--hover-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--hover-color);
+  border-radius: 8px;
+}
+
+@media (width: 1024px) {
+  .container {
+    width: 1024px;
+    margin: 0 auto;
+  }
 }
