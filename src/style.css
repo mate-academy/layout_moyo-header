@@ -1,3 +1,84 @@
+:root {
+  --primary-color: #00acdc;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+}
+
+.moyo-header {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-right: 50px;
+}
+
+.moyo-header__logo img {
+  margin-left: 50px;
+  padding: 0;
+  margin-top: 4px;
+  height: 40px;
+  width: 40px;
+}
+
+.moyo-header__nav {
+  display: flex;
+}
+
+.moyo-header__nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.moyo-header__nav-link {
+  display: flex;
+  align-items: center;
+  color: #000;
+  height: 60px;
+  margin-left: 20px;
+  line-height: 100%;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.moyo-header__nav-link:hover {
+  color: var(--primary-color);
+}
+
+.moyo-header__nav-item:first-child .moyo-header__nav-link {
+  margin: 0;
+}
+
+.is-active {
+  position: relative;
+  color: var(--primary-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 56px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 1;
 }
