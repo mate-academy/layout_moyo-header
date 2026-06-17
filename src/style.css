@@ -1,3 +1,74 @@
+:root {
+  --color-active: #00acdc;
+}
+
 body {
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.header__logo {
+  height: 40px;
+  width: 40px;
+  display: block;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__item + .nav__item {
+  margin-left: 20px;
+}
+
+.nav__link {
+  line-height: 60px;
+
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  white-space: nowrap;
+  color: #000;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: var(--color-active);
+}
+
+.is-active {
+  display: flex;
+  color: var(--color-active);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-active);
+
+  height: 4px;
+  border-radius: 8px;
 }
