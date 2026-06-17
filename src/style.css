@@ -1,3 +1,82 @@
+/* stylelint-disable rule-empty-line-before */
+html {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 14.06px;
+  text-align: left;
+}
+
 body {
+  font-family: Roboto, Arial, sans-serif;
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 50px;
+}
+
+.picture {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+:root {
+  --blue-color: rgba(0, 172, 220, 1);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
+}
+
+.link_style {
+  display: inline-block;
+  color: black;
+  height: 60px;
+  line-height: 60px;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.is-active {
+  color: var(--blue-color);
+}
+
+.link_style:hover {
+  color: var(--blue-color);
+}
+
+.nav_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_items {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav_items:last-child {
+  margin-right: 0;
 }
