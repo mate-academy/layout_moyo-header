@@ -1,0 +1,107 @@
+.page,
+.page * {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-color: #00acdc;
+  --header-height: 60px;
+  --nav-gap: 20px;
+}
+
+.page {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  width: 100%;
+  background-color: #fff;
+}
+
+.header__content {
+  max-width: 1200px;
+  height: var(--header-height);
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-image {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  margin-right: var(--nav-gap);
+}
+
+.nav__item--last {
+  margin-right: 0;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* underline існує, але буде показуватись ТІЛЬКИ для active */
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 37px;
+  height: 4px;
+  margin: 0 auto;
+
+  background-color: var(--blue-color);
+  border-radius: 8px;
+  opacity: 0;
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+}
+
+/* активний пункт: і текст синій, і underline */
+.nav__link.is-active {
+  color: var(--blue-color);
+}
+
+.nav__link.is-active::after {
+  opacity: 1;
+}
