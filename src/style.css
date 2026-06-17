@@ -1,3 +1,81 @@
+@font-face {
+  font-family: Roboto;
+  src: local('Roboto'), local('Roboto-Regular'),
+    url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+}
+
+:root {
+  --link-color: #00acdc;
+}
+
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.header__link {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  margin-left: 20px;
+  margin-right: 0;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: black;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+}
+
+.nav__link:active {
+  text-decoration: none;
+  text-decoration-color: var(--link-color);
+}
+
+.nav__link:hover {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.is-active {
+  margin-left: 0%;
+  color: var(--link-color);
+}
+
+.is-active::after {
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  width: 37px;
+  height: 4px;
+  top: 56px;
+  border-radius: 8px;
+  background-color: var(--link-color);
+  border: none;
 }
