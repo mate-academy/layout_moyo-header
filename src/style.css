@@ -1,3 +1,77 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+
+:root {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: #fff;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-right: 5rem;
+}
+
+.logo {
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem 0 1rem 5rem;
+}
+
+.list__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  list-style-type: none;
+  position: relative;
+}
+
+.link__item {
+  padding: 2.3rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+.item:not(.item:last-child) {
+  margin-right: 2rem;
+}
+
+.link__item:hover {
+  color: #00acdc;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  width: 92%;
+  color: #00acdc;
+  content: '';
+  border: 2px solid #00acdc;
+  border-radius: 8px;
+  position: absolute;
+  bottom: -2.3rem;
+  left: 0;
 }
