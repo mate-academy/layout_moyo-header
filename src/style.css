@@ -1,3 +1,71 @@
+/* Font */
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+/* CSS Variables */
+:root {
+  --color-blue: #00acdc;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 60px;
+}
+
+/* Navigation */
+.nav__list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item + .nav__item {
+  margin-left: 20px; /* відступи між лінками */
+}
+
+.nav__link {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 60px; /* висота посилань */
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000; /* базовий чорний */
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+/* Apple */
+.nav__link.apple {
+  color: var(--color-blue);
+}
+
+.nav__link.apple::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--color-blue);
+  border-radius: 8px;
+}
+
+.nav__link:hover {
+  color: var(--color-blue);
+}
+
+/* Logo */
+.logo img {
+  width: 40px;
+  height: 40px;
+  display: flex;
 }
