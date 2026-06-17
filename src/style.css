@@ -1,3 +1,94 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap';
+
+:root {
+  --blue-color: #00acdc;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  background-color: #f5f5f5; /* Cor de fundo */
+  font-size: 16px;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  padding: 0 50px;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.logo__image {
+  height: 100%;
+  width: 100%;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.nav__link {
+  height: 60px;
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  align-items: center;
+  list-style-type: none;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  color: black;
+  position: relative;
+  text-decoration: none;
+}
+
+nav ul li a:hover,
+.nav__link.is-active {
+  color: var(--blue-color);
+}
+
+nav a[data-qa='hover']:hover::before {
+  position: relative;
+}
+
+.nav__link.is-active::after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  content: '';
+  height: 4px;
+  border-radius: 8px;
+  position: absolute;
+  background-color: var(--blue-color);
 }
