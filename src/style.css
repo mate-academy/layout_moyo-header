@@ -1,45 +1,45 @@
+:root {
+  --blue: #00acdc;
+}
+
 body {
   font-family: Roboto, sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal;
-  font-variation-settings: 'wdth' 100;
   margin: 0;
 }
 
-.nav a {
+.nav__link {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
-  line-height: 15px;
+  height: 60px;
+  line-height: 60px;
   position: relative;
   display: block;
   color: #000;
   margin-right: 20px;
-  padding-top: 22.5px;
-  padding-bottom: 22.5px;
 }
 
-nav a.is-active,
-nav a:hover {
-  color: #00acdc;
+.nav__link.is-active,
+.nav__link:hover {
+  color: var(--blue);
 }
 
-nav a.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 4px;
-  background: #00acdc;
+  background: var(--blue);
 }
 
-nav a.is-active-3 {
+.nav__link.is-active-3 {
   margin-right: 0;
 }
 
-.header nav ul {
+.nav__list {
   list-style: none;
   display: flex;
   margin: 0;
@@ -56,9 +56,7 @@ nav a.is-active-3 {
 .header {
   align-items: center;
   display: flex;
-  height: 60px;
   justify-content: space-between;
-  margin: 0 auto;
   padding: 0 50px;
 }
 
