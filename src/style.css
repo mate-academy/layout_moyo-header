@@ -1,81 +1,63 @@
-:root {
-  --blue: #00acdc;
-}
-
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: Roboto, Arial, sans-serif;
-  font-weight: 500;
+  font-family: Roboto, sans-serif;
 }
 
 .header {
+  height: 60px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  background: #fff;
-}
-
-.logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
 }
 
 .logo {
-  display: block;
   height: 40px;
-}
-
-.nav {
-  margin-left: auto;
+  width: 40px;
 }
 
 .nav__list {
   display: flex;
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
-.nav__item + .nav__item {
-  margin-left: 20px;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav__link {
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  height: 60px;
 
-  height: 60px;      /* altura deve estar no link */
-  padding: 0;        /* sem padding */
-
-  text-decoration: none;
   color: #000;
-
-  font-size: 12px;
+  text-decoration: none;
   text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+
+  position: relative;
 }
 
-.nav__link:hover {
-  color: var(--blue);
+.nav__link:hover,
+.is-active {
+  color: #00acdc;
 }
 
-.nav__link.is-active {
-  color: var(--blue);
-}
-
-.nav__link.is-active::after {
-  content: "";
+.is-active::after,
+.nav__link:hover::after {
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
 
   height: 4px;
-  background: var(--blue);
+  border-radius: 8px;
+  background-color: #00acdc;
 }
