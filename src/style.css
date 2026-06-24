@@ -1,3 +1,94 @@
+:root {
+  --primary-blue: #00acdc; /* Створення CSS-змінної згідно з чек-листом */
+}
+
+html,
 body {
   margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.site-header {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  width: 1200px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.main-nav {
+  margin-left: auto;
+  display: flex;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.nav-item {
+  margin-left: 24px;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+  height: 60px;
+  padding: 0;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: var(--primary-blue);
+}
+
+.nav-link.is-active {
+  color: var(--primary-blue);
+}
+
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--primary-blue);
 }
