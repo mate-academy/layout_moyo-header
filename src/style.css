@@ -1,4 +1,5 @@
-* {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,31 +17,30 @@ body {
   font-variation-settings: 'wdth' 100;
 }
 
-header {
+.header {
   display: flex;
   padding: 0 50px;
   justify-content: space-between;
   align-items: center;
 }
 
-a {
-  cursor: pointer;
-}
-
 .logo {
   height: 40px;
   width: 40px;
+  cursor: pointer;
 }
 
-nav {
+.menu {
   text-transform: uppercase;
   font-size: 12px;
 }
 
-nav ul {
+.menu .menu-list {
   display: flex;
   align-items: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-items {
@@ -51,6 +51,8 @@ nav ul {
   text-decoration: none;
   color: #000;
   margin-left: 20px;
+  cursor: pointer;
+  justify-content: center;
 }
 
 .nav-items:hover,
@@ -58,7 +60,7 @@ nav ul {
   color: var(--hover-color);
 }
 
-li:first-child .nav-items {
+.list-item:first-child .nav-items {
   margin-left: 0;
 }
 
