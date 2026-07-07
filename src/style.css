@@ -15,10 +15,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
 }
 
 .header-item {
-  margin: auto 50px;
+  margin: auto 0;
 }
 
 .img {
@@ -41,7 +42,10 @@ body {
   align-items: center;
   padding: 0;
   margin: 0;
-  gap: 20px;
+}
+
+.list-item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .is-active {
@@ -52,8 +56,7 @@ body {
   color: var(--blue-item-color);
 }
 
-.is-active::after,
-.link:active::after {
+.is-active::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -61,5 +64,5 @@ body {
   bottom: 0;
   left: 0;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--blue-item-color);
 }
