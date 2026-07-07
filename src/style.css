@@ -1,5 +1,14 @@
+:root {
+  --blue-color: #00acdc;
+}
+
+html {
+  margin: 0;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
 
 .header {
@@ -41,29 +50,24 @@ body {
 
 .nav__link {
   position: relative;
-
   display: flex;
   align-items: center;
-
   height: 60px;
-
-  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
-
   transition: color 0.3s;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav__link.is-active::after {
@@ -75,5 +79,5 @@ body {
 
   height: 4px;
   border-radius: 2px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
