@@ -1,3 +1,61 @@
+:root {
+  --blue: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  display: flex;
+}
+
+.nav_lists {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_list:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav_list_link {
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 500;
+  font-size: 12px;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+.nav_list_link:hover {
+  color: var(--blue);
+}
+
+.is-active {
+  color: var(--blue);
+}
+
+.is-active::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: '';
+  background-color: var(--blue);
+  border-radius: 8px;
+  height: 4px;
+  width: 100%;
 }
