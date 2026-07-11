@@ -6,18 +6,18 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
 }
-.header {
+.main-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header__menu-list {
+.navigation-list {
   display: flex;
   list-style: none;
 }
 
-.header__menu-link {
+.navigation-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,23 +26,23 @@ body {
   color: #333;
 }
 
-.header__menu-link:hover,
+.navigation-link:hover,
 .header__menu-link[data-qa="hover"] {
   color: #007bff;
 }
-.header__menu-item {
+.navigation-item {
   margin-left: 32px;
 }
 
-.header__menu-item:first-child {
+.navigation-item:first-child {
   margin-left: 0;
 }
-.header__menu-link.is-active {
+.navigation-link.is-active {
   position: relative;
   color: #007bff;
 }
 
-.header__menu-link.is-active::after {
+.navigation-link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
