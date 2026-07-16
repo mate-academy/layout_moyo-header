@@ -14,7 +14,11 @@ body {
   align-items: center;
 
   padding: 0 50px;
-  background: #fff;
+  background-color: #fff;
+}
+
+.header nav {
+  margin-left: auto;
 }
 
 .logo {
@@ -31,23 +35,24 @@ body {
 }
 
 .links li:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 24px;
 }
 
-.links a {
+.header_link {
   position: relative;
-  display: flex;
-  align-items: center;
-  height: 60px;
+
+  display: block;
+  line-height: 60px;
 
   text-decoration: none;
   color: #000;
+
   font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 500;
 }
 
-.links a:hover {
+.header_link:hover {
   color: var(--accent-blue);
 }
 
@@ -55,13 +60,22 @@ body {
   color: var(--accent-blue);
 }
 
-.links a:hover::after {
+.header_link:hover {
+  color: var(--accent-blue);
+}
+
+.header_link.is-active {
+  color: var(--accent-blue);
+}
+
+.header_link.is-active::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: 0;
+
   width: 100%;
   height: 4px;
+
   background: var(--accent-blue);
-  border-radius: 8px;
 }
