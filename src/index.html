@@ -12,11 +12,115 @@
     />
     <title>Moyo header</title>
     <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="./style.css"
     />
   </head>
   <body>
-    <h1>Moyo header</h1>
+    <header class="header">
+      <!-- Logo is a link, but it is not part of the navigation menu. -->
+      <a
+        class="logo"
+        href="#home"
+      >
+        <img
+          class="logo__image"
+          src="./images/logo.png"
+          alt="MOYO logo"
+        />
+      </a>
+
+      <!-- Main header navigation. -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a
+              class="nav__link is-active"
+              href="#apple"
+            >
+              Apple
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="#samsung"
+            >
+              Samsung
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="#smartphones"
+            >
+              Smartphones
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <!-- data-qa is required by the tests for hover checking. -->
+            <a
+              class="nav__link"
+              href="#laptops-and-computers"
+              data-qa="hover"
+            >
+              Laptops &amp; Computers
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="#gadgets"
+            >
+              Gadgets
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="#tablets"
+            >
+              Tablets
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="#photo"
+            >
+              Photo
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="#video"
+            >
+              Video
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>
