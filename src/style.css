@@ -1,4 +1,5 @@
-* {
+html,
+body {
   box-sizing: border-box;
 }
 
@@ -20,16 +21,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
 }
 
 .logo {
   display: flex;
 }
 
-.logo img {
+.logo__image {
   width: 40px;
   height: 40px;
+}
+
+.nav {
+  display: flex;
 }
 
 .nav__list {
@@ -51,6 +55,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 60px;
   text-decoration: none;
   text-transform: uppercase;
@@ -68,12 +73,12 @@ body {
 }
 
 .is-active::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
-  right: 0;
   bottom: 0;
+  width: 100%;
   height: 4px;
-  background-color: var(--blue-color);
   border-radius: 8px;
+  background-color: var(--blue-color);
 }
