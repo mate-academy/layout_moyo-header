@@ -1,6 +1,8 @@
 html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
+
+  --blue: #00acdc;
 }
 
 body {
@@ -8,8 +10,7 @@ body {
   background-color: #f5f5f5;
 }
 
-header {
-  width: calc(100vw - 100px);
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +18,7 @@ header {
   background-color: #fff;
 }
 
-nav {
+.nav {
   position: relative;
   display: flex;
   align-items: center;
@@ -32,37 +33,43 @@ img {
   left: 50px;
 }
 
-ul {
+.nav__list {
   display: flex;
   list-style: none;
   padding: 0;
 }
 
-li {
+.nav__item {
   display: flex;
   margin-left: 20px;
   line-height: 60px;
 }
 
-.li-active {
+.nav__item--active {
+  color: var(--blue);
+}
+
+.nav__item--first {
   margin-left: 0;
 }
 
-.is-active {
-  color: #00acdc;
-}
-
-.is-active::after {
+.nav__item--active::after {
   content: '';
   display: block;
   position: absolute;
   bottom: 0;
-  background-color: #00acdc;
+  background-color: var(--blue);
   width: 37px;
   height: 4px;
   border-radius: 8px;
 }
 
-.link-hover:hover {
-  color: #00acdc;
+.nav__item--hover:hover {
+  color: var(--blue);
+}
+
+a {
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
 }
