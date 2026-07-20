@@ -1,3 +1,7 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 html {
   font-family: Roboto, sans-serif;
 }
@@ -14,11 +18,13 @@ body {
   padding: 0 50px;
 }
 
-.header-logo img {
+.logo {
   display: block;
+  width: 40px;
+  height: 40px;
 }
 
-.header-menu a {
+.nav__link {
   display: flex;
   align-items: center;
   height: 60px;
@@ -30,16 +36,15 @@ body {
   position: relative;
 }
 
-.header-menu a.is-active {
-  position: relative;
-  color: #00acdc;
+.nav__link.is-active {
+  color: var(--blue-color);
 }
 
-.header-menu a:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--blue-color);
 }
 
-.header-menu ul {
+.nav__list {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -47,11 +52,11 @@ body {
   padding: 0;
 }
 
-.header-menu li:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   display: block;
@@ -59,6 +64,6 @@ body {
   right: 0;
   bottom: 0;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   border-radius: 8px;
 }
