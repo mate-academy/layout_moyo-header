@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
 
   --main-blue: #00acdc;
@@ -10,12 +9,12 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   margin-left: 50px;
   margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .nav {
@@ -29,16 +28,8 @@ body {
   padding: 0;
 }
 
-.nav-item {
+.nav-item + .nav-item {
   margin-left: 20px;
-}
-
-.nav-item:first-child {
-  margin-left: 0;
-}
-
-.nav-item:last-child {
-  margin-right: 0;
 }
 
 .nav-link {
@@ -60,10 +51,6 @@ body {
 }
 
 .nav-link.is-active {
-  color: var(--main-blue);
-}
-
-[data-qa='hover']:hover {
   color: var(--main-blue);
 }
 
