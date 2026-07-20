@@ -19,13 +19,12 @@ body {
 }
 
 .nav {
-  position: relative;
   display: flex;
   align-items: center;
   height: 60px;
 }
 
-img {
+.logo {
   width: 40px;
   height: 40px;
   opacity: 1;
@@ -45,15 +44,26 @@ img {
   line-height: 60px;
 }
 
-.nav__item--active {
-  color: var(--blue);
-}
-
 .nav__item--first {
   margin-left: 0;
 }
 
-.nav__item--active::after {
+.nav__item--hover:hover {
+  color: var(--blue);
+}
+
+.nav__link {
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+}
+
+.nav__item--active {
+  color: var(--blue);
+  position: relative;
+}
+
+.nav__link.is-active::after {
   content: '';
   display: block;
   position: absolute;
@@ -62,14 +72,4 @@ img {
   width: 37px;
   height: 4px;
   border-radius: 8px;
-}
-
-.nav__item--hover:hover {
-  color: var(--blue);
-}
-
-a {
-  text-transform: uppercase;
-  color: black;
-  text-decoration: none;
 }
