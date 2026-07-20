@@ -1,3 +1,70 @@
+:root {
+  --color-primary: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 50px;
+}
+
+.logo__img {
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  position: relative;
+
+  display: inline-block;
+
+  height: 60px;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 60px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+[data-qa='hover']:hover {
+  color: var(--color-primary);
+}
+
+.is-active {
+  color: var(--color-primary);
+}
+
+.is-active::after {
+  content: '';
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 4px;
+  border-radius: 8px;
+
+  background-color: var(--color-primary);
 }
