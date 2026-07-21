@@ -1,3 +1,82 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-left: 50px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  position: relative;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+nav {
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.nav__list li {
+  margin-left: 20px;
+}
+
+.nav__list li:first-child {
+  margin-left: 0;
+}
+
+.nav__list a.is-active {
+  color: var(--blue-color);
+}
+
+.nav__list a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 8px;
+}
+
+.nav__list a:hover {
+  color: var(--blue-color);
 }
