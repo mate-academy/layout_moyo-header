@@ -6,35 +6,6 @@
   --header-hight: 60px;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body,
-div,
-section,
-header,
-nav,
-ul,
-li,
-a,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-img,
-button,
-input {
-  box-sizing: inherit;
-}
-
 html,
 body {
   margin: 0;
@@ -49,27 +20,7 @@ body {
   /* background-color: green; */
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 0;
-}
-
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
+/*
 button,
 input,
 select,
@@ -88,10 +39,10 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-}
+} */
 
 .header {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   z-index: 100;
   width: 100%;
@@ -109,20 +60,29 @@ img {
   width: 100%;
   margin: 0 auto;
   height: 100%;
+  max-width: 1200px;
 }
 
 .logo_img {
   width: 40px;
   height: 40px;
+  max-width: 100%;
+  display: block;
 }
 
 .nav_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: flex;
   align-items: center;
 }
 
 .nav_link {
+  color: inherit;
+  text-decoration: none;
   display: flex;
+
   position: relative;
 
   align-items: center;
