@@ -1,3 +1,90 @@
+/* Base */
+:root {
+  --primary: black;
+  --accent: #00acdc;
+}
+
 body {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--primary);
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav li {
+  text-align: center;
+  margin-right: 20px;
+  line-height: 60px;
+}
+
+.nav :last-child {
+  margin: 0;
+}
+
+li a:hover {
+  color: var(--accent);
+}
+
+.is-active {
+  color: var(--accent);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
 }
