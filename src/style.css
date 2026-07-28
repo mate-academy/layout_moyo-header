@@ -8,6 +8,7 @@
 
 body {
   margin: 0;
+  --blue-color: #00acdc;
 }
 .header {
   display: flex;
@@ -27,24 +28,28 @@ body {
 ul {
   display: flex;
   list-style-type: none;
-  gap: 20px;
+
   margin-right: 50px;
 }
-li {
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin: 10px;
   &::after {
     content: '';
     height: 4px;
     border-radius: 8px;
     align-content: flex-end;
     width: auto;
-    background-color: #00acdc;
+    background-color: var(--blue-color);
     display: block;
     opacity: 0;
     transition: 1s ease;
   }
 }
-li:hover {
-  color: #00acdc;
+a:hover {
+  color: var(--blue-color);
 
   &::after {
     content: '';
@@ -52,11 +57,12 @@ li:hover {
     border-radius: 8px;
     align-content: flex-end;
     width: auto;
-    background-color: #00acdc;
+    background-color: var(--blue-color);
     display: block;
     opacity: 1;
   }
 }
+
 .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
