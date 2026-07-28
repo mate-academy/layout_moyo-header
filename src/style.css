@@ -24,11 +24,6 @@ header {
   background-color: #fff;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
 .nav__links {
   display: flex;
   font-size: 12px;
@@ -54,7 +49,7 @@ nav {
   padding: 0 50px;
 }
 
-.nav__links__list a {
+.nav__link {
   display: flex;
   text-decoration: none;
   color: #000;
@@ -65,15 +60,15 @@ nav {
   position: relative;
 }
 
-.nav__links__list a:hover {
+.nav__link:hover {
   color: var(--blue-color);
 }
 
-.nav__links__list a.is-active {
+.nav__link.is-active {
   color: var(--blue-color);
 }
 
-.nav__links__list a.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -85,14 +80,14 @@ nav {
   background-color: var(--blue-color);
 }
 
-.nav__links__list li {
+.nav__item {
   margin-right: 20px;
 }
 
-.nav__links__list li:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
-.nav__links__list li:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
