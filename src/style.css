@@ -36,27 +36,59 @@ body {
 .moyo-logo {
   width: 40px;
   height: 40px;
+}
 
+.ww {
+  width: 40px;
+  height: 40px;
   margin-left: 50px;
 }
 
 ul {
   display: flex;
-  margin-right: 50px;
   padding: 0;
   list-style-type: none;
 }
 
 nav {
   position: relative;
+  margin: 0 50px 0 0;
 }
 
 .nav__link {
-  display: block;
-  margin: 10px;
+  display: inline-block;
+  margin-left: 20px;
   line-height: 60px;
   position: relative;
+  transition: 0.3s ease;
 
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.nav__link:hover {
+  a {
+    color: var(--blue-color);
+  }
+}
+
+.one {
+  margin: 0;
+}
+
+.nav__link.one a {
+  color: var(--blue-color);
+}
+
+.is-active {
+  text-decoration: none;
+  color: var(--blue-color);
+  display: inline-block;
+  line-height: 60px;
+  position: relative;
+  transition: 0.3s ease;
   &::after {
     content: '';
     position: absolute;
@@ -67,25 +99,5 @@ nav {
     border-radius: 8px;
     background-color: var(--blue-color);
     display: block;
-    opacity: 0;
-
-    transition: 0.3s ease;
   }
-}
-
-.nav__link:hover {
-  color: var(--blue-color);
-
-  &::after {
-    opacity: 1;
-  }
-}
-
-.is-active {
-  color: var(--blue-color);
-}
-
-a {
-  text-decoration: none;
-  color: black;
 }
