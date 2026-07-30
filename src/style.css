@@ -1,3 +1,95 @@
-body {
+/* ==========================================================================
+   CSS Variables & Reset
+   ========================================================================== */
+:root {
+  --color-primary: #00acdc;
+  --color-text: #000;
+  --color-text-hover: #00acdc;
+  --font-family-base: 'Roboto', sans-serif;
+  --nav-height: 60px;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Header Component
+   ========================================================================== */
+.header {
+  background-color: #fff;
+  width: 100%;
+}
+
+.header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header__logo-link {
+  align-items: center;
+  display: flex;
+}
+
+.header__logo {
+  display: block;
+  height: auto;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  align-items: center;
+  color: var(--color-text);
+  display: flex;
+  font-size: 12px;
+  height: var(--nav-height);
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover {
+  color: var(--color-text-hover);
+}
+
+.nav__link.is-active {
+  color: var(--color-primary);
+}
+
+.nav__link.is-active::after {
+  background-color: var(--color-primary);
+  border-radius: 2px 2px 0 0;
+  bottom: 0;
+  content: '';
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
