@@ -1,17 +1,8 @@
 @font-face {
   font-family: Roboto;
-  src: url('./Roboto/Roboto-VariableFont_wdth,wght.ttf')
-    format('truetype-variations');
-  font-weight: 100 900;
+  src: url('./Roboto/static/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url('./Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf')
-    format('truetype-variations');
-  font-weight: 100 900;
-  font-style: italic;
 }
 
 body {
@@ -19,99 +10,67 @@ body {
 
   margin: 0;
   font-family: Roboto, sans-serif;
-  font-weight: 500;
 }
 
 .header {
   display: flex;
-  height: 60px;
   align-items: center;
   justify-content: space-between;
+  height: 60px;
+}
 
-  font-weight: 500;
-  font-size: 12px;
-  text-transform: uppercase;
+.logo-link {
+  margin-left: 50px;
 }
 
 .moyo-logo {
   width: 40px;
   height: 40px;
-}
-
-.ww {
-  width: 40px;
-  height: 40px;
-  margin-left: 50px;
-}
-
-ul {
-  display: flex;
-  padding: 0;
-  list-style-type: none;
+  display: block;
 }
 
 nav {
+  margin-right: 50px;
+}
+
+.nav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__item {
   position: relative;
-  margin: 0 50px 0 0;
 }
 
 .nav__link {
-  display: inline-block;
-  margin-left: 20px;
+  display: block;
+  padding: 0 20px;
   line-height: 60px;
-  position: relative;
-  transition: 0.3s ease;
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
 .nav__link:hover {
-  a {
-    color: var(--blue-color);
-  }
-}
-
-.one {
-  margin: 0;
-}
-
-.nav__link.one a {
   color: var(--blue-color);
 }
 
 .is-active {
-  text-decoration: none;
   color: var(--blue-color);
-  display: inline-block;
-  line-height: 60px;
-  position: relative;
-  transition: 0.3s ease;
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    border-radius: 8px;
-    background-color: var(--blue-color);
-    display: block;
-  }
 }
 
-[data-qa='hover'] {
-  text-decoration: none;
-  color: black;
-  display: inline-block;
-  margin-left: 20px;
-  line-height: 60px;
-  position: relative;
-  transition: 0.3s ease;
-}
-
-[data-qa='hover']:hover {
-  color: var(--blue-color);
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--blue-color);
 }
