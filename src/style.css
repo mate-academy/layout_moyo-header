@@ -4,12 +4,6 @@ body {
   padding: 0;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 :root {
   --blue-color: #00acdc;
 }
@@ -22,12 +16,11 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   padding: 0 50px;
 
-  background: #fff;
+  background-color: #fff;
 }
 
 .nav {
@@ -41,7 +34,6 @@ body {
 
 .logo__image {
   display: block;
-
   width: 40px;
   height: 40px;
 }
@@ -49,15 +41,14 @@ body {
 .nav__list {
   display: flex;
 
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
-.nav__item {
+.nav__item:not(:last-child) {
   margin-right: 20px;
-}
-
-.nav__item:last-child {
-  margin-right: 0;
 }
 
 .nav__link {
@@ -69,10 +60,10 @@ body {
 
   height: 60px;
 
-  text-decoration: none;
-  text-transform: uppercase;
   color: #000;
   font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
 
   transition: color 0.3s;
 }
@@ -89,10 +80,10 @@ body {
   content: '';
 
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
 
-  width: 100%;
   height: 4px;
 
   border-radius: 8px;
