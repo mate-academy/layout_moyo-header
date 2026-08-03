@@ -1,8 +1,4 @@
-:root {
-  --color-blue: #00a3ff;
-}
-
-* {
+html, body, header, div, nav, ul, li, a, img {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,8 +23,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  line-height: normal;
   padding: 0 40px;
-  height: 80px;
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -58,31 +54,31 @@ button {
 }
 
 .nav-link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #000;
   font-weight: 500;
   text-transform: uppercase;
-  padding: 4px 0;
-  text-align: center;
+  height: 80px;
   position: relative;
   transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-  color: var(--color-blue);
+  color: #00a3ff;
 }
 
 .nav-link.is-active {
-  color: var(--color-blue);
+  color: #00a3ff;
 }
 
 .nav-link.is-active::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: var(--color-blue);
+  background-color: #00a3ff;
 }
