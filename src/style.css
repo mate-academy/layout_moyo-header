@@ -4,6 +4,10 @@ body {
   font-weight: 500;
 }
 
+:root {
+  --blue-color: #00acdc;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -24,26 +28,39 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  padding-bottom: 18.5px;
-  margin-top: 15px;
+  height: 60px;
+  text-transform: uppercase;
 }
 
 .nav_link:hover {
-  color: #00ACDC;
+  color: var(--blue-color);
 }
 
-.is-active::after {
+.nav_list li:last-child .nav_link {
+  margin-right: 0;
+}
+
+.nav_link::after {
   content: '';
   position: absolute;
-  background-color: #00ACDC;
+  background-color: var(--blue-color);
   left: 0;
   bottom: 0;
   height: 4px;
   width: 0%;
   border-radius: 3px;
+  transition: width 0.3s ease;
 }
 
-.is-active:hover::after {
+.nav_link:hover::after {
+  width: 100%;
+}
+
+.nav_link.is-active {
+  color: var(--blue-color);
+}
+
+.nav_link.is-active::after {
   width: 100%;
 }
 
@@ -54,9 +71,6 @@ body {
 
 .logo_img {
 display: block;
-bottom: 10px;
 width: 40px;
 height: 40px;
-top: 10px;
-left: 50px;
 }
