@@ -18,7 +18,8 @@ body {
 .nav_list {
   display: flex;
   list-style: none;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav_link {
@@ -30,6 +31,7 @@ body {
   align-items: center;
   height: 60px;
   text-transform: uppercase;
+  font-size: 12px;
 }
 
 .nav_link:hover {
@@ -40,7 +42,7 @@ body {
   margin-right: 0;
 }
 
-.nav_link::after {
+.is-active::after {
   content: '';
   position: absolute;
   background-color: var(--blue-color);
@@ -49,11 +51,11 @@ body {
   height: 4px;
   width: 0%;
   border-radius: 3px;
-  transition: width 0.3s ease;
 }
 
 .nav_link:hover::after {
   width: 100%;
+  transition: width 0.3s ease;
 }
 
 .nav_link.is-active {
@@ -70,7 +72,7 @@ body {
 }
 
 .logo_img {
-display: block;
-width: 40px;
-height: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
 }
