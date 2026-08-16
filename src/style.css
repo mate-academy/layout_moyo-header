@@ -16,7 +16,7 @@ body {
 .logo {
   width: 40px;
   height: 40px;
-  margin-left: 50px;
+  display: flex;
 }
 
 .header {
@@ -24,6 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-inline: 50px;
 }
 
 .nav_list {
@@ -45,13 +46,8 @@ body {
   position: relative;
 }
 
-.blue {
-  color: var(--main-color);
-}
-
 .nav_link:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--main-color);
+  color: var(--main-color);
 }
 
 .is-active {
@@ -68,4 +64,8 @@ body {
   height: 4px;
   border-radius: 4px;
   background-color: var(--main-color);
+}
+
+li:last-child > .nav_link {
+  margin-right: 0;
 }
