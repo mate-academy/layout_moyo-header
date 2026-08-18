@@ -1,8 +1,19 @@
-* {
+html {
   box-sizing: border-box;
 }
 
-html,
+body,
+.header,
+.logo,
+.logo img,
+.nav,
+.nav__list,
+.nav__item,
+.nav__link,
+.nav__link::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
 }
@@ -15,10 +26,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
   height: 60px;
-  margin: 0 auto;
   padding: 0 50px;
 }
 
@@ -47,7 +55,6 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 60px;
   font-family: Roboto, sans-serif;
   font-size: 12px;
@@ -67,13 +74,10 @@ body {
 
 .nav__link.is-active::after {
   content: '';
-
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
-
-  width: 100%;
+  left: 0;
   height: 4px;
-
   background-color: var(--blue-color);
 }
