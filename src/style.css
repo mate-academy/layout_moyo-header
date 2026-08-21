@@ -17,15 +17,26 @@ header {
   padding: 0 50px;
 }
 
-
-nav a {
+.nav_list {
+  list-style: none;
   display: flex;
-  align-items: center;
-  height: 60px;
+}
+
+.nav_item {
+  margin-right: 20px;
 }
 
 
-a {
+.nav_item:last-child {
+  margin-right: 0;
+}
+
+
+.nav_link {
+  display: flex;
+  align-items: center;
+  height: 60px;
+
   position: relative;
   text-decoration: none;
   color: #000;
@@ -33,33 +44,16 @@ a {
 }
 
 
-a:hover {
+.nav_link:hover {
+  color: var(--blue-color);
+}
+
+.nav_link.is-active {
   color: var(--blue-color);
 }
 
 
-ul {
-  list-style: none;
-  display: flex;
-}
-
-
-li {
-  margin-right: 20px;
-}
-
-
-li:last-child {
-  margin-right: 0;
-}
-
-
-a.is-active {
-  color: var(--blue-color);
-}
-
-
-a.is-active::after {
+.nav_link.is-active::after {
   content: '';
   position: absolute;
   bottom: 0;
