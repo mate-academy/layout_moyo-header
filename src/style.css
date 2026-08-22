@@ -24,7 +24,7 @@ body {
   justify-content: space-between;
 }
 
-.nav ul {
+.nav .list {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -32,15 +32,11 @@ body {
   margin: 0;
 }
 
-.nav ul a {
-  text-decoration: none;
-}
-
-.nav ul a:not(:last-child) {
+.nav__link:not(:last-child) {
   margin-right: 20px;
 }
 
-.nav__link {
+.nav_item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,13 +46,14 @@ body {
   height: 60px;
   line-height: 14.6px;
   position: relative;
+  text-decoration: none;
 }
 
 [data-qa='hover']:hover {
   color: var(--cor-principal);
 }
 
-.nav__link:hover {
+.nav_item:hover {
   color: var(--cor-principal);
 }
 
