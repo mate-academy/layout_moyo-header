@@ -1,3 +1,77 @@
+html {
+  --hover-color: #00acdc;
+}
+
 body {
+  font-family: Roboto, sans-serif;
   margin: 0;
+}
+
+.header {
+  display: flex; /* елементи розташовуються горизонтально */
+  justify-content: space-between; /* вільне місце буде між елементами */
+  align-items: center; /* вертикально вкладені елементи центруються */
+  padding: 0 50px;
+  background-color: #fff;
+}
+
+.logo__img {
+  display: block; /* прибирає вільне місце під картинкою */
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: flex; /* розміщуємо елементи в ряд */
+
+  /* скидаємо стандартні стилі списку */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__link {
+  display: inline-block; /* робимо можливим встановлювати розміри посиланню */
+  font-size: 12px;
+  height: 60px;
+
+  /* треба прибрати padding в .header, щоб посилання займали всю висоту
+  тоді клікнути можна не тільки на тексті, а й під і над ним */
+  line-height: 60px; /* текст буде по центру рядка */
+  color: #000;
+  background-color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav__item {
+  margin-right: 20px;
+}
+
+.nav__item:first-child {
+  margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin: 0;
+}
+
+.nav__link:hover {
+  color: var(--hover-color);
+}
+
+.is-active {
+  position: relative;
+  color: var(--hover-color);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--hover-color);
 }
