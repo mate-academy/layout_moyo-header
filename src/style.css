@@ -1,3 +1,92 @@
+:root {
+  --font-main: 'Roboto', sans-serif;
+  --color-blue: #00acdc;
+  --color-black: #000;
+}
+
 body {
+  font-family: var(--font-main);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
   margin: 0;
+}
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 60px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  position: relative;
+  display: block;
+  color: var(--color-black);
+  margin-right: 20px;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+}
+
+.link:hover {
+  color: var(--color-blue);
+}
+
+.nav ul li:last-child .link {
+  margin-right: 0;
+}
+
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.is-active {
+  position: relative;
+  color: var(--color-blue);
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--color-blue);
 }
