@@ -1,3 +1,76 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 body {
   margin: 0;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-sizing: border-box;
+  height: 60px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo_fimry_maoy {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_1 {
+  margin-left: 20px;
+}
+
+.nav_1:first-child {
+  margin-left: 0;
+}
+
+.link {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  height: 60px;
+  align-items: center;
+  position: relative;
+  font-size: 12px;
+}
+
+.link:hover {
+  color: var(--blue-color);
+}
+
+.is-active::after {
+  color: var(--blue-color);
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: var(--blue-color);
+  position: absolute;
+  bottom: 0;
+  border-radius: 2px;
+}
+
+.is-active {
+  color: var(--blue-color);
 }
