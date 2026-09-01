@@ -1,7 +1,9 @@
-/* Styles go here */
-@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap';
+:root {
+  --blue-color: #00acdc;
+}
 
-* {
+html,
+body {
   box-sizing: border-box;
 }
 
@@ -17,7 +19,21 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 60px;
+}
+
+.header__logo {
+  display: flex;
+  margin-left: 50px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.nav {
+  margin-right: 50px;
 }
 
 .nav__list {
@@ -33,47 +49,39 @@ body {
   position: relative;
 }
 
+.nav__item:first-child {
+  margin-left: 0;
+}
+
 .nav__item:last-child {
   margin-right: 0;
 }
 
-.nav {
-  margin-right: 50px;
-}
-
 .nav__link {
+  display: flex;
+  align-items: center;
+  height: 60px;
   color: black;
   font-size: 12px;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 23px 0;
-  display: inline-block;
 }
 
 .nav .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav__link:hover {
-  color: #00acdc;
-}
-
-.nav__item:first-child {
-  margin-left: 0;
+  color: var(--blue-color);
 }
 
 .is-active::after {
   position: absolute;
   content: '';
   display: block;
-  background-color: #00acdc;
+  background-color: var(--blue-color);
   height: 4px;
   width: 100%;
   bottom: 0;
   border-radius: 8px;
-}
-
-.header__logo {
-  display: flex;
-  margin-left: 50px;
 }
