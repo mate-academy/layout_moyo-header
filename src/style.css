@@ -13,6 +13,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 10px 50px;
 }
 
 .nav-list {
@@ -20,4 +21,40 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  line-height: 100%;
+  text-transform: uppercase;
+  padding: 24px 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link.is-active {
+  color: #00ACDC;
+}
+
+.nav-link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #00acce;
+  border-radius: 2px;
+}
+
+.nav-link:hover {
+  color: #00acce;
 }
