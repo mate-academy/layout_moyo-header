@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-blue: #00acce;
+}
+
 body {
   margin: 0;
 }
@@ -34,14 +38,14 @@ body {
   text-decoration: none;
   line-height: 100%;
   text-transform: uppercase;
-  padding: 24px 0;
+  height: 60px;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   position: relative;
 }
 
 .nav-link.is-active {
-  color: #00ACDC;
+  color: var(--primary-blue);
 }
 
 .nav-link.is-active::after {
@@ -51,7 +55,7 @@ body {
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #00acce;
+  background-color: var(--primary-blue);
   border-radius: 2px;
 }
 
