@@ -1,20 +1,8 @@
 'use strict';
-// https://github.com/garris/BackstopJS#advanced-scenarios
-
-const backstop = require('@mate-academy/backstop-config');
-const { basicScenario } = backstop;
-
-const basic = {
-  ...basicScenario,
-  label: 'Elementary test',
-  referenceUrl: basicScenario.referenceUrl + '/moyo-header/',
-};
 
 const config = {
-  ...backstop,
+  id: 'moyo-header',
   fileNameTemplate: '{scenarioLabel}_{viewportLabel}',
-  onBeforeScript: 'puppet/onBefore.js',
-  onReadyScript: 'puppet/onReady.js',
   viewports: [
     {
       name: '1024px',
@@ -29,30 +17,60 @@ const config = {
   ],
   scenarios: [
     {
-      ...basic,
-      label: 'Header tag',
-      selectors: ['header'],
+      label: 'Header',
+      url: 'http://localhost:8080/index.html',
+      referenceUrl: '',
+      selectors: ['.header'],
+      readySelector: 'body',
+      delay: 1000,
     },
     {
-      ...basic,
-      label: 'Nav tag',
-      selectors: ['nav'],
+      label: 'Nav',
+      url: 'http://localhost:8080/index.html',
+      referenceUrl: '',
+      selectors: ['.nav'],
+      readySelector: 'body',
+      delay: 1000,
     },
     {
-      ...basic,
-      misMatchThreshold: 2,
       label: 'Link with data-qa_hover',
+      url: 'http://localhost:8080/index.html',
+      referenceUrl: '',
       selectors: ['[data-qa="hover"]'],
       hoverSelector: '[data-qa="hover"]',
       postInteractionWait: 1000,
+      readySelector: 'body',
+      delay: 1000,
+      misMatchThreshold: 2,
     },
     {
-      ...basic,
-      misMatchThreshold: 2,
       label: 'Link with class_is-active',
+      url: 'http://localhost:8080/index.html',
+      referenceUrl: '',
       selectors: ['a.is-active'],
+      readySelector: 'body',
+      delay: 1000,
+      misMatchThreshold: 2,
     },
   ],
+  paths: {
+    bitmaps_reference: 'backstop_data/bitmaps_reference',
+    bitmaps_test: 'backstop_data/bitmaps_test',
+    engine_scripts: 'backstop_data/engine_scripts',
+    html_report: 'backstop_data/html_report',
+    ci_report: 'backstop_data/ci_report',
+  },
+  report: ['browser', 'CI'],
+  engine: 'puppet',
+  onBeforeScript: 'puppet/onBefore.js',
+  onReadyScript: 'puppet/onReady.js',
+  puppeteerLaunchConfig: {
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-gpu',
+    ],
+  },
 };
 
 module.exports = config;
