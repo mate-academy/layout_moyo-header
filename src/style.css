@@ -16,7 +16,6 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
-  text-transform: uppercase;
 }
 
 .logo {
@@ -32,6 +31,7 @@ body {
   margin: 0;
   padding: 0;
   font-weight: var(--font-weight);
+  text-transform: uppercase;
 }
 
 .link_menu a {
@@ -56,13 +56,14 @@ body {
 }
 
 .link_menu a.is-active::after {
+  display: inline-line;
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 4px;
-  width: 37px;
+  width: 100%;
   background-color: var(--primary-color);
   border-radius: 2px;
 }
