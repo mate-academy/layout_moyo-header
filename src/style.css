@@ -1,3 +1,87 @@
+:root {
+  --color-blue: #00acdc;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('./fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.header {
+  box-sizing: border-box;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0 50px;
+  height: 60px;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  line-height: 15px;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: var(--color-blue);
+}
+
+.nav__link.is-active {
+  color: var(--color-blue);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 37px;
+  height: 4px;
+  background-color: var(--color-blue);
+  border-radius: 8px;
 }
