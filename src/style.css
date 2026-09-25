@@ -1,5 +1,5 @@
 :root {
-  --blue: #00a2e0;
+  --blue: #00acdc;
 }
 
 body {
@@ -28,6 +28,7 @@ body {
 }
 
 .nav__link {
+  font-weight: 500;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -40,15 +41,20 @@ body {
   font-size: 12px;
 }
 
+.nav__link.is-active {
+  color: var(--blue);
+}
+
 .nav__link.is-active::after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   height: 4px;
-  bottom: -5px;
+  bottom: 0;
   border-radius: 8px;
   background-color: var(--blue);
+  z-index: 1;
 }
 
 .nav__link:hover {
