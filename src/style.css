@@ -1,9 +1,64 @@
-html {
+:root {
+  --blue: #00a2e0;
+}
+
+body {
+  margin: 0;
   font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-body {
-  margin: 0;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
 }
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item + .nav__item {
+  margin-left: 20px;
+}
+
+.nav__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 12px;
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  bottom: -5px;
+  border-radius: 8px;
+  background-color: var(--blue);
+
+}
+
+.nav__link:hover {
+  color: var(--blue);
+}
+
+.logo img{
+  display:block;
+  height: 40px;
+  width: 40px;
+}
+
