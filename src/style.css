@@ -1,3 +1,73 @@
-body {
+:root {
+  --accent-color: #00acff;
+  --text-color: #000;
+  --hover-color: #00acff;
+}
+
+/* Reset default margins */
+body,
+ul {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 60px; /* проверьте точное значение в Figma */
+  padding: 0 50px; /* проверьте горизонтальные паддинги шапки */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav__item {
+  position: relative;
+  height: 100%;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link:hover {
+  color: var(--hover-color);
+}
+
+.nav__link.is-active {
+  color: var(--accent-color);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
