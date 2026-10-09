@@ -1,56 +1,56 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --accent-color: #00acdc;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-style: normal;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
 }
 
-header {
+.header {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header div {
+.header__logo-wrapper {
   margin-left: 50px;
 }
 
-nav {
+.nav {
   margin-right: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-nav ul {
+.nav__list {
+  margin: 0;
+  padding: 0;
   display: flex;
   list-style: none;
 }
 
-nav ul li {
+.nav__item {
   margin: 0 10px;
 }
 
-nav ul li:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-nav ul li:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
-nav ul li a {
+.nav__link {
+  box-sizing: border-box;
   height: 60px;
   text-transform: uppercase;
   text-decoration: none;
@@ -61,15 +61,12 @@ nav ul li a {
   position: relative;
 }
 
-.is-active {
+.nav__link.is-active,
+.nav__link:hover {
   color: var(--accent-color);
 }
 
-nav ul li a:hover {
-  color: var(--accent-color);
-}
-
-.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   left: 0;
