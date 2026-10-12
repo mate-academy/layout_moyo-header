@@ -12,6 +12,7 @@ const basic = {
 
 const config = {
   ...backstop,
+  url: 'file:///K:/Users/muzal/projects/layout_moyo-header/src/index.html',
   fileNameTemplate: '{scenarioLabel}_{viewportLabel}',
   onBeforeScript: 'puppet/onBefore.js',
   onReadyScript: 'puppet/onReady.js',
