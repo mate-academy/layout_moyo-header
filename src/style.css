@@ -1,65 +1,70 @@
+:root {
+  --blue-color: #00acdc;
+}
+
 * {
-  font-family: Roboto, sans-serif;
-  font-optical-sizing: auto;
-  font-size: 12px;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings: 'wdth' 100;
-  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
-.navigation {
-  position: relative;
+header {
   display: flex;
-  justify-content: end;
-  text-align: center;
+  justify-content: space-between;
   align-items: center;
-  height: 60px;
-  right: 50px;
+  padding: 0 50px;
 }
 
-.text-decoration {
-  margin: 15px;
-  height: 15px;
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin-left: 20px;
 }
 
 a {
   text-decoration: none;
   color: #000;
-}
-
-a[data-qa='hover'] {
-  color: #00acdc;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
 }
 
 a:hover {
-  color: #00acdc;
-}
-
-.logotype {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  left: 100px;
-  transform: translateX(10%);
-  top: 10px;
+  color: var(--blue-color);
 }
 
 .is-active {
+  color: var(--blue-color);
   position: relative;
 }
 
 .is-active::after {
   content: '';
   position: absolute;
+  bottom: 0;
   left: 0;
-  bottom: -18px;
   width: 100%;
   height: 4px;
-  background-color: #00bcd4;
+  background-color: var(--blue-color);
   border-radius: 8px;
+}
+
+.logo{
+ width: 40px;
+ height: 40px;
+}
+
+a[data-qa="hover"]{
+  color: var(--blue-color);
 }
