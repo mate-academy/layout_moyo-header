@@ -33,6 +33,10 @@ li {
   margin-left: 20px;
 }
 
+li:first-child {
+  margin-left: 0;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -45,16 +49,16 @@ a:hover {
   color: var(--blue-color);
 }
 
-.is-active {
+a.is-active {
   position: relative;
   color: var(--blue-color);
 }
 
-.is-active::after {
+a.is-active::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 1px;
+  bottom: 0;
   width: 100%;
   height: 4px;
   background-color: var(--blue-color);
