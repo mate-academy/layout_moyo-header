@@ -1,9 +1,6 @@
 html,
 body,
-header,
-nav,
-ul,
-li {
+header {
   margin: 0;
   padding: 0;
 }
@@ -43,7 +40,7 @@ body {
   height: 100%;
 }
 
-.menu-list a {
+.menu-list .menu-link {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -52,15 +49,15 @@ body {
   font-size: 12px;
 }
 
-.menu-list li:not(:last-child) {
+.menu-list .menu-item:not(:last-child) {
   margin-right: 20px;
 }
 
-.menu-list a:hover {
+.menu-list .menu-link:hover {
   color: var(--color-blue);
 }
 
-.menu-list li:first-child a {
+.menu-list .menu-item:first-child .menu-link {
   color: var(--color-blue);
 }
 
@@ -75,6 +72,6 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 8px;
-  background-color: var(--collor-blue);
+  background-color: var(--color-blue);
   bottom: 0;
 }
