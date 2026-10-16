@@ -1,3 +1,114 @@
+
+:root {
+  --accent-color: #00acdc;
+}
+
+/* BOX SIZING */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* BASE */
+
 body {
   margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 0 50px;
+  background-color: #fff;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.logo__image {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+/* NAVIGATION */
+
+.nav__list {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* LINKS */
+
+.nav__link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 60px;
+
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* HOVER */
+
+.nav__link:hover {
+  color: var(--accent-color);
+}
+
+/* ACTIVE LINK */
+
+.nav__link.is-active {
+  color: var(--accent-color);
+}
+
+.nav__link.is-active::after {
+  content: "";
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
 }
