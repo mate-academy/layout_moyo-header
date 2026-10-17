@@ -1,3 +1,77 @@
+html,
 body {
   margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-blue: #00acdc;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  background-color: #ffff;
+}
+
+.header-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding-inline: 50px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  text-transform: uppercase;
+  height: 100%;
+}
+
+.menu-list .menu-link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 60px;
+  color: black;
+  font-size: 12px;
+}
+
+.menu-list .menu-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.menu-list .menu-link:hover {
+  color: var(--color-blue);
+}
+
+.menu-list .menu-item:first-child .menu-link {
+  color: var(--color-blue);
+}
+
+.is-active {
+  position: relative;
+}
+
+.is-active::after {
+  display: block;
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--color-blue);
+  bottom: 0;
 }
