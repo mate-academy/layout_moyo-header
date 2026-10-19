@@ -1,3 +1,102 @@
+:root {
+  --primary-blue: #00acdc;
+}
+
+body,
+body::before,
+body::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+/* Логотип */
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  display: block;
+}
+
+/* Навігація */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Відступи між пунктами через margin, без відступів перед першим і після останнього */
+.nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* Лінки */
+.nav-link {
+  position: relative;
+  display: block;
+  height: 60px; /* висота навігаційного елемента — встановлена в одному місці */
+  line-height: 60px; /* центрування тексту по вертикалі */
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500; /* обов'язково: Roboto 500 */
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: none;
+  box-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Активна лінія під лінком через ::after */
+.nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--primary-blue);
+  border-radius: 2px;
+}
+
+/* Колір посилань при hover / active */
+.nav-link:hover,
+.nav-link.is-active {
+  color: var(--primary-blue);
+}
+
+.nav-link:focus {
+  outline: none;
 }
