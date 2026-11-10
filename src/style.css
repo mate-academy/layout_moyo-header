@@ -2,14 +2,17 @@
   --blue-color: #00acdc;
 }
 
+html {
+  box-sizing: border-box;
+}
 
-html,
-body {
+body,
+body * {
+  box-sizing: inherit;
   margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
-  box-sizing: border-box;
 }
 
 .header {
@@ -46,10 +49,6 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.nav__item:first-child {
-  margin-left: 0;
 }
 
 .nav__item:not(:last-child) {
