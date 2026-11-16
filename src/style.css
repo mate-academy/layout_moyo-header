@@ -1,3 +1,84 @@
+:root {
+  --color-blue: #00acdc;
+}
+
+/* Base */
+
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0 50px;
+}
+
+/* Logo */
+
+.header-logo img {
+  display: block;
+}
+
+/* Nav */
+
+.nav {
+  margin: 0;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list :not(:last-child) {
+  margin-right: 20px;
+}
+
+/* Links */
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  line-height: 100%;
+  border-bottom: none;
+}
+
+/* Hover */
+
+.nav__link:hover {
+  color: var(--color-blue);
+}
+
+/* Link ativo (Apple) */
+
+.nav__link.is-active {
+  color: var(--color-blue);
+}
+
+/* Linha azul do ativo */
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background: var(--color-blue);
 }
