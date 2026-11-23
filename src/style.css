@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+
+  --main-color: #00acdc;
 }
 
 .header {
@@ -18,14 +20,12 @@ body {
 }
 
 .nav-item:not(:last-child) {
-  margin: 0 20px;
+  margin-right: 20px;
 }
 
 .nav-link {
   color: #000;
-  line-height: 100%;
-  size: 12px;
-  letter-spacing: 0%;
+  font-size: 12px;
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
@@ -35,11 +35,11 @@ body {
 }
 
 .nav-link:hover {
-  color: #00ACDC;
+  color: var(--main-color);
 }
 
 .is-active {
-  color: #00ACDC;
+  color: var(--main-color);
   position: relative;
 }
 
@@ -50,7 +50,7 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background-color: #00ACDC;
+  background-color: var(--main-color);
   border-radius: 8px;
 }
 
