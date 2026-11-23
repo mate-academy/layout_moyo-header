@@ -2,13 +2,18 @@
   --blue-color: #00acdc;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+}
+
+.header,
+.logo,
+.logo__image,
+.nav__list,
+.nav__item,
+.nav__link {
+  box-sizing: border-box;
 }
 
 .header {
@@ -19,7 +24,7 @@ body {
 }
 
 .logo,
-.logo img {
+.logo__image {
   display: block;
   width: 40px;
   height: 40px;
@@ -29,22 +34,22 @@ body {
   margin-left: 50px;
 }
 
-nav {
+.nav {
   margin-right: 50px;
 }
 
-nav ul {
+.nav__list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-nav li:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 20px;
 }
 
-nav a {
+.nav__link {
   position: relative;
   display: flex;
   align-items: center;
@@ -58,12 +63,12 @@ nav a {
   white-space: nowrap;
 }
 
-nav a:hover,
-nav a.is-active {
+.nav__link:hover,
+.nav__link.is-active {
   color: var(--blue-color);
 }
 
-nav a.is-active::after {
+.nav__link.is-active::after {
   position: absolute;
   right: 0;
   bottom: 0;
