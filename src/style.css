@@ -1,4 +1,5 @@
 html {
+  font-weight: 500px;
   font-size: 12px;
   font-family: Roboto, sans-serif;
 }
@@ -7,14 +8,19 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   height: 60px;
   background-color: #fff;
   display: flex;
-  width: 1200px;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .logo {
@@ -22,37 +28,43 @@ body {
   height: 40px;
   width: 40px;
   margin-left: 50px;
-  justify-content: center;
 }
 
 .link {
+  display: flex;
   text-decoration: none;
-  margin: 20px;
-  width: 35px;
-  height: 15px;
+  height: 60px;
   color: black;
-  padding: 16px 8px;
   justify-content: center;
-
+  align-items: center;
+  position: relative;
 }
 
 .link:hover {
-  color: blue;
+  color: #00ACDC;
 }
 
-.is-active:hover::after {
+.list-1:not(:last-child) {
+  margin-right: 20px;
+}
+
+.link.is-active::after {
   content: '';
-  height: 3px;
-  background-color: blue;
+  height: 4px;
+  background-color: #00ACDC;
   display: block;
+  position: absolute;
   width: 100%;
-
-}
-
-.list-1 {
-  list-style: none;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
 }
 
 .list {
   display: flex;
+  list-style: none;
+}
+
+.is-active {
+  color: #00ACDC;
 }
